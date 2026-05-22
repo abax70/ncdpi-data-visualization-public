@@ -1,0 +1,25 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Average SPG score: 2019 to 2023",
+    "subtitle": "A slope chart shows direction and magnitude of change for many items at once — kept in one neutral colour."
+  },
+  "data": { "url": "data/region_change.csv" },
+  "transform": [
+    { "fold": ["score_2019", "score_2023"], "as": ["yr", "score"] },
+    { "calculate": "datum.yr === 'score_2019' ? '2019' : '2023'", "as": "year" }
+  ],
+  "height": 320,
+  "encoding": {
+    "x": { "field": "year", "type": "ordinal", "title": null, "scale": { "padding": 0.3 }, "axis": { "labelAngle": 0 } },
+    "y": { "field": "score", "type": "quantitative", "title": "Avg SPG score", "scale": { "zero": false, "nice": true } },
+    "detail": { "field": "region" }
+  },
+  "layer": [
+    { "mark": { "type": "line", "color": "#B7B9BB", "strokeWidth": 1.8 } },
+    { "mark": { "type": "point", "filled": true, "color": "#6B6F70", "size": 45 } },
+    { "transform": [ { "filter": "datum.year === '2023'" } ],
+      "mark": { "type": "text", "align": "left", "dx": 7, "fontSize": 11, "color": "#525A60" },
+      "encoding": { "text": { "field": "region" } } }
+  ]
+}

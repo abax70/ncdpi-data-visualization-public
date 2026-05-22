@@ -1,0 +1,24 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Average SPG score over time, selected regions",
+    "subtitle": "No School Performance Grades were issued in 2020–21 (COVID). The line breaks at the gap — it is never connected through missing years."
+  },
+  "data": {
+    "url": "data/region_trend.csv",
+    "format": { "type": "csv", "parse": { "avg_spg_score": "number", "year": "number" } }
+  },
+  "transform": [
+    { "filter": { "field": "region", "oneOf": ["Western", "Piedmont Triad", "Northeast"] } },
+    { "filter": "isValid(datum.avg_spg_score) && datum.avg_spg_score > 0" },
+    { "calculate": "datum.year <= 2019 ? 'pre' : 'post'", "as": "era" }
+  ],
+  "height": 320,
+  "mark": { "type": "line", "point": true, "strokeWidth": 2.5 },
+  "encoding": {
+    "x": { "field": "year", "type": "quantitative", "title": null, "axis": { "values": [2019, 2020, 2021, 2022, 2023], "format": "d" }, "scale": { "domain": [2018.7, 2023.3] } },
+    "y": { "field": "avg_spg_score", "type": "quantitative", "title": "Avg SPG score", "scale": { "zero": false, "nice": true } },
+    "color": { "field": "region", "type": "nominal", "title": "Region", "legend": { "orient": "bottom" } },
+    "detail": { "field": "era" }
+  }
+}

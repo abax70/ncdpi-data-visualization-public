@@ -1,0 +1,19 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Average School Performance Grade score by region, 2023",
+    "subtitle": "Eight SBE regions, one colour, sorted by value — position carries the comparison."
+  },
+  "data": { "url": "data/schools_region_2023.csv" },
+  "height": 300,
+  "mark": { "type": "bar" },
+  "encoding": {
+    "y": { "field": "region", "type": "nominal", "sort": "-x", "title": null },
+    "x": { "field": "avg_spg_score", "type": "quantitative", "title": "Avg SPG score", "scale": { "domain": [0, 80] } },
+    "tooltip": [
+      { "field": "region", "title": "Region" },
+      { "field": "avg_spg_score", "title": "Avg SPG score" },
+      { "field": "school_count", "title": "Schools" }
+    ]
+  }
+}

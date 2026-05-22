@@ -1,0 +1,108 @@
+{
+  "background": "#FFFFFF",
+  "font": "Arial, Helvetica, sans-serif",
+  "title": {
+    "font": "Arial, Helvetica, sans-serif",
+    "fontSize": 14,
+    "fontWeight": "bold",
+    "color": "#000000",
+    "subtitleColor": "#525A60",
+    "subtitleFontSize": 11,
+    "anchor": "start",
+    "offset": 12
+  },
+  "axis": {
+    "labelFont": "Arial, Helvetica, sans-serif",
+    "titleFont": "Arial, Helvetica, sans-serif",
+    "labelColor": "#525A60",
+    "titleColor": "#000000",
+    "labelFontSize": 11,
+    "titleFontSize": 11,
+    "titleFontWeight": "normal",
+    "gridColor": "#DEDEDE",
+    "domainColor": "#DEDEDE",
+    "tickColor": "#DEDEDE",
+    "labelPadding": 4
+  },
+  "axisX": {
+    "grid": false
+  },
+  "axisY": {
+    "grid": true,
+    "domain": false,
+    "ticks": false
+  },
+  "legend": {
+    "labelFont": "Arial, Helvetica, sans-serif",
+    "titleFont": "Arial, Helvetica, sans-serif",
+    "labelColor": "#525A60",
+    "titleColor": "#000000",
+    "labelFontSize": 11,
+    "titleFontSize": 11
+  },
+  "view": {
+    "stroke": null,
+    "continuousWidth": 480,
+    "continuousHeight": 320
+  },
+  "mark": {
+    "color": "#003A70"
+  },
+  "bar": {
+    "color": "#003A70"
+  },
+  "line": {
+    "color": "#003A70",
+    "strokeWidth": 2.5
+  },
+  "point": {
+    "filled": true,
+    "color": "#003A70",
+    "size": 70
+  },
+  "rule": {
+    "color": "#B7B9BB"
+  },
+  "range": {
+    "category": [
+      "#5085BC",
+      "#FF9015",
+      "#922880",
+      "#3D803F",
+      "#D3B10B",
+      "#BE7EB3"
+    ],
+    "diverging": [
+      "#B33A12",
+      "#BE6143",
+      "#CC9F91",
+      "#D5CBC8",
+      "#DEDEDE",
+      "#CACFD1",
+      "#9AB0B7",
+      "#548B9C",
+      "#077890"
+    ],
+    "heatmap": [
+      "#BECBCF",
+      "#9DB8C1",
+      "#7AA3B1",
+      "#508EA2",
+      "#077890"
+    ],
+    "ramp": [
+      "#BECBCF",
+      "#9DB8C1",
+      "#7AA3B1",
+      "#508EA2",
+      "#077890"
+    ],
+    "ordinal": [
+      "#BECBCF",
+      "#9DB8C1",
+      "#7AA3B1",
+      "#508EA2",
+      "#077890"
+    ]
+  }
+}

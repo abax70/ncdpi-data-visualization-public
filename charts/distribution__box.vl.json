@@ -1,0 +1,15 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "SPG score distribution by locale, 2023",
+    "subtitle": "Box plots compare several distributions at once — median, spread, and outliers."
+  },
+  "data": { "url": "data/school_scores_2023.csv" },
+  "height": 300,
+  "mark": { "type": "boxplot", "size": 28, "extent": 1.5 },
+  "encoding": {
+    "y": { "field": "locale", "type": "nominal", "title": null, "sort": ["City", "Suburb", "Town", "Rural"] },
+    "x": { "field": "spg_score", "type": "quantitative", "title": "SPG score", "scale": { "zero": false, "nice": true } },
+    "color": { "value": "#077890" }
+  }
+}

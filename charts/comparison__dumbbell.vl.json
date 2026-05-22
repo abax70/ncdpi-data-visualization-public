@@ -1,0 +1,21 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Average SPG score by region: 2019 vs 2023",
+    "subtitle": "A dumbbell makes the gap between two points the visual focus. Grey = 2019, navy = 2023."
+  },
+  "data": { "url": "data/region_change.csv" },
+  "height": 300,
+  "encoding": {
+    "y": { "field": "region", "type": "nominal", "sort": "-score_2023", "title": null },
+    "x": { "type": "quantitative", "title": "Avg SPG score", "scale": { "domain": [0, 80] } }
+  },
+  "layer": [
+    { "mark": { "type": "rule", "color": "#B7B9BB", "size": 3 },
+      "encoding": { "x": { "field": "score_2019" }, "x2": { "field": "score_2023" } } },
+    { "mark": { "type": "point", "size": 120, "filled": true, "color": "#B7B9BB" },
+      "encoding": { "x": { "field": "score_2019" }, "tooltip": [ { "field": "region" }, { "field": "score_2019", "title": "2019" } ] } },
+    { "mark": { "type": "point", "size": 120, "filled": true, "color": "#003A70" },
+      "encoding": { "x": { "field": "score_2023" }, "tooltip": [ { "field": "region" }, { "field": "score_2023", "title": "2023" }, { "field": "delta", "title": "Change" } ] } }
+  ]
+}

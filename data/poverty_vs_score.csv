@@ -1,0 +1,2279 @@
+school,region,pct_eds,spg_score,enrollment,spg_grade
+Montlieu Academy of Technology,Piedmont Triad,69.8,47.0,486.0,D
+Mount Gilead Elementary,Sandhills,89.4,52.0,190.0,D
+Topsail Middle,Southeast,20.2,70.0,813.0,B
+Northeast Guilford High,Piedmont Triad,60.3,50.0,922.0,D
+Clear Creek Elementary,Western,68.9,60.0,479.0,C
+Mars Hill Elementary,Western,54.7,64.0,496.0,C
+GE Massey Elementary,Southwest,77.6,69.0,345.0,C
+Langdon C Kerr Elementary,Sandhills,65.3,57.0,250.0,C
+S Ray Lowder Elementary,Southwest,68.7,61.0,269.0,C
+Hertford Grammar,Northeast,66.0,69.0,395.0,C
+Coulwood STEM Academy,Southwest,59.3,64.0,611.0,C
+Benhaven Elementary,North Central,46.7,68.0,973.0,C
+Red Oak Elementary,North Central,57.9,59.0,226.0,C
+Trinity Middle School,Piedmont Triad,62.7,47.0,524.0,D
+Fike High,North Central,59.6,61.0,1014.0,C
+Waynesville Middle,Western,60.8,56.0,720.0,C
+Jeffreys Grove Elementary,North Central,24.3,86.0,486.0,A
+Denton Elementary,Piedmont Triad,66.8,57.0,384.0,C
+Irving Park Elementary,Piedmont Triad,59.6,57.0,520.0,C
+Johnston Co Early College Academy,North Central,29.6,95.0,274.0,A
+Blythe Elementary,Southwest,61.1,55.0,882.0,C
+Wilson Academy of Applied Technology,North Central,58.8,87.0,194.0,A
+Forbush Middle,Piedmont Triad,59.0,59.0,624.0,C
+Salem Elementary,North Central,23.4,74.0,723.0,B
+Wallburg Elementary,Piedmont Triad,43.1,77.0,752.0,B
+Heide Trask High,Southeast,70.5,60.0,701.0,C
+Glenn Elementary,North Central,55.6,57.0,578.0,C
+Albemarle Middle,Southwest,67.6,33.0,411.0,F
+Heritage Elementary,North Central,29.2,76.0,622.0,B
+North Kannapolis Elementary,Southwest,63.9,57.0,263.0,C
+Startown Elementary,Northwest,57.0,64.0,511.0,C
+Jordan Matthews High,North Central,77.8,55.0,886.0,C
+Snow Hill Primary,Southeast,73.6,49.0,377.0,D
+Western Guilford Middle,Piedmont Triad,64.1,46.0,741.0,D
+Southern Lee High School,North Central,62.3,56.0,1175.0,C
+Moore Square Middle,North Central,23.7,76.0,591.0,B
+Providence Grove High School,Piedmont Triad,51.1,65.0,636.0,C
+The Virtual Academy at Randolph,Piedmont Triad,6.3,43.0,95.0,D
+West Forsyth High,Piedmont Triad,37.0,79.0,2278.0,B
+Coats-Erwin Middle,North Central,70.1,39.0,594.0,F
+McGee's Crossroads Elem,North Central,54.7,68.0,886.0,C
+CITI High School,North Central,75.9,73.0,107.0,B
+Murrayville Elementary,Southeast,48.2,71.0,547.0,B
+Bogue Sound Elementary,Southeast,38.5,72.0,460.0,B
+A L Brown High,Southwest,52.1,51.0,1690.0,D
+Bennett School,North Central,52.2,73.0,169.0,B
+T Wingate Andrews High,Piedmont Triad,66.8,59.0,672.0,C
+Wake Forest High School,North Central,25.9,78.0,2044.0,B
+Hanes Magnet School,Piedmont Triad,61.5,62.0,909.0,C
+Franklinton Middle,North Central,77.4,48.0,247.0,D
+McDowell Virtual Academy,Northwest,30.2,41.0,131.0,D
+Gov's Village STEM (Lower),Southwest,76.9,46.0,719.0,D
+Snow Creek Elementary,Northwest,57.7,67.0,571.0,C
+North Pitt High,Northeast,65.1,64.0,792.0,C
+Richland Creek Elementary,North Central,38.6,69.0,499.0,C
+Unionville Elementary,Southwest,34.6,75.0,637.0,B
+Alamance Elementary,Piedmont Triad,41.4,68.0,500.0,C
+Polk Central Elementary School,Western,52.9,74.0,315.0,B
+Pine Hollow Middle,North Central,24.8,79.0,867.0,B
+Wakefield High,North Central,34.4,76.0,1999.0,B
+Mount Pleasant High,Southwest,39.4,66.0,877.0,C
+Lucile Souders Elementary,Sandhills,77.2,45.0,393.0,D
+Oak View Elementary,Piedmont Triad,75.8,40.0,501.0,D
+Mattamuskeet School,Northeast,65.9,41.0,300.0,D
+East Rowan High,Southwest,50.7,64.0,995.0,C
+Baucom Elementary,North Central,25.9,82.0,505.0,B
+Dillard Drive Middle,North Central,51.0,49.0,968.0,D
+GW Carver Elementary,Southwest,73.6,45.0,529.0,D
+Polk County Middle School,Western,56.3,68.0,476.0,C
+Olds Elementary,North Central,36.1,68.0,271.0,C
+Weatherstone Elementary,North Central,34.2,75.0,697.0,B
+Weldon Middle,Northeast,76.1,40.0,182.0,D
+Celeste Henkel Elementary,Southwest,68.1,59.0,511.0,C
+Innovation Early College High,Northeast,48.6,95.0,209.0,A
+Brentwood Elementary,North Central,70.8,50.0,368.0,D
+Yadkin Valley Regional Career Academy,Piedmont Triad,46.4,72.0,155.0,B
+Kearns Academy,Piedmont Triad,59.0,72.0,110.0,B
+Riverbend Elementary,Western,51.6,91.0,182.0,A
+River Road Middle,Northeast,59.9,53.0,459.0,D
+Penderlea Elementary,Southeast,71.4,50.0,496.0,D
+West Cabarrus High,Southwest,60.5,60.0,1769.0,C
+Old Fort Elementary School,Northwest,73.4,71.0,288.0,B
+Plain View Elementary,Sandhills,45.1,71.0,358.0,B
+Thanksgiving Elementary,North Central,44.6,71.0,753.0,B
+Banks Elementary,Southeast,61.8,55.0,444.0,C
+Bain Elementary,Southwest,29.5,83.0,773.0,B
+Durant Road Elementary,North Central,57.5,50.0,631.0,D
+Royal Oaks Elementary,Southwest,57.9,65.0,592.0,C
+Shuford Elementary,Northwest,57.5,66.0,416.0,C
+Eastover-Central Elementary,Sandhills,43.6,70.0,382.0,B
+Cuthbertson High,Southwest,8.5,90.0,1931.0,A
+East Iredell Elementary,Southwest,75.8,42.0,673.0,D
+Saint Pauls Middle,Sandhills,65.6,32.0,695.0,F
+Harris Elementary School,Western,62.1,76.0,407.0,B
+River Bend Elementary,North Central,69.1,56.0,670.0,C
+Old Dock Elementary,Sandhills,62.2,73.0,262.0,B
+Gates County Senior High,Northeast,51.8,68.0,457.0,C
+West Oxford Elementary,North Central,87.4,37.0,406.0,F
+Martins Creek Elementary/Mid,Western,45.5,69.0,164.0,C
+Mangum Elementary,North Central,43.7,75.0,291.0,B
+Lockhart Elementary,North Central,71.3,49.0,452.0,D
+Cabarrus-Kannapolis Early Coll,Southwest,30.6,93.0,235.0,A
+Cane Creek Middle,Western,35.4,74.0,449.0,B
+West Columbus High,Sandhills,63.6,48.0,391.0,D
+Havelock Elementary,Southeast,65.9,53.0,268.0,D
+Rankin Elementary,Piedmont Triad,80.5,39.0,663.0,F
+North Rowan Middle,Southwest,70.4,38.0,426.0,F
+South View Middle,Sandhills,62.2,45.0,640.0,D
+University Meadows Elementary,Southwest,59.6,36.0,661.0,F
+Pilot Elementary,Piedmont Triad,69.6,56.0,356.0,C
+Eastern Guilford Middle,Piedmont Triad,78.4,37.0,957.0,F
+Granite Falls Middle,Northwest,53.2,66.0,527.0,C
+Northview Middle ,Northwest,57.1,56.0,472.0,C
+W A Pattillo Middle,North Central,78.1,30.0,303.0,F
+Westarea Elementary,Sandhills,72.5,45.0,539.0,D
+Parkland High,Piedmont Triad,66.4,46.0,1458.0,D
+Fred A Anderson Elementary,Southeast,55.1,59.0,166.0,C
+J Sam Gentry Middle,Piedmont Triad,61.8,61.0,362.0,C
+Jack Britt High,Sandhills,38.4,84.0,1854.0,B
+Knotts Island Elementary,Northeast,30.4,74.0,105.0,B
+Edgecombe Early College High,North Central,48.9,88.0,188.0,A
+Holly Grove Middle,North Central,16.9,79.0,939.0,B
+Baton Elementary,Northwest,66.9,61.0,340.0,C
+Hiwassee Dam High,Western,58.4,57.0,153.0,C
+East Millbrook Middle,North Central,74.2,40.0,757.0,D
+Cornatzer Elementary,Piedmont Triad,57.8,62.0,334.0,C
+Albemarle High,Southwest,63.9,48.0,359.0,D
+Holly Springs High,North Central,12.7,83.0,2092.0,B
+North Wilkesboro Elementary School,Northwest,68.0,58.0,271.0,C
+Montclair Elementary,Sandhills,67.5,54.0,398.0,D
+Roanoke Rapids High School,Northeast,52.9,53.0,766.0,D
+Cove Creek Elementary,Northwest,50.0,60.0,280.0,C
+Hudson Elementary,Northwest,71.8,63.0,632.0,C
+Fallston Elementary,Southwest,63.5,64.0,431.0,C
+Valley Springs Middle,Western,55.1,67.0,638.0,C
+Dillard Middle,Southeast,83.0,37.0,334.0,F
+Wilkes Central High School,Northwest,56.9,62.0,728.0,C
+Happy Valley Elementary,Northwest,73.5,48.0,213.0,D
+Hunter Elementary,North Central,26.9,73.0,605.0,B
+Windsor Park Elementary,Southwest,51.9,62.0,418.0,C
+Orange High,North Central,41.0,64.0,1290.0,C
+South Iredell High,Southwest,33.3,65.0,1676.0,C
+Rockwell Elementary,Southwest,49.7,60.0,512.0,C
+Chase High School,Western,44.3,72.0,637.0,B
+Raleigh Road Elementary,Sandhills,38.2,75.0,213.0,B
+Belmont Elementary School,Northeast,67.6,52.0,530.0,D
+Kings Mountain Intermediate,Southwest,69.5,56.0,620.0,C
+Shamrock Gardens Elementary,Southwest,34.7,60.0,457.0,C
+Pamlico County Primary,Southeast,62.5,62.0,300.0,C
+Southwood Elementary,Southeast,58.6,51.0,246.0,D
+Helena Elementary,North Central,44.8,73.0,526.0,B
+Kings Mountain High,Southwest,57.6,64.0,1199.0,C
+Duplin Early College High,Southeast,47.2,79.0,202.0,B
+Rose Hill-Magnolia Elementary,Southeast,59.2,33.0,1083.0,F
+Jamesville Elementary,Northeast,52.6,62.0,193.0,C
+Sun Valley Middle,Southwest,47.1,54.0,997.0,D
+Southwest Middle,Southwest,66.6,48.0,812.0,D
+North Stokes High School,Piedmont Triad,53.0,62.0,280.0,C
+Burton Elementary,North Central,55.0,63.0,284.0,C
+George L Carrington Middle,North Central,72.8,55.0,758.0,C
+Sunshine Elementary School,Western,54.6,83.0,165.0,B
+Hickory Ridge Middle,Southwest,17.0,86.0,935.0,A
+Cash Elementary,Piedmont Triad,59.0,63.0,537.0,C
+Shadybrook Elementary,Piedmont Triad,74.0,63.0,309.0,C
+Scotts Elementary,Southwest,72.8,58.0,305.0,C
+East Elementary,Southwest,84.8,63.0,194.0,C
+Morganton Road Elementary,Sandhills,63.6,55.0,499.0,C
+Davis-Townsend Elementary,Piedmont Triad,52.8,70.0,404.0,B
+Jesse Wharton Elem,Piedmont Triad,37.6,69.0,550.0,C
+Heritage Middle,Northwest,64.2,72.0,453.0,B
+E E Miller Elementary,Sandhills,48.3,60.0,592.0,C
+Sycamore Lane Primary,Sandhills,74.2,34.0,373.0,F
+Rocky River Elementary,Southwest,75.0,63.0,495.0,C
+Virginia Williamson Elem,Southeast,61.1,57.0,511.0,C
+Emma Elementary,Western,62.9,48.0,281.0,D
+Crossroads Arts Sciences Early College,Southwest,39.2,95.0,258.0,A
+Glendale Acres Elementary,Sandhills,59.3,59.0,205.0,C
+New Salem Elementary,Southwest,34.3,72.0,238.0,B
+G. C. Hawley Middle,North Central,61.0,46.0,485.0,D
+Clayton Middle,North Central,56.1,62.0,578.0,C
+Hope Mills Middle,Sandhills,56.1,58.0,507.0,C
+Chatham Grove Elementary,North Central,18.6,81.0,660.0,B
+Ceasar Cone Elementary,Piedmont Triad,82.9,36.0,446.0,F
+New Bridge Middle,Southeast,41.2,72.0,481.0,B
+Stough Elementary,North Central,31.4,74.0,511.0,B
+Discovery High School,Northwest,24.5,85.0,193.0,A
+West Columbus School,Sandhills,69.7,38.0,745.0,F
+North Rowan High,Southwest,66.3,42.0,558.0,D
+Northampton County High School,Northeast,78.5,42.0,232.0,D
+Brevard High,Western,46.8,77.0,736.0,B
+Sycamore Creek Elementary,North Central,18.0,81.0,782.0,B
+North Brunswick High,Southeast,41.3,58.0,1402.0,C
+Arthur W Edwards Elementary,Southeast,49.7,63.0,528.0,C
+Sedgefield Elementary,Piedmont Triad,68.3,38.0,443.0,F
+Apex Friendship Middle,North Central,11.9,88.0,1384.0,A
+Huntersville Elementary,Southwest,23.5,84.0,877.0,B
+Eastern Guilford High,Piedmont Triad,68.6,52.0,1132.0,D
+Dixon High,Southeast,33.0,68.0,1103.0,C
+Sedalia Elementary,Piedmont Triad,65.4,50.0,515.0,D
+Philip J Weaver Ed Center,Piedmont Triad,19.8,91.0,292.0,A
+West Iredell High,Southwest,62.4,51.0,800.0,D
+Athens Drive High,North Central,44.3,75.0,1990.0,B
+Pine Level Elementary,North Central,64.9,73.0,338.0,B
+Rocky River High School,Southwest,69.2,55.0,1545.0,C
+Pine Valley Elementary,Southeast,42.5,68.0,462.0,C
+Pleasant Ridge Elementary,Southwest,64.1,50.0,873.0,D
+Piney Grove Elementary,Sandhills,69.2,47.0,459.0,D
+Locust Elementary,Southwest,34.4,78.0,488.0,B
+Mount Olive Middle,Southeast,64.8,42.0,373.0,D
+Southeast Middle,Piedmont Triad,69.1,39.0,810.0,F
+Overhills Middle,North Central,59.4,55.0,794.0,C
+Northridge Middle,Southwest,75.8,47.0,1082.0,D
+Fairview Elementary,North Central,90.0,27.0,287.0,F
+Carolina Beach Elementary,Southeast,32.5,73.0,435.0,B
+McDougle Elementary,North Central,31.9,69.0,478.0,C
+Rockingham Middle,Sandhills,62.9,51.0,605.0,D
+Sam D Bundy Elementary,Northeast,65.5,51.0,373.0,D
+Speas Elementary,Piedmont Triad,51.8,61.0,768.0,C
+The Innovation Academy at South Campus,North Central,51.3,80.0,231.0,B
+Coopers Elementary,North Central,60.8,67.0,548.0,C
+Williston Middle,Southeast,73.4,37.0,670.0,F
+Northside Elementary,North Central,47.5,61.0,381.0,C
+Monroe Avenue Elementary,Sandhills,82.0,50.0,359.0,D
+Sandy Grove Middle,Sandhills,51.7,53.0,635.0,D
+North Hills Elementary,Piedmont Triad,86.8,35.0,456.0,F
+Steele Creek Elementary,Southwest,76.6,56.0,456.0,C
+Washington County High,Northeast,79.7,37.0,254.0,F
+Elizabeth Lane Elementary,Southwest,13.2,86.0,716.0,A
+Mitchell High,Northwest,51.5,62.0,484.0,C
+Southwest Middle,Southeast,64.6,48.0,517.0,D
+W C Friday Middle School,Southwest,74.0,49.0,603.0,D
+Lakeforest Elementary,Northeast,76.4,47.0,786.0,D
+Webb A Murray Elementary,Northwest,82.5,53.0,374.0,D
+Chowan Middle,Northeast,68.2,45.0,424.0,D
+Sherwood Githens Middle,North Central,59.7,63.0,758.0,C
+Enloe High,North Central,26.5,84.0,2426.0,B
+EP Pearce Elementary,Piedmont Triad,25.5,81.0,671.0,B
+Bethel Middle,Western,54.7,79.0,238.0,B
+Elizabeth City Middle,Northeast,62.1,56.0,505.0,C
+Northwest Elementary,Northeast,76.1,32.0,333.0,F
+Reedy Creek Elementary,North Central,58.0,48.0,585.0,D
+Hertford Co Early College,Northeast,38.1,86.0,170.0,A
+Scurlock Elementary,Sandhills,51.0,52.0,588.0,D
+Childers Elementary,Southwest,66.5,62.0,398.0,C
+River Gate Elementary,Southwest,57.2,60.0,717.0,C
+Rock Springs Elementary,Southwest,21.7,78.0,632.0,B
+Wendell Middle,North Central,69.5,39.0,721.0,F
+Wake Young Women's Leadership Academy,North Central,31.3,84.0,344.0,B
+Murphey Traditional Academy,Piedmont Triad,72.7,52.0,305.0,D
+White Oak Elementary,North Central,5.0,94.0,775.0,A
+Riverview Elementary,Northeast,70.4,42.0,307.0,D
+North Lincoln Middle,Southwest,29.9,72.0,775.0,B
+West Lake Middle,North Central,40.3,58.0,883.0,C
+Robbins Elementary,Sandhills,84.6,51.0,360.0,D
+Cape Fear Middle,Southeast,71.4,51.0,456.0,D
+Manteo High School,Northeast,40.0,79.0,549.0,B
+Yates Mill Elementary,North Central,57.4,60.0,485.0,C
+St James Elementary,Southwest,28.6,73.0,647.0,B
+Cartoogechaye Elementary,Western,61.9,62.0,347.0,C
+East Middle,Sandhills,85.6,47.0,441.0,D
+School of Inquiry and Life Sciences,Western,33.0,81.0,338.0,B
+Marie G Davis School,Southwest,76.1,40.0,365.0,D
+Gaston Virtual Academy,Southwest,57.6,58.0,417.0,C
+South Greenville Elementary,Northeast,89.4,44.0,276.0,D
+Wiley Elementary,North Central,42.4,64.0,368.0,C
+Henderson County Early College,Western,47.7,96.0,201.0,A
+Topsail Annandale Elementary School,Southeast,15.9,85.0,626.0,A
+Kimmel Farm Elementary,Piedmont Triad,62.6,41.0,792.0,D
+A L Stanback Middle,North Central,58.9,53.0,648.0,D
+Zebulon Middle,North Central,67.9,55.0,706.0,C
+Northwoods Park Middle,Southeast,53.3,55.0,683.0,C
+Tyrrell Elementary,Northeast,59.5,62.0,172.0,C
+Southeast Raleigh Elementary,North Central,72.9,41.0,357.0,D
+Western Harnett High,North Central,59.6,56.0,1321.0,C
+Vaughan Academy of Technology,Southwest,62.6,60.0,324.0,C
+Isaac M Bear Early College High School,Southeast,18.4,94.0,223.0,A
+Hamlet Middle,Sandhills,70.5,61.0,419.0,C
+Fall Creek Elementary,Piedmont Triad,54.2,72.0,220.0,B
+Hendersonville Elementary,Western,33.1,80.0,330.0,B
+North Topsail Elementary,Southeast,27.0,77.0,578.0,B
+George Watts Elementary,North Central,31.0,76.0,272.0,B
+Pinewood Elementary,Southwest,57.7,71.0,464.0,B
+Greene Central High,Southeast,61.6,58.0,742.0,C
+Guilford eLearning University Prep,Piedmont Triad,17.9,44.0,501.0,D
+Wakefield Elementary,North Central,51.4,66.0,486.0,C
+Maiden Elementary,Northwest,61.0,66.0,482.0,C
+White Oak High,Southeast,47.5,61.0,1162.0,C
+Pleasant Union Elementary,North Central,18.8,79.0,551.0,B
+Atlantic Elementary,Southeast,52.9,72.0,74.0,B
+Dixon Road Elementary,North Central,45.2,75.0,594.0,B
+Selma Elementary,North Central,66.7,49.0,724.0,D
+Highland Creek Elementary,Southwest,37.0,70.0,454.0,B
+Edwin A Alderman Elementary,Southeast,68.7,57.0,285.0,C
+Blackburn Elementary,Northwest,57.3,63.0,518.0,C
+Onslow Virtual School,Southeast,50.6,62.0,424.0,C
+Highland Middle,North Central,65.5,49.0,856.0,D
+Camden Early College High,Northeast,16.3,89.0,141.0,A
+North Edgecombe High,North Central,68.9,53.0,218.0,D
+Joyner Elementary,North Central,29.8,63.0,518.0,C
+Holly Shelter Middle,Southeast,49.1,68.0,855.0,C
+Clara J Peck Elementary,Piedmont Triad,77.1,53.0,249.0,D
+Sanford Creek Elementary,North Central,36.4,67.0,606.0,C
+Northwest Halifax Collegiate and Technic,Northeast,71.9,41.0,315.0,D
+Clayton High,North Central,42.2,64.0,1943.0,C
+Seagrove Elementary School,Piedmont Triad,69.6,62.0,337.0,C
+Brunswick County Early College,Southeast,37.8,93.0,348.0,A
+Career Academy and Technical School,Southwest,13.6,48.0,119.0,D
+Brassfield Elementary,North Central,39.0,70.0,602.0,B
+Oberlin Middle,North Central,32.4,71.0,1081.0,B
+Saint Stephens Elementary,Northwest,79.6,38.0,705.0,F
+Root Elementary,North Central,34.2,74.0,443.0,B
+Reynolds Middle,Western,60.5,63.0,478.0,C
+Creekside Elementary,Southeast,29.1,78.0,497.0,B
+Lexington Middle School,Piedmont Triad,72.8,45.0,648.0,D
+Gray's Creek High,Sandhills,42.7,70.0,1350.0,B
+Carolina Forest Elementary,Southeast,49.7,65.0,671.0,C
+Rosman Elementary,Western,72.0,66.0,333.0,C
+Rolesville Middle,North Central,37.9,54.0,1039.0,D
+McDowell Academy for Innovation,Northwest,52.7,95.0,111.0,A
+E M Rollins Elementary,North Central,79.6,42.0,275.0,D
+Charles H. Parker Academic Center,Southwest,44.4,67.0,486.0,C
+C Wayne Collier Elementary,Sandhills,62.2,48.0,473.0,D
+Columbus Career and College Academy ,Sandhills,47.3,64.0,241.0,C
+Craven Virtual Academy,Southeast,8.5,62.0,116.0,C
+South Toe Elementary,Northwest,65.7,72.0,106.0,B
+East Burke Middle,Northwest,70.9,65.0,648.0,C
+Harold E. Winkler Middle,Southwest,42.9,68.0,861.0,C
+Marion Elementary School,Northwest,75.2,69.0,335.0,C
+Pinehurst Elementary,Sandhills,18.1,85.0,628.0,A
+P W Moore Elementary,Northeast,75.3,51.0,345.0,D
+Mineral Springs Elementary,Piedmont Triad,78.1,37.0,546.0,F
+Roanoke Rapids Early College High,Northeast,37.3,80.0,121.0,B
+Surry Early College,Piedmont Triad,58.4,87.0,294.0,A
+Watauga High,Northwest,32.7,82.0,1236.0,B
+Trent Park Elementary,Southeast,66.0,62.0,393.0,C
+Pickett Elementary School,Piedmont Triad,76.1,52.0,392.0,D
+W P Grier Middle School,Southwest,71.7,37.0,613.0,F
+Lumberton Senior High,Sandhills,60.2,61.0,1836.0,C
+Highcroft Elementary,North Central,7.5,91.0,731.0,A
+Traphill Elementary School,Northwest,61.5,55.0,78.0,C
+North Davidson Middle,Piedmont Triad,43.6,69.0,702.0,C
+Ronald E. McNair Elementary,Piedmont Triad,65.2,47.0,433.0,D
+Connect Academy,Sandhills,39.1,69.0,302.0,C
+Roaring River Elementary School,Northwest,54.8,53.0,160.0,D
+Robert L. Patton High School,Northwest,55.2,77.0,741.0,B
+Ashley Academy,Piedmont Triad,84.0,42.0,374.0,D
+Porter Ridge Middle School,Southwest,40.4,76.0,1300.0,B
+Petree Elementary,Piedmont Triad,80.5,38.0,424.0,F
+Providence Spring Elementary,Southwest,5.0,89.0,599.0,A
+Meadowview Magnet Middle,Piedmont Triad,74.9,64.0,347.0,C
+Union Elementary,Southwest,78.3,53.0,401.0,D
+Davie County High,Piedmont Triad,42.5,67.0,1712.0,C
+Bartlett Yancey High,Piedmont Triad,64.0,51.0,651.0,D
+East Gaston High,Southwest,48.6,69.0,855.0,C
+William T Brown Elementary,Sandhills,75.3,45.0,559.0,D
+B F Grady Elementary,Southeast,53.1,44.0,845.0,D
+Koontz Intermediate,Western,51.0,56.0,651.0,C
+Pembroke Middle,Sandhills,70.1,47.0,696.0,D
+John W Dillard Academy,Piedmont Triad,65.1,49.0,271.0,D
+Leesville Road Elementary,North Central,29.8,70.0,599.0,B
+Enka Middle,Western,65.1,52.0,606.0,D
+Valmead Elementary,Northwest,86.6,28.0,276.0,F
+Murphy Elementary,Western,57.0,61.0,496.0,C
+PSRC Early College at RCC,Sandhills,45.0,92.0,220.0,A
+Lufkin Road Middle,North Central,32.0,73.0,1001.0,B
+Shelby High,Southwest,67.6,56.0,794.0,C
+Westover Middle,Sandhills,68.4,53.0,787.0,D
+Paisley IB Magnet School,Piedmont Triad,68.2,38.0,671.0,F
+Reid Park Academy,Southwest,73.1,42.0,302.0,D
+Flat Rock Elementary,Piedmont Triad,70.7,59.0,169.0,C
+Robinson Elementary,Southwest,63.7,52.0,386.0,D
+Reidsville Middle,Piedmont Triad,66.2,39.0,610.0,F
+North Stanly Middle,Southwest,53.9,43.0,475.0,D
+Greenwood Middle,Southeast,54.9,56.0,410.0,C
+Tuckaseegee Elementary,Southwest,64.7,45.0,599.0,D
+Lake Myra Elementary,North Central,52.7,56.0,636.0,C
+Dobson Elementary,Piedmont Triad,61.6,63.0,326.0,C
+Swain County Middle School,Western,65.1,58.0,387.0,C
+Avery's Creek Elementary,Western,68.4,55.0,548.0,C
+Fairgrove Elementary School,Sandhills,78.4,42.0,275.0,D
+Rosenwald Elementary,Sandhills,85.5,32.0,344.0,F
+Middle Creek High,North Central,27.0,78.0,1586.0,B
+Carver Elementary,Southeast,68.3,43.0,530.0,D
+Kiser Elementary,Southwest,66.4,58.0,331.0,C
+Mount Pleasant Middle,Southwest,46.7,59.0,692.0,C
+Cook Literacy Model School,Piedmont Triad,90.8,50.0,254.0,D
+West McDowell Middle School,Northwest,67.7,55.0,609.0,C
+Roseboro-Salemburg Middle,Sandhills,68.0,42.0,401.0,D
+James Love Elementary,Southwest,82.2,55.0,337.0,C
+Wallace-Rose Hill High,Southeast,48.7,50.0,783.0,D
+Sharon Elementary,Southwest,13.1,85.0,722.0,A
+Estes Elementary,Western,52.4,67.0,742.0,C
+Central Elementary,Piedmont Triad,64.0,51.0,561.0,D
+Charles B Aycock High,Southeast,37.9,62.0,1050.0,C
+Wilkesboro Elementary School,Northwest,44.7,68.0,335.0,C
+William H Owen Elementary,Sandhills,67.8,52.0,405.0,D
+Blowing Rock Elementary,Northwest,19.8,78.0,411.0,B
+Roanoke Valley Early College,Northeast,42.3,60.0,121.0,C
+Granite Quarry Elementary,Southwest,64.2,37.0,528.0,F
+Clement Elementary,Sandhills,60.3,61.0,324.0,C
+Piedmont High,Southwest,31.9,78.0,1235.0,B
+Sandy Ridge Elementary,North Central,71.7,63.0,459.0,C
+Mount Holly Middle,Southwest,63.9,59.0,549.0,C
+Pinnacle Elementary School,Piedmont Triad,66.3,62.0,147.0,C
+West Hoke Middle,Sandhills,63.4,56.0,569.0,C
+Pumpkin Center Primary,Southwest,47.4,67.0,290.0,C
+Crown Point Elementary,Southwest,74.2,61.0,594.0,C
+Town Creek Middle,Southeast,41.9,50.0,496.0,D
+W B Beam Intermediate School,Southwest,65.8,54.0,200.0,D
+Sharon Elementary,Southwest,61.2,76.0,237.0,B
+Jessie Mae Monroe Elementary,Southeast,61.6,60.0,395.0,C
+Agriculture and Science Early College,Southwest,36.2,85.0,241.0,A
+Beverly Hills Elementary,Southwest,68.2,69.0,289.0,C
+South Johnson Elementary,Sandhills,75.5,50.0,632.0,D
+Southport Elementary,Southeast,49.4,67.0,407.0,C
+North Buncombe High,Western,43.6,74.0,912.0,B
+Charles England Elementary School,Piedmont Triad,76.8,59.0,339.0,C
+Granville Central High,North Central,75.1,55.0,606.0,C
+Polenta Elementary,North Central,45.5,64.0,1007.0,C
+Northeast Elementary,Southeast,86.3,35.0,409.0,F
+Billingsville Elementary,Southwest,55.1,59.0,339.0,C
+Winter Park Model Elementary,Southeast,56.2,77.0,296.0,B
+J N Fries Magnet School,Southwest,43.1,66.0,820.0,C
+South Harnett Elementary,North Central,63.3,47.0,443.0,D
+Fairview Elementary,Western,56.6,62.0,740.0,C
+Bailey Elementary,North Central,76.5,55.0,502.0,C
+Glenwood Elementary,North Central,19.8,84.0,431.0,B
+Lucama Elementary,North Central,70.4,83.0,368.0,B
+Concord High,Southwest,66.5,59.0,957.0,C
+Central Elementary,Northeast,40.4,53.0,237.0,D
+East Forsyth Middle School,Piedmont Triad,69.6,36.0,759.0,F
+Marvin Ridge Middle,Southwest,5.0,92.0,1363.0,A
+Drexel Elementary,Northwest,77.1,73.0,421.0,B
+C C Griffin Middle,Southwest,56.9,56.0,964.0,C
+Alma O Easom Elementary,Sandhills,44.7,73.0,263.0,B
+Currituck County Middle,Northeast,44.2,54.0,358.0,D
+Lakewood High,Sandhills,60.7,64.0,462.0,C
+Scotland High School,Sandhills,66.0,53.0,1353.0,D
+East Columbus Junior-Senior High,Sandhills,54.0,47.0,581.0,D
+Williams Township,Sandhills,55.4,55.0,615.0,C
+Washington Elementary,Piedmont Triad,76.6,49.0,257.0,D
+ISS Virtual Academy,Southwest,13.3,62.0,136.0,C
+Union Elementary,Sandhills,78.4,61.0,332.0,C
+Apex Friendship High,North Central,10.0,88.0,2712.0,A
+Bessemer Elementary,Piedmont Triad,79.0,44.0,458.0,D
+Grimsley High,Piedmont Triad,47.0,75.0,1853.0,B
+J Glenn Edwards Elementary,North Central,73.4,55.0,545.0,C
+Swansboro Elementary,Southeast,34.6,71.0,671.0,B
+Chicod,Northeast,37.1,81.0,931.0,B
+Vanceboro-Farm Life Elementary,Southeast,63.4,51.0,442.0,D
+Gaston Early College of Medical Sciences,Southwest,54.1,95.0,112.0,A
+Wiley Accel/Enrichment,Piedmont Triad,79.1,33.0,175.0,F
+Southside Ashpole Elementary,Sandhills,76.2,36.0,184.0,F
+Williamsburg Elementary,Piedmont Triad,65.9,53.0,480.0,D
+Carson High,Southwest,47.1,64.0,1116.0,C
+Alston Ridge Middle,North Central,19.4,84.0,1504.0,B
+Midway Middle,Sandhills,49.2,65.0,558.0,C
+Wesley Chapel Elementary,Southwest,15.4,89.0,776.0,A
+Claremont Elementary,Northwest,73.6,59.0,411.0,C
+Swann Middle School,Piedmont Triad,62.6,42.0,531.0,D
+Middle College at GTCC-Greensboro,Piedmont Triad,48.8,83.0,165.0,B
+Sadie Saulter,Northeast,53.5,60.0,92.0,C
+Bunn High,North Central,60.7,66.0,812.0,C
+Silk Hope School,North Central,53.1,62.0,275.0,C
+Heritage Elementary School ,Southeast,53.5,56.0,532.0,C
+Southeast Raleigh High,North Central,72.6,53.0,1362.0,D
+Anderson Creek Primary,North Central,62.2,47.0,522.0,D
+McAlpine Elementary,Southwest,31.7,73.0,526.0,B
+Spring Hope Elementary,North Central,73.9,47.0,363.0,D
+Frederick Douglass Elementary,North Central,70.6,64.0,350.0,C
+Bill Hefner Elementary,Sandhills,60.2,52.0,652.0,D
+Parkwood High,Southwest,43.3,74.0,1035.0,B
+West Greene Elementary,Southeast,71.0,49.0,348.0,D
+Richlands High,Southeast,40.8,69.0,938.0,C
+Sunny View Elementary School,Western,64.5,63.0,122.0,C
+Pine Forest High,Sandhills,61.5,72.0,1516.0,B
+North Forsyth High,Piedmont Triad,69.2,45.0,1016.0,D
+Pines Elementary,Northeast,84.3,50.0,376.0,D
+Riverwood Middle,North Central,43.4,51.0,952.0,D
+Wiley Magnet Middle,Piedmont Triad,60.9,39.0,739.0,F
+Eastern Randolph High School,Piedmont Triad,67.5,51.0,612.0,D
+Belvoir Elementary,Northeast,67.6,46.0,341.0,D
+Parkside Elementary,North Central,17.2,80.0,837.0,B
+Scotland Neck Elementary Leadership Acad,Northeast,76.2,31.0,130.0,F
+Princeton Elementary,North Central,60.3,69.0,698.0,C
+McKee Road Elementary,Southwest,22.4,82.0,503.0,B
+Roland-Grise Middle,Southeast,33.3,70.0,849.0,B
+Forest Hills Middle,North Central,75.4,58.0,659.0,C
+Springfield Middle,North Central,56.8,67.0,441.0,C
+Yadkin Early College,Piedmont Triad,40.7,89.0,205.0,A
+Ida Rankin Elementary School,Southwest,58.6,69.0,487.0,C
+Peterson Elementary,Sandhills,72.3,38.0,532.0,F
+Nancy Reynolds Elementary School,Piedmont Triad,72.0,63.0,118.0,C
+Moravian Falls Elementary School,Northwest,53.6,85.0,236.0,A
+Northwest Guilford Middle,Piedmont Triad,18.4,80.0,956.0,B
+West End Elementary,Sandhills,32.3,78.0,429.0,B
+North Chatham Elementary,North Central,32.9,68.0,585.0,C
+Jacksonville High,Southeast,45.0,78.0,1383.0,B
+Turner Creek Elementary,North Central,19.7,74.0,668.0,B
+Ward Elementary,Piedmont Triad,62.5,51.0,523.0,D
+Enfield Middle S.T.E.A.M. Academy,Northeast,76.2,35.0,211.0,F
+River Oaks Academy,Southwest,72.8,51.0,525.0,D
+Ogden Elementary,Southeast,16.2,86.0,642.0,A
+Wheatmore High School,Piedmont Triad,44.3,68.0,662.0,C
+West Pine Middle,Sandhills,29.0,76.0,682.0,B
+J C Sawyer Elementary,Northeast,65.6,46.0,373.0,D
+Lingerfeldt Elementary,Southwest,81.6,37.0,388.0,F
+Rockingham County High,Piedmont Triad,40.9,69.0,851.0,C
+Millingport Elementary,Southwest,52.3,75.0,196.0,B
+Leesville Road High,North Central,21.9,80.0,2536.0,B
+Apple Valley Middle,Western,68.8,51.0,815.0,D
+Nash Everywhere Digital Academy (NEDA),North Central,49.0,46.0,200.0,D
+Hopewell Elementary School,Piedmont Triad,50.5,71.0,688.0,B
+Charles H Darden Middle,North Central,84.1,38.0,432.0,F
+East Franklin Elementary,Western,60.1,60.0,358.0,C
+Ahoskie Elementary,Northeast,77.8,52.0,227.0,D
+Wilburn Elementary,North Central,81.3,47.0,602.0,D
+Wilson's Mills Elementary,North Central,76.3,59.0,496.0,C
+Silver Valley Elementary,Piedmont Triad,79.0,53.0,228.0,D
+Tuscola High,Western,48.7,77.0,890.0,B
+Lincoln Academy,Piedmont Triad,58.7,64.0,620.0,C
+McDeeds Creek Elementary,Sandhills,17.7,84.0,631.0,B
+Elon Park Elementary,Southwest,14.1,85.0,855.0,A
+Winstead Avenue Elementary,North Central,80.3,38.0,548.0,F
+Asheville High,Western,32.7,75.0,1125.0,B
+Ledford Senior High,Piedmont Triad,42.7,63.0,816.0,C
+Berryhill School,Southwest,55.8,39.0,410.0,F
+Perquimans County Middle,Northeast,58.6,60.0,373.0,C
+Hunter Elementary,Piedmont Triad,74.5,48.0,484.0,D
+Hillandale Elementary,Western,66.7,47.0,475.0,D
+Mooresville High School,Southwest,36.1,74.0,1923.0,B
+Pender High,Southeast,71.2,54.0,645.0,D
+R Freeman Sch of Engineering,Southeast,94.6,28.0,295.0,F
+Jonathan Valley Elementary,Western,54.1,65.0,348.0,C
+Rea Farms STEAM Academy,Southwest,14.3,89.0,1118.0,A
+Sand Hill-Venable Elem,Western,77.9,55.0,540.0,C
+L Gilbert Carroll ,Sandhills,74.2,39.0,452.0,F
+South End Elementary,Piedmont Triad,74.7,43.0,416.0,D
+Stanly County Virtual Education,Southwest,61.3,48.0,162.0,D
+Deyton Elementary,Northwest,64.6,60.0,220.0,C
+Trinity Elementary School,Piedmont Triad,67.0,46.0,433.0,D
+Elkin Elementary,Piedmont Triad,50.7,63.0,555.0,C
+Lee Woodard Elementary,North Central,67.7,63.0,161.0,C
+Fairview Elementary,Piedmont Triad,78.6,48.0,427.0,D
+Rosman High,Western,57.6,76.0,251.0,B
+River Bend Middle,North Central,75.0,46.0,1106.0,D
+West Henderson High,Western,34.2,81.0,1062.0,B
+Macon Middle School,Western,59.3,57.0,597.0,C
+Topsail High,Southeast,21.8,85.0,1745.0,A
+Kimberley Park Elementary,Piedmont Triad,86.9,47.0,244.0,D
+East Clayton Elementary,North Central,55.4,57.0,509.0,C
+Highland Mill Montessori,Southwest,23.6,80.0,260.0,B
+Emsley A Laney High,Southeast,41.4,66.0,2178.0,C
+Chapel Hill High,North Central,25.1,86.0,1576.0,A
+Randleman Elementary School,Piedmont Triad,78.2,40.0,517.0,D
+Challenger Early College High,Northwest,41.7,95.0,349.0,A
+Cleveland Elementary,North Central,27.9,75.0,831.0,B
+M B Hubbard Elementary,North Central,83.3,48.0,409.0,D
+Heyward C Bellamy Elem,Southeast,38.6,80.0,555.0,B
+A H Snipes Academy of Arts/Des,Southeast,88.0,46.0,394.0,D
+FPG Elementary,North Central,40.6,63.0,509.0,C
+Rock Ridge Elementary,North Central,50.3,87.0,470.0,A
+Quail Hollow Middle,Southwest,69.3,50.0,1153.0,D
+Onslow Virtual Elementary,Southeast,64.7,45.0,186.0,D
+Cape Fear High,Sandhills,49.8,79.0,1451.0,B
+Sycamore Lane Elementary,Sandhills,78.6,34.0,346.0,F
+East Elementary,Southwest,66.0,45.0,371.0,D
+Hickory Grove Elementary,Southwest,59.5,39.0,498.0,F
+Emma B Trask Middle,Southeast,46.7,65.0,675.0,C
+Northwoods Elementary,North Central,27.5,71.0,617.0,B
+Cabarrus Health Sciences Institute,Southwest,33.9,89.0,59.0,A
+Cumberland Road Elementary,Sandhills,70.7,56.0,312.0,C
+Laurel Mill Elementary,North Central,81.4,56.0,292.0,C
+South Creek Middle,Northeast,67.3,38.0,200.0,F
+Ferndale Middle,Piedmont Triad,73.8,37.0,527.0,F
+Carpenter Elementary,North Central,31.3,72.0,641.0,B
+Warren County High,North Central,74.1,46.0,364.0,D
+Johnston Elementary,Western,70.0,26.0,199.0,F
+Nakina Middle,Sandhills,55.3,61.0,210.0,C
+Roger Bell New Tech Academy,Southeast,53.4,60.0,378.0,C
+Allen Jay Elementary,Piedmont Triad,74.1,44.0,455.0,D
+Vernon Malone College and Career Academy,North Central,48.6,85.0,340.0,A
+Tabor City Middle,Sandhills,69.2,50.0,181.0,D
+Triangle Lake Montessori Elem,Piedmont Triad,64.1,49.0,355.0,D
+Harnett Virtual Academy,North Central,65.8,47.0,116.0,D
+Newell Elementary,Southwest,62.4,42.0,716.0,D
+John J Blair Elementary,Southeast,58.0,64.0,432.0,C
+Liberty Middle,Northwest,59.3,73.0,459.0,B
+College Lakes Elementary,Sandhills,70.4,48.0,459.0,D
+Foothills Community School,Northwest,48.9,72.0,189.0,B
+Shiloh Valley Primary School,Southwest,45.0,61.0,553.0,C
+Vance Virtual Village Academy,North Central,14.1,33.0,191.0,F
+Anne Chesnutt Middle,Sandhills,59.8,44.0,466.0,D
+Northeast Middle,Southwest,70.8,42.0,571.0,D
+Nash Central High,North Central,64.8,60.0,903.0,C
+Southwest Guilford Middle,Piedmont Triad,56.3,53.0,1082.0,D
+China Grove Middle,Southwest,49.3,47.0,534.0,D
+Spindale Elementary School,Western,71.3,59.0,324.0,C
+Needham Broughton High,North Central,29.7,78.0,2080.0,B
+Stovall-Shaw Elementary,North Central,80.5,50.0,307.0,D
+East Mecklenburg High School,Southwest,57.7,67.0,2321.0,C
+Reynolds High,Western,44.5,75.0,1097.0,B
+Craven Early College High,Southeast,42.2,86.0,225.0,A
+Costner Elementary,Southwest,64.3,59.0,477.0,C
+Cloverleaf Elementary,Southwest,72.8,51.0,456.0,D
+Waxhaw Elementary,Southwest,42.3,69.0,620.0,C
+Bostian Elementary,Southwest,43.3,66.0,336.0,C
+Isenberg Elementary,Southwest,66.7,39.0,445.0,F
+Barton Pond Elementary,North Central,13.4,75.0,412.0,B
+Bearfield Primary,Northeast,77.6,38.0,483.0,F
+John M Morehead High,Piedmont Triad,63.1,56.0,766.0,C
+Badin Elementary,Southwest,56.3,65.0,433.0,C
+Norwayne Middle,Southeast,47.4,62.0,888.0,C
+Woodland Heights Middle,Southwest,22.1,76.0,544.0,B
+Davis Drive Elementary,North Central,7.5,91.0,848.0,A
+Gaston Early College High School,Southwest,40.6,94.0,227.0,A
+Erwin Middle,Southwest,57.1,42.0,760.0,D
+East Carteret High,Southeast,46.7,77.0,515.0,B
+Mount Tabor High School,Piedmont Triad,59.5,59.0,1400.0,C
+Shoals Elementary,Piedmont Triad,50.2,76.0,233.0,B
+Rocky River Elementary,Southwest,30.2,72.0,612.0,B
+Westfield Elementary,Piedmont Triad,73.1,63.0,156.0,C
+Watauga Virtual Academy,Northwest,37.5,58.0,42.0,C
+Bethware Elementary,Southwest,67.0,62.0,478.0,C
+Wayne School of Engineering,Southeast,25.2,77.0,426.0,B
+North Gaston High,Southwest,65.1,57.0,1083.0,C
+J E Holmes Middle,Piedmont Triad,65.1,47.0,604.0,D
+Thomas Jefferson Middle,Piedmont Triad,44.7,69.0,791.0,C
+Efland Cheeks Elementary,North Central,69.4,57.0,521.0,C
+Seventy-First High,Sandhills,70.8,58.0,1296.0,C
+Char Eng Early College-UNCC,Southwest,32.4,89.0,296.0,A
+Valle Crucis Elementary,Northwest,45.0,72.0,327.0,B
+Buncombe County Schools Virtual Academy,Western,52.2,67.0,262.0,C
+Granite Falls Elementary,Northwest,55.8,67.0,558.0,C
+Tri-County Early College High,Western,62.4,85.0,126.0,A
+James E Shepard Middle,North Central,78.2,59.0,376.0,C
+Phillips Middle,North Central,74.4,44.0,127.0,D
+Lincoln Elementary,Piedmont Triad,67.3,62.0,296.0,C
+Sedgefield Middle,Southwest,42.9,58.0,500.0,C
+Hillsborough Elementary,North Central,17.6,80.0,428.0,B
+Whitnel Elementary,Northwest,78.3,40.0,269.0,D
+Merrick-Moore Elementary,North Central,55.7,60.0,545.0,C
+Tarboro High,North Central,71.0,52.0,497.0,D
+Cleveland Innovation,Southwest,54.8,57.0,168.0,C
+J W Seabrook Elementary,Sandhills,65.2,57.0,251.0,C
+White Oak Elementary,Northeast,64.5,47.0,412.0,D
+C C Spaulding Elementary,North Central,61.7,29.0,213.0,F
+Reedy Creek Middle,North Central,40.3,67.0,768.0,C
+West Wilkes Middle School,Northwest,45.4,60.0,464.0,C
+Williams Elementary,Western,51.6,40.0,463.0,D
+Brogden Primary,Southeast,71.0,36.0,752.0,F
+Davenport A+ School,Northwest,83.4,58.0,448.0,C
+Oakwood Elementary ,Northwest,57.1,72.0,324.0,B
+Martin Millennium Academy,North Central,72.0,44.0,562.0,D
+Leland Middle,Southeast,50.1,52.0,780.0,D
+Page High,Piedmont Triad,56.0,66.0,1684.0,C
+Banks Road Elementary,North Central,41.7,62.0,655.0,C
+Durant Road Middle,North Central,65.4,47.0,763.0,D
+Newport Elementary,Southeast,52.2,67.0,650.0,C
+Kenansville Elementary,Southeast,57.3,49.0,571.0,D
+Lake Rim Elementary,Sandhills,55.7,55.0,616.0,C
+Renaissance West STEAM Academy,Southwest,75.3,51.0,668.0,D
+Pamlico County Middle,Southeast,50.6,64.0,265.0,C
+Pine Forest Middle,Sandhills,55.3,66.0,729.0,C
+Starmount Academy of Excellence,Southwest,89.7,41.0,426.0,D
+W M Irvin Elementary,Southwest,55.0,45.0,674.0,D
+Luther Nick Jeralds Middle,Sandhills,75.7,47.0,600.0,D
+Carver High,Piedmont Triad,81.4,49.0,610.0,D
+Andrews Middle,Western,69.1,68.0,188.0,C
+Old Richmond Elementary,Piedmont Triad,57.3,71.0,406.0,B
+Creswell Elementary,Northeast,82.1,51.0,113.0,D
+Churchland Elementary,Piedmont Triad,68.9,54.0,382.0,D
+J B Page Primary School,Southwest,29.7,70.0,337.0,B
+Meadow Lane Elementary,Southeast,46.4,55.0,657.0,C
+Charles E Boger Elementary,Southwest,47.1,63.0,842.0,C
+Mac Williams Middle,Sandhills,57.6,54.0,1152.0,D
+Vance County Middle School,North Central,79.2,32.0,793.0,F
+Apex Friendship Elementary,North Central,5.8,84.0,773.0,B
+North Elementary,Southwest,72.7,60.0,257.0,C
+Stoney Creek Elementary,Southwest,56.0,42.0,748.0,D
+Grady Brown Elementary,North Central,58.5,54.0,407.0,D
+East Surry High,Piedmont Triad,44.3,68.0,581.0,C
+Nathanael Greene Elementary,Piedmont Triad,52.5,66.0,259.0,C
+Atkinson Elementary,Western,46.0,73.0,317.0,B
+Pasquotank Elementary,Northeast,68.1,49.0,263.0,D
+C.F. Pope Elementary,Southeast,83.5,51.0,481.0,D
+Riverside High,Northeast,64.3,49.0,425.0,D
+Hobbton Elementary,Sandhills,55.7,69.0,451.0,C
+Troutman Middle,Southwest,53.2,46.0,406.0,D
+Salisbury High,Southwest,66.0,49.0,882.0,D
+Brier Creek Elementary,North Central,50.8,59.0,579.0,C
+Vaughan Elementary,North Central,73.6,51.0,154.0,D
+East Yancey Middle,Northwest,60.1,65.0,250.0,C
+Vandalia Elementary,Piedmont Triad,76.5,39.0,209.0,F
+Lake Norman Elementary,Southwest,18.7,70.0,694.0,B
+Pinnacle Elementary School,Western,62.0,62.0,222.0,C
+Apex Middle,North Central,22.9,71.0,921.0,B
+Franklinton Elementary,North Central,81.6,54.0,510.0,D
+Woodington Middle,Southeast,60.5,54.0,576.0,D
+Statesville High,Southwest,77.7,48.0,840.0,D
+Centennial Campus Middle,North Central,64.4,51.0,512.0,D
+Cane River Middle,Northwest,53.4,70.0,192.0,B
+Swansboro High,Southeast,38.1,80.0,1085.0,B
+Creekside Elementary,Northeast,73.4,52.0,611.0,D
+Sampson Early College High,Sandhills,51.1,89.0,230.0,A
+E O Young Jr Elementary,North Central,83.2,37.0,160.0,F
+Bessemer City High,Southwest,79.3,60.0,536.0,C
+Southeast Guilford Middle,Piedmont Triad,57.9,56.0,830.0,C
+Overton Elementary,Southwest,71.3,31.0,307.0,F
+Third Creek Middle,Southwest,87.6,27.0,392.0,F
+Combs Elementary,North Central,40.9,72.0,609.0,B
+Blue Ridge Elementary,Northwest,58.1,65.0,354.0,C
+Sherwood Forest Elementary,Piedmont Triad,21.7,83.0,643.0,B
+Blue Ridge School,Western,77.2,65.0,147.0,C
+Oakdale Elementary,Southwest,66.9,39.0,465.0,F
+Baskerville Elementary,North Central,93.4,26.0,311.0,F
+Culbreth Middle,North Central,35.0,62.0,661.0,C
+Cordova Middle,Sandhills,74.7,54.0,263.0,D
+Southwest Elementary,Southeast,56.7,51.0,715.0,D
+North Ridge Elementary,North Central,39.8,59.0,697.0,C
+The Brawley School,Southwest,9.0,86.0,634.0,A
+Carroll Middle,North Central,60.7,49.0,862.0,D
+Kennedy Middle,Southwest,64.8,48.0,939.0,D
+Oaklawn Language Academy,Southwest,65.4,62.0,507.0,C
+Springfield Primary,Southwest,55.4,58.0,283.0,C
+West Rowan Elementary,Southwest,61.4,51.0,564.0,D
+Rocky Mount High,North Central,75.9,49.0,1047.0,D
+James Martin Middle,Southwest,59.9,32.0,745.0,F
+Paw Creek Elementary,Southwest,56.1,67.0,656.0,C
+J. H. Gunn Elementary,Southwest,59.8,41.0,631.0,D
+NRM Early College High School,North Central,48.4,87.0,384.0,A
+Gov's Village STEM (Upper),Southwest,76.3,50.0,712.0,D
+Cedar Grove Elementary,North Central,84.6,56.0,140.0,C
+Morris Grove Elementary,North Central,22.9,78.0,423.0,B
+Gardners Elementary,North Central,71.7,79.0,221.0,B
+Wallace Elementary,Southeast,58.2,36.0,1105.0,F
+Siler City Elementary,North Central,86.9,51.0,600.0,D
+Queens Creek Elementary,Southeast,49.6,56.0,720.0,C
+Smith Elementary,North Central,69.0,47.0,503.0,D
+Lee County High,North Central,60.8,55.0,1470.0,C
+Farmville Central High,Northeast,56.5,64.0,764.0,C
+Brevard Middle,Western,57.2,68.0,528.0,C
+Coastal Elementary,Southeast,31.8,65.0,816.0,C
+Rolesville High,North Central,48.6,62.0,2258.0,C
+York Chester Middle,Southwest,77.6,47.0,421.0,D
+Monticello-Brown Summit Elem,Piedmont Triad,69.7,56.0,277.0,C
+Parkwood Elementary,Southeast,51.8,67.0,509.0,C
+Columbia Middle,Northeast,61.7,49.0,109.0,D
+South Charlotte Middle,Southwest,22.7,78.0,809.0,B
+Madison Middle School,Western,57.7,63.0,451.0,C
+North Johnston High,North Central,61.9,71.0,758.0,B
+East Rockingham Elementary,Sandhills,76.5,51.0,506.0,D
+Elm City Middle,North Central,57.2,65.0,368.0,C
+Wilson Early College Academy,North Central,42.7,92.0,239.0,A
+Oakview Elementary,North Central,15.6,75.0,933.0,B
+Beverly Woods Elementary,Southwest,19.5,84.0,619.0,B
+North End Elementary,North Central,67.1,67.0,169.0,C
+Northwest Middle,Piedmont Triad,71.7,35.0,866.0,F
+Southeast Halifax Collegiate Prep Academ,Northeast,77.0,49.0,188.0,D
+LaFayette Elementary,North Central,41.3,66.0,631.0,C
+Nash Central Middle,North Central,65.5,44.0,556.0,D
+Carrboro Elementary,North Central,34.6,65.0,487.0,C
+Randleman High School,Piedmont Triad,57.6,57.0,847.0,C
+Mount Energy Elementary,North Central,56.9,50.0,447.0,D
+Greenway Park Elementary,Southwest,55.6,48.0,488.0,D
+McLeansville Elementary,Piedmont Triad,55.5,49.0,320.0,D
+Mount Airy High,Piedmont Triad,52.5,72.0,574.0,B
+East Lincoln High,Southwest,29.7,73.0,1033.0,B
+Hawthorne Academy of Health Sciences,Southwest,61.5,70.0,286.0,B
+Sampson Middle,Sandhills,52.5,49.0,644.0,D
+Whiteville Primary,Sandhills,76.2,55.0,446.0,C
+Cape Hatteras Secondary School,Northeast,48.7,68.0,353.0,C
+Pasquotank County High,Northeast,51.5,53.0,604.0,D
+Mountain View Intermediate,Western,68.6,47.0,571.0,D
+Kernodle Middle,Piedmont Triad,39.4,78.0,754.0,B
+Dana Elementary,Western,80.5,48.0,382.0,D
+Cape Fear Elementary,Southeast,74.0,54.0,505.0,D
+Battleground Elementary,Southwest,66.7,35.0,377.0,F
+Allenbrook Elementary,Southwest,71.3,74.0,235.0,B
+Bowman Middle,Northwest,63.5,57.0,205.0,C
+Cape Hatteras Elementary School,Northeast,53.0,63.0,297.0,C
+Central Davidson High,Piedmont Triad,48.3,64.0,865.0,C
+Northern Guilford Elementary,Piedmont Triad,17.1,77.0,632.0,B
+Wilton Elementary,North Central,55.4,68.0,252.0,C
+Zebulon Elementary,North Central,71.8,42.0,549.0,D
+Jacobs Fork Middle,Northwest,48.2,66.0,434.0,C
+Pittsboro Elementary,North Central,44.3,65.0,476.0,C
+James B Dudley High,Piedmont Triad,70.2,49.0,1349.0,D
+Robbinsville High,Western,67.3,62.0,333.0,C
+First Flight High School,Northeast,28.5,76.0,927.0,B
+Middle College at GTCC-High Point,Piedmont Triad,69.7,81.0,187.0,B
+Pender Early College High,Southeast,36.4,97.0,201.0,A
+Shelby Middle,Southwest,82.2,47.0,619.0,D
+Ranson Middle,Southwest,66.0,28.0,814.0,F
+Contentnea-Savannah School,Southeast,67.7,45.0,844.0,D
+Whitewater Academy,Southwest,59.1,58.0,738.0,C
+Mallard Creek Elementary,Southwest,73.2,48.0,535.0,D
+Starmount Middle,Piedmont Triad,64.8,55.0,528.0,C
+Corinth Holders High,North Central,31.8,76.0,2187.0,B
+Hornets Nest Elementary,Southwest,62.7,37.0,533.0,F
+G R Edwards Middle,North Central,82.1,46.0,410.0,D
+Edwin A Anderson Elementary,Southeast,40.1,76.0,621.0,B
+Jackson Middle,Piedmont Triad,72.0,44.0,406.0,D
+Canton Middle,Western,57.4,66.0,453.0,C
+Hillandale Elementary,North Central,67.0,53.0,518.0,D
+Holly Ridge Middle,North Central,25.7,69.0,991.0,C
+Hendersonville High,Western,43.3,78.0,764.0,B
+Malpass Corner Elementary,Southeast,86.7,48.0,458.0,D
+Stokes,Northeast,52.1,55.0,227.0,C
+Saluda Elementary School,Western,40.9,69.0,139.0,C
+Banoak Elementary,Northwest,57.6,59.0,287.0,C
+Wakefield Middle,North Central,27.2,65.0,898.0,C
+Lakewood Elementary,North Central,52.4,42.0,370.0,D
+Rosewood High,Southeast,43.9,68.0,448.0,C
+Sedge Garden Elementary,Piedmont Triad,57.7,67.0,725.0,C
+College Park Elementary,Southeast,70.2,50.0,459.0,D
+Tryon Elementary,Southwest,67.5,44.0,314.0,D
+Myers Park Traditional Elem,Southwest,37.4,68.0,624.0,C
+Myrtle Grove Middle,Southeast,54.9,66.0,655.0,C
+Stanly STEM Early College,Southwest,39.7,93.0,146.0,A
+Herbert Akins Road Middle,North Central,29.6,66.0,864.0,C
+Walkertown Middle,Piedmont Triad,63.2,46.0,626.0,D
+Everetts Elementary S.T.E.M. Academy,Northeast,75.7,32.0,226.0,F
+Smoky Mountain High School,Western,54.6,67.0,866.0,C
+Northern Nash High,North Central,58.3,62.0,1044.0,C
+Northeastern Randolph Middle School,Piedmont Triad,59.9,51.0,479.0,D
+Sumner Elementary,Piedmont Triad,70.6,47.0,517.0,D
+R-S Central High School,Western,46.3,73.0,729.0,B
+Hollister Elementary Leadership Academy,Northeast,71.5,35.0,147.0,F
+Nations Ford Elementary,Southwest,48.5,49.0,577.0,D
+Beddingfield High,North Central,75.0,64.0,662.0,C
+East Bend Elementary,Piedmont Triad,74.8,52.0,191.0,D
+Mountain Island Lake Academy,Southwest,72.5,44.0,775.0,D
+Albert H Bangert Elementary,Southeast,50.9,78.0,422.0,B
+Davis Drive Middle,North Central,12.5,89.0,976.0,A
+Wakelon Elementary,North Central,72.0,54.0,564.0,D
+Benton Heights Elementary,Southwest,90.5,50.0,449.0,D
+Glen Alpine Elementary,Northwest,76.8,68.0,265.0,C
+South Newton Elementary,Northwest,74.7,49.0,337.0,D
+Massey Hill Classical High,Sandhills,42.4,85.0,259.0,A
+W A Young Elementary,Northwest,78.4,62.0,277.0,C
+R Brown  McAllister Elementary,Southwest,38.1,71.0,377.0,B
+Mary McArthur Elementary,Sandhills,71.9,55.0,360.0,C
+W T Griggs Elementary,Northeast,57.3,68.0,223.0,C
+Wintergreen Intermediate,Northeast,37.1,78.0,816.0,B
+Douglas Byrd Middle,Sandhills,72.8,45.0,932.0,D
+South Creek High,Northeast,73.2,44.0,223.0,D
+Wagram Elementary,Sandhills,78.6,44.0,466.0,D
+Antioch Elementary,Southwest,9.2,87.0,869.0,A
+Carver Elementary,North Central,80.1,43.0,114.0,D
+Hominy Valley Elementary,Western,51.0,65.0,440.0,C
+Oaks Road Academy,Southeast,66.7,44.0,367.0,D
+Central Middle School,Northeast,55.5,49.0,338.0,D
+Bryan Road Elementary,North Central,41.5,71.0,655.0,B
+Table Rock Middle,Northwest,71.9,46.0,490.0,D
+Howard L Hall Elementary,Sandhills,39.1,59.0,598.0,C
+Bunn Elementary,North Central,71.8,58.0,543.0,C
+Monroe Middle,Southwest,87.6,35.0,937.0,F
+Lucy S. Herring Elementary,Western,52.0,61.0,288.0,C
+Millis Road Elementary,Piedmont Triad,59.1,68.0,465.0,C
+Harkers Island Elementary,Southeast,49.6,65.0,116.0,C
+Hayesville Primary School,Western,65.5,71.0,300.0,B
+North Duplin Jr Sr High,Southeast,46.8,63.0,604.0,C
+Koontz Elementary,Southwest,76.6,35.0,519.0,F
+Early College,Western,61.3,89.0,263.0,A
+H J MacDonald Middle,Southeast,54.6,53.0,720.0,D
+North Rowan Elementary,Southwest,72.9,26.0,413.0,F
+West Caldwell High,Northwest,70.6,58.0,714.0,C
+Morehead Montessori,North Central,36.3,74.0,199.0,B
+Fuquay-Varina Elementary,North Central,36.7,66.0,600.0,C
+Central Wilkes Middle School,Northwest,50.4,55.0,570.0,C
+Oak Grove High,Piedmont Triad,30.0,77.0,949.0,B
+Sugarloaf Elementary,Western,80.5,59.0,411.0,C
+Troy Elementary,Sandhills,76.5,49.0,253.0,D
+Bruce H. Tharrington Primary ,Piedmont Triad,55.7,63.0,353.0,C
+Gamewell Middle,Northwest,82.2,41.0,504.0,D
+Grandview Middle ,Northwest,77.7,52.0,396.0,D
+South Edgecombe Middle,North Central,65.8,46.0,307.0,D
+Cabarrus Early College of Technology,Southwest,32.9,92.0,221.0,A
+Long Mill Elementary,North Central,56.7,68.0,390.0,C
+Walter Bickett Elementary,Southwest,66.5,43.0,457.0,D
+Cox Mill Elementary,Southwest,9.4,87.0,1083.0,A
+Jarvisburg Elementary,Northeast,56.4,69.0,259.0,C
+Hobbton High,Sandhills,55.5,68.0,475.0,C
+Indian Trail Elementary,Southwest,49.6,70.0,578.0,B
+Township Three Elementary,Southwest,82.2,43.0,509.0,D
+William Amos Hough High,Southwest,18.2,83.0,2492.0,B
+Clinton High,Sandhills,44.1,58.0,824.0,C
+North Belmont Elementary,Southwest,59.5,71.0,310.0,B
+East Robeson Primary,Sandhills,71.0,77.0,495.0,B
+Western Rockingham Middle,Piedmont Triad,64.4,62.0,523.0,C
+Warrenwood Elementary,Sandhills,69.0,46.0,371.0,D
+Randolph Middle,Southwest,46.4,71.0,1131.0,B
+Franklin Elementary,Piedmont Triad,73.9,60.0,444.0,C
+Southern Elementary,Piedmont Triad,78.0,60.0,234.0,C
+China Grove Elementary,Southwest,68.6,35.0,583.0,F
+Mineral Springs Middle,Piedmont Triad,76.6,21.0,666.0,F
+West Mecklenburg High School,Southwest,56.6,45.0,1206.0,D
+Weaverville Elementary,Western,49.5,79.0,305.0,B
+Riverside High,North Central,51.5,64.0,1730.0,C
+East Wake High,North Central,63.3,63.0,1548.0,C
+Monroeton Elementary,Piedmont Triad,65.9,51.0,432.0,D
+Pilot Mountain Elementary,Piedmont Triad,58.0,66.0,330.0,C
+Enka Intermediate,Western,69.1,49.0,575.0,D
+Southern School of Energy and Sustainabi,North Central,50.6,48.0,1240.0,D
+Central Elementary,Southwest,74.3,40.0,544.0,D
+Holly Springs Elementary,North Central,17.4,83.0,909.0,B
+E K Powe Elementary,North Central,49.9,56.0,390.0,C
+Forest Pines Drive Elementary,North Central,57.0,68.0,506.0,C
+East Wilkes Middle School,Northwest,46.6,55.0,371.0,C
+Shady Grove Elementary,Piedmont Triad,23.3,69.0,484.0,C
+Princeville Elementary,North Central,84.5,48.0,201.0,D
+Stoney Creek Elementary,Piedmont Triad,65.7,50.0,143.0,D
+Cumberland Academy K-5 Virtual School,Sandhills,5.8,45.0,377.0,D
+William R Davie Elementary,Piedmont Triad,55.0,63.0,358.0,C
+Selwyn Elementary,Southwest,16.1,85.0,659.0,A
+Winecoff Elementary,Southwest,76.0,46.0,744.0,D
+Terrell Lane Middle,North Central,79.1,54.0,397.0,D
+Mint Hill Elementary School,Southwest,61.6,54.0,553.0,D
+Swain County High School,Western,52.9,62.0,541.0,C
+West Rowan Middle,Southwest,57.8,38.0,652.0,F
+Cotswold Elementary,Southwest,52.1,59.0,333.0,C
+West Cary Middle,North Central,26.1,82.0,869.0,B
+South Elementary,Piedmont Triad,62.7,46.0,225.0,D
+Kings Mountain Middle,Southwest,67.8,63.0,713.0,C
+South Davie Middle,Piedmont Triad,67.6,51.0,534.0,D
+Ballentine Elementary,North Central,30.9,74.0,694.0,B
+Freedom High,Northwest,65.4,66.0,1375.0,C
+Harrisburg Elementary,Southwest,27.6,70.0,771.0,B
+Ashley Elementary,Sandhills,52.9,59.0,176.0,C
+Spring Hill Middle,Sandhills,71.2,41.0,626.0,D
+H H Beam Elementary,Southwest,77.7,32.0,521.0,F
+Pembroke Elementary,Sandhills,73.1,48.0,657.0,D
+North Stanly High,Southwest,49.9,57.0,558.0,C
+Piney Grove Middle School,Piedmont Triad,59.5,65.0,223.0,C
+West View Elementary,North Central,48.0,62.0,944.0,C
+Wrightsboro Elementary,Southeast,71.8,43.0,470.0,D
+Enka High,Western,58.9,73.0,991.0,B
+Belmont Central Elementary,Southwest,31.5,70.0,682.0,B
+Northwest Elementary,Southeast,46.1,62.0,719.0,C
+North Buncombe Elementary,Western,53.6,69.0,568.0,C
+Troutman Elementary,Southwest,51.9,65.0,710.0,C
+Corriher Lipe Middle,Southwest,65.9,39.0,477.0,F
+Rowan Co Early College,Southwest,47.8,85.0,235.0,A
+Briarcliff Elementary,North Central,33.9,72.0,426.0,B
+Ignite Online Academy,North Central,16.5,51.0,438.0,D
+Love Memorial Elementary,Southwest,72.4,55.0,267.0,C
+Harris Middle,Northwest,62.0,53.0,235.0,D
+Northwest Cabarrus Middle,Southwest,58.7,63.0,808.0,C
+West Marion Elementary School,Northwest,69.6,58.0,347.0,C
+Salemburg Elementary,Sandhills,69.3,56.0,430.0,C
+Dabney Elementary,North Central,76.6,48.0,342.0,D
+Williamston Primary,Northeast,72.5,43.0,310.0,D
+The JP Knapp ECH (i)School,Northeast,21.3,90.0,256.0,A
+Midway Elementary,Sandhills,51.1,58.0,494.0,C
+Western Union Elementary,Southwest,40.0,67.0,557.0,C
+Hot Springs Elementary,Western,70.5,68.0,141.0,C
+Prospect Elementary,Southwest,49.9,66.0,359.0,C
+Northside High,Southeast,55.3,66.0,1062.0,C
+Bolton Elementary,Piedmont Triad,80.5,50.0,366.0,D
+Moncure School,North Central,47.1,61.0,210.0,C
+Lee Early College,North Central,42.6,94.0,248.0,A
+Jacksonville Commons Middle,Southeast,63.9,48.0,980.0,D
+Timber Drive Elementary,North Central,60.4,52.0,416.0,D
+Concord Middle,Southwest,60.4,42.0,703.0,D
+Scotland Early College High,Sandhills,40.0,83.0,224.0,B
+Phillip O Berry Academy of Technology,Southwest,64.5,74.0,1482.0,B
+Shallotte Middle,Southeast,58.5,52.0,670.0,D
+Owen Middle,Western,62.8,52.0,415.0,D
+Oakley Elementary,Western,51.2,44.0,440.0,D
+Graham A Barden Elementary,Southeast,73.9,58.0,218.0,C
+Saint Pauls Elementary,Sandhills,66.9,41.0,683.0,D
+Perry W Harrison Elementary,North Central,32.3,79.0,210.0,B
+Jacksonville Commons Elem,Southeast,69.5,39.0,538.0,F
+Vance Elementary,North Central,33.6,60.0,369.0,C
+North Elementary,Piedmont Triad,65.1,46.0,322.0,D
+Crest High,Southwest,56.2,69.0,1084.0,C
+Reid Ross Classical High,Sandhills,74.8,72.0,216.0,B
+Thomasville High,Piedmont Triad,65.7,47.0,602.0,D
+Smith Farm Elementary,Piedmont Triad,64.6,46.0,488.0,D
+South Pine Academy,Southwest,83.3,48.0,627.0,D
+Phillips Middle,North Central,30.9,75.0,613.0,B
+Trindale Elementary School,Piedmont Triad,66.0,68.0,325.0,C
+Margaret Hearne Elementary,North Central,91.3,60.0,391.0,C
+Gillespie Park Elementary,Piedmont Triad,85.0,35.0,203.0,F
+Sand Ridge Elementary,Southeast,57.3,58.0,587.0,C
+North Forest Pines Elementary,North Central,38.5,65.0,559.0,C
+Clear View Elementary ,Southeast,54.4,43.0,579.0,D
+Rolesville Elementary,North Central,35.7,71.0,498.0,B
+"Martin Luther King, Jr Middle",Southwest,54.9,28.0,958.0,F
+Camden Intermediate,Northeast,24.8,73.0,441.0,B
+Parkwood Elementary,North Central,70.0,47.0,584.0,D
+Fuller Elementary,North Central,34.3,69.0,375.0,C
+Eastern Wayne Elementary,Southeast,68.4,40.0,509.0,D
+South Johnston High,North Central,55.4,62.0,1289.0,C
+Palisades High School,Southwest,49.7,60.0,1615.0,C
+Stateside Elementary,Southeast,40.8,44.0,572.0,D
+North Garner Middle,North Central,56.5,53.0,970.0,D
+Asheville Middle,Western,49.7,57.0,578.0,C
+Crain's Creek Middle,Sandhills,50.6,49.0,569.0,D
+Weaverville Primary,Western,41.7,79.0,216.0,B
+Lowell Elementary,Southwest,73.6,60.0,404.0,C
+Walnut Cove Elementary School,Piedmont Triad,73.8,54.0,227.0,D
+Fremont STARS Elementary,Southeast,50.2,46.0,225.0,D
+Tommy's Road Elementary,Southeast,60.4,41.0,550.0,D
+Davidson Early College,Piedmont Triad,37.5,87.0,131.0,A
+Johnson Street Global Studies,Piedmont Triad,72.9,37.0,402.0,F
+Union Pines High,Sandhills,32.9,68.0,1401.0,C
+Vienna Elementary,Piedmont Triad,29.4,82.0,772.0,B
+Scotts Creek Elementary,Western,70.5,51.0,441.0,D
+Forest Hills Global Elementary,Southeast,78.3,39.0,346.0,F
+Wilmington Early College High,Southeast,34.8,91.0,236.0,A
+L J Bell Elementary,Sandhills,61.3,59.0,464.0,C
+Bailey Middle,Southwest,21.1,82.0,1325.0,B
+Hawk Eye Elementary,Sandhills,77.6,42.0,344.0,D
+Olive Chapel Elementary,North Central,10.6,84.0,962.0,B
+Southmont Elementary,Piedmont Triad,68.3,58.0,281.0,C
+Northern Guilford High,Piedmont Triad,25.9,73.0,1348.0,B
+Isaac Dickson Elementary,Western,38.3,60.0,396.0,C
+Hasty Elementary,Piedmont Triad,69.6,70.0,416.0,B
+Guilford Elementary,Piedmont Triad,67.6,51.0,557.0,D
+Elizabeth City Pasquotank Early College,Northeast,40.6,78.0,102.0,B
+Pumpkin Center Intermediate,Southwest,45.3,67.0,314.0,C
+Crestdale Middle,Southwest,40.1,70.0,986.0,B
+Fletcher Elementary,Western,53.4,65.0,461.0,C
+Park View Elementary,Southwest,51.8,59.0,597.0,C
+Weeksville Elementary,Northeast,50.2,68.0,210.0,C
+South Lenoir High,Southeast,50.0,54.0,713.0,D
+Northern Middle,North Central,71.4,42.0,456.0,D
+Elise Middle,Sandhills,85.6,44.0,207.0,D
+West Pender Middle,Southeast,87.8,48.0,178.0,D
+Butler High School,Southwest,46.0,72.0,1817.0,B
+Garinger High School,Southwest,51.6,45.0,1638.0,D
+First Flight Middle School,Northeast,33.7,77.0,610.0,B
+E Lawson Brown Middle,Piedmont Triad,62.2,54.0,534.0,D
+Long Creek Elementary,Southwest,67.6,55.0,473.0,C
+Druid Hills Academy,Southwest,68.3,30.0,262.0,F
+Dilworth Elementary School: Latta Campus,Southwest,18.4,82.0,286.0,B
+Gamewell Elementary,Northwest,82.1,41.0,481.0,D
+Fuquay-Varina High,North Central,26.0,78.0,1875.0,B
+Middle Creek Elementary,North Central,33.3,68.0,642.0,C
+Eastover Elementary,Southwest,28.7,74.0,344.0,B
+Fred T Foard High,Northwest,42.4,67.0,927.0,C
+Edwin A Alderman Elementary,Piedmont Triad,64.4,58.0,372.0,C
+Polk County Early College,Western,56.5,97.0,74.0,A
+Washington Elementary,North Central,31.6,70.0,491.0,B
+Macon Early College High School,Western,50.4,83.0,116.0,B
+West Middle,Sandhills,73.9,51.0,306.0,D
+Hayesville High,Western,50.3,77.0,381.0,B
+Powell Elementary,North Central,50.2,62.0,270.0,C
+Maiden Middle School,Northwest,52.1,63.0,417.0,C
+Meadow View Elementary,Southeast,60.9,45.0,531.0,D
+Highland Renaissance Academy,Southwest,66.3,52.0,345.0,D
+Richmond Early College High,Sandhills,47.1,91.0,291.0,A
+Allen Middle,Piedmont Triad,70.1,42.0,687.0,D
+Wake EC of Information & Biotechnologies,North Central,14.8,97.0,125.0,A
+Stedman Primary,Sandhills,43.4,77.0,156.0,B
+Irwin Academic Center,Southwest,33.2,67.0,397.0,C
+Mabel Elementary,Northwest,66.9,51.0,142.0,D
+Ridgewood Elementary,Northeast,48.5,74.0,727.0,B
+Walter R Johnson Middle,Northwest,89.9,46.0,458.0,D
+Northwest Cabarrus High,Southwest,36.5,76.0,1119.0,B
+Long Hill Elementary,Sandhills,38.9,75.0,436.0,B
+The Downtown School,Piedmont Triad,25.2,79.0,389.0,B
+Glendale-Kenly Elementary,North Central,66.4,58.0,452.0,C
+Mary C Williams Elementary,Southeast,65.8,68.0,398.0,C
+Franklinville Elementary School,Piedmont Triad,70.9,49.0,317.0,D
+Johnsonville Elementary,North Central,63.5,50.0,470.0,D
+Harding University High School,Southwest,65.6,51.0,1190.0,D
+Porters Neck Elementary,Southeast,25.4,77.0,614.0,B
+Randleman Middle School,Piedmont Triad,67.9,47.0,820.0,D
+Newton-Conover Middle,Northwest,66.5,58.0,601.0,C
+Fairview Elementary,Southwest,35.3,76.0,417.0,B
+Brinson Memorial Elementary,Southeast,55.5,55.0,457.0,C
+Lexington Senior High School,Piedmont Triad,66.1,60.0,893.0,C
+Weldon STEM High School Career Academies,Northeast,73.6,42.0,118.0,D
+Broadway Elementary,North Central,81.0,42.0,462.0,D
+Dixon Middle,Southeast,39.0,61.0,932.0,C
+River Bend Middle,Northwest,69.0,52.0,473.0,D
+Julius I Foust Elementary,Piedmont Triad,72.7,45.0,224.0,D
+Union Grove Elementary,Southwest,54.2,56.0,220.0,C
+Southeast Middle,Southwest,67.7,37.0,557.0,F
+Corinth-Holders Elementary,North Central,58.2,63.0,548.0,C
+Englewood Elementary,North Central,74.8,38.0,568.0,F
+Ramseur Elementary School,Piedmont Triad,66.5,46.0,326.0,D
+Ellenboro Elementary School,Western,62.3,70.0,556.0,B
+Baileywick Road Elementary,North Central,60.3,51.0,347.0,D
+Weddington Elementary,Southwest,5.1,89.0,689.0,A
+Acme Delco Elementary,Sandhills,63.9,50.0,286.0,D
+Cherryville High,Southwest,60.9,72.0,482.0,B
+Warren County Middle,North Central,69.4,36.0,391.0,F
+Cumberland Mills Elementary,Sandhills,66.0,47.0,557.0,D
+Brunson Elementary,Piedmont Triad,57.7,60.0,408.0,C
+Black Mountain Primary,Western,57.8,63.0,325.0,C
+Chapel Grove Elementary,Southwest,71.8,47.0,340.0,D
+Jimmy C Draughn High School,Northwest,51.8,76.0,669.0,B
+District No 7 Elementary,Sandhills,37.3,72.0,179.0,B
+Robert B Glenn High School,Piedmont Triad,73.5,49.0,1424.0,D
+Forest View Elementary,North Central,59.7,49.0,644.0,D
+Hodge Road Elementary,North Central,68.9,53.0,508.0,D
+Leicester Elementary,Western,70.5,57.0,375.0,C
+Southwest Guilford High,Piedmont Triad,51.1,60.0,1624.0,C
+Salem Elementary,Northwest,68.9,72.0,374.0,B
+Alderman Road Elementary,Sandhills,47.8,61.0,621.0,C
+Poplin Elementary,Southwest,35.6,77.0,731.0,B
+Cooleemee Elementary,Piedmont Triad,77.9,56.0,456.0,C
+Fair Grove Elementary,Piedmont Triad,60.9,71.0,510.0,B
+Wahl Coates Elementary,Northeast,79.6,44.0,410.0,D
+Davie County Virtual School,Piedmont Triad,57.1,59.0,34.0,C
+Ronald W Reagan High School,Piedmont Triad,31.0,86.0,2087.0,A
+Durham School of the Arts,North Central,35.4,81.0,1682.0,B
+Oxendine Elementary,Sandhills,84.1,54.0,279.0,D
+Holly Grove Elementary,North Central,11.2,83.0,907.0,B
+Gray's Creek Middle,Sandhills,50.4,60.0,1119.0,C
+Porter Ridge Elementary,Southwest,49.9,62.0,672.0,C
+Northern High,North Central,63.1,48.0,1268.0,D
+Morehead City Primary,Southeast,39.4,73.0,522.0,B
+Lewisville Middle,Piedmont Triad,35.1,74.0,826.0,B
+J F Kennedy High,Piedmont Triad,70.7,47.0,374.0,D
+Orange Middle,North Central,40.6,57.0,524.0,C
+Roberson High,Western,43.9,76.0,1443.0,B
+New Hope Elementary,Southwest,32.7,74.0,508.0,B
+Rex-Rennert Elementary,Sandhills,73.6,36.0,369.0,F
+Wentworth Elementary,Piedmont Triad,53.6,62.0,494.0,C
+New Hope Elementary,North Central,73.0,54.0,535.0,D
+Magnolia Elementary,Sandhills,65.4,55.0,754.0,C
+Endy Elementary,Southwest,42.1,48.0,337.0,D
+Heritage High,North Central,25.6,77.0,1779.0,B
+Ronda-Clingman Elementary School,Northwest,42.8,68.0,281.0,C
+Bethesda Elementary,North Central,59.5,48.0,620.0,D
+Lead Mine Elementary,North Central,51.3,59.0,375.0,C
+City of Medicine Academy,North Central,62.5,83.0,331.0,B
+Hunter Huss High,Southwest,83.1,54.0,1056.0,D
+South Point High,Southwest,31.2,82.0,939.0,B
+North Wilkes High School,Northwest,56.8,79.0,596.0,B
+Lowe's Grove Middle,North Central,76.3,40.0,687.0,D
+Woodfin Elementary,Western,53.0,45.0,130.0,D
+J D Clement Early College HS,North Central,47.4,92.0,389.0,A
+Bessemer City Middle,Southwest,66.7,57.0,504.0,C
+Lawsonville Elementary School,Piedmont Triad,47.1,59.0,117.0,C
+Mountain View Elementary School,Northwest,59.3,63.0,436.0,C
+Morehead Elem at Camp Glenn,Southeast,39.9,65.0,290.0,C
+Ibraham Elementary,Piedmont Triad,81.1,52.0,342.0,D
+Old Town Elementary,Piedmont Triad,72.3,53.0,568.0,D
+Bethel Elementary,Northwest,49.6,60.0,123.0,C
+West Charlotte High School,Southwest,66.0,53.0,1444.0,D
+The School for Creative Studies,North Central,57.1,57.0,513.0,C
+West Rowan High,Southwest,54.8,51.0,1073.0,D
+Kingswood Elementary,North Central,46.8,57.0,379.0,C
+Carl A Furr Elementary,Southwest,60.2,51.0,833.0,D
+Union Middle,Sandhills,66.7,48.0,419.0,D
+Hemby Bridge Elementary,Southwest,33.7,70.0,450.0,B
+Oakboro Choice STEM,Southwest,25.9,73.0,342.0,B
+Sandy Ridge  Elementary School,Piedmont Triad,73.6,59.0,157.0,C
+Fox Road Elementary,North Central,70.1,53.0,462.0,D
+East Wilkes High School,Northwest,49.7,72.0,479.0,B
+Winding Springs Elementary,Southwest,58.1,51.0,699.0,D
+Andrews Elementary,Western,64.7,49.0,333.0,D
+Elizabeth M Cashwell Elementary,Sandhills,70.8,48.0,583.0,D
+New Town Elementary,Southwest,8.5,87.0,758.0,A
+Waccamaw,Southeast,64.4,70.0,431.0,B
+Hallsboro-Artesia Elementary,Sandhills,69.2,54.0,324.0,D
+Cramerton Middle,Southwest,38.2,83.0,909.0,B
+Collettsville School,Northwest,68.2,63.0,315.0,C
+John A Holmes High,Northeast,58.1,62.0,573.0,C
+Rogers-Herr Middle,North Central,47.6,72.0,638.0,B
+East Garner Middle,North Central,72.8,39.0,1174.0,F
+Spring Creek Middle,Southeast,61.9,53.0,617.0,D
+Black Mountain Elementary,Western,53.4,65.0,147.0,C
+Bridgeton Elementary,Southeast,71.6,59.0,352.0,C
+Purnell Swett High,Sandhills,60.8,60.0,1510.0,C
+Central Cabarrus High,Southwest,56.9,63.0,1281.0,C
+Early College of Forsyth Co,Piedmont Triad,37.6,91.0,282.0,A
+Midway High,Sandhills,41.7,71.0,744.0,B
+Wendell Elementary,North Central,65.6,43.0,424.0,D
+Lincoln Elementary,Southeast,60.9,61.0,678.0,C
+Lakeshore Elementary,Southwest,29.8,66.0,682.0,C
+Union Chapel Elementary,Sandhills,69.9,52.0,446.0,D
+Wayne Early / Middle College High,Southeast,52.7,87.0,224.0,A
+Huntingtowne Farms Elementary,Southwest,77.8,45.0,800.0,D
+Jay M Robinson High,Southwest,51.4,66.0,1064.0,C
+Currituck County High,Northeast,34.1,63.0,1036.0,C
+East Forsyth High,Piedmont Triad,54.1,59.0,1602.0,C
+Hobbton Middle,Sandhills,61.8,54.0,411.0,D
+Marvin Ridge High,Southwest,5.0,94.0,2064.0,A
+Cary Elementary,North Central,41.1,74.0,470.0,B
+Rural Hall Elementary,Piedmont Triad,57.8,56.0,475.0,C
+Palisades Park Elementary,Southwest,39.8,78.0,923.0,B
+Rashkis Elementary,North Central,44.3,72.0,421.0,B
+Wheatmore Middle School,Piedmont Triad,51.5,57.0,499.0,C
+Cumberland Polytechnic,Sandhills,43.2,93.0,284.0,A
+Pleasant Garden Elementary,Piedmont Triad,54.8,66.0,428.0,C
+Millbridge Elementary,Southwest,47.5,61.0,568.0,C
+Archer Elementary,Piedmont Triad,71.2,57.0,367.0,C
+Elmhurst Elementary,Northeast,59.1,54.0,447.0,D
+Catawba Heights Elementary,Southwest,69.8,59.0,258.0,C
+Welborn Middle,Piedmont Triad,71.2,32.0,421.0,F
+East Iredell Middle,Southwest,77.8,31.0,354.0,F
+Abbotts Creek Elementary,North Central,32.8,77.0,771.0,B
+J R Ingram Jr Elementary,North Central,65.9,60.0,404.0,C
+Southwest High,Southeast,54.6,55.0,675.0,C
+Southeastern Stokes Middle School,Piedmont Triad,63.1,49.0,399.0,D
+Matthews Elementary,Southwest,31.6,73.0,809.0,B
+Vinson-Bynum Elementary,North Central,78.5,59.0,476.0,C
+Jonesville Elementary,Piedmont Triad,83.1,59.0,253.0,C
+Whitaker Elementary,Piedmont Triad,27.9,79.0,542.0,B
+Ellerbe Middle,Sandhills,57.6,55.0,213.0,C
+West Yadkin Elementary,Piedmont Triad,71.8,61.0,394.0,C
+Tramway Elementary,North Central,48.0,70.0,537.0,B
+Trexler Middle,Southeast,47.0,50.0,824.0,D
+Falkland Elementary,Northeast,77.0,49.0,252.0,D
+South Central,Northeast,56.8,64.0,1603.0,C
+Powhatan Elementary,North Central,33.4,74.0,606.0,B
+WB Wicker Elementary,North Central,85.3,50.0,575.0,D
+Polk County High School,Western,52.6,72.0,556.0,B
+Partnership Elementary,North Central,36.0,73.0,271.0,B
+Walnut Creek Elementary,North Central,58.1,51.0,490.0,D
+Hunters Creek Elementary,Southeast,65.7,50.0,642.0,D
+Cleveland ECHS,Southwest,56.6,85.0,213.0,A
+New Century International Middle,Sandhills,55.5,57.0,389.0,C
+James Y Joyner Elementary,Piedmont Triad,66.9,47.0,238.0,D
+Park Road Montessori,Southwest,16.7,73.0,433.0,B
+Forest Park Elementary,Southwest,63.9,48.0,455.0,D
+Harry M Arndt Middle,Northwest,62.5,56.0,626.0,C
+Bonlee School,North Central,62.0,59.0,294.0,C
+Wake Forest Elementary,North Central,56.7,59.0,317.0,C
+Cochrane Collegiate Academy,Southwest,52.5,36.0,902.0,F
+Southwest Primary ,Northwest,74.9,48.0,278.0,D
+Kitty Hawk Elementary School,Northeast,18.0,76.0,451.0,B
+Brier Creek Elementary,Piedmont Triad,69.3,66.0,204.0,C
+David D Jones Elementary,Piedmont Triad,55.1,57.0,646.0,C
+Granville Academy,North Central,44.2,60.0,228.0,C
+Northwest Elementary,Southeast,82.4,52.0,471.0,D
+Chantilly Montessori,Southwest,11.4,76.0,254.0,B
+Stories Creek Elementary,North Central,61.6,59.0,364.0,C
+McGee's Crossroads Middle,North Central,47.8,58.0,756.0,C
+Hall Fletcher Elementary,Western,57.0,48.0,285.0,D
+Friedberg Elementary,Piedmont Triad,36.6,73.0,435.0,B
+Otis L Hairston Sr Middle,Piedmont Triad,78.4,48.0,634.0,D
+Northern Granville Middle,North Central,84.2,44.0,506.0,D
+West Johnston High,North Central,38.3,64.0,1439.0,C
+Candor Elementary,Sandhills,94.4,41.0,329.0,D
+J W McLauchlin Elementary,Sandhills,65.8,51.0,301.0,D
+Military and Global Leadership,Southwest,65.3,60.0,153.0,C
+Southwood Elementary,Piedmont Triad,65.0,58.0,578.0,C
+Madison Elementary,Piedmont Triad,66.1,42.0,222.0,D
+Ashley Park PreK-8 School,Southwest,70.6,31.0,314.0,F
+Mooresville Middle,Southwest,45.2,54.0,931.0,D
+Kiser Middle,Piedmont Triad,60.2,54.0,905.0,D
+South Garner High,North Central,65.4,68.0,1756.0,C
+Albemarle Road Elementary,Southwest,58.5,48.0,749.0,D
+PCS Virtual Academy,North Central,5.5,57.0,70.0,C
+Stoney Point Elementary,Sandhills,38.6,74.0,877.0,B
+Westerly Hills Academy,Southwest,70.7,49.0,423.0,D
+Lindley Park Elementary,Piedmont Triad,66.0,51.0,456.0,D
+Pilot Mountain Middle,Piedmont Triad,56.2,75.0,452.0,B
+Washington County Middle,Northeast,78.9,43.0,219.0,D
+Hardin Park Elementary,Northwest,39.6,73.0,839.0,B
+Creedmoor Elementary,North Central,86.9,33.0,294.0,F
+Albemarle Road Middle,Southwest,55.8,40.0,920.0,D
+North Harnett Primary,North Central,79.3,40.0,338.0,D
+Charlotte-Mecklenburg Virtual School,Southwest,56.3,50.0,1289.0,D
+Charles P Murray Middle,Southeast,35.0,77.0,877.0,B
+Junaluska Elementary,Western,54.4,69.0,443.0,C
+South Macon Elementary,Western,70.8,62.0,469.0,C
+Mount Airy Middle,Piedmont Triad,57.7,64.0,404.0,C
+Midway Elementary,Piedmont Triad,45.7,65.0,484.0,C
+New Century Middle,Sandhills,31.3,66.0,629.0,C
+Mount Olive Elementary School,Piedmont Triad,51.4,63.0,319.0,C
+Holly Ridge Elementary,North Central,15.5,83.0,793.0,B
+South Topsail Elementary,Southeast,33.1,76.0,528.0,B
+Lansdowne Elementary,Southwest,45.4,67.0,566.0,C
+Oakhurst STEAM Academy,Southwest,56.0,57.0,559.0,C
+Stanley Middle,Southwest,55.4,65.0,664.0,C
+Waldo C Falkener Sr Elementary,Piedmont Triad,78.3,36.0,494.0,F
+Pollocksville Elementary,Southeast,66.4,72.0,105.0,B
+Devonshire Elementary,Southwest,57.5,33.0,534.0,F
+York Elementary,North Central,41.3,63.0,420.0,C
+Peachtree Elementary,Western,65.3,75.0,145.0,B
+SouthWest Edgecombe High,North Central,64.5,56.0,776.0,C
+Red Springs Middle,Sandhills,74.1,26.0,596.0,F
+Martin Middle,North Central,27.5,64.0,952.0,C
+Harnett Central Middle,North Central,62.9,41.0,1018.0,D
+Rocky Mount Middle,North Central,83.9,34.0,418.0,F
+Ephesus Elementary,North Central,35.1,74.0,349.0,B
+JCPS Virtual Academy,North Central,47.9,53.0,607.0,D
+Lebanon Road Elementary,Southwest,52.4,42.0,546.0,D
+Inborden Elementary S.T.E.A.M. Academy,Northeast,75.1,38.0,196.0,F
+Swift Creek Elementary,North Central,57.5,59.0,218.0,C
+The International School at Gregory,Southeast,45.6,60.0,515.0,C
+Harnett County Early College,North Central,45.2,78.0,114.0,B
+Jackson Co Early College,Western,42.9,87.0,99.0,A
+Cleveland Middle,North Central,37.4,70.0,938.0,B
+Holly Tree Elementary,Southeast,21.0,78.0,426.0,B
+Richmond 9th Grade Academy,Sandhills,68.9,59.0,490.0,C
+Hidden Valley Elementary,Southwest,60.5,50.0,906.0,D
+Eugene Ashley High,Southeast,34.7,74.0,1909.0,B
+McDougle Middle,North Central,29.0,68.0,750.0,C
+Nesbitt Discovery Academy,Western,21.8,98.0,372.0,A
+Chatham County Schools Virtual Academy,North Central,42.4,41.0,84.0,D
+Tryon Elementary School,Western,48.5,72.0,353.0,B
+Wake Young Men's Leadership Academy,North Central,31.3,90.0,268.0,A
+Micaville Elementary,Northwest,63.8,59.0,188.0,C
+Bandys High,Northwest,32.1,81.0,848.0,B
+Greene Early College High,Southeast,52.3,81.0,151.0,B
+Poe Elementary,North Central,58.3,59.0,260.0,C
+Mountain View Elementary,Northwest,79.8,55.0,623.0,C
+J W Coon Elementary,Sandhills,72.1,42.0,196.0,D
+Hall-Woodward Elementary,Piedmont Triad,75.5,34.0,562.0,F
+Union County Early College,Southwest,37.3,95.0,305.0,A
+South Columbus High,Sandhills,50.7,59.0,659.0,C
+Bugg Elementary,North Central,64.5,44.0,199.0,D
+Greene County Intermediate,Southeast,66.8,46.0,358.0,D
+Ayden Middle,Northeast,52.6,54.0,395.0,D
+Wake Early College of Health and Science,North Central,40.0,94.0,327.0,A
+Rocky River Elementary,Southwest,73.0,46.0,703.0,D
+Rodgers Elementary,Northeast,49.8,67.0,220.0,C
+Cuthbertson Middle,Southwest,10.4,81.0,1348.0,B
+Hazelwood Elementary,Western,61.7,67.0,479.0,C
+Rugby Middle,Western,39.9,74.0,803.0,B
+Franklin High,Western,51.1,68.0,951.0,C
+Page Street Elementary,Sandhills,75.7,49.0,228.0,D
+Surf City Middle,Southeast,23.5,67.0,702.0,C
+E E Smith High,Sandhills,60.8,56.0,958.0,C
+North Cove Elementary School,Northwest,69.7,61.0,199.0,C
+Roseboro Elementary,Sandhills,72.2,62.0,361.0,C
+Vance County High School,North Central,72.3,36.0,924.0,F
+Douglas Elementary,North Central,39.2,64.0,524.0,C
+East McDowell Middle School,Northwest,77.8,49.0,468.0,D
+Union High,Sandhills,60.6,61.0,452.0,C
+Pinkston Street Elementary,North Central,76.1,47.0,220.0,D
+Icard Elementary,Northwest,73.4,66.0,243.0,C
+Cross Creek Early College,Sandhills,57.8,93.0,244.0,A
+Gibson Elementary,Piedmont Triad,74.5,38.0,596.0,F
+Louisburg Magnet High,North Central,70.2,70.0,503.0,B
+Weddington High,Southwest,6.8,90.0,1819.0,A
+Lewisville Elementary,Piedmont Triad,31.5,84.0,591.0,B
+Dilworth Elem Sedgefield Campus,Southwest,19.5,82.0,337.0,B
+Cedar Ridge High,North Central,42.8,80.0,1082.0,B
+Swain County West Elementary,Western,61.5,57.0,399.0,C
+Bolivia Elementary,Southeast,57.6,53.0,497.0,D
+PCS Early College High School,Northeast,41.4,92.0,319.0,A
+Barwell Road Elementary,North Central,82.3,51.0,681.0,D
+Central Middle,Sandhills,63.1,63.0,457.0,C
+Manteo Middle School,Northeast,46.9,63.0,373.0,C
+Jamestown Elementary,Piedmont Triad,60.0,63.0,414.0,C
+East Mooresville Intermediate,Southwest,46.0,71.0,635.0,B
+Wellcome Middle,Northeast,68.9,37.0,410.0,F
+Middle College HS @ DTCC,North Central,21.2,96.0,102.0,A
+Fairmont Middle,Sandhills,81.8,28.0,308.0,F
+Stoneville Elementary,Piedmont Triad,70.0,56.0,404.0,C
+Carver Heights Elementary,Southeast,86.6,40.0,436.0,D
+C C Wright Elementary School,Northwest,64.7,51.0,299.0,D
+George Hildebrand Elementary,Northwest,82.0,70.0,304.0,B
+Edward D Sadler Jr  Elementary School,Southwest,79.4,35.0,301.0,F
+T S Cooper Elementary,Northeast,58.9,60.0,174.0,C
+Broad Creek Middle,Southeast,25.8,75.0,715.0,B
+Manning Elementary School,Northeast,51.5,63.0,597.0,C
+Parkway Elementary,Northwest,35.1,75.0,638.0,B
+W G Pearson Elementary,North Central,62.4,51.0,319.0,D
+Lumberton Junior ,Sandhills,72.3,41.0,717.0,D
+Green Elementary,North Central,66.9,50.0,540.0,D
+Spring Lake Middle,Sandhills,74.3,47.0,508.0,D
+Meadowlark Elementary,Piedmont Triad,35.8,81.0,829.0,B
+Candler Elementary,Western,72.6,64.0,359.0,C
+Reedy Fork Elementary,Piedmont Triad,55.1,43.0,478.0,D
+Burns Middle,Southwest,69.2,58.0,738.0,C
+Liberty Drive Elementary,Piedmont Triad,73.0,45.0,357.0,D
+Brogden Middle,North Central,54.4,47.0,750.0,D
+Rockingham Co Early College High,Piedmont Triad,37.8,89.0,315.0,A
+Ligon Middle,North Central,29.7,71.0,887.0,B
+Boiling Springs Elementary,Southwest,63.2,69.0,520.0,C
+North Duplin Elementary,Southeast,51.7,54.0,670.0,D
+Middle College of Forsyth Cnty,Piedmont Triad,39.6,94.0,105.0,A
+Guy B Teachey Elementary,Piedmont Triad,72.2,55.0,447.0,C
+Watauga Innovation Academy,Northwest,44.5,73.0,261.0,B
+Caldwell Early College,Northwest,40.0,85.0,391.0,A
+West Stokes High School,Piedmont Triad,47.1,74.0,754.0,B
+Spring Creek High,Southeast,57.7,60.0,707.0,C
+Fairmont High,Sandhills,64.7,49.0,778.0,D
+Fuquay-Varina Middle,North Central,29.2,68.0,1181.0,C
+James Kenan High,Southeast,55.1,47.0,767.0,D
+Oakwood Elementary,Piedmont Triad,73.9,45.0,311.0,D
+Hope Valley Elementary,North Central,67.3,52.0,634.0,D
+Highland Sch of Technology,Southwest,29.1,100.0,510.0,A
+Orrum Middle,Sandhills,74.7,41.0,291.0,D
+Aquadale Elementary,Southwest,42.8,54.0,340.0,D
+Jones Dairy Elementary,North Central,12.4,82.0,583.0,B
+Manchester Elementary,Sandhills,77.7,55.0,266.0,C
+Asheboro High,Piedmont Triad,70.2,56.0,1313.0,C
+Parkview Village Elementary,Piedmont Triad,85.3,44.0,237.0,D
+Coddle Creek Elementary,Southwest,26.8,76.0,700.0,B
+Conn Elementary,North Central,43.3,67.0,511.0,C
+Newport Middle,Southeast,48.8,56.0,372.0,C
+West Elementary,Southwest,60.6,64.0,277.0,C
+Eno Valley Elementary,North Central,63.5,50.0,538.0,D
+Parkton Elementary,Sandhills,71.4,41.0,561.0,D
+Norwood Elementary,Southwest,58.5,47.0,349.0,D
+Gouge Elementary,Northwest,62.6,62.0,228.0,C
+Oak Lane Elementary,North Central,37.7,70.0,222.0,B
+Sunset Avenue Elementary,Sandhills,57.6,57.0,714.0,C
+STEM Early College @ NC A&T SU,Piedmont Triad,21.4,97.0,188.0,A
+Shepherd Elementary,Southwest,44.9,56.0,725.0,C
+Chase Middle School,Western,53.1,55.0,489.0,C
+Brooks Elementary,North Central,48.7,52.0,433.0,D
+Marshville Elementary,Southwest,81.5,59.0,403.0,C
+STEM Early High,North Central,61.0,68.0,253.0,C
+Southwest Elementary,North Central,53.5,62.0,652.0,C
+Kirkman Park Elementary,Piedmont Triad,77.9,56.0,237.0,C
+Bruce Drysdale Elementary,Western,61.9,65.0,449.0,C
+Burgaw Middle,Southeast,83.7,37.0,259.0,F
+Early College EAST High,Southeast,22.6,88.0,199.0,A
+Woodland Heights Elementary,Southwest,13.1,82.0,604.0,B
+Hurley Elementary,Southwest,73.7,32.0,494.0,F
+Apex Elementary,North Central,29.0,67.0,621.0,C
+Summerfield Elementary,Piedmont Triad,24.7,80.0,569.0,B
+Harmony Elementary,Southwest,69.2,62.0,347.0,C
+W H Knuckles,Sandhills,81.0,39.0,393.0,F
+Apex High,North Central,20.7,80.0,2454.0,B
+Durham School of Technology,North Central,39.3,80.0,244.0,B
+Southwest Middle School,Southwest,62.0,38.0,1377.0,F
+Gray's Creek Elementary,Sandhills,31.2,69.0,437.0,C
+Franklin County Early College,North Central,43.2,91.0,181.0,A
+Shiloh Valley Elementary,Southwest,48.5,61.0,603.0,C
+Wolf Meadow Elementary,Southwest,63.2,33.0,525.0,F
+Supply Elementary,Southeast,72.8,54.0,544.0,D
+Bell Elementary,Western,54.4,63.0,214.0,C
+Brookside Elementary,Southwest,66.8,49.0,515.0,D
+Knox Middle,Southwest,75.0,22.0,510.0,F
+Ray Childers Elementary,Northwest,74.2,61.0,424.0,C
+Bethel Elementary,Southwest,48.7,67.0,599.0,C
+Beaver Dam Elementary,Sandhills,58.2,84.0,90.0,B
+Moyock Middle,Northeast,27.8,67.0,612.0,C
+Catawba Elementary School,Northwest,73.2,61.0,387.0,C
+Union Elementary,Southeast,50.4,87.0,577.0,A
+Bessemer City Primary,Southwest,75.4,36.0,393.0,F
+R Max Abbott Middle,Sandhills,52.6,55.0,740.0,C
+Parkwood Middle,Southwest,43.0,54.0,835.0,D
+Gibsonville Elementary,Piedmont Triad,61.4,55.0,559.0,C
+West Lee Middle,North Central,70.6,39.0,606.0,F
+Summersill Elementary,Southeast,66.8,53.0,479.0,D
+C M Eppes Middle,Northeast,65.6,42.0,618.0,D
+Fairview Elementary,Western,42.4,78.0,661.0,B
+Belmont Middle,Southwest,42.5,64.0,742.0,C
+George C Simkins Jr Elementary,Piedmont Triad,63.9,36.0,594.0,F
+Northeast Elementary,Southeast,52.7,50.0,695.0,D
+Jackson Park Elementary,Southwest,64.6,71.0,417.0,B
+Horton Middle,North Central,39.8,64.0,371.0,C
+North Wake College and Career Academy,North Central,29.9,92.0,346.0,A
+Sandy Grove Elementary,Sandhills,60.4,53.0,548.0,D
+J.V. Washam Elementary,Southwest,20.1,80.0,819.0,B
+Tabernacle Elementary School,Piedmont Triad,75.3,66.0,306.0,C
+Global E-Learning Academy,Piedmont Triad,19.2,43.0,74.0,D
+North Iredell High,Southwest,46.7,65.0,919.0,C
+Carver Elementary,North Central,71.6,58.0,402.0,C
+Blue Ridge Early College,Western,74.8,42.0,128.0,D
+Benson Elementary,North Central,73.5,63.0,603.0,C
+Olde Providence Elementary,Southwest,19.2,82.0,670.0,B
+Smith Middle,North Central,24.3,74.0,769.0,B
+Washington Street Elementary,Sandhills,77.2,45.0,401.0,D
+Elkin High,Piedmont Triad,41.2,78.0,394.0,B
+John W Jones Elementary,North Central,75.2,64.0,521.0,C
+North Davie Middle,Piedmont Triad,49.8,68.0,436.0,C
+Central Middle,Piedmont Triad,71.0,53.0,492.0,D
+Independence High School,Southwest,57.4,66.0,1942.0,C
+Hunters Creek Middle,Southeast,55.4,51.0,923.0,D
+Farmville Middle,Northeast,64.0,48.0,615.0,D
+North Johnston Middle,North Central,71.9,64.0,598.0,C
+New Market Elementary School,Piedmont Triad,63.5,66.0,386.0,C
+B O Barnes Elementary,North Central,91.3,54.0,296.0,D
+Cullowhee Valley School,Western,68.2,52.0,598.0,D
+Piedmont Middle School,Southwest,45.1,76.0,1076.0,B
+Scroggs Elementary,North Central,29.1,79.0,380.0,B
+James Hunt High,North Central,59.7,68.0,1063.0,C
+West Buncombe Elementary,Western,67.8,75.0,597.0,B
+South Stanly Middle,Southwest,56.7,52.0,353.0,D
+South Stokes High School,Piedmont Triad,52.0,70.0,524.0,B
+Eastern Wayne High,Southeast,58.7,49.0,797.0,D
+West Hoke Elementary,Sandhills,60.9,55.0,450.0,C
+Collinswood Language Academy,Southwest,45.5,68.0,769.0,C
+Union Cross Traditional Acad,Piedmont Triad,58.9,55.0,460.0,C
+D S Johnson Elementary,North Central,93.2,27.0,368.0,F
+Mineral Springs Elementary,Sandhills,67.4,63.0,350.0,C
+Eblen Intermediate,Western,77.6,42.0,565.0,D
+South Rowan High,Southwest,52.0,50.0,905.0,D
+Lacy Elementary,North Central,23.9,67.0,670.0,C
+South Davidson Middle and High,Piedmont Triad,61.3,58.0,657.0,C
+Tyro Middle,Piedmont Triad,59.4,60.0,563.0,C
+Highland Elementary,North Central,53.4,51.0,904.0,D
+Harper Middle College High,Southwest,25.2,93.0,164.0,A
+Rochelle Middle,Southeast,85.2,42.0,448.0,D
+Casar Elementary,Southwest,62.1,79.0,264.0,B
+Rockfish Elementary,Sandhills,54.3,66.0,665.0,C
+Thomasville Middle,Piedmont Triad,65.8,42.0,487.0,D
+South Smithfield Elementary,North Central,62.9,40.0,433.0,D
+Davidson K-8 School,Southwest,12.2,84.0,1172.0,B
+Virginia Cross Elementary,North Central,95.0,50.0,431.0,D
+Rand Road Elementary,North Central,47.5,73.0,370.0,B
+Eastway Middle,Southwest,53.3,37.0,831.0,F
+Wrightsville Beach Elem,Southeast,9.8,88.0,264.0,A
+Oak Grove Middle,Piedmont Triad,37.1,66.0,719.0,C
+Mendenhall Middle,Piedmont Triad,64.2,55.0,621.0,C
+Sandhills Farm Life Elementary,Sandhills,27.2,82.0,399.0,B
+Jones Intermediate,Piedmont Triad,53.0,63.0,347.0,C
+Northeastern High,Northeast,55.0,52.0,679.0,D
+Moss Hill Elementary,Southeast,63.8,66.0,389.0,C
+Person High,North Central,61.0,62.0,1032.0,C
+Iotla Valley Elementary,Western,69.6,55.0,380.0,C
+North Moore High,Sandhills,63.4,65.0,584.0,C
+South Granville High,North Central,48.1,59.0,683.0,C
+Community House Middle,Southwest,17.6,84.0,1453.0,B
+West Millbrook Middle,North Central,39.1,57.0,1041.0,C
+North Henderson High,Western,62.2,72.0,1091.0,B
+E B Frink Middle,Southeast,59.4,54.0,538.0,D
+Ardrey Kell High School,Southwest,13.8,90.0,3503.0,A
+Southern Middle,North Central,63.7,57.0,507.0,C
+Jefferson Elementary,Piedmont Triad,58.5,62.0,675.0,C
+Vass-Lakeview Elementary,Sandhills,42.0,68.0,439.0,C
+Central Elementary,Northeast,48.6,48.0,322.0,D
+Haywood Early College,Western,42.0,95.0,173.0,A
+Riverwood Elementary,North Central,38.1,76.0,808.0,B
+Southern Nash Middle,North Central,69.4,49.0,793.0,D
+Sunset Park Elementary,Southeast,71.3,55.0,402.0,C
+Stantonsburg Elementary,North Central,72.9,57.0,194.0,C
+Whitewater Middle,Southwest,58.3,48.0,713.0,D
+Southern Pines Elementary,Sandhills,52.5,56.0,590.0,C
+Gardner Park Elementary,Southwest,65.1,46.0,513.0,D
+King Elementary School,Piedmont Triad,68.9,59.0,385.0,C
+Rosewood Middle,Southeast,51.5,62.0,322.0,C
+Hertford County Middle,Northeast,74.2,37.0,537.0,F
+Hoke County High,Sandhills,52.3,71.0,1958.0,B
+Brightwood Elementary,Piedmont Triad,73.4,53.0,474.0,D
+General Greene Elementary,Piedmont Triad,46.3,65.0,393.0,C
+Pittman Elementary Leadership Academy,Northeast,71.6,38.0,123.0,F
+West Smithfield Elementary,North Central,66.7,56.0,418.0,C
+East Chapel Hill High,North Central,21.7,90.0,1431.0,A
+Southwestern Randolph High School,Piedmont Triad,56.0,53.0,841.0,D
+Flat Rock Middle,Western,70.0,53.0,702.0,D
+Southern Middle,Sandhills,54.2,59.0,577.0,C
+Green Valley Elementary,Northwest,63.6,57.0,285.0,C
+Onslow Early College,Southeast,29.2,98.0,181.0,A
+Hope Middle,Northeast,37.0,82.0,888.0,B
+Early College at Guilford,Piedmont Triad,9.3,98.0,194.0,A
+SanLee Middle School,North Central,70.3,56.0,803.0,C
+Swansboro Middle,Southeast,42.1,57.0,966.0,C
+D H Conley High,Northeast,34.8,74.0,1671.0,B
+Morrisville Elementary,North Central,11.3,88.0,663.0,A
+Western Harnett Middle,North Central,57.2,56.0,815.0,C
+Nashville Elementary,North Central,69.2,53.0,667.0,D
+John T Hoggard High,Southeast,29.2,78.0,2131.0,B
+Farmer Elementary School,Piedmont Triad,49.8,56.0,215.0,C
+Fred L Wilson Elementary,Southwest,59.6,50.0,464.0,D
+Chatham Middle,North Central,89.9,44.0,554.0,D
+Oak Grove Elementary,North Central,32.3,67.0,595.0,C
+Springmore Elementary,Southwest,63.1,72.0,542.0,B
+Rama Road Elementary,Southwest,55.7,56.0,488.0,C
+Walkertown Elementary,Piedmont Triad,63.6,51.0,681.0,D
+Trinity High School,Piedmont Triad,53.1,64.0,643.0,C
+Courtney Elementary,Piedmont Triad,63.7,64.0,201.0,C
+Patriots Elementary,Southwest,39.0,67.0,899.0,C
+McDowell High School,Northwest,60.7,58.0,1364.0,C
+L B Yancey Elementary,North Central,76.4,43.0,163.0,D
+Micro Elementary,North Central,73.6,72.0,392.0,B
+Myers Park High School,Southwest,29.4,81.0,3481.0,B
+Dr Hubert Eaton Sr Elem,Southeast,30.1,82.0,437.0,B
+Level Cross Elementary School,Piedmont Triad,63.7,60.0,411.0,C
+Murphy Middle,Western,63.5,63.0,312.0,C
+Red Springs High,Sandhills,64.9,61.0,824.0,C
+Huntsville Elementary,Piedmont Triad,72.4,57.0,386.0,C
+Penny Road Elementary,North Central,34.7,62.0,489.0,C
+East Rutherford High School,Western,47.8,72.0,642.0,B
+Wake Forest Middle School,North Central,51.3,51.0,963.0,D
+Halifax County Early College High,Northeast,52.4,74.0,125.0,B
+Erwin Elementary,North Central,65.0,45.0,559.0,D
+Ben D Quinn Elementary,Southeast,57.2,64.0,368.0,C
+Cherryville Elementary,Southwest,67.6,61.0,369.0,C
+Oak Ridge Elementary,Piedmont Triad,12.5,87.0,698.0,A
+Shive Elementary,Southwest,62.2,53.0,469.0,D
+Dillard Drive Elementary,North Central,61.1,48.0,683.0,D
+Smithfield Middle,North Central,60.5,47.0,508.0,D
+Southmont Elementary School,Piedmont Triad,71.0,61.0,533.0,C
+South Lexington School,Piedmont Triad,82.3,57.0,200.0,C
+Buckland Elementary,Northeast,56.8,62.0,238.0,C
+Sternberger Elementary,Piedmont Triad,12.4,83.0,435.0,B
+W R Odell Elementary,Southwest,13.9,86.0,918.0,A
+Aycock Elementary,North Central,72.2,57.0,344.0,C
+Southwest Elementary,Piedmont Triad,38.6,79.0,511.0,B
+West Clayton Elementary,North Central,64.5,61.0,750.0,C
+Randolph Early College High School,Piedmont Triad,46.1,93.0,350.0,A
+Central Elementary,Southwest,47.4,69.0,382.0,C
+Forrest W. Hunt Elementary School,Western,63.5,73.0,351.0,B
+Beaverdam Elementary,North Central,75.6,38.0,683.0,F
+Perquimans Central,Northeast,65.8,69.0,364.0,C
+Mount Pleasant Elementary,Southwest,44.1,72.0,664.0,B
+North Newton Elementary,Northwest,76.4,63.0,420.0,C
+Cliffdale Elementary,Sandhills,68.9,51.0,595.0,D
+Clemmons Middle School,Piedmont Triad,57.2,66.0,1169.0,C
+Clarke Elementary,North Central,82.1,25.0,311.0,F
+Pitts School Road Elementary,Southwest,49.4,67.0,855.0,C
+E Melvin Honeycutt Elementary,Sandhills,49.6,65.0,845.0,C
+Pleasant Gardens Elementary School,Northwest,63.2,52.0,276.0,D
+East Union Middle,Southwest,82.0,42.0,665.0,D
+Cool Spring Elementary,Southwest,58.4,76.0,375.0,B
+Saint Pauls High,Sandhills,63.7,62.0,1105.0,C
+Morgan Elementary,Southwest,60.9,56.0,272.0,C
+Forest Hills High,Southwest,70.8,60.0,844.0,C
+Mills River Elementary,Western,37.8,74.0,592.0,B
+Surf City Elementary,Southeast,30.2,73.0,819.0,B
+Rowland Norment Elementary,Sandhills,75.9,56.0,429.0,C
+C B Eller Elementary School,Northwest,47.8,62.0,260.0,C
+Rutherfordton Elementary School,Western,58.0,67.0,375.0,C
+Carnage Middle,North Central,31.6,76.0,833.0,B
+Mountain Heritage High,Northwest,48.0,74.0,609.0,B
+Prospect Elementary,Sandhills,65.3,56.0,817.0,C
+Green Hope Elementary,North Central,12.2,89.0,606.0,A
+Upward Elementary,Western,81.9,47.0,415.0,D
+Highlands School,Western,35.4,74.0,339.0,B
+Star Elementary,Sandhills,78.7,62.0,257.0,C
+Diggs-Latham Elementary,Piedmont Triad,83.3,44.0,387.0,D
+Central Elementary,North Central,76.3,47.0,299.0,D
+Sawmills Elementary,Northwest,69.5,44.0,315.0,D
+Murphy High,Western,55.7,77.0,475.0,B
+Little River K-8 School,North Central,48.2,62.0,360.0,C
+Lynn Road Elementary,North Central,54.9,62.0,471.0,C
+Shawboro Elementary School,Northeast,34.1,66.0,609.0,C
+Flat Rock Middle,Piedmont Triad,69.0,30.0,812.0,F
+Long Branch Elementary,Sandhills,77.2,49.0,405.0,D
+East Albemarle Elementary,Southwest,73.8,36.0,314.0,F
+Green Hope High,North Central,9.0,91.0,1987.0,A
+Benjamin J Martin Elementary,Sandhills,71.2,50.0,507.0,D
+Torrence Creek Elementary,Southwest,40.5,65.0,706.0,C
+Balfour Elementary,Piedmont Triad,80.4,43.0,518.0,D
+White Plains Elementary,Piedmont Triad,60.3,69.0,312.0,C
+Beaufort Middle,Southeast,42.4,61.0,256.0,C
+Frank Morgan Elementary,Piedmont Triad,52.4,69.0,713.0,C
+Reid Ross Classical Middle,Sandhills,74.4,64.0,220.0,C
+East Duplin High,Southeast,41.7,63.0,837.0,C
+Holt Elementary,North Central,80.7,55.0,624.0,C
+R N Harris Elementary,North Central,59.2,74.0,277.0,B
+Douglass Elementary,Piedmont Triad,78.6,55.0,331.0,C
+Richfield Elementary,Southwest,45.5,61.0,313.0,C
+Forestville Road Elementary,North Central,76.5,57.0,484.0,C
+North Drive Elementary,Southeast,87.3,40.0,509.0,D
+Hilburn Drive Academy,North Central,30.9,69.0,616.0,C
+Hillside High,North Central,56.1,62.0,1439.0,C
+Harris Creek Elementary,North Central,46.8,60.0,842.0,C
+William Lenoir Middle,Northwest,63.3,49.0,503.0,D
+Eastway Elementary,North Central,71.8,48.0,390.0,D
+Knightdale Elementary,North Central,74.1,38.0,542.0,F
+Ridge Road Middle,Southwest,69.2,45.0,1002.0,D
+Grandy Primary,Northeast,31.8,77.0,592.0,B
+W M Jenkins Elementary ,Northwest,55.5,71.0,256.0,B
+Hiwassee Dam Elementary/Middle,Western,52.0,67.0,116.0,C
+Eastern Wayne Middle,Southeast,63.4,36.0,457.0,F
+White Oak Elementary,Southeast,20.8,77.0,746.0,B
+Jefferson Elementary,Southwest,60.9,57.0,420.0,C
+Williams Secondary Montessori,Southwest,18.5,76.0,363.0,B
+Washington Early College High,Northeast,51.3,89.0,77.0,A
+McAdenville Elementary,Southwest,50.6,57.0,177.0,C
+East Garner Elementary,North Central,83.5,50.0,477.0,D
+Southern Wayne High,Southeast,56.5,47.0,1012.0,D
+Franklinton High,North Central,49.6,69.0,1133.0,C
+Sun Valley High,Southwest,41.2,70.0,1406.0,B
+G W Carver Elementary,North Central,67.9,56.0,545.0,C
+Lincoln Heights Elementary,North Central,35.7,68.0,615.0,C
+Cumberland Academy 6-12 Virtual School,Sandhills,66.5,60.0,547.0,C
+William Ellis Middle,Piedmont Triad,31.0,78.0,452.0,B
+Pamlico County High,Southeast,53.5,69.0,444.0,C
+Central Davidson Middle,Piedmont Triad,60.6,50.0,671.0,D
+Northeast Guilford Middle,Piedmont Triad,58.1,39.0,760.0,F
+South Elementary,Southwest,59.0,73.0,503.0,B
+Kernersville Elementary,Piedmont Triad,68.1,50.0,622.0,D
+Carver Middle,Sandhills,74.5,29.0,657.0,F
+Central Academy of Technology and Arts,Southwest,16.4,94.0,814.0,A
+Easley Elementary,North Central,37.0,80.0,450.0,B
+Sherwood Elementary,Southwest,84.7,41.0,503.0,D
+Laurel Park Elementary,North Central,16.6,73.0,775.0,B
+Mulberry Elementary School,Northwest,59.0,75.0,388.0,B
+Southeast Elementary,Southeast,93.6,31.0,186.0,F
+Lincolnton High,Southwest,66.4,60.0,798.0,C
+Barnette Elementary,Southwest,30.6,70.0,704.0,B
+Francis Bradley Middle,Southwest,45.6,64.0,1071.0,C
+Greenlee Primary,Northwest,59.5,60.0,224.0,C
+E J Hayes Elementary,Northeast,65.6,43.0,271.0,D
+Sardis Elementary,Southwest,69.9,65.0,443.0,C
+Ocracoke School,Northeast,45.0,77.0,151.0,B
+Creech Road Elementary,North Central,83.6,56.0,484.0,C
+John R Griffin Middle,Sandhills,39.9,67.0,1089.0,C
+Eastfield Global Magnet School,Northwest,85.2,60.0,250.0,C
+Laurel Hill Elementary,Sandhills,77.8,47.0,627.0,D
+New Hope Elementary,North Central,76.8,53.0,95.0,D
+New Bern High,Southeast,53.1,59.0,1554.0,C
+Lincolnton Middle,Southwest,73.1,57.0,558.0,C
+Polo Ridge Elementary,Southwest,14.5,90.0,598.0,A
+Town Creek Elementary,Southeast,43.2,76.0,654.0,B
+Knollwood Elementary,Southwest,81.1,32.0,540.0,F
+Archer Lodge Middle,North Central,41.0,68.0,1224.0,C
+Coleridge Elementary School,Piedmont Triad,77.2,55.0,259.0,C
+Forbush High,Piedmont Triad,45.8,64.0,768.0,C
+Oak Hill Elementary,Northwest,71.2,50.0,308.0,D
+Edward Best Elementary,North Central,71.7,69.0,464.0,C
+South Brunswick High,Southeast,40.1,61.0,1124.0,C
+North Windy Ridge Intermediate,Western,45.9,67.0,489.0,C
+Alston Ridge Elementary,North Central,12.6,83.0,1029.0,B
+Lake Wylie Elementary,Southwest,71.6,62.0,506.0,C
+Havelock Middle,Southeast,55.2,44.0,386.0,D
+North Iredell Middle,Southwest,56.5,51.0,557.0,D
+Gaston STEM Leadership Academy,Northeast,82.1,53.0,265.0,D
+Mountain View Elementary,Northwest,49.4,74.0,692.0,B
+Brown Summit Middle,Piedmont Triad,16.9,97.0,237.0,A
+Richlands Elementary,Southeast,50.5,58.0,638.0,C
+Middle College,Western,31.6,94.0,43.0,A
+Mt Ulla Elementary,Southwest,47.4,67.0,266.0,C
+R-S Middle School,Western,53.8,58.0,568.0,C
+Maiden High,Northwest,47.3,69.0,853.0,C
+Northwood High,North Central,30.3,80.0,922.0,B
+Underwood Elementary,North Central,30.4,71.0,385.0,B
+Burke Virtual Academy,Northwest,60.6,56.0,121.0,C
+Loyd E Auman Elementary,Sandhills,62.0,46.0,511.0,D
+Overhills Elementary,North Central,53.1,47.0,927.0,D
+Idlewild Elementary,Southwest,57.1,57.0,855.0,C
+Performance Learning Center,Southwest,79.0,71.0,68.0,B
+River Dell Elementary,North Central,34.5,74.0,904.0,B
+Cox Mill High School,Southwest,14.6,86.0,1743.0,A
+G R Whitfield,Northeast,60.1,60.0,522.0,C
+Columbia High,Northeast,52.9,56.0,193.0,C
+Sterling Elementary,Southwest,51.4,41.0,619.0,D
+Bunker Hill High,Northwest,57.6,67.0,816.0,C
+Brooks Global Elementary,Piedmont Triad,49.2,69.0,316.0,C
+Triton High,North Central,64.5,63.0,1215.0,C
+Benson Middle,North Central,68.4,51.0,498.0,D
+Trillium Springs Montessori,Southwest,28.7,75.0,183.0,B
+Bruns Avenue Elementary,Southwest,75.5,31.0,316.0,F
+West Rockingham Elementary,Sandhills,76.1,47.0,254.0,D
+Florence Elementary,Piedmont Triad,55.4,68.0,616.0,C
+Blue Creek Elementary,Southeast,69.8,47.0,476.0,D
+Silverdale Elementary,Southeast,50.6,56.0,618.0,C
+Bethel Elementary,Northeast,65.6,46.0,258.0,D
+South Asheboro Middle,Piedmont Triad,76.6,55.0,515.0,C
+Green Ridge Elementary,Sandhills,89.5,41.0,259.0,D
+Cameron Elementary,Sandhills,64.9,57.0,229.0,C
+Jones Senior High School,Southeast,59.5,63.0,532.0,C
+W H Robinson Elementary,Northeast,59.6,67.0,602.0,C
+W A Bess Elementary School,Southwest,46.6,68.0,621.0,C
+Cyrus P Frazier Elementary,Piedmont Triad,72.6,43.0,291.0,D
+Hertford County High,Northeast,75.3,47.0,533.0,D
+North Brook Elementary,Southwest,66.4,65.0,337.0,C
+Caldwell Applied Sciences Academy,Northwest,38.5,85.0,214.0,A
+Bethany Elementary,Piedmont Triad,42.2,64.0,458.0,C
+London Elementary School,Piedmont Triad,74.0,50.0,194.0,D
+Grantham Elementary,Southeast,60.4,72.0,437.0,B
+Cornelius Elementary,Southwest,29.5,74.0,578.0,B
+Wildwood Forest Elementary,North Central,81.6,48.0,511.0,D
+Coats Elementary,North Central,71.0,42.0,666.0,D
+Four Oaks Elementary,North Central,67.7,63.0,1021.0,C
+M C S Noble Middle,Southeast,33.5,74.0,638.0,B
+Liberty Elementary School,Piedmont Triad,77.0,54.0,385.0,D
+Westmoore Elementary,Sandhills,58.9,61.0,270.0,C
+Northside Elementary,Northeast,53.0,54.0,410.0,D
+Woodland Elementary,North Central,47.2,73.0,228.0,B
+East Hoke Middle,Sandhills,52.1,44.0,784.0,D
+Lenoir County Early College High,Southeast,44.1,87.0,213.0,A
+Northwest Guilford High,Piedmont Triad,17.7,85.0,1980.0,A
+West Lincoln High,Southwest,51.4,66.0,735.0,C
+Whiteville High,Sandhills,49.8,59.0,630.0,C
+Welcome Elementary,Piedmont Triad,58.2,53.0,591.0,D
+Hendersonville Middle,Western,52.6,60.0,510.0,C
+Davidson County Schools Virtual Academy,Piedmont Triad,10.1,56.0,70.0,C
+Jamestown Middle,Piedmont Triad,69.5,48.0,933.0,D
+Bethel Elementary,Western,50.3,76.0,524.0,B
+Claxton Elementary,Western,38.5,63.0,400.0,C
+Edgewood Elementary,Sandhills,69.0,55.0,458.0,C
+Shady Brook Elementary,Southwest,65.9,38.0,293.0,F
+J S Waters School,North Central,60.4,66.0,198.0,C
+Mills Park Middle,North Central,6.3,93.0,1623.0,A
+Rockfish Hoke Elementary,Sandhills,26.9,66.0,589.0,C
+Iron Station Elementary,Southwest,64.2,67.0,363.0,C
+Person Early College Innovation & Ldrshp,North Central,44.6,73.0,141.0,B
+Don D Steed Elementary,Sandhills,45.6,59.0,664.0,C
+David Cox Road Elementary,Southwest,67.9,45.0,647.0,D
+Overhills High,North Central,47.1,64.0,1870.0,C
+North Mecklenburg High School,Southwest,61.0,63.0,2096.0,C
+Castle Hayne Elementary,Southeast,56.9,75.0,419.0,B
+Ledford Middle,Piedmont Triad,52.4,67.0,597.0,C
+West Davidson High,Piedmont Triad,51.0,62.0,704.0,C
+High Point Central High,Piedmont Triad,62.8,47.0,998.0,D
+Glenn C Marlow Elementary,Western,29.8,81.0,579.0,B
+Union Elementary,Southwest,56.9,79.0,311.0,B
+Perquimans County High,Northeast,58.3,61.0,502.0,C
+Ranger Elementary/Middle,Western,59.6,59.0,239.0,C
+Stocks Elementary,North Central,79.3,50.0,380.0,D
+Millbrook Elementary,North Central,80.0,45.0,504.0,D
+Pinecrest High,Sandhills,33.6,70.0,2146.0,B
+Boone Trail Elementary,North Central,71.8,49.0,515.0,D
+Southern Nash High,North Central,56.7,69.0,1042.0,C
+Ayden Elementary,Northeast,64.7,63.0,611.0,C
+Pleasant Grove Elementary,North Central,45.6,63.0,576.0,C
+Butner-Stem Elementary,North Central,82.3,53.0,431.0,D
+La Grange Elementary,Southeast,68.7,54.0,480.0,D
+North Academy of World Languages,Southwest,46.0,67.0,601.0,C
+Lucas Middle,North Central,74.9,45.0,380.0,D
+Littlefield Middle,Sandhills,66.4,49.0,665.0,D
+Rockingham County Middle,Piedmont Triad,51.5,67.0,750.0,C
+Stanfield Elementary,Southwest,42.7,54.0,413.0,D
+Green Level High,North Central,6.1,92.0,2038.0,A
+Walkertown High,Piedmont Triad,53.2,60.0,702.0,C
+Uwharrie Ridge Six-Twelve,Piedmont Triad,62.4,39.0,465.0,F
+Greenwood Elementary,North Central,75.7,67.0,543.0,C
+Morton Elementary,Southeast,54.2,71.0,669.0,B
+Grifton,Northeast,70.2,45.0,370.0,D
+Brevard Elementary,Western,60.6,64.0,518.0,C
+Greene County Middle,Southeast,66.0,40.0,677.0,D
+A G Cox Middle,Northeast,52.7,62.0,856.0,C
+Carrboro High,North Central,28.5,82.0,858.0,B
+Stedman Elementary,Sandhills,47.7,77.0,275.0,B
+North Asheboro Middle,Piedmont Triad,85.1,44.0,476.0,D
+Rockford Elementary,Piedmont Triad,74.2,55.0,322.0,C
+Deep River Elementary,North Central,76.5,65.0,478.0,C
+Conway Middle,Northeast,75.2,46.0,288.0,D
+H B Sugg Elementary,Northeast,65.8,51.0,373.0,D
+T C Henderson,Western,69.7,63.0,106.0,C
+Scotts Ridge Elementary,North Central,8.2,84.0,764.0,B
+South Robeson Middle School,Sandhills,75.6,35.0,364.0,F
+East Rutherford Middle School,Western,60.6,54.0,548.0,D
+Aversboro Elementary,North Central,73.6,45.0,352.0,D
+South Fork Elementary,Piedmont Triad,72.7,41.0,471.0,D
+Harnett Central High,North Central,56.1,54.0,1400.0,D
+J W Parker Middle,North Central,93.1,41.0,249.0,D
+Seawell Elementary,North Central,30.7,85.0,464.0,A
+Oxford Elementary,Northwest,70.6,56.0,554.0,C
+Hildebran Elementary,Northwest,68.3,69.0,287.0,C
+Hickory Ridge High,Southwest,19.6,81.0,1702.0,B
+East Lee Middle,North Central,73.7,49.0,525.0,D
+Bell Fork Elementary,Southeast,71.5,55.0,555.0,C
+Junius H Rose High,Northeast,51.0,71.0,1461.0,B
+Rosman Middle,Western,67.1,59.0,208.0,C
+Salem Middle,North Central,19.7,79.0,1073.0,B
+Hickory Ridge Elementary,Southwest,15.4,78.0,1045.0,B
+Nebo Elementary School,Northwest,72.4,50.0,322.0,D
+Belville Elementary,Southeast,42.6,61.0,722.0,C
+Barnardsville Elementary,Western,56.9,66.0,106.0,C
+Chatham School of Science & Engineering,North Central,29.8,98.0,85.0,A
+Dole Elementary,Southwest,76.2,27.0,403.0,F
+Comfort Elementary,Southeast,63.4,69.0,98.0,C
+BT Bullock Elementary ,North Central,65.4,52.0,487.0,D
+Clyde Erwin Elementary,Southeast,69.2,43.0,331.0,D
+Rogers Lane Elementary,North Central,85.8,42.0,721.0,D
+Hillcrest Elementary,Northwest,93.3,47.0,248.0,D
+Griffith Elementary,Piedmont Triad,71.5,50.0,536.0,D
+Louisburg Elementary,North Central,84.7,48.0,400.0,D
+Reeds Elementary,Piedmont Triad,66.9,49.0,267.0,D
+Harris Road Middle,Southwest,15.6,87.0,1239.0,A
+Margaret Willis Elementary,Sandhills,78.6,46.0,276.0,D
+Cabarrus County Schools Virtual Academy,Southwest,32.0,60.0,231.0,C
+Virtual Academy,Piedmont Triad,72.3,42.0,405.0,D
+Moyock Elementary,Northeast,16.3,65.0,724.0,C
+Roberta Road Middle,Southwest,56.4,50.0,959.0,D
+Robbinsville Middle,Western,75.3,47.0,246.0,D
+Third Creek Elementary,Southwest,87.5,44.0,525.0,D
+UNCG Early/Middle College,Piedmont Triad,55.0,81.0,202.0,B
+Forest City-Dunbar Elementary School,Western,73.8,74.0,455.0,B
+J T Barber Elementary,Southeast,77.7,36.0,241.0,F
+Forestview High,Southwest,47.6,66.0,1057.0,C
+N B Mills Elementary,Southwest,67.5,28.0,382.0,F
+Cliffside Elementary School,Western,68.5,71.0,213.0,B
+Northside Elementary,North Central,74.8,35.0,295.0,F
+Hibriten High,Northwest,61.5,59.0,803.0,C
+Heritage Middle,North Central,14.4,84.0,1004.0,B
+South Brunswick Middle,Southeast,38.6,55.0,576.0,C
+Tanglewood Elementary,Sandhills,58.9,57.0,349.0,C
+Mt. Vernon-Ruth Elementary School,Western,66.9,62.0,222.0,C
+Herbert Akins Rd Elementary,North Central,29.1,69.0,938.0,C
+Terry Sanford High,Sandhills,57.3,63.0,1185.0,C
+Philo-Hill Magnet Academy,Piedmont Triad,76.5,25.0,380.0,F
+Mountain Park Elementary,Piedmont Triad,67.2,67.0,162.0,C
+West Lincoln Middle,Southwest,62.6,63.0,548.0,C
+First Ward Creative Arts Academy,Southwest,70.2,59.0,495.0,C
+Willow Spring High,North Central,30.9,71.0,1465.0,B
+Chestnut Grove Middle School,Piedmont Triad,52.0,62.0,656.0,C
+Hortons Creek Elementary,North Central,11.5,78.0,691.0,B
+Providence High School,Southwest,13.1,92.0,2019.0,A
+Stallings Elementary,Southwest,29.4,79.0,732.0,B
+Sunnyside Elementary,Sandhills,69.4,53.0,331.0,D
+Konnoak Elementary,Piedmont Triad,73.3,44.0,608.0,D
+Piney Grove Elementary,Piedmont Triad,39.9,76.0,594.0,B
+Piney Grove Elementary,Southwest,62.7,51.0,507.0,D
+Hawks Nest STEAM Academy,Southwest,36.0,78.0,352.0,B
+Pine Hall Elementary School,Piedmont Triad,64.8,32.0,102.0,F
+Swain County East Elementary,Western,71.8,55.0,339.0,C
+South Caldwell High,Northwest,49.6,63.0,1279.0,C
+Lakewood Montessori Middle,North Central,30.6,84.0,303.0,B
+West Edgecombe Middle,North Central,74.5,48.0,308.0,D
+Stanly Early College High,Southwest,31.5,91.0,182.0,A
+Garner High,North Central,49.4,61.0,1616.0,C
+C E Jordan High,North Central,40.9,65.0,1931.0,C
+Knightdale High,North Central,63.7,51.0,1658.0,D
+Lyons Farm Elementary,North Central,29.7,74.0,442.0,B
+Stokes Early College High School,Piedmont Triad,37.4,93.0,144.0,A
+Boomer-Ferguson Elementary School,Northwest,74.4,42.0,110.0,D
+Marine Sci. and Tech. Early College HS,Southeast,27.3,88.0,44.0,A
+Villa Heights Elementary,Southwest,57.9,52.0,137.0,D
+G W Bulluck Elementary,North Central,79.4,35.0,560.0,F
+John Chavis Middle School,Southwest,70.3,60.0,411.0,C
+Hickory Career  Arts Magnet High School,Northwest,58.1,78.0,233.0,B
+Fayetteville Street Elementary,North Central,63.2,53.0,222.0,D
+Grand Oak Elementary,Southwest,19.3,86.0,481.0,A
+Glen Arden Elementary,Western,35.0,71.0,500.0,B
+West Craven Middle,Southeast,58.5,51.0,664.0,D
+Southwest Elementary Global Academy,Piedmont Triad,77.1,57.0,377.0,C
+Grover Elementary,Southwest,79.7,69.0,292.0,C
+Pinebrook Elementary,Piedmont Triad,47.2,54.0,445.0,D
+South Academy of International Languages,Southwest,35.7,71.0,1218.0,B
+Camden County High,Northeast,25.1,70.0,444.0,B
+Spring Valley Elementary,North Central,57.0,57.0,510.0,C
+East Cary Middle,North Central,36.0,69.0,623.0,C
+Millers Creek Elementary School,Northwest,51.4,72.0,670.0,B
+J. F. Webb High,North Central,77.4,52.0,566.0,D
+Carmel Middle,Southwest,40.9,61.0,1064.0,C
+Wilson STEM Academy,Southwest,71.5,41.0,370.0,D
+Pathways Elementary,North Central,52.0,56.0,311.0,C
+Copeland Elementary,Piedmont Triad,76.1,60.0,235.0,C
+Weddington Hills Elementary,Southwest,57.9,59.0,950.0,C
+Douglas Byrd High,Sandhills,68.8,54.0,885.0,D
+Youngsville Elementary,North Central,51.7,74.0,380.0,B
+Lewis Chapel Middle,Sandhills,72.8,50.0,578.0,D
+Bunn Middle,North Central,71.9,42.0,598.0,D
+Union Intermediate,Sandhills,66.7,56.0,384.0,C
+Rock Rest Elementary,Southwest,90.3,60.0,427.0,C
+Dalton McMichael High,Piedmont Triad,59.0,64.0,694.0,C
+Poplar Springs Elementary School,Piedmont Triad,58.4,59.0,469.0,C
+South Stanly High,Southwest,50.7,61.0,408.0,C
+Spring Creek Elementary,Southeast,58.2,60.0,805.0,C
+West Wilkes High School,Northwest,46.3,69.0,599.0,C
+Cedar Grove Middle,Southeast,62.2,58.0,442.0,C
+Weldon Elementary Global Academy,Northeast,78.7,36.0,215.0,F
+Crossroads FLEX ,North Central,5.0,91.0,136.0,A
+Mariam Boyd Elementary,North Central,73.8,28.0,307.0,F
+Owen High,Western,50.1,75.0,675.0,B
+Carr Elementary,Southwest,64.1,60.0,629.0,C
+Pilot Elementary,Piedmont Triad,70.3,58.0,575.0,C
+Seventy-First Classical Middle,Sandhills,55.8,69.0,422.0,C
+Tyro Elementary,Piedmont Triad,62.8,61.0,406.0,C
+Cumberland International Early College,Sandhills,54.9,89.0,268.0,A
+McDowell Early College,Northwest,42.5,95.0,225.0,A
+Union Elementary,Southwest,72.9,61.0,276.0,C
+Academy at Smith,Piedmont Triad,78.7,77.0,221.0,B
+Cary High,North Central,39.2,71.0,2070.0,B
+Burke Middle College,Northwest,34.7,94.0,118.0,A
+Easton Elementary School,Piedmont Triad,75.6,39.0,498.0,F
+A&T Four Middle College,Piedmont Triad,61.8,70.0,148.0,B
+Coltrane-Webb Elementary,Southwest,52.4,70.0,376.0,B
+Hargrove Elementary,Sandhills,69.9,61.0,349.0,C
+Kensington Elementary,Southwest,9.6,84.0,1036.0,B
+Monroe High,Southwest,79.2,50.0,1003.0,D
+Zeb Vance Elementary,North Central,75.1,41.0,316.0,D
+Forest Hill Elementary,Northwest,80.4,51.0,256.0,D
+Newton-Conover High,Northwest,58.7,63.0,735.0,C
+Armstrong Elementary,Sandhills,47.3,70.0,472.0,B
+Landis Elementary,Southwest,60.3,55.0,583.0,C
+Winston-Salem Preparatory Acad,Piedmont Triad,78.3,26.0,362.0,F
+Aurelian Springs Institute of Global Lea,Northeast,78.6,41.0,126.0,D
+Levine Middle College High Sch,Southwest,15.8,97.0,219.0,A
+Wells Elementary,North Central,74.4,63.0,311.0,C
+Forbush Elementary,Piedmont Triad,27.1,73.0,178.0,B
+McClintock Middle,Southwest,52.1,50.0,1073.0,D
+West Brunswick High,Southeast,53.9,62.0,1455.0,C
+Erwin Middle,Western,76.6,51.0,554.0,D
+Southern Guilford High,Piedmont Triad,77.4,55.0,898.0,C
+Camden Middle,Northeast,26.8,64.0,271.0,C
+Andrews High,Western,62.5,68.0,224.0,C
+Oak Grove Elementary,North Central,79.3,55.0,456.0,C
+Farmington Woods Elementary,North Central,35.7,76.0,630.0,B
+Angier Elementary,North Central,77.4,40.0,324.0,D
+Meadow School,North Central,60.5,68.0,588.0,C
+Mallard Creek High School,Southwest,55.0,67.0,2119.0,C
+Fairview Heights Elementary,Sandhills,72.5,59.0,468.0,C
+Starmount High,Piedmont Triad,56.5,69.0,544.0,C
+Claxton Elementary,Piedmont Triad,53.6,66.0,496.0,C
+Cleveland High,North Central,35.5,73.0,1841.0,B
+Princeton High,North Central,49.8,67.0,1015.0,C
+Merry Oaks International Academy,Southwest,52.8,41.0,582.0,D
+Dr John Codington Elem,Southeast,26.5,76.0,430.0,B
+Archdale Elementary School,Piedmont Triad,77.5,67.0,350.0,C
+Kings Creek Elementary,Northwest,69.2,51.0,149.0,D
+Viewmont Elementary ,Northwest,77.3,37.0,514.0,F
+Club Boulevard Elementary,North Central,43.1,69.0,385.0,C
+Coker-Wimberly Elementary,North Central,73.3,46.0,231.0,D
+Margaret B. Pollard Middle,North Central,20.5,70.0,767.0,B
+Doris Henderson Newcomers Sch,Piedmont Triad,32.0,0.0,462.0,F
+Allen Jay Middle - A Preparatory Academy,Piedmont Triad,46.1,60.0,397.0,C
+Vandora Springs Elementary,North Central,70.3,47.0,522.0,D
+Manteo Elementary School,Northeast,53.0,59.0,627.0,C
+Northwood Elementary,Piedmont Triad,74.7,45.0,453.0,D
+Leesville Road Middle,North Central,36.1,71.0,784.0,B
+Mount Pleasant Elementary School,Northwest,47.4,65.0,214.0,C
+Ira B Jones Elementary,Western,47.9,59.0,358.0,C
+Northwest Elementary,Piedmont Triad,35.6,69.0,581.0,C
+Northern Guilford Middle,Piedmont Triad,31.1,73.0,798.0,B
+West Pine Elementary,Sandhills,46.4,69.0,393.0,C
+Ballantyne Elementary,Southwest,23.2,81.0,950.0,B
+Benvenue Elementary,North Central,80.2,42.0,581.0,D
+Southwestern Randolph Middle School,Piedmont Triad,63.2,58.0,468.0,C
+Elkin Middle,Piedmont Triad,49.7,72.0,190.0,B
+Four Oaks Middle,North Central,68.2,52.0,471.0,D
+Red Oak Middle,North Central,65.5,55.0,802.0,C
+New Hanover High,Southeast,50.1,56.0,1401.0,C
+John R Lawrence Elementary School,Piedmont Triad,54.5,67.0,395.0,C
+Boonville Elementary,Piedmont Triad,65.0,58.0,327.0,C
+Endhaven Elementary,Southwest,33.0,71.0,668.0,B
+South Mecklenburg High School,Southwest,50.4,62.0,3245.0,C
+Winterfield Elementary,Southwest,53.3,40.0,595.0,D
+Cedar Ridge Elementary,Piedmont Triad,71.9,65.0,338.0,C
+East Henderson High,Western,61.1,69.0,927.0,C
+Granville Early College High,North Central,39.6,93.0,222.0,A
+Upchurch Elementary,Sandhills,52.7,51.0,636.0,D
+Swift Creek Middle,North Central,45.0,55.0,752.0,C
+North Lenoir High,Southeast,53.1,52.0,935.0,D
+Cato Middle College High School,Southwest,47.8,91.0,202.0,A
+South Elementary,North Central,64.5,52.0,378.0,D
+Central Elementary,Northeast,79.2,43.0,240.0,D
+South Lakes Elementary,North Central,22.5,70.0,826.0,B
+North Lincoln High,Southwest,27.2,76.0,1056.0,B
+Etowah Elementary,Western,49.4,70.0,311.0,B
+Montgomery Central High,Sandhills,74.5,57.0,878.0,C
+John Van Lindley Elementary,Piedmont Triad,56.7,64.0,455.0,C
+Meadowbrook Elementary,Western,68.0,66.0,198.0,C
+Brush Creek Elementary,Western,61.5,71.0,335.0,B
+Carthage Elementary,Sandhills,55.3,66.0,329.0,C
+Briarwood Academy,Southwest,53.9,59.0,623.0,C
+East Davidson High,Piedmont Triad,53.5,71.0,741.0,B
+Pisgah High,Western,55.6,84.0,892.0,B
+Clyde Elementary,Western,59.2,57.0,515.0,C
+Edneyville Elementary,Western,70.0,48.0,426.0,D
+Mooresville Intermediate,Southwest,39.2,60.0,639.0,C
+Macon Virtual Academy,Western,66.7,31.0,28.0,F
+Montgomery County Early College,Sandhills,57.6,95.0,271.0,A
+Rocky Point Elementary,Southeast,85.1,63.0,367.0,C
+Robbinsville Elementary,Western,75.3,50.0,492.0,D
+Madison Early College High,Western,42.9,80.0,240.0,B
+C. G. Credle Elementary,North Central,89.4,48.0,329.0,D
+Kinston High,Southeast,77.4,47.0,675.0,D
+J. M. Alexander Middle,Southwest,68.1,36.0,780.0,F
+Northwest School of the Arts,Southwest,39.6,79.0,1036.0,B
+Vick Elementary,North Central,91.0,45.0,331.0,D
+Catawba Springs Elementary,Southwest,29.9,74.0,538.0,B
+Morehead Elementary,Piedmont Triad,60.2,59.0,523.0,C
+Northampton Early College,Northeast,52.7,74.0,170.0,B
+Hayesville Middle,Western,64.2,59.0,272.0,C
+Thomasville Primary,Piedmont Triad,79.9,40.0,680.0,D
+Charlotte East Language Academy,Southwest,49.1,48.0,775.0,D
+Kannapolis Middle,Southwest,59.5,37.0,1246.0,F
+Penn-Griffin Schools,Piedmont Triad,69.5,52.0,530.0,D
+E B Aycock Middle,Northeast,65.0,51.0,650.0,D
+Millbrook High,North Central,34.8,73.0,2332.0,B
+Montford North Star Academy,Western,41.3,70.0,222.0,B
+Nantahala School,Western,79.5,51.0,84.0,D
+Highfalls Elementary,Sandhills,45.6,70.0,258.0,B
+Westover High,Sandhills,61.7,55.0,1155.0,C
+Beulaville Elementary,Southeast,58.7,49.0,808.0,D
+Reedy Creek Elementary,Southwest,69.5,63.0,956.0,C
+Saint Stephens High,Northwest,55.1,65.0,1218.0,C
+Erwin Montessori,Piedmont Triad,47.4,59.0,149.0,C
+Maysville Elementary,Southeast,78.4,61.0,115.0,C
+Northwoods Elementary,Southeast,69.7,55.0,355.0,C
+Sherrills Ford Elementary,Northwest,31.5,77.0,527.0,B
+Sanderson High,North Central,39.6,68.0,1607.0,C
+Dixon Elementary,Southeast,30.6,69.0,723.0,C
+Pactolus,Northeast,74.7,46.0,582.0,D
+Vanstory Hills Elementary,Sandhills,36.4,73.0,472.0,B
+Kernersville Middle,Piedmont Triad,51.7,65.0,710.0,C
+Lawrence Orr Elementary,Southwest,60.6,54.0,610.0,D
+Montclaire Elementary,Southwest,47.5,46.0,495.0,D
+Dunn Elementary,North Central,72.9,38.0,767.0,F
+Selma Middle School,North Central,67.4,42.0,364.0,D
+Parkside Elementary,Southwest,62.5,64.0,331.0,C
+Middlesex Elementary,North Central,72.4,56.0,323.0,C
+Masonboro Elementary,Southeast,17.7,90.0,582.0,A
+Estes Hills Elementary,North Central,31.5,71.0,334.0,B
+New Hope Elementary,North Central,49.2,83.0,434.0,B
+Dunn Middle,North Central,65.3,46.0,407.0,D
+Grays Chapel Elementary School,Piedmont Triad,60.3,63.0,449.0,C
+Leaksville-Spray Elementary,Piedmont Triad,72.7,53.0,402.0,D
+Germanton Elementary School,Piedmont Triad,55.6,55.0,178.0,C
+Rosewood Elementary,Southeast,53.4,54.0,622.0,D
+Lillington-Shawtown Elementary,North Central,57.6,43.0,658.0,D
+Cooper Academy,North Central,66.9,63.0,440.0,C
+Hopewell High School,Southwest,48.4,67.0,1695.0,C
+Williford Elementary,North Central,81.7,27.0,149.0,F
+Richmond Senior High,Sandhills,60.5,60.0,1230.0,C
+Tucker Creek Middle,Southeast,44.9,73.0,518.0,B
+Smokey Mountain Elementary,Western,80.9,39.0,326.0,F
+Croft Community School,Southwest,63.4,54.0,352.0,D
+Gatesville Elementary,Northeast,62.5,62.0,229.0,C
+Buies Creek Elementary,North Central,54.9,53.0,230.0,D
+Stokesdale Elementary,Piedmont Triad,25.2,67.0,444.0,C
+Caleb's Creek Elementary,Piedmont Triad,59.6,61.0,635.0,C
+Chatham Central High,North Central,47.4,63.0,352.0,C
+Panther Creek High,North Central,15.2,89.0,2419.0,A
+Haw Creek Elementary,Western,43.5,63.0,377.0,C
+Tabor City Elementary,Sandhills,69.2,43.0,382.0,D
+W Jesse Gurganus Elementary,Southeast,45.0,74.0,373.0,B
+Buckhorn Creek Elementary,North Central,23.6,78.0,758.0,B
+Tar River Elementary,North Central,61.2,62.0,321.0,C
+Royal Elementary,North Central,74.5,55.0,338.0,C
+Weddington Middle,Southwest,6.9,93.0,1466.0,A
+Stuart W Cramer High,Southwest,44.6,63.0,935.0,C
+Oakwood Middle IB School,Southwest,36.3,83.0,492.0,B
+Valdese Elementary,Northwest,65.5,66.0,485.0,C
+W R Odell Primary,Southwest,13.8,86.0,821.0,A
+First Flight Elementary School,Northeast,50.4,58.0,293.0,C
+Wintergreen Primary,Northeast,45.2,78.0,719.0,B
+Washington Elementary,Southwest,74.2,39.0,378.0,F
+Davie County Early College High,Piedmont Triad,50.4,82.0,125.0,B
+Pineville Elementary,Southwest,62.9,57.0,776.0,C
+A T Allen Elementary,Southwest,69.4,57.0,637.0,C
+Forest Park Elementary,Piedmont Triad,76.9,34.0,494.0,F
+Hudson Middle,Northwest,62.4,57.0,579.0,C
+Friendship Elementary,Piedmont Triad,38.8,72.0,465.0,B
+GTCC Middle College High,Piedmont Triad,53.0,76.0,254.0,B
+Sheep-Harney Elementary,Northeast,64.0,66.0,325.0,C
+Croatan High,Southeast,26.8,81.0,957.0,B
+Moore Magnet Elementary,Piedmont Triad,62.1,60.0,417.0,C
+Brogden Middle,Southeast,70.4,32.0,600.0,F
+Atkins Academic & Tech High,Piedmont Triad,36.6,92.0,1172.0,A
+Glenwood Elementary School,Northwest,64.2,60.0,397.0,C
+Beaufort Elementary,Southeast,50.0,70.0,367.0,B
+Burns High,Southwest,60.0,62.0,889.0,C
+South View High,Sandhills,68.0,59.0,1433.0,C
+Donna L Loflin Elementary,Piedmont Triad,88.4,48.0,303.0,D
+Surry Online Magnet School,Piedmont Triad,49.4,54.0,84.0,D
+Mocksville Elementary,Piedmont Triad,66.0,60.0,527.0,C
+Smithfield Elementary,Southwest,51.5,64.0,585.0,C
+Winget Park Elementary,Southwest,43.5,59.0,618.0,C
+Sherwood Park Elementary,Sandhills,75.6,62.0,258.0,C
+University Park Creative Arts,Southwest,71.2,34.0,260.0,F
+Charles W McCrary Elementary,Piedmont Triad,84.8,45.0,319.0,D
+Surry Central High,Piedmont Triad,64.5,62.0,660.0,C
+Meadowlark Middle,Piedmont Triad,35.0,72.0,828.0,B
+Charlotte Teacher Early College,Southwest,41.4,78.0,201.0,B
+North Buncombe Middle,Western,45.6,75.0,502.0,B
+Lucy Ragsdale High,Piedmont Triad,62.7,58.0,1303.0,C
+Western Guilford High,Piedmont Triad,63.5,63.0,1397.0,C
+Collaborative College for Technology,Southwest,34.2,94.0,225.0,A
+Adams Elementary,North Central,49.6,70.0,539.0,B
+West Stanly High,Southwest,34.8,62.0,743.0,C
+Hickory High ,Northwest,61.5,64.0,966.0,C
+Goldsboro High,Southeast,82.8,38.0,432.0,F
+Neal Middle,North Central,51.9,38.0,777.0,F
+Deep Branch Elementary,Sandhills,76.3,39.0,381.0,F
+Morehead City Middle,Southeast,32.3,71.0,481.0,B
+Hayesville Elementary,Western,66.3,71.0,265.0,B
+Walter G. Byers School,Southwest,79.7,45.0,323.0,D
+West Stanly Middle School,Southwest,43.4,69.0,633.0,C
+Grantham Middle,Southeast,60.2,34.0,327.0,F
+R J Reynolds High,Piedmont Triad,58.3,58.0,1612.0,C
+Pinewood Elementary,Southwest,53.4,38.0,527.0,F
+River Park Elementary,North Central,35.5,73.0,555.0,B
+North Surry High,Piedmont Triad,61.9,66.0,822.0,C
+Creekside Elementary,North Central,51.7,57.0,549.0,C
+Holbrook Middle,Southwest,76.3,52.0,772.0,D
+Reidsville High,Piedmont Triad,60.4,54.0,705.0,D
+North Wilkes Middle School,Northwest,51.1,65.0,409.0,C
+Walker-Spivey Elementary,Sandhills,88.7,49.0,264.0,D
+Statesville Road Elementary,Southwest,68.3,43.0,442.0,D
+Dudley Shoals Elementary,Northwest,67.7,51.0,420.0,D
+Longview Elementary ,Northwest,73.5,48.0,318.0,D
+Wilkes Early College High School,Northwest,32.3,92.0,253.0,A
+Brentwood Elementary,Sandhills,72.2,50.0,486.0,D
+Clemmons Elementary,Piedmont Triad,36.8,83.0,781.0,B
+Rea View Elementary,Southwest,6.6,87.0,614.0,A
+Ponderosa Elementary,Sandhills,59.7,61.0,335.0,C
+Chaloner Middle School,Northeast,62.6,55.0,618.0,C
+Thomasboro Academy,Southwest,75.7,38.0,572.0,F
+Elizabeth Elementary,Southwest,84.4,45.0,488.0,D
+New Century International Elementary,Sandhills,45.6,65.0,646.0,C
+Down East Middle and Smyrna Elementary,Southeast,30.5,72.0,231.0,B
+N L Dillard Middle,Piedmont Triad,72.3,48.0,494.0,D
+Crest Middle,Southwest,67.9,55.0,849.0,C
+Pisgah Elementary,Western,67.5,65.0,167.0,C
+Grover C Fields Middle,Southeast,43.6,68.0,508.0,C
+Lower Creek Elementary,Northwest,58.7,71.0,389.0,B
+West Lake Elementary,North Central,27.6,68.0,617.0,C
+Chadbourn Elementary,Sandhills,87.0,52.0,202.0,D
+Union Hill Elementary,Piedmont Triad,76.5,53.0,494.0,D
+Lake Norman High,Southwest,16.2,77.0,1948.0,B
+Townsend Elementary,Sandhills,81.3,36.0,255.0,F
+Wayne School of Technical Arts,Southeast,30.3,80.0,124.0,B
+West Craven High,Southeast,52.3,57.0,817.0,C
+Ashbrook High,Southwest,72.7,60.0,1260.0,C
+Rutherford Early College High School,Western,33.5,90.0,189.0,A
+Mull Elementary,Northwest,67.3,71.0,257.0,B
+Ed V Baldwin Elementary,Sandhills,61.1,49.0,560.0,D
+Cedar Creek Middle,North Central,53.7,52.0,514.0,D
+Sandy Ridge Elementary,Southwest,6.9,88.0,605.0,A
+Lakeshore Middle,Southwest,35.2,55.0,607.0,C
+West Iredell Middle,Southwest,66.5,42.0,542.0,D
+North Elementary,North Central,90.6,35.0,175.0,F
+Havelock High,Southeast,50.4,74.0,1050.0,B
+Ben L. Smith High School,Piedmont Triad,67.5,54.0,1296.0,D
+Cedar Fork Elementary,North Central,16.9,83.0,774.0,B
+Riverside Middle,Northeast,69.3,37.0,367.0,F
+Marvin Elementary,Southwest,5.0,86.0,736.0,A
+Wingate Elementary,Southwest,86.3,58.0,380.0,C
+Vance Co Early College,North Central,47.5,93.0,219.0,A
+Ferguson-Easley Elementary,Sandhills,86.9,39.0,360.0,F
+Porter Ridge High School,Southwest,34.8,73.0,1741.0,B
+Mint Hill Middle,Southwest,48.5,61.0,931.0,C
+Speight Middle,North Central,67.8,59.0,299.0,C
+Yadkinville Elementary,Piedmont Triad,76.2,55.0,466.0,C
+Y E Smith Elementary,North Central,64.7,39.0,275.0,F
+Southwest Elementary,Piedmont Triad,36.5,82.0,811.0,B
+Burnsville Elementary,Northwest,69.3,67.0,267.0,C
+Charles H Tuttle Elementary,Northwest,56.0,61.0,411.0,C
+Bluford Elementary,Piedmont Triad,73.7,48.0,256.0,D
+Southeast Guilford High,Piedmont Triad,49.2,74.0,1235.0,B
+Warren Early College High,North Central,42.1,94.0,114.0,A
+Erwin High,Western,66.3,59.0,1050.0,C
+James W Smith Elementary,Southeast,64.7,61.0,320.0,C
+Bessemer City Central Elem,Southwest,72.4,36.0,405.0,F
+Woodhill Elementary,Southwest,80.8,38.0,466.0,F
+Colfax Elementary,Piedmont Triad,38.0,73.0,569.0,B
+Gallberry Farm Elementary,Sandhills,43.0,64.0,884.0,C
+South Creek Elementary,Northeast,70.8,47.0,284.0,D
+Union Elementary,Sandhills,71.3,56.0,406.0,C
+Piedmont Middle,Southwest,41.7,57.0,981.0,C
+GC Middle College High,Piedmont Triad,46.5,89.0,76.0,A
+Eastern Elementary,Northeast,65.1,59.0,771.0,C
+Mills Park Elementary,North Central,13.4,85.0,690.0,A
+William R Davie Middle S.T.E.M. Academy,Northeast,75.4,26.0,273.0,F
+SandHoke Early College High,Sandhills,32.5,88.0,439.0,A
+Jay M. Robinson Middle,Southwest,14.7,89.0,1325.0,A
+Bradley Creek Elementary,Southeast,40.1,66.0,356.0,C
+East Burke High,Northwest,63.7,66.0,860.0,C
+Warren New Tech High,North Central,49.3,62.0,77.0,C
+Clyde Campbell Elementary,Northwest,52.3,71.0,458.0,B
+West Carteret High,Southeast,41.7,71.0,1103.0,B
+Warsaw Elementary,Southeast,68.6,40.0,751.0,D
+Jefferson Elementary,Piedmont Triad,41.5,74.0,560.0,B
+Merancas Middle College-CPCC,Southwest,27.9,96.0,200.0,A
+Lyle Creek Elementary,Northwest,75.9,54.0,421.0,D
+Seaforth High,North Central,24.7,70.0,727.0,B
+Trenton Elementary,Southeast,69.7,52.0,137.0,D
+Pisgah Forest Elementary,Western,66.9,59.0,435.0,C
+Olympic High School,Southwest,58.9,61.0,1648.0,C
+Balls Creek Elementary,Northwest,58.2,69.0,672.0,C
+Southern Guilford Middle,Piedmont Triad,71.0,35.0,600.0,F
+Ayden-Grifton High,Northeast,47.9,65.0,650.0,C
+Wake STEM Early College High School,North Central,31.0,95.0,259.0,A
+Joseph W Grier Academy,Southwest,58.3,50.0,661.0,D
+Chinquapin Elementary,Southeast,50.4,63.0,509.0,C
+Julius L. Chambers High School,Southwest,56.0,48.0,2102.0,D
+Gravelly Hill Middle,North Central,54.5,48.0,429.0,D
+Mill Creek Middle,Northwest,41.0,60.0,416.0,C
+Summit Virtual Academy,Southwest,71.3,44.0,227.0,D
+Swift Creek Elementary,North Central,39.2,66.0,385.0,C
+Smithfield-Selma High,North Central,68.9,61.0,1447.0,C
+Southeastern Randolph Middle School,Piedmont Triad,77.8,36.0,497.0,F
+D F Walker Elementary,Northeast,70.3,47.0,383.0,D
+Pearsontown Elementary,North Central,28.2,79.0,696.0,B
+Neuse River Middle,North Central,76.0,44.0,917.0,D
+Alexander Graham Middle,Southwest,49.7,49.0,1242.0,D
+North Canton Elementary,Western,58.5,64.0,307.0,C
+Hawk Ridge Elementary,Southwest,18.2,85.0,726.0,A
+Nags Head Elementary School,Northeast,43.1,62.0,489.0,C
+Berewick Elementary,Southwest,65.2,42.0,688.0,D
+Willow Springs Elementary,North Central,30.8,80.0,690.0,B
+CS Brown High - STEM Program,Northeast,56.9,88.0,71.0,A
+Pink Hill Elementary,Southeast,63.8,65.0,440.0,C
+East Lincoln Middle,Southwest,36.4,63.0,738.0,C
+Clear Creek Elementary,Southwest,63.5,62.0,449.0,C
+Elizabeth Traditional Elem,Southwest,71.5,54.0,415.0,D
+Mayland Early College,Northwest,42.5,91.0,114.0,A
+Oak Hill Elementary,Piedmont Triad,76.9,41.0,374.0,D
+Butner-Stem Middle,North Central,78.6,41.0,421.0,D
+Butler Avenue Elementary,Sandhills,58.2,57.0,441.0,C
+Madison High School,Western,47.8,65.0,401.0,C
+Aberdeen Elementary,Sandhills,72.4,49.0,637.0,D
+North Davidson High,Piedmont Triad,37.7,71.0,878.0,B

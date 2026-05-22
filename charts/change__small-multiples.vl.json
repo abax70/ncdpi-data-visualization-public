@@ -1,0 +1,27 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Average SPG score over time, by region",
+    "subtitle": "Eight regions — too many for one colourful line chart. Small multiples give each its own panel and one shared scale. (2020–21 COVID gap kept honest.)"
+  },
+  "data": {
+    "url": "data/region_trend.csv",
+    "format": { "type": "csv", "parse": { "avg_spg_score": "number", "year": "number" } }
+  },
+  "transform": [
+    { "filter": "isValid(datum.avg_spg_score) && datum.avg_spg_score > 0" },
+    { "calculate": "datum.year <= 2019 ? 'pre' : 'post'", "as": "era" }
+  ],
+  "columns": 4,
+  "facet": { "field": "region", "type": "nominal", "title": null, "sort": ["Northwest", "Western", "Southwest", "Piedmont Triad", "North Central", "Sandhills", "Southeast", "Northeast"] },
+  "spec": {
+    "width": 150,
+    "height": 110,
+    "mark": { "type": "line", "point": true, "strokeWidth": 2, "color": "#003A70" },
+    "encoding": {
+      "x": { "field": "year", "type": "quantitative", "title": null, "axis": { "values": [2019, 2021, 2023], "format": "d", "labelFontSize": 9 } },
+      "y": { "field": "avg_spg_score", "type": "quantitative", "title": null, "scale": { "domain": [45, 75] } },
+      "detail": { "field": "era" }
+    }
+  }
+}

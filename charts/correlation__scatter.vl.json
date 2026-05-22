@@ -1,0 +1,18 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "School poverty vs. performance, 2023",
+    "subtitle": "Each dot is a school. Position on two scales is the most accurate way to show a relationship."
+  },
+  "data": { "url": "data/poverty_vs_score.csv" },
+  "height": 340,
+  "encoding": {
+    "x": { "field": "pct_eds", "type": "quantitative", "title": "% economically disadvantaged" },
+    "y": { "field": "spg_score", "type": "quantitative", "title": "SPG score", "scale": { "zero": false, "nice": true } }
+  },
+  "layer": [
+    { "mark": { "type": "point", "filled": true, "size": 32, "opacity": 0.35, "color": "#003A70" },
+      "encoding": { "tooltip": [ { "field": "school", "title": "School" }, { "field": "pct_eds", "title": "% EDS" }, { "field": "spg_score", "title": "SPG" } ] } },
+    { "mark": { "type": "line", "color": "#FF9015", "strokeWidth": 3 }, "transform": [ { "regression": "spg_score", "on": "pct_eds" } ] }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Survey responses by question (SYNTHETIC demo data)",
+    "subtitle": "Likert data suits a diverging stacked bar: a diverging palette runs from disagree (rust) through neutral (grey) to agree (teal)."
+  },
+  "data": { "url": "data/survey_demo.csv" },
+  "height": 200,
+  "mark": { "type": "bar" },
+  "encoding": {
+    "y": { "field": "question", "type": "nominal", "title": null },
+    "x": { "field": "pct", "type": "quantitative", "title": "Percent of responses", "stack": "normalize", "axis": { "format": "%" } },
+    "color": {
+      "field": "response", "type": "nominal", "title": "Response",
+      "sort": ["Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree"],
+      "scale": {
+        "domain": ["Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree"],
+        "range": ["#B33A12", "#C88C78", "#B7B9BB", "#86A4AE", "#077890"]
+      },
+      "legend": { "orient": "bottom" }
+    },
+    "order": { "field": "order", "type": "ordinal" },
+    "tooltip": [ { "field": "question" }, { "field": "response" }, { "field": "pct", "title": "%" } ]
+  }
+}

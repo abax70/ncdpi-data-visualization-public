@@ -1,0 +1,22 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Change in average SPG score, 2019 → 2023",
+    "subtitle": "Graph the delta. Instead of two bars to subtract by eye, plot the difference itself against a zero baseline."
+  },
+  "data": { "url": "data/region_change.csv" },
+  "height": 300,
+  "mark": { "type": "bar" },
+  "encoding": {
+    "y": { "field": "region", "type": "nominal", "sort": "-delta", "title": null },
+    "x": { "field": "delta", "type": "quantitative", "title": "Change in avg SPG score (points)" },
+    "color": {
+      "condition": { "test": "datum.delta >= 0", "value": "#077890" },
+      "value": "#B33A12"
+    },
+    "tooltip": [
+      { "field": "region", "title": "Region" },
+      { "field": "delta", "title": "Change" }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Average SPG score by region, 2023",
+    "subtitle": "A dot plot reads precisely even when the axis doesn't start at zero."
+  },
+  "data": { "url": "data/schools_region_2023.csv" },
+  "height": 300,
+  "mark": { "type": "point", "size": 110, "filled": true },
+  "encoding": {
+    "y": { "field": "region", "type": "nominal", "sort": "-x", "title": null },
+    "x": { "field": "avg_spg_score", "type": "quantitative", "title": "Avg SPG score", "scale": { "zero": false, "nice": true } },
+    "tooltip": [
+      { "field": "region", "title": "Region" },
+      { "field": "avg_spg_score", "title": "Avg SPG score" }
+    ]
+  }
+}

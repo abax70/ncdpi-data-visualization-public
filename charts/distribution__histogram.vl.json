@@ -1,0 +1,15 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Distribution of school SPG scores, 2023",
+    "subtitle": "A histogram shows the shape of one numeric variable — where schools cluster and how they spread."
+  },
+  "data": { "url": "data/school_scores_2023.csv" },
+  "height": 300,
+  "mark": { "type": "bar" },
+  "encoding": {
+    "x": { "field": "spg_score", "type": "quantitative", "bin": { "maxbins": 25 }, "title": "SPG score" },
+    "y": { "aggregate": "count", "title": "Number of schools" },
+    "tooltip": [ { "aggregate": "count", "title": "Schools" } ]
+  }
+}

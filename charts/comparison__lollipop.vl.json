@@ -1,0 +1,18 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Average SPG score by region, 2023",
+    "subtitle": "A lollipop is a lighter bar — the stem keeps the zero baseline, the dot marks the value."
+  },
+  "data": { "url": "data/schools_region_2023.csv" },
+  "height": 300,
+  "encoding": {
+    "y": { "field": "region", "type": "nominal", "sort": "-x", "title": null },
+    "x": { "field": "avg_spg_score", "type": "quantitative", "title": "Avg SPG score", "scale": { "domain": [0, 80] } }
+  },
+  "layer": [
+    { "mark": { "type": "rule", "color": "#B7B9BB", "size": 2 }, "encoding": { "x2": { "datum": 0 } } },
+    { "mark": { "type": "point", "size": 130, "filled": true, "color": "#003A70" },
+      "encoding": { "tooltip": [ { "field": "region", "title": "Region" }, { "field": "avg_spg_score", "title": "Avg SPG score" } ] } }
+  ]
+}

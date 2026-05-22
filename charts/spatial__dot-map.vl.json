@@ -1,0 +1,22 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Schools by performance grade, 2023",
+    "subtitle": "A dot-density map plots each school by location, avoiding the large-area bias of a shaded county map."
+  },
+  "data": { "url": "data/school_points_2023.csv" },
+  "width": 720,
+  "height": 320,
+  "projection": { "type": "mercator" },
+  "mark": { "type": "circle", "size": 22, "opacity": 0.7, "stroke": "white", "strokeWidth": 0.2 },
+  "encoding": {
+    "longitude": { "field": "g_lon", "type": "quantitative" },
+    "latitude": { "field": "g_lat", "type": "quantitative" },
+    "color": {
+      "field": "spg_grade", "type": "nominal", "title": "Grade",
+      "sort": ["A", "B", "C", "D", "F"],
+      "scale": { "domain": ["A", "B", "C", "D", "F"], "range": ["#077890", "#86A4AE", "#B7B9BB", "#C88C78", "#B33A12"] }
+    },
+    "tooltip": [ { "field": "school", "title": "School" }, { "field": "spg_grade", "title": "Grade" } ]
+  }
+}

@@ -1,0 +1,1112 @@
+[
+  {
+    "component": "Chart",
+    "palette": "Background",
+    "element": "Chart Background",
+    "hex": "#FFFFFF",
+    "rgb": "(255, 255, 255)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Diverging: 3 Steps",
+    "element": "Step +1",
+    "hex": "#077890",
+    "rgb": "(7, 120, 144)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Diverging: 3 Steps",
+    "element": "Step 0",
+    "hex": "#DEDEDE",
+    "rgb": "(222, 222, 222)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Diverging: 3 Steps",
+    "element": "Step -1",
+    "hex": "#B33A12",
+    "rgb": "(179, 58, 18)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Diverging: 5 Steps",
+    "element": "Step +1",
+    "hex": "#86A4AE",
+    "rgb": "(134, 164, 174)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Diverging: 5 Steps",
+    "element": "Step +2",
+    "hex": "#077890",
+    "rgb": "(7, 120, 144)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Diverging: 5 Steps",
+    "element": "Step 0",
+    "hex": "#DEDEDE",
+    "rgb": "(222, 222, 222)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Diverging: 5 Steps",
+    "element": "Step -1",
+    "hex": "#C88C78",
+    "rgb": "(200, 140, 120)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Diverging: 5 Steps",
+    "element": "Step -2",
+    "hex": "#B33A12",
+    "rgb": "(179, 58, 18)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Diverging: 7 Steps",
+    "element": "Step +1",
+    "hex": "#B9C4C7",
+    "rgb": "(185, 196, 199)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Diverging: 7 Steps",
+    "element": "Step +2",
+    "hex": "#6593A1",
+    "rgb": "(101, 147, 161)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Diverging: 7 Steps",
+    "element": "Step +3",
+    "hex": "#077890",
+    "rgb": "(7, 120, 144)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Diverging: 7 Steps",
+    "element": "Step 0",
+    "hex": "#DEDEDE",
+    "rgb": "(222, 222, 222)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Diverging: 7 Steps",
+    "element": "Step -1",
+    "hex": "#D1BCB5",
+    "rgb": "(209, 188, 181)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Diverging: 7 Steps",
+    "element": "Step -2",
+    "hex": "#C26F54",
+    "rgb": "(194, 111, 84)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Diverging: 7 Steps",
+    "element": "Step -3",
+    "hex": "#B33A12",
+    "rgb": "(179, 58, 18)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Diverging: 9 Steps",
+    "element": "Step +1",
+    "hex": "#CACFD1",
+    "rgb": "(202, 207, 209)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Diverging: 9 Steps",
+    "element": "Step +2",
+    "hex": "#9AB0B7",
+    "rgb": "(154, 176, 183)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Diverging: 9 Steps",
+    "element": "Step +3",
+    "hex": "#548B9C",
+    "rgb": "(84, 139, 156)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Diverging: 9 Steps",
+    "element": "Step +4",
+    "hex": "#077890",
+    "rgb": "(7, 120, 144)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Diverging: 9 Steps",
+    "element": "Step 0",
+    "hex": "#DEDEDE",
+    "rgb": "(222, 222, 222)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Diverging: 9 Steps",
+    "element": "Step -1",
+    "hex": "#D5CBC8",
+    "rgb": "(213, 203, 200)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Diverging: 9 Steps",
+    "element": "Step -2",
+    "hex": "#CC9F91",
+    "rgb": "(204, 159, 145)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Diverging: 9 Steps",
+    "element": "Step -3",
+    "hex": "#BE6143",
+    "rgb": "(190, 97, 67)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Diverging: 9 Steps",
+    "element": "Step -4",
+    "hex": "#B33A12",
+    "rgb": "(179, 58, 18)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Diverging: Continuous",
+    "element": "Begin",
+    "hex": "#B33A12",
+    "rgb": "(179, 58, 18)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Diverging: Continuous",
+    "element": "End",
+    "hex": "#077890",
+    "rgb": "(7, 120, 144)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Diverging: Continuous",
+    "element": "Mid",
+    "hex": "#DEDEDE",
+    "rgb": "(222, 222, 222)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Groups: 2",
+    "element": "Cat 1",
+    "hex": "#5085BC",
+    "rgb": "(80, 133, 188)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Groups: 2",
+    "element": "Cat 2",
+    "hex": "#FF9015",
+    "rgb": "(255, 144, 21)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Groups: 2",
+    "element": "Total/Avg",
+    "hex": "#003A70",
+    "rgb": "(0, 58, 112)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Groups: 3",
+    "element": "Cat 1",
+    "hex": "#5085BC",
+    "rgb": "(80, 133, 188)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Groups: 3",
+    "element": "Cat 2",
+    "hex": "#FF9015",
+    "rgb": "(255, 144, 21)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Groups: 3",
+    "element": "Cat 3",
+    "hex": "#922880",
+    "rgb": "(146, 40, 128)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Groups: 3",
+    "element": "Total/Avg",
+    "hex": "#003A70",
+    "rgb": "(0, 58, 112)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Groups: 4",
+    "element": "Cat 1",
+    "hex": "#5085BC",
+    "rgb": "(80, 133, 188)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Groups: 4",
+    "element": "Cat 2",
+    "hex": "#FF9015",
+    "rgb": "(255, 144, 21)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Groups: 4",
+    "element": "Cat 3",
+    "hex": "#922880",
+    "rgb": "(146, 40, 128)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Groups: 4",
+    "element": "Cat 4",
+    "hex": "#3D803F",
+    "rgb": "(61, 128, 63)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Groups: 4",
+    "element": "Total/Avg",
+    "hex": "#003A70",
+    "rgb": "(0, 58, 112)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Groups: 5",
+    "element": "Cat 1",
+    "hex": "#5085BC",
+    "rgb": "(80, 133, 188)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Groups: 5",
+    "element": "Cat 2",
+    "hex": "#FF9015",
+    "rgb": "(255, 144, 21)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Groups: 5",
+    "element": "Cat 3",
+    "hex": "#922880",
+    "rgb": "(146, 40, 128)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Groups: 5",
+    "element": "Cat 4",
+    "hex": "#3D803F",
+    "rgb": "(61, 128, 63)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Groups: 5",
+    "element": "Cat 5",
+    "hex": "#D3B10B",
+    "rgb": "(211, 177, 11)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Groups: 5",
+    "element": "Total/Avg",
+    "hex": "#003A70",
+    "rgb": "(0, 58, 112)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Groups: 6",
+    "element": "Cat 1",
+    "hex": "#5085BC",
+    "rgb": "(80, 133, 188)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Groups: 6",
+    "element": "Cat 2",
+    "hex": "#FF9015",
+    "rgb": "(255, 144, 21)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Groups: 6",
+    "element": "Cat 3",
+    "hex": "#922880",
+    "rgb": "(146, 40, 128)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Groups: 6",
+    "element": "Cat 4",
+    "hex": "#3D803F",
+    "rgb": "(61, 128, 63)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Groups: 6",
+    "element": "Cat 5",
+    "hex": "#D3B10B",
+    "rgb": "(211, 177, 11)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Groups: 6",
+    "element": "Cat 6",
+    "hex": "#BE7EB3",
+    "rgb": "(190, 126, 179)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Groups: 6",
+    "element": "Total/Avg",
+    "hex": "#003A70",
+    "rgb": "(0, 58, 112)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Chart Elements",
+    "element": "Axis Ruler",
+    "hex": "#DEDEDE",
+    "rgb": "(222, 222, 222)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Chart Elements",
+    "element": "Dividers",
+    "hex": "#DEDEDE",
+    "rgb": "(222, 222, 222)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Chart Elements",
+    "element": "Gridlines",
+    "hex": "#DEDEDE",
+    "rgb": "(222, 222, 222)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Chart Elements",
+    "element": "Reference Lines",
+    "hex": "#003A70",
+    "rgb": "(0, 58, 112)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Data Highlight",
+    "element": "Neutral Bar/Line",
+    "hex": "#B7B9BB",
+    "rgb": "(183, 185, 187)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Data Highlight",
+    "element": "Highlighted Bar/Line",
+    "hex": "#003A70",
+    "rgb": "(0, 58, 112)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Data Highlight",
+    "element": "Bar/Line is Best",
+    "hex": "#077890",
+    "rgb": "(7, 120, 144)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Data Highlight",
+    "element": "Bar/Line is Worst",
+    "hex": "#B33A12",
+    "rgb": "(179, 58, 18)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Bad: Worst",
+    "element": "Step 1",
+    "hex": "#B33A12",
+    "rgb": "(179, 58, 18)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Bad: 2 Steps",
+    "element": "Step 1",
+    "hex": "#DC8F76",
+    "rgb": "(220, 143, 118)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Bad: 2 Steps",
+    "element": "Step 2",
+    "hex": "#B33A12",
+    "rgb": "(179, 58, 18)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Bad: 3 Steps",
+    "element": "Step 1",
+    "hex": "#E2A996",
+    "rgb": "(226, 169, 150)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Bad: 3 Steps",
+    "element": "Step 2",
+    "hex": "#D37355",
+    "rgb": "(211, 115, 85)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Bad: 3 Steps",
+    "element": "Step 3",
+    "hex": "#B33A12",
+    "rgb": "(179, 58, 18)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Bad: 4 Steps",
+    "element": "Step 1",
+    "hex": "#E3B6A8",
+    "rgb": "(227, 182, 168)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Bad: 4 Steps",
+    "element": "Step 2",
+    "hex": "#DC8F76",
+    "rgb": "(220, 143, 118)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Bad: 4 Steps",
+    "element": "Step 3",
+    "hex": "#CD6544",
+    "rgb": "(205, 101, 68)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Bad: 4 Steps",
+    "element": "Step 4",
+    "hex": "#B33A12",
+    "rgb": "(179, 58, 18)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Bad: 5 Steps",
+    "element": "Step 1",
+    "hex": "#E4BEB2",
+    "rgb": "(228, 190, 178)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Bad: 5 Steps",
+    "element": "Step 2",
+    "hex": "#E09F89",
+    "rgb": "(224, 159, 137)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Bad: 5 Steps",
+    "element": "Step 3",
+    "hex": "#D77F62",
+    "rgb": "(215, 127, 98)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Bad: 5 Steps",
+    "element": "Step 4",
+    "hex": "#C85D3A",
+    "rgb": "(200, 93, 58)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Bad: 5 Steps",
+    "element": "Step 5",
+    "hex": "#B33A12",
+    "rgb": "(179, 58, 18)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Bad: Continuous",
+    "element": "Begin",
+    "hex": "#DEDEDE",
+    "rgb": "(222, 222, 222)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Bad: Continuous",
+    "element": "End",
+    "hex": "#B33A12",
+    "rgb": "(179, 58, 18)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Good: Best",
+    "element": "Step 1",
+    "hex": "#077890",
+    "rgb": "(7, 120, 144)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Good: 2 Steps",
+    "element": "Step 1",
+    "hex": "#8BAEB9",
+    "rgb": "(139, 174, 185)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Good: 2 Steps",
+    "element": "Step 2",
+    "hex": "#077890",
+    "rgb": "(7, 120, 144)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Good: 3 Steps",
+    "element": "Step 1",
+    "hex": "#A9BEC6",
+    "rgb": "(169, 190, 198)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Good: 3 Steps",
+    "element": "Step 2",
+    "hex": "#6D9CAC",
+    "rgb": "(109, 156, 172)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Good: 3 Steps",
+    "element": "Step 3",
+    "hex": "#077890",
+    "rgb": "(7, 120, 144)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Good: 4 Steps",
+    "element": "Step 1",
+    "hex": "#B6C6CC",
+    "rgb": "(182, 198, 204)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Good: 4 Steps",
+    "element": "Step 2",
+    "hex": "#8BAEB9",
+    "rgb": "(139, 174, 185)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Good: 4 Steps",
+    "element": "Step 3",
+    "hex": "#5C93A6",
+    "rgb": "(92, 147, 166)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Good: 4 Steps",
+    "element": "Step 4",
+    "hex": "#077890",
+    "rgb": "(7, 120, 144)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Good: 5 Steps",
+    "element": "Step 1",
+    "hex": "#BECBCF",
+    "rgb": "(190, 203, 207)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Good: 5 Steps",
+    "element": "Step 2",
+    "hex": "#9DB8C1",
+    "rgb": "(157, 184, 193)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Good: 5 Steps",
+    "element": "Step 3",
+    "hex": "#7AA3B1",
+    "rgb": "(122, 163, 177)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Good: 5 Steps",
+    "element": "Step 4",
+    "hex": "#508EA2",
+    "rgb": "(80, 142, 162)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Good: 5 Steps",
+    "element": "Step 5",
+    "hex": "#077890",
+    "rgb": "(7, 120, 144)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Good: Continuous",
+    "element": "Begin",
+    "hex": "#DEDEDE",
+    "rgb": "(222, 222, 222)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Good: Continuous",
+    "element": "End",
+    "hex": "#077890",
+    "rgb": "(7, 120, 144)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Text",
+    "element": "Annotation",
+    "hex": "#842175",
+    "rgb": "(132, 33, 117)",
+    "usage": "Arial 11pt",
+    "font": "Arial",
+    "sizePts": "11"
+  },
+  {
+    "component": "Chart",
+    "palette": "Text",
+    "element": "Axis Label",
+    "hex": "#000000",
+    "rgb": "(0, 0, 0)",
+    "usage": "Arial 11pt",
+    "font": "Arial",
+    "sizePts": "11"
+  },
+  {
+    "component": "Chart",
+    "palette": "Text",
+    "element": "Axis Value",
+    "hex": "#525A60",
+    "rgb": "(82, 90, 96)",
+    "usage": "Arial 11pt",
+    "font": "Arial",
+    "sizePts": "11"
+  },
+  {
+    "component": "Chart",
+    "palette": "Text",
+    "element": "Chart Note",
+    "hex": "#525A60",
+    "rgb": "(82, 90, 96)",
+    "usage": "Arial 11pt",
+    "font": "Arial",
+    "sizePts": "11"
+  },
+  {
+    "component": "Chart",
+    "palette": "Text",
+    "element": "Chart Subtitle",
+    "hex": "#525A60",
+    "rgb": "(82, 90, 96)",
+    "usage": "Arial 11pt",
+    "font": "Arial",
+    "sizePts": "11"
+  },
+  {
+    "component": "Chart",
+    "palette": "Text",
+    "element": "Chart Title",
+    "hex": "#000000",
+    "rgb": "(0, 0, 0)",
+    "usage": "Arial 14pt",
+    "font": "Arial",
+    "sizePts": "14"
+  },
+  {
+    "component": "Chart",
+    "palette": "Text",
+    "element": "Data Label",
+    "hex": "#000000",
+    "rgb": "(0, 0, 0)",
+    "usage": "Arial 11pt",
+    "font": "Arial",
+    "sizePts": "11"
+  },
+  {
+    "component": "Dashboard",
+    "palette": "Text",
+    "element": "Control Header",
+    "hex": "#525A60",
+    "rgb": "(82, 90, 96)",
+    "usage": "Arial 11pt",
+    "font": "Arial",
+    "sizePts": "11"
+  },
+  {
+    "component": "Dashboard",
+    "palette": "Text",
+    "element": "Dashboard Body Text",
+    "hex": "#000000",
+    "rgb": "(0, 0, 0)",
+    "usage": "Arial 11pt",
+    "font": "Arial",
+    "sizePts": "11"
+  },
+  {
+    "component": "Dashboard",
+    "palette": "Text",
+    "element": "Dashboard Help Text",
+    "hex": "#006174",
+    "rgb": "(0, 97, 116)",
+    "usage": "Arial 11pt",
+    "font": "Arial",
+    "sizePts": "11"
+  },
+  {
+    "component": "Dashboard",
+    "palette": "Text",
+    "element": "Dashboard Subtitle",
+    "hex": "#525A60",
+    "rgb": "(82, 90, 96)",
+    "usage": "Arial 16pt",
+    "font": "Arial",
+    "sizePts": "16"
+  },
+  {
+    "component": "Dashboard",
+    "palette": "Text",
+    "element": "Dashboard Title",
+    "hex": "#003A70",
+    "rgb": "(0, 58, 112)",
+    "usage": "Arial 26pt",
+    "font": "Arial",
+    "sizePts": "26"
+  },
+  {
+    "component": "Dashboard",
+    "palette": "Text",
+    "element": "Selected Control",
+    "hex": "#111827",
+    "rgb": "(17, 24, 39)",
+    "usage": "Arial 11pt",
+    "font": "Arial",
+    "sizePts": "11"
+  },
+  {
+    "component": "Dashboard",
+    "palette": "Text",
+    "element": "Unselected Control",
+    "hex": "#525A60",
+    "rgb": "(82, 90, 96)",
+    "usage": "Arial 11pt",
+    "font": "Arial",
+    "sizePts": "11"
+  },
+  {
+    "component": "Dashboard",
+    "palette": "Background",
+    "element": "Control or Filter Background",
+    "hex": "#FFFFFF",
+    "rgb": "(255, 255, 255)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Dashboard",
+    "palette": "Background",
+    "element": "General Background",
+    "hex": "#FFFFFF",
+    "rgb": "(255, 255, 255)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  }
+]

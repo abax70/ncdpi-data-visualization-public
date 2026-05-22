@@ -1,0 +1,24 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Share of schools by performance grade, 2023",
+    "subtitle": "Pie charts are fine for part-to-whole with five slices or fewer. Order the slices and label them directly."
+  },
+  "data": { "url": "data/grade_distribution_2023.csv" },
+  "height": 300,
+  "encoding": {
+    "theta": { "field": "school_count", "type": "quantitative", "sort": "descending", "stack": true },
+    "color": {
+      "field": "grade", "type": "nominal", "title": "Grade",
+      "sort": ["A", "B", "C", "D", "F"],
+      "scale": { "domain": ["A", "B", "C", "D", "F"], "range": ["#077890", "#86A4AE", "#B7B9BB", "#C88C78", "#B33A12"] }
+    },
+    "order": { "field": "grade", "sort": "ascending" },
+    "tooltip": [ { "field": "grade", "title": "Grade" }, { "field": "school_count", "title": "Schools" }, { "field": "pct", "title": "%" } ]
+  },
+  "layer": [
+    { "mark": { "type": "arc", "outerRadius": 120 } },
+    { "mark": { "type": "text", "radius": 140, "fontSize": 12 },
+      "encoding": { "text": { "field": "grade" }, "color": { "value": "#1A2128" } } }
+  ]
+}

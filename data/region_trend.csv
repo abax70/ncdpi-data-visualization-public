@@ -1,0 +1,41 @@
+region,year,avg_spg_score,avg_chronic_absent_pct
+Northwest,2019,68.7,0.1
+Northwest,2020,,0.1
+Northwest,2021,,0.2
+Northwest,2022,61.7,0.3
+Northwest,2023,63.2,0.2
+Western,2019,70.5,0.1
+Western,2020,,0.1
+Western,2021,,0.2
+Western,2022,63.1,0.3
+Western,2023,65.6,0.3
+Southwest,2019,66.6,0.1
+Southwest,2020,,0.1
+Southwest,2021,,0.3
+Southwest,2022,59.3,0.3
+Southwest,2023,61.1,0.2
+Piedmont Triad,2019,64.4,0.2
+Piedmont Triad,2020,,0.1
+Piedmont Triad,2021,,0.3
+Piedmont Triad,2022,55.9,0.3
+Piedmont Triad,2023,58.4,0.3
+North Central,2019,63.8,0.1
+North Central,2020,,0.1
+North Central,2021,,0.3
+North Central,2022,59.8,0.3
+North Central,2023,62.2,0.3
+Sandhills,2019,61.5,0.2
+Sandhills,2020,,0.1
+Sandhills,2021,,0.3
+Sandhills,2022,54.8,0.4
+Sandhills,2023,57.1,0.3
+Southeast,2019,65.7,0.2
+Southeast,2020,,0.1
+Southeast,2021,,0.3
+Southeast,2022,58.0,0.3
+Southeast,2023,60.6,0.3
+Northeast,2019,61.5,0.2
+Northeast,2020,,0.1
+Northeast,2021,,0.3
+Northeast,2022,54.1,0.3
+Northeast,2023,57.2,0.3

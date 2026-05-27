@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Average SPG score: 2019 to 2023",
-    "subtitle": "A slope chart shows direction and magnitude of change for many items at once — kept in one neutral colour."
+    "subtitle": "A slope chart shows direction and magnitude of change for many items at once — kept in one neutral color."
   },
   "data": { "url": "data/region_change.csv" },
   "transform": [

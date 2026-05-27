@@ -12,9 +12,9 @@
   {
     "component": "Chart",
     "palette": "Diverging: 3 Steps",
-    "element": "Step +1",
-    "hex": "#077890",
-    "rgb": "(7, 120, 144)",
+    "element": "Step -1",
+    "hex": "#B33A12",
+    "rgb": "(179, 58, 18)",
     "usage": "",
     "font": "",
     "sizePts": ""
@@ -32,9 +32,39 @@
   {
     "component": "Chart",
     "palette": "Diverging: 3 Steps",
-    "element": "Step -1",
+    "element": "Step +1",
+    "hex": "#077890",
+    "rgb": "(7, 120, 144)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Diverging: 5 Steps",
+    "element": "Step -2",
     "hex": "#B33A12",
     "rgb": "(179, 58, 18)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Diverging: 5 Steps",
+    "element": "Step -1",
+    "hex": "#C88C78",
+    "rgb": "(200, 140, 120)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Diverging: 5 Steps",
+    "element": "Step 0",
+    "hex": "#DEDEDE",
+    "rgb": "(222, 222, 222)",
     "usage": "",
     "font": "",
     "sizePts": ""
@@ -61,30 +91,40 @@
   },
   {
     "component": "Chart",
-    "palette": "Diverging: 5 Steps",
+    "palette": "Diverging: 7 Steps",
+    "element": "Step -3",
+    "hex": "#B33A12",
+    "rgb": "(179, 58, 18)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Diverging: 7 Steps",
+    "element": "Step -2",
+    "hex": "#C26F54",
+    "rgb": "(194, 111, 84)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Diverging: 7 Steps",
+    "element": "Step -1",
+    "hex": "#D1BCB5",
+    "rgb": "(209, 188, 181)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Diverging: 7 Steps",
     "element": "Step 0",
     "hex": "#DEDEDE",
     "rgb": "(222, 222, 222)",
-    "usage": "",
-    "font": "",
-    "sizePts": ""
-  },
-  {
-    "component": "Chart",
-    "palette": "Diverging: 5 Steps",
-    "element": "Step -1",
-    "hex": "#C88C78",
-    "rgb": "(200, 140, 120)",
-    "usage": "",
-    "font": "",
-    "sizePts": ""
-  },
-  {
-    "component": "Chart",
-    "palette": "Diverging: 5 Steps",
-    "element": "Step -2",
-    "hex": "#B33A12",
-    "rgb": "(179, 58, 18)",
     "usage": "",
     "font": "",
     "sizePts": ""
@@ -121,40 +161,50 @@
   },
   {
     "component": "Chart",
-    "palette": "Diverging: 7 Steps",
+    "palette": "Diverging: 9 Steps",
+    "element": "Step -4",
+    "hex": "#B33A12",
+    "rgb": "(179, 58, 18)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Diverging: 9 Steps",
+    "element": "Step -3",
+    "hex": "#BE6143",
+    "rgb": "(190, 97, 67)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Diverging: 9 Steps",
+    "element": "Step -2",
+    "hex": "#CC9F91",
+    "rgb": "(204, 159, 145)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Diverging: 9 Steps",
+    "element": "Step -1",
+    "hex": "#D5CBC8",
+    "rgb": "(213, 203, 200)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Diverging: 9 Steps",
     "element": "Step 0",
     "hex": "#DEDEDE",
     "rgb": "(222, 222, 222)",
-    "usage": "",
-    "font": "",
-    "sizePts": ""
-  },
-  {
-    "component": "Chart",
-    "palette": "Diverging: 7 Steps",
-    "element": "Step -1",
-    "hex": "#D1BCB5",
-    "rgb": "(209, 188, 181)",
-    "usage": "",
-    "font": "",
-    "sizePts": ""
-  },
-  {
-    "component": "Chart",
-    "palette": "Diverging: 7 Steps",
-    "element": "Step -2",
-    "hex": "#C26F54",
-    "rgb": "(194, 111, 84)",
-    "usage": "",
-    "font": "",
-    "sizePts": ""
-  },
-  {
-    "component": "Chart",
-    "palette": "Diverging: 7 Steps",
-    "element": "Step -3",
-    "hex": "#B33A12",
-    "rgb": "(179, 58, 18)",
     "usage": "",
     "font": "",
     "sizePts": ""
@@ -201,56 +251,6 @@
   },
   {
     "component": "Chart",
-    "palette": "Diverging: 9 Steps",
-    "element": "Step 0",
-    "hex": "#DEDEDE",
-    "rgb": "(222, 222, 222)",
-    "usage": "",
-    "font": "",
-    "sizePts": ""
-  },
-  {
-    "component": "Chart",
-    "palette": "Diverging: 9 Steps",
-    "element": "Step -1",
-    "hex": "#D5CBC8",
-    "rgb": "(213, 203, 200)",
-    "usage": "",
-    "font": "",
-    "sizePts": ""
-  },
-  {
-    "component": "Chart",
-    "palette": "Diverging: 9 Steps",
-    "element": "Step -2",
-    "hex": "#CC9F91",
-    "rgb": "(204, 159, 145)",
-    "usage": "",
-    "font": "",
-    "sizePts": ""
-  },
-  {
-    "component": "Chart",
-    "palette": "Diverging: 9 Steps",
-    "element": "Step -3",
-    "hex": "#BE6143",
-    "rgb": "(190, 97, 67)",
-    "usage": "",
-    "font": "",
-    "sizePts": ""
-  },
-  {
-    "component": "Chart",
-    "palette": "Diverging: 9 Steps",
-    "element": "Step -4",
-    "hex": "#B33A12",
-    "rgb": "(179, 58, 18)",
-    "usage": "",
-    "font": "",
-    "sizePts": ""
-  },
-  {
-    "component": "Chart",
     "palette": "Diverging: Continuous",
     "element": "Begin",
     "hex": "#B33A12",
@@ -262,9 +262,9 @@
   {
     "component": "Chart",
     "palette": "Diverging: Continuous",
-    "element": "End",
-    "hex": "#077890",
-    "rgb": "(7, 120, 144)",
+    "element": "Mid",
+    "hex": "#DEDEDE",
+    "rgb": "(222, 222, 222)",
     "usage": "",
     "font": "",
     "sizePts": ""
@@ -272,9 +272,9 @@
   {
     "component": "Chart",
     "palette": "Diverging: Continuous",
-    "element": "Mid",
-    "hex": "#DEDEDE",
-    "rgb": "(222, 222, 222)",
+    "element": "End",
+    "hex": "#077890",
+    "rgb": "(7, 120, 144)",
     "usage": "",
     "font": "",
     "sizePts": ""
@@ -945,6 +945,166 @@
     "element": "End",
     "hex": "#077890",
     "rgb": "(7, 120, 144)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Neutral: 2 Steps",
+    "element": "Step 1",
+    "hex": "#9CB0CD",
+    "rgb": "(156, 176, 205)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Neutral: 2 Steps",
+    "element": "Step 2",
+    "hex": "#5085BC",
+    "rgb": "(80, 133, 188)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Neutral: 3 Steps",
+    "element": "Step 1",
+    "hex": "#B2BFD3",
+    "rgb": "(178, 191, 211)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Neutral: 3 Steps",
+    "element": "Step 2",
+    "hex": "#85A2C8",
+    "rgb": "(133, 162, 200)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Neutral: 3 Steps",
+    "element": "Step 3",
+    "hex": "#5085BC",
+    "rgb": "(80, 133, 188)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Neutral: 4 Steps",
+    "element": "Step 1",
+    "hex": "#BDC7D6",
+    "rgb": "(189, 199, 214)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Neutral: 4 Steps",
+    "element": "Step 2",
+    "hex": "#9CB0CD",
+    "rgb": "(156, 176, 205)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Neutral: 4 Steps",
+    "element": "Step 3",
+    "hex": "#799AC5",
+    "rgb": "(121, 154, 197)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Neutral: 4 Steps",
+    "element": "Step 4",
+    "hex": "#5085BC",
+    "rgb": "(80, 133, 188)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Neutral: 5 Steps",
+    "element": "Step 1",
+    "hex": "#C4CBD7",
+    "rgb": "(196, 203, 215)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Neutral: 5 Steps",
+    "element": "Step 2",
+    "hex": "#A9B9D1",
+    "rgb": "(169, 185, 209)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Neutral: 5 Steps",
+    "element": "Step 3",
+    "hex": "#8EA7CA",
+    "rgb": "(142, 167, 202)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Neutral: 5 Steps",
+    "element": "Step 4",
+    "hex": "#7196C3",
+    "rgb": "(113, 150, 195)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Neutral: 5 Steps",
+    "element": "Step 5",
+    "hex": "#5085BC",
+    "rgb": "(80, 133, 188)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Neutral: Continuous",
+    "element": "Begin",
+    "hex": "#DEDEDE",
+    "rgb": "(222, 222, 222)",
+    "usage": "",
+    "font": "",
+    "sizePts": ""
+  },
+  {
+    "component": "Chart",
+    "palette": "Sequence to Neutral: Continuous",
+    "element": "End",
+    "hex": "#5085BC",
+    "rgb": "(80, 133, 188)",
     "usage": "",
     "font": "",
     "sizePts": ""

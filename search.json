@@ -4,14 +4,14 @@
     "href": "resources.html",
     "title": "Resources",
     "section": "",
-    "text": "Colour system (CSV) — every palette and hex, the source of truth for this whole guide: branding/NCDPI Data Visualization Style Guide Colors.csv\nNCDPI logo kit — horizontal, centered, and icon marks in SVG/PNG/PDF/EPS: branding/DPI Logo Kit/\nDPI Style Guide 2025 (PDF) — the full agency brand standard: branding/DPI Style Guide-2025.pdf"
+    "text": "Color system (CSV) — every palette and hex, the source of truth for this whole guide: branding/NCDPI Data Visualization Style Guide Colors.csv\nNCDPI logo kit — horizontal, centered, and icon marks in SVG/PNG/PDF/EPS: branding/DPI Logo Kit/\nDPI Style Guide 2025 (PDF) — the full agency brand standard: branding/DPI Style Guide-2025.pdf"
   },
   {
     "objectID": "resources.html#brand-assets",
     "href": "resources.html#brand-assets",
     "title": "Resources",
     "section": "",
-    "text": "Colour system (CSV) — every palette and hex, the source of truth for this whole guide: branding/NCDPI Data Visualization Style Guide Colors.csv\nNCDPI logo kit — horizontal, centered, and icon marks in SVG/PNG/PDF/EPS: branding/DPI Logo Kit/\nDPI Style Guide 2025 (PDF) — the full agency brand standard: branding/DPI Style Guide-2025.pdf"
+    "text": "Color system (CSV) — every palette and hex, the source of truth for this whole guide: branding/NCDPI Data Visualization Style Guide Colors.csv\nNCDPI logo kit — horizontal, centered, and icon marks in SVG/PNG/PDF/EPS: branding/DPI Logo Kit/\nDPI Style Guide 2025 (PDF) — the full agency brand standard: branding/DPI Style Guide-2025.pdf"
   },
   {
     "objectID": "resources.html#behind-the-guidance",
@@ -39,56 +39,127 @@
     "href": "foundations/typography.html",
     "title": "Typography",
     "section": "",
-    "text": "NCDPI charts, dashboards, and official web materials use Arial (fallback Helvetica) — the agency’s WCAG-compliant workhorse font. This guide deliberately sets its own body text in Arial too, so the words on the page match the words in the charts.\n\nThe NC Digital Commons web framework specifies Source Sans Pro for sites that live on nc.gov. This guide is an NCDPI-owned site about the chart palette, so it follows the NCDPI agency standard (Arial) for visual consistency with the charts."
+    "text": "NCDPI charts, dashboards, and official web materials use Arial (fallback Helvetica) — the agency’s WCAG-compliant workhorse font. This guide deliberately sets its own body text in Arial too, so the words on the page match the words in the charts.\n\nThe NC Digital Commons web framework specifies Source Sans Pro for sites that live on nc.gov. This guide is an NCDPI-owned site about the chart palette, so it follows the NCDPI agency standard (Arial) for visual consistency with the charts.",
+    "crumbs": [
+      "Typography"
+    ]
   },
   {
     "objectID": "foundations/typography.html#font",
     "href": "foundations/typography.html#font",
     "title": "Typography",
     "section": "",
-    "text": "NCDPI charts, dashboards, and official web materials use Arial (fallback Helvetica) — the agency’s WCAG-compliant workhorse font. This guide deliberately sets its own body text in Arial too, so the words on the page match the words in the charts.\n\nThe NC Digital Commons web framework specifies Source Sans Pro for sites that live on nc.gov. This guide is an NCDPI-owned site about the chart palette, so it follows the NCDPI agency standard (Arial) for visual consistency with the charts."
+    "text": "NCDPI charts, dashboards, and official web materials use Arial (fallback Helvetica) — the agency’s WCAG-compliant workhorse font. This guide deliberately sets its own body text in Arial too, so the words on the page match the words in the charts.\n\nThe NC Digital Commons web framework specifies Source Sans Pro for sites that live on nc.gov. This guide is an NCDPI-owned site about the chart palette, so it follows the NCDPI agency standard (Arial) for visual consistency with the charts.",
+    "crumbs": [
+      "Typography"
+    ]
   },
   {
     "objectID": "foundations/typography.html#text-sizes-in-charts",
     "href": "foundations/typography.html#text-sizes-in-charts",
     "title": "Typography",
     "section": "Text sizes in charts",
-    "text": "Text sizes in charts\nThese come straight from the brand colour-and-type CSV that drives the whole guide:\n\n\n\nRole\nSize\nColour\n\n\n\n\nChart title\n14 pt, bold\nBlack #000000\n\n\nSubtitle / note\n11 pt\nDark grey #525A60\n\n\nAxis label\n11 pt\nBlack #000000\n\n\nAxis value\n11 pt\nDark grey #525A60\n\n\nAnnotation\n11 pt\nPlum #842175\n\n\nDashboard title\n26 pt\nDPI Blue #003A70"
+    "text": "Text sizes in charts\nThese come straight from the brand color-and-type CSV that drives the whole guide:\n\n\n\nRole\nSize\nColor\n\n\n\n\nChart title\n14 pt, bold\n Black #000000\n\n\nSubtitle / note\n11 pt\n Dark grey #525A60\n\n\nAxis label\n11 pt\n Black #000000\n\n\nAxis value\n11 pt\n Dark grey #525A60\n\n\nAnnotation\n11 pt\n Plum #842175\n\n\nDashboard title\n26 pt\n DPI Blue #003A70",
+    "crumbs": [
+      "Typography"
+    ]
   },
   {
     "objectID": "foundations/typography.html#rules",
     "href": "foundations/typography.html#rules",
     "title": "Typography",
     "section": "Rules",
-    "text": "Rules\n\nBody and paragraph text is black or DPI Blue — don’t colour-code text for emphasis; use bold instead.\nHeadings are DPI Blue.\nIf everything stands out, nothing stands out."
+    "text": "Rules\n\nBody and paragraph text is black or DPI Blue.\nDon’t color-code text for emphasis — use bold instead.\nSection titles and headings on this site are DPI Blue. (In charts, the title is black and the dashboard title is DPI Blue — see the table above.)\nIf everything stands out, nothing stands out.",
+    "crumbs": [
+      "Typography"
+    ]
   },
   {
     "objectID": "foundations/color-sequences.html",
     "href": "foundations/color-sequences.html",
-    "title": "Colour — sequences",
+    "title": "Color — sequences",
     "section": "",
-    "text": "Use a sequential palette when the data has a natural order from low to high. NCDPI provides two, because in education “high” isn’t always “good”:\n\nSequence to Good (teal) — higher = better (proficiency, growth met).\nSequence to Bad (rust) — higher = worse (chronic absenteeism, suspensions).\n\nDarker always means more — the dark-is-more convention people read intuitively.\nSequence to Good — 5 steps\n\nSequence to Bad — 5 steps\n\n\n\nMatch the palette to the meaning: shade a chronic-absenteeism map with Sequence to Bad, a proficiency map with Sequence to Good. The colour should reinforce whether more is good or bad — not fight it."
+    "text": "Use a sequential palette when the data has a natural order from low to high. NCDPI provides three, because in education “high” isn’t always “good”:\nDarker always means more — the dark-is-more convention people read intuitively.",
+    "crumbs": [
+      "Color — sequences"
+    ]
+  },
+  {
+    "objectID": "foundations/color-sequences.html#explore-the-palettes",
+    "href": "foundations/color-sequences.html#explore-the-palettes",
+    "title": "Color — sequences",
+    "section": "Explore the palettes",
+    "text": "Explore the palettes\nPick a direction and the number of steps:\n\n\nThe steps are equally spaced in color space. Each step is the same perceptual distance from the next, from the neutral end to the full color. So the values they stand for should be equally spaced too — even color steps imply even bins (0–20, 20–40, …), not arbitrary cutoffs.\n\n\nDon’t let color do all the work. Adjacent steps are close in lightness and won’t all meet WCAG contrast against each other. Keep a labeled legend or value labels, and add a thin white border where segments touch (pie, treemap, stacked, map).\n\n\nContinuous variants. Each sequence also has a smooth, stepless continuous ramp. Reach for it only where the data is truly continuous and position can’t carry the magnitude — almost always a choropleth map or a heatmap. For anything with countable categories, use the stepped palettes above.",
+    "crumbs": [
+      "Color — sequences"
+    ]
+  },
+  {
+    "objectID": "foundations/color-sequences.html#example",
+    "href": "foundations/color-sequences.html#example",
+    "title": "Color — sequences",
+    "section": "Example",
+    "text": "Example\nA sequential palette earns its keep where position can’t show magnitude — here a heatmap, where color carries the value. Match the palette to the meaning: a proficiency view uses Sequence to Good; shade a chronic-absenteeism view with Sequence to Bad.",
+    "crumbs": [
+      "Color — sequences"
+    ]
   },
   {
     "objectID": "foundations/color-highlights.html",
     "href": "foundations/color-highlights.html",
-    "title": "Colour — highlights",
+    "title": "Color — highlights",
     "section": "",
-    "text": "The single most useful move in the whole palette: plot everything in neutral grey and use colour for the one thing your message is about. This is how you handle “too many categories” without breaking the five-colour rule.\n\n\n\nNeutral grey — every non-focal bar or line.\nHighlight navy — the one you’re drawing attention to.\nBest teal / Worst rust — when the point is specifically the top or bottom performer.\n\n\nIn a dashboard, let the user click or hover to choose which item is highlighted — “spaghetti with a spotlight.” In a static slide or report, pick the focal item yourself and annotate why it matters."
+    "text": "The single most useful move in the whole palette: plot everything in neutral grey and use color for the one thing your message is about. This is how you handle “too many categories” without breaking the five-color rule.",
+    "crumbs": [
+      "Color — highlights"
+    ]
+  },
+  {
+    "objectID": "foundations/color-highlights.html#example",
+    "href": "foundations/color-highlights.html#example",
+    "title": "Color — highlights",
+    "section": "Example",
+    "text": "Example\nEight regions, all neutral grey except one in navy. The eye lands on the focal region immediately — and you’ve spent only one color to do it.",
+    "crumbs": [
+      "Color — highlights"
+    ]
   },
   {
     "objectID": "foundations/color-diverging.html",
     "href": "foundations/color-diverging.html",
-    "title": "Colour — diverging",
+    "title": "Color — diverging",
     "section": "",
-    "text": "Use a diverging palette when the scale has a meaningful midpoint and runs in two directions from it — change versus last year, performance versus a target, or Likert agreement. Rust on one side, teal on the other, neutral grey in the middle.\nNCDPI provides 3-, 5-, 7-, and 9-step versions so you can match the number of classes in your data.\nDiverging — 5 steps\n\nDiverging — 9 steps\n\n\n\nThe School Performance Grade colours (A → F) are the 5-step diverging palette in action: A is teal, C is neutral grey, F is rust. You’ll see it on the pie and map examples."
+    "text": "Use a diverging palette when the scale has a meaningful midpoint and runs in two directions from it — change versus last year, performance versus a target, or Likert agreement. Rust on one side, teal on the other, neutral grey in the middle.\nNCDPI provides 3-, 5-, 7-, and 9-step versions so you can match the number of classes in your data. The steps read like a number line — negative through zero to positive (Step -2 … Step 0 … Step +2).",
+    "crumbs": [
+      "Color — diverging"
+    ]
+  },
+  {
+    "objectID": "foundations/color-diverging.html#explore-the-steps",
+    "href": "foundations/color-diverging.html#explore-the-steps",
+    "title": "Color — diverging",
+    "section": "Explore the steps",
+    "text": "Explore the steps\n\n\nSteps are symmetric and equally spaced around the midpoint. Match the data to that shape: a 5-step palette fits five ordered classes centered on a true middle (Strongly disagree … Neutral … Strongly agree), not lopsided cutoffs. If your data isn’t centered on a real zero/neutral, a sequence is the better fit.\n\n\nDon’t let color do all the work. Steps near the midpoint are close in lightness and won’t all meet WCAG contrast against each other. Keep a labeled legend or value labels, and add a thin white border where segments touch.\n\n\nThe School Performance Grade colors (A → F) are the 5-step diverging palette in action: A is teal, C is neutral grey, F is rust. You’ll see it on the pie and map examples.",
+    "crumbs": [
+      "Color — diverging"
+    ]
+  },
+  {
+    "objectID": "foundations/color-diverging.html#example",
+    "href": "foundations/color-diverging.html#example",
+    "title": "Color — diverging",
+    "section": "Example",
+    "text": "Example\nLikert data is the textbook diverging case: a diverging stacked bar runs from disagree (rust) through neutral (grey) to agree (teal), centered on the neutral response.",
+    "crumbs": [
+      "Color — diverging"
+    ]
   },
   {
     "objectID": "chart-types/maps.html",
     "href": "chart-types/maps.html",
     "title": "Maps",
     "section": "",
-    "text": "Maps answer “where?” They’re powerful and familiar, but colour-on-geography is one of the least precise encodings — always pair a map with a chart that allows precise comparison.",
+    "text": "Maps answer “where?” They’re powerful and familiar, but color-on-geography is one of the least precise encodings — always pair a map with a chart that allows precise comparison.",
     "crumbs": [
       "Chart types",
       "Maps"
@@ -245,7 +316,7 @@
     "href": "chart-types/bar-charts.html#comparing-categories",
     "title": "Bar charts",
     "section": "Comparing categories",
-    "text": "Comparing categories\nWhen you have one number per category, sort by value and use a single colour. With more than five categories you do not need a different colour for each bar — position already does the work.\n\n\n\n\nAlways start the value axis at zero. Bars encode magnitude by length, so a truncated axis exaggerates differences and misleads the reader.",
+    "text": "Comparing categories\nWhen you have one number per category, sort by value and use a single color. With more than five categories you do not need a different color for each bar — position already does the work.\n\n\n\n\nAlways start the value axis at zero. Bars encode magnitude by length, so a truncated axis exaggerates differences and misleads the reader.",
     "crumbs": [
       "Chart types",
       "Bar charts"
@@ -263,7 +334,7 @@
     "href": "chart-parts/dashboard-elements.html#titles-and-text",
     "title": "Dashboard elements",
     "section": "Titles and text",
-    "text": "Titles and text\n\nDashboard title: DPI Blue, 26 pt. Subtitle: dark grey, 16 pt.\nHelp text (how to use a filter): aqua/teal, small, set apart from the data.\nBody text is black or DPI Blue — never colour-coded for emphasis."
+    "text": "Titles and text\n\nDashboard title: DPI Blue, 26 pt. Subtitle: dark grey, 16 pt.\nHelp text (how to use a filter): aqua/teal, small, set apart from the data.\nBody text is black or DPI Blue — never color-coded for emphasis."
   },
   {
     "objectID": "chart-parts/dashboard-elements.html#controls-and-filters",
@@ -277,7 +348,7 @@
     "href": "chart-parts/dashboard-elements.html#layout",
     "title": "Dashboard elements",
     "section": "Layout",
-    "text": "Layout\n\nLead with the headline number or chart; supporting detail flows below or behind a filter.\nInteractivity earns its keep: hover for detail, click to highlight, filter to focus. In a dashboard you can show more because the user controls what to look at.\n\n\nDashboards are where highlight-one-on-grey shines: plot every series in grey and let the user click to spotlight the one they care about — no colour overload, any number of categories."
+    "text": "Layout\n\nLead with the headline number or chart; supporting detail flows below or behind a filter.\nInteractivity earns its keep: hover for detail, click to highlight, filter to focus. In a dashboard you can show more because the user controls what to look at.\n\n\nDashboards are where highlight-one-on-grey shines: plot every series in grey and let the user click to spotlight the one they care about — no color overload, any number of categories."
   },
   {
     "objectID": "chart-chooser.html",
@@ -298,35 +369,35 @@
     "href": "best-practices/perceptual-hierarchy.html#what-it-means-in-practice",
     "title": "The perceptual hierarchy",
     "section": "What it means in practice",
-    "text": "What it means in practice\n\nTo let people read precise values, encode with position or length — a dot plot or bar, not a heatmap.\nUse colour and area for the broad pattern (a map, a treemap), and pair them with a position/length chart when the exact numbers matter.\nThis is exactly why the Chart Chooser, when in doubt, prefers the chart higher on this list.\n\n\nPie charts sit mid-hierarchy on angle — which is why they’re fine for “which slice is biggest?” with a few slices, and poor for comparing many similar slices. The rule (“five slices, no more”) falls straight out of the science."
+    "text": "What it means in practice\n\nTo let people read precise values, encode with position or length — a dot plot or bar, not a heatmap.\nUse color and area for the broad pattern (a map, a treemap), and pair them with a position/length chart when the exact numbers matter.\nThis is exactly why the Chart Chooser, when in doubt, prefers the chart higher on this list.\n\n\nPie charts sit mid-hierarchy on angle — which is why they’re fine for “which slice is biggest?” with a few slices, and poor for comparing many similar slices. The rule (“five slices, no more”) falls straight out of the science."
   },
   {
     "objectID": "best-practices/color-rules.html",
     "href": "best-practices/color-rules.html",
-    "title": "Colour rules",
+    "title": "Color rules",
     "section": "",
-    "text": "Colour is the most abused encoding in agency charts. Three rules keep it honest."
+    "text": "Color is the most abused encoding in agency charts. Three rules keep it honest."
   },
   {
-    "objectID": "best-practices/color-rules.html#five-colours-is-the-ceiling",
-    "href": "best-practices/color-rules.html#five-colours-is-the-ceiling",
-    "title": "Colour rules",
-    "section": "1. Five colours is the ceiling",
-    "text": "1. Five colours is the ceiling\nPeople can hold only a handful of categorical hues apart before search slows and errors climb; three to four is the comfortable range. When you have more categories, the answer is never more colours — it’s highlight-one-on-grey or small multiples."
+    "objectID": "best-practices/color-rules.html#five-colors-is-the-ceiling",
+    "href": "best-practices/color-rules.html#five-colors-is-the-ceiling",
+    "title": "Color rules",
+    "section": "1. Five colors is the ceiling",
+    "text": "1. Five colors is the ceiling\nPeople can hold only a handful of categorical hues apart before search slows and errors climb; three to four is the comfortable range. When you have more categories, the answer is never more colors — it’s highlight-one-on-grey or small multiples."
   },
   {
     "objectID": "best-practices/color-rules.html#dark-is-more",
     "href": "best-practices/color-rules.html#dark-is-more",
-    "title": "Colour rules",
+    "title": "Color rules",
     "section": "2. Dark is more",
     "text": "2. Dark is more\nOn a sequential scale, people read darker as a larger value by default. Honour it: don’t make your lightest shade the biggest number. NCDPI’s sequential palettes are built dark-is-more already."
   },
   {
-    "objectID": "best-practices/color-rules.html#colour-should-mean-something",
-    "href": "best-practices/color-rules.html#colour-should-mean-something",
-    "title": "Colour rules",
-    "section": "3. Colour should mean something",
-    "text": "3. Colour should mean something\n\nMatch the palette to the data: categorical for unordered groups, sequential for ordered, diverging for a meaningful midpoint.\nMake “good” and “bad” directions deliberate — teal for good, rust for bad.\nNever rely on colour alone. Pair it with labels, position, or shape, so the chart still works for colour-blind readers and in greyscale.\n\n\nRun any colour-on-colour text combination through the WebAIM contrast checker. DPI Aqua at full strength is not accessible for small text — use Medium #077890 or Dark #006174 aqua instead."
+    "objectID": "best-practices/color-rules.html#color-should-mean-something",
+    "href": "best-practices/color-rules.html#color-should-mean-something",
+    "title": "Color rules",
+    "section": "3. Color should mean something",
+    "text": "3. Color should mean something\n\nMatch the palette to the data: categorical for unordered groups, sequential for ordered, diverging for a meaningful midpoint.\nMake “good” and “bad” directions deliberate — teal for good, rust for bad.\nNever rely on color alone. Pair it with labels, position, or shape, so the chart still works for color-blind readers and in greyscale.\n\n\nRun any color-on-color text combination through the WebAIM contrast checker. DPI Aqua at full strength is not accessible for small text — use Medium #077890 or Dark #006174 aqua instead."
   },
   {
     "objectID": "best-practices/annotation.html",
@@ -347,7 +418,7 @@
     "href": "best-practices/annotation.html#label-directly-annotate-the-story",
     "title": "Annotation",
     "section": "Label directly, annotate the story",
-    "text": "Label directly, annotate the story\n\nDirect-label lines and bars instead of relying on a legend (up to ~7 items).\nCall out the one or two points that carry the argument — the outlier, the crossover, the target line — with a short text note in plum #842175, the brand annotation colour.\nMark context the data needs: a policy change, a target, the COVID gap."
+    "text": "Label directly, annotate the story\n\nDirect-label lines and bars instead of relying on a legend (up to ~7 items).\nCall out the one or two points that carry the argument — the outlier, the crossover, the target line — with a short text note in plum #842175, the brand annotation color.\nMark context the data needs: a policy change, a target, the COVID gap."
   },
   {
     "objectID": "best-practices/annotation.html#less-chart-more-meaning",
@@ -368,7 +439,7 @@
     "href": "best-practices/index.html#ncdpi-standing-rules-in-one-place",
     "title": "Best practices",
     "section": "NCDPI standing rules, in one place",
-    "text": "NCDPI standing rules, in one place\n\n\nFive colours maximum (three or four is better).\nPromote small multiples — they’re under-used here.\nStacked bars: 2–3 segments only. Beyond that, separate bars on a common baseline.\nBreak lines at missing years (e.g., the 2020–21 COVID gap) — never interpolate.\nGraph the delta — when the message is a difference, plot the difference itself."
+    "text": "NCDPI standing rules, in one place\n\n\nFive colors maximum (three or four is better).\nPromote small multiples — they’re under-used here.\nStacked bars: 2–3 segments only. Beyond that, separate bars on a common baseline.\nBreak lines at missing years (e.g., the 2020–21 COVID gap) — never interpolate.\nGraph the delta — when the message is a difference, plot the difference itself."
   },
   {
     "objectID": "best-practices/small-multiples.html",
@@ -382,14 +453,14 @@
     "href": "best-practices/small-multiples.html#why-they-work",
     "title": "Small multiples",
     "section": "Why they work",
-    "text": "Why they work\n\nNo colour overload. Each panel uses one colour, so the five-colour ceiling never binds, no matter how many categories you have.\nHonest comparison. A shared scale means a tall bar in one panel really is taller than a short bar in another.\nPattern at a glance. The eye sweeps the grid and spots the outlier panel immediately."
+    "text": "Why they work\n\nNo color overload. Each panel uses one color, so the five-color ceiling never binds, no matter how many categories you have.\nHonest comparison. A shared scale means a tall bar in one panel really is taller than a short bar in another.\nPattern at a glance. The eye sweeps the grid and spots the outlier panel immediately."
   },
   {
     "objectID": "best-practices/small-multiples.html#how-to-build-them-well",
     "href": "best-practices/small-multiples.html#how-to-build-them-well",
     "title": "Small multiples",
     "section": "How to build them well",
-    "text": "How to build them well\n\nKeep every panel on the same scale — that’s the whole point.\nOrder the panels meaningfully (by value, region, time) rather than alphabetically.\nOne colour across all panels; highlight a reference (the state average) the same way in each.\nStop around 20–30 panels — past that, each is too small to read."
+    "text": "How to build them well\n\nKeep every panel on the same scale — that’s the whole point.\nOrder the panels meaningfully (by value, region, time) rather than alphabetically.\nOne color across all panels; highlight a reference (the state average) the same way in each.\nStop around 20–30 panels — past that, each is too small to read."
   },
   {
     "objectID": "chart-parts/chart-elements.html",
@@ -529,7 +600,7 @@
     "href": "chart-types/lines.html#a-few-series",
     "title": "Lines & change over time",
     "section": "A few series",
-    "text": "A few series\nKeep it to about five coloured lines. Direct-label the ends rather than making the reader bounce to a legend.\n\n\n\n\nBreak the line at missing years. NC issued no School Performance Grades in 2020 and 2021. A line drawn straight through that gap would invent two years of data. Show the break.",
+    "text": "A few series\nKeep it to about five colored lines. Direct-label the ends rather than making the reader bounce to a legend.\n\n\n\n\nBreak the line at missing years. NC issued no School Performance Grades in 2020 and 2021. A line drawn straight through that gap would invent two years of data. Show the break.",
     "crumbs": [
       "Chart types",
       "Lines & change over time"
@@ -593,44 +664,69 @@
   {
     "objectID": "foundations/color-groups.html",
     "href": "foundations/color-groups.html",
-    "title": "Colour — category groups",
+    "title": "Color — category groups",
     "section": "",
-    "text": "Use the group palettes for distinct, unordered categories — regions, subjects, school types. The palettes are pre-built for two through six categories so you never have to guess. Stop at five; if you need more, see Highlights or use small multiples.\nThese swatches are generated live from the brand colour file.\nTwo categories\n\nThree categories\n\nFour categories\n\nFive categories (the practical maximum)\n\nSix categories (use only when truly unavoidable)\n\n\n\nEach group also defines a Total/Avg colour (DPI Blue) so a summary bar or line reads as different in kind from the categories."
+    "text": "Use the group palettes for distinct, unordered categories — regions, subjects, school types. The palettes are pre-built for two through six categories so you never have to guess. Stop at five; if you need more, see Highlights or use small multiples.\nThese swatches are generated live from the brand color file.\nTwo categories\nThree categories\nFour categories\nFive categories (the practical maximum)\nSix categories (use only when truly unavoidable)",
+    "crumbs": [
+      "Color — category groups"
+    ]
+  },
+  {
+    "objectID": "foundations/color-groups.html#example",
+    "href": "foundations/color-groups.html#example",
+    "title": "Color — category groups",
+    "section": "Example",
+    "text": "Example\nFour locales, four brand colors applied in order — with a white border so neighbours stay crisp. Position and labels do the identifying; color just groups.",
+    "crumbs": [
+      "Color — category groups"
+    ]
   },
   {
     "objectID": "foundations/color-lookup.html",
     "href": "foundations/color-lookup.html",
-    "title": "Colour lookup",
+    "title": "Color lookup",
     "section": "",
-    "text": "Every colour in the NCDPI chart system, searchable. Filter by palette, element, or hex code. This table is generated directly from the brand colour file, so it never drifts out of date."
+    "text": "Every color in the NCDPI chart system, searchable. Filter by palette, element, or hex code. This table is generated directly from the brand color file, so it never drifts out of date.",
+    "crumbs": [
+      "Color lookup"
+    ]
   },
   {
     "objectID": "foundations/color.html",
     "href": "foundations/color.html",
-    "title": "Colour — overview",
+    "title": "Color — overview",
     "section": "",
-    "text": "The NCDPI chart palette is built for four jobs. Pick the palette that matches the kind of data, not your favourite colour.\nEvery hex value lives in the searchable Colour lookup."
+    "text": "The NCDPI chart palette is built for four jobs. Pick the palette that matches the kind of data, not your favorite color.\nThroughout this guide we name colors by their HEX value (e.g., #5085BC), not RGB. Every value lives in the searchable Color lookup.",
+    "crumbs": [
+      "Color — overview"
+    ]
   },
   {
     "objectID": "foundations/color.html#the-one-rule-that-matters-most",
     "href": "foundations/color.html#the-one-rule-that-matters-most",
-    "title": "Colour — overview",
+    "title": "Color — overview",
     "section": "The one rule that matters most",
-    "text": "The one rule that matters most\n\nFive distinct colours is the ceiling — three or four is better. Past five hues, people can’t reliably tell categories apart. When you have more, don’t add colours: highlight one against grey, or use small multiples. NCDPI charts habitually over-colour; this is the habit we’re breaking."
+    "text": "The one rule that matters most\n\nFive distinct colors is the ceiling — three or four is better. Past five hues, people can’t reliably tell categories apart. When you have more, don’t add colors: highlight one against grey, or use small multiples (one small panel per category). Every extra hue is one more thing the reader has to decode — keep the count low so their attention goes to the differences that matter, not to working out which color means which category.",
+    "crumbs": [
+      "Color — overview"
+    ]
   },
   {
     "objectID": "foundations/color.html#category-order",
     "href": "foundations/color.html#category-order",
-    "title": "Colour — overview",
+    "title": "Color — overview",
     "section": "Category order",
-    "text": "Category order\nWhen you do colour-code categories, use the brand order so charts stay consistent: Blue → Orange → Purple → Green → Gold → Plum. Never rely on colour alone — pair it with labels or position."
+    "text": "Category order\nWhen you do color-code categories, use the brand order so charts stay consistent — Blue → Orange → Purple → Green → Gold → Plum:\n\n\nSee Category groups for how many to use at each step. Never rely on color alone — pair it with labels or position.",
+    "crumbs": [
+      "Color — overview"
+    ]
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Make every NCDPI chart clear, honest, and on-brand.",
     "section": "",
-    "text": "This is the working home for how we build charts and dashboards at the North Carolina Department of Public Instruction — the colours, the chart parts, the chart types, and the evidence behind them.\nOpen the Chart Chooser"
+    "text": "This is the working home for how we build charts and dashboards at the North Carolina Department of Public Instruction — the colors, the chart parts, the chart types, and the evidence behind them.\nOpen the Chart Chooser"
   },
   {
     "objectID": "index.html#start-here",

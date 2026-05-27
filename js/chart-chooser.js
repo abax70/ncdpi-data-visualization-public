@@ -141,7 +141,7 @@
     if (byPurpose.length) pool = byPurpose; // if purpose empties the set, keep shape-only as fallback
     // Stage 3: audience tier
     pool = pool.filter(function (c) { return c.minTier <= a.audience; });
-    // Stage 4 + hard constraints: category/colour/segment rules
+    // Stage 4 + hard constraints: category/color/segment rules
     pool = pool.filter(function (c) {
       if (c.maxCategories && repCount > c.maxCategories) return false;       // e.g. pie >5, bar >15
       if (c.maxSeries && repCount > c.maxSeries) return false;               // line >5 series

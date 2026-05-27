@@ -1,0 +1,30 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Schools by locale, 2023",
+    "subtitle": "Four categories, four brand colors applied in order. A thin white border keeps adjacent colors distinct."
+  },
+  "data": { "url": "data/school_scores_2023.csv" },
+  "transform": [
+    { "filter": { "field": "locale", "oneOf": ["City", "Suburb", "Town", "Rural"] } }
+  ],
+  "height": 260,
+  "mark": { "type": "bar", "stroke": "white", "strokeWidth": 1.5 },
+  "encoding": {
+    "x": {
+      "field": "locale", "type": "nominal",
+      "sort": ["City", "Suburb", "Town", "Rural"],
+      "title": null, "axis": { "labelAngle": 0 }
+    },
+    "y": { "aggregate": "count", "type": "quantitative", "title": "Schools" },
+    "color": {
+      "field": "locale", "type": "nominal",
+      "sort": ["City", "Suburb", "Town", "Rural"],
+      "legend": null
+    },
+    "tooltip": [
+      { "field": "locale", "title": "Locale" },
+      { "aggregate": "count", "title": "Schools" }
+    ]
+  }
+}

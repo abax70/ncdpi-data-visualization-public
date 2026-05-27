@@ -129,6 +129,34 @@ export const NCDPI = {
     "begin": "#DEDEDE",
     "end": "#B33A12"
   },
+  "seqNeutral": {
+    "2": [
+      "#9CB0CD",
+      "#5085BC"
+    ],
+    "3": [
+      "#B2BFD3",
+      "#85A2C8",
+      "#5085BC"
+    ],
+    "4": [
+      "#BDC7D6",
+      "#9CB0CD",
+      "#799AC5",
+      "#5085BC"
+    ],
+    "5": [
+      "#C4CBD7",
+      "#A9B9D1",
+      "#8EA7CA",
+      "#7196C3",
+      "#5085BC"
+    ]
+  },
+  "seqNeutralContinuous": {
+    "begin": "#DEDEDE",
+    "end": "#5085BC"
+  },
   "highlight": {
     "neutral": "#B7B9BB",
     "focus": "#003A70",

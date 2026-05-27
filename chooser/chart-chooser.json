@@ -49,12 +49,12 @@
     {
       "id": "categories",
       "title": "About how many categories or series?",
-      "help": "Colour can distinguish about five things before it breaks down.",
+      "help": "Color can distinguish about five things before it breaks down.",
       "askWhen": ["num_by_cat", "one_categorical", "over_time", "multi_cat_num", "part_to_whole", "geographic"],
       "options": [
         { "value": "one", "label": "Just one", "desc": "A single value or series" },
-        { "value": "few", "label": "2–5", "desc": "Colour-coding is fine here" },
-        { "value": "many", "label": "6–15", "desc": "Too many for separate colours" },
+        { "value": "few", "label": "2–5", "desc": "Color-coding is fine here" },
+        { "value": "many", "label": "6–15", "desc": "Too many for separate colors" },
         { "value": "lots", "label": "16 or more", "desc": "Needs aggregation or small multiples" }
       ]
     },
@@ -83,8 +83,8 @@
   },
 
   "messages": {
-    "colorLimit": "You have more than five categories. Don't give each its own colour — discriminability breaks down fast past five hues. Instead: highlight one in colour with the rest in grey, use small multiples (one panel each), or show a Top-N with the rest grouped as \"Other.\"",
-    "smallMultiples": "With this many categories, small multiples are usually the best move — repeat the same chart once per category in a grid, each panel one colour. They're under-used and they avoid colour overload entirely.",
+    "colorLimit": "You have more than five categories. Don't give each its own color — discriminability breaks down fast past five hues. Instead: highlight one in color with the rest in grey, use small multiples (one panel each), or show a Top-N with the rest grouped as \"Other.\"",
+    "smallMultiples": "With this many categories, small multiples are usually the best move — repeat the same chart once per category in a grid, each panel one color. They're under-used and they avoid color overload entirely.",
     "highlightOne": "In a dashboard, plot every category in grey and let the user click or hover to highlight one — \"spaghetti with a spotlight.\" In a static piece, pre-select the one category that carries your message.",
     "delta": "Your message is about the difference itself. Plot the difference directly (a diverging bar of the gap, or a line of the gap over time) rather than two series the reader has to subtract by eye — a constant gap looks like it shrinks at higher values.",
     "survey": "For rating-scale data, a diverging stacked bar (centred on neutral, disagree to the left, agree to the right) is the standard. With four or more response levels, separate bars on a common baseline read more precisely. Never use a pie for survey data.",
@@ -95,14 +95,14 @@
   "taxonomy": [
     { "id": "bar_vertical", "name": "Vertical bar chart", "purpose": ["comparison", "magnitude"], "shapes": ["num_by_cat", "one_categorical"], "minTier": 1, "maxCategories": 15,
       "why": "Length on a common baseline is one of the most accurate things the eye can read. The default for comparing a value across a small-to-moderate number of categories.",
-      "tips": ["Always start the axis at zero", "Sort by value unless categories have a natural order", "Direct-label bars when there are 7 or fewer", "One colour is enough — position does the work"],
+      "tips": ["Always start the axis at zero", "Sort by value unless categories have a natural order", "Direct-label bars when there are 7 or fewer", "One color is enough — position does the work"],
       "watch": "More than ~15 categories crowd the labels — switch to a horizontal bar or dot plot.",
       "evidence": "Cleveland & McGill: position/length rank near the top of the encoding hierarchy.",
       "spec": "charts/comparison__bar.vl.json", "page": "chart-types/bar-charts.html" },
 
     { "id": "bar_horizontal", "name": "Horizontal bar chart", "purpose": ["ranking", "comparison"], "shapes": ["num_by_cat", "one_categorical"], "minTier": 1, "maxCategories": 30,
       "why": "Sorted horizontal bars show rank explicitly and give long category labels room to breathe.",
-      "tips": ["Start at zero", "Sort descending (highest on top)", "Highlight the top or bottom item with an accent colour if telling a story"],
+      "tips": ["Start at zero", "Sort descending (highest on top)", "Highlight the top or bottom item with an accent color if telling a story"],
       "watch": "If the natural order of categories matters more than rank, keep that order instead of sorting.",
       "spec": "charts/comparison__bar.vl.json", "page": "chart-types/bar-charts.html" },
 
@@ -120,26 +120,26 @@
 
     { "id": "dumbbell", "name": "Dumbbell chart", "purpose": ["comparison", "deviation"], "shapes": ["num_by_cat", "multi_cat_num"], "minTier": 2, "maxCategories": 20,
       "why": "Two points per category joined by a line make the gap between them — before/after, or two groups — the visual focus.",
-      "tips": ["Horizontal layout", "Colour the two endpoints distinctly and label them", "Sort by gap size or by one endpoint"],
+      "tips": ["Horizontal layout", "Color the two endpoints distinctly and label them", "Sort by gap size or by one endpoint"],
       "watch": "More than two points per category gets cluttered fast.",
       "spec": "charts/comparison__dumbbell.vl.json", "page": "chart-types/deviation.html" },
 
     { "id": "line", "name": "Line chart", "purpose": ["change_over_time"], "shapes": ["over_time"], "minTier": 1, "maxSeries": 5,
       "why": "The default for trends over time — the connecting line emphasises continuity and direction of change.",
-      "tips": ["Direct-label line ends instead of a legend", "Break the line at missing years — never connect through a gap", "Limit to ~5 coloured series; beyond that use small multiples or highlight-one", "A zero baseline isn't required, but note it if truncated"],
+      "tips": ["Direct-label line ends instead of a legend", "Break the line at missing years — never connect through a gap", "Limit to ~5 colored series; beyond that use small multiples or highlight-one", "A zero baseline isn't required, but note it if truncated"],
       "watch": "Never use a line for non-time categorical data — lines imply continuity that isn't there.",
       "evidence": "Position + slope; high-accuracy reads for both level and rate of change.",
       "spec": "charts/change__line.vl.json", "page": "chart-types/lines.html" },
 
     { "id": "small_multiples", "name": "Small multiples", "purpose": ["change_over_time", "comparison"], "shapes": ["over_time", "num_by_cat", "multi_cat_num"], "minTier": 1, "maxCategories": 30,
-      "why": "Repeat the same chart once per category on a shared scale. The cleanest way to show many categories without colour overload — and badly under-used.",
-      "tips": ["Keep every panel on the same scale", "One colour across all panels", "Order panels meaningfully (by value, region, etc.)"],
+      "why": "Repeat the same chart once per category on a shared scale. The cleanest way to show many categories without color overload — and badly under-used.",
+      "tips": ["Keep every panel on the same scale", "One color across all panels", "Order panels meaningfully (by value, region, etc.)"],
       "watch": "Panels get too small to read past ~20–30 categories.",
       "spec": "charts/change__small-multiples.vl.json", "page": "chart-types/lines.html" },
 
     { "id": "slope", "name": "Slope chart", "purpose": ["change_over_time", "ranking"], "shapes": ["over_time", "num_by_cat"], "minTier": 2, "maxCategories": 12,
       "why": "Two time points joined per item — shows both the values and the direction/size of change, and highlights rank reversals.",
-      "tips": ["Label both endpoints directly", "Highlight items that cross", "Use one neutral colour, or highlight a focal item against grey"],
+      "tips": ["Label both endpoints directly", "Highlight items that cross", "Use one neutral color, or highlight a focal item against grey"],
       "watch": "More than two time points → use a line chart. More than ~12 items → too many crossing lines.",
       "spec": "charts/change__slope.vl.json", "page": "chart-types/lines.html" },
 
@@ -169,7 +169,7 @@
 
     { "id": "treemap", "name": "Treemap", "purpose": ["part_to_whole"], "shapes": ["hierarchical"], "minTier": 3,
       "why": "Compact view of a large, nested set — good for spotting the dominant pieces at a glance.",
-      "tips": ["Label the largest rectangles", "Use colour for a second variable or to group", "Include a size cue"],
+      "tips": ["Label the largest rectangles", "Use color for a second variable or to group", "Include a size cue"],
       "watch": "Area is imprecise; hard for similar-sized rectangles. Unfamiliar to general audiences.",
       "spec": null, "page": "chart-types/part-to-whole.html" },
 
@@ -199,7 +199,7 @@
 
     { "id": "beeswarm", "name": "Beeswarm / strip plot", "purpose": ["distribution"], "shapes": ["one_numeric", "num_by_cat"], "minTier": 3,
       "why": "Plots every individual point without overplotting — shows clusters, gaps, and outliers directly.",
-      "tips": ["Jitter or swarm to avoid overlap", "Colour by group", "Pair with a box plot for summary stats"],
+      "tips": ["Jitter or swarm to avoid overlap", "Color by group", "Pair with a box plot for summary stats"],
       "watch": "Breaks down with very large samples.",
       "spec": null, "page": "chart-types/distributions.html" },
 
@@ -219,12 +219,12 @@
     { "id": "heatmap", "name": "Heatmap", "purpose": ["correlation", "comparison"], "shapes": ["multi_cat_num"], "minTier": 2,
       "why": "Shows patterns in a matrix of values (e.g., region × year) — good for spotting clusters and trends.",
       "tips": ["Use a sequential or diverging brand palette", "Add cell values when the matrix is small", "Mind the dark-is-more convention"],
-      "watch": "Colour is the least precise encoding — not for reading exact values.",
+      "watch": "Color is the least precise encoding — not for reading exact values.",
       "spec": null, "page": "chart-types/correlation.html" },
 
     { "id": "grouped_bar", "name": "Grouped bar chart", "purpose": ["magnitude", "comparison"], "shapes": ["multi_cat_num"], "minTier": 1, "maxCategories": 4,
       "why": "Compares values across categories and across 2–4 groups at once, bars side by side.",
-      "tips": ["Zero baseline", "Colour groups consistently (≤5 colours)", "Switch to small multiples beyond 3–4 groups"],
+      "tips": ["Zero baseline", "Color groups consistently (≤5 colors)", "Switch to small multiples beyond 3–4 groups"],
       "watch": "Too many groups per cluster becomes unreadable; for proportions use a stacked bar.",
       "spec": null, "page": "chart-types/bar-charts.html" },
 
@@ -236,13 +236,13 @@
 
     { "id": "pictograph", "name": "Pictograph (icon array)", "purpose": ["magnitude", "part_to_whole"], "shapes": ["one_categorical", "part_to_whole"], "minTier": 1,
       "why": "Makes a number tangible — \"73 of 100 schools.\" Each icon is one unit; strong for lower-numeracy audiences.",
-      "tips": ["Uniform icon size", "Colour-fill to show the proportion", "Label the total and the highlighted count"],
+      "tips": ["Uniform icon size", "Color-fill to show the proportion", "Label the total and the highlighted count"],
       "watch": "Only for small, round numbers.",
       "spec": null, "page": "chart-types/part-to-whole.html" },
 
     { "id": "diverging_bar", "name": "Diverging bar chart", "purpose": ["deviation"], "shapes": ["num_by_cat", "over_time"], "minTier": 1,
       "why": "Values above and below a baseline (e.g., change from last year), with a zero line as the natural anchor. The go-to for \"graph the delta.\"",
-      "tips": ["Zero baseline in the centre", "Colour positive vs negative (teal for good, rust for bad)", "Sort by value or natural order"],
+      "tips": ["Zero baseline in the centre", "Color positive vs negative (teal for good, rust for bad)", "Sort by value or natural order"],
       "watch": "If all values are positive, a plain bar is clearer.",
       "spec": "charts/deviation__diverging-bar.vl.json", "page": "chart-types/deviation.html" },
 
@@ -255,12 +255,12 @@
     { "id": "choropleth", "name": "Choropleth map", "purpose": ["spatial"], "shapes": ["geographic"], "minTier": 1,
       "why": "Shades areas by value — familiar, and good for broad geographic patterns.",
       "tips": ["Sequential palette with 4–6 steps", "Always include a companion bar/dot chart for precise comparison", "Mind that large rural areas dominate visually"],
-      "watch": "Colour is imprecise; big low-population areas can mislead. Use for area data, not point data.",
+      "watch": "Color is imprecise; big low-population areas can mislead. Use for area data, not point data.",
       "spec": "charts/spatial__dot-map.vl.json", "page": "chart-types/maps.html" },
 
     { "id": "dot_density", "name": "Dot-density map", "purpose": ["spatial"], "shapes": ["geographic"], "minTier": 2,
       "why": "Plots each location as a dot — shows where things are and how concentrated, without the large-area bias of a choropleth.",
-      "tips": ["Small uniform dots", "Colour by category if useful", "Include geographic reference features"],
+      "tips": ["Small uniform dots", "Color by category if useful", "Include geographic reference features"],
       "watch": "Hard to read precise counts; dots overlap when very dense.",
       "spec": "charts/spatial__dot-map.vl.json", "page": "chart-types/maps.html" }
   ]

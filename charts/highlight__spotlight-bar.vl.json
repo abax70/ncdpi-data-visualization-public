@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Average School Performance Grade score by region, 2023",
-    "subtitle": "Eight SBE regions, one color, sorted by value — position carries the comparison."
+    "subtitle": "Every bar neutral grey; one region in navy to draw the eye. Navy marks attention — not good or bad."
   },
   "data": { "url": "data/schools_region_2023.csv" },
   "height": 300,
@@ -10,10 +10,13 @@
   "encoding": {
     "y": { "field": "region", "type": "nominal", "sort": "-x", "title": null },
     "x": { "field": "avg_spg_score", "type": "quantitative", "title": "Avg SPG score", "scale": { "domain": [0, 80] } },
+    "color": {
+      "condition": { "test": "datum.region === 'Sandhills'", "value": "#003A70" },
+      "value": "#B7B9BB"
+    },
     "tooltip": [
       { "field": "region", "title": "Region" },
-      { "field": "avg_spg_score", "title": "Avg SPG score" },
-      { "field": "school_count", "title": "Schools" }
+      { "field": "avg_spg_score", "title": "Avg SPG score" }
     ]
   }
 }

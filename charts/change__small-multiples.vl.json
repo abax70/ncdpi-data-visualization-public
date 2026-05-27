@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Average SPG score over time, by region",
-    "subtitle": "Eight regions — too many for one colourful line chart. Small multiples give each its own panel and one shared scale. (2020–21 COVID gap kept honest.)"
+    "subtitle": "Eight regions — too many for one colorful line chart. Small multiples give each its own panel and one shared scale. (2020–21 COVID gap kept honest.)"
   },
   "data": {
     "url": "data/region_trend.csv",

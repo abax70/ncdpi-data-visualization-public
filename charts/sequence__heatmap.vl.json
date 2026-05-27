@@ -1,0 +1,27 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Average SPG score by region and year",
+    "subtitle": "A sequential palette earns its keep where position can't carry magnitude — here color does. Darker = higher (dark-is-more). No grades were issued in 2020–21, so that column is simply absent."
+  },
+  "data": { "url": "data/region_trend.csv" },
+  "transform": [
+    { "filter": "isValid(datum.avg_spg_score) && datum.avg_spg_score > 0" }
+  ],
+  "height": 260,
+  "mark": { "type": "rect", "stroke": "white", "strokeWidth": 1 },
+  "encoding": {
+    "x": { "field": "year", "type": "ordinal", "title": null },
+    "y": { "field": "region", "type": "nominal", "title": null },
+    "color": {
+      "field": "avg_spg_score", "type": "quantitative", "title": "Avg SPG score",
+      "scale": { "range": ["#DEDEDE", "#077890"] },
+      "legend": { "orient": "right" }
+    },
+    "tooltip": [
+      { "field": "region", "title": "Region" },
+      { "field": "year", "title": "Year" },
+      { "field": "avg_spg_score", "title": "Avg SPG score" }
+    ]
+  }
+}

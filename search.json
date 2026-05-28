@@ -166,11 +166,22 @@
     ]
   },
   {
+    "objectID": "chart-types/maps.html#choropleth-map",
+    "href": "chart-types/maps.html#choropleth-map",
+    "title": "Maps",
+    "section": "Choropleth map",
+    "text": "Choropleth map\nShades each district by a rate (here, the share of students chronically absent). Good for “where is the rate highest?” — bad at communicating exact values, because position is fixed by geography and color is a low-precision encoding. Big rural districts also pull the eye more than small urban ones with the same value.\n\n\n\n\nChoropleth vs. dot-density: which to use. A choropleth answers “where is the rate highest?” — values are normalised to area (percent, per-capita, average), so a small dense district and a large rural one are comparable. A dot-density map answers “where are the things?” — it shows counts in place, so density patterns are honest but rates aren’t. Pick the one that matches your question, or show both.",
+    "crumbs": [
+      "Chart types",
+      "Maps"
+    ]
+  },
+  {
     "objectID": "chart-types/maps.html#dot-density-map",
     "href": "chart-types/maps.html#dot-density-map",
     "title": "Maps",
     "section": "Dot-density map",
-    "text": "Dot-density map\nPlots each school by location. Avoids the trap of a shaded county map, where big rural counties dominate the eye regardless of how many students they serve.\n\n\n\n\nChoropleths are coming. A shaded county/region map needs NC boundary files (TopoJSON), which we’ll add in a later pass. Until then, dot-density covers the “where” question with the location data we already have.\n\n\nOn any map, put a sorted bar or dot plot alongside it. The map shows the pattern; the bar lets people read the values.",
+    "text": "Dot-density map\nPlots each school by location. Honest about where the schools are, but doesn’t support reading any per-district rate from the map alone.\n\n\n\n\nOn any map, put a sorted bar or dot plot alongside it. The map shows the pattern; the bar lets people read the values.",
     "crumbs": [
       "Chart types",
       "Maps"

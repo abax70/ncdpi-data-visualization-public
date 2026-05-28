@@ -1,0 +1,39 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Chronic absenteeism by district, 2023",
+    "subtitle": "Choropleths shade an area by a rate. Color is imprecise -- always read this alongside a sorted bar. Nine districts have no value in this sample (shown in pale gray)."
+  },
+  "data": {
+    "url": "data/nc-school-districts.topojson",
+    "format": { "type": "topojson", "feature": "districts" }
+  },
+  "transform": [
+    {
+      "lookup": "properties.LEA",
+      "from": {
+        "data": { "url": "data/lea_chronic_absent_2023.csv" },
+        "key": "lea",
+        "fields": ["lea_name", "chronic_absent_pct", "school_count"]
+      }
+    }
+  ],
+  "width": 720,
+  "height": 320,
+  "projection": { "type": "mercator" },
+  "mark": { "type": "geoshape", "stroke": "white", "strokeWidth": 0.5, "color": "#F0F0F0" },
+  "encoding": {
+    "color": {
+      "field": "chronic_absent_pct",
+      "type": "quantitative",
+      "title": "Chronic absent %",
+      "scale": { "range": ["#DEDEDE", "#B33A12"] },
+      "legend": { "orient": "right", "format": ".0f" }
+    },
+    "tooltip": [
+      { "field": "properties.LEA_Name", "title": "District" },
+      { "field": "chronic_absent_pct", "title": "Chronic absent %", "format": ".1f" },
+      { "field": "school_count", "title": "Schools" }
+    ]
+  }
+}

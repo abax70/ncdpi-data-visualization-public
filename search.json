@@ -490,17 +490,17 @@
     "href": "chart-parts/table-elements.html#example",
     "title": "Table elements",
     "section": "Example",
-    "text": "Example\n\nSchools by urbanicity, North Carolina, 2023\n\n\nUrbanicity\nSchools\nStudent pop.\n% of NC student pop.\n\n\n\n\nCity\n612\n472,300\n31.4%\n\n\nSuburb\n498\n418,900\n27.8%\n\n\nTown\n331\n186,200\n12.4%\n\n\nRural\n1,074\n427,500\n28.4%\n\n\n\nTotal\n2,515\n1,504,900\n100.0%\n\n\n\n\n\nSource: NCDPI school directory, 2023–24. Counts exclude charters with statewide enrollment.",
+    "text": "Example\n\nNorth Carolina public schools and student population by urbanicity, 2023–24\n\n\nUrbanicity\nSchools\nStudent pop.\n% of NC student pop.\n\n\n\n\nCity\n612\n472,300\n31.4%\n\n\nSuburb\n498\n418,900\n27.8%\n\n\nTown\n331\n186,200\n12.4%\n\n\nRural\n1,074\n427,500\n28.4%\n\n\n\nTotal\n2,515\n1,504,900\n100.0%\n\n\n\n\n\nSource: NCDPI school directory, 2023–24. Counts exclude charters with statewide enrollment.",
     "crumbs": [
       "Table elements"
     ]
   },
   {
-    "objectID": "chart-parts/table-elements.html#header-and-banding",
-    "href": "chart-parts/table-elements.html#header-and-banding",
+    "objectID": "chart-parts/table-elements.html#anatomy-of-an-ncdpi-table",
+    "href": "chart-parts/table-elements.html#anatomy-of-an-ncdpi-table",
     "title": "Table elements",
-    "section": "Header and banding",
-    "text": "Header and banding\n\nHeader row: white text on DPI Blue #003A70 for a short, strong label row.\nRow banding / callout backgrounds: 10% DPI Blue #E6EDF6 — enough to guide the eye across a row without shouting.\nDividers: light grey #DEDEDE.",
+    "section": "Anatomy of an NCDPI table",
+    "text": "Anatomy of an NCDPI table\nSame idea as the chart anatomy — name each part, then its spec. A table simply has fewer parts. Match these and it reads as a clean look-up grid.\n\n\n\nPart\nSpecification\n\n\n\n\nTitle (the &lt;caption&gt;)\n14 pt, bold,  Black #000000 — sized to sit above the header row in the hierarchy\n\n\nHeader row\nWhite text on  DPI Blue #003A70 — short, strong labels\n\n\nRow header\nLeftmost cell of each row; left-aligned, regular weight\n\n\nRow banding\n 10% DPI Blue #E6EDF6 on alternate rows — guides the eye across a row without shouting\n\n\nDividers\n Light grey #DEDEDE\n\n\nTotal row\n2 px top rule, bold, no fill — separates the summary from the data\n\n\nSource note\n10 pt,  Dark grey #525A60 — a table's source note sits one step below the brand's 11 pt chart note, so it recedes",
     "crumbs": [
       "Table elements"
     ]
@@ -520,7 +520,7 @@
     "href": "chart-parts/table-elements.html#make-tables-do-more",
     "title": "Table elements",
     "section": "Make tables do more",
-    "text": "Make tables do more\n\nSort by the column that matters, not alphabetically by default.\nAdd an embedded sparkline column to show a trend per row without a separate chart.\nLightly shade or mark the values that carry the message — don’t make readers hunt.",
+    "text": "Make tables do more\n\nSort by the column that matters, not alphabetically by default.\nAdd an embedded sparkline column to show a trend per row without a separate chart.\nLightly shade or mark the values that carry the message — don’t make readers hunt.\n\nA few small in-cell techniques — one row each. They borrow the chart palette so the table still reads as NCDPI:\n\nIn-cell techniques (illustrative)\n\n\n\n\n\n\n\nTechnique\nExample\nReach for it when…\n\n\n\n\nSparkline\n\n\n\neach row has a short trend (say, attendance 2019–2024) and a full line chart would be overkill. Color the line navy #003A70; dot the last point.\n\n\nIn-cell data bar\n86  \n\n\n\nreaders compare magnitudes down a column at a glance — the bar length does work the bare number can't. Keep the value visible alongside it.\n\n\nHeat cell\n12 47 93\nspotting highs and lows across a grid. Shade with Sequence to Neutral (light grey → #5085BC), dark = higher. Mind contrast if you also print the value: dark ink on the darkest steps fails WCAG AA for small text (~4.2:1), and white text is worse — so keep the in-cell number only where the shade is light, or show the value outside the cell.\n\n\n\n\nOne enrichment per table, not all three at once. These are accents on a look-up grid — if every column has a bar or a heat tint, you’ve built a cluttered chart, not a table.",
     "crumbs": [
       "Table elements"
     ]
@@ -530,7 +530,7 @@
     "href": "chart-parts/table-elements.html#accessibility",
     "title": "Table elements",
     "section": "Accessibility",
-    "text": "Accessibility\nA data table is one of the few places where the markup directly affects whether a screen-reader user can use the table at all.\n\nUse &lt;th scope=\"col\"&gt; on column headers (and scope=\"row\" on the leading cell of each row where it makes sense). WCAG 2.1 SC 1.3.1 Info and Relationships requires that the table’s structure be programmatically conveyable — scope is how you do that.\nGive every table a &lt;caption&gt; or aria-label. The caption answers “what is this table about?” before the screen reader starts reading cells.\nAvoid merged header cells. WCAG doesn’t ban them outright, but screen-reader support for merged cells is uneven, and they make linear navigation confusing. If you truly need a merged header (a complex multi-level table), mark it up with explicit headers / id attributes so each data cell points to the headers that govern it.\nDon’t use a table for layout. If the goal is page layout, use CSS — not &lt;table&gt;.\n\n\nA simple, well-marked-up table beats a clever, complex one every time. If you find yourself reaching for merged cells, ask whether two simple tables would tell the same story better.",
+    "text": "Accessibility\n\nMost NCDPI tables are built in Tableau, PowerPoint, or Word — not hand-coded. The principles here apply in every tool: give the table a real title/caption, use genuine header rows (not bold text faking a header), keep one value per cell (avoid merged cells), and never use a table just for page layout. The HTML attributes shown below (scope, headers/id) are how you satisfy these when you hand-code a table — in Tableau and Office, use the built-in table, crosstab, and caption features and they handle most of it for you.\n\nA data table is one of the few places where structure directly affects whether a screen-reader user can use the table at all — so the underlying markup (or your tool’s accessibility features) matters more here than it does for a chart.\n\nUse &lt;th scope=\"col\"&gt; on column headers (and scope=\"row\" on the leading cell of each row where it makes sense). WCAG 2.1 SC 1.3.1 Info and Relationships requires that the table’s structure be programmatically conveyable — scope is how you do that.\nGive every table a &lt;caption&gt; or aria-label. The caption answers “what is this table about?” before the screen reader starts reading cells.\nAvoid merged header cells. WCAG doesn’t ban them outright, but screen-reader support for merged cells is uneven, and they make linear navigation confusing. If you truly need a merged header (a complex multi-level table), mark it up with explicit headers / id attributes so each data cell points to the headers that govern it.\nDon’t use a table for layout. If the goal is page layout, use CSS — not &lt;table&gt;.\n\n\nA simple, well-marked-up table beats a clever, complex one every time. If you find yourself reaching for merged cells, ask whether two simple tables would tell the same story better.",
     "crumbs": [
       "Table elements"
     ]

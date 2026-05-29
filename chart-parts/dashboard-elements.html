@@ -30,6 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../chart-parts/table-elements.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -38,7 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-803887ab843b8a10f698c44fb6dc164f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-e143f83b886da3aa36d54f186b385eab.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -171,19 +172,69 @@ ul.task-list li input[type="checkbox"] {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chart-parts/dashboard-elements.html">Dashboard elements</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chart-parts/chart-elements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chart elements</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chart-parts/table-elements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Table elements</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chart-parts/dashboard-elements.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Dashboard elements</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#titles-and-text" id="toc-titles-and-text" class="nav-link active" data-scroll-target="#titles-and-text">Titles and text</a></li>
-  <li><a href="#controls-and-filters" id="toc-controls-and-filters" class="nav-link" data-scroll-target="#controls-and-filters">Controls and filters</a></li>
-  <li><a href="#layout" id="toc-layout" class="nav-link" data-scroll-target="#layout">Layout</a></li>
+  <li><a href="#anatomy-of-an-ncdpi-dashboard" id="toc-anatomy-of-an-ncdpi-dashboard" class="nav-link active" data-scroll-target="#anatomy-of-an-ncdpi-dashboard">Anatomy of an NCDPI dashboard</a></li>
+  <li><a href="#titles-and-text" id="toc-titles-and-text" class="nav-link" data-scroll-target="#titles-and-text">Titles and text</a>
+  <ul class="collapse">
+  <li><a href="#common-dashboard-chrome" id="toc-common-dashboard-chrome" class="nav-link" data-scroll-target="#common-dashboard-chrome">Common dashboard chrome</a></li>
+  </ul></li>
+  <li><a href="#controls-and-filters" id="toc-controls-and-filters" class="nav-link" data-scroll-target="#controls-and-filters">Controls and filters</a>
+  <ul class="collapse">
+  <li><a href="#keep-the-filter-count-low" id="toc-keep-the-filter-count-low" class="nav-link" data-scroll-target="#keep-the-filter-count-low">Keep the filter count low</a></li>
+  <li><a href="#when-you-cant-trim-use-progressive-disclosure" id="toc-when-you-cant-trim-use-progressive-disclosure" class="nav-link" data-scroll-target="#when-you-cant-trim-use-progressive-disclosure">When you can’t trim, use progressive disclosure</a></li>
+  <li><a href="#prefer-cross-filtering-over-filter-controls" id="toc-prefer-cross-filtering-over-filter-controls" class="nav-link" data-scroll-target="#prefer-cross-filtering-over-filter-controls">Prefer cross-filtering over filter controls</a></li>
+  </ul></li>
+  <li><a href="#layout" id="toc-layout" class="nav-link" data-scroll-target="#layout">Layout</a>
+  <ul class="collapse">
+  <li><a href="#reading-order-z-pattern-top-left-first" id="toc-reading-order-z-pattern-top-left-first" class="nav-link" data-scroll-target="#reading-order-z-pattern-top-left-first">Reading order: Z-pattern, top-left first</a></li>
+  <li><a href="#drill-down-as-you-move-down-and-right" id="toc-drill-down-as-you-move-down-and-right" class="nav-link" data-scroll-target="#drill-down-as-you-move-down-and-right">Drill down as you move down and right</a></li>
+  <li><a href="#big-aggregate-numbers-bans-at-the-top" id="toc-big-aggregate-numbers-bans-at-the-top" class="nav-link" data-scroll-target="#big-aggregate-numbers-bans-at-the-top">Big Aggregate Numbers (BANs) at the top</a></li>
+  <li><a href="#interactivity-earns-its-keep" id="toc-interactivity-earns-its-keep" class="nav-link" data-scroll-target="#interactivity-earns-its-keep">Interactivity earns its keep</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -210,33 +261,80 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>A dashboard is a set of charts that share context. The chrome around them should be calm and predictable so the data stands out.</p>
+<section id="anatomy-of-an-ncdpi-dashboard" class="level2">
+<h2 class="anchored" data-anchor-id="anatomy-of-an-ncdpi-dashboard">Anatomy of an NCDPI dashboard</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/dashboard-anatomy.svg" class="ncdpi-anatomy img-fluid figure-img" alt="Annotated dashboard layout showing title bar with NCDPI logo at top, a row of Big Aggregate Numbers, two supporting charts in the middle, a filter rail on the right, and a footer with data-last-updated date and contact information."></p>
+<figcaption>Anatomy of an NCDPI dashboard — title and subtitle, BAN row, supporting charts, filter rail, and footer chrome.</figcaption>
+</figure>
+</div>
+</section>
 <section id="titles-and-text" class="level2">
 <h2 class="anchored" data-anchor-id="titles-and-text">Titles and text</h2>
 <ul>
 <li><strong>Dashboard title:</strong> DPI Blue, 26 pt.&nbsp;<strong>Subtitle:</strong> dark grey, 16 pt.</li>
-<li><strong>Help text</strong> (how to use a filter): aqua/teal, small, set apart from the data.</li>
+<li><strong>Help text</strong> (how to read a chart, how to use a filter): Plum <code>#842175</code>, 11 pt — the same treatment as chart annotations. Help text and annotations are both meta-overlays on data, so they share a color so users learn the convention once.</li>
 <li>Body text is black or DPI Blue — never color-coded for emphasis.</li>
 </ul>
+<section id="common-dashboard-chrome" class="level3">
+<h3 class="anchored" data-anchor-id="common-dashboard-chrome">Common dashboard chrome</h3>
+<p>Every NCDPI dashboard should carry, somewhere visible (usually the footer):</p>
+<ul>
+<li><strong>Data last updated</strong> — a date, plus the refresh cadence if known (“Updated 2025-09-15, monthly”).</li>
+<li><strong>Contact</strong> — a name or shared inbox for questions and corrections.</li>
+<li><strong>NCDPI logo</strong> — small, top-left or footer, so attribution is unambiguous.</li>
+<li><strong>Glossary or help link</strong> — for any term a non-expert reader might stumble on.</li>
+</ul>
+<p>These four items add almost no visual weight but answer the questions every new viewer has within thirty seconds.</p>
+</section>
 </section>
 <section id="controls-and-filters" class="level2">
 <h2 class="anchored" data-anchor-id="controls-and-filters">Controls and filters</h2>
 <ul>
-<li>Group filters together in a consistent place (top or left) so users learn where to look once.</li>
+<li>Group filters together in a consistent place (top or right rail) so users learn where to look once.</li>
 <li>Label the <strong>selected</strong> state clearly (darker) versus <strong>unselected</strong> (grey).</li>
 <li>Default to the most useful view, not an empty one — don’t make users configure the dashboard before it says anything.</li>
 </ul>
+<section id="keep-the-filter-count-low" class="level3">
+<h3 class="anchored" data-anchor-id="keep-the-filter-count-low">Keep the filter count low</h3>
+<p>Every filter is one more decision the user has to make before the dashboard answers anything (Hick’s Law — choice time grows with the number of options). Aim for the <em>minimum</em> set of filters that lets users answer the question the dashboard is built for. If you can’t answer “what does this filter unlock?” in one sentence, the filter probably shouldn’t be there.</p>
+</section>
+<section id="when-you-cant-trim-use-progressive-disclosure" class="level3">
+<h3 class="anchored" data-anchor-id="when-you-cant-trim-use-progressive-disclosure">When you can’t trim, use progressive disclosure</h3>
+<p>Sometimes a stakeholder mandates more filters than really fit. In that case, don’t put them all on the page at once — hide secondary filters behind a collapsible panel (Tableau: <em>dynamic zone visibility</em>) or a “More filters” toggle. Show the two or three most-used filters by default and let the user reveal the rest if they need them.</p>
+</section>
+<section id="prefer-cross-filtering-over-filter-controls" class="level3">
+<h3 class="anchored" data-anchor-id="prefer-cross-filtering-over-filter-controls">Prefer cross-filtering over filter controls</h3>
+<p>The most intuitive filter is the chart itself. Let the user click a bar on a top-left chart and watch the rest of the dashboard re-scope to that selection. Cross-filtering replaces chrome with direct manipulation — fewer dropdowns, more discovery.</p>
+</section>
 </section>
 <section id="layout" class="level2">
 <h2 class="anchored" data-anchor-id="layout">Layout</h2>
-<ul>
-<li>Lead with the headline number or chart; supporting detail flows below or behind a filter.</li>
-<li>Interactivity earns its keep: hover for detail, click to highlight, filter to focus. In a dashboard you can show more because the user controls what to look at.</li>
-</ul>
+<section id="reading-order-z-pattern-top-left-first" class="level3">
+<h3 class="anchored" data-anchor-id="reading-order-z-pattern-top-left-first">Reading order: Z-pattern, top-left first</h3>
+<p>Western readers scan dashboards in a rough <strong>Z</strong>: top-left first, eye sweeps across to the top-right, drops down and across again to the bottom-right. The top-left position earns the most attention — put your most important number or chart there.</p>
+</section>
+<section id="drill-down-as-you-move-down-and-right" class="level3">
+<h3 class="anchored" data-anchor-id="drill-down-as-you-move-down-and-right">Drill down as you move down and right</h3>
+<p>Pair the Z-pattern with a progressive zoom. Top-left should be the 30,000-ft view — the headline number or trend. As the eye moves down and to the right, content gets progressively more granular: state → region → district → school. This matches Shneiderman’s mantra for information visualization: <strong>overview first, zoom and filter, details on demand.</strong></p>
+</section>
+<section id="big-aggregate-numbers-bans-at-the-top" class="level3">
+<h3 class="anchored" data-anchor-id="big-aggregate-numbers-bans-at-the-top">Big Aggregate Numbers (BANs) at the top</h3>
+<p>The headline number for the whole dashboard usually deserves to be the very first thing the eye lands on. A row of BANs — single, large numerals with a short label — anchors the dashboard, sets the scale, and gives the rest of the charts a reference point. Use them sparingly (three to five at most) and label the time period clearly.</p>
+<div class="ncdpi-callout tip">
+<p><strong>BAN page coming soon.</strong> BANs are not yet listed as a chart type on this site — a dedicated page is on the roadmap. In the meantime, keep them simple: one big number, one short label, one tiny period of comparison (“↑ 2.1 pts vs.&nbsp;2022”).</p>
+</div>
+</section>
+<section id="interactivity-earns-its-keep" class="level3">
+<h3 class="anchored" data-anchor-id="interactivity-earns-its-keep">Interactivity earns its keep</h3>
+<p>Hover for detail, click to highlight, filter to focus. In a dashboard you can show more than in a static chart because the user controls what to look at — but every interactive feature is one more thing to discover. Make the common path obvious.</p>
 <div class="ncdpi-callout tip">
 <p>Dashboards are where <strong>highlight-one-on-grey</strong> shines: plot every series in grey and let the user click to spotlight the one they care about — no color overload, any number of categories.</p>
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -678,6 +776,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chart-parts/table-elements.html" class="pagination-link" aria-label="Table elements">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Table elements</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

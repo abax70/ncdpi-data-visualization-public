@@ -192,77 +192,7 @@
     "href": "chart-types/index.html",
     "title": "Chart types",
     "section": "",
-    "text": "Charts are organised here by the job they do — the message you want your audience to take away — not by the data type. Not sure which job you have? The Chart Chooser will walk you to a recommendation.\nEvery example below uses real, public NCDPI school data and the NCDPI brand palette.",
-    "crumbs": [
-      "Chart types"
-    ]
-  },
-  {
-    "objectID": "chart-types/index.html#compare-and-rank",
-    "href": "chart-types/index.html#compare-and-rank",
-    "title": "Chart types",
-    "section": "Compare and rank",
-    "text": "Compare and rank\nHow do groups differ, and who is on top? → Bar charts, dots, lollipops, dumbbells",
-    "crumbs": [
-      "Chart types"
-    ]
-  },
-  {
-    "objectID": "chart-types/index.html#change-over-time",
-    "href": "chart-types/index.html#change-over-time",
-    "title": "Chart types",
-    "section": "Change over time",
-    "text": "Change over time\nWhat is the trend? → Lines, small multiples, slope charts",
-    "crumbs": [
-      "Chart types"
-    ]
-  },
-  {
-    "objectID": "chart-types/index.html#parts-of-a-whole",
-    "href": "chart-types/index.html#parts-of-a-whole",
-    "title": "Chart types",
-    "section": "Parts of a whole",
-    "text": "Parts of a whole\nWhat share does each piece make up? → Pie, stacked bar, waffle",
-    "crumbs": [
-      "Chart types"
-    ]
-  },
-  {
-    "objectID": "chart-types/index.html#distribution",
-    "href": "chart-types/index.html#distribution",
-    "title": "Chart types",
-    "section": "Distribution",
-    "text": "Distribution\nHow are values spread out? → Histogram, box plot",
-    "crumbs": [
-      "Chart types"
-    ]
-  },
-  {
-    "objectID": "chart-types/index.html#relationships",
-    "href": "chart-types/index.html#relationships",
-    "title": "Chart types",
-    "section": "Relationships",
-    "text": "Relationships\nDo two things move together? → Scatter, bubble",
-    "crumbs": [
-      "Chart types"
-    ]
-  },
-  {
-    "objectID": "chart-types/index.html#difference-from-a-baseline",
-    "href": "chart-types/index.html#difference-from-a-baseline",
-    "title": "Chart types",
-    "section": "Difference from a baseline",
-    "text": "Difference from a baseline\nAbove/below target, or the gap between groups? → Diverging bars, dumbbells, Likert",
-    "crumbs": [
-      "Chart types"
-    ]
-  },
-  {
-    "objectID": "chart-types/index.html#geographic-patterns",
-    "href": "chart-types/index.html#geographic-patterns",
-    "title": "Chart types",
-    "section": "Geographic patterns",
-    "text": "Geographic patterns\nWhere is it higher or lower? → Maps",
+    "text": "Charts are organised here by the job they do — the message you want your audience to take away — not by the data type. Not sure which job you have? The Chart Chooser will walk you to a recommendation.\nEvery example uses real, public NCDPI school data and the NCDPI brand palette.\n\n\n  \n    \n      \n        \n        \n        \n      \n    \n    Compare and rank\n    Bar charts, dots, lollipops, dumbbells\n  \n\n  \n    \n      \n        \n        \n          \n          \n          \n          \n          \n          \n        \n      \n    \n    Change over time\n    Lines, small multiples, slope charts\n  \n\n  \n    \n      \n        \n        \n        \n      \n    \n    Parts of a whole\n    Pie, stacked bar, waffle\n  \n\n  \n    \n      \n        \n        \n        \n        \n        \n        \n        \n      \n    \n    Distribution\n    Histogram, box plot\n  \n\n  \n    \n      \n        \n          \n          \n          \n          \n          \n          \n          \n          \n        \n      \n    \n    Relationships\n    Scatter, bubble\n  \n\n  \n    \n      \n        \n        \n        \n        \n        \n      \n    \n    Difference from a baseline\n    Diverging bars, dumbbells, Likert\n  \n\n  \n    \n      \n        \n        \n        \n        \n      \n    \n    Geographic patterns\n    Choropleth, point, hex maps\n  \n\n  \n    \n      \n        92%\n      \n    \n    Headline numberComing soon\n    BAN (Big Aggregate Number), KPI tile",
     "crumbs": [
       "Chart types"
     ]
@@ -338,28 +268,50 @@
     "href": "chart-parts/dashboard-elements.html",
     "title": "Dashboard elements",
     "section": "",
-    "text": "A dashboard is a set of charts that share context. The chrome around them should be calm and predictable so the data stands out."
+    "text": "A dashboard is a set of charts that share context. The chrome around them should be calm and predictable so the data stands out.",
+    "crumbs": [
+      "Dashboard elements"
+    ]
+  },
+  {
+    "objectID": "chart-parts/dashboard-elements.html#anatomy-of-an-ncdpi-dashboard",
+    "href": "chart-parts/dashboard-elements.html#anatomy-of-an-ncdpi-dashboard",
+    "title": "Dashboard elements",
+    "section": "Anatomy of an NCDPI dashboard",
+    "text": "Anatomy of an NCDPI dashboard\n\n\n\nAnatomy of an NCDPI dashboard — title and subtitle, BAN row, supporting charts, filter rail, and footer chrome.",
+    "crumbs": [
+      "Dashboard elements"
+    ]
   },
   {
     "objectID": "chart-parts/dashboard-elements.html#titles-and-text",
     "href": "chart-parts/dashboard-elements.html#titles-and-text",
     "title": "Dashboard elements",
     "section": "Titles and text",
-    "text": "Titles and text\n\nDashboard title: DPI Blue, 26 pt. Subtitle: dark grey, 16 pt.\nHelp text (how to use a filter): aqua/teal, small, set apart from the data.\nBody text is black or DPI Blue — never color-coded for emphasis."
+    "text": "Titles and text\n\nDashboard title: DPI Blue, 26 pt. Subtitle: dark grey, 16 pt.\nHelp text (how to read a chart, how to use a filter): Plum #842175, 11 pt — the same treatment as chart annotations. Help text and annotations are both meta-overlays on data, so they share a color so users learn the convention once.\nBody text is black or DPI Blue — never color-coded for emphasis.\n\n\nCommon dashboard chrome\nEvery NCDPI dashboard should carry, somewhere visible (usually the footer):\n\nData last updated — a date, plus the refresh cadence if known (“Updated 2025-09-15, monthly”).\nContact — a name or shared inbox for questions and corrections.\nNCDPI logo — small, top-left or footer, so attribution is unambiguous.\nGlossary or help link — for any term a non-expert reader might stumble on.\n\nThese four items add almost no visual weight but answer the questions every new viewer has within thirty seconds.",
+    "crumbs": [
+      "Dashboard elements"
+    ]
   },
   {
     "objectID": "chart-parts/dashboard-elements.html#controls-and-filters",
     "href": "chart-parts/dashboard-elements.html#controls-and-filters",
     "title": "Dashboard elements",
     "section": "Controls and filters",
-    "text": "Controls and filters\n\nGroup filters together in a consistent place (top or left) so users learn where to look once.\nLabel the selected state clearly (darker) versus unselected (grey).\nDefault to the most useful view, not an empty one — don’t make users configure the dashboard before it says anything."
+    "text": "Controls and filters\n\nGroup filters together in a consistent place (top or right rail) so users learn where to look once.\nLabel the selected state clearly (darker) versus unselected (grey).\nDefault to the most useful view, not an empty one — don’t make users configure the dashboard before it says anything.\n\n\nKeep the filter count low\nEvery filter is one more decision the user has to make before the dashboard answers anything (Hick’s Law — choice time grows with the number of options). Aim for the minimum set of filters that lets users answer the question the dashboard is built for. If you can’t answer “what does this filter unlock?” in one sentence, the filter probably shouldn’t be there.\n\n\nWhen you can’t trim, use progressive disclosure\nSometimes a stakeholder mandates more filters than really fit. In that case, don’t put them all on the page at once — hide secondary filters behind a collapsible panel (Tableau: dynamic zone visibility) or a “More filters” toggle. Show the two or three most-used filters by default and let the user reveal the rest if they need them.\n\n\nPrefer cross-filtering over filter controls\nThe most intuitive filter is the chart itself. Let the user click a bar on a top-left chart and watch the rest of the dashboard re-scope to that selection. Cross-filtering replaces chrome with direct manipulation — fewer dropdowns, more discovery.",
+    "crumbs": [
+      "Dashboard elements"
+    ]
   },
   {
     "objectID": "chart-parts/dashboard-elements.html#layout",
     "href": "chart-parts/dashboard-elements.html#layout",
     "title": "Dashboard elements",
     "section": "Layout",
-    "text": "Layout\n\nLead with the headline number or chart; supporting detail flows below or behind a filter.\nInteractivity earns its keep: hover for detail, click to highlight, filter to focus. In a dashboard you can show more because the user controls what to look at.\n\n\nDashboards are where highlight-one-on-grey shines: plot every series in grey and let the user click to spotlight the one they care about — no color overload, any number of categories."
+    "text": "Layout\n\nReading order: Z-pattern, top-left first\nWestern readers scan dashboards in a rough Z: top-left first, eye sweeps across to the top-right, drops down and across again to the bottom-right. The top-left position earns the most attention — put your most important number or chart there.\n\n\nDrill down as you move down and right\nPair the Z-pattern with a progressive zoom. Top-left should be the 30,000-ft view — the headline number or trend. As the eye moves down and to the right, content gets progressively more granular: state → region → district → school. This matches Shneiderman’s mantra for information visualization: overview first, zoom and filter, details on demand.\n\n\nBig Aggregate Numbers (BANs) at the top\nThe headline number for the whole dashboard usually deserves to be the very first thing the eye lands on. A row of BANs — single, large numerals with a short label — anchors the dashboard, sets the scale, and gives the rest of the charts a reference point. Use them sparingly (three to five at most) and label the time period clearly.\n\nBAN page coming soon. BANs are not yet listed as a chart type on this site — a dedicated page is on the roadmap. In the meantime, keep them simple: one big number, one short label, one tiny period of comparison (“↑ 2.1 pts vs. 2022”).\n\n\n\nInteractivity earns its keep\nHover for detail, click to highlight, filter to focus. In a dashboard you can show more than in a static chart because the user controls what to look at — but every interactive feature is one more thing to discover. Make the common path obvious.\n\nDashboards are where highlight-one-on-grey shines: plot every series in grey and let the user click to spotlight the one they care about — no color overload, any number of categories.",
+    "crumbs": [
+      "Dashboard elements"
+    ]
   },
   {
     "objectID": "chart-chooser.html",
@@ -478,56 +430,120 @@
     "href": "chart-parts/chart-elements.html",
     "title": "Chart elements",
     "section": "",
-    "text": "The non-data parts of a chart should recede so the data can speak. NCDPI defaults keep them quiet and consistent."
+    "text": "The non-data parts of a chart should recede so the data can speak. NCDPI defaults keep them quiet and consistent.",
+    "crumbs": [
+      "Chart elements"
+    ]
+  },
+  {
+    "objectID": "chart-parts/chart-elements.html#anatomy-of-an-ncdpi-chart",
+    "href": "chart-parts/chart-elements.html#anatomy-of-an-ncdpi-chart",
+    "title": "Chart elements",
+    "section": "Anatomy of an NCDPI chart",
+    "text": "Anatomy of an NCDPI chart\nEvery piece of the chart below is set by the brand spec — fonts, sizes, colors, and spacing — so a reader who has seen one NCDPI chart already knows how to read the next one.\n\n\n\nAnatomy of an NCDPI chart — labeled callouts for title, subtitle, axis labels, axis values, data marks, annotation, gridlines, and source note.",
+    "crumbs": [
+      "Chart elements"
+    ]
   },
   {
     "objectID": "chart-parts/chart-elements.html#gridlines-axes-and-rulers",
     "href": "chart-parts/chart-elements.html#gridlines-axes-and-rulers",
     "title": "Chart elements",
     "section": "Gridlines, axes, and rulers",
-    "text": "Gridlines, axes, and rulers\n\nGridlines are light grey #DEDEDE — present enough to support reading a value, faint enough to disappear behind the data.\nAxis rulers and dividers use the same light grey. Drop the top and right spines entirely.\nReference lines (a target, the state average) are DPI Blue #003A70 so they read as deliberate, not as data."
+    "text": "Gridlines, axes, and rulers\n\nGridlines are light grey #DEDEDE — present enough to support reading a value, faint enough to disappear behind the data.\nAxis rulers and dividers use the same light grey. Drop the top and right spines entirely.\nReference lines (a target, the state average) are DPI Blue #003A70 so they read as deliberate, not as data.",
+    "crumbs": [
+      "Chart elements"
+    ]
   },
   {
     "objectID": "chart-parts/chart-elements.html#the-zero-baseline-rule",
     "href": "chart-parts/chart-elements.html#the-zero-baseline-rule",
     "title": "Chart elements",
     "section": "The zero-baseline rule",
-    "text": "The zero-baseline rule\nBars and areas encode value by length or area, so they must start at zero. Truncating the axis exaggerates differences and is the single most common way a chart misleads. Lines and dot plots may use a non-zero baseline — but say so if you do."
+    "text": "The zero-baseline rule\nBars and areas encode value by length or area, so they must start at zero. Truncating the axis exaggerates differences and is the single most common way a chart misleads. Lines and dot plots may use a non-zero baseline — but say so if you do.",
+    "crumbs": [
+      "Chart elements"
+    ]
   },
   {
     "objectID": "chart-parts/chart-elements.html#labels-over-legends",
     "href": "chart-parts/chart-elements.html#labels-over-legends",
     "title": "Chart elements",
     "section": "Labels over legends",
-    "text": "Labels over legends\nWhen there are seven or fewer items, label them directly rather than making the reader bounce between a legend and the data. Reserve legends for when direct labels would collide.\n\nDeclutter, don’t decorate. Every gridline, tick, and label should earn its place. If removing it doesn’t cost the reader anything, remove it."
+    "text": "Labels over legends\nWhen there are seven or fewer items, label them directly rather than making the reader bounce between a legend and the data. Reserve legends for when direct labels would collide.\n\nDeclutter, don’t decorate. Every gridline, tick, and label should earn its place. If removing it doesn’t cost the reader anything, remove it.",
+    "crumbs": [
+      "Chart elements"
+    ]
   },
   {
     "objectID": "chart-parts/table-elements.html",
     "href": "chart-parts/table-elements.html",
     "title": "Table elements",
     "section": "",
-    "text": "Sometimes a table is the right answer — when readers need to look up exact values. Make it scannable."
+    "text": "Sometimes a table is the right answer — when readers need to look up exact values. Make it scannable.",
+    "crumbs": [
+      "Table elements"
+    ]
+  },
+  {
+    "objectID": "chart-parts/table-elements.html#example",
+    "href": "chart-parts/table-elements.html#example",
+    "title": "Table elements",
+    "section": "Example",
+    "text": "Example\n\nSchools by urbanicity, North Carolina, 2023\n\n\nUrbanicity\nSchools\nStudent pop.\n% of NC student pop.\n\n\n\n\nCity\n612\n472,300\n31.4%\n\n\nSuburb\n498\n418,900\n27.8%\n\n\nTown\n331\n186,200\n12.4%\n\n\nRural\n1,074\n427,500\n28.4%\n\n\n\nTotal\n2,515\n1,504,900\n100.0%\n\n\n\n\n\nSource: NCDPI school directory, 2023–24. Counts exclude charters with statewide enrollment.",
+    "crumbs": [
+      "Table elements"
+    ]
   },
   {
     "objectID": "chart-parts/table-elements.html#header-and-banding",
     "href": "chart-parts/table-elements.html#header-and-banding",
     "title": "Table elements",
     "section": "Header and banding",
-    "text": "Header and banding\n\nHeader row: white text on DPI Blue #003A70 for a short, strong label row.\nRow banding / callout backgrounds: 10% DPI Blue #E6EDF6 — enough to guide the eye across a row without shouting.\nDividers: light grey #DEDEDE."
+    "text": "Header and banding\n\nHeader row: white text on DPI Blue #003A70 for a short, strong label row.\nRow banding / callout backgrounds: 10% DPI Blue #E6EDF6 — enough to guide the eye across a row without shouting.\nDividers: light grey #DEDEDE.",
+    "crumbs": [
+      "Table elements"
+    ]
   },
   {
     "objectID": "chart-parts/table-elements.html#alignment",
     "href": "chart-parts/table-elements.html#alignment",
     "title": "Table elements",
     "section": "Alignment",
-    "text": "Alignment\n\nNumbers align right and share decimal places, so magnitudes line up visually.\nText aligns left.\nHeaders match the alignment of the column beneath them."
+    "text": "Alignment\n\nNumbers align right and share decimal places, so magnitudes line up visually.\nText aligns left.\nHeaders match the alignment of the column beneath them.",
+    "crumbs": [
+      "Table elements"
+    ]
   },
   {
     "objectID": "chart-parts/table-elements.html#make-tables-do-more",
     "href": "chart-parts/table-elements.html#make-tables-do-more",
     "title": "Table elements",
     "section": "Make tables do more",
-    "text": "Make tables do more\n\nSort by the column that matters, not alphabetically by default.\nAdd an embedded sparkline column to show a trend per row without a separate chart.\nLightly shade or mark the values that carry the message — don’t make readers hunt.\n\n\nA table answers “what is the exact value?”; a chart answers “what is the pattern?” If your reader needs both, give them a chart with a small lookup table beside it."
+    "text": "Make tables do more\n\nSort by the column that matters, not alphabetically by default.\nAdd an embedded sparkline column to show a trend per row without a separate chart.\nLightly shade or mark the values that carry the message — don’t make readers hunt.",
+    "crumbs": [
+      "Table elements"
+    ]
+  },
+  {
+    "objectID": "chart-parts/table-elements.html#accessibility",
+    "href": "chart-parts/table-elements.html#accessibility",
+    "title": "Table elements",
+    "section": "Accessibility",
+    "text": "Accessibility\nA data table is one of the few places where the markup directly affects whether a screen-reader user can use the table at all.\n\nUse &lt;th scope=\"col\"&gt; on column headers (and scope=\"row\" on the leading cell of each row where it makes sense). WCAG 2.1 SC 1.3.1 Info and Relationships requires that the table’s structure be programmatically conveyable — scope is how you do that.\nGive every table a &lt;caption&gt; or aria-label. The caption answers “what is this table about?” before the screen reader starts reading cells.\nAvoid merged header cells. WCAG doesn’t ban them outright, but screen-reader support for merged cells is uneven, and they make linear navigation confusing. If you truly need a merged header (a complex multi-level table), mark it up with explicit headers / id attributes so each data cell points to the headers that govern it.\nDon’t use a table for layout. If the goal is page layout, use CSS — not &lt;table&gt;.\n\n\nA simple, well-marked-up table beats a clever, complex one every time. If you find yourself reaching for merged cells, ask whether two simple tables would tell the same story better.",
+    "crumbs": [
+      "Table elements"
+    ]
+  },
+  {
+    "objectID": "chart-parts/table-elements.html#pair-charts-with-an-accessible-table",
+    "href": "chart-parts/table-elements.html#pair-charts-with-an-accessible-table",
+    "title": "Table elements",
+    "section": "Pair charts with an accessible table",
+    "text": "Pair charts with an accessible table\nEven a perfect chart leaves screen-reader users out of the conversation. For any complex chart in a dashboard or slide deck, give them a way to reach the underlying numbers.\n\nIn Tableau: add a “View data” button that toggles a hidden cross-tab via dynamic zone visibility. Default-hidden so it doesn’t crowd the visual; one click for users who need it.\nIn PowerPoint: put the chart on one slide and add a “Data table” hyperlink to a companion slide that holds the corresponding cross-tab.\nIn a web report: offer a “Show table” toggle beneath the chart, or link to a downloadable CSV.\n\n\nA table answers “what is the exact value?”; a chart answers “what is the pattern?” If your reader needs both — or if accessibility requires both — give them both.",
+    "crumbs": [
+      "Table elements"
+    ]
   },
   {
     "objectID": "chart-types/correlation.html",

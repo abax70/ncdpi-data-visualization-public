@@ -30,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../chart-parts/dashboard-elements.html" rel="next">
+<link href="../chart-parts/chart-elements.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -38,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-803887ab843b8a10f698c44fb6dc164f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-e143f83b886da3aa36d54f186b385eab.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,7 +72,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -171,19 +173,57 @@ ul.task-list li input[type="checkbox"] {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chart-parts/table-elements.html">Table elements</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chart-parts/chart-elements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chart elements</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chart-parts/table-elements.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Table elements</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chart-parts/dashboard-elements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dashboard elements</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#header-and-banding" id="toc-header-and-banding" class="nav-link active" data-scroll-target="#header-and-banding">Header and banding</a></li>
+  <li><a href="#example" id="toc-example" class="nav-link active" data-scroll-target="#example">Example</a></li>
+  <li><a href="#header-and-banding" id="toc-header-and-banding" class="nav-link" data-scroll-target="#header-and-banding">Header and banding</a></li>
   <li><a href="#alignment" id="toc-alignment" class="nav-link" data-scroll-target="#alignment">Alignment</a></li>
   <li><a href="#make-tables-do-more" id="toc-make-tables-do-more" class="nav-link" data-scroll-target="#make-tables-do-more">Make tables do more</a></li>
+  <li><a href="#accessibility" id="toc-accessibility" class="nav-link" data-scroll-target="#accessibility">Accessibility</a></li>
+  <li><a href="#pair-charts-with-an-accessible-table" id="toc-pair-charts-with-an-accessible-table" class="nav-link" data-scroll-target="#pair-charts-with-an-accessible-table">Pair charts with an accessible table</a></li>
   </ul>
 </nav>
     </div>
@@ -210,6 +250,56 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>Sometimes a table <em>is</em> the right answer — when readers need to look up exact values. Make it scannable.</p>
+<section id="example" class="level2">
+<h2 class="anchored" data-anchor-id="example">Example</h2>
+<table class="ncdpi-table caption-top table" data-quarto-postprocess="true" aria-describedby="ncdpi-table-caption">
+<caption>Schools by urbanicity, North Carolina, 2023</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">Urbanicity</th>
+<th class="num" data-quarto-table-cell-role="th" scope="col">Schools</th>
+<th class="num" data-quarto-table-cell-role="th" scope="col">Student pop.</th>
+<th class="num" data-quarto-table-cell-role="th" scope="col">% of NC student pop.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">City</td>
+<td class="num">612</td>
+<td class="num">472,300</td>
+<td class="num">31.4%</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" scope="row">Suburb</td>
+<td class="num">498</td>
+<td class="num">418,900</td>
+<td class="num">27.8%</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">Town</td>
+<td class="num">331</td>
+<td class="num">186,200</td>
+<td class="num">12.4%</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" scope="row">Rural</td>
+<td class="num">1,074</td>
+<td class="num">427,500</td>
+<td class="num">28.4%</td>
+</tr>
+</tbody><tfoot>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">Total</td>
+<td class="num">2,515</td>
+<td class="num">1,504,900</td>
+<td class="num">100.0%</td>
+</tr>
+</tfoot>
+
+</table>
+
+<p class="ncdpi-table-note">Source: NCDPI school directory, 2023–24. Counts exclude charters with statewide enrollment.</p>
+</section>
 <section id="header-and-banding" class="level2">
 <h2 class="anchored" data-anchor-id="header-and-banding">Header and banding</h2>
 <ul>
@@ -233,8 +323,30 @@ ul.task-list li input[type="checkbox"] {
 <li>Add an embedded <strong>sparkline</strong> column to show a trend per row without a separate chart.</li>
 <li>Lightly shade or mark the values that carry the message — don’t make readers hunt.</li>
 </ul>
+</section>
+<section id="accessibility" class="level2">
+<h2 class="anchored" data-anchor-id="accessibility">Accessibility</h2>
+<p>A data table is one of the few places where the <em>markup</em> directly affects whether a screen-reader user can use the table at all.</p>
+<ul>
+<li><strong>Use <code>&lt;th scope="col"&gt;</code> on column headers</strong> (and <code>scope="row"</code> on the leading cell of each row where it makes sense). WCAG 2.1 SC 1.3.1 <em>Info and Relationships</em> requires that the table’s structure be programmatically conveyable — <code>scope</code> is how you do that.</li>
+<li><strong>Give every table a <code>&lt;caption&gt;</code> or <code>aria-label</code>.</strong> The caption answers “what is this table about?” before the screen reader starts reading cells.</li>
+<li><strong>Avoid merged header cells.</strong> WCAG doesn’t ban them outright, but screen-reader support for merged cells is uneven, and they make linear navigation confusing. If you truly need a merged header (a complex multi-level table), mark it up with explicit <code>headers</code> / <code>id</code> attributes so each data cell points to the headers that govern it.</li>
+<li><strong>Don’t use a table for layout.</strong> If the goal is page layout, use CSS — not <code>&lt;table&gt;</code>.</li>
+</ul>
+<div class="ncdpi-callout tip">
+<p>A simple, well-marked-up table beats a clever, complex one every time. If you find yourself reaching for merged cells, ask whether two simple tables would tell the same story better.</p>
+</div>
+</section>
+<section id="pair-charts-with-an-accessible-table" class="level2">
+<h2 class="anchored" data-anchor-id="pair-charts-with-an-accessible-table">Pair charts with an accessible table</h2>
+<p>Even a perfect chart leaves screen-reader users out of the conversation. For any complex chart in a dashboard or slide deck, give them a way to reach the underlying numbers.</p>
+<ul>
+<li><strong>In Tableau:</strong> add a “View data” button that toggles a hidden cross-tab via <em>dynamic zone visibility</em>. Default-hidden so it doesn’t crowd the visual; one click for users who need it.</li>
+<li><strong>In PowerPoint:</strong> put the chart on one slide and add a “Data table” hyperlink to a companion slide that holds the corresponding cross-tab.</li>
+<li><strong>In a web report:</strong> offer a “Show table” toggle beneath the chart, or link to a downloadable CSV.</li>
+</ul>
 <div class="ncdpi-callout">
-<p>A table answers “what is the exact value?”; a chart answers “what is the pattern?” If your reader needs both, give them a chart with a small lookup table beside it.</p>
+<p>A table answers “what is the exact value?”; a chart answers “what is the pattern?” If your reader needs both — or if accessibility requires both — give them both.</p>
 </div>
 
 
@@ -679,6 +791,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chart-parts/chart-elements.html" class="pagination-link" aria-label="Chart elements">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Chart elements</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chart-parts/dashboard-elements.html" class="pagination-link" aria-label="Dashboard elements">
+        <span class="nav-page-text">Dashboard elements</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

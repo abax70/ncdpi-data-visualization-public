@@ -1,0 +1,41 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Grouped bar chart comparing two percentages for each of the eight SBE regions in 2025 — 4-year graduation rate (blue) and test proficiency (orange). Graduation rates run in the high 80s to low 90s while proficiency runs from the high 40s to high 50s; Western has the top graduation rate at 91.6 percent.",
+  "title": {
+    "text": "Graduation rate vs. test proficiency by region, 2025",
+    "subtitle": "Two measures per region, bars side by side. Both are percentages, but neither is 'good' vs 'bad' — so the colors are categorical, not valenced."
+  },
+  "data": { "url": "data/region_snapshot_2025.csv" },
+  "transform": [
+    { "fold": ["grad_rate", "proficiency_glp"], "as": ["measure", "value"] },
+    { "calculate": "datum.measure === 'grad_rate' ? '4-year graduation rate' : 'Test proficiency (GLP)'", "as": "measure_label" }
+  ],
+  "height": { "step": 22 },
+  "layer": [
+    {
+      "mark": { "type": "bar" },
+      "encoding": {
+        "y": { "field": "region", "type": "nominal", "title": null,
+          "sort": ["Northwest", "Western", "Southwest", "Piedmont Triad", "North Central", "Sandhills", "Southeast", "Northeast"] },
+        "yOffset": { "field": "measure_label" },
+        "x": { "field": "value", "type": "quantitative", "title": "Percent", "scale": { "domain": [0, 100] } },
+        "color": {
+          "field": "measure_label", "type": "nominal", "title": null,
+          "scale": { "domain": ["4-year graduation rate", "Test proficiency (GLP)"], "range": ["#5085BC", "#FF9015"] },
+          "legend": { "orient": "bottom" }
+        },
+        "tooltip": [
+          { "field": "region", "title": "Region" },
+          { "field": "measure_label", "title": "Measure" },
+          { "field": "value", "title": "Percent", "format": ".1f" }
+        ]
+      }
+    },
+    {
+      "data": { "values": [ {} ] },
+      "mark": { "type": "rule", "color": "#525A60" },
+      "encoding": { "x": { "datum": 0 } }
+    }
+  ],
+  "usermeta": { "source": "Source: NCDPI public accountability data (4-year cohort graduation rate; GLP test proficiency), 2025. Style-guide demo." }
+}

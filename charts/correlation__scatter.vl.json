@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Scatter plot of about 2,280 North Carolina schools in 2023, plotting percent economically disadvantaged against SPG score, with an orange regression line. The trend slopes downward — higher-poverty schools tend to have lower scores.",
   "title": {
     "text": "School poverty vs. performance, 2023",
     "subtitle": "Each dot is a school. Position on two scales is the most accurate way to show a relationship."
@@ -14,5 +15,6 @@
     { "mark": { "type": "point", "filled": true, "size": 32, "opacity": 0.35, "color": "#003A70" },
       "encoding": { "tooltip": [ { "field": "school", "title": "School" }, { "field": "pct_eds", "title": "% EDS" }, { "field": "spg_score", "title": "SPG" } ] } },
     { "mark": { "type": "line", "color": "#FF9015", "strokeWidth": 3 }, "transform": [ { "regression": "spg_score", "on": "pct_eds" } ] }
-  ]
+  ],
+  "usermeta": { "source": "Source: NCDPI sample school data, SY2019–2023. Style-guide demo." }
 }

@@ -164,7 +164,7 @@ export const NCDPI = {
     "worst": "#B33A12"
   },
   "elements": {
-    "axisRuler": "#DEDEDE",
+    "axisRuler": "#525A60",
     "divider": "#DEDEDE",
     "gridline": "#DEDEDE",
     "referenceLine": "#003A70"

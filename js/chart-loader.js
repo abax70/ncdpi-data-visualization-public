@@ -52,7 +52,20 @@
         if (spec.width == null && spec.autosize == null && !spec.facet && !spec.repeat) {
           spec.width = "container";
         }
-        return vegaEmbed(el, spec, { actions: false, renderer: "svg" });
+        return vegaEmbed(el, spec, { actions: false, renderer: "svg" }).then(function (result) {
+          // Convention 7: render the spec's source note (usermeta.source) as a
+          // caption below the chart. Inserted only after a successful embed, and
+          // only once (guards against chooser/gallery re-renders).
+          var src = spec.usermeta && spec.usermeta.source;
+          var sib = el.nextElementSibling;
+          if (src && !(sib && sib.classList && sib.classList.contains("ncdpi-chart-source"))) {
+            var note = document.createElement("p");
+            note.className = "ncdpi-chart-source";
+            note.textContent = src;
+            el.insertAdjacentElement("afterend", note);
+          }
+          return result;
+        });
       })
       .catch(function (err) {
         el.innerHTML =

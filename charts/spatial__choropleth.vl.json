@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Choropleth map of North Carolina school districts shaded by 2023 chronic absenteeism rate, from light grey (lower) to rust (higher), with white district boundaries. Nine districts with no value in the sample appear in pale grey.",
   "title": {
     "text": "Chronic absenteeism by district, 2023",
     "subtitle": "Choropleths shade an area by a rate. Color is imprecise -- always read this alongside a sorted bar. Nine districts have no value in this sample (shown in pale gray)."
@@ -35,5 +36,6 @@
       { "field": "chronic_absent_pct", "title": "Chronic absent %", "format": ".1f" },
       { "field": "school_count", "title": "Schools" }
     ]
-  }
+  },
+  "usermeta": { "source": "Source: NCDPI sample school data, SY2019–2023; boundaries: NC school-district TopoJSON. Style-guide demo." }
 }

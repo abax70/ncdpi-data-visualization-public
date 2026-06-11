@@ -213,6 +213,11 @@
       html += "<p>" + esc(c.why) + "</p>";
       if (c.spec) {
         html += '<div class="ncdpi-vega" data-spec="' + esc(c.spec) + '"></div>';
+      } else if (c.image) {
+        // static image fallback for types Vega-Lite can't render (e.g. treemap);
+        // built by the chart-creator skill, alt text ships in the taxonomy entry
+        html += '<img class="cc-example-img" src="' + relink(c.image) + '" alt="'
+          + esc(c.imageAlt || ("Example " + c.name)) + '" style="max-width:100%;height:auto;">';
       } else {
         html += '<p class="cc-noexample">A worked NCDPI example is coming for this chart — see the guidance below.</p>';
       }

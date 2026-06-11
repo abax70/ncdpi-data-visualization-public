@@ -1,0 +1,50 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Bullet chart of each SBE region's 2025 4-year graduation rate (navy bar) against the state rate of 87.8 percent (dark tick) on a grey 0–100 range, sorted highest to lowest. Western leads at 91.6 percent and Sandhills trails at 86.1.",
+  "title": {
+    "text": "Regional graduation rates vs. the state rate, 2025",
+    "subtitle": "A bullet per region: grey range to 100, navy bar for the actual value, dark tick at the state rate (87.8) — a compact actual-vs-benchmark gauge."
+  },
+  "data": { "url": "data/region_snapshot_2025.csv", "format": { "type": "csv", "parse": { "grad_rate": "number" } } },
+  "transform": [
+    { "calculate": "'grad_rate'", "as": "measure" },
+    { "lookup": "measure", "from": { "data": { "url": "data/state_reference_2025.csv" }, "key": "measure", "fields": ["value"] } },
+    { "calculate": "100", "as": "range_hi" }
+  ],
+  "height": { "step": 38 },
+  "encoding": {
+    "y": { "field": "region", "type": "nominal", "title": null,
+      "sort": { "field": "grad_rate", "op": "max", "order": "descending" } }
+  },
+  "layer": [
+    {
+      "mark": { "type": "bar", "size": 24, "color": "#DEDEDE" },
+      "encoding": {
+        "x": { "field": "range_hi", "type": "quantitative", "title": "4-year graduation rate", "scale": { "domain": [0, 100] } }
+      }
+    },
+    {
+      "mark": { "type": "bar", "size": 9, "color": "#003A70" },
+      "encoding": {
+        "x": { "field": "grad_rate", "type": "quantitative" },
+        "tooltip": [
+          { "field": "region", "title": "Region" },
+          { "field": "grad_rate", "title": "Grad rate", "format": ".1f" },
+          { "field": "value", "title": "State rate", "format": ".1f" }
+        ]
+      }
+    },
+    {
+      "data": { "values": [ {} ] },
+      "mark": { "type": "rule", "color": "#525A60" },
+      "encoding": { "x": { "datum": 0 }, "y": null }
+    },
+    {
+      "mark": { "type": "tick", "color": "#525A60", "thickness": 2, "size": 24 },
+      "encoding": {
+        "x": { "field": "value", "type": "quantitative" }
+      }
+    }
+  ],
+  "usermeta": { "source": "Source: NCDPI public accountability data (4-year cohort graduation rate), 2025. Style-guide demo." }
+}

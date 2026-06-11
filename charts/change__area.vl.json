@@ -1,0 +1,35 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Stacked area chart of North Carolina's graduation cohort from 2016 to 2025, split into students who graduated in four years (teal, on the baseline) and those who did not (muted rust, on top). Graduates grew from about 97,700 to 111,500 while non-completers held near 15,000–16,000.",
+  "title": {
+    "text": "NC graduation cohort by outcome, 2016–2025",
+    "subtitle": "Students entering 9th grade four years earlier. Area encodes a real quantity — total height is the cohort; the bands are its composition."
+  },
+  "data": {
+    "url": "data/state_cohort_outcomes_trend.csv",
+    "format": { "type": "csv", "parse": { "students": "number", "year": "number" } }
+  },
+  "transform": [
+    { "calculate": "indexof(['Graduated in 4 years', 'Did not graduate in 4 years'], datum.outcome)", "as": "outcome_order" }
+  ],
+  "height": 300,
+  "mark": { "type": "area", "stroke": "white", "strokeWidth": 1, "line": false },
+  "encoding": {
+    "x": { "field": "year", "type": "quantitative", "title": null,
+      "axis": { "format": "d", "values": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025] },
+      "scale": { "domain": [2016, 2025] } },
+    "y": { "field": "students", "type": "quantitative", "title": null, "stack": "zero", "axis": { "format": "~s" } },
+    "color": {
+      "field": "outcome", "type": "nominal", "title": null,
+      "scale": { "domain": ["Graduated in 4 years", "Did not graduate in 4 years"], "range": ["#077890", "#C88C78"] },
+      "legend": { "orient": "bottom" }
+    },
+    "order": { "field": "outcome_order", "type": "ordinal" },
+    "tooltip": [
+      { "field": "year", "title": "Year" },
+      { "field": "outcome", "title": "Outcome" },
+      { "field": "students", "title": "Students", "format": "," }
+    ]
+  },
+  "usermeta": { "source": "Source: NCDPI public accountability data (4-year cohort outcomes), 2016–2025. Style-guide demo." }
+}

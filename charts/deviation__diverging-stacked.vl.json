@@ -1,12 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "100% stacked bar chart of synthetic Likert survey responses by question, colored on a diverging scale from Strongly disagree (rust) through Neutral (grey) to Strongly agree (teal), with white separators between segments.",
   "title": {
     "text": "Survey responses by question (SYNTHETIC demo data)",
     "subtitle": "Likert data suits a diverging stacked bar: a diverging palette runs from disagree (rust) through neutral (grey) to agree (teal)."
   },
   "data": { "url": "data/survey_demo.csv" },
   "height": 200,
-  "mark": { "type": "bar" },
+  "mark": { "type": "bar", "stroke": "white", "strokeWidth": 1 },
   "encoding": {
     "y": { "field": "question", "type": "nominal", "title": null },
     "x": { "field": "pct", "type": "quantitative", "title": "Percent of responses", "stack": "normalize", "axis": { "format": "%" } },
@@ -21,5 +22,6 @@
     },
     "order": { "field": "order", "type": "ordinal" },
     "tooltip": [ { "field": "question" }, { "field": "response" }, { "field": "pct", "title": "%" } ]
-  }
+  },
+  "usermeta": { "source": "Source: Synthetic demonstration data — not real NCDPI survey results." }
 }

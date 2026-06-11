@@ -20,8 +20,8 @@
     "titleFontSize": 11,
     "titleFontWeight": "normal",
     "gridColor": "#DEDEDE",
-    "domainColor": "#DEDEDE",
-    "tickColor": "#DEDEDE",
+    "domainColor": "#525A60",
+    "tickColor": "#525A60",
     "labelPadding": 4
   },
   "axisX": {
@@ -30,6 +30,9 @@
   "axisY": {
     "grid": true,
     "domain": false,
+    "ticks": false
+  },
+  "axisQuantitative": {
     "ticks": false
   },
   "legend": {
@@ -44,6 +47,9 @@
     "stroke": null,
     "continuousWidth": 480,
     "continuousHeight": 320
+  },
+  "scale": {
+    "barBandPaddingInner": 0.3
   },
   "mark": {
     "color": "#003A70"

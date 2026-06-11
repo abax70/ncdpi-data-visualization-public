@@ -1,0 +1,30 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Violin plot of the 2025 SPG score distribution for each of four locales (City, Suburb, Town, Rural), one density curve per row on a shared 20–100 score axis; curve width shows relative frequency, not a count.",
+  "title": {
+    "text": "SPG score distribution by locale, 2025",
+    "subtitle": "Violins show the full density curve per group — skew and double peaks a box plot would hide. Width is relative frequency, not a count."
+  },
+  "data": { "url": "data/school_scores_2025.csv" },
+  "transform": [
+    { "density": "spg_score", "groupby": ["locale"], "extent": [20, 100] }
+  ],
+  "facet": {
+    "row": {
+      "field": "locale", "title": null,
+      "sort": ["City", "Suburb", "Town", "Rural"],
+      "header": { "labelAngle": 0, "labelAlign": "left", "labelOrient": "left", "labelFontSize": 11, "labelColor": "#525A60" }
+    }
+  },
+  "spacing": 6,
+  "spec": {
+    "width": 460,
+    "height": 56,
+    "mark": { "type": "area", "color": "#077890" },
+    "encoding": {
+      "x": { "field": "value", "type": "quantitative", "title": "SPG score", "scale": { "domain": [20, 100] } },
+      "y": { "field": "density", "type": "quantitative", "stack": "center", "impute": null, "title": null, "axis": null }
+    }
+  },
+  "usermeta": { "source": "Source: NCDPI public accountability data (School Performance Grades), 2025. Style-guide demo." }
+}

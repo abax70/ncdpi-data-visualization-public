@@ -1,19 +1,30 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Horizontal bar chart of average School Performance Grade scores for North Carolina's eight SBE regions in 2023, sorted highest to lowest. Western leads at 65.6 and Sandhills trails at 57.1.",
   "title": {
     "text": "Average School Performance Grade score by region, 2023",
     "subtitle": "Eight SBE regions, one color, sorted by value — position carries the comparison."
   },
-  "data": { "url": "data/schools_region_2023.csv" },
+  "data": { "url": "data/schools_region_2023.csv", "format": { "type": "csv", "parse": { "avg_spg_score": "number" } } },
   "height": 300,
-  "mark": { "type": "bar" },
-  "encoding": {
-    "y": { "field": "region", "type": "nominal", "sort": "-x", "title": null },
-    "x": { "field": "avg_spg_score", "type": "quantitative", "title": "Avg SPG score", "scale": { "domain": [0, 80] } },
-    "tooltip": [
-      { "field": "region", "title": "Region" },
-      { "field": "avg_spg_score", "title": "Avg SPG score" },
-      { "field": "school_count", "title": "Schools" }
-    ]
-  }
+  "layer": [
+    {
+      "mark": { "type": "bar" },
+      "encoding": {
+        "y": { "field": "region", "type": "nominal", "sort": { "field": "avg_spg_score", "op": "max", "order": "descending" }, "title": null },
+        "x": { "field": "avg_spg_score", "type": "quantitative", "title": "Avg SPG score", "scale": { "domain": [0, 80] } },
+        "tooltip": [
+          { "field": "region", "title": "Region" },
+          { "field": "avg_spg_score", "title": "Avg SPG score" },
+          { "field": "school_count", "title": "Schools" }
+        ]
+      }
+    },
+    {
+      "data": { "values": [ {} ] },
+      "mark": { "type": "rule", "color": "#525A60" },
+      "encoding": { "x": { "datum": 0 } }
+    }
+  ],
+  "usermeta": { "source": "Source: NCDPI sample school data, SY2019–2023. Style-guide demo." }
 }

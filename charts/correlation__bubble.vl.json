@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Bubble chart of North Carolina schools in 2023 plotting percent economically disadvantaged against SPG score, with bubble area showing enrollment. Higher-poverty schools tend toward lower scores; enrollment varies widely at every poverty level.",
   "title": {
     "text": "Poverty, performance, and size, 2023",
     "subtitle": "A bubble chart adds a third measure as area — read it as approximate, not precise."
@@ -12,5 +13,6 @@
     "y": { "field": "spg_score", "type": "quantitative", "title": "SPG score", "scale": { "zero": false, "nice": true } },
     "size": { "field": "enrollment", "type": "quantitative", "title": "Enrollment", "scale": { "range": [10, 700] } },
     "tooltip": [ { "field": "school", "title": "School" }, { "field": "enrollment", "title": "Enrollment" }, { "field": "pct_eds", "title": "% EDS" }, { "field": "spg_score", "title": "SPG" } ]
-  }
+  },
+  "usermeta": { "source": "Source: NCDPI sample school data, SY2019–2023. Style-guide demo." }
 }

@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Line chart of average SPG scores from 2019 to 2023 for three regions — Western, Piedmont Triad, and Northeast. The lines break over 2020–21, when no School Performance Grades were issued because of COVID; all three regions sit lower in 2022–23 than in 2019.",
   "title": {
     "text": "Average SPG score over time, selected regions",
     "subtitle": "No School Performance Grades were issued in 2020–21 (COVID). The line breaks at the gap — it is never connected through missing years."
@@ -20,5 +21,6 @@
     "y": { "field": "avg_spg_score", "type": "quantitative", "title": "Avg SPG score", "scale": { "zero": false, "nice": true } },
     "color": { "field": "region", "type": "nominal", "title": "Region", "legend": { "orient": "bottom" } },
     "detail": { "field": "era" }
-  }
+  },
+  "usermeta": { "source": "Source: NCDPI sample school data, SY2019–2023. Style-guide demo." }
 }

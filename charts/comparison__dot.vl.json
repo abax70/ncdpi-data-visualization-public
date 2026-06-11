@@ -1,10 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Dot plot of average School Performance Grade scores for the eight SBE regions in 2023, sorted highest to lowest on an axis that does not start at zero. Western leads at 65.6 and Sandhills trails at 57.1.",
   "title": {
     "text": "Average SPG score by region, 2023",
     "subtitle": "A dot plot reads precisely even when the axis doesn't start at zero."
   },
-  "data": { "url": "data/schools_region_2023.csv" },
+  "data": { "url": "data/schools_region_2023.csv", "format": { "type": "csv", "parse": { "avg_spg_score": "number" } } },
   "height": 300,
   "mark": { "type": "point", "size": 110, "filled": true },
   "encoding": {
@@ -14,5 +15,6 @@
       { "field": "region", "title": "Region" },
       { "field": "avg_spg_score", "title": "Avg SPG score" }
     ]
-  }
+  },
+  "usermeta": { "source": "Source: NCDPI sample school data, SY2019–2023. Style-guide demo." }
 }

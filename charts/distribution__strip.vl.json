@@ -1,0 +1,27 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Jittered strip plot of 2025 SPG scores for the 183 Western-region schools, one dot per school in four locale rows (City, Suburb, Town, Rural), keeping clusters, gaps, outliers, and each group's true size visible.",
+  "title": {
+    "text": "SPG scores of Western-region schools by locale, 2025",
+    "subtitle": "A jittered strip plot draws every school as its own dot (n = 183) — clusters, gaps, and outliers stay visible, and sparse groups show their true size."
+  },
+  "data": { "url": "data/school_scores_2025.csv" },
+  "transform": [
+    { "filter": "datum.region === 'Western'" },
+    { "calculate": "random()", "as": "jitter" }
+  ],
+  "height": { "step": 56 },
+  "width": 460,
+  "mark": { "type": "circle", "size": 36, "color": "#077890", "opacity": 0.6 },
+  "encoding": {
+    "y": { "field": "locale", "type": "nominal", "title": null, "sort": ["City", "Suburb", "Town", "Rural"] },
+    "yOffset": { "field": "jitter", "type": "quantitative" },
+    "x": { "field": "spg_score", "type": "quantitative", "title": "SPG score", "scale": { "zero": false, "nice": true } },
+    "tooltip": [
+      { "field": "school", "title": "School" },
+      { "field": "locale", "title": "Locale" },
+      { "field": "spg_score", "title": "SPG score" }
+    ]
+  },
+  "usermeta": { "source": "Source: NCDPI public accountability data (School Performance Grades), 2025. Style-guide demo." }
+}

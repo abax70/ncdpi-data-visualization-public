@@ -1,0 +1,25 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Waffle chart of 100 squares in a 10-by-10 grid, each square one percent of North Carolina schools in 2025: 29 navy squares for the 28.5 percent graded A or B, the rest grey for C or lower.",
+  "title": {
+    "text": "Schools earning an A or B Performance Grade, 2025",
+    "subtitle": "A waffle makes one share countable: each square is 1 of 100 NC schools — 29 squares for the 28.5% graded A or B."
+  },
+  "data": { "url": "data/grade_waffle_2025.csv" },
+  "width": 264,
+  "height": 264,
+  "mark": { "type": "rect", "stroke": "white", "strokeWidth": 2 },
+  "encoding": {
+    "x": { "field": "col", "type": "ordinal", "axis": null },
+    "y": { "field": "row", "type": "ordinal", "axis": null },
+    "color": {
+      "field": "category", "type": "nominal", "title": null,
+      "scale": { "domain": ["A or B", "C or lower"], "range": ["#003A70", "#B7B9BB"] },
+      "legend": { "orient": "bottom" }
+    },
+    "tooltip": [
+      { "field": "category", "title": "Grade band" }
+    ]
+  },
+  "usermeta": { "source": "Source: NCDPI public accountability data (School Performance Grades), 2025. Style-guide demo." }
+}

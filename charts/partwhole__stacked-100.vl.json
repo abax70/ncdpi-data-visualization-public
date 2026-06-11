@@ -1,0 +1,32 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "100% stacked bar chart showing each SBE region's 2025 mix of School Performance Grade bands — A or B (teal, on the baseline), C (grey), and D or F (rust) — with white separators between segments. In every region, C is the largest band.",
+  "title": {
+    "text": "School Performance Grade mix by region, 2025",
+    "subtitle": "Share of schools in each grade band. Three ordered segments — A/B on the common baseline — with white separators where fills touch."
+  },
+  "data": { "url": "data/region_grade_bands_2025.csv" },
+  "transform": [
+    { "calculate": "indexof(['A or B', 'C', 'D or F'], datum.band)", "as": "band_order" }
+  ],
+  "height": { "step": 34 },
+  "mark": { "type": "bar", "stroke": "white", "strokeWidth": 1.5 },
+  "encoding": {
+    "y": { "field": "region", "type": "nominal", "title": null,
+      "sort": ["Northwest", "Western", "Southwest", "Piedmont Triad", "North Central", "Sandhills", "Southeast", "Northeast"] },
+    "x": { "field": "pct", "type": "quantitative", "title": "Share of schools", "stack": "normalize", "axis": { "format": ".0%" } },
+    "color": {
+      "field": "band", "type": "nominal", "title": "Grade band",
+      "scale": { "domain": ["A or B", "C", "D or F"], "range": ["#077890", "#DEDEDE", "#B33A12"] },
+      "legend": { "orient": "bottom" }
+    },
+    "order": { "field": "band_order", "type": "ordinal" },
+    "tooltip": [
+      { "field": "region", "title": "Region" },
+      { "field": "band", "title": "Grade band" },
+      { "field": "pct", "title": "% of schools", "format": ".1f" },
+      { "field": "school_count", "title": "Schools" }
+    ]
+  },
+  "usermeta": { "source": "Source: NCDPI public accountability data (School Performance Grades), 2025. Style-guide demo." }
+}

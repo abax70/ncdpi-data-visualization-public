@@ -1,0 +1,30 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Icon array of 100 person figures in a 10-by-10 grid representing North Carolina's 2025 graduation cohort: 88 teal figures for students who graduate within four years (87.8 percent rate) and 12 grey figures for those who do not.",
+  "title": {
+    "text": "Of every 100 NC students, 88 graduate within four years",
+    "subtitle": "An icon array makes a rate tangible: one figure = one student of a representative 100 (2025 cohort graduation rate, 87.8%)."
+  },
+  "data": { "url": "data/grad_pictograph_2025.csv" },
+  "width": 300,
+  "height": 300,
+  "mark": {
+    "type": "point",
+    "filled": true,
+    "size": 500,
+    "shape": "M 0 -0.55 A 0.13 0.13 0 1 1 0 -0.29 A 0.13 0.13 0 1 1 0 -0.55 Z M -0.18 -0.24 L 0.18 -0.24 L 0.18 0.08 L 0.10 0.08 L 0.10 0.50 L 0.03 0.50 L 0.03 0.22 L -0.03 0.22 L -0.03 0.50 L -0.10 0.50 L -0.10 0.08 L -0.18 0.08 Z"
+  },
+  "encoding": {
+    "x": { "field": "col", "type": "ordinal", "axis": null },
+    "y": { "field": "row", "type": "ordinal", "axis": null },
+    "color": {
+      "field": "outcome", "type": "nominal", "title": null,
+      "scale": { "domain": ["Graduated", "Did not graduate"], "range": ["#077890", "#B7B9BB"] },
+      "legend": { "orient": "bottom" }
+    },
+    "tooltip": [
+      { "field": "outcome", "title": "Outcome" }
+    ]
+  },
+  "usermeta": { "source": "Source: NCDPI public accountability data (4-year cohort graduation rate), 2025. Style-guide demo." }
+}

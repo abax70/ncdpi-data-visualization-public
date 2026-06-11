@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Vertical bar chart counting North Carolina schools by locale — City, Suburb, Town, Rural — in 2023, one brand color per category with a thin white border keeping adjacent colors distinct.",
   "title": {
     "text": "Schools by locale, 2023",
     "subtitle": "Four categories, four brand colors applied in order. A thin white border keeps adjacent colors distinct."
@@ -9,22 +10,32 @@
     { "filter": { "field": "locale", "oneOf": ["City", "Suburb", "Town", "Rural"] } }
   ],
   "height": 260,
-  "mark": { "type": "bar", "stroke": "white", "strokeWidth": 1.5 },
-  "encoding": {
-    "x": {
-      "field": "locale", "type": "nominal",
-      "sort": ["City", "Suburb", "Town", "Rural"],
-      "title": null, "axis": { "labelAngle": 0 }
+  "layer": [
+    {
+      "mark": { "type": "bar", "stroke": "white", "strokeWidth": 1.5 },
+      "encoding": {
+        "x": {
+          "field": "locale", "type": "nominal",
+          "sort": ["City", "Suburb", "Town", "Rural"],
+          "title": null, "axis": { "labelAngle": 0 }
+        },
+        "y": { "aggregate": "count", "type": "quantitative", "title": "Schools" },
+        "color": {
+          "field": "locale", "type": "nominal",
+          "sort": ["City", "Suburb", "Town", "Rural"],
+          "legend": null
+        },
+        "tooltip": [
+          { "field": "locale", "title": "Locale" },
+          { "aggregate": "count", "title": "Schools" }
+        ]
+      }
     },
-    "y": { "aggregate": "count", "type": "quantitative", "title": "Schools" },
-    "color": {
-      "field": "locale", "type": "nominal",
-      "sort": ["City", "Suburb", "Town", "Rural"],
-      "legend": null
-    },
-    "tooltip": [
-      { "field": "locale", "title": "Locale" },
-      { "aggregate": "count", "title": "Schools" }
-    ]
-  }
+    {
+      "data": { "values": [ {} ] },
+      "mark": { "type": "rule", "color": "#525A60" },
+      "encoding": { "y": { "datum": 0 } }
+    }
+  ],
+  "usermeta": { "source": "Source: NCDPI sample school data, SY2019–2023. Style-guide demo." }
 }

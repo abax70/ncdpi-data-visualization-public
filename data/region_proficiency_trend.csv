@@ -1,0 +1,57 @@
+region,year,proficiency_glp
+Northwest,2018,62.1
+Northwest,2019,62.0
+Northwest,2021,49.9
+Northwest,2022,54.8
+Northwest,2023,56.4
+Northwest,2024,56.0
+Northwest,2025,55.0
+Western,2018,64.2
+Western,2019,63.5
+Western,2021,50.0
+Western,2022,55.7
+Western,2023,57.4
+Western,2024,56.8
+Western,2025,55.9
+Southwest,2018,60.9
+Southwest,2019,61.5
+Southwest,2021,49.2
+Southwest,2022,53.7
+Southwest,2023,55.0
+Southwest,2024,55.4
+Southwest,2025,57.3
+Piedmont Triad,2018,55.7
+Piedmont Triad,2019,56.5
+Piedmont Triad,2021,42.2
+Piedmont Triad,2022,47.1
+Piedmont Triad,2023,49.6
+Piedmont Triad,2024,50.0
+Piedmont Triad,2025,50.8
+North Central,2018,59.9
+North Central,2019,59.6
+North Central,2021,46.6
+North Central,2022,54.5
+North Central,2023,56.9
+North Central,2024,57.8
+North Central,2025,58.6
+Sandhills,2018,54.2
+Sandhills,2019,52.9
+Sandhills,2021,36.1
+Sandhills,2022,44.8
+Sandhills,2023,47.6
+Sandhills,2024,48.3
+Sandhills,2025,48.6
+Southeast,2018,57.3
+Southeast,2019,57.2
+Southeast,2021,44.5
+Southeast,2022,49.6
+Southeast,2023,52.0
+Southeast,2024,53.1
+Southeast,2025,54.0
+Northeast,2018,52.7
+Northeast,2019,53.7
+Northeast,2021,39.0
+Northeast,2022,45.9
+Northeast,2023,49.4
+Northeast,2024,51.1
+Northeast,2025,52.3

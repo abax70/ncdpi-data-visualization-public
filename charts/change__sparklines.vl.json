@@ -1,0 +1,63 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Eight word-sized sparklines, one row per SBE region, tracing the 4-year graduation rate from 2019 to 2025 on one shared 82–93 percent scale, each ending in a dot with the 2025 value labeled.",
+  "title": {
+    "text": "4-year graduation rate by region, 2019–2025",
+    "subtitle": "Sparklines: word-sized lines on one shared scale show the shape of each trend, not exact values. End dots and labels anchor the latest year."
+  },
+  "data": {
+    "url": "data/region_cgr_trend.csv",
+    "format": { "type": "csv", "parse": { "grad_rate": "number", "year": "number" } }
+  },
+  "transform": [
+    { "joinaggregate": [{ "op": "max", "field": "year", "as": "max_year" }] },
+    { "joinaggregate": [{ "op": "min", "field": "year", "as": "min_year" }] }
+  ],
+  "facet": {
+    "row": {
+      "field": "region", "title": null,
+      "sort": ["Northwest", "Western", "Southwest", "Piedmont Triad", "North Central", "Sandhills", "Southeast", "Northeast"],
+      "header": { "labelAngle": 0, "labelAlign": "left", "labelOrient": "left", "labelFontSize": 11, "labelColor": "#525A60" }
+    }
+  },
+  "spacing": 10,
+  "spec": {
+    "width": 150,
+    "height": 24,
+    "layer": [
+      {
+        "mark": { "type": "line", "color": "#003A70", "strokeWidth": 1.5 },
+        "encoding": {
+          "x": { "field": "year", "type": "quantitative", "axis": null, "scale": { "domain": [2019, 2026.5] } },
+          "y": { "field": "grad_rate", "type": "quantitative", "axis": null, "scale": { "domain": [82, 93] } }
+        }
+      },
+      {
+        "transform": [{ "filter": "datum.year === datum.min_year" }],
+        "mark": { "type": "point", "filled": true, "color": "#003A70", "size": 25 },
+        "encoding": {
+          "x": { "field": "year", "type": "quantitative" },
+          "y": { "field": "grad_rate", "type": "quantitative" }
+        }
+      },
+      {
+        "transform": [{ "filter": "datum.year === datum.max_year" }],
+        "mark": { "type": "point", "filled": true, "color": "#003A70", "size": 25 },
+        "encoding": {
+          "x": { "field": "year", "type": "quantitative" },
+          "y": { "field": "grad_rate", "type": "quantitative" }
+        }
+      },
+      {
+        "transform": [{ "filter": "datum.year === datum.max_year" }],
+        "mark": { "type": "text", "align": "left", "dx": 6, "fontSize": 11, "fontWeight": "bold", "color": "#003A70" },
+        "encoding": {
+          "x": { "field": "year", "type": "quantitative" },
+          "y": { "field": "grad_rate", "type": "quantitative" },
+          "text": { "field": "grad_rate", "format": ".1f" }
+        }
+      }
+    ]
+  },
+  "usermeta": { "source": "Source: NCDPI public accountability data (4-year cohort graduation rate), 2019–2025. Style-guide demo." }
+}

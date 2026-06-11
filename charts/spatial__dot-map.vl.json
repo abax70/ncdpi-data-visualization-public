@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Dot-density map of North Carolina plotting each school at its location, colored by 2023 School Performance Grade from teal (A) through grey (C) to rust (F), avoiding the large-area bias of a shaded county map.",
   "title": {
     "text": "Schools by performance grade, 2023",
     "subtitle": "A dot-density map plots each school by location, avoiding the large-area bias of a shaded county map."
@@ -18,5 +19,6 @@
       "scale": { "domain": ["A", "B", "C", "D", "F"], "range": ["#077890", "#86A4AE", "#B7B9BB", "#C88C78", "#B33A12"] }
     },
     "tooltip": [ { "field": "school", "title": "School" }, { "field": "spg_grade", "title": "Grade" } ]
-  }
+  },
+  "usermeta": { "source": "Source: NCDPI sample school data, SY2019–2023. Style-guide demo." }
 }

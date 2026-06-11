@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Pie chart of North Carolina schools by 2023 School Performance Grade, with slices labeled directly: C is the largest share at 38 percent, then D (27.6), B (19.9), F (7.5), and A (7.0).",
   "title": {
     "text": "Share of schools by performance grade, 2023",
     "subtitle": "Pie charts are fine for part-to-whole with five slices or fewer. Order the slices and label them directly."
@@ -17,8 +18,9 @@
     "tooltip": [ { "field": "grade", "title": "Grade" }, { "field": "school_count", "title": "Schools" }, { "field": "pct", "title": "%" } ]
   },
   "layer": [
-    { "mark": { "type": "arc", "outerRadius": 120 } },
+    { "mark": { "type": "arc", "outerRadius": 120, "stroke": "white", "strokeWidth": 1.5 } },
     { "mark": { "type": "text", "radius": 140, "fontSize": 12 },
       "encoding": { "text": { "field": "grade" }, "color": { "value": "#1A2128" } } }
-  ]
+  ],
+  "usermeta": { "source": "Source: NCDPI sample school data, SY2019–2023. Style-guide demo." }
 }

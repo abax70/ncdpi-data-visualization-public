@@ -1,13 +1,14 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Dumbbell chart comparing each SBE region's average SPG score in 2019 (grey dot) and 2023 (navy dot), sorted by 2023 score. Every region declined; Western stays highest (70.5 down to 65.6) and North Central fell least (1.6 points).",
   "title": {
     "text": "Average SPG score by region: 2019 vs 2023",
     "subtitle": "A dumbbell makes the gap between two points the visual focus. Grey = 2019, navy = 2023."
   },
-  "data": { "url": "data/region_change.csv" },
+  "data": { "url": "data/region_change.csv", "format": { "type": "csv", "parse": { "score_2019": "number", "score_2023": "number" } } },
   "height": 300,
   "encoding": {
-    "y": { "field": "region", "type": "nominal", "sort": "-score_2023", "title": null },
+    "y": { "field": "region", "type": "nominal", "sort": { "field": "score_2023", "op": "max", "order": "descending" }, "title": null },
     "x": { "type": "quantitative", "title": "Avg SPG score", "scale": { "domain": [0, 80] } }
   },
   "layer": [
@@ -17,5 +18,6 @@
       "encoding": { "x": { "field": "score_2019" }, "tooltip": [ { "field": "region" }, { "field": "score_2019", "title": "2019" } ] } },
     { "mark": { "type": "point", "size": 120, "filled": true, "color": "#003A70" },
       "encoding": { "x": { "field": "score_2023" }, "tooltip": [ { "field": "region" }, { "field": "score_2023", "title": "2023" }, { "field": "delta", "title": "Change" } ] } }
-  ]
+  ],
+  "usermeta": { "source": "Source: NCDPI sample school data, SY2019–2023. Style-guide demo." }
 }

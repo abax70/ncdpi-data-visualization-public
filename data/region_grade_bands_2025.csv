@@ -1,0 +1,25 @@
+region,band,school_count,pct
+Northwest,A or B,34,19.0
+Northwest,C,97,54.2
+Northwest,D or F,48,26.8
+Western,A or B,57,31.1
+Western,C,89,48.6
+Western,D or F,37,20.2
+Southwest,A or B,192,36.3
+Southwest,C,195,36.9
+Southwest,D or F,142,26.8
+Piedmont Triad,A or B,87,20.4
+Piedmont Triad,C,175,41.1
+Piedmont Triad,D or F,164,38.5
+North Central,A or B,213,37.5
+North Central,C,209,36.8
+North Central,D or F,146,25.7
+Sandhills,A or B,50,19.8
+Sandhills,C,93,36.9
+Sandhills,D or F,109,43.3
+Southeast,A or B,61,24.8
+Southeast,C,107,43.5
+Southeast,D or F,78,31.7
+Northeast,A or B,33,20.1
+Northeast,C,70,42.7
+Northeast,D or F,61,37.2

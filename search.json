@@ -314,53 +314,53 @@
     ]
   },
   {
-    "objectID": "chart-chooser.html",
-    "href": "chart-chooser.html",
-    "title": "Chart Chooser",
+    "objectID": "chart-gallery.html",
+    "href": "chart-gallery.html",
+    "title": "Chart Gallery",
     "section": "",
-    "text": "Answer a few quick questions about your data and what you want to show. You’ll get one to three chart types that fit — each with a small, on-brand NCDPI example and tips for building it well. This follows the same evidence-based logic as our chart-selection guidance; it never recommends a chart that misleads.\n\n  The Chart Chooser needs JavaScript. See the Chart types gallery for the same guidance."
+    "text": "Every worked example from the Chart Chooser on one page, grouped by purpose. Use it to browse what an on-brand NCDPI version of each chart type looks like — or to find a type by eye when you’d rather scan than answer the chooser’s questions."
   },
   {
-    "objectID": "best-practices/perceptual-hierarchy.html",
-    "href": "best-practices/perceptual-hierarchy.html",
-    "title": "The perceptual hierarchy",
+    "objectID": "chart-gallery.html#used-elsewhere-in-the-guide",
+    "href": "chart-gallery.html#used-elsewhere-in-the-guide",
+    "title": "Chart Gallery",
+    "section": "Used elsewhere in the guide",
+    "text": "Used elsewhere in the guide\nTwo more specs that aren’t chooser examples but appear on the color pages — included here so this page shows every live chart in the guide.\n\n  Category-group bar\n  charts/groups__category-bar.vl.json\n  \n\n\n  Spotlight (highlight) bar\n  charts/highlight__spotlight-bar.vl.json"
+  },
+  {
+    "objectID": "best-practices/small-multiples.html",
+    "href": "best-practices/small-multiples.html",
+    "title": "Small multiples",
     "section": "",
-    "text": "Some visual encodings are read more accurately than others. Cleveland & McGill’s classic experiments, replicated many times since, rank them roughly like this:"
+    "text": "A small-multiples chart repeats the same little chart once per category, on a shared scale, in a grid. It is the most reliable cure for “I have too many categories” — and it’s badly under-used at NCDPI, so reach for it more."
   },
   {
-    "objectID": "best-practices/perceptual-hierarchy.html#what-it-means-in-practice",
-    "href": "best-practices/perceptual-hierarchy.html#what-it-means-in-practice",
-    "title": "The perceptual hierarchy",
-    "section": "What it means in practice",
-    "text": "What it means in practice\n\nTo let people read precise values, encode with position or length — a dot plot or bar, not a heatmap.\nUse color and area for the broad pattern (a map, a treemap), and pair them with a position/length chart when the exact numbers matter.\nThis is exactly why the Chart Chooser, when in doubt, prefers the chart higher on this list.\n\n\nPie charts sit mid-hierarchy on angle — which is why they’re fine for “which slice is biggest?” with a few slices, and poor for comparing many similar slices. The rule (“five slices, no more”) falls straight out of the science."
+    "objectID": "best-practices/small-multiples.html#why-they-work",
+    "href": "best-practices/small-multiples.html#why-they-work",
+    "title": "Small multiples",
+    "section": "Why they work",
+    "text": "Why they work\n\nNo color overload. Each panel uses one color, so the five-color ceiling never binds, no matter how many categories you have.\nHonest comparison. A shared scale means a tall bar in one panel really is taller than a short bar in another.\nPattern at a glance. The eye sweeps the grid and spots the outlier panel immediately."
   },
   {
-    "objectID": "best-practices/color-rules.html",
-    "href": "best-practices/color-rules.html",
-    "title": "Color rules",
+    "objectID": "best-practices/small-multiples.html#how-to-build-them-well",
+    "href": "best-practices/small-multiples.html#how-to-build-them-well",
+    "title": "Small multiples",
+    "section": "How to build them well",
+    "text": "How to build them well\n\nKeep every panel on the same scale — that’s the whole point.\nOrder the panels meaningfully (by value, region, time) rather than alphabetically.\nOne color across all panels; highlight a reference (the state average) the same way in each.\nStop around 20–30 panels — past that, each is too small to read."
+  },
+  {
+    "objectID": "best-practices/index.html",
+    "href": "best-practices/index.html",
+    "title": "Best practices",
     "section": "",
-    "text": "Color is the most abused encoding in agency charts. Three rules keep it honest."
+    "text": "A handful of principles, drawn from our data visualization literature review, explain why the rules on this site are the rules. Read these once and most chart decisions answer themselves."
   },
   {
-    "objectID": "best-practices/color-rules.html#five-colors-is-the-ceiling",
-    "href": "best-practices/color-rules.html#five-colors-is-the-ceiling",
-    "title": "Color rules",
-    "section": "1. Five colors is the ceiling",
-    "text": "1. Five colors is the ceiling\nPeople can hold only a handful of categorical hues apart before search slows and errors climb; three to four is the comfortable range. When you have more categories, the answer is never more colors — it’s highlight-one-on-grey or small multiples."
-  },
-  {
-    "objectID": "best-practices/color-rules.html#dark-is-more",
-    "href": "best-practices/color-rules.html#dark-is-more",
-    "title": "Color rules",
-    "section": "2. Dark is more",
-    "text": "2. Dark is more\nOn a sequential scale, people read darker as a larger value by default. Honour it: don’t make your lightest shade the biggest number. NCDPI’s sequential palettes are built dark-is-more already."
-  },
-  {
-    "objectID": "best-practices/color-rules.html#color-should-mean-something",
-    "href": "best-practices/color-rules.html#color-should-mean-something",
-    "title": "Color rules",
-    "section": "3. Color should mean something",
-    "text": "3. Color should mean something\n\nMatch the palette to the data: categorical for unordered groups, sequential for ordered, diverging for a meaningful midpoint.\nMake “good” and “bad” directions deliberate — teal for good, rust for bad.\nNever rely on color alone. Pair it with labels, position, or shape, so the chart still works for color-blind readers and in greyscale.\n\n\nRun any color-on-color text combination through the WebAIM contrast checker. DPI Aqua at full strength is not accessible for small text — use Medium #077890 or Dark #006174 aqua instead."
+    "objectID": "best-practices/index.html#ncdpi-standing-rules-in-one-place",
+    "href": "best-practices/index.html#ncdpi-standing-rules-in-one-place",
+    "title": "Best practices",
+    "section": "NCDPI standing rules, in one place",
+    "text": "NCDPI standing rules, in one place\n\n\nFive colors maximum (three or four is better).\nPromote small multiples — they’re under-used here.\nStacked bars: 2–3 segments only. Beyond that, separate bars on a common baseline.\nBreak lines at missing years (e.g., the 2020–21 COVID gap) — never interpolate.\nGraph the delta — when the message is a difference, plot the difference itself."
   },
   {
     "objectID": "best-practices/annotation.html",
@@ -391,39 +391,53 @@
     "text": "Less chart, more meaning\nAnnotation is not decoration. Each note should answer a question the reader would otherwise have to ask. If a viewer can look at the chart and immediately say what it means, the annotation has done its job.\n\nThis pairs with the perceptual hierarchy: pick the chart that encodes the data accurately, then annotate it so the meaning is as easy to read as the values."
   },
   {
-    "objectID": "best-practices/index.html",
-    "href": "best-practices/index.html",
-    "title": "Best practices",
+    "objectID": "best-practices/color-rules.html",
+    "href": "best-practices/color-rules.html",
+    "title": "Color rules",
     "section": "",
-    "text": "A handful of principles, drawn from our data visualization literature review, explain why the rules on this site are the rules. Read these once and most chart decisions answer themselves."
+    "text": "Color is the most abused encoding in agency charts. Three rules keep it honest."
   },
   {
-    "objectID": "best-practices/index.html#ncdpi-standing-rules-in-one-place",
-    "href": "best-practices/index.html#ncdpi-standing-rules-in-one-place",
-    "title": "Best practices",
-    "section": "NCDPI standing rules, in one place",
-    "text": "NCDPI standing rules, in one place\n\n\nFive colors maximum (three or four is better).\nPromote small multiples — they’re under-used here.\nStacked bars: 2–3 segments only. Beyond that, separate bars on a common baseline.\nBreak lines at missing years (e.g., the 2020–21 COVID gap) — never interpolate.\nGraph the delta — when the message is a difference, plot the difference itself."
+    "objectID": "best-practices/color-rules.html#five-colors-is-the-ceiling",
+    "href": "best-practices/color-rules.html#five-colors-is-the-ceiling",
+    "title": "Color rules",
+    "section": "1. Five colors is the ceiling",
+    "text": "1. Five colors is the ceiling\nPeople can hold only a handful of categorical hues apart before search slows and errors climb; three to four is the comfortable range. When you have more categories, the answer is never more colors — it’s highlight-one-on-grey or small multiples."
   },
   {
-    "objectID": "best-practices/small-multiples.html",
-    "href": "best-practices/small-multiples.html",
-    "title": "Small multiples",
+    "objectID": "best-practices/color-rules.html#dark-is-more",
+    "href": "best-practices/color-rules.html#dark-is-more",
+    "title": "Color rules",
+    "section": "2. Dark is more",
+    "text": "2. Dark is more\nOn a sequential scale, people read darker as a larger value by default. Honour it: don’t make your lightest shade the biggest number. NCDPI’s sequential palettes are built dark-is-more already."
+  },
+  {
+    "objectID": "best-practices/color-rules.html#color-should-mean-something",
+    "href": "best-practices/color-rules.html#color-should-mean-something",
+    "title": "Color rules",
+    "section": "3. Color should mean something",
+    "text": "3. Color should mean something\n\nMatch the palette to the data: categorical for unordered groups, sequential for ordered, diverging for a meaningful midpoint.\nMake “good” and “bad” directions deliberate — teal for good, rust for bad.\nNever rely on color alone. Pair it with labels, position, or shape, so the chart still works for color-blind readers and in greyscale.\n\n\nRun any color-on-color text combination through the WebAIM contrast checker. DPI Aqua at full strength is not accessible for small text — use Medium #077890 or Dark #006174 aqua instead."
+  },
+  {
+    "objectID": "best-practices/perceptual-hierarchy.html",
+    "href": "best-practices/perceptual-hierarchy.html",
+    "title": "The perceptual hierarchy",
     "section": "",
-    "text": "A small-multiples chart repeats the same little chart once per category, on a shared scale, in a grid. It is the most reliable cure for “I have too many categories” — and it’s badly under-used at NCDPI, so reach for it more."
+    "text": "Some visual encodings are read more accurately than others. Cleveland & McGill’s classic experiments, replicated many times since, rank them roughly like this:"
   },
   {
-    "objectID": "best-practices/small-multiples.html#why-they-work",
-    "href": "best-practices/small-multiples.html#why-they-work",
-    "title": "Small multiples",
-    "section": "Why they work",
-    "text": "Why they work\n\nNo color overload. Each panel uses one color, so the five-color ceiling never binds, no matter how many categories you have.\nHonest comparison. A shared scale means a tall bar in one panel really is taller than a short bar in another.\nPattern at a glance. The eye sweeps the grid and spots the outlier panel immediately."
+    "objectID": "best-practices/perceptual-hierarchy.html#what-it-means-in-practice",
+    "href": "best-practices/perceptual-hierarchy.html#what-it-means-in-practice",
+    "title": "The perceptual hierarchy",
+    "section": "What it means in practice",
+    "text": "What it means in practice\n\nTo let people read precise values, encode with position or length — a dot plot or bar, not a heatmap.\nUse color and area for the broad pattern (a map, a treemap), and pair them with a position/length chart when the exact numbers matter.\nThis is exactly why the Chart Chooser, when in doubt, prefers the chart higher on this list.\n\n\nPie charts sit mid-hierarchy on angle — which is why they’re fine for “which slice is biggest?” with a few slices, and poor for comparing many similar slices. The rule (“five slices, no more”) falls straight out of the science."
   },
   {
-    "objectID": "best-practices/small-multiples.html#how-to-build-them-well",
-    "href": "best-practices/small-multiples.html#how-to-build-them-well",
-    "title": "Small multiples",
-    "section": "How to build them well",
-    "text": "How to build them well\n\nKeep every panel on the same scale — that’s the whole point.\nOrder the panels meaningfully (by value, region, time) rather than alphabetically.\nOne color across all panels; highlight a reference (the state average) the same way in each.\nStop around 20–30 panels — past that, each is too small to read."
+    "objectID": "chart-chooser.html",
+    "href": "chart-chooser.html",
+    "title": "Chart Chooser",
+    "section": "",
+    "text": "Answer a few quick questions about your data and what you want to show. You’ll get one to three chart types that fit — each with a small, on-brand NCDPI example and tips for building it well. This follows the same evidence-based logic as our chart-selection guidance; it never recommends a chart that misleads.\n\n  The Chart Chooser needs JavaScript. See the Chart types gallery for the same guidance."
   },
   {
     "objectID": "chart-parts/chart-elements.html",

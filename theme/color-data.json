@@ -533,8 +533,8 @@
     "component": "Chart",
     "palette": "Chart Elements",
     "element": "Axis Ruler",
-    "hex": "#DEDEDE",
-    "rgb": "(222, 222, 222)",
+    "hex": "#525A60",
+    "rgb": "(82, 90, 96)",
     "usage": "",
     "font": "",
     "sizePts": ""

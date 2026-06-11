@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Box plots comparing the distribution of 2023 SPG scores across four locales — City, Suburb, Town, and Rural — showing each group's median, interquartile range, and outliers on a shared score axis.",
   "title": {
     "text": "SPG score distribution by locale, 2023",
     "subtitle": "Box plots compare several distributions at once — median, spread, and outliers."
@@ -11,5 +12,6 @@
     "y": { "field": "locale", "type": "nominal", "title": null, "sort": ["City", "Suburb", "Town", "Rural"] },
     "x": { "field": "spg_score", "type": "quantitative", "title": "SPG score", "scale": { "zero": false, "nice": true } },
     "color": { "value": "#077890" }
-  }
+  },
+  "usermeta": { "source": "Source: NCDPI sample school data, SY2019–2023. Style-guide demo." }
 }

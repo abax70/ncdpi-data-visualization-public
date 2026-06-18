@@ -1,0 +1,9 @@
+region,grad_rate,prior_year,target,met
+Northwest,89.1,87.7,88.5,1
+Western,91.6,90.7,91.5,1
+Southwest,86.9,85.9,86.7,1
+Piedmont Triad,88.9,88.2,89.0,0
+North Central,88.2,88.1,88.9,0
+Sandhills,86.1,85.1,85.9,1
+Southeast,86.9,86.1,86.9,1
+Northeast,87.3,84.6,85.4,1

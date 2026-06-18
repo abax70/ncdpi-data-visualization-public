@@ -1,27 +1,85 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "100% stacked bar chart of synthetic Likert survey responses by question, colored on a diverging scale from Strongly disagree (rust) through Neutral (grey) to Strongly agree (teal), with white separators between segments.",
+  "description": "Diverging stacked bar chart of synthetic Likert survey responses for five questions, sorted by net agreement. Disagree segments extend left and agree segments extend right of a faint orienting center line, with the neutral grey segment straddling it; teal value labels show the Strongly agree percentage for each question. Colors run from rust (Strongly disagree) through grey (Neutral) to teal (Strongly agree) with white separators.",
   "title": {
-    "text": "Survey responses by question (SYNTHETIC demo data)",
-    "subtitle": "Likert data suits a diverging stacked bar: a diverging palette runs from disagree (rust) through neutral (grey) to agree (teal)."
+    "text": "Every survey item nets positive (SYNTHETIC demo data)",
+    "subtitle": ["Survey responses by item (% of respondents), diverging from an orienting center, sorted by net agreement.", "Values are shown for Strongly agree; in an interactive version the reader picks which response to label."]
   },
-  "data": { "url": "data/survey_demo.csv" },
-  "height": 200,
-  "mark": { "type": "bar", "stroke": "white", "strokeWidth": 1 },
-  "encoding": {
-    "y": { "field": "question", "type": "nominal", "title": null },
-    "x": { "field": "pct", "type": "quantitative", "title": "Percent of responses", "stack": "normalize", "axis": { "format": "%" } },
-    "color": {
-      "field": "response", "type": "nominal", "title": "Response",
-      "sort": ["Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree"],
-      "scale": {
-        "domain": ["Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree"],
-        "range": ["#B33A12", "#C88C78", "#B7B9BB", "#86A4AE", "#077890"]
-      },
-      "legend": { "orient": "bottom" }
+  "data": { "url": "data/survey_demo.csv", "format": { "type": "csv", "parse": { "pct": "number" } } },
+  "transform": [
+    { "pivot": "response", "value": "pct", "groupby": ["question"] },
+    { "calculate": "(datum['Agree'] + datum['Strongly agree']) - (datum['Disagree'] + datum['Strongly disagree'])", "as": "net" },
+    { "fold": ["Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree"], "as": ["response", "pct"] },
+    {
+      "calculate": "datum.response === 'Strongly disagree' ? -(datum['Neutral']/2 + datum['Disagree'] + datum['Strongly disagree']) : datum.response === 'Disagree' ? -(datum['Neutral']/2 + datum['Disagree']) : datum.response === 'Neutral' ? -(datum['Neutral']/2) : datum.response === 'Agree' ? datum['Neutral']/2 : datum['Neutral']/2 + datum['Agree']",
+      "as": "seg_start"
     },
-    "order": { "field": "order", "type": "ordinal" },
-    "tooltip": [ { "field": "question" }, { "field": "response" }, { "field": "pct", "title": "%" } ]
-  },
-  "usermeta": { "source": "Source: Synthetic demonstration data — not real NCDPI survey results." }
+    { "calculate": "datum.seg_start + datum.pct", "as": "seg_end" }
+  ],
+  "height": 200,
+  "layer": [
+    {
+      "data": { "values": [ {} ] },
+      "mark": { "type": "rule", "color": "#DEDEDE", "strokeWidth": 1.2 },
+      "encoding": { "x": { "datum": 0 } }
+    },
+    {
+      "mark": { "type": "bar", "stroke": "#FFFFFF", "strokeWidth": 1.2 },
+      "encoding": {
+        "y": {
+          "field": "question", "type": "nominal", "title": null,
+          "sort": { "field": "net", "op": "max", "order": "descending" },
+          "axis": { "labelAlign": "left", "labelPadding": 186, "labelLimit": 0, "ticks": false, "grid": false }
+        },
+        "x": {
+          "field": "seg_start", "type": "quantitative", "title": null,
+          "scale": { "domain": [-70, 70] },
+          "axis": {
+            "values": [-60, -40, -20, 0, 20, 40, 60],
+            "labelExpr": "toString(abs(datum.value))",
+            "grid": true, "ticks": false, "domain": false
+          }
+        },
+        "x2": { "field": "seg_end" },
+        "color": {
+          "field": "response", "type": "nominal", "title": "Response",
+          "sort": ["Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree"],
+          "scale": {
+            "domain": ["Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree"],
+            "range": ["#B33A12", "#C88C78", "#B7B9BB", "#86A4AE", "#077890"]
+          },
+          "legend": { "orient": "none", "direction": "horizontal", "legendX": 34, "legendY": 250, "symbolType": "square" }
+        },
+        "tooltip": [
+          { "field": "question", "title": "Question" },
+          { "field": "response", "title": "Response" },
+          { "field": "pct", "title": "%" },
+          { "field": "net", "title": "Net agree" }
+        ]
+      }
+    },
+    {
+      "transform": [ { "filter": "datum.response === 'Strongly agree'" } ],
+      "mark": { "type": "text", "align": "left", "dx": 5, "fontSize": 10, "fontWeight": "bold", "color": "#077890" },
+      "encoding": {
+        "y": {
+          "field": "question", "type": "nominal",
+          "sort": { "field": "net", "op": "max", "order": "descending" }
+        },
+        "x": { "field": "seg_end", "type": "quantitative", "scale": { "domain": [-70, 70] } },
+        "text": { "field": "pct", "type": "quantitative", "format": ".0f" }
+      }
+    },
+    {
+      "data": { "values": [ {} ] },
+      "mark": { "type": "text", "align": "right", "dx": -6, "fontSize": 10, "color": "#525A60", "text": "← Disagree" },
+      "encoding": { "x": { "datum": 0 }, "y": { "value": 224 } }
+    },
+    {
+      "data": { "values": [ {} ] },
+      "mark": { "type": "text", "align": "left", "dx": 6, "fontSize": 10, "color": "#525A60", "text": "Agree →" },
+      "encoding": { "x": { "datum": 0 }, "y": { "value": 224 } }
+    }
+  ],
+  "usermeta": { "source": "Source: ILLUSTRATIVE / SYNTHETIC survey data — not real NCDPI survey results. Style-guide demo." }
 }

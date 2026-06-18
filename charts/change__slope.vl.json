@@ -1,27 +1,65 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Slope chart connecting each SBE region's average SPG score in 2019 to its score in 2023, all in one neutral grey with region labels at the right end. Every region's line slopes downward; declines range from 1.6 points (North Central) to 6.0 points (Piedmont Triad).",
+  "description": "Slope chart connecting each subject's grade-level-proficiency rate in 2021 to its rate in 2025 for North Carolina, all students. Five subjects; Math 3 is highlighted in navy — it rose furthest, from 45 to 66 percent — while the other four are shown in neutral grey, all recovering post-COVID. To keep the crowded ends legible, the 2025 end labels both subject and value while the 2021 end labels only the value, so the reader traces each line back. Biology and Science are excluded because their assessments changed within this window.",
   "title": {
-    "text": "Average SPG score: 2019 to 2023",
-    "subtitle": "A slope chart shows direction and magnitude of change for many items at once — kept in one neutral color."
+    "text": "Math 3 rebounded furthest since 2021 — up 22 points",
+    "subtitle": "Grade-level proficiency (GLP, %), NC, all students, 2021 vs. 2025. Subject + value labeled at 2025; value only at 2021."
   },
-  "data": { "url": "data/region_change.csv" },
+  "data": {
+    "url": "data/state_proficiency_by_subject_trend.csv",
+    "format": { "type": "csv", "parse": { "year": "number", "proficiency_glp": "number" } }
+  },
   "transform": [
-    { "fold": ["score_2019", "score_2023"], "as": ["yr", "score"] },
-    { "calculate": "datum.yr === 'score_2019' ? '2019' : '2023'", "as": "year" }
+    { "filter": "datum.year === 2021 || datum.year === 2025" },
+    { "calculate": "'' + datum.year", "as": "year_label" }
   ],
   "height": 320,
   "encoding": {
-    "x": { "field": "year", "type": "ordinal", "title": null, "scale": { "padding": 0.3 }, "axis": { "labelAngle": 0 } },
-    "y": { "field": "score", "type": "quantitative", "title": "Avg SPG score", "scale": { "zero": false, "nice": true } },
-    "detail": { "field": "region" }
+    "x": { "field": "year_label", "type": "ordinal", "title": null, "scale": { "padding": 0.45 }, "axis": { "labelAngle": 0, "ticks": false, "domainColor": "#DEDEDE" } },
+    "y": { "field": "proficiency_glp", "type": "quantitative", "title": null, "scale": { "domain": [22, 70] }, "axis": null },
+    "detail": { "field": "subject" }
   },
   "layer": [
-    { "mark": { "type": "line", "color": "#B7B9BB", "strokeWidth": 1.8 } },
-    { "mark": { "type": "point", "filled": true, "color": "#6B6F70", "size": 45 } },
-    { "transform": [ { "filter": "datum.year === '2023'" } ],
-      "mark": { "type": "text", "align": "left", "dx": 7, "fontSize": 11, "color": "#525A60" },
-      "encoding": { "text": { "field": "region" } } }
+    {
+      "transform": [{ "filter": "datum.subject !== 'Math 3'" }],
+      "mark": { "type": "line", "color": "#B7B9BB", "strokeWidth": 1.5 }
+    },
+    {
+      "transform": [{ "filter": "datum.subject === 'Math 3'" }],
+      "mark": { "type": "line", "color": "#003A70", "strokeWidth": 3 }
+    },
+    {
+      "mark": { "type": "point", "filled": true, "size": 50, "stroke": "white", "strokeWidth": 2 },
+      "encoding": {
+        "color": { "condition": { "test": "datum.subject === 'Math 3'", "value": "#003A70" }, "value": "#B7B9BB" }
+      }
+    },
+    {
+      "transform": [
+        { "filter": "datum.year === 2025" },
+        { "calculate": "datum.subject === 'English II' ? datum.proficiency_glp + 0.8 : datum.proficiency_glp", "as": "label_y" },
+        { "calculate": "datum.subject + '  ' + format(datum.proficiency_glp, '.0f')", "as": "end_label" }
+      ],
+      "mark": { "type": "text", "align": "left", "dx": 9, "fontSize": 11 },
+      "encoding": {
+        "y": { "field": "label_y", "type": "quantitative", "scale": { "domain": [22, 70] } },
+        "text": { "field": "end_label" },
+        "color": { "condition": { "test": "datum.subject === 'Math 3'", "value": "#003A70" }, "value": "#525A60" }
+      }
+    },
+    {
+      "transform": [
+        { "filter": "datum.year === 2021" },
+        { "calculate": "datum.subject === 'Math 3' ? datum.proficiency_glp - 1.4 : datum.proficiency_glp", "as": "label_y" },
+        { "calculate": "format(datum.proficiency_glp, '.0f')", "as": "start_label" }
+      ],
+      "mark": { "type": "text", "align": "right", "dx": -9, "fontSize": 11 },
+      "encoding": {
+        "y": { "field": "label_y", "type": "quantitative", "scale": { "domain": [22, 70] } },
+        "text": { "field": "start_label" },
+        "color": { "condition": { "test": "datum.subject === 'Math 3'", "value": "#003A70" }, "value": "#525A60" }
+      }
+    }
   ],
-  "usermeta": { "source": "Source: NCDPI sample school data, SY2019–2023. Style-guide demo." }
+  "usermeta": { "source": "Source: NCDPI grade-level proficiency (GLP), all students, statewide, 2021 and 2025. Style-guide demo." }
 }

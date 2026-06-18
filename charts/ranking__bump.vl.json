@@ -1,0 +1,77 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Bump chart ranking five North Carolina state subject composites by grade-level proficiency (GLP) each year from 2021 to 2025, where rank 1 (top) is the highest-proficiency subject that year. Each subject is a line connecting its rank position across the five years; line crossings show subjects overtaking one another. Math 3 is highlighted in navy: it climbed from 3rd place in 2021 to 1st in 2025, overtaking English II, which slipped from 1st to 2nd. All other subjects are shown in neutral grey. By year 2021 through 2025 the ranks are: English II 1,1,1,1,2; Reading (3-8) 2,4,4,4,4; Math 3 3,2,1,2,1; Math (3-8) 4,3,3,3,3; Math 1 5,5,5,5,5. Biology and Science are excluded because their assessments changed within this window.",
+  "title": {
+    "text": "Math 3 climbed from 3rd to 1st among state subjects since 2021",
+    "subtitle": "Rank by grade-level proficiency (GLP) among 5 state subject composites, 2021–2025 (rank 1 = highest)"
+  },
+  "data": {
+    "url": "data/state_proficiency_by_subject_trend.csv",
+    "format": { "type": "csv", "parse": { "proficiency_glp": "number", "year": "number" } }
+  },
+  "transform": [
+    { "filter": "isValid(datum.proficiency_glp)" },
+    {
+      "window": [{ "op": "rank", "as": "rank" }],
+      "sort": [{ "field": "proficiency_glp", "order": "descending" }],
+      "groupby": ["year"]
+    },
+    { "calculate": "datum.subject === 'Math 3' ? 'focus' : 'other'", "as": "highlight" }
+  ],
+  "height": 300,
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "quantitative",
+      "title": null,
+      "scale": { "domain": [2020.9, 2026.0] },
+      "axis": { "values": [2021, 2022, 2023, 2024, 2025], "format": "d", "ticks": false, "grid": false, "domain": false }
+    },
+    "y": {
+      "field": "rank",
+      "type": "quantitative",
+      "title": null,
+      "scale": { "domain": [0.5, 5.35], "reverse": true },
+      "axis": { "values": [1, 2, 3, 4, 5], "format": "d", "ticks": false, "grid": false, "domain": false }
+    }
+  },
+  "layer": [
+    {
+      "transform": [{ "filter": "datum.highlight === 'other'" }],
+      "mark": { "type": "line", "color": "#B7B9BB", "strokeWidth": 1.8, "point": { "filled": true, "color": "#B7B9BB", "size": 50 } },
+      "encoding": {
+        "detail": { "field": "subject" },
+        "tooltip": [
+          { "field": "subject", "title": "Subject" },
+          { "field": "year", "title": "Year" },
+          { "field": "rank", "title": "Rank" },
+          { "field": "proficiency_glp", "title": "GLP (%)" }
+        ]
+      }
+    },
+    {
+      "transform": [{ "filter": "datum.highlight === 'focus'" }],
+      "mark": { "type": "line", "color": "#003A70", "strokeWidth": 3, "point": { "filled": true, "color": "#003A70", "size": 70 } },
+      "encoding": {
+        "detail": { "field": "subject" },
+        "tooltip": [
+          { "field": "subject", "title": "Subject" },
+          { "field": "year", "title": "Year" },
+          { "field": "rank", "title": "Rank" },
+          { "field": "proficiency_glp", "title": "GLP (%)" }
+        ]
+      }
+    },
+    {
+      "transform": [{ "filter": "datum.year === 2025 && datum.highlight === 'other'" }],
+      "mark": { "type": "text", "align": "left", "dx": 10, "fontSize": 11, "color": "#525A60" },
+      "encoding": { "text": { "field": "subject" } }
+    },
+    {
+      "transform": [{ "filter": "datum.year === 2025 && datum.highlight === 'focus'" }],
+      "mark": { "type": "text", "align": "left", "dx": 10, "fontSize": 11, "fontWeight": "bold", "color": "#003A70" },
+      "encoding": { "text": { "field": "subject" } }
+    }
+  ],
+  "usermeta": { "source": "Source: NCDPI public accountability data (grade-level proficiency, GLP), 2021–2025. Style-guide demo." }
+}

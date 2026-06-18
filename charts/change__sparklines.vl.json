@@ -2,8 +2,8 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Eight word-sized sparklines, one row per SBE region, tracing the 4-year graduation rate from 2019 to 2025 on one shared 82–93 percent scale, each ending in a dot with the 2025 value labeled.",
   "title": {
-    "text": "4-year graduation rate by region, 2019–2025",
-    "subtitle": "Sparklines: word-sized lines on one shared scale show the shape of each trend, not exact values. End dots and labels anchor the latest year."
+    "text": "Every region's graduation rate held steady or rose from 2019 to 2025",
+    "subtitle": "4-year cohort graduation rate (%) by SBE region, shared 82–93 scale. Sparklines show the shape of a trend, not exact values; labels anchor 2025."
   },
   "data": {
     "url": "data/region_cgr_trend.csv",
@@ -17,18 +17,28 @@
     "row": {
       "field": "region", "title": null,
       "sort": ["Northwest", "Western", "Southwest", "Piedmont Triad", "North Central", "Sandhills", "Southeast", "Northeast"],
-      "header": { "labelAngle": 0, "labelAlign": "left", "labelOrient": "left", "labelFontSize": 11, "labelColor": "#525A60" }
+      "header": null
     }
   },
   "spacing": 10,
   "spec": {
-    "width": 150,
+    "width": 250,
     "height": 24,
     "layer": [
       {
+        "comment": "Row label as a left-gutter text layer (one row -> filter to min_year). Vega-Lite 5.21 ignores labelAlign/labelPadding on left-oriented row-facet HEADERS — they render right-aligned against the plot and indented from the title. A fixed-pixel text mark at x:0 puts every region name on the same left edge as the title (verified absX=5). The x-domain opens to 2014 so the line sits to the right of the label, in its own clear zone.",
+        "transform": [{ "filter": "datum.year === datum.min_year" }],
+        "mark": { "type": "text", "align": "left", "baseline": "middle", "fontSize": 11, "color": "#525A60" },
+        "encoding": {
+          "x": { "value": 0 },
+          "y": { "value": 12 },
+          "text": { "field": "region", "type": "nominal" }
+        }
+      },
+      {
         "mark": { "type": "line", "color": "#003A70", "strokeWidth": 1.5 },
         "encoding": {
-          "x": { "field": "year", "type": "quantitative", "axis": null, "scale": { "domain": [2019, 2026.5] } },
+          "x": { "field": "year", "type": "quantitative", "axis": null, "scale": { "domain": [2014, 2026.5] } },
           "y": { "field": "grad_rate", "type": "quantitative", "axis": null, "scale": { "domain": [82, 93] } }
         }
       },

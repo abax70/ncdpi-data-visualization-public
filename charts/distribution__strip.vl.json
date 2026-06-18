@@ -1,22 +1,25 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Jittered strip plot of 2025 SPG scores for the 183 Western-region schools, one dot per school in four locale rows (City, Suburb, Town, Rural), keeping clusters, gaps, outliers, and each group's true size visible.",
+  "description": "Jittered strip plot of 2025 SPG scores for the 183 Western-region schools, one dot per school in four locale columns (City, Suburb, Town, Rural). Locale runs along the horizontal axis; the SPG score runs up the vertical axis, with dots jittered across the middle of each locale column — leaving a clear gap between columns — so clusters, gaps, outliers, and each group's true size stay visible. The score spreads overlap heavily across locales.",
   "title": {
-    "text": "SPG scores of Western-region schools by locale, 2025",
-    "subtitle": "A jittered strip plot draws every school as its own dot (n = 183) — clusters, gaps, and outliers stay visible, and sparse groups show their true size."
+    "text": "SPG scores spread widely within every Western locale, and the locales overlap",
+    "subtitle": "2025 SPG score of each Western-region school (n = 183), one dot per school, jittered within locale columns — sparse groups show their true size."
   },
-  "data": { "url": "data/school_scores_2025.csv" },
+  "data": {
+    "url": "data/school_scores_2025.csv",
+    "format": { "type": "csv", "parse": { "spg_score": "number" } }
+  },
   "transform": [
     { "filter": "datum.region === 'Western'" },
-    { "calculate": "random()", "as": "jitter" }
+    { "calculate": "0.5 + (random() - 0.5) * 0.36", "as": "jitter" }
   ],
-  "height": { "step": 56 },
-  "width": 460,
-  "mark": { "type": "circle", "size": 36, "color": "#077890", "opacity": 0.6 },
+  "height": 300,
+  "mark": { "type": "circle", "size": 36, "color": "#003A70", "opacity": 0.6 },
   "encoding": {
-    "y": { "field": "locale", "type": "nominal", "title": null, "sort": ["City", "Suburb", "Town", "Rural"] },
-    "yOffset": { "field": "jitter", "type": "quantitative" },
-    "x": { "field": "spg_score", "type": "quantitative", "title": "SPG score", "scale": { "zero": false, "nice": true } },
+    "x": { "field": "locale", "type": "nominal", "title": null, "sort": ["City", "Suburb", "Town", "Rural"],
+      "axis": { "labelAngle": 0, "ticks": false } },
+    "xOffset": { "field": "jitter", "type": "quantitative", "scale": { "domain": [0, 1] } },
+    "y": { "field": "spg_score", "type": "quantitative", "title": null, "scale": { "zero": false, "nice": true } },
     "tooltip": [
       { "field": "school", "title": "School" },
       { "field": "locale", "title": "Locale" },

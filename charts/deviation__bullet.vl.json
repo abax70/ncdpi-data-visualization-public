@@ -1,37 +1,48 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Bullet chart of each SBE region's 2025 4-year graduation rate (navy bar) against the state rate of 87.8 percent (dark tick) on a grey 0–100 range, sorted highest to lowest. Western leads at 91.6 percent and Sandhills trails at 86.1.",
+  "description": "Bullet chart of each SBE region's 2025 4-year graduation rate (colored bar) against a region-specific growth target (dark tick) on a grey 0 to 100 range, sorted highest to lowest rate. The target is each region's 2024 rate plus the statewide +0.8-point gain — a 'keep pace with the state' benchmark. Six regions met it and are teal; Piedmont Triad and North Central fell just short and are rust. Western is highest at 91.6 percent.",
   "title": {
-    "text": "Regional graduation rates vs. the state rate, 2025",
-    "subtitle": "A bullet per region: grey range to 100, navy bar for the actual value, dark tick at the state rate (87.8) — a compact actual-vs-benchmark gauge."
+    "text": "Six of eight regions kept pace with the state's graduation gains",
+    "subtitle": ["4-year cohort graduation rate (%) by SBE region, 2025, vs. each region's growth target (2024 rate + the statewide +0.8 gain).", "Teal = met the target; rust = fell short. Dark tick = target."]
   },
-  "data": { "url": "data/region_snapshot_2025.csv", "format": { "type": "csv", "parse": { "grad_rate": "number" } } },
+  "data": { "url": "data/region_grad_target_2025.csv", "format": { "type": "csv", "parse": { "grad_rate": "number", "prior_year": "number", "target": "number", "met": "number" } } },
   "transform": [
-    { "calculate": "'grad_rate'", "as": "measure" },
-    { "lookup": "measure", "from": { "data": { "url": "data/state_reference_2025.csv" }, "key": "measure", "fields": ["value"] } },
     { "calculate": "100", "as": "range_hi" }
   ],
   "height": { "step": 38 },
   "encoding": {
     "y": { "field": "region", "type": "nominal", "title": null,
-      "sort": { "field": "grad_rate", "op": "max", "order": "descending" } }
+      "sort": { "field": "grad_rate", "op": "max", "order": "descending" },
+      "axis": { "labelAlign": "left", "labelPadding": 124, "ticks": false, "grid": false } }
   },
   "layer": [
     {
       "mark": { "type": "bar", "size": 24, "color": "#DEDEDE" },
       "encoding": {
-        "x": { "field": "range_hi", "type": "quantitative", "title": "4-year graduation rate", "scale": { "domain": [0, 100] } }
+        "x": { "field": "range_hi", "type": "quantitative", "title": null, "scale": { "domain": [0, 100] }, "axis": null }
       }
     },
     {
-      "mark": { "type": "bar", "size": 9, "color": "#003A70" },
+      "mark": { "type": "bar", "size": 9 },
       "encoding": {
         "x": { "field": "grad_rate", "type": "quantitative" },
+        "color": {
+          "condition": { "test": "datum.grad_rate >= datum.target", "value": "#077890" },
+          "value": "#B33A12"
+        },
         "tooltip": [
           { "field": "region", "title": "Region" },
-          { "field": "grad_rate", "title": "Grad rate", "format": ".1f" },
-          { "field": "value", "title": "State rate", "format": ".1f" }
+          { "field": "grad_rate", "title": "2025 rate", "format": ".1f" },
+          { "field": "prior_year", "title": "2024 rate", "format": ".1f" },
+          { "field": "target", "title": "Growth target", "format": ".1f" }
         ]
+      }
+    },
+    {
+      "mark": { "type": "text", "align": "right", "dx": -8, "fontSize": 11, "color": "#000000" },
+      "encoding": {
+        "x": { "datum": 0 },
+        "text": { "field": "grad_rate", "type": "quantitative", "format": ".1f" }
       }
     },
     {
@@ -42,9 +53,9 @@
     {
       "mark": { "type": "tick", "color": "#525A60", "thickness": 2, "size": 24 },
       "encoding": {
-        "x": { "field": "value", "type": "quantitative" }
+        "x": { "field": "target", "type": "quantitative" }
       }
     }
   ],
-  "usermeta": { "source": "Source: NCDPI public accountability data (4-year cohort graduation rate), 2025. Style-guide demo." }
+  "usermeta": { "source": "Source: NCDPI cohort graduation rate (4-year standard), region and state, 2024–2025. Style-guide demo." }
 }

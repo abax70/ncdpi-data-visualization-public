@@ -1,41 +1,70 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Grouped bar chart comparing two percentages for each of the eight SBE regions in 2025 — 4-year graduation rate (blue) and test proficiency (orange). Graduation rates run in the high 80s to low 90s while proficiency runs from the high 40s to high 50s; Western has the top graduation rate at 91.6 percent.",
+  "description": "Grouped column chart comparing grade-level proficiency (GLP %) in Math (steel blue) and Reading (orange) across grades 3 through 8 in 2025. Math leads early — 64 percent in grade 3 versus Reading's 47 — then declines every grade to 49 by grade 8, while Reading stays near 52 to 58 after grade 3, so Reading ends ahead of Math in grade 8 (54 vs 49).",
   "title": {
-    "text": "Graduation rate vs. test proficiency by region, 2025",
-    "subtitle": "Two measures per region, bars side by side. Both are percentages, but neither is 'good' vs 'bad' — so the colors are categorical, not valenced."
+    "text": "Math starts well ahead of Reading but slips behind it by grade 8",
+    "subtitle": "Grade-level proficiency (GLP %), all students, North Carolina, by grade, 2025. Subject is categorical, so the colors are non-valenced."
   },
-  "data": { "url": "data/region_snapshot_2025.csv" },
-  "transform": [
-    { "fold": ["grad_rate", "proficiency_glp"], "as": ["measure", "value"] },
-    { "calculate": "datum.measure === 'grad_rate' ? '4-year graduation rate' : 'Test proficiency (GLP)'", "as": "measure_label" }
-  ],
-  "height": { "step": 22 },
+  "data": {
+    "url": "data/state_proficiency_by_grade_2025.csv",
+    "format": { "type": "csv", "parse": { "proficiency_glp": "number", "grade": "number" } }
+  },
+  "height": 300,
   "layer": [
     {
-      "mark": { "type": "bar" },
+      "mark": { "type": "bar", "stroke": "#FFFFFF", "strokeWidth": 1 },
       "encoding": {
-        "y": { "field": "region", "type": "nominal", "title": null,
-          "sort": ["Northwest", "Western", "Southwest", "Piedmont Triad", "North Central", "Sandhills", "Southeast", "Northeast"] },
-        "yOffset": { "field": "measure_label" },
-        "x": { "field": "value", "type": "quantitative", "title": "Percent", "scale": { "domain": [0, 100] } },
+        "x": {
+          "field": "grade", "type": "ordinal", "title": null,
+          "sort": [3, 4, 5, 6, 7, 8],
+          "axis": { "labelAngle": 0, "ticks": false }
+        },
+        "xOffset": { "field": "subject", "sort": ["Math", "Reading"] },
+        "y": {
+          "field": "proficiency_glp", "type": "quantitative", "title": null,
+          "scale": { "domain": [0, 70] }, "axis": null
+        },
         "color": {
-          "field": "measure_label", "type": "nominal", "title": null,
-          "scale": { "domain": ["4-year graduation rate", "Test proficiency (GLP)"], "range": ["#5085BC", "#FF9015"] },
-          "legend": { "orient": "bottom" }
+          "field": "subject", "type": "nominal",
+          "scale": { "domain": ["Math", "Reading"], "range": ["#5085BC", "#FF9015"] },
+          "legend": null
         },
         "tooltip": [
-          { "field": "region", "title": "Region" },
-          { "field": "measure_label", "title": "Measure" },
-          { "field": "value", "title": "Percent", "format": ".1f" }
+          { "field": "grade", "title": "Grade" },
+          { "field": "subject", "title": "Subject" },
+          { "field": "proficiency_glp", "title": "GLP %", "format": ".1f" }
         ]
+      }
+    },
+    {
+      "mark": { "type": "text", "dy": -8, "fontSize": 11, "color": "#000000" },
+      "encoding": {
+        "x": { "field": "grade", "type": "ordinal", "sort": [3, 4, 5, 6, 7, 8] },
+        "xOffset": { "field": "subject", "sort": ["Math", "Reading"] },
+        "y": { "field": "proficiency_glp", "type": "quantitative" },
+        "text": { "field": "proficiency_glp", "type": "quantitative", "format": ".0f" }
+      }
+    },
+    {
+      "transform": [{ "filter": "datum.grade === 3" }],
+      "mark": { "type": "text", "dy": -22, "fontSize": 11, "fontWeight": "bold" },
+      "encoding": {
+        "x": { "field": "grade", "type": "ordinal", "sort": [3, 4, 5, 6, 7, 8] },
+        "xOffset": { "field": "subject", "sort": ["Math", "Reading"] },
+        "y": { "field": "proficiency_glp", "type": "quantitative" },
+        "text": { "field": "subject", "type": "nominal" },
+        "color": {
+          "field": "subject", "type": "nominal",
+          "scale": { "domain": ["Math", "Reading"], "range": ["#5085BC", "#FF9015"] },
+          "legend": null
+        }
       }
     },
     {
       "data": { "values": [ {} ] },
       "mark": { "type": "rule", "color": "#525A60" },
-      "encoding": { "x": { "datum": 0 } }
+      "encoding": { "y": { "datum": 0 } }
     }
   ],
-  "usermeta": { "source": "Source: NCDPI public accountability data (4-year cohort graduation rate; GLP test proficiency), 2025. Style-guide demo." }
+  "usermeta": { "source": "Source: NCDPI grade-level proficiency (GLP), all students, end-of-grade Math and Reading assessments, 2025. Style-guide demo." }
 }

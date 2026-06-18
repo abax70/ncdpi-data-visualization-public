@@ -1,0 +1,84 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A compact big-number (BAN) dashboard tile: statewide grade-level proficiency was 55% in 2025, up 0.8 points from 2024, above a small neutral-grey sparkline tracing the rise from 45% in 2021 to 55% in 2025, with the first and last years (2021 and 2025) labeled so the span is clear. A small grey label names the metric; the year-over-year change is the only colored element (teal for a rise, rust for a fall); no chart title, subtitle, or source note — the tile is meant to sit on a dashboard.",
+  "data": {
+    "url": "data/state_proficiency_trend.csv",
+    "format": { "type": "csv", "parse": { "proficiency_glp": "number", "year": "number" } }
+  },
+  "spacing": 6,
+  "vconcat": [
+    {
+      "width": 200,
+      "height": 92,
+      "transform": [
+        { "window": [{ "op": "lag", "field": "proficiency_glp", "param": 1, "as": "prev" }], "sort": [{ "field": "year" }] },
+        { "joinaggregate": [{ "op": "max", "field": "year", "as": "maxy" }] },
+        { "filter": "datum.year === datum.maxy" },
+        { "calculate": "format(datum.proficiency_glp, '.0f') + '%'", "as": "big" },
+        { "calculate": "datum.proficiency_glp - datum.prev", "as": "delta" },
+        { "calculate": "'Grade-level proficiency · ' + datum.year", "as": "label" },
+        { "calculate": "(datum.delta >= 0 ? '▲ ' : '▼ ') + format(abs(datum.delta), '.1f') + ' pts vs ' + (datum.year - 1)", "as": "evo" }
+      ],
+      "layer": [
+        {
+          "mark": { "type": "text", "align": "left", "baseline": "middle", "fontSize": 12, "color": "#525A60" },
+          "encoding": { "x": { "value": 0 }, "y": { "value": 12 }, "text": { "field": "label", "type": "nominal" } }
+        },
+        {
+          "mark": { "type": "text", "align": "left", "baseline": "middle", "fontSize": 50, "fontWeight": "bold", "color": "#1A2128" },
+          "encoding": { "x": { "value": 0 }, "y": { "value": 50 }, "text": { "field": "big", "type": "nominal" } }
+        },
+        {
+          "mark": { "type": "text", "align": "left", "baseline": "middle", "fontSize": 13, "fontWeight": "bold" },
+          "encoding": {
+            "x": { "value": 2 },
+            "y": { "value": 82 },
+            "text": { "field": "evo", "type": "nominal" },
+            "color": { "condition": { "test": "datum.delta >= 0", "value": "#077890" }, "value": "#9A3324" }
+          }
+        }
+      ]
+    },
+    {
+      "width": 200,
+      "height": 44,
+      "transform": [{ "joinaggregate": [{ "op": "max", "field": "year", "as": "maxy" }, { "op": "min", "field": "year", "as": "miny" }] }],
+      "layer": [
+        {
+          "mark": { "type": "line", "color": "#9AA0A6", "strokeWidth": 2, "interpolate": "monotone" },
+          "encoding": {
+            "x": { "field": "year", "type": "quantitative", "axis": null, "scale": { "domain": [2021, 2025.2] } },
+            "y": { "field": "proficiency_glp", "type": "quantitative", "axis": null, "scale": { "domain": [40, 60] } }
+          }
+        },
+        {
+          "transform": [{ "filter": "datum.year === datum.maxy" }],
+          "mark": { "type": "point", "filled": true, "color": "#6E7B87", "size": 40 },
+          "encoding": {
+            "x": { "field": "year", "type": "quantitative" },
+            "y": { "field": "proficiency_glp", "type": "quantitative" }
+          }
+        },
+        {
+          "transform": [{ "filter": "datum.year === datum.miny" }],
+          "mark": { "type": "text", "align": "left", "baseline": "top", "dy": 4, "fontSize": 9, "color": "#9AA0A6" },
+          "encoding": {
+            "x": { "field": "year", "type": "quantitative" },
+            "y": { "value": 44 },
+            "text": { "field": "year", "type": "quantitative", "format": "d" }
+          }
+        },
+        {
+          "transform": [{ "filter": "datum.year === datum.maxy" }],
+          "mark": { "type": "text", "align": "right", "baseline": "top", "dy": 4, "fontSize": 9, "color": "#9AA0A6" },
+          "encoding": {
+            "x": { "field": "year", "type": "quantitative" },
+            "y": { "value": 44 },
+            "text": { "field": "year", "type": "quantitative", "format": "d" }
+          }
+        }
+      ]
+    }
+  ],
+  "usermeta": { "isBAN": true }
+}

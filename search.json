@@ -188,79 +188,186 @@
     ]
   },
   {
-    "objectID": "chart-types/index.html",
-    "href": "chart-types/index.html",
-    "title": "Chart types",
+    "objectID": "chart-types/kpis.html",
+    "href": "chart-types/kpis.html",
+    "title": "KPIs & big numbers",
     "section": "",
-    "text": "Charts are organised here by the job they do — the message you want your audience to take away — not by the data type. Not sure which job you have? The Chart Chooser will walk you to a recommendation.\nEvery example uses real, public NCDPI school data and the NCDPI brand palette.\n\n\n  \n    \n      \n        \n        \n        \n      \n    \n    Compare and rank\n    Bar charts, dots, lollipops, dumbbells\n  \n\n  \n    \n      \n        \n        \n          \n          \n          \n          \n          \n          \n        \n      \n    \n    Change over time\n    Lines, small multiples, slope charts\n  \n\n  \n    \n      \n        \n        \n        \n      \n    \n    Parts of a whole\n    Pie, stacked bar, waffle\n  \n\n  \n    \n      \n        \n        \n        \n        \n        \n        \n        \n      \n    \n    Distribution\n    Histogram, box plot\n  \n\n  \n    \n      \n        \n          \n          \n          \n          \n          \n          \n          \n          \n        \n      \n    \n    Relationships\n    Scatter, bubble\n  \n\n  \n    \n      \n        \n        \n        \n        \n        \n      \n    \n    Difference from a baseline\n    Diverging bars, dumbbells, Likert\n  \n\n  \n    \n      \n        \n        \n        \n        \n      \n    \n    Geographic patterns\n    Choropleth, point, hex maps\n  \n\n  \n    \n      \n        92%\n      \n    \n    Headline numberComing soon\n    BAN (Big Aggregate Number), KPI tile",
+    "text": "Sometimes the most effective chart is barely a chart at all — a single number, set large, that answers the one question a reader came with. On a dashboard it is the anchor: the figure the eye lands on first, before it works through the supporting detail. The job of this family is headline, not exploration.",
     "crumbs": [
-      "Chart types"
+      "Chart types",
+      "KPIs & big numbers"
     ]
   },
   {
-    "objectID": "chart-types/deviation.html",
-    "href": "chart-types/deviation.html",
-    "title": "Difference from a baseline",
+    "objectID": "chart-types/kpis.html#the-big-number-ban",
+    "href": "chart-types/kpis.html#the-big-number-ban",
+    "title": "KPIs & big numbers",
+    "section": "The big number (BAN)",
+    "text": "The big number (BAN)\nA BAN — Big Aggregate Number (or, less politely, Big A** Number) — is a headline metric shown large, with just enough context to be read at a glance: a comparison and a small trend. It is the dashboard equivalent of a topline sentence.\n\n\n\nThe number does the work; everything else is there to keep it honest. A bare “55%” tells you nothing about whether that is good, improving, or alarming — so the tile adds a label (what is being measured, and when), a change cue (▲ 0.8 pts vs 2024), and a sparkline (the path that got us here). That is the whole idea: context is what turns a number into a decision.",
+    "crumbs": [
+      "Chart types",
+      "KPIs & big numbers"
+    ]
+  },
+  {
+    "objectID": "chart-types/kpis.html#anatomy-of-a-big-number",
+    "href": "chart-types/kpis.html#anatomy-of-a-big-number",
+    "title": "KPIs & big numbers",
+    "section": "Anatomy of a big number",
+    "text": "Anatomy of a big number\nA well-built BAN has five parts, and no more:\n\nThe label — what this measures and over what period. Small, grey, above the number. (“Grade-level proficiency · 2025.”)\nThe number — the indicator itself, by far the largest element. This is the only thing a reader is guaranteed to take away.\nThe comparison — the figure on its own is just a value; pair it with a previous period, a target, or a goal so the reader knows whether to be pleased.\nThe change cue — the one colored element. Teal for a rise, rust for a fall. Color earns its place here because direction is the judgment.\nThe supporting micro-chart — a sparkline or tiny bar that shows the trend without axes or labels. It answers “is this a blip or a pattern?”\n\n\nColor only the change cue. In the example above, the label is grey, the number is near-black, and only the ▲ change is colored. One accent keeps the eye on the single thing that carries a verdict. A BAN wearing four colors is a BAN with no focus.",
+    "crumbs": [
+      "Chart types",
+      "KPIs & big numbers"
+    ]
+  },
+  {
+    "objectID": "chart-types/kpis.html#ten-principles-for-a-big-number-that-works",
+    "href": "chart-types/kpis.html#ten-principles-for-a-big-number-that-works",
+    "title": "KPIs & big numbers",
+    "section": "Ten principles for a big number that works",
+    "text": "Ten principles for a big number that works\nNCDPI’s BAN guidance adapts Aurélien Vautier’s “Big Numbers” framework — the single best treatment of this pattern we’ve found. The four words he opens with are the test every tile should pass: a big number should be actionable, accessible, attainable, and accurate. His ten principles, in our words:\n\nPositioning — place big numbers prominently: the top, or the left, where the reading eye starts (see our dashboard layout guidance on the Z-pattern).\nKey insight — a BAN should carry a number worth deciding on, not just a number that was easy to compute. If no one acts on it, it doesn’t earn the size.\nMinimalist — clean, simple, free of clutter. The number is the design.\nSupporting visuals — pair the number with a small chart (a sparkline, a bar) to show trend or change over time.\nPerspective — give the number a frame of reference: a prior period, a target, a goal. This is the difference between “55%” and “55%, up from 45% in 2021.”\nExploration — on an interactive dashboard, a BAN can be an entry point — click it to drill into the detail behind it, or let it reflect the current filter.\nColor with care — use color sparingly, to flag a change or an alert, never as decoration (NCDPI: this is the same rule as our color conventions — color means something).\nLimit the quantity — a wall of big numbers is no big number at all. Keep a dashboard to a few, so each can still command attention.\nFormatting — standardize fonts, decimals, and units across every tile so the set reads as one system. (Round to whole points unless a fraction is the message.)\nActionable — let the number lead somewhere: a drill-down, a linked view, the data behind it. The big number is the start of the question, not the end.",
+    "crumbs": [
+      "Chart types",
+      "KPIs & big numbers"
+    ]
+  },
+  {
+    "objectID": "chart-types/kpis.html#four-ways-to-add-context",
+    "href": "chart-types/kpis.html#four-ways-to-add-context",
+    "title": "KPIs & big numbers",
+    "section": "Four ways to add context",
+    "text": "Four ways to add context\nThe same metric can be dressed for different jobs. Vautier names four common variations — each adds a different kind of context to the headline figure:\n\nThe Versus — two numbers side by side (this year vs. last), so the reader makes the comparison directly.\nThe Storyteller — the number plus a short sentence of narrative (“up 0.8 points; on pace to clear 56% next year”). Best when the so-what needs spelling out.\nThe Textual Versus — the comparison folded into a compact line of text rather than two large figures. Quietest of the four; good when space is tight.\nThe Bullet graph — the number measured against a target in a small bar. When the question is “are we hitting the goal?”, this is the strongest of the four — and it’s a chart type in its own right (below).",
+    "crumbs": [
+      "Chart types",
+      "KPIs & big numbers"
+    ]
+  },
+  {
+    "objectID": "chart-types/kpis.html#the-bullet-chart",
+    "href": "chart-types/kpis.html#the-bullet-chart",
+    "title": "KPIs & big numbers",
+    "section": "The bullet chart",
+    "text": "The bullet chart\nA bullet chart is the natural next step from a BAN: it keeps the compact, glance-able footprint but adds an explicit target. The bar is the actual value; the tick is the goal; the faint background band gives a qualitative range. It answers “did we hit it?” for a whole list of categories at once.\n\n\n\n\nThe bullet chart also appears under difference from a baseline — actual-vs-target is a deviation story as much as a KPI one. Same chart, two jobs.",
+    "crumbs": [
+      "Chart types",
+      "KPIs & big numbers"
+    ]
+  },
+  {
+    "objectID": "chart-types/kpis.html#ncdpi-specifics",
+    "href": "chart-types/kpis.html#ncdpi-specifics",
+    "title": "KPIs & big numbers",
+    "section": "NCDPI specifics",
+    "text": "NCDPI specifics\n\nLabel school years by the spring. Write 2025, not “2024–25” — the BAN has no room to explain a hyphenated range, and the spring year is our house convention.\nValence lives on the change cue, not the number. The proficiency figure itself is near-black; teal/rust is reserved for the direction of change, where a judgment is actually being made.\n\n\nThe ten principles and the four variations on this page adapt Aurélien Vautier’s “10 Commandments of Big Numbers” framework — see his work at datavizclarity.com. To see the four variations live and interactive, Felipe Sebben rebuilt them faithfully in Tableau: The 10 Commandments of Big Numbers in Practice. The NCDPI examples above use real, public accountability data and the NCDPI brand palette.",
+    "crumbs": [
+      "Chart types",
+      "KPIs & big numbers"
+    ]
+  },
+  {
+    "objectID": "chart-types/distributions.html",
+    "href": "chart-types/distributions.html",
+    "title": "Distributions",
     "section": "",
-    "text": "When the difference itself is the message — change from last year, above/below a target, or the gap between two groups — plot the difference directly.",
+    "text": "Reach for a distribution chart when the spread is the story — not a single average, but how values are arranged around it.",
     "crumbs": [
       "Chart types",
-      "Difference from a baseline"
+      "Distributions"
     ]
   },
   {
-    "objectID": "chart-types/deviation.html#graph-the-delta",
-    "href": "chart-types/deviation.html#graph-the-delta",
-    "title": "Difference from a baseline",
-    "section": "Graph the delta",
-    "text": "Graph the delta\nDon’t make the reader subtract two bars by eye. A diverging bar against a zero line puts the change front and centre, and a constant gap stays the same size everywhere (two raw lines make a fixed gap look like it shrinks as values rise).",
+    "objectID": "chart-types/distributions.html#histogram",
+    "href": "chart-types/distributions.html#histogram",
+    "title": "Distributions",
+    "section": "Histogram",
+    "text": "Histogram\nShows the shape of one numeric variable: where schools cluster, and whether the spread is symmetric, skewed, or has two humps.",
     "crumbs": [
       "Chart types",
-      "Difference from a baseline"
+      "Distributions"
     ]
   },
   {
-    "objectID": "chart-types/deviation.html#dumbbell-the-gap-between-two-points",
-    "href": "chart-types/deviation.html#dumbbell-the-gap-between-two-points",
-    "title": "Difference from a baseline",
-    "section": "Dumbbell: the gap between two points",
-    "text": "Dumbbell: the gap between two points\nA dumbbell keeps both values but draws attention to the distance between them.",
+    "objectID": "chart-types/distributions.html#box-plot",
+    "href": "chart-types/distributions.html#box-plot",
+    "title": "Distributions",
+    "section": "Box plot",
+    "text": "Box plot\nCompares several distributions at once — median, quartiles, and outliers side by side. For staff and analyst audiences; add a one-line explainer for the public.\n\n\n\n\nA single average can hide a bimodal or skewed distribution. If two schools both “average a C” but one is all-C and the other is half-A/half-F, the distribution is the honest picture.",
     "crumbs": [
       "Chart types",
-      "Difference from a baseline"
+      "Distributions"
     ]
   },
   {
-    "objectID": "chart-types/deviation.html#rating-scale-likert-data",
-    "href": "chart-types/deviation.html#rating-scale-likert-data",
-    "title": "Difference from a baseline",
-    "section": "Rating-scale (Likert) data",
-    "text": "Rating-scale (Likert) data\nCentre a diverging stacked bar on the neutral response: disagree extends left, agree extends right. Never use a pie for survey data.\n\n\n\n\nThe survey numbers above are synthetic demo data, not real NCDPI results.",
-    "crumbs": [
-      "Chart types",
-      "Difference from a baseline"
-    ]
-  },
-  {
-    "objectID": "chart-types/bar-charts.html",
-    "href": "chart-types/bar-charts.html",
-    "title": "Bar charts",
+    "objectID": "chart-types/correlation.html",
+    "href": "chart-types/correlation.html",
+    "title": "Relationships",
     "section": "",
-    "text": "The bar chart is the workhorse of comparison: it encodes values as length on a common baseline, which is one of the most accurate things the human eye can do.",
+    "text": "When you want to show whether two numbers move together, plot them against each other. Position on two scales is the most accurate read there is.",
     "crumbs": [
       "Chart types",
-      "Bar charts"
+      "Relationships"
     ]
   },
   {
-    "objectID": "chart-types/bar-charts.html#comparing-categories",
-    "href": "chart-types/bar-charts.html#comparing-categories",
-    "title": "Bar charts",
-    "section": "Comparing categories",
-    "text": "Comparing categories\nWhen you have one number per category, sort by value and use a single color. With more than five categories you do not need a different color for each bar — position already does the work.\n\n\n\n\nAlways start the value axis at zero. Bars encode magnitude by length, so a truncated axis exaggerates differences and misleads the reader.",
+    "objectID": "chart-types/correlation.html#scatterplot",
+    "href": "chart-types/correlation.html#scatterplot",
+    "title": "Relationships",
+    "section": "Scatterplot",
+    "text": "Scatterplot\nEach dot is a school. The shape reveals direction, strength, and outliers. Add a trend line if the relationship is the headline.",
     "crumbs": [
       "Chart types",
-      "Bar charts"
+      "Relationships"
+    ]
+  },
+  {
+    "objectID": "chart-types/correlation.html#bubble-chart",
+    "href": "chart-types/correlation.html#bubble-chart",
+    "title": "Relationships",
+    "section": "Bubble chart",
+    "text": "Bubble chart\nAdd a third measure as bubble area — but read area as approximate, never precise, and keep the count modest.\n\n\n\n\nCorrelation isn’t causation, and a trend line invites that leap. Annotate what the relationship does and doesn’t mean for your audience.",
+    "crumbs": [
+      "Chart types",
+      "Relationships"
+    ]
+  },
+  {
+    "objectID": "chart-parts/tooltips.html",
+    "href": "chart-parts/tooltips.html",
+    "title": "Tooltips",
+    "section": "",
+    "text": "A tooltip is the little box that appears when a reader hovers over a mark. Used well, it lets a reader check their reading of a chart. Used carelessly — which is the default in most tools — it dumps raw field names and unformatted numbers, and adds noise instead of clarity.",
+    "crumbs": [
+      "Tooltips"
+    ]
+  },
+  {
+    "objectID": "chart-parts/tooltips.html#the-one-rule-a-tooltip-supplements-it-never-carries-the-message",
+    "href": "chart-parts/tooltips.html#the-one-rule-a-tooltip-supplements-it-never-carries-the-message",
+    "title": "Tooltips",
+    "section": "The one rule: a tooltip supplements, it never carries the message",
+    "text": "The one rule: a tooltip supplements, it never carries the message\nThe science is clear that the title and text are what readers remember — when people recall a visualization, the title is the single most-mentioned element. The main point therefore has to live where everyone can see it: the message title, the subtitle, the direct labels. A tooltip is invisible until hovered, so anything you hide inside one is, for most readers, not there at all.\nResearch on interactive charts reinforces this from a second direction: interacting with a chart (hovering, filtering, drilling) can actually lower how much specific information a reader retains, because the effort of working the interface competes with encoding the data. Interaction earns its keep through engagement — the sense of exploring for oneself — not through recall. So lean on tooltips for exploration and confirmation, never as the only home for a fact.\nThe practical consequence:\n\nNever put anything essential only in a tooltip. Keyboard users, touch users, screen-reader users, and anyone reading a printed or PowerPoint export never see it. The data table and alt text are what carry the chart for them.\nDon’t repeat what’s already directly labeled. If the value is on the bar, a tooltip showing the same value is pure noise.",
+    "crumbs": [
+      "Tooltips"
+    ]
+  },
+  {
+    "objectID": "chart-parts/tooltips.html#two-tooltips-worth-building",
+    "href": "chart-parts/tooltips.html#two-tooltips-worth-building",
+    "title": "Tooltips",
+    "section": "Two tooltips worth building",
+    "text": "Two tooltips worth building\nFor NCDPI work, almost every useful tooltip is one of two kinds.\n\n1. The sentence tooltip — help the reader check their understanding\nOn a chart with a clear message, the most useful tooltip puts into a sentence what the reader is looking at, by synthesizing the subtitle’s contract (metric, unit, geography, period) with the value of the mark under the cursor. It lets a reader confirm they’ve read the chart correctly.\nOn the proficiency-levels column chart, hovering the rust “Level 1 or 2” bar would read:\n\n45% of students scored at Level 1 or 2 (not proficient) on tests across all subjects and grades in 2025.\n\nThat single sentence stitches together the what (Level 1 or 2 = not proficient), the who/where/when (all subjects and grades, 2025), and the value (45%) — exactly the contract the subtitle already promises, now spoken for one specific mark. Best on charts a general audience reads slowly, where a plain-language gloss removes any doubt.\n\n\n2. The value tooltip — zoom in on a crowded chart\nWhen a chart has too many marks to label — a scatter of all 2,500-odd schools, a time series with a value at every year — direct labels would collide, so the marks go unlabeled. Here the tooltip does one small job: reveal the value of the mark you’re pointing at. Hovering a point simply reads:\n\n85%\n\nNo sentence, no fuss — the chart already established the context; the reader just wants the number behind this one dot. This is the honest use of interactivity to “manage visual noise”: the overview stays clean, and the precise value is one hover away for anyone who wants it.",
+    "crumbs": [
+      "Tooltips"
+    ]
+  },
+  {
+    "objectID": "chart-parts/tooltips.html#formatting-a-tooltip-so-it-doesnt-undo-your-chart",
+    "href": "chart-parts/tooltips.html#formatting-a-tooltip-so-it-doesnt-undo-your-chart",
+    "title": "Tooltips",
+    "section": "Formatting a tooltip so it doesn’t undo your chart",
+    "text": "Formatting a tooltip so it doesn’t undo your chart\nIf you do build one — in Tableau, Power BI, or a hand-authored Vega-Lite spec — hold it to the same standard as the rest of the chart:\n\nWhole words, not field names. “Grade-level proficiency,” never prof_glp_pct.\nMatch the chart’s number formatting. Same rounding, same units (%, pts), same spring-year labeling (2025, not 2024-25). A tooltip that shows 0.4503 under a chart that says 45% reads as a different number.\nOne mark, one tooltip — keep it short. Don’t list every field in the data behind the point. Pick the value and the minimum context that makes it legible.\nDecide if it earns its place at all. A fully labeled, well-titled chart often needs no tooltip. Add one when it genuinely helps a reader explore or confirm — not by reflex.\n\n\nA good tooltip is a check, not a crutch. If a reader needs the hover to grasp the main point, the chart hasn’t done its job — fix the title, subtitle, or labels first, and let the tooltip stay an optional second look.",
+    "crumbs": [
+      "Tooltips"
     ]
   },
   {
@@ -361,6 +468,27 @@
     "title": "Best practices",
     "section": "NCDPI standing rules, in one place",
     "text": "NCDPI standing rules, in one place\n\n\nFive colors maximum (three or four is better).\nPromote small multiples — they’re under-used here.\nStacked bars: 2–3 segments only. Beyond that, separate bars on a common baseline.\nBreak lines at missing years (e.g., the 2020–21 COVID gap) — never interpolate.\nGraph the delta — when the message is a difference, plot the difference itself."
+  },
+  {
+    "objectID": "best-practices/axis-scales.html",
+    "href": "best-practices/axis-scales.html",
+    "title": "Axis scales",
+    "section": "",
+    "text": "How far you let an axis run is a design decision, not a default. For a bounded, aspirational metric — graduation rate, proficiency, attendance, any percent where 100% is the real goal — start the value axis at the goal by default. The reader should see how far there is left to go, not just how the categories rank against each other.\nBut there’s a cost: when every value sits in a narrow band near the top, a full 0–100 axis makes them look identical. The same eight regions below differ by 5.5 points — invisible on the goal-anchored axis, obvious when zoomed."
+  },
+  {
+    "objectID": "best-practices/axis-scales.html#the-rule",
+    "href": "best-practices/axis-scales.html#the-rule",
+    "title": "Axis scales",
+    "section": "The rule",
+    "text": "The rule\n\nDefault to the real ceiling. Anchor a bounded aspirational metric to 0–100 (or 0–whatever the goal is) unless you have a reason not to. It keeps the distance to the goal honest.\nBars are non-negotiable: always zero-based. A bar encodes its value as length, so a cut bar lies about magnitude. If you want to zoom, you must switch to a position mark — a dot or a line — where the value is read from position, not bar length. (That’s why the example above uses dots.)\nZoom only with cause, and signal it. When the message is the difference between near-tied values, a zoomed axis is fair for dots and lines — but make the cut obvious (label the axis range, don’t start it at a round-looking number that reads as zero)."
+  },
+  {
+    "objectID": "best-practices/axis-scales.html#having-it-both-ways",
+    "href": "best-practices/axis-scales.html#having-it-both-ways",
+    "title": "Axis scales",
+    "section": "Having it both ways",
+    "text": "Having it both ways\nWhen you genuinely need the goal context and the fine variation, you have three honest moves, in order of preference:\n\nGoal-anchored axis — when “how far from the goal” is the message, just use 0–100 and stop.\nHonest zoom with a goal reference — zoom the axis to the data, but keep the goal in view: draw a faint reference line or band at the target and annotate the gap. One chart, both facts.\nPaired combo — show the goal-anchored chart and the zoomed chart together (as above), labeled, so the reader sees the trade-off directly. This is the most explicit teaching version.\n\n\nA true picture-in-picture inset — a small zoomed chart floating inside the full-range one — is not possible in our Vega-Lite charts (Vega-Lite lays views out side by side, not overlapping). If you specifically want that magnified-inset look, build it in matplotlib (an inset axes) and place it as an image, or author it in full Vega. For the live, interactive charts on this site, the paired combo above is the equivalent."
   },
   {
     "objectID": "best-practices/annotation.html",
@@ -560,69 +688,79 @@
     ]
   },
   {
-    "objectID": "chart-types/correlation.html",
-    "href": "chart-types/correlation.html",
-    "title": "Relationships",
+    "objectID": "chart-types/bar-charts.html",
+    "href": "chart-types/bar-charts.html",
+    "title": "Bar charts",
     "section": "",
-    "text": "When you want to show whether two numbers move together, plot them against each other. Position on two scales is the most accurate read there is.",
+    "text": "The bar chart is the workhorse of comparison: it encodes values as length on a common baseline, which is one of the most accurate things the human eye can do.",
     "crumbs": [
       "Chart types",
-      "Relationships"
+      "Bar charts"
     ]
   },
   {
-    "objectID": "chart-types/correlation.html#scatterplot",
-    "href": "chart-types/correlation.html#scatterplot",
-    "title": "Relationships",
-    "section": "Scatterplot",
-    "text": "Scatterplot\nEach dot is a school. The shape reveals direction, strength, and outliers. Add a trend line if the relationship is the headline.",
+    "objectID": "chart-types/bar-charts.html#comparing-categories",
+    "href": "chart-types/bar-charts.html#comparing-categories",
+    "title": "Bar charts",
+    "section": "Comparing categories",
+    "text": "Comparing categories\nWhen you have one number per category, sort by value and use a single color. With more than five categories you do not need a different color for each bar — position already does the work.\n\n\n\n\nAlways start the value axis at zero. Bars encode magnitude by length, so a truncated axis exaggerates differences and misleads the reader.",
     "crumbs": [
       "Chart types",
-      "Relationships"
+      "Bar charts"
     ]
   },
   {
-    "objectID": "chart-types/correlation.html#bubble-chart",
-    "href": "chart-types/correlation.html#bubble-chart",
-    "title": "Relationships",
-    "section": "Bubble chart",
-    "text": "Bubble chart\nAdd a third measure as bubble area — but read area as approximate, never precise, and keep the count modest.\n\n\n\n\nCorrelation isn’t causation, and a trend line invites that leap. Annotate what the relationship does and doesn’t mean for your audience.",
-    "crumbs": [
-      "Chart types",
-      "Relationships"
-    ]
-  },
-  {
-    "objectID": "chart-types/distributions.html",
-    "href": "chart-types/distributions.html",
-    "title": "Distributions",
+    "objectID": "chart-types/deviation.html",
+    "href": "chart-types/deviation.html",
+    "title": "Difference from a baseline",
     "section": "",
-    "text": "Reach for a distribution chart when the spread is the story — not a single average, but how values are arranged around it.",
+    "text": "When the difference itself is the message — change from last year, above/below a target, or the gap between two groups — plot the difference directly.",
     "crumbs": [
       "Chart types",
-      "Distributions"
+      "Difference from a baseline"
     ]
   },
   {
-    "objectID": "chart-types/distributions.html#histogram",
-    "href": "chart-types/distributions.html#histogram",
-    "title": "Distributions",
-    "section": "Histogram",
-    "text": "Histogram\nShows the shape of one numeric variable: where schools cluster, and whether the spread is symmetric, skewed, or has two humps.",
+    "objectID": "chart-types/deviation.html#graph-the-delta",
+    "href": "chart-types/deviation.html#graph-the-delta",
+    "title": "Difference from a baseline",
+    "section": "Graph the delta",
+    "text": "Graph the delta\nDon’t make the reader subtract two bars by eye. A diverging bar against a zero line puts the change front and centre, and a constant gap stays the same size everywhere (two raw lines make a fixed gap look like it shrinks as values rise).",
     "crumbs": [
       "Chart types",
-      "Distributions"
+      "Difference from a baseline"
     ]
   },
   {
-    "objectID": "chart-types/distributions.html#box-plot",
-    "href": "chart-types/distributions.html#box-plot",
-    "title": "Distributions",
-    "section": "Box plot",
-    "text": "Box plot\nCompares several distributions at once — median, quartiles, and outliers side by side. For staff and analyst audiences; add a one-line explainer for the public.\n\n\n\n\nA single average can hide a bimodal or skewed distribution. If two schools both “average a C” but one is all-C and the other is half-A/half-F, the distribution is the honest picture.",
+    "objectID": "chart-types/deviation.html#dumbbell-the-gap-between-two-points",
+    "href": "chart-types/deviation.html#dumbbell-the-gap-between-two-points",
+    "title": "Difference from a baseline",
+    "section": "Dumbbell: the gap between two points",
+    "text": "Dumbbell: the gap between two points\nA dumbbell keeps both values but draws attention to the distance between them.",
     "crumbs": [
       "Chart types",
-      "Distributions"
+      "Difference from a baseline"
+    ]
+  },
+  {
+    "objectID": "chart-types/deviation.html#rating-scale-likert-data",
+    "href": "chart-types/deviation.html#rating-scale-likert-data",
+    "title": "Difference from a baseline",
+    "section": "Rating-scale (Likert) data",
+    "text": "Rating-scale (Likert) data\nCentre a diverging stacked bar on the neutral response: disagree extends left, agree extends right. Never use a pie for survey data.\n\n\n\n\nThe survey numbers above are synthetic demo data, not real NCDPI results.",
+    "crumbs": [
+      "Chart types",
+      "Difference from a baseline"
+    ]
+  },
+  {
+    "objectID": "chart-types/index.html",
+    "href": "chart-types/index.html",
+    "title": "Chart types",
+    "section": "",
+    "text": "Charts are organised here by the job they do — the message you want your audience to take away — not by the data type. Not sure which job you have? The Chart Chooser will walk you to a recommendation.\nEvery example uses real, public NCDPI school data and the NCDPI brand palette.\n\n\n  \n    \n      \n        \n        \n        \n      \n    \n    Compare and rank\n    Bar charts, dots, lollipops, dumbbells\n  \n\n  \n    \n      \n        \n        \n          \n          \n          \n          \n          \n          \n        \n      \n    \n    Change over time\n    Lines, small multiples, slope charts\n  \n\n  \n    \n      \n        \n        \n        \n      \n    \n    Parts of a whole\n    Pie, stacked bar, waffle\n  \n\n  \n    \n      \n        \n        \n        \n        \n        \n        \n        \n      \n    \n    Distribution\n    Histogram, box plot\n  \n\n  \n    \n      \n        \n          \n          \n          \n          \n          \n          \n          \n          \n        \n      \n    \n    Relationships\n    Scatter, bubble\n  \n\n  \n    \n      \n        \n        \n        \n        \n        \n      \n    \n    Difference from a baseline\n    Diverging bars, dumbbells, Likert\n  \n\n  \n    \n      \n        \n        \n        \n        \n      \n    \n    Geographic patterns\n    Choropleth, point, hex maps\n  \n\n  \n    \n      \n        92%\n      \n    \n    Headline number\n    BAN (big number), bullet chart, KPI tile",
+    "crumbs": [
+      "Chart types"
     ]
   },
   {

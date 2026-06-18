@@ -52,7 +52,12 @@
         if (spec.width == null && spec.autosize == null && !spec.facet && !spec.repeat) {
           spec.width = "container";
         }
-        return vegaEmbed(el, spec, { actions: false, renderer: "svg" }).then(function (result) {
+        // tooltip:false suppresses Vega-Lite's auto-generated (unformatted) tooltips
+        // across every gallery/chooser chart. Tooltip behavior doesn't vary by chart
+        // type, so it's taught generically on the chart-elements page instead of being
+        // demoed (badly) on 28 specs. The per-spec "tooltip" encodings are now inert;
+        // left in place as dead config rather than editing 26 files.
+        return vegaEmbed(el, spec, { actions: false, renderer: "svg", tooltip: false }).then(function (result) {
           // Convention 7: render the spec's source note (usermeta.source) as a
           // caption below the chart. Inserted only after a successful embed, and
           // only once (guards against chooser/gallery re-renders).

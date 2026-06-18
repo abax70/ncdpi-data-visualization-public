@@ -1,29 +1,56 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Small-multiples grid of eight line charts, one per SBE region, tracking average SPG score from 2019 to 2023 on a shared 45–75 scale. Each line breaks over the 2020–21 COVID gap, and every region ends lower in 2023 than it started in 2019.",
+  "description": "Small-multiples grid of eight line charts, one per SBE region, tracking 4-year cohort graduation rate from 2019 to 2025 on a shared 80–95 percent scale. Every region's line is continuous through COVID — graduation is completion-based — and rates hold steady or rise across the period.",
   "title": {
-    "text": "Average SPG score over time, by region",
-    "subtitle": "Eight regions — too many for one colorful line chart. Small multiples give each its own panel and one shared scale. (2020–21 COVID gap kept honest.)"
+    "text": "Graduation rates held steady across every region through COVID",
+    "subtitle": "Cohort graduation rate (4-year, %), by SBE region, 2019–2025 — shared axis 80–95%. Eight regions: too many for one colorful line chart."
   },
   "data": {
-    "url": "data/region_trend.csv",
-    "format": { "type": "csv", "parse": { "avg_spg_score": "number", "year": "number" } }
+    "url": "data/region_cgr_trend.csv",
+    "format": { "type": "csv", "parse": { "grad_rate": "number", "year": "number" } }
   },
   "transform": [
-    { "filter": "isValid(datum.avg_spg_score) && datum.avg_spg_score > 0" },
-    { "calculate": "datum.year <= 2019 ? 'pre' : 'post'", "as": "era" }
+    { "calculate": "datum.year === 2025 ? datum.grad_rate : null", "as": "_grad_rate_2025_only" },
+    { "joinaggregate": [ { "op": "max", "field": "_grad_rate_2025_only", "as": "grad_rate_2025" } ], "groupby": ["region"] }
   ],
   "columns": 4,
-  "facet": { "field": "region", "type": "nominal", "title": null, "sort": ["Northwest", "Western", "Southwest", "Piedmont Triad", "North Central", "Sandhills", "Southeast", "Northeast"] },
+  "facet": {
+    "field": "region", "type": "nominal", "title": null,
+    "sort": { "field": "grad_rate_2025", "op": "max", "order": "descending" },
+    "header": { "labelFontWeight": "bold", "labelAnchor": "start", "labelFontSize": 11, "labelColor": "#000000" }
+  },
   "spec": {
     "width": 150,
     "height": 110,
-    "mark": { "type": "line", "point": true, "strokeWidth": 2, "color": "#003A70" },
-    "encoding": {
-      "x": { "field": "year", "type": "quantitative", "title": null, "axis": { "values": [2019, 2021, 2023], "format": "d", "labelFontSize": 9 } },
-      "y": { "field": "avg_spg_score", "type": "quantitative", "title": null, "scale": { "domain": [45, 75] } },
-      "detail": { "field": "era" }
-    }
+    "layer": [
+      {
+        "mark": { "type": "line", "point": { "filled": true, "size": 28, "color": "#003A70" }, "strokeWidth": 2, "color": "#003A70" },
+        "encoding": {
+          "x": {
+            "field": "year", "type": "quantitative", "title": null,
+            "axis": { "values": [2019, 2022, 2025], "format": "d", "labelFontSize": 9, "ticks": false, "domainColor": "#DEDEDE" }
+          },
+          "y": {
+            "field": "grad_rate", "type": "quantitative", "title": null,
+            "scale": { "domain": [80, 95] },
+            "axis": { "values": [80, 85, 90, 95], "labelFontSize": 9 }
+          },
+          "tooltip": [
+            { "field": "year", "title": "Year" },
+            { "field": "grad_rate", "title": "Grad rate (%)" }
+          ]
+        }
+      },
+      {
+        "transform": [ { "filter": "datum.year === 2019 || datum.year === 2025" } ],
+        "mark": { "type": "text", "dy": -9, "fontSize": 9, "color": "#525A60" },
+        "encoding": {
+          "x": { "field": "year", "type": "quantitative" },
+          "y": { "field": "grad_rate", "type": "quantitative", "scale": { "domain": [80, 95] } },
+          "text": { "field": "grad_rate", "type": "quantitative", "format": ".0f" }
+        }
+      }
+    ]
   },
-  "usermeta": { "source": "Source: NCDPI sample school data, SY2019–2023. Style-guide demo." }
+  "usermeta": { "source": "Source: NCDPI cohort graduation rate (4-year standard), 2019–2025. No COVID gap — graduation is completion-based. Style-guide demo." }
 }

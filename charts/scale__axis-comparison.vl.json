@@ -1,0 +1,61 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Two dot plots of the 2025 four-year cohort graduation rate for North Carolina's eight SBE regions, stacked to compare axis scaling. The top plot uses a full 0–100 axis, where the eight regions look nearly identical; the bottom plot zooms the axis to 84–94 percent, where the 5.5-point spread from Sandhills (86.1) to Western (91.6) becomes visible. Dots, not bars, so zooming the axis is legitimate.",
+  "title": {
+    "text": "Same data, two axis choices",
+    "subtitle": "4-year cohort graduation rate by SBE region, 2025. Graduation rate is bounded and aspirational — 100% is the goal."
+  },
+  "data": {
+    "url": "data/region_snapshot_2025.csv",
+    "format": { "type": "csv", "parse": { "grad_rate": "number" } }
+  },
+  "resolve": { "scale": { "y": "shared" } },
+  "spacing": 38,
+  "vconcat": [
+    {
+      "title": { "text": "Anchored to the 100% goal — axis 0–100", "subtitle": "Honest about the distance left to the goal, but the regions look identical.", "anchor": "start", "fontSize": 13, "subtitleFontSize": 11, "subtitleColor": "#525A60" },
+      "width": 380,
+      "height": 150,
+      "layer": [
+        {
+          "mark": { "type": "point", "filled": true, "color": "#003A70", "size": 95 },
+          "encoding": {
+            "x": { "field": "grad_rate", "type": "quantitative", "title": null, "scale": { "domain": [0, 100] }, "axis": { "grid": false, "domain": true, "domainColor": "#525A60", "values": [0, 20, 40, 60, 80, 100] } },
+            "y": { "field": "region", "type": "nominal", "title": null, "sort": { "field": "grad_rate", "op": "max", "order": "descending" }, "axis": { "domain": false, "ticks": false, "labelAlign": "left", "labelPadding": 92, "labelColor": "#1A2128" } }
+          }
+        },
+        {
+          "mark": { "type": "text", "align": "left", "dx": 9, "fontSize": 11, "color": "#003A70" },
+          "encoding": {
+            "x": { "field": "grad_rate", "type": "quantitative", "scale": { "domain": [0, 100] } },
+            "y": { "field": "region", "type": "nominal", "sort": { "field": "grad_rate", "op": "max", "order": "descending" } },
+            "text": { "field": "grad_rate", "format": ".1f" }
+          }
+        }
+      ]
+    },
+    {
+      "title": { "text": "Zoomed to the data — axis 84–94 (not 0)", "subtitle": "The 5.5-point spread reads clearly. Allowed for position marks (dots, lines) — never bars — and the cut axis must be signaled.", "anchor": "start", "fontSize": 13, "subtitleFontSize": 11, "subtitleColor": "#525A60" },
+      "width": 380,
+      "height": 150,
+      "layer": [
+        {
+          "mark": { "type": "point", "filled": true, "color": "#003A70", "size": 95 },
+          "encoding": {
+            "x": { "field": "grad_rate", "type": "quantitative", "title": null, "scale": { "domain": [84, 94] }, "axis": { "grid": false, "domain": true, "domainColor": "#525A60", "values": [84, 86, 88, 90, 92, 94] } },
+            "y": { "field": "region", "type": "nominal", "title": null, "sort": { "field": "grad_rate", "op": "max", "order": "descending" }, "axis": { "domain": false, "ticks": false, "labelAlign": "left", "labelPadding": 92, "labelColor": "#1A2128" } }
+          }
+        },
+        {
+          "mark": { "type": "text", "align": "left", "dx": 9, "fontSize": 11, "color": "#003A70" },
+          "encoding": {
+            "x": { "field": "grad_rate", "type": "quantitative", "scale": { "domain": [84, 94] } },
+            "y": { "field": "region", "type": "nominal", "sort": { "field": "grad_rate", "op": "max", "order": "descending" } },
+            "text": { "field": "grad_rate", "format": ".1f" }
+          }
+        }
+      ]
+    }
+  ],
+  "usermeta": { "source": "Source: NCDPI public accountability data (4-year cohort graduation rate), 2025. Style-guide demo." }
+}

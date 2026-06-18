@@ -1,35 +1,54 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Stacked area chart of North Carolina's graduation cohort from 2016 to 2025, split into students who graduated in four years (teal, on the baseline) and those who did not (muted rust, on top). Graduates grew from about 97,700 to 111,500 while non-completers held near 15,000–16,000.",
+  "description": "Stacked area chart showing the composition of North Carolina test results by achievement level from 2021 to 2025 — a part-to-whole shown over time. The four bands (Not proficient, then Level 3, Level 4, Level 5) sum to 100 percent each year. The not-proficient band (rust, on the baseline) shrinks from 54.6 percent in 2021 to 45.0 percent in 2025, while the three proficient levels above it (Level 3, 4, 5, in a pale-to-dark teal sequence) grow — the post-COVID recovery seen as a shift in composition rather than a single line. The 2025 share of each band is labeled at the right.",
   "title": {
-    "text": "NC graduation cohort by outcome, 2016–2025",
-    "subtitle": "Students entering 9th grade four years earlier. Area encodes a real quantity — total height is the cohort; the bands are its composition."
+    "text": "The below-proficient share fell from 55% to 45% since 2021",
+    "subtitle": ["Composition of NC test results by achievement level (% of all results), 2021–2025 — a part-to-whole over time.", "Grade-level proficient (GLP) = Level 3 and above; the rust-to-teal split marks that threshold."]
   },
   "data": {
-    "url": "data/state_cohort_outcomes_trend.csv",
-    "format": { "type": "csv", "parse": { "students": "number", "year": "number" } }
+    "url": "data/state_achievement_levels_trend.csv",
+    "format": { "type": "csv", "parse": { "pct": "number", "year": "number" } }
   },
   "transform": [
-    { "calculate": "indexof(['Graduated in 4 years', 'Did not graduate in 4 years'], datum.outcome)", "as": "outcome_order" }
+    { "calculate": "indexof(['Not proficient', 'Level 3', 'Level 4', 'Level 5'], datum.level)", "as": "level_order" },
+    { "stack": "pct", "groupby": ["year"], "sort": [{ "field": "level_order", "order": "ascending" }], "offset": "zero", "as": ["yl", "yh"] },
+    { "calculate": "(datum.yl + datum.yh) / 2", "as": "ymid" },
+    { "calculate": "format(datum.pct, '.0f') + '%'", "as": "lab" }
   ],
   "height": 300,
-  "mark": { "type": "area", "stroke": "white", "strokeWidth": 1, "line": false },
   "encoding": {
     "x": { "field": "year", "type": "quantitative", "title": null,
-      "axis": { "format": "d", "values": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025] },
-      "scale": { "domain": [2016, 2025] } },
-    "y": { "field": "students", "type": "quantitative", "title": null, "stack": "zero", "axis": { "format": "~s" } },
-    "color": {
-      "field": "outcome", "type": "nominal", "title": null,
-      "scale": { "domain": ["Graduated in 4 years", "Did not graduate in 4 years"], "range": ["#077890", "#C88C78"] },
-      "legend": { "orient": "bottom" }
-    },
-    "order": { "field": "outcome_order", "type": "ordinal" },
-    "tooltip": [
-      { "field": "year", "title": "Year" },
-      { "field": "outcome", "title": "Outcome" },
-      { "field": "students", "title": "Students", "format": "," }
-    ]
+      "axis": { "format": "d", "values": [2021, 2022, 2023, 2024, 2025] },
+      "scale": { "domain": [2021, 2025.55] } }
   },
-  "usermeta": { "source": "Source: NCDPI public accountability data (4-year cohort outcomes), 2016–2025. Style-guide demo." }
+  "layer": [
+    {
+      "mark": { "type": "area", "stroke": "white", "strokeWidth": 1, "line": false },
+      "encoding": {
+        "y": { "field": "pct", "type": "quantitative", "title": null, "stack": "zero",
+          "scale": { "domain": [0, 100] }, "axis": { "values": [0, 25, 50, 75, 100], "format": "d" } },
+        "color": {
+          "field": "level", "type": "nominal", "title": null,
+          "sort": ["Not proficient", "Level 3", "Level 4", "Level 5"],
+          "scale": { "domain": ["Not proficient", "Level 3", "Level 4", "Level 5"], "range": ["#B33A12", "#C2D9DC", "#6BA6AE", "#077890"] },
+          "legend": { "orient": "bottom" }
+        },
+        "order": { "field": "level_order", "type": "ordinal" },
+        "tooltip": [
+          { "field": "year", "title": "Year" },
+          { "field": "level", "title": "Level" },
+          { "field": "pct", "title": "Share (%)", "format": ".1f" }
+        ]
+      }
+    },
+    {
+      "transform": [ { "filter": "datum.year === 2025" } ],
+      "mark": { "type": "text", "align": "left", "dx": 6, "fontSize": 10, "fontWeight": "bold", "color": "#1A2128" },
+      "encoding": {
+        "y": { "field": "ymid", "type": "quantitative", "scale": { "domain": [0, 100] } },
+        "text": { "field": "lab" }
+      }
+    }
+  ],
+  "usermeta": { "source": "Source: NCDPI accountability test scores (achievement-level distribution), all subjects/grades, 2021–2025. Style-guide demo." }
 }

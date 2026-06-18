@@ -1,32 +1,46 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "100% stacked bar chart showing each SBE region's 2025 mix of School Performance Grade bands — A or B (teal, on the baseline), C (grey), and D or F (rust) — with white separators between segments. In every region, C is the largest band.",
+  "description": "100% stacked bar chart showing each SBE region's 2025 mix of proficiency levels — Level 1 or 2 (rust, on the common left baseline), Level 3 (pale teal), Level 4 (mid teal), and Level 5 (dark teal) — with white separators between segments. Regions are sorted by their below-grade-level share (Level 1 or 2), which is labeled on each bar: it ranges from 41 percent in North Central (bottom) to 51 percent in Sandhills (top).",
   "title": {
-    "text": "School Performance Grade mix by region, 2025",
-    "subtitle": "Share of schools in each grade band. Three ordered segments — A/B on the common baseline — with white separators where fills touch."
+    "text": "Below grade level ranges from 41% (North Central) to 51% (Sandhills)",
+    "subtitle": ["Share of NC students by achievement level, by SBE region, 2025. Below grade level = Level 1 or 2 (below GLP, Level 3+).", "It sits on the common left baseline — sorted and labeled so regions compare precisely."]
   },
-  "data": { "url": "data/region_grade_bands_2025.csv" },
+  "data": { "url": "data/region_proficiency_levels_2025.csv", "format": { "type": "csv", "parse": { "pct": "number" } } },
   "transform": [
-    { "calculate": "indexof(['A or B', 'C', 'D or F'], datum.band)", "as": "band_order" }
+    { "calculate": "indexof(['Level 1 or 2', 'Level 3', 'Level 4', 'Level 5'], datum.level)", "as": "level_order" },
+    { "calculate": "datum.level === 'Level 1 or 2' ? format(datum.pct, '.0f') + '%' : ''", "as": "seg_label" }
   ],
   "height": { "step": 34 },
-  "mark": { "type": "bar", "stroke": "white", "strokeWidth": 1.5 },
   "encoding": {
     "y": { "field": "region", "type": "nominal", "title": null,
-      "sort": ["Northwest", "Western", "Southwest", "Piedmont Triad", "North Central", "Sandhills", "Southeast", "Northeast"] },
-    "x": { "field": "pct", "type": "quantitative", "title": "Share of schools", "stack": "normalize", "axis": { "format": ".0%" } },
-    "color": {
-      "field": "band", "type": "nominal", "title": "Grade band",
-      "scale": { "domain": ["A or B", "C", "D or F"], "range": ["#077890", "#DEDEDE", "#B33A12"] },
-      "legend": { "orient": "bottom" }
-    },
-    "order": { "field": "band_order", "type": "ordinal" },
-    "tooltip": [
-      { "field": "region", "title": "Region" },
-      { "field": "band", "title": "Grade band" },
-      { "field": "pct", "title": "% of schools", "format": ".1f" },
-      { "field": "school_count", "title": "Schools" }
-    ]
+      "sort": ["Sandhills", "Piedmont Triad", "Northeast", "Southeast", "Northwest", "Western", "Southwest", "North Central"],
+      "axis": { "labelAlign": "left", "labelPadding": 88, "ticks": false, "grid": false } },
+    "x": { "field": "pct", "type": "quantitative", "title": null, "stack": "normalize", "axis": { "format": ".0%", "ticks": false, "domain": false, "grid": false } },
+    "order": { "field": "level_order", "type": "ordinal" }
   },
-  "usermeta": { "source": "Source: NCDPI public accountability data (School Performance Grades), 2025. Style-guide demo." }
+  "layer": [
+    {
+      "mark": { "type": "bar", "stroke": "white", "strokeWidth": 1.5 },
+      "encoding": {
+        "color": {
+          "field": "level", "type": "nominal", "title": "Proficiency level",
+          "sort": ["Level 1 or 2", "Level 3", "Level 4", "Level 5"],
+          "scale": { "domain": ["Level 1 or 2", "Level 3", "Level 4", "Level 5"], "range": ["#B33A12", "#C2D9DC", "#6BA6AE", "#077890"] },
+          "legend": { "orient": "bottom" }
+        },
+        "tooltip": [
+          { "field": "region", "title": "Region" },
+          { "field": "level", "title": "Proficiency level" },
+          { "field": "pct", "title": "% of students", "format": ".1f" }
+        ]
+      }
+    },
+    {
+      "mark": { "type": "text", "align": "right", "dx": -5, "fontSize": 10, "fontWeight": "bold", "color": "white" },
+      "encoding": {
+        "text": { "field": "seg_label" }
+      }
+    }
+  ],
+  "usermeta": { "source": "Source: NCDPI accountability test scores (achievement levels, all subjects and grades, all students), by SBE region, 2025. Style-guide demo." }
 }

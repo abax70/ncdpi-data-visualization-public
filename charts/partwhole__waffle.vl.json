@@ -1,9 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Waffle chart of 100 squares in a 10-by-10 grid, each square one percent of North Carolina schools in 2025: 29 navy squares for the 28.5 percent graded A or B, the rest grey for C or lower.",
+  "description": "Waffle chart of 100 squares in a 10-by-10 grid, each square one percent of North Carolina students in 2025: 35 teal squares for the 34.6 percent who reached Level 4 or 5 (college- and career-ready), the rest grey for Levels 1 to 3.",
   "title": {
-    "text": "Schools earning an A or B Performance Grade, 2025",
-    "subtitle": "A waffle makes one share countable: each square is 1 of 100 NC schools — 29 squares for the 28.5% graded A or B."
+    "text": "35 of every 100 NC students reached Level 4 or 5",
+    "subtitle": ["Share of NC students at Level 4 or 5 (college- and", "career-ready, CCR), 2025. Each square = 1% of students."]
   },
   "data": { "url": "data/grade_waffle_2025.csv" },
   "width": 264,
@@ -14,12 +14,12 @@
     "y": { "field": "row", "type": "ordinal", "axis": null },
     "color": {
       "field": "category", "type": "nominal", "title": null,
-      "scale": { "domain": ["A or B", "C or lower"], "range": ["#003A70", "#B7B9BB"] },
+      "scale": { "domain": ["Level 4 or 5", "Levels 1-3"], "range": ["#077890", "#B7B9BB"] },
       "legend": { "orient": "bottom" }
     },
     "tooltip": [
-      { "field": "category", "title": "Grade band" }
+      { "field": "category", "title": "Proficiency level" }
     ]
   },
-  "usermeta": { "source": "Source: NCDPI public accountability data (School Performance Grades), 2025. Style-guide demo." }
+  "usermeta": { "source": "Source: NCDPI accountability test scores (achievement levels, all subjects and grades, all students), 2025. Style-guide demo." }
 }

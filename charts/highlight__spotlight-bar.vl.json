@@ -1,33 +1,195 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Horizontal bar chart of average School Performance Grade scores for North Carolina's eight SBE regions in 2023, sorted highest to lowest. The Sandhills region's bar is highlighted in navy (57.1, the lowest); all other regions are neutral grey.",
+  "description": "Horizontal highlight bar chart of grade-level proficiency for North Carolina's eight SBE regions in 2025, sorted highest to lowest. North Central is highlighted in navy at 58.6 percent; the other seven regions are neutral grey context bars. Sandhills trails at 48.6 percent.",
   "title": {
-    "text": "Average School Performance Grade score by region, 2023",
-    "subtitle": "Every bar neutral grey; one region in navy to draw the eye. Navy marks attention — not good or bad."
+    "text": "North Central leads the state in grade-level proficiency",
+    "subtitle": "Grade-level proficient (GLP), % of students tested, by SBE region, 2025. Navy marks attention — not good or bad."
   },
-  "data": { "url": "data/schools_region_2023.csv", "format": { "type": "csv", "parse": { "avg_spg_score": "number" } } },
+  "data": {
+    "url": "data/region_snapshot_2025.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "proficiency_glp": "number"
+      }
+    }
+  },
   "height": 300,
   "layer": [
     {
-      "mark": { "type": "bar" },
+      "mark": {
+        "type": "bar"
+      },
       "encoding": {
-        "y": { "field": "region", "type": "nominal", "sort": { "field": "avg_spg_score", "op": "max", "order": "descending" }, "title": null },
-        "x": { "field": "avg_spg_score", "type": "quantitative", "title": "Avg SPG score", "scale": { "domain": [0, 80] } },
+        "y": {
+          "field": "region",
+          "type": "nominal",
+          "sort": {
+            "field": "proficiency_glp",
+            "op": "max",
+            "order": "descending"
+          },
+          "title": null,
+          "axis": {
+            "labelAlign": "left",
+            "labelPadding": 88,
+            "ticks": false,
+            "labelFontWeight": {
+              "condition": {
+                "test": "datum.value === 'North Central'",
+                "value": "bold"
+              },
+              "value": "normal"
+            },
+            "grid": false
+          }
+        },
+        "x": {
+          "field": "proficiency_glp",
+          "type": "quantitative",
+          "title": null,
+          "scale": {
+            "domain": [
+              0,
+              65
+            ]
+          },
+          "axis": null
+        },
         "color": {
-          "condition": { "test": "datum.region === 'Sandhills'", "value": "#003A70" },
+          "condition": {
+            "test": "datum.region === 'North Central'",
+            "value": "#003A70"
+          },
           "value": "#B7B9BB"
         },
+        "stroke": {
+          "condition": {
+            "test": "datum.region === 'North Central'",
+            "value": null
+          },
+          "value": "#525A60"
+        },
+        "strokeWidth": {
+          "value": 0.6
+        },
         "tooltip": [
-          { "field": "region", "title": "Region" },
-          { "field": "avg_spg_score", "title": "Avg SPG score" }
+          {
+            "field": "region",
+            "title": "Region"
+          },
+          {
+            "field": "proficiency_glp",
+            "title": "GLP (%)"
+          },
+          {
+            "field": "school_count",
+            "title": "Schools"
+          }
         ]
       }
     },
     {
-      "data": { "values": [ {} ] },
-      "mark": { "type": "rule", "color": "#525A60" },
-      "encoding": { "x": { "datum": 0 } }
+      "transform": [
+        {
+          "filter": "datum.region !== 'North Central'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "fontSize": 11,
+        "color": "#000000"
+      },
+      "encoding": {
+        "y": {
+          "field": "region",
+          "type": "nominal",
+          "sort": {
+            "field": "proficiency_glp",
+            "op": "max",
+            "order": "descending"
+          },
+          "title": null
+        },
+        "x": {
+          "field": "proficiency_glp",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              65
+            ]
+          }
+        },
+        "text": {
+          "field": "proficiency_glp",
+          "type": "quantitative",
+          "format": ".1f"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.region === 'North Central'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "fontSize": 11,
+        "color": "#000000",
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "y": {
+          "field": "region",
+          "type": "nominal",
+          "sort": {
+            "field": "proficiency_glp",
+            "op": "max",
+            "order": "descending"
+          },
+          "title": null
+        },
+        "x": {
+          "field": "proficiency_glp",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              65
+            ]
+          }
+        },
+        "text": {
+          "field": "proficiency_glp",
+          "type": "quantitative",
+          "format": ".1f"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {}
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#525A60"
+      },
+      "encoding": {
+        "x": {
+          "datum": 0
+        }
+      }
     }
   ],
-  "usermeta": { "source": "Source: NCDPI sample school data, SY2019–2023. Style-guide demo." }
+  "usermeta": {
+    "source": "Source: NCDPI accountability test scores (EOG/EOC grade-level-proficient composite), 2025. Style-guide demo."
+  }
 }

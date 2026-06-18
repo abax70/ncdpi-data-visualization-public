@@ -1,11 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Vertical bar chart counting North Carolina schools by locale — City, Suburb, Town, Rural — in 2023, one brand color per category with a thin white border keeping adjacent colors distinct.",
+  "description": "Vertical bar chart counting North Carolina regular schools by locale in 2025 — Rural leads with 1,271 schools, then City (880), Suburb (205), and Town (193) — one brand color per category with a thin white border keeping adjacent colors distinct, and each bar labeled with its count.",
   "title": {
-    "text": "Schools by locale, 2023",
-    "subtitle": "Four categories, four brand colors applied in order. A thin white border keeps adjacent colors distinct."
+    "text": "Rural schools outnumber every other locale",
+    "subtitle": "Number of regular schools by locale, 2025. Four categories, four brand colors applied in order."
   },
-  "data": { "url": "data/school_scores_2023.csv" },
+  "data": { "url": "data/school_scores_2025.csv", "format": { "type": "csv", "parse": { "spg_score": "number" } } },
   "transform": [
     { "filter": { "field": "locale", "oneOf": ["City", "Suburb", "Town", "Rural"] } }
   ],
@@ -17,9 +17,9 @@
         "x": {
           "field": "locale", "type": "nominal",
           "sort": ["City", "Suburb", "Town", "Rural"],
-          "title": null, "axis": { "labelAngle": 0 }
+          "title": null, "axis": { "labelAngle": 0, "ticks": false }
         },
-        "y": { "aggregate": "count", "type": "quantitative", "title": "Schools" },
+        "y": { "aggregate": "count", "type": "quantitative", "title": null, "axis": null },
         "color": {
           "field": "locale", "type": "nominal",
           "sort": ["City", "Suburb", "Town", "Rural"],
@@ -32,10 +32,19 @@
       }
     },
     {
+      "transform": [ { "aggregate": [ { "op": "count", "as": "n" } ], "groupby": ["locale"] } ],
+      "mark": { "type": "text", "dy": -8, "fontSize": 11, "color": "#000000" },
+      "encoding": {
+        "x": { "field": "locale", "type": "nominal", "sort": ["City", "Suburb", "Town", "Rural"] },
+        "y": { "field": "n", "type": "quantitative" },
+        "text": { "field": "n", "type": "quantitative", "format": "," }
+      }
+    },
+    {
       "data": { "values": [ {} ] },
       "mark": { "type": "rule", "color": "#525A60" },
       "encoding": { "y": { "datum": 0 } }
     }
   ],
-  "usermeta": { "source": "Source: NCDPI sample school data, SY2019–2023. Style-guide demo." }
+  "usermeta": { "source": "Source: NCDPI school file, regular schools, 2025. Style-guide demo." }
 }

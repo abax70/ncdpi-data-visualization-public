@@ -1,24 +1,46 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Dot-density map of North Carolina plotting each school at its location, colored by 2023 School Performance Grade from teal (A) through grey (C) to rust (F), avoiding the large-area bias of a shaded county map.",
+  "description": "Dot map (point/symbol map) of North Carolina plotting each regular school at its location, colored by 2025 School Performance Grade from teal (A) through neutral grey (C) to rust (F), over faint grey school-district boundary lines. It maps where schools are and how they did — it does not encode density (counts per area). Dots avoid the large-area bias of a shaded county map; A and F dots draw last so the extremes stay visible.",
   "title": {
-    "text": "Schools by performance grade, 2023",
-    "subtitle": "A dot-density map plots each school by location, avoiding the large-area bias of a shaded county map."
+    "text": "Where North Carolina's regular schools are, by 2025 performance grade",
+    "subtitle": "A dot (point) map: each dot is a regular school at its location, colored by School Performance Grade, 2025. Sparser areas have fewer schools, not missing data."
   },
-  "data": { "url": "data/school_points_2023.csv" },
   "width": 720,
   "height": 320,
   "projection": { "type": "mercator" },
-  "mark": { "type": "circle", "size": 22, "opacity": 0.7, "stroke": "white", "strokeWidth": 0.2 },
-  "encoding": {
-    "longitude": { "field": "g_lon", "type": "quantitative" },
-    "latitude": { "field": "g_lat", "type": "quantitative" },
-    "color": {
-      "field": "spg_grade", "type": "nominal", "title": "Grade",
-      "sort": ["A", "B", "C", "D", "F"],
-      "scale": { "domain": ["A", "B", "C", "D", "F"], "range": ["#077890", "#86A4AE", "#B7B9BB", "#C88C78", "#B33A12"] }
+  "layer": [
+    {
+      "data": {
+        "url": "data/nc-school-districts.topojson",
+        "format": { "type": "topojson", "feature": "districts" }
+      },
+      "mark": { "type": "geoshape", "fill": null, "stroke": "#C7CACE", "strokeWidth": 0.5 }
     },
-    "tooltip": [ { "field": "school", "title": "School" }, { "field": "spg_grade", "title": "Grade" } ]
-  },
-  "usermeta": { "source": "Source: NCDPI sample school data, SY2019–2023. Style-guide demo." }
+    {
+      "data": { "url": "data/school_points_2025.csv", "format": { "type": "csv", "parse": { "g_lat": "number", "g_lon": "number" } } },
+      "transform": [
+        { "filter": "isValid(datum.g_lat) && isValid(datum.g_lon) && isValid(datum.spg_grade) && datum.spg_grade !== ''" },
+        { "calculate": "indexof(['C','B','D','A','F'], datum.spg_grade)", "as": "draw_order" }
+      ],
+      "mark": { "type": "circle", "size": 22, "opacity": 0.85, "stroke": "white", "strokeWidth": 0.2 },
+      "encoding": {
+        "longitude": { "field": "g_lon", "type": "quantitative" },
+        "latitude": { "field": "g_lat", "type": "quantitative" },
+        "order": { "field": "draw_order", "type": "quantitative" },
+        "color": {
+          "field": "spg_grade", "type": "nominal", "title": "Grade",
+          "sort": ["A", "B", "C", "D", "F"],
+          "scale": { "domain": ["A", "B", "C", "D", "F"], "range": ["#077890", "#86A4AE", "#DEDEDE", "#C88C78", "#B33A12"] },
+          "legend": { "orient": "bottom", "direction": "horizontal" }
+        },
+        "tooltip": [
+          { "field": "school", "title": "School" },
+          { "field": "region", "title": "Region" },
+          { "field": "spg_grade", "title": "Grade" },
+          { "field": "spg_score", "title": "SPG score" }
+        ]
+      }
+    }
+  ],
+  "usermeta": { "source": "Source: NCDPI School Performance Grades + school geolocations, 2025. Schools without coordinates are omitted. District boundaries: NC school districts TopoJSON. Style-guide demo." }
 }

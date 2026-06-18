@@ -1,26 +1,65 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Histogram showing the distribution of 2023 School Performance Grade scores across about 2,280 North Carolina schools — where schools cluster and how scores spread. Bins touch because the score scale is continuous.",
+  "description": "Histogram of School Performance Grade scores for 2,549 North Carolina regular schools in 2025, in 5-point bins from 20 to 100, with the count axis labeled to a 400 ceiling. The bins covering scores in the 50s and 60s are highlighted navy to reinforce the title; the rest are neutral grey. The median is 61, marked by a plum dashed line labeled at the top. Bins touch because the score scale is continuous.",
   "title": {
-    "text": "Distribution of school SPG scores, 2023",
-    "subtitle": "A histogram shows the shape of one numeric variable — where schools cluster and how they spread."
+    "text": "Most schools score in the 50s and 60s",
+    "subtitle": "Number of regular schools by School Performance Grade score, 2025 (n = 2,549)"
   },
-  "data": { "url": "data/school_scores_2023.csv" },
+  "data": { "url": "data/school_scores_2025.csv", "format": { "type": "csv", "parse": { "spg_score": "number" } } },
+  "transform": [
+    { "bin": { "extent": [20, 100], "step": 5 }, "field": "spg_score", "as": ["score_lo", "score_hi"] }
+  ],
   "height": 300,
   "layer": [
     {
-      "mark": { "type": "bar" },
+      "mark": { "type": "bar", "stroke": "#FFFFFF", "strokeWidth": 1 },
       "encoding": {
-        "x": { "field": "spg_score", "type": "quantitative", "bin": { "maxbins": 25 }, "title": "SPG score" },
-        "y": { "aggregate": "count", "title": "Number of schools" },
+        "x": {
+          "field": "score_lo", "type": "quantitative", "bin": { "binned": true },
+          "title": null,
+          "scale": { "domain": [20, 100] },
+          "axis": { "values": [20, 30, 40, 50, 60, 70, 80, 90, 100], "format": "d", "ticks": false, "domain": false }
+        },
+        "x2": { "field": "score_hi" },
+        "y": {
+          "aggregate": "count", "title": null,
+          "scale": { "domain": [0, 400] },
+          "axis": { "values": [0, 100, 200, 300, 400] }
+        },
+        "color": {
+          "condition": { "test": "datum.score_lo >= 50 && datum.score_lo < 70", "value": "#003A70" },
+          "value": "#B7B9BB"
+        },
         "tooltip": [ { "aggregate": "count", "title": "Schools" } ]
       }
     },
     {
+      "transform": [ { "aggregate": [ { "op": "median", "field": "spg_score", "as": "median_spg" } ] } ],
+      "mark": { "type": "rule", "color": "#FFFFFF", "strokeWidth": 3.4 },
+      "encoding": { "x": { "field": "median_spg", "type": "quantitative" } }
+    },
+    {
+      "transform": [ { "aggregate": [ { "op": "median", "field": "spg_score", "as": "median_spg" } ] } ],
+      "mark": { "type": "rule", "color": "#842175", "strokeWidth": 1.8, "strokeDash": [4, 2] },
+      "encoding": { "x": { "field": "median_spg", "type": "quantitative" } }
+    },
+    {
+      "transform": [
+        { "aggregate": [ { "op": "median", "field": "spg_score", "as": "median_spg" } ] },
+        { "calculate": "'Median ' + format(datum.median_spg, '.0f')", "as": "median_label" }
+      ],
+      "mark": { "type": "text", "align": "left", "dx": 6, "fontSize": 10, "fontWeight": "bold", "color": "#842175" },
+      "encoding": {
+        "x": { "field": "median_spg", "type": "quantitative" },
+        "y": { "datum": 392 },
+        "text": { "field": "median_label" }
+      }
+    },
+    {
       "data": { "values": [ {} ] },
-      "mark": { "type": "rule", "color": "#525A60" },
+      "mark": { "type": "rule", "color": "#525A60", "strokeWidth": 1.4 },
       "encoding": { "y": { "datum": 0 } }
     }
   ],
-  "usermeta": { "source": "Source: NCDPI sample school data, SY2019–2023. Style-guide demo." }
+  "usermeta": { "source": "Source: NCDPI School Performance Grades (overall SPG score), regular schools, 2025. Style-guide demo." }
 }

@@ -1,11 +1,14 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Violin plot of the 2025 SPG score distribution for each of four locales (City, Suburb, Town, Rural), one density curve per row on a shared 20–100 score axis; curve width shows relative frequency, not a count.",
+  "description": "Violin plot of the 2025 SPG score distribution for each of four locales (City, Suburb, Town, Rural), one density curve per row on a shared 20–100 score axis; curve width shows relative frequency, not a count. City is highlighted in navy as the widest-spread locale; the others are neutral grey.",
   "title": {
-    "text": "SPG score distribution by locale, 2025",
-    "subtitle": "Violins show the full density curve per group — skew and double peaks a box plot would hide. Width is relative frequency, not a count."
+    "text": "City schools post the widest spread of SPG scores",
+    "subtitle": "Distribution of School Performance Grade scores by locale, all NC schools, 2025. Curve width is relative frequency, not a count."
   },
-  "data": { "url": "data/school_scores_2025.csv" },
+  "data": {
+    "url": "data/school_scores_2025.csv",
+    "format": { "type": "csv", "parse": { "spg_score": "number" } }
+  },
   "transform": [
     { "density": "spg_score", "groupby": ["locale"], "extent": [20, 100] }
   ],
@@ -13,18 +16,36 @@
     "row": {
       "field": "locale", "title": null,
       "sort": ["City", "Suburb", "Town", "Rural"],
-      "header": { "labelAngle": 0, "labelAlign": "left", "labelOrient": "left", "labelFontSize": 11, "labelColor": "#525A60" }
+      "header": null
     }
   },
   "spacing": 6,
   "spec": {
-    "width": 460,
+    "width": 620,
     "height": 56,
-    "mark": { "type": "area", "color": "#077890" },
-    "encoding": {
-      "x": { "field": "value", "type": "quantitative", "title": "SPG score", "scale": { "domain": [20, 100] } },
-      "y": { "field": "density", "type": "quantitative", "stack": "center", "impute": null, "title": null, "axis": null }
-    }
+    "layer": [
+      {
+        "comment": "Locale label as a left-gutter text layer. VL 5.21 ignores labelAlign on left-oriented row-facet HEADERS (they right-align), so — as on the sparklines spec — the header is dropped and a fixed-pixel text mark at x:0 puts every locale name on the same left edge as the title. The x-domain opens to 8 so the violin sits to the right of the label in its own clear zone. Aggregate-to-one-row avoids overplotting the label across every density sample.",
+        "transform": [ { "aggregate": [ { "op": "count", "as": "n" } ], "groupby": ["locale"] } ],
+        "mark": { "type": "text", "align": "left", "baseline": "middle", "fontSize": 11, "color": "#525A60" },
+        "encoding": {
+          "x": { "value": 0 },
+          "y": { "value": 28 },
+          "text": { "field": "locale", "type": "nominal" }
+        }
+      },
+      {
+        "mark": { "type": "area" },
+        "encoding": {
+          "x": { "field": "value", "type": "quantitative", "title": null, "scale": { "domain": [8, 100] }, "axis": { "values": [20, 30, 40, 50, 60, 70, 80, 90, 100], "ticks": false, "domain": false } },
+          "y": { "field": "density", "type": "quantitative", "stack": "center", "impute": null, "title": null, "axis": null },
+          "color": {
+            "condition": { "test": "datum.locale === 'City'", "value": "#003A70" },
+            "value": "#B7B9BB"
+          }
+        }
+      }
+    ]
   },
   "usermeta": { "source": "Source: NCDPI public accountability data (School Performance Grades), 2025. Style-guide demo." }
 }

@@ -1,26 +1,70 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Bar chart of the change in average SPG score from 2019 to 2023 for the eight SBE regions, sorted smallest decline first. All eight regions declined, from 1.6 points in North Central to 6.0 points in Piedmont Triad.",
+  "description": "Diverging bar chart of each SBE region's deviation from the state grade-level proficiency rate of 55.0 percent in 2025, sorted largest positive to largest negative. North Central sits 3.6 points above the state rate; Sandhills sits 6.4 points below. Bars are colored on a diverging rust-to-teal ramp by magnitude of deviation — the further below the state rate, the darker the rust; the further above, the darker the teal — with a dark zero baseline.",
   "title": {
-    "text": "Change in average SPG score, 2019 → 2023",
-    "subtitle": "Graph the delta. Instead of two bars to subtract by eye, plot the difference itself against a zero baseline."
+    "text": "Three regions beat the state proficiency rate; four trail it",
+    "subtitle": "Percentage-point deviation from the state GLP rate (55.0%), by SBE region, 2025. Graph the delta — plot the difference itself."
   },
-  "data": { "url": "data/region_change.csv", "format": { "type": "csv", "parse": { "delta": "number" } } },
+  "data": {
+    "url": "data/region_snapshot_2025.csv",
+    "format": { "type": "csv", "parse": { "proficiency_glp": "number" } }
+  },
+  "transform": [
+    { "calculate": "'proficiency_glp'", "as": "measure" },
+    { "lookup": "measure", "from": { "data": { "url": "data/state_reference_2025.csv", "format": { "type": "csv", "parse": { "value": "number" } } }, "key": "measure", "fields": ["value"] } },
+    { "calculate": "round((datum.proficiency_glp - datum.value) * 10) / 10", "as": "dev" }
+  ],
   "height": 300,
   "layer": [
     {
       "mark": { "type": "bar" },
       "encoding": {
-        "y": { "field": "region", "type": "nominal", "sort": { "field": "delta", "op": "max", "order": "descending" }, "title": null },
-        "x": { "field": "delta", "type": "quantitative", "title": "Change in avg SPG score (points)" },
+        "y": {
+          "field": "region", "type": "nominal",
+          "sort": { "field": "dev", "op": "max", "order": "descending" },
+          "title": null,
+          "axis": { "labelAlign": "left", "labelPadding": 88, "ticks": false, "grid": false }
+        },
+        "x": {
+          "field": "dev", "type": "quantitative", "title": null,
+          "scale": { "domain": [-8, 8] }, "axis": null
+        },
         "color": {
-          "condition": { "test": "datum.delta >= 0", "value": "#077890" },
-          "value": "#B33A12"
+          "field": "dev", "type": "quantitative",
+          "scale": { "domain": [-8, 0, 8], "range": ["#B33A12", "#DEDEDE", "#077890"] },
+          "legend": null
         },
         "tooltip": [
           { "field": "region", "title": "Region" },
-          { "field": "delta", "title": "Change" }
+          { "field": "proficiency_glp", "title": "GLP (%)" },
+          { "field": "dev", "title": "vs. state (pts)" }
         ]
+      }
+    },
+    {
+      "transform": [ { "filter": "datum.dev >= 0" } ],
+      "mark": { "type": "text", "align": "left", "dx": 5, "fontSize": 10, "color": "#000000" },
+      "encoding": {
+        "y": {
+          "field": "region", "type": "nominal",
+          "sort": { "field": "dev", "op": "max", "order": "descending" },
+          "title": null
+        },
+        "x": { "field": "dev", "type": "quantitative", "scale": { "domain": [-8, 8] } },
+        "text": { "field": "dev", "type": "quantitative", "format": "+.1f" }
+      }
+    },
+    {
+      "transform": [ { "filter": "datum.dev < 0" } ],
+      "mark": { "type": "text", "align": "right", "dx": -5, "fontSize": 10, "color": "#000000" },
+      "encoding": {
+        "y": {
+          "field": "region", "type": "nominal",
+          "sort": { "field": "dev", "op": "max", "order": "descending" },
+          "title": null
+        },
+        "x": { "field": "dev", "type": "quantitative", "scale": { "domain": [-8, 8] } },
+        "text": { "field": "dev", "type": "quantitative", "format": "+.1f" }
       }
     },
     {
@@ -29,5 +73,5 @@
       "encoding": { "x": { "datum": 0 } }
     }
   ],
-  "usermeta": { "source": "Source: NCDPI sample school data, SY2019–2023. Style-guide demo." }
+  "usermeta": { "source": "Source: NCDPI accountability test scores (EOG/EOC grade-level-proficient composite) and state reference rate, 2025. Style-guide demo." }
 }

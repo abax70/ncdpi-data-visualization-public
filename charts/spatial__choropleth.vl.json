@@ -1,9 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Choropleth map of North Carolina school districts shaded by 2023 chronic absenteeism rate, from light grey (lower) to rust (higher), with white district boundaries. Nine districts with no value in the sample appear in pale grey.",
+  "description": "Choropleth map of all 115 North Carolina school districts shaded by 2025 grade-level proficiency, from light grey (lower) to teal (higher), with white district boundaries. District grade-level proficiency ranges from about 31 to 71 percent. A horizontal legend below the map labels the color-to-percent scale with ticks from 30 at the low end up to 70.",
   "title": {
-    "text": "Chronic absenteeism by district, 2023",
-    "subtitle": "Choropleths shade an area by a rate. Color is imprecise -- always read this alongside a sorted bar. Nine districts have no value in this sample (shown in pale gray)."
+    "text": "Grade-level proficiency by school district, 2025",
+    "subtitle": "Choropleths shade each district by a rate. Color reads imprecisely, so they work well paired with a sorted horizontal bar chart for looking up individual districts."
   },
   "data": {
     "url": "data/nc-school-districts.topojson",
@@ -13,29 +13,28 @@
     {
       "lookup": "properties.LEA",
       "from": {
-        "data": { "url": "data/lea_chronic_absent_2023.csv" },
+        "data": { "url": "data/lea_proficiency_2025.csv", "format": { "type": "csv", "parse": { "lea": "number", "proficiency_glp": "number" } } },
         "key": "lea",
-        "fields": ["lea_name", "chronic_absent_pct", "school_count"]
+        "fields": ["proficiency_glp"]
       }
     }
   ],
   "width": 720,
-  "height": 320,
+  "height": 340,
   "projection": { "type": "mercator" },
   "mark": { "type": "geoshape", "stroke": "white", "strokeWidth": 0.5, "color": "#F0F0F0" },
   "encoding": {
     "color": {
-      "field": "chronic_absent_pct",
+      "field": "proficiency_glp",
       "type": "quantitative",
-      "title": "Chronic absent %",
-      "scale": { "range": ["#DEDEDE", "#B33A12"] },
-      "legend": { "orient": "right", "format": ".0f" }
+      "title": "Grade-level proficient (%)",
+      "scale": { "domain": [30, 71], "range": ["#DEDEDE", "#077890"] },
+      "legend": { "orient": "bottom", "direction": "horizontal", "gradientLength": 220, "gradientThickness": 12, "format": ".0f", "values": [30, 40, 50, 60, 70], "titleLimit": 320 }
     },
     "tooltip": [
       { "field": "properties.LEA_Name", "title": "District" },
-      { "field": "chronic_absent_pct", "title": "Chronic absent %", "format": ".1f" },
-      { "field": "school_count", "title": "Schools" }
+      { "field": "proficiency_glp", "title": "Grade-level proficient (%)", "format": ".1f" }
     ]
   },
-  "usermeta": { "source": "Source: NCDPI sample school data, SY2019–2023; boundaries: NC school-district TopoJSON. Style-guide demo." }
+  "usermeta": { "source": "Source: NCDPI accountability test scores (grade-level proficient composite), school districts, 2025. Boundaries: NC school-district TopoJSON. Style-guide demo." }
 }

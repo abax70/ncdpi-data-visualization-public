@@ -1,0 +1,51 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Vertical bar chart of the share of North Carolina students at each 2025 achievement level, all subjects and grades, in natural Level 1-or-2 to Level 5 order and labeled directly: Level 1 or 2 45%, Level 3 20%, Level 4 24%, Level 5 11%. The 45% scoring Level 1 or 2 — below grade level — exceeds the 35% reaching Levels 4 and 5 combined; Level 1 or 2 is highlighted rust to mark its below-grade-level valence and the others are neutral grey.",
+  "title": {
+    "text": "More NC students score Level 1 or 2 than Levels 4 and 5 combined",
+    "subtitle": ["Share of NC students by 2025 achievement level, all subjects and grades. Level 3+ = grade-level proficient (GLP);", "Level 4+ = college-and-career ready (CCR). The below-grade-level bar is highlighted."]
+  },
+  "data": {
+    "url": "data/state_proficiency_levels_2025.csv",
+    "format": { "type": "csv", "parse": { "pct": "number" } }
+  },
+  "transform": [
+    { "calculate": "format(datum.pct, '.0f') + '%'", "as": "pct_label" }
+  ],
+  "height": 280,
+  "layer": [
+    {
+      "mark": { "type": "bar" },
+      "encoding": {
+        "x": {
+          "field": "level", "type": "nominal",
+          "sort": ["Level 1 or 2", "Level 3", "Level 4", "Level 5"],
+          "title": null, "axis": { "labelAngle": 0, "ticks": false }
+        },
+        "y": { "field": "pct", "type": "quantitative", "title": null, "axis": null },
+        "color": {
+          "condition": { "test": "datum.level === 'Level 1 or 2'", "value": "#B33A12" },
+          "value": "#B7B9BB"
+        },
+        "tooltip": [
+          { "field": "level", "title": "Proficiency level" },
+          { "field": "pct", "title": "%" }
+        ]
+      }
+    },
+    {
+      "mark": { "type": "text", "dy": -8, "fontSize": 11, "color": "#000000" },
+      "encoding": {
+        "x": { "field": "level", "type": "nominal", "sort": ["Level 1 or 2", "Level 3", "Level 4", "Level 5"] },
+        "y": { "field": "pct", "type": "quantitative" },
+        "text": { "field": "pct_label" }
+      }
+    },
+    {
+      "data": { "values": [ {} ] },
+      "mark": { "type": "rule", "color": "#525A60" },
+      "encoding": { "y": { "datum": 0 } }
+    }
+  ],
+  "usermeta": { "source": "Source: NCDPI accountability test scores (achievement levels, all subjects and grades, all students), 2025. Style-guide demo." }
+}

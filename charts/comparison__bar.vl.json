@@ -1,30 +1,128 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Horizontal bar chart of average School Performance Grade scores for North Carolina's eight SBE regions in 2023, sorted highest to lowest. Western leads at 65.6 and Sandhills trails at 57.1.",
+  "description": "Horizontal bar chart of 4-year cohort graduation rates for North Carolina's eight SBE regions in 2025, sorted highest to lowest. The Northeast region, highlighted navy, graduates 87.3 percent of its cohort; the other regions are neutral grey. Western leads at 91.6 percent and Sandhills trails at 86.1 percent; every region tops 86 percent.",
   "title": {
-    "text": "Average School Performance Grade score by region, 2023",
-    "subtitle": "Eight SBE regions, one color, sorted by value — position carries the comparison."
+    "text": "The Northeast region graduates 87% of its cohort",
+    "subtitle": "4-year cohort graduation rate (%) by SBE region, 2025. Navy marks attention — not good or bad. Bars are labeled directly, so the value axis is dropped."
   },
-  "data": { "url": "data/schools_region_2023.csv", "format": { "type": "csv", "parse": { "avg_spg_score": "number" } } },
+  "data": {
+    "url": "data/region_snapshot_2025.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "grad_rate": "number"
+      }
+    }
+  },
   "height": 300,
   "layer": [
     {
-      "mark": { "type": "bar" },
+      "mark": {
+        "type": "bar"
+      },
       "encoding": {
-        "y": { "field": "region", "type": "nominal", "sort": { "field": "avg_spg_score", "op": "max", "order": "descending" }, "title": null },
-        "x": { "field": "avg_spg_score", "type": "quantitative", "title": "Avg SPG score", "scale": { "domain": [0, 80] } },
+        "color": {
+          "condition": { "test": "datum.region === 'Northeast'", "value": "#003A70" },
+          "value": "#B7B9BB"
+        },
+        "y": {
+          "field": "region",
+          "type": "nominal",
+          "sort": {
+            "field": "grad_rate",
+            "op": "max",
+            "order": "descending"
+          },
+          "title": null,
+          "axis": {
+            "labelAlign": "left",
+            "labelPadding": 88,
+            "ticks": false,
+            "grid": false
+          }
+        },
+        "x": {
+          "field": "grad_rate",
+          "type": "quantitative",
+          "title": null,
+          "scale": {
+            "domain": [
+              0,
+              100
+            ]
+          },
+          "axis": null
+        },
         "tooltip": [
-          { "field": "region", "title": "Region" },
-          { "field": "avg_spg_score", "title": "Avg SPG score" },
-          { "field": "school_count", "title": "Schools" }
+          {
+            "field": "region",
+            "title": "Region"
+          },
+          {
+            "field": "grad_rate",
+            "title": "Grad rate (%)"
+          },
+          {
+            "field": "school_count",
+            "title": "Schools"
+          }
         ]
       }
     },
     {
-      "data": { "values": [ {} ] },
-      "mark": { "type": "rule", "color": "#525A60" },
-      "encoding": { "x": { "datum": 0 } }
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "fontSize": 11,
+        "color": "#000000"
+      },
+      "encoding": {
+        "y": {
+          "field": "region",
+          "type": "nominal",
+          "sort": {
+            "field": "grad_rate",
+            "op": "max",
+            "order": "descending"
+          },
+          "title": null
+        },
+        "x": {
+          "field": "grad_rate",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              100
+            ]
+          }
+        },
+        "text": {
+          "field": "grad_rate",
+          "type": "quantitative",
+          "format": ".1f"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {}
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#525A60"
+      },
+      "encoding": {
+        "x": {
+          "datum": 0
+        }
+      }
     }
   ],
-  "usermeta": { "source": "Source: NCDPI sample school data, SY2019–2023. Style-guide demo." }
+  "usermeta": {
+    "source": "Source: NCDPI accountability data (4-year cohort graduation rate), 2025. Style-guide demo."
+  }
 }

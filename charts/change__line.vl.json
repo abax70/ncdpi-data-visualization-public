@@ -1,26 +1,79 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Line chart of average SPG scores from 2019 to 2023 for three regions — Western, Piedmont Triad, and Northeast. The lines break over 2020–21, when no School Performance Grades were issued because of COVID; all three regions sit lower in 2022–23 than in 2019.",
+  "description": "Line chart of grade-level proficiency for the Northwest SBE region from 2018 to 2025. The line breaks over 2020, when state testing was waived under the federal COVID-19 waiver: proficiency fell from 62.0 in 2019 to 49.9 in 2021 and recovered only to 55.0 by 2025. The gap is annotated and never interpolated.",
   "title": {
-    "text": "Average SPG score over time, selected regions",
-    "subtitle": "No School Performance Grades were issued in 2020–21 (COVID). The line breaks at the gap — it is never connected through missing years."
+    "text": "Proficiency dropped across the COVID testing gap — and hasn't fully recovered",
+    "subtitle": "Grade-level proficient (GLP), % of students tested, Northwest SBE region, 2018–2025"
   },
   "data": {
-    "url": "data/region_trend.csv",
-    "format": { "type": "csv", "parse": { "avg_spg_score": "number", "year": "number" } }
+    "url": "data/region_proficiency_trend.csv",
+    "format": { "type": "csv", "parse": { "proficiency_glp": "number", "year": "number" } }
   },
   "transform": [
-    { "filter": { "field": "region", "oneOf": ["Western", "Piedmont Triad", "Northeast"] } },
-    { "filter": "isValid(datum.avg_spg_score) && datum.avg_spg_score > 0" },
+    { "filter": "datum.region === 'Northwest'" },
+    { "filter": "isValid(datum.proficiency_glp)" },
     { "calculate": "datum.year <= 2019 ? 'pre' : 'post'", "as": "era" }
   ],
   "height": 320,
-  "mark": { "type": "line", "point": true, "strokeWidth": 2.5 },
-  "encoding": {
-    "x": { "field": "year", "type": "quantitative", "title": null, "axis": { "values": [2019, 2020, 2021, 2022, 2023], "format": "d" }, "scale": { "domain": [2018.7, 2023.3] } },
-    "y": { "field": "avg_spg_score", "type": "quantitative", "title": "Avg SPG score", "scale": { "zero": false, "nice": true } },
-    "color": { "field": "region", "type": "nominal", "title": "Region", "legend": { "orient": "bottom" } },
-    "detail": { "field": "era" }
-  },
-  "usermeta": { "source": "Source: NCDPI sample school data, SY2019–2023. Style-guide demo." }
+  "layer": [
+    {
+      "mark": { "type": "line", "point": { "filled": true, "size": 55, "color": "#003A70" }, "strokeWidth": 2.5, "color": "#003A70" },
+      "encoding": {
+        "x": {
+          "field": "year", "type": "quantitative", "title": null,
+          "scale": { "domain": [2017.6, 2025.4] },
+          "axis": { "values": [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025], "format": "d", "ticks": false, "domainColor": "#DEDEDE" }
+        },
+        "y": {
+          "field": "proficiency_glp", "type": "quantitative", "title": null,
+          "scale": { "domain": [0, 70] },
+          "axis": { "values": [0, 10, 20, 30, 40, 50, 60, 70] }
+        },
+        "detail": { "field": "era" },
+        "tooltip": [
+          { "field": "year", "title": "Year" },
+          { "field": "proficiency_glp", "title": "GLP (%)" }
+        ]
+      }
+    },
+    {
+      "transform": [ { "filter": "datum.year === 2018 || datum.year === 2025" } ],
+      "mark": { "type": "text", "dy": -12, "fontSize": 11, "fontWeight": "bold", "color": "#000000" },
+      "encoding": {
+        "x": { "field": "year", "type": "quantitative" },
+        "y": { "field": "proficiency_glp", "type": "quantitative", "scale": { "domain": [0, 70] } },
+        "text": { "field": "proficiency_glp", "type": "quantitative", "format": ".1f" }
+      }
+    },
+    {
+      "transform": [ { "filter": "datum.year === 2021" } ],
+      "mark": { "type": "text", "dy": 16, "fontSize": 11, "fontWeight": "bold", "color": "#000000" },
+      "encoding": {
+        "x": { "field": "year", "type": "quantitative" },
+        "y": { "field": "proficiency_glp", "type": "quantitative", "scale": { "domain": [0, 70] } },
+        "text": { "field": "proficiency_glp", "type": "quantitative", "format": ".1f" }
+      }
+    },
+    {
+      "data": { "values": [ {} ] },
+      "mark": { "type": "rule", "color": "#842175", "strokeWidth": 1, "strokeDash": [2, 2] },
+      "encoding": {
+        "x": { "datum": 2020 },
+        "y": { "datum": 38 },
+        "y2": { "datum": 54 }
+      }
+    },
+    {
+      "data": { "values": [ {} ] },
+      "mark": {
+        "type": "text", "align": "left", "baseline": "top", "fontSize": 10, "color": "#842175",
+        "text": ["No 2020 data:", "state testing waived (COVID-19).", "The line breaks here —", "we don't interpolate across a gap."]
+      },
+      "encoding": {
+        "x": { "datum": 2020.15 },
+        "y": { "datum": 36 }
+      }
+    }
+  ],
+  "usermeta": { "source": "Source: NCDPI accountability test scores (EOG/EOC, grade-level-proficient composite). 2020 omitted — state testing waived under the federal COVID-19 waiver. Style-guide demo." }
 }

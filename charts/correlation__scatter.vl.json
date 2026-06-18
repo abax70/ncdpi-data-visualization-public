@@ -1,20 +1,58 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Scatter plot of about 2,280 North Carolina schools in 2023, plotting percent economically disadvantaged against SPG score, with an orange regression line. The trend slopes downward — higher-poverty schools tend to have lower scores.",
+  "description": "Scatter plot of 2,548 North Carolina regular schools plotting percent economically disadvantaged against 2025 School Performance Grade score, with a plum least-squares fit line. The trend slopes downward (r = -0.65): higher-poverty schools tend to score lower.",
   "title": {
-    "text": "School poverty vs. performance, 2023",
-    "subtitle": "Each dot is a school. Position on two scales is the most accurate way to show a relationship."
+    "text": "Higher-poverty schools tend to score lower",
+    "subtitle": "Each dot is a school: % economically disadvantaged vs. SPG score, regular schools, 2025"
   },
-  "data": { "url": "data/poverty_vs_score.csv" },
+  "data": {
+    "url": "data/poverty_vs_score_2025.csv",
+    "format": { "type": "csv", "parse": { "pct_eds": "number", "spg_score": "number" } }
+  },
   "height": 340,
-  "encoding": {
-    "x": { "field": "pct_eds", "type": "quantitative", "title": "% economically disadvantaged" },
-    "y": { "field": "spg_score", "type": "quantitative", "title": "SPG score", "scale": { "zero": false, "nice": true } }
-  },
   "layer": [
-    { "mark": { "type": "point", "filled": true, "size": 32, "opacity": 0.35, "color": "#003A70" },
-      "encoding": { "tooltip": [ { "field": "school", "title": "School" }, { "field": "pct_eds", "title": "% EDS" }, { "field": "spg_score", "title": "SPG" } ] } },
-    { "mark": { "type": "line", "color": "#FF9015", "strokeWidth": 3 }, "transform": [ { "regression": "spg_score", "on": "pct_eds" } ] }
+    {
+      "mark": { "type": "point", "filled": true, "size": 30, "opacity": 0.25, "color": "#003A70" },
+      "encoding": {
+        "x": {
+          "field": "pct_eds", "type": "quantitative",
+          "title": "% economically disadvantaged",
+          "scale": { "domain": [0, 100] },
+          "axis": { "values": [0, 20, 40, 60, 80, 100], "grid": true, "ticks": false, "domainColor": "#DEDEDE" }
+        },
+        "y": {
+          "field": "spg_score", "type": "quantitative",
+          "title": "SPG score",
+          "scale": { "domain": [20, 100] },
+          "axis": {
+            "values": [20, 40, 60, 80, 100],
+            "titleAngle": 0, "titleAnchor": "end", "titleAlign": "left", "titleX": -26, "titleY": -12
+          }
+        },
+        "tooltip": [
+          { "field": "school", "title": "School" },
+          { "field": "region", "title": "Region" },
+          { "field": "pct_eds", "title": "% EDS" },
+          { "field": "spg_score", "title": "SPG" }
+        ]
+      }
+    },
+    {
+      "transform": [ { "regression": "spg_score", "on": "pct_eds" } ],
+      "mark": { "type": "line", "color": "#842175", "strokeWidth": 2.2 },
+      "encoding": {
+        "x": { "field": "pct_eds", "type": "quantitative", "scale": { "domain": [0, 100] } },
+        "y": { "field": "spg_score", "type": "quantitative", "scale": { "domain": [20, 100] } }
+      }
+    },
+    {
+      "data": { "values": [ {} ] },
+      "mark": { "type": "text", "align": "right", "fontSize": 11, "fontWeight": "bold", "color": "#842175", "text": "r = −0.65" },
+      "encoding": {
+        "x": { "datum": 99 },
+        "y": { "datum": 97 }
+      }
+    }
   ],
-  "usermeta": { "source": "Source: NCDPI sample school data, SY2019–2023. Style-guide demo." }
+  "usermeta": { "source": "Source: NCDPI SPG score (2025) and % economically disadvantaged (NCDPI school file). Each dot = one school; line = least-squares fit. Style-guide demo." }
 }

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Single-category area chart of the number of North Carolina students graduating within four years each year from 2016 to 2025, drawn as a heavy teal line over a light teal fill on a zero baseline. The count climbs overall from about 97,700 to a record 111,474 in 2025, with a dip in 2021–2022. The filled area gives visual weight to the total quantity rather than the year-to-year change.",
+  "title": {
+    "text": "NC graduated a record 111,000 students in 2025",
+    "subtitle": ["Students graduating within four years, count, 2016–2025. Area charts suit total-quantity-over-time:", "the shaded weight reinforces the total, and a zero baseline (like a bar) keeps it honest. Teal = rising over the span."]
+  },
+  "data": {
+    "url": "data/state_cohort_outcomes_trend.csv",
+    "format": { "type": "csv", "parse": { "students": "number", "year": "number" } }
+  },
+  "transform": [ { "filter": "datum.outcome === 'Graduated in 4 years'" } ],
+  "height": 300,
+  "encoding": {
+    "x": { "field": "year", "type": "quantitative", "title": null,
+      "axis": { "format": "d", "values": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025] },
+      "scale": { "domain": [2016, 2025] } },
+    "y": { "field": "students", "type": "quantitative", "title": null,
+      "scale": { "domain": [0, 120000] },
+      "axis": { "values": [0, 30000, 60000, 90000, 120000], "format": "~s" } }
+  },
+  "layer": [
+    {
+      "mark": { "type": "area", "color": "#077890", "fillOpacity": 0.22, "line": { "color": "#077890", "strokeWidth": 3 } }
+    },
+    {
+      "transform": [ { "filter": "datum.year === 2025" } ],
+      "mark": { "type": "point", "filled": true, "color": "#077890", "size": 70, "stroke": "white", "strokeWidth": 1 },
+      "encoding": {
+        "tooltip": [ { "field": "year", "title": "Year" }, { "field": "students", "title": "Graduates", "format": "," } ]
+      }
+    },
+    {
+      "transform": [ { "filter": "datum.year === 2025" } ],
+      "mark": { "type": "text", "align": "right", "dx": -6, "dy": -12, "fontSize": 11, "fontWeight": "bold", "color": "#003A70" },
+      "encoding": { "text": { "field": "students", "type": "quantitative", "format": "," } }
+    }
+  ],
+  "usermeta": { "source": "Source: NCDPI public accountability data (4-year cohort graduates), 2016–2025. Style-guide demo." }
+}

@@ -1,18 +1,58 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Bubble chart of North Carolina schools in 2023 plotting percent economically disadvantaged against SPG score, with bubble area showing enrollment. Higher-poverty schools tend toward lower scores; enrollment varies widely at every poverty level.",
+  "description": "Bubble chart of North Carolina's 8 SBE regions plotting each region's mean percent economically disadvantaged against its mean 2025 SPG score, with bubble area showing the region's total enrollment. Higher-poverty regions tend toward lower scores (correlation about −0.8): North Central and Southwest sit lower-poverty/higher-score, Sandhills higher-poverty/lower-score. Enrollment varies widely, from about 68,000 to 374,000. This is a scatter plot with a third measure added through size — not a part-to-whole bubble chart.",
   "title": {
-    "text": "Poverty, performance, and size, 2023",
-    "subtitle": "A bubble chart adds a third measure as area — read it as approximate, not precise."
+    "text": "Higher-poverty regions tend to score lower",
+    "subtitle": "Each bubble is one of NC's 8 SBE regions: mean % economically disadvantaged vs. mean SPG score, sized by total enrollment, 2025. Size adds a third measure to a scatter."
   },
-  "data": { "url": "data/poverty_vs_score.csv" },
+  "data": {
+    "url": "data/poverty_vs_score_2025.csv",
+    "format": { "type": "csv", "parse": { "pct_eds": "number", "spg_score": "number", "enrollment": "number" } }
+  },
+  "transform": [
+    { "filter": "datum.region !== 'Virtual'" },
+    { "aggregate": [
+        { "op": "mean", "field": "pct_eds", "as": "pct_eds" },
+        { "op": "mean", "field": "spg_score", "as": "spg_score" },
+        { "op": "sum", "field": "enrollment", "as": "enrollment" }
+      ], "groupby": ["region"] }
+  ],
   "height": 340,
-  "mark": { "type": "circle", "opacity": 0.45, "color": "#003A70" },
+  "layer": [
+    {
+      "mark": { "type": "circle", "opacity": 0.55, "color": "#003A70" },
+      "encoding": {
+        "size": { "field": "enrollment", "type": "quantitative", "title": "Total enrollment", "scale": { "range": [120, 1800] }, "legend": { "format": "," } },
+        "tooltip": [
+          { "field": "region", "title": "Region" },
+          { "field": "pct_eds", "title": "% EDS (mean)", "format": ".1f" },
+          { "field": "spg_score", "title": "SPG score (mean)", "format": ".1f" },
+          { "field": "enrollment", "title": "Enrollment", "format": "," }
+        ]
+      }
+    },
+    {
+      "mark": { "type": "text", "align": "left", "dx": 12, "fontSize": 10, "color": "#1A2128" },
+      "encoding": { "text": { "field": "region" } }
+    }
+  ],
   "encoding": {
-    "x": { "field": "pct_eds", "type": "quantitative", "title": "% economically disadvantaged" },
-    "y": { "field": "spg_score", "type": "quantitative", "title": "SPG score", "scale": { "zero": false, "nice": true } },
-    "size": { "field": "enrollment", "type": "quantitative", "title": "Enrollment", "scale": { "range": [10, 700] } },
-    "tooltip": [ { "field": "school", "title": "School" }, { "field": "enrollment", "title": "Enrollment" }, { "field": "pct_eds", "title": "% EDS" }, { "field": "spg_score", "title": "SPG" } ]
+    "x": {
+      "field": "pct_eds", "type": "quantitative",
+      "title": "% economically disadvantaged (region mean)",
+      "scale": { "domain": [44, 64] },
+      "axis": { "values": [45, 50, 55, 60], "grid": true, "ticks": false, "domainColor": "#DEDEDE" }
+    },
+    "y": {
+      "field": "spg_score", "type": "quantitative",
+      "title": "SPG score (region mean)",
+      "scale": { "domain": [54, 68] },
+      "axis": {
+        "values": [55, 60, 65],
+        "domain": true, "domainColor": "#DEDEDE",
+        "titleAngle": 0, "titleAnchor": "end", "titleAlign": "left", "titleX": -26, "titleY": -12
+      }
+    }
   },
-  "usermeta": { "source": "Source: NCDPI sample school data, SY2019–2023. Style-guide demo." }
+  "usermeta": { "source": "Source: NCDPI SPG score (2025), % economically disadvantaged and enrollment (NCDPI school file), aggregated to SBE region (mean of schools; Virtual charters excluded). Style-guide demo." }
 }

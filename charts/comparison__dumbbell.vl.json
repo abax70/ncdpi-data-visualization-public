@@ -1,23 +1,81 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Dumbbell chart comparing each SBE region's average SPG score in 2019 (grey dot) and 2023 (navy dot), sorted by 2023 score. Every region declined; Western stays highest (70.5 down to 65.6) and North Central fell least (1.6 points).",
+  "description": "Dumbbell chart comparing statewide grade-level proficiency (GLP) for Economically Disadvantaged students (navy dot) versus all other students (grey dot) in each year from 2021 to 2025, with time on the horizontal axis and one vertical dumbbell per year whose height is the gap between the two groups. Both groups recovered after COVID — Economically Disadvantaged students rose from about 29 to 42 percent and other students from 56 to 68 — but the gap between them barely moved, holding near 27 points throughout. The value axis runs 0 to 100, the proficiency goal.",
   "title": {
-    "text": "Average SPG score by region: 2019 vs 2023",
-    "subtitle": "A dumbbell makes the gap between two points the visual focus. Grey = 2019, navy = 2023."
+    "text": "Both groups recovered, but the economic proficiency gap held near 27 points",
+    "subtitle": ["Grade-level proficiency (GLP, %), Economically Disadvantaged vs. other students, statewide, 2021–2025.", "Navy = Economically Disadvantaged; each vertical bar is the gap between the two groups."]
   },
-  "data": { "url": "data/region_change.csv", "format": { "type": "csv", "parse": { "score_2019": "number", "score_2023": "number" } } },
-  "height": 300,
+  "data": {
+    "url": "data/state_eds_gap_trend.csv",
+    "format": { "type": "csv", "parse": { "eds_glp": "number", "not_eds_glp": "number", "gap": "number" } }
+  },
+  "height": 320,
   "encoding": {
-    "y": { "field": "region", "type": "nominal", "sort": { "field": "score_2023", "op": "max", "order": "descending" }, "title": null },
-    "x": { "type": "quantitative", "title": "Avg SPG score", "scale": { "domain": [0, 80] } }
+    "x": {
+      "field": "year", "type": "ordinal", "sort": "ascending", "title": null,
+      "scale": { "padding": 0.5 },
+      "axis": { "labelAngle": 0, "ticks": false, "domain": false, "grid": false }
+    },
+    "y": {
+      "type": "quantitative", "title": null,
+      "scale": { "domain": [0, 100] },
+      "axis": { "values": [0, 20, 40, 60, 80, 100], "format": "d", "ticks": false, "domain": false, "grid": true, "gridColor": "#DEDEDE" }
+    }
   },
   "layer": [
-    { "mark": { "type": "rule", "color": "#B7B9BB", "size": 3 },
-      "encoding": { "x": { "field": "score_2019" }, "x2": { "field": "score_2023" } } },
-    { "mark": { "type": "point", "size": 120, "filled": true, "color": "#B7B9BB" },
-      "encoding": { "x": { "field": "score_2019" }, "tooltip": [ { "field": "region" }, { "field": "score_2019", "title": "2019" } ] } },
-    { "mark": { "type": "point", "size": 120, "filled": true, "color": "#003A70" },
-      "encoding": { "x": { "field": "score_2023" }, "tooltip": [ { "field": "region" }, { "field": "score_2023", "title": "2023" }, { "field": "delta", "title": "Change" } ] } }
+    {
+      "mark": { "type": "rule", "color": "#9AA0A6", "size": 2 },
+      "encoding": { "y": { "field": "eds_glp" }, "y2": { "field": "not_eds_glp" } }
+    },
+    {
+      "comment": "Solid white mask discs under each dot — a clean opaque moat that breaks the connecting line, more reliable than an anti-aliased white stroke.",
+      "mark": { "type": "point", "size": 230, "filled": true, "color": "#FFFFFF", "stroke": null },
+      "encoding": { "y": { "field": "not_eds_glp" } }
+    },
+    {
+      "mark": { "type": "point", "size": 230, "filled": true, "color": "#FFFFFF", "stroke": null },
+      "encoding": { "y": { "field": "eds_glp" } }
+    },
+    {
+      "mark": { "type": "point", "size": 120, "filled": true, "color": "#B7B9BB", "stroke": "#FFFFFF", "strokeWidth": 1 },
+      "encoding": {
+        "y": { "field": "not_eds_glp" },
+        "tooltip": [
+          { "field": "year", "title": "Year" },
+          { "field": "not_eds_glp", "title": "Not EDS (%)" },
+          { "field": "gap", "title": "Gap (pts)" }
+        ]
+      }
+    },
+    {
+      "mark": { "type": "point", "size": 120, "filled": true, "color": "#003A70", "stroke": "#FFFFFF", "strokeWidth": 1 },
+      "encoding": {
+        "y": { "field": "eds_glp" },
+        "tooltip": [
+          { "field": "year", "title": "Year" },
+          { "field": "eds_glp", "title": "EDS (%)" },
+          { "field": "gap", "title": "Gap (pts)" }
+        ]
+      }
+    },
+    {
+      "mark": { "type": "text", "align": "center", "baseline": "top", "dy": 9, "fontSize": 10, "fontWeight": "bold", "color": "#003A70" },
+      "encoding": { "y": { "field": "eds_glp" }, "text": { "field": "eds_glp", "type": "quantitative", "format": ".0f" } }
+    },
+    {
+      "mark": { "type": "text", "align": "center", "baseline": "bottom", "dy": -9, "fontSize": 10, "color": "#525A60" },
+      "encoding": { "y": { "field": "not_eds_glp" }, "text": { "field": "not_eds_glp", "type": "quantitative", "format": ".0f" } }
+    },
+    {
+      "transform": [ { "filter": "datum.year === '2025'" } ],
+      "mark": { "type": "text", "align": "left", "dx": 11, "fontSize": 10, "fontWeight": "bold", "color": "#003A70" },
+      "encoding": { "y": { "field": "eds_glp" }, "text": { "value": "EDS" } }
+    },
+    {
+      "transform": [ { "filter": "datum.year === '2025'" } ],
+      "mark": { "type": "text", "align": "left", "dx": 11, "fontSize": 10, "fontWeight": "bold", "color": "#525A60" },
+      "encoding": { "y": { "field": "not_eds_glp" }, "text": { "value": "Not EDS" } }
+    }
   ],
-  "usermeta": { "source": "Source: NCDPI sample school data, SY2019–2023. Style-guide demo." }
+  "usermeta": { "source": "Source: NCDPI accountability test scores (grade-level proficiency, GLP composite), Economically Disadvantaged subgroup, 2021–2025. Style-guide demo." }
 }

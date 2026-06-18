@@ -1,0 +1,105 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Arrow chart of the change in grade-level proficiency (GLP) for five North Carolina state subject composites from 2021 to 2025, one arrow per subject, sorted from greatest gain at top. Each arrow runs from the 2021 value to the 2025 arrowhead, colored in three steps: teal for a gain over 1 point, grey for little change, rust for a decline over 1 point. Every subject gained — Math 3 most (+22 points, 45 to 66) and Math grades 3-8 +17, down to English II (+1, essentially flat). Biology and Science are excluded because their assessments changed within this window, making the trend non-comparable.",
+  "title": {
+    "text": "Every tested subject gained since 2021 — Math drove the recovery",
+    "subtitle": ["Change in grade-level proficiency (GLP, %) by state subject, 2021–2025. Arrow length = the size of the change;", "color = direction (teal = gain over 1 pt, grey = little change, rust = decline). Axis runs to the 100% goal."]
+  },
+  "data": {
+    "url": "data/state_proficiency_by_subject_trend.csv",
+    "format": { "type": "csv", "parse": { "proficiency_glp": "number" } }
+  },
+  "transform": [
+    { "filter": "datum.year === '2021' || datum.year === '2025'" },
+    { "pivot": "year", "value": "proficiency_glp", "groupby": ["subject"] },
+    { "calculate": "round((datum['2025'] - datum['2021']) * 10) / 10", "as": "delta" }
+  ],
+  "height": { "step": 40 },
+  "encoding": {
+    "y": {
+      "field": "subject", "type": "nominal",
+      "sort": { "field": "delta", "order": "descending" },
+      "title": null,
+      "axis": { "labelAlign": "left", "labelPadding": 104, "ticks": false, "grid": false }
+    },
+    "x": {
+      "type": "quantitative", "title": null,
+      "scale": { "domain": [20, 100] },
+      "axis": { "values": [20, 40, 60, 80, 100], "format": "d", "ticks": false, "domain": true, "domainColor": "#525A60", "grid": true, "gridColor": "#DEDEDE" }
+    }
+  },
+  "layer": [
+    {
+      "mark": { "type": "rule", "size": 2.6 },
+      "encoding": {
+        "x": { "field": "2021", "type": "quantitative" },
+        "x2": { "field": "2025" },
+        "color": {
+          "field": "delta", "type": "quantitative",
+          "scale": { "type": "threshold", "domain": [-1, 1], "range": ["#B33A12", "#DEDEDE", "#077890"] },
+          "legend": null
+        }
+      }
+    },
+    {
+      "transform": [ { "filter": "datum.delta >= 0" } ],
+      "mark": { "type": "point", "shape": "triangle-right", "size": 160, "filled": true },
+      "encoding": {
+        "x": { "field": "2025", "type": "quantitative" },
+        "color": {
+          "field": "delta", "type": "quantitative",
+          "scale": { "type": "threshold", "domain": [-1, 1], "range": ["#B33A12", "#DEDEDE", "#077890"] },
+          "legend": null
+        },
+        "tooltip": [
+          { "field": "subject", "title": "Subject" },
+          { "field": "2021", "title": "2021 GLP (%)" },
+          { "field": "2025", "title": "2025 GLP (%)" },
+          { "field": "delta", "title": "Change (pts)", "format": "+.1f" }
+        ]
+      }
+    },
+    {
+      "transform": [ { "filter": "datum.delta < 0" } ],
+      "mark": { "type": "point", "shape": "triangle-left", "size": 160, "filled": true },
+      "encoding": {
+        "x": { "field": "2025", "type": "quantitative" },
+        "color": {
+          "field": "delta", "type": "quantitative",
+          "scale": { "type": "threshold", "domain": [-1, 1], "range": ["#B33A12", "#DEDEDE", "#077890"] },
+          "legend": null
+        },
+        "tooltip": [
+          { "field": "subject", "title": "Subject" },
+          { "field": "2021", "title": "2021 GLP (%)" },
+          { "field": "2025", "title": "2025 GLP (%)" },
+          { "field": "delta", "title": "Change (pts)", "format": "+.1f" }
+        ]
+      }
+    },
+    {
+      "transform": [ { "filter": "datum.delta >= 0" } ],
+      "mark": { "type": "text", "align": "left", "dx": 13, "fontSize": 10, "fontWeight": "bold", "color": "#000000" },
+      "encoding": {
+        "x": { "field": "2025", "type": "quantitative" },
+        "text": { "field": "2025", "type": "quantitative", "format": ".0f" }
+      }
+    },
+    {
+      "transform": [ { "filter": "datum.delta < 0" } ],
+      "mark": { "type": "text", "align": "right", "dx": -13, "fontSize": 10, "fontWeight": "bold", "color": "#000000" },
+      "encoding": {
+        "x": { "field": "2025", "type": "quantitative" },
+        "text": { "field": "2025", "type": "quantitative", "format": ".0f" }
+      }
+    },
+    {
+      "mark": { "type": "text", "align": "right", "dx": -10, "fontSize": 9, "color": "#525A60" },
+      "encoding": {
+        "x": { "field": "2021", "type": "quantitative" },
+        "text": { "field": "2021", "type": "quantitative", "format": ".0f" }
+      }
+    }
+  ],
+  "usermeta": { "source": "Source: NCDPI accountability test scores (grade-level proficiency, GLP composite), 2021 and 2025. Style-guide demo." }
+}

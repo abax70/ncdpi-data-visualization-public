@@ -9,7 +9,8 @@
     "subtitleColor": "#525A60",
     "subtitleFontSize": 11,
     "anchor": "start",
-    "offset": 12
+    "offset": 12,
+    "frame": "bounds"
   },
   "axis": {
     "labelFont": "Arial, Helvetica, sans-serif",

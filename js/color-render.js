@@ -141,6 +141,33 @@
       host.innerHTML = match.map(swatchHTML).join("");
     });
 
+    // Type-spec tables — the text roles (font / size / color) straight from the CSV.
+    //   <div data-type-table="Chart"></div>      one component's Text rows
+    //   <div data-type-table="Chart,Dashboard"></div>   several, in order
+    Array.prototype.forEach.call(document.querySelectorAll("[data-type-table]"), function (host) {
+      var comps = (host.getAttribute("data-type-table") || "")
+        .split(",").map(function (s) { return s.trim(); }).filter(Boolean);
+      var match = rows.filter(function (x) {
+        return x.palette === "Text" && (!comps.length || comps.indexOf(x.component) > -1);
+      });
+      // keep the requested component order, then alphabetical by element within each
+      match.sort(function (a, b) {
+        var ci = comps.indexOf(a.component) - comps.indexOf(b.component);
+        return ci !== 0 ? ci : a.element.localeCompare(b.element);
+      });
+      var multi = comps.length > 1;
+      var body = match.map(function (x) {
+        return "<tr>" + (multi ? "<td>" + esc(x.component) + "</td>" : "")
+          + "<td>" + esc(x.element) + "</td><td>" + esc(x.font || "Arial") + "</td>"
+          + "<td>" + esc(x.sizePts) + " pt</td>"
+          + '<td><span class="chip" style="background:' + esc(x.hex) + '"></span><code>' + esc(x.hex) + "</code></td>"
+          + "</tr>";
+      }).join("");
+      host.innerHTML = '<table class="table table-sm ncdpi-type-table"><thead><tr>'
+        + (multi ? "<th>Component</th>" : "") + "<th>Role</th><th>Font</th><th>Size</th><th>Color</th>"
+        + "</tr></thead><tbody>" + body + "</tbody></table>";
+    });
+
     // Interactive step pickers.
     Array.prototype.forEach.call(document.querySelectorAll("[data-step-picker]"), function (host) {
       buildPicker(host, PICKERS[host.getAttribute("data-step-picker")] || PICKERS.sequence, rows);

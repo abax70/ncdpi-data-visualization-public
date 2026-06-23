@@ -491,6 +491,55 @@
     "text": "Having it both ways\nWhen you genuinely need the goal context and the fine variation, you have three honest moves, in order of preference:\n\nGoal-anchored axis — when “how far from the goal” is the message, just use 0–100 and stop.\nHonest zoom with a goal reference — zoom the axis to the data, but keep the goal in view: draw a faint reference line or band at the target and annotate the gap. One chart, both facts.\nPaired combo — show the goal-anchored chart and the zoomed chart together (as above), labeled, so the reader sees the trade-off directly. This is the most explicit teaching version.\n\n\nA true picture-in-picture inset — a small zoomed chart floating inside the full-range one — is not possible in our Vega-Lite charts (Vega-Lite lays views out side by side, not overlapping). If you specifically want that magnified-inset look, build it in matplotlib (an inset axes) and place it as an image, or author it in full Vega. For the live, interactive charts on this site, the paired combo above is the equivalent."
   },
   {
+    "objectID": "accessibility.html",
+    "href": "accessibility.html",
+    "title": "Accessibility",
+    "section": "",
+    "text": "Accessibility is not a box we check at the end. It is the whole point of a chart: everyone who comes to a visualization should be able to leave with its takeaway. This page lays out how we think about that at NCDPI — which is, in a few places, deliberately more nuanced than a strict checklist reading of the rules. We explain why, and we show our work against the actual standard."
+  },
+  {
+    "objectID": "accessibility.html#two-levels-of-accessibility",
+    "href": "accessibility.html#two-levels-of-accessibility",
+    "title": "Accessibility",
+    "section": "Two levels of accessibility",
+    "text": "Two levels of accessibility\nIt helps to separate two things that both get called “accessibility.”\n\nThe over-riding level — can people get the story? A chart is inaccessible if a reader can’t extract its meaning — and most often that barrier has nothing to do with disability. It’s jargon, an unexplained metric, a missing unit, a buried takeaway, or an assumption that the reader is a “math person.” Clearing that barrier — for the non-specialist, the busy stakeholder, the person new to the subject — is the first job, and it serves everyone.\nThe technical level — ADA, Section 508, WCAG. Nested inside the first is the layer most people mean by “accessibility”: contrast ratios, non-color cues, alt text, keyboard and screen-reader support. This layer is real, it’s now legally required (see below), and we take it seriously. But it is a means to the over-riding goal, not the goal itself.\n\nKeeping these straight matters, because the techniques that serve one often serve the other — a clear message title helps both a screen-reader user and a hurried director — and because the technical layer is best understood as one of several ways we get a reader to the takeaway, not the only way."
+  },
+  {
+    "objectID": "accessibility.html#equivalent-access-not-identical-access",
+    "href": "accessibility.html#equivalent-access-not-identical-access",
+    "title": "Accessibility",
+    "section": "Equivalent access, not identical access",
+    "text": "Equivalent access, not identical access\nHere is the principle that drives the rest of this page:\n\nOur goal is that every reader can reach the takeaway — but how they reach it need not be the same for every reader.\n\nIf a chart offers the story through several independent channels — direct labels so the numbers are readable without decoding color, an auxiliary data table, and good alt text — then no single visual element has to carry the entire accessibility burden on its own. That is not a loophole. As the next section shows, it is exactly how the standard is written."
+  },
+  {
+    "objectID": "accessibility.html#what-wcag-actually-says-and-what-it-doesnt",
+    "href": "accessibility.html#what-wcag-actually-says-and-what-it-doesnt",
+    "title": "Accessibility",
+    "section": "What WCAG actually says — and what it doesn’t",
+    "text": "What WCAG actually says — and what it doesn’t\nThe Web Content Accessibility Guidelines (WCAG) 2.1, Level AA, are the technical standard. It’s worth quoting the relevant criteria precisely, because the text draws its lines in specific places — and not always where a strict reading assumes.\n\nUse of Color (1.4.1, Level A)\n\n“Color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element.”\n\nWhat it requires: a redundant, non-color cue wherever color carries meaning. What it does not require: removing color, nor that the colors on any palette (categorical, sequential, diverging) differ from each other by any particular ratio. So when we add direct labels, white separators between abutting fills, and an auxiliary table, color is no longer “the only means” — and 1.4.1 is satisfied. (W3C — Understanding 1.4.1)\n\n\nNon-text Contrast (1.4.11, Level AA)\n\n“The visual presentation of [graphical objects] have a contrast ratio of at least 3:1 against adjacent color(s): Parts of graphics required to understand the content, except when a particular presentation of graphics is essential to the information being conveyed.”\n\nThe scope is the operative phrase: “required to understand the content.” The W3C’s own guidance lists when a graphic doesn’t need to meet 3:1 — including when “the information is available in another form.”\n\nThis is the crux. A faint gridline behind directly-labeled values, or a neutral #B7B9BB context bar whose magnitude is encoded by length and a direct label and an auxiliary table, is not “required to understand the content” — the information is available in another form. Such elements fall outside 1.4.11’s scope; they are not violations of it.\nSo “if it’s visible, it must meet 3:1” is stricter than the standard actually requires. We hold the contrast line — we just hold it on the elements that genuinely carry the meaning. (W3C — Understanding 1.4.11)\n\nOne limit on this exception: it holds only where direct labeling is actually feasible. When data density makes labels impossible — a 115-district choropleth, a school-level scatter of thousands of points — the marks themselves become required to understand the content, and the label exception no longer applies. Then the auxiliary data table (below) becomes the primary equivalent pathway. Better still, treat the density as the real problem: aggregate, or break the data into small multiples, so the chart stays both legible and labelable. (Note this cuts the other way for sequential fills: adjacent steps of a color ramp still need not contrast 3:1 with each other — the ramp’s meaning lives in the legend and labels, not in telling two neighboring shades apart.)\n\n\nContrast — Minimum (1.4.3, Level AA) — the line we do not bend\n\nText has a contrast ratio of at least 4.5:1 (or 3:1 for large text — 18pt, or 14pt bold).\n\nNote the boundary: 1.4.3 governs text, and it has no “required to understand” exception. So the nuance above applies only to non-text graphical objects — gridlines, fills, strokes. Text always meets contrast: data labels, axis values, titles, subtitles, and annotations are held to 4.5:1, full stop. This is what keeps our position honest — we are precise about where a contrast requirement applies, not casual about whether it does. (W3C — Understanding 1.4.3)\n\n\nWhen a chart isn’t the right vehicle: conforming alternatives\nA multi-chart dashboard read aloud by a screen reader, even with a good tab order, is often a poor experience — the structure that makes a dashboard powerful visually does not serialize well into speech. WCAG anticipates this with the conforming alternative version: an accessible equivalent (here, a well-structured data table plus a plain-language summary of the takeaway) that “provides all of the same information,” is kept as up to date, and is reachable from the original.\nTwo honest caveats: WCAG treats this as a fallback — the preferred path is to make content directly accessible — and the alternative only counts if we actually provide it and link to it. A conforming alternative is a safety net, not a license to write the dashboard itself off: keyboard navigation, sensible tab order, and clear focus states still matter, because they serve low-vision, keyboard-only, and motor-impaired readers who do use the visual. (W3C — Understanding Conformance)\nAnd whatever the dashboard does interactively, don’t trap the keyboard: a keyboard user must be able to tab into and back out of every interactive widget — a filter, a legend toggle, an embedded viz — with standard Tab / Shift-Tab, never getting stuck inside one. This is its own Level A requirement (WCAG 2.1.2, No Keyboard Trap) and a frequent late-stage audit failure in tools like Tableau.\n\n\nThe legal footing\nIn April 2024 the U.S. Department of Justice finalized a rule under ADA Title II adopting WCAG 2.1 Level AA for state and local government websites and apps. A subsequent interim rule (April 2026) extended the deadlines by a year; as a state agency, NCDPI is on the April 26, 2027 compliance date. That deadline is real, and it’s why the field is leaning toward strict, bright-line readings right now. Our framing meets the standard — we get there through redundant pathways, including conforming alternatives — rather than treating any element as exempt from the goal of access. (ADA.gov — the web rule)"
+  },
+  {
+    "objectID": "accessibility.html#techniques",
+    "href": "accessibility.html#techniques",
+    "title": "Accessibility",
+    "section": "Techniques",
+    "text": "Techniques\nHow the principle becomes practice. None of these is sufficient alone; together they are what “equivalent access” means.\n\nOn the chart\nColor and contrast. Use our palettes (they’re built for this) and make text meet 4.5:1. Don’t chase the impossible standard of every categorical hue contrasting 3:1 with every other and with white at once — at NCDPI we found that nearly unachievable, and the colors you’d be forced into carry their own unwanted connotations. The right move isn’t darker colors; it’s not making color carry the meaning alone. See Color rules and the highlight palette.\nNever color alone. Whatever color says, something else should say too — position, a direct label, a shape, an annotation. This is 1.4.1, and it’s also just good charting.\nLabel directly. A number printed next to its mark is readable by everyone, removes the decode-the-legend step, and is the single most powerful accessibility move available. It’s also what lets a faint gridline or neutral fill stay faint (see the keystone above).\nAnnotate when it helps. A short note that states the takeaway in words — in our annotation Plum — gives every reader the point directly, not just those who can decode the encoding.\n\nA note on pattern fills. Hatching and polka-dot fills are a legitimate redundancy channel — they help colorblind readers, and they survive black-and-white printing where color collapses entirely. But they add visual noise, and they can pull the eye toward the texture inside a bar rather than the bar’s edge, which is where length encodes the value. So treat them as a hierarchy: reach first for direct labels and white separators; reserve patterns for artifacts that may be reproduced without color.\n\n\n\nSupplemental to the chart\nAlt text. Every chart carries a text description (in our specs, the description field, which becomes the chart’s accessible label). Good alt text states the takeaway, not just “a bar chart” — it’s the screen-reader user’s version of the message title. A template that keeps it consistent:\n\n[Chart type] showing [data scope], where [the primary trend or takeaway]. Full data in the accompanying table.\n\nFor example: “Line chart of North Carolina’s four-year cohort graduation rate, 2019–2025, showing a steady climb to a record high in 2025. Full data in the table below.”\nSupporting tables. Offer the underlying numbers as a real, well-structured table (see Table elements). This is both a 1.4.11 “available in another form” pathway and the backbone of a conforming alternative for complex dashboards.\nNatural-language query. Increasingly, readers can ask a dashboard a question in plain words and get an answer back. Where the tooling supports it, this is another door into the same data — especially valuable for readers who find the visual itself a barrier. Treat it as a supplement, not a substitute, for the techniques above. See also Tooltips for putting the value into words on hover."
+  },
+  {
+    "objectID": "accessibility.html#take-this-page-with-you",
+    "href": "accessibility.html#take-this-page-with-you",
+    "title": "Accessibility",
+    "section": "Take this page with you",
+    "text": "Take this page with you\nThis page as a single Markdown file — for offline reference, or to feed to an AI assistant. Generated from the same source as the live page, so it stays in sync.\n⬇ Download (Markdown)"
+  },
+  {
+    "objectID": "accessibility.html#resources",
+    "href": "accessibility.html#resources",
+    "title": "Accessibility",
+    "section": "Resources",
+    "text": "Resources\nA short, curated set — covering both the technical layer and the story-for-everyone layer:\n\nW3C WAI — Complex Images tutorial — the authoritative source on describing charts and graphics for WCAG.\nChartability (Frank Elavsky) — 50 testable heuristics for evaluating data-visualization accessibility; tool-agnostic and used across government agencies. The best dataviz-specific resource going.\nDo No Harm Guide: Applying Equity Awareness in Data Visualization (Schwabish & Feng, Urban Institute) — the story-for-everyone layer: framing, language, and ordering that make data equitable and inclusive.\nDatawrapper — Accessibility and designing for colorblindness (Lisa Charlotte Muth) — the clearest practical writing on the craft.\nAn intro to designing accessible data visualizations (Sarah L. Fossheim) — a clean, example-driven primer.\nThe ADA Title II web rule (ADA.gov) — the legal requirement and what it means for public agencies."
+  },
+  {
     "objectID": "best-practices/annotation.html",
     "href": "best-practices/annotation.html",
     "title": "Annotation",
@@ -881,6 +930,16 @@
     ]
   },
   {
+    "objectID": "foundations/color.html#the-four-jobs-at-a-glance",
+    "href": "foundations/color.html#the-four-jobs-at-a-glance",
+    "title": "Color — overview",
+    "section": "The four jobs at a glance",
+    "text": "The four jobs at a glance\nGrey recedes; color carries the message. Each panel below is the same simple bar chart with a different palette doing its one job — highlight one value, separate categories, show an ordered sequence, or flag a good/bad outcome.",
+    "crumbs": [
+      "Color — overview"
+    ]
+  },
+  {
     "objectID": "foundations/color.html#the-one-rule-that-matters-most",
     "href": "foundations/color.html#the-one-rule-that-matters-most",
     "title": "Color — overview",
@@ -903,15 +962,43 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Make every NCDPI chart clear, honest, and on-brand.",
+    "title": "The NCDPI chart cheat sheet",
     "section": "",
-    "text": "This is the working home for how we build charts and dashboards at the North Carolina Department of Public Instruction — the colors, the chart parts, the chart types, and the evidence behind them.\nOpen the Chart Chooser"
+    "text": "Colors, type specs, and chart parts for building charts at the North Carolina Department of Public Instruction — the quick reference, all on one page. Everything’s right below.\nJust deciding which chart to use? Open the Chart Chooser"
   },
   {
-    "objectID": "index.html#start-here",
-    "href": "index.html#start-here",
-    "title": "Make every NCDPI chart clear, honest, and on-brand.",
-    "section": "Start here",
-    "text": "Start here\nPick a chart type with confidence, apply the brand palette correctly, and avoid the traps that make data harder to read."
+    "objectID": "index.html#anatomy-of-an-ncdpi-chart",
+    "href": "index.html#anatomy-of-an-ncdpi-chart",
+    "title": "The NCDPI chart cheat sheet",
+    "section": "Anatomy of an NCDPI chart",
+    "text": "Anatomy of an NCDPI chart\nEvery part has a job. Title carries the takeaway; the subtitle carries the contract; color does one thing at a time.\n\n\n\nAnatomy of an NCDPI chart — labeled callouts for the title, subtitle, axis labels, axis values, gridlines, data marks, annotation, and source note, each with its font size and color.\n\n\nSee Chart elements for the full anatomy, and Table and Dashboard elements for those."
+  },
+  {
+    "objectID": "index.html#type-at-a-glance",
+    "href": "index.html#type-at-a-glance",
+    "title": "The NCDPI chart cheat sheet",
+    "section": "Type at a glance",
+    "text": "Type at a glance\nArial throughout. Sizes and colors are the brand standard — the same values that drive every chart in this guide."
+  },
+  {
+    "objectID": "index.html#how-we-use-color",
+    "href": "index.html#how-we-use-color",
+    "title": "The NCDPI chart cheat sheet",
+    "section": "How we use color",
+    "text": "How we use color\nReach for the palette that matches the job, not your favorite color. Each panel below is the same idea: grey recedes, color carries the message.\n\n\nHighlight — one navy #003A70 bar against neutral grey. Draw the eye to one thing. → Highlights\nCategorical — distinct, unordered groups (regions, subjects). → Category groups\nSequence — an ordered low-to-high scale (counts, bands). → Sequences\nGood / Bad — a value worth celebrating (teal #077890) or flagging (rust #B33A12). → Sequences · Diverging\n\n\nFive distinct colors is the ceiling — three or four is better. Past five hues people can’t reliably tell categories apart. Don’t add colors; highlight one against grey, or use small multiples.\n\n\nCategory groups\nBrand order — Blue → Orange → Purple → Green → Gold → Plum:\n\n\n\nHighlight & chart elements\n\n\nSequences and diverging ramps come in 2–5 and 3–9 steps — pick a length on the Sequences and Diverging pages. Every value is in the searchable Color lookup."
+  },
+  {
+    "objectID": "index.html#take-the-specs-with-you",
+    "href": "index.html#take-the-specs-with-you",
+    "title": "The NCDPI chart cheat sheet",
+    "section": "Take the specs with you",
+    "text": "Take the specs with you\nThe full spec sheet — every palette, hex, font, and size — as a single file you can keep, print, or feed to an AI assistant. Generated from the same source as this page, so it never drifts.\n⬇ Download (Markdown) ⬇ Download (JSON)"
+  },
+  {
+    "objectID": "index.html#go-deeper",
+    "href": "index.html#go-deeper",
+    "title": "The NCDPI chart cheat sheet",
+    "section": "Go deeper",
+    "text": "Go deeper\n\nChart Chooser — find the right chart for your data Chart types — worked examples by purpose Color — the four palette jobs in depth Chart parts — anatomy of charts, tables, dashboards Best practices — the construction rules and the evidence Gallery — every chart in the guide, on one page"
   }
 ]

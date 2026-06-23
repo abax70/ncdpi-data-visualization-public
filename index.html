@@ -42,7 +42,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0c630af5986dfaab857384c9c0475a7d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-8bd02a3607eda7d430f35fb4d4606f48.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -174,6 +174,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Best practices</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./accessibility.html"> 
+<span class="menu-text">Accessibility</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./resources.html"> 
 <span class="menu-text">Resources</span></a>
   </li>  
@@ -191,19 +195,68 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content page-columns page-full" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
-<section id="make-every-ncdpi-chart-clear-honest-and-on-brand." class="level1 hero">
-<h1>Make every NCDPI chart clear, honest, and on-brand.</h1>
-<p>This is the working home for how we build charts and dashboards at the North Carolina Department of Public Instruction — the colors, the chart parts, the chart types, and the evidence behind them.</p>
-<p><a href="./chart-chooser.html" class="btn btn-primary btn-lg">Open the Chart Chooser</a></p>
+<section id="the-ncdpi-chart-cheat-sheet" class="level1 hero">
+<h1>The NCDPI chart cheat sheet</h1>
+<p>Colors, type specs, and chart parts for building charts at the North Carolina Department of Public Instruction — the quick reference, all on one page. <strong>Everything’s right below.</strong></p>
+<p>Just deciding <em>which</em> chart to use? <a href="./chart-chooser.html" class="btn btn-outline-light">Open the Chart Chooser</a></p>
 </section>
-<section id="start-here" class="level2">
-<h2 class="anchored" data-anchor-id="start-here">Start here</h2>
-<p>Pick a chart type with confidence, apply the brand palette correctly, and avoid the traps that make data harder to read.</p>
+<section id="anatomy-of-an-ncdpi-chart" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="anatomy-of-an-ncdpi-chart">Anatomy of an NCDPI chart</h2>
+<p>Every part has a job. Title carries the takeaway; the subtitle carries the contract; color does one thing at a&nbsp;time.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p class="page-columns page-full"><img src="assets/chart-anatomy.svg" class="ncdpi-anatomy img-fluid figure-img column-page" alt="Annotated horizontal bar chart with callouts pointing to the title (Arial 14 pt, black), subtitle (Arial 11 pt, dark grey), y-axis category labels, x-axis numeric values, gridlines, individual data bars, a Plum annotation, and the source note."></p>
+<figcaption>Anatomy of an NCDPI chart — labeled callouts for the title, subtitle, axis labels, axis values, gridlines, data marks, annotation, and source note, each with its font size and color.</figcaption>
+</figure>
+</div>
+<p>See <a href="./chart-parts/chart-elements.html">Chart elements</a> for the full anatomy, and <a href="./chart-parts/table-elements.html">Table</a> and <a href="./chart-parts/dashboard-elements.html">Dashboard</a> elements for those.</p>
+</section>
+<section id="type-at-a-glance" class="level2">
+<h2 class="anchored" data-anchor-id="type-at-a-glance">Type at a glance</h2>
+<p>Arial throughout. Sizes and colors are the brand standard — the same values that drive every chart in this guide.</p>
+<div data-type-table="Chart,Dashboard"></div>
+</section>
+<section id="how-we-use-color" class="level2">
+<h2 class="anchored" data-anchor-id="how-we-use-color">How we use color</h2>
+<p>Reach for the palette that matches the <strong>job</strong>, not your favorite color. Each panel below is the same idea: grey recedes, color carries the message.</p>
+<div class="ncdpi-vega" data-spec="charts/foundations__palette-intent.vl.json"></div>
+<ul>
+<li><strong>Highlight</strong> — one navy <code>#003A70</code> bar against neutral grey. Draw the eye to one thing. → <a href="./foundations/color-highlights.html">Highlights</a></li>
+<li><strong>Categorical</strong> — distinct, unordered groups (regions, subjects). → <a href="./foundations/color-groups.html">Category groups</a></li>
+<li><strong>Sequence</strong> — an ordered low-to-high scale (counts, bands). → <a href="./foundations/color-sequences.html">Sequences</a></li>
+<li><strong>Good / Bad</strong> — a value worth celebrating (teal <code>#077890</code>) or flagging (rust <code>#B33A12</code>). → <a href="./foundations/color-sequences.html">Sequences</a> · <a href="./foundations/color-diverging.html">Diverging</a></li>
+</ul>
+<div class="ncdpi-callout rule">
+<p><strong>Five distinct colors is the ceiling — three or four is better.</strong> Past five hues people can’t reliably tell categories apart. Don’t add colors; highlight one against grey, or use <a href="./best-practices/small-multiples.html">small multiples</a>.</p>
+</div>
+<section id="category-groups" class="level3">
+<h3 class="anchored" data-anchor-id="category-groups">Category groups</h3>
+<p>Brand order — <strong>Blue → Orange → Purple → Green → Gold → Plum</strong>:</p>
+<div data-swatches="Groups: 6" data-swatches-exclude="Total/Avg"></div>
+</section>
+<section id="highlight-chart-elements" class="level3">
+<h3 class="anchored" data-anchor-id="highlight-chart-elements">Highlight &amp; chart elements</h3>
+<div data-swatches="Data Highlight"></div>
+<div data-swatches="Chart Elements"></div>
+<p>Sequences and diverging ramps come in 2–5 and 3–9 steps — pick a length on the <a href="./foundations/color-sequences.html">Sequences</a> and <a href="./foundations/color-diverging.html">Diverging</a> pages. Every value is in the searchable <a href="./foundations/color-lookup.html">Color lookup</a>.</p>
+</section>
+</section>
+<section id="take-the-specs-with-you" class="level2">
+<h2 class="anchored" data-anchor-id="take-the-specs-with-you">Take the specs with you</h2>
+<p>The full spec sheet — every palette, hex, font, and size — as a single file you can keep, print, or feed to an AI assistant. Generated from the same source as this page, so it never drifts.</p>
+<p><a href="downloads/ncdpi-chart-specs.md" class="btn btn-secondary">⬇ Download (Markdown)</a> <a href="downloads/ncdpi-chart-specs.json" class="btn btn-secondary">⬇ Download (JSON)</a></p>
+</section>
+<section id="go-deeper" class="level2">
+<h2 class="anchored" data-anchor-id="go-deeper">Go deeper</h2>
+<div class="home-nav">
+<p><a href="./chart-chooser.html" class="home-card"><strong>Chart Chooser</strong> — find the right chart for your data</a> <a href="./chart-types/index.html" class="home-card"><strong>Chart types</strong> — worked examples by purpose</a> <a href="./foundations/color.html" class="home-card"><strong>Color</strong> — the four palette jobs in depth</a> <a href="./chart-parts/chart-elements.html" class="home-card"><strong>Chart parts</strong> — anatomy of charts, tables, dashboards</a> <a href="./best-practices/index.html" class="home-card"><strong>Best practices</strong> — the construction rules and the evidence</a> <a href="./chart-gallery.html" class="home-card"><strong>Gallery</strong> — every chart in the guide, on one page</a></p>
+</div>
+<script>(function(){var el=document.querySelector('link[href*="site_libs/"],script[src*="site_libs/"]');var root=el?(el.href||el.src).replace(/site_libs\/.*$/,''):'';var s=document.createElement('script');s.src=root+'js/color-render.js';document.body.appendChild(s);})();</script>
 
 
 </section>

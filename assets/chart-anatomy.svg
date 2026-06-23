@@ -1,136 +1,161 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 500" role="img"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 600" role="img"
      aria-labelledby="chart-anatomy-title chart-anatomy-desc"
      font-family="Arial, Helvetica, sans-serif">
   <title id="chart-anatomy-title">Anatomy of an NCDPI chart</title>
-  <desc id="chart-anatomy-desc">An annotated horizontal bar chart of average daily attendance by region with labeled callouts pointing to each visual element: title, subtitle, axis label, axis values, gridlines, data marks, data mark label, annotation, and source note.</desc>
+  <desc id="chart-anatomy-desc">An annotated horizontal bar chart of 4-year cohort graduation rates for North Carolina's eight SBE regions in 2025, with labeled callouts pointing to each visual element: title, subtitle, axis label, axis values, gridlines, data marks, data-mark label, annotation, and source note. The Northeast region is highlighted navy to draw attention; the other regions are neutral grey.</desc>
 
   <!-- Background -->
-  <rect width="1120" height="500" fill="#FFFFFF"/>
+  <rect width="1240" height="600" fill="#FFFFFF"/>
 
   <!-- ============= The chart ============= -->
   <!-- Title — message-driven (the takeaway), per Convention 2 -->
-  <text x="180" y="52" fill="#000000" font-size="18" font-weight="700">Charlotte leads the state in attendance</text>
+  <text x="180" y="50" fill="#000000" font-size="22" font-weight="700">The Northeast region graduates 87% of its cohort</text>
   <!-- Subtitle — the contract: measure, metric type, unit of analysis, time period -->
-  <text x="180" y="76" fill="#525A60" font-size="13">Average daily attendance (%), by region, 2023–24</text>
+  <text x="180" y="80" fill="#525A60" font-size="16">4-year cohort graduation rate (%), by SBE region, 2025</text>
 
-  <!-- Gridlines (light grey, vertical) — the zero baseline is pulled out below so it reads darker -->
+  <!-- Gridlines (light grey, vertical) — value axis WITH gridlines, so the value-axis
+       spine is dropped (Convention 10); only the zero baseline is drawn (below). -->
   <g stroke="#DEDEDE" stroke-width="1">
-    <line x1="415" y1="110" x2="415" y2="350"/>
-    <line x1="550" y1="110" x2="550" y2="350"/>
-    <line x1="685" y1="110" x2="685" y2="350"/>
-    <line x1="820" y1="110" x2="820" y2="350"/>
+    <line x1="437.5" y1="110" x2="437.5" y2="510"/>
+    <line x1="575"   y1="110" x2="575"   y2="510"/>
+    <line x1="712.5" y1="110" x2="712.5" y2="510"/>
+    <line x1="850"   y1="110" x2="850"   y2="510"/>
   </g>
 
-  <!-- Axis lines, darker than gridlines (#525A60): the vertical ZERO BASELINE bars grow
-       from is the perceptual anchor for length, so it earns weight; plus the value-axis spine. -->
-  <line x1="280" y1="110" x2="280" y2="350" stroke="#525A60" stroke-width="1"/>
-  <line x1="280" y1="350" x2="820" y2="350" stroke="#525A60" stroke-width="1"/>
+  <!-- Zero baseline (Convention 6): the line bars grow from is the perceptual anchor
+       for length, so it earns weight — darker (#525A60) than the gridlines. The
+       category axis gets NO spine (Convention 10). -->
+  <line x1="300" y1="110" x2="300" y2="510" stroke="#525A60" stroke-width="1.5"/>
 
   <!-- Category labels — left-justified to the content margin (Convention 3) -->
-  <g fill="#000000" font-size="13" text-anchor="start">
-    <text x="180" y="153">Mountain</text>
-    <text x="180" y="197">Piedmont-Triad</text>
-    <text x="180" y="241">Charlotte</text>
-    <text x="180" y="285">Sandhills</text>
-    <text x="180" y="329">Coastal Plain</text>
+  <g fill="#000000" font-size="16" text-anchor="start">
+    <text x="180" y="142">Western</text>
+    <text x="180" y="192">Northwest</text>
+    <text x="180" y="242">Piedmont Triad</text>
+    <text x="180" y="292">North Central</text>
+    <text x="180" y="342">Northeast</text>
+    <text x="180" y="392">Southwest</text>
+    <text x="180" y="442">Southeast</text>
+    <text x="180" y="492">Sandhills</text>
   </g>
 
-  <!-- Bars (scale: 0..100 → 280..820, so width = pct × 5.4).
-       Neutral #B7B9BB context + one navy #003A70 highlight (Charlotte), per color-highlights. -->
-  <rect x="280" y="135" width="497" height="26" fill="#B7B9BB"/>
-  <rect x="280" y="179" width="481" height="26" fill="#B7B9BB"/>
-  <rect x="280" y="223" width="513" height="26" fill="#003A70"/>
-  <rect x="280" y="267" width="464" height="26" fill="#B7B9BB"/>
-  <rect x="280" y="311" width="475" height="26" fill="#B7B9BB"/>
-
-  <!-- Bar value labels -->
-  <g fill="#000000" font-size="13">
-    <text x="785" y="155">92</text>
-    <text x="769" y="199">89</text>
-    <text x="801" y="243" font-weight="700">95</text>
-    <text x="752" y="287">86</text>
-    <text x="763" y="331">88</text>
+  <!-- Bars (scale: 0..100 -> 300..850, so width = pct x 5.5).
+       Neutral #B7B9BB context + one navy #003A70 highlight (Northeast). Navy marks
+       attention, NOT good/bad — a non-valenced highlight. -->
+  <g>
+    <rect x="300" y="122" width="504" height="30" fill="#B7B9BB"/>
+    <rect x="300" y="172" width="490" height="30" fill="#B7B9BB"/>
+    <rect x="300" y="222" width="489" height="30" fill="#B7B9BB"/>
+    <rect x="300" y="272" width="485" height="30" fill="#B7B9BB"/>
+    <rect x="300" y="322" width="480" height="30" fill="#003A70"/>
+    <rect x="300" y="372" width="478" height="30" fill="#B7B9BB"/>
+    <rect x="300" y="422" width="478" height="30" fill="#B7B9BB"/>
+    <rect x="300" y="472" width="474" height="30" fill="#B7B9BB"/>
   </g>
 
-  <!-- X-axis tick values -->
-  <g fill="#525A60" font-size="12" text-anchor="middle">
-    <text x="280" y="372">0</text>
-    <text x="415" y="372">25</text>
-    <text x="550" y="372">50</text>
-    <text x="685" y="372">75</text>
-    <text x="820" y="372">100</text>
+  <!-- Bar value labels (direct, so they double as the data-mark label) -->
+  <g fill="#000000" font-size="16">
+    <text x="812" y="142">91.6</text>
+    <text x="798" y="192">89.1</text>
+    <text x="797" y="242">88.9</text>
+    <text x="793" y="292">88.2</text>
+    <text x="788" y="342" font-weight="700">87.3</text>
+    <text x="786" y="392">86.9</text>
+    <text x="786" y="442">86.9</text>
+    <text x="782" y="492">86.1</text>
   </g>
 
-  <!-- Inline annotation (Plum, italic) -->
-  <text x="820" y="242" fill="#842175" font-size="12" font-style="italic">Highest in state</text>
+  <!-- Inline annotation (Plum, italic) on the highlighted bar -->
+  <text x="845" y="342" fill="#842175" font-size="15" font-style="italic">5th of 8</text>
+
+  <!-- X-axis tick values (value axis: numbers kept, ticks + spine dropped) -->
+  <g fill="#525A60" font-size="15" text-anchor="middle">
+    <text x="300"   y="538">0</text>
+    <text x="437.5" y="538">25</text>
+    <text x="575"   y="538">50</text>
+    <text x="712.5" y="538">75</text>
+    <text x="850"   y="538">100</text>
+  </g>
 
   <!-- Source note -->
-  <text x="180" y="412" fill="#525A60" font-size="12">Source: NCDPI school attendance data, 2023–24. Regions defined by the State Board of Education.</text>
+  <text x="180" y="572" fill="#525A60" font-size="15">Source: NCDPI accountability data (4-year cohort graduation rate), 2025.</text>
 
   <!-- ============= Callouts ============= -->
-  <!-- Dotted leader + dot at target; right-side callout label. -->
+  <!-- Leaders are routed to the chart's clean right/bottom edge so they never cross
+       bars, labels, or gridlines on their way to the right-hand callout column. -->
   <g stroke="#525A60" stroke-width="1" stroke-dasharray="2 3" fill="none">
-    <!-- Title (dot sits just past the longer message-driven title) -->
-    <line x1="585" y1="48" x2="900" y2="48"/>
-    <!-- Subtitle (dot sits just past the contract subtitle) -->
-    <line x1="585" y1="74" x2="900" y2="80"/>
-    <!-- Annotation -->
-    <line x1="800" y1="245" x2="950" y2="208"/>
-    <!-- Data mark label -->
-    <line x1="795" y1="155" x2="955" y2="155"/>
-    <!-- Gridlines -->
-    <line x1="685" y1="320" x2="900" y2="352"/>
-    <!-- Axis values -->
-    <line x1="550" y1="372" x2="900" y2="396"/>
-    <!-- Source note -->
-    <line x1="500" y1="412" x2="900" y2="442"/>
+    <!-- Title (dot sits just past the title text) -->
+    <line x1="810" y1="46" x2="950" y2="46"/>
+    <!-- Subtitle (dot just past the subtitle text; stays above the plot) -->
+    <line x1="620" y1="76" x2="950" y2="110"/>
+    <!-- Data-mark label (Western's value, to the right of the bars) -->
+    <line x1="852" y1="138" x2="950" y2="196"/>
+    <!-- Gridlines (the right-most gridline, clear of every bar) -->
+    <line x1="850" y1="356" x2="945" y2="352"/>
+    <!-- Axis values (the "100" tick at the right edge) -->
+    <line x1="850" y1="538" x2="950" y2="426"/>
+    <!-- Source note (dropped low so its leader clears the Axis-values leader) -->
+    <line x1="720" y1="568" x2="950" y2="556"/>
   </g>
+  <!-- Annotation leader (plum) -->
+  <g stroke="#842175" stroke-width="1" stroke-dasharray="2 3" fill="none">
+    <line x1="905" y1="338" x2="950" y2="264"/>
+  </g>
+  <!-- Left-side leaders: axis label (-> first category label) and axis line
+       (-> the dark zero baseline, through a white gap between rows). -->
   <g stroke="#525A60" stroke-width="1" stroke-dasharray="2 3" fill="none">
-    <!-- Axis label (left side) — points at the start of the left-justified labels -->
-    <line x1="180" y1="195" x2="135" y2="170"/>
+    <line x1="178" y1="138" x2="110" y2="78"/>
+    <line x1="300" y1="307" x2="168" y2="307"/>
   </g>
 
-  <!-- Dots at leader endpoints -->
+  <!-- Dots at chart-side leader endpoints -->
   <g fill="#525A60">
-    <circle cx="585" cy="48" r="3"/>
-    <circle cx="585" cy="74" r="3"/>
-    <circle cx="795" cy="155" r="3"/>
-    <circle cx="685" cy="320" r="3"/>
-    <circle cx="550" cy="372" r="3"/>
-    <circle cx="500" cy="412" r="3"/>
-    <circle cx="180" cy="195" r="3"/>
+    <circle cx="810" cy="46"  r="3.5"/>
+    <circle cx="620" cy="76"  r="3.5"/>
+    <circle cx="852" cy="138" r="3.5"/>
+    <circle cx="850" cy="356" r="3.5"/>
+    <circle cx="850" cy="538" r="3.5"/>
+    <circle cx="720" cy="568" r="3.5"/>
+    <circle cx="178" cy="138" r="3.5"/>
+    <circle cx="300" cy="307" r="3.5"/>
   </g>
-  <circle cx="800" cy="245" r="3" fill="#842175"/>
+  <circle cx="905" cy="338" r="3.5" fill="#842175"/>
 
-  <!-- Callout labels (right side, left-aligned at x=910) -->
-  <g font-size="11">
-    <text x="910" y="44"  fill="#003A70" font-weight="700">Title</text>
-    <text x="910" y="58"  fill="#525A60">The takeaway — the one message</text>
+  <!-- Callout labels (right side, left-aligned at x=960) -->
+  <g font-size="15">
+    <text x="960" y="50"  fill="#003A70" font-weight="700">Title</text>
+    <text x="960" y="68"  fill="#525A60">The takeaway — the one message</text>
+    <text x="960" y="86"  fill="#525A60">Arial 14 pt, #000000</text>
 
-    <text x="910" y="80"  fill="#003A70" font-weight="700">Subtitle</text>
-    <text x="910" y="94"  fill="#525A60">The contract: measure, metric,</text>
-    <text x="910" y="108" fill="#525A60">unit of analysis, time period</text>
+    <text x="960" y="114" fill="#003A70" font-weight="700">Subtitle</text>
+    <text x="960" y="132" fill="#525A60">The contract: measure, metric,</text>
+    <text x="960" y="150" fill="#525A60">unit of analysis, time period</text>
+    <text x="960" y="168" fill="#525A60">Arial 11 pt, #525A60</text>
 
-    <text x="960" y="208" fill="#842175" font-weight="700">Annotation</text>
-    <text x="960" y="222" fill="#525A60">Plum #842175 — same color as</text>
-    <text x="960" y="236" fill="#525A60">help text on dashboards</text>
+    <text x="960" y="200" fill="#003A70" font-weight="700">Data-mark label</text>
+    <text x="960" y="218" fill="#525A60">Arial 11 pt, #000000</text>
 
-    <text x="965" y="151" fill="#003A70" font-weight="700">Data-mark label</text>
-    <text x="965" y="165" fill="#525A60">Arial 11 pt, #000000</text>
+    <text x="960" y="268" fill="#842175" font-weight="700">Annotation</text>
+    <text x="960" y="286" fill="#525A60">Plum #842175 — same color as</text>
+    <text x="960" y="304" fill="#525A60">help text on dashboards</text>
 
-    <text x="910" y="352" fill="#003A70" font-weight="700">Gridlines</text>
-    <text x="910" y="366" fill="#525A60">Light grey #DEDEDE</text>
+    <text x="960" y="350" fill="#003A70" font-weight="700">Gridlines</text>
+    <text x="960" y="368" fill="#525A60">Light grey #DEDEDE</text>
 
-    <text x="910" y="396" fill="#003A70" font-weight="700">Axis values</text>
-    <text x="910" y="410" fill="#525A60">Arial 11 pt, #525A60</text>
+    <text x="960" y="412" fill="#003A70" font-weight="700">Axis values</text>
+    <text x="960" y="430" fill="#525A60">Arial 11 pt, #525A60</text>
 
-    <text x="910" y="442" fill="#003A70" font-weight="700">Source note</text>
-    <text x="910" y="456" fill="#525A60">Arial 11 pt, #525A60</text>
+    <text x="960" y="556" fill="#003A70" font-weight="700">Source note</text>
+    <text x="960" y="574" fill="#525A60">Arial 11 pt, #525A60</text>
   </g>
-  <!-- Left-side callouts (right-aligned at x=50) -->
-  <g font-size="11" text-anchor="end">
-    <text x="130" y="158" fill="#003A70" font-weight="700">Axis label</text>
-    <text x="130" y="172" fill="#525A60">Arial 11 pt, #000000</text>
+  <!-- Left-side callouts (left-aligned). Axis label = category labels; Axis line =
+       the dark zero baseline / ruler color, darker than the gridlines (Convention 6). -->
+  <g font-size="15">
+    <text x="15" y="50"  fill="#003A70" font-weight="700">Axis label</text>
+    <text x="15" y="68"  fill="#525A60">Arial 11 pt, #000000</text>
+
+    <text x="15" y="300" fill="#003A70" font-weight="700">Axis line</text>
+    <text x="15" y="318" fill="#525A60">Dark grey #525A60</text>
   </g>
 </svg>

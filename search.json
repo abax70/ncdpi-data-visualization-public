@@ -4,14 +4,14 @@
     "href": "resources.html",
     "title": "Resources",
     "section": "",
-    "text": "Color system (CSV) — every palette and hex, the source of truth for this whole guide: branding/NCDPI Data Visualization Style Guide Colors.csv\nNCDPI logo kit — horizontal, centered, and icon marks in SVG/PNG/PDF/EPS: branding/DPI Logo Kit/\nDPI Style Guide 2025 (PDF) — the full agency brand standard: branding/DPI Style Guide-2025.pdf"
+    "text": "Skip to main content"
   },
   {
     "objectID": "resources.html#brand-assets",
     "href": "resources.html#brand-assets",
     "title": "Resources",
-    "section": "",
-    "text": "Color system (CSV) — every palette and hex, the source of truth for this whole guide: branding/NCDPI Data Visualization Style Guide Colors.csv\nNCDPI logo kit — horizontal, centered, and icon marks in SVG/PNG/PDF/EPS: branding/DPI Logo Kit/\nDPI Style Guide 2025 (PDF) — the full agency brand standard: branding/DPI Style Guide-2025.pdf"
+    "section": "Brand assets",
+    "text": "Brand assets\n\nColor system (CSV) — every palette and hex, the source of truth for this whole guide: branding/NCDPI Data Visualization Style Guide Colors.csv\nNCDPI logo kit — horizontal, centered, and icon marks in SVG/PNG/PDF/EPS: branding/DPI Logo Kit/\nDPI Style Guide 2025 (PDF) — the full agency brand standard: branding/DPI Style Guide-2025.pdf"
   },
   {
     "objectID": "resources.html#behind-the-guidance",
@@ -39,7 +39,7 @@
     "href": "foundations/typography.html",
     "title": "Typography",
     "section": "",
-    "text": "NCDPI charts, dashboards, and official web materials use Arial (fallback Helvetica) — the agency’s WCAG-compliant workhorse font. This guide deliberately sets its own body text in Arial too, so the words on the page match the words in the charts.\n\nThe NC Digital Commons web framework specifies Source Sans Pro for sites that live on nc.gov. This guide is an NCDPI-owned site about the chart palette, so it follows the NCDPI agency standard (Arial) for visual consistency with the charts.",
+    "text": "Skip to main content",
     "crumbs": [
       "Typography"
     ]
@@ -48,8 +48,8 @@
     "objectID": "foundations/typography.html#font",
     "href": "foundations/typography.html#font",
     "title": "Typography",
-    "section": "",
-    "text": "NCDPI charts, dashboards, and official web materials use Arial (fallback Helvetica) — the agency’s WCAG-compliant workhorse font. This guide deliberately sets its own body text in Arial too, so the words on the page match the words in the charts.\n\nThe NC Digital Commons web framework specifies Source Sans Pro for sites that live on nc.gov. This guide is an NCDPI-owned site about the chart palette, so it follows the NCDPI agency standard (Arial) for visual consistency with the charts.",
+    "section": "Font",
+    "text": "Font\nNCDPI charts, dashboards, and official web materials use Arial (fallback Helvetica) — the agency’s WCAG-compliant workhorse font. This guide deliberately sets its own body text in Arial too, so the words on the page match the words in the charts.\n\nThe NC Digital Commons web framework specifies Source Sans Pro for sites that live on nc.gov. This guide is an NCDPI-owned site about the chart palette, so it follows the NCDPI agency standard (Arial) for visual consistency with the charts.",
     "crumbs": [
       "Typography"
     ]
@@ -79,7 +79,7 @@
     "href": "foundations/color-sequences.html",
     "title": "Color — sequences",
     "section": "",
-    "text": "Use a sequential palette when the data has a natural order from low to high. NCDPI provides three, because in education “high” isn’t always “good”:\nDarker always means more — the dark-is-more convention people read intuitively.",
+    "text": "Skip to main content\nUse a sequential palette when the data has a natural order from low to high. NCDPI provides three, because in education “high” isn’t always “good”:\nDarker always means more — the dark-is-more convention people read intuitively.",
     "crumbs": [
       "Color — sequences"
     ]
@@ -109,7 +109,7 @@
     "href": "foundations/color-highlights.html",
     "title": "Color — highlights",
     "section": "",
-    "text": "The single most useful move in the whole palette: plot everything in neutral grey and use color for the one thing your message is about. This is how you handle “too many categories” without breaking the five-color rule.",
+    "text": "Skip to main content\nThe single most useful move in the whole palette: plot everything in neutral grey and use color for the one thing your message is about. This is how you handle “too many categories” without breaking the five-color rule.",
     "crumbs": [
       "Color — highlights"
     ]
@@ -129,7 +129,7 @@
     "href": "foundations/color-diverging.html",
     "title": "Color — diverging",
     "section": "",
-    "text": "Use a diverging palette when the scale has a meaningful midpoint and runs in two directions from it — change versus last year, performance versus a target, or Likert agreement. Rust on one side, teal on the other, neutral grey in the middle.\nNCDPI provides 3-, 5-, 7-, and 9-step versions so you can match the number of classes in your data. The steps read like a number line — negative through zero to positive (Step -2 … Step 0 … Step +2).",
+    "text": "Skip to main content\nUse a diverging palette when the scale has a meaningful midpoint and runs in two directions from it — change versus last year, performance versus a target, or Likert agreement. Rust on one side, teal on the other, neutral grey in the middle.\nNCDPI provides 3-, 5-, 7-, and 9-step versions so you can match the number of classes in your data. The steps read like a number line — negative through zero to positive (Step -2 … Step 0 … Step +2).",
     "crumbs": [
       "Color — diverging"
     ]
@@ -159,7 +159,7 @@
     "href": "chart-types/maps.html",
     "title": "Maps",
     "section": "",
-    "text": "Maps answer “where?” They’re powerful and familiar, but color-on-geography is one of the least precise encodings — always pair a map with a chart that allows precise comparison.",
+    "text": "Skip to main content\nMaps answer “where?” They’re powerful and familiar, but color-on-geography is one of the least precise encodings — always pair a map with a chart that allows precise comparison.",
     "crumbs": [
       "Chart types",
       "Maps"
@@ -192,7 +192,7 @@
     "href": "chart-types/kpis.html",
     "title": "KPIs & big numbers",
     "section": "",
-    "text": "Sometimes the most effective chart is barely a chart at all — a single number, set large, that answers the one question a reader came with. On a dashboard it is the anchor: the figure the eye lands on first, before it works through the supporting detail. The job of this family is headline, not exploration.",
+    "text": "Skip to main content\nSometimes the most effective chart is barely a chart at all — a single number, set large, that answers the one question a reader came with. On a dashboard it is the anchor: the figure the eye lands on first, before it works through the supporting detail. The job of this family is headline, not exploration.",
     "crumbs": [
       "Chart types",
       "KPIs & big numbers"
@@ -269,7 +269,7 @@
     "href": "chart-types/distributions.html",
     "title": "Distributions",
     "section": "",
-    "text": "Reach for a distribution chart when the spread is the story — not a single average, but how values are arranged around it.",
+    "text": "Skip to main content\nReach for a distribution chart when the spread is the story — not a single average, but how values are arranged around it.",
     "crumbs": [
       "Chart types",
       "Distributions"
@@ -302,7 +302,7 @@
     "href": "chart-types/correlation.html",
     "title": "Relationships",
     "section": "",
-    "text": "When you want to show whether two numbers move together, plot them against each other. Position on two scales is the most accurate read there is.",
+    "text": "Skip to main content\nWhen you want to show whether two numbers move together, plot them against each other. Position on two scales is the most accurate read there is.",
     "crumbs": [
       "Chart types",
       "Relationships"
@@ -335,7 +335,7 @@
     "href": "chart-parts/tooltips.html",
     "title": "Tooltips",
     "section": "",
-    "text": "A tooltip is the little box that appears when a reader hovers over a mark. Used well, it lets a reader check their reading of a chart. Used carelessly — which is the default in most tools — it dumps raw field names and unformatted numbers, and adds noise instead of clarity.",
+    "text": "Skip to main content\nA tooltip is the little box that appears when a reader hovers over a mark. Used well, it lets a reader check their reading of a chart. Used carelessly — which is the default in most tools — it dumps raw field names and unformatted numbers, and adds noise instead of clarity.",
     "crumbs": [
       "Tooltips"
     ]
@@ -375,7 +375,7 @@
     "href": "chart-parts/dashboard-elements.html",
     "title": "Dashboard elements",
     "section": "",
-    "text": "A dashboard is a set of charts that share context. The chrome around them should be calm and predictable so the data stands out.",
+    "text": "Skip to main content\nA dashboard is a set of charts that share context. The chrome around them should be calm and predictable so the data stands out.",
     "crumbs": [
       "Dashboard elements"
     ]
@@ -425,7 +425,7 @@
     "href": "chart-gallery.html",
     "title": "Chart Gallery",
     "section": "",
-    "text": "Every worked example from the Chart Chooser on one page, grouped by purpose. Use it to browse what an on-brand NCDPI version of each chart type looks like — or to find a type by eye when you’d rather scan than answer the chooser’s questions."
+    "text": "Skip to main content\nEvery worked example from the Chart Chooser on one page, grouped by purpose. Use it to browse what an on-brand NCDPI version of each chart type looks like — or to find a type by eye when you’d rather scan than answer the chooser’s questions."
   },
   {
     "objectID": "chart-gallery.html#used-elsewhere-in-the-guide",
@@ -439,7 +439,7 @@
     "href": "best-practices/small-multiples.html",
     "title": "Small multiples",
     "section": "",
-    "text": "A small-multiples chart repeats the same little chart once per category, on a shared scale, in a grid. It is the most reliable cure for “I have too many categories” — and it’s badly under-used at NCDPI, so reach for it more."
+    "text": "Skip to main content\nA small-multiples chart repeats the same little chart once per category, on a shared scale, in a grid. It is the most reliable cure for “I have too many categories” — and it’s badly under-used at NCDPI, so reach for it more."
   },
   {
     "objectID": "best-practices/small-multiples.html#why-they-work",
@@ -460,7 +460,7 @@
     "href": "best-practices/index.html",
     "title": "Best practices",
     "section": "",
-    "text": "A handful of principles, drawn from our data visualization literature review, explain why the rules on this site are the rules. Read these once and most chart decisions answer themselves."
+    "text": "Skip to main content\nA handful of principles, drawn from our data visualization literature review, explain why the rules on this site are the rules. Read these once and most chart decisions answer themselves."
   },
   {
     "objectID": "best-practices/index.html#ncdpi-standing-rules-in-one-place",
@@ -474,7 +474,7 @@
     "href": "best-practices/axis-scales.html",
     "title": "Axis scales",
     "section": "",
-    "text": "How far you let an axis run is a design decision, not a default. For a bounded, aspirational metric — graduation rate, proficiency, attendance, any percent where 100% is the real goal — start the value axis at the goal by default. The reader should see how far there is left to go, not just how the categories rank against each other.\nBut there’s a cost: when every value sits in a narrow band near the top, a full 0–100 axis makes them look identical. The same eight regions below differ by 5.5 points — invisible on the goal-anchored axis, obvious when zoomed."
+    "text": "Skip to main content\nHow far you let an axis run is a design decision, not a default. For a bounded, aspirational metric — graduation rate, proficiency, attendance, any percent where 100% is the real goal — start the value axis at the goal by default. The reader should see how far there is left to go, not just how the categories rank against each other.\nBut there’s a cost: when every value sits in a narrow band near the top, a full 0–100 axis makes them look identical. The same eight regions below differ by 5.5 points — invisible on the goal-anchored axis, obvious when zoomed."
   },
   {
     "objectID": "best-practices/axis-scales.html#the-rule",
@@ -495,7 +495,7 @@
     "href": "accessibility.html",
     "title": "Accessibility",
     "section": "",
-    "text": "Accessibility is not a box we check at the end. It is the whole point of a chart: everyone who comes to a visualization should be able to leave with its takeaway. This page lays out how we think about that at NCDPI — which is, in a few places, deliberately more nuanced than a strict checklist reading of the rules. We explain why, and we show our work against the actual standard."
+    "text": "Skip to main content\nAccessibility is not a box we check at the end. It is the whole point of a chart: everyone who comes to a visualization should be able to leave with its takeaway. This page lays out how we think about that at NCDPI — which is, in a few places, deliberately more nuanced than a strict checklist reading of the rules. We explain why, and we show our work against the actual standard."
   },
   {
     "objectID": "accessibility.html#two-levels-of-accessibility",
@@ -544,7 +544,7 @@
     "href": "best-practices/annotation.html",
     "title": "Annotation",
     "section": "",
-    "text": "A chart that makes the reader figure out the point often loses them. Do the interpreting for them."
+    "text": "Skip to main content\nA chart that makes the reader figure out the point often loses them. Do the interpreting for them."
   },
   {
     "objectID": "best-practices/annotation.html#write-the-takeaway-into-the-title",
@@ -572,7 +572,7 @@
     "href": "best-practices/color-rules.html",
     "title": "Color rules",
     "section": "",
-    "text": "Color is the most abused encoding in agency charts. Three rules keep it honest."
+    "text": "Skip to main content\nColor is the most abused encoding in agency charts. Three rules keep it honest."
   },
   {
     "objectID": "best-practices/color-rules.html#five-colors-is-the-ceiling",
@@ -600,7 +600,7 @@
     "href": "best-practices/perceptual-hierarchy.html",
     "title": "The perceptual hierarchy",
     "section": "",
-    "text": "Some visual encodings are read more accurately than others. Cleveland & McGill’s classic experiments, replicated many times since, rank them roughly like this:"
+    "text": "Skip to main content\nSome visual encodings are read more accurately than others. Cleveland & McGill’s classic experiments, replicated many times since, rank them roughly like this:"
   },
   {
     "objectID": "best-practices/perceptual-hierarchy.html#what-it-means-in-practice",
@@ -614,14 +614,14 @@
     "href": "chart-chooser.html",
     "title": "Chart Chooser",
     "section": "",
-    "text": "Answer a few quick questions about your data and what you want to show. You’ll get one to three chart types that fit — each with a small, on-brand NCDPI example and tips for building it well. This follows the same evidence-based logic as our chart-selection guidance; it never recommends a chart that misleads.\n\n  The Chart Chooser needs JavaScript. See the Chart types gallery for the same guidance."
+    "text": "Skip to main content\n\n\n\n\nAnswer a few quick questions about your data and what you want to show. You’ll get one to three chart types that fit — each with a small, on-brand NCDPI example and tips for building it well. This follows the same evidence-based logic as our chart-selection guidance; it never recommends a chart that misleads.\n\n  The Chart Chooser needs JavaScript. See the Chart types gallery for the same guidance."
   },
   {
     "objectID": "chart-parts/chart-elements.html",
     "href": "chart-parts/chart-elements.html",
     "title": "Chart elements",
     "section": "",
-    "text": "The non-data parts of a chart should recede so the data can speak. NCDPI defaults keep them quiet and consistent.",
+    "text": "Skip to main content\nThe non-data parts of a chart should recede so the data can speak. NCDPI defaults keep them quiet and consistent.",
     "crumbs": [
       "Chart elements"
     ]
@@ -671,7 +671,7 @@
     "href": "chart-parts/table-elements.html",
     "title": "Table elements",
     "section": "",
-    "text": "Sometimes a table is the right answer — when readers need to look up exact values. Make it scannable.",
+    "text": "Skip to main content\nSometimes a table is the right answer — when readers need to look up exact values. Make it scannable.",
     "crumbs": [
       "Table elements"
     ]
@@ -741,7 +741,7 @@
     "href": "chart-types/bar-charts.html",
     "title": "Bar charts",
     "section": "",
-    "text": "The bar chart is the workhorse of comparison: it encodes values as length on a common baseline, which is one of the most accurate things the human eye can do.",
+    "text": "Skip to main content\nThe bar chart is the workhorse of comparison: it encodes values as length on a common baseline, which is one of the most accurate things the human eye can do.",
     "crumbs": [
       "Chart types",
       "Bar charts"
@@ -763,7 +763,7 @@
     "href": "chart-types/deviation.html",
     "title": "Difference from a baseline",
     "section": "",
-    "text": "When the difference itself is the message — change from last year, above/below a target, or the gap between two groups — plot the difference directly.",
+    "text": "Skip to main content\nWhen the difference itself is the message — change from last year, above/below a target, or the gap between two groups — plot the difference directly.",
     "crumbs": [
       "Chart types",
       "Difference from a baseline"
@@ -807,7 +807,7 @@
     "href": "chart-types/index.html",
     "title": "Chart types",
     "section": "",
-    "text": "Charts are organised here by the job they do — the message you want your audience to take away — not by the data type. Not sure which job you have? The Chart Chooser will walk you to a recommendation.\nEvery example uses real, public NCDPI school data and the NCDPI brand palette.\n\n\n  \n    \n      \n        \n        \n        \n      \n    \n    Compare and rank\n    Bar charts, dots, lollipops, dumbbells\n  \n\n  \n    \n      \n        \n        \n          \n          \n          \n          \n          \n          \n        \n      \n    \n    Change over time\n    Lines, small multiples, slope charts\n  \n\n  \n    \n      \n        \n        \n        \n      \n    \n    Parts of a whole\n    Pie, stacked bar, waffle\n  \n\n  \n    \n      \n        \n        \n        \n        \n        \n        \n        \n      \n    \n    Distribution\n    Histogram, box plot\n  \n\n  \n    \n      \n        \n          \n          \n          \n          \n          \n          \n          \n          \n        \n      \n    \n    Relationships\n    Scatter, bubble\n  \n\n  \n    \n      \n        \n        \n        \n        \n        \n      \n    \n    Difference from a baseline\n    Diverging bars, dumbbells, Likert\n  \n\n  \n    \n      \n        \n        \n        \n        \n      \n    \n    Geographic patterns\n    Choropleth, point, hex maps\n  \n\n  \n    \n      \n        92%\n      \n    \n    Headline number\n    BAN (big number), bullet chart, KPI tile",
+    "text": "Skip to main content\n\n\n\n\nCharts are organised here by the job they do — the message you want your audience to take away — not by the data type. Not sure which job you have? The Chart Chooser will walk you to a recommendation.\nEvery example uses real, public NCDPI school data and the NCDPI brand palette.\n\n\n  \n    \n      \n        \n        \n        \n      \n    \n    Compare and rank\n    Bar charts, dots, lollipops, dumbbells\n  \n\n  \n    \n      \n        \n        \n          \n          \n          \n          \n          \n          \n        \n      \n    \n    Change over time\n    Lines, small multiples, slope charts\n  \n\n  \n    \n      \n        \n        \n        \n      \n    \n    Parts of a whole\n    Pie, stacked bar, waffle\n  \n\n  \n    \n      \n        \n        \n        \n        \n        \n        \n        \n      \n    \n    Distribution\n    Histogram, box plot\n  \n\n  \n    \n      \n        \n          \n          \n          \n          \n          \n          \n          \n          \n        \n      \n    \n    Relationships\n    Scatter, bubble\n  \n\n  \n    \n      \n        \n        \n        \n        \n        \n      \n    \n    Difference from a baseline\n    Diverging bars, dumbbells, Likert\n  \n\n  \n    \n      \n        \n        \n        \n        \n      \n    \n    Geographic patterns\n    Choropleth, point, hex maps\n  \n\n  \n    \n      \n        92%\n      \n    \n    Headline number\n    BAN (big number), bullet chart, KPI tile",
     "crumbs": [
       "Chart types"
     ]
@@ -817,7 +817,7 @@
     "href": "chart-types/lines.html",
     "title": "Lines & change over time",
     "section": "",
-    "text": "Use a line when the message is the trend — direction and rate of change across time. The connecting line emphasises continuity, so only use it for genuinely sequential (time) data.",
+    "text": "Skip to main content\nUse a line when the message is the trend — direction and rate of change across time. The connecting line emphasises continuity, so only use it for genuinely sequential (time) data.",
     "crumbs": [
       "Chart types",
       "Lines & change over time"
@@ -861,7 +861,7 @@
     "href": "chart-types/part-to-whole.html",
     "title": "Parts of a whole",
     "section": "",
-    "text": "Part-to-whole charts answer “what share does each piece make up?” They work best when there are only a few pieces.",
+    "text": "Skip to main content\nPart-to-whole charts answer “what share does each piece make up?” They work best when there are only a few pieces.",
     "crumbs": [
       "Chart types",
       "Parts of a whole"
@@ -894,7 +894,7 @@
     "href": "foundations/color-groups.html",
     "title": "Color — category groups",
     "section": "",
-    "text": "Use the group palettes for distinct, unordered categories — regions, subjects, school types. The palettes are pre-built for two through six categories so you never have to guess. Stop at five; if you need more, see Highlights or use small multiples.\nThese swatches are generated live from the brand color file.\nTwo categories\nThree categories\nFour categories\nFive categories (the practical maximum)\nSix categories (use only when truly unavoidable)",
+    "text": "Skip to main content\nUse the group palettes for distinct, unordered categories — regions, subjects, school types. The palettes are pre-built for two through six categories so you never have to guess. Stop at five; if you need more, see Highlights or use small multiples.\nThese swatches are generated live from the brand color file.\nTwo categories\nThree categories\nFour categories\nFive categories (the practical maximum)\nSix categories (use only when truly unavoidable)",
     "crumbs": [
       "Color — category groups"
     ]
@@ -914,7 +914,7 @@
     "href": "foundations/color-lookup.html",
     "title": "Color lookup",
     "section": "",
-    "text": "Every color in the NCDPI chart system, searchable. Filter by palette, element, or hex code. This table is generated directly from the brand color file, so it never drifts out of date.",
+    "text": "Skip to main content\n\n\n\n\nEvery color in the NCDPI chart system, searchable. Filter by palette, element, or hex code. This table is generated directly from the brand color file, so it never drifts out of date.",
     "crumbs": [
       "Color lookup"
     ]
@@ -924,7 +924,7 @@
     "href": "foundations/color.html",
     "title": "Color — overview",
     "section": "",
-    "text": "The NCDPI chart palette is built for four jobs. Pick the palette that matches the kind of data, not your favorite color.\nThroughout this guide we name colors by their HEX value (e.g., #5085BC), not RGB. Every value lives in the searchable Color lookup.",
+    "text": "Skip to main content\nThe NCDPI chart palette is built for four jobs. Pick the palette that matches the kind of data, not your favorite color.\nThroughout this guide we name colors by their HEX value (e.g., #5085BC), not RGB. Every value lives in the searchable Color lookup.",
     "crumbs": [
       "Color — overview"
     ]
@@ -964,7 +964,7 @@
     "href": "index.html",
     "title": "The NCDPI chart cheat sheet",
     "section": "",
-    "text": "Colors, type specs, and chart parts for building charts at the North Carolina Department of Public Instruction — the quick reference, all on one page. Everything’s right below.\nJust deciding which chart to use? Open the Chart Chooser"
+    "text": "Skip to main content"
   },
   {
     "objectID": "index.html#anatomy-of-an-ncdpi-chart",

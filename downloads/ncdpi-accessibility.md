@@ -1,6 +1,6 @@
 # Accessibility
 
-_Portable Markdown copy of the [live Accessibility page](https://abax70.github.io/ncdpi-data-visualization-public/accessibility.html). Generated 2026-06-23 from `site/accessibility.qmd` -- do not edit by hand; re-run `tools/build_accessibility_md.py`._
+_Portable Markdown copy of the [live Accessibility page](https://abax70.github.io/ncdpi-data-visualization-public/accessibility.html). Generated 2026-06-24 from `site/accessibility.qmd` -- do not edit by hand; re-run `tools/build_accessibility_md.py`._
 
 Accessibility is not a box we check at the end. It is the whole point of a chart:
 **everyone who comes to a visualization should be able to leave with its takeaway.**
@@ -56,9 +56,12 @@ specific places — and not always where a strict reading assumes.
 
 **What it requires:** a redundant, non-color cue wherever color carries meaning.
 **What it does not require:** removing color, nor that the colors on any palette
-(categorical, sequential, diverging) differ from *each other* by any particular ratio. So when we add direct labels, white separators between
-abutting fills, and an auxiliary table, color is no longer "the only means" — and 1.4.1 is
-satisfied. ([W3C — Understanding 1.4.1](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html))
+(categorical, sequential, diverging) *mandate* a particular contrast ratio between
+one another. (A 3:1 difference in *lightness* is one way to supply the "additional
+visual means" the criterion asks for — but it is only one way; direct labels, white
+separators, and an auxiliary table satisfy it equally.) So when we add direct labels,
+white separators between abutting fills, and an auxiliary table, color is no longer
+"the only means" — and 1.4.1 is satisfied. ([W3C — Understanding 1.4.1](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html))
 
 ### Non-text Contrast (1.4.11, Level AA)
 
@@ -81,6 +84,16 @@ is available in another form."**
 > We hold the contrast line — we just hold it on the elements that genuinely carry the
 > meaning. ([W3C — Understanding 1.4.11](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html))
 
+**A stricter reading exists — and we've weighed it.** Some excellent
+dataviz-accessibility resources — notably [Chartability](#resources) (in our
+resources below) — apply a blanket 3:1 to *all* "geometries," deliberately going
+beyond WCAG 1.4.11's "required to understand" scope. That is a defensible, conservative
+ceiling, and we treat it as one. But where such a rule diverges from the standard, we
+follow WCAG's actual scoping: an element that is not required to understand the
+content, *because the information is genuinely available another way*, is not a
+violation. We name the difference on purpose — holding the WCAG line where it's drawn
+is a considered choice, not an oversight.
+
 **One limit on this exception:** it holds only where direct labeling is actually feasible.
 When data density makes labels impossible — a 115-district choropleth, a school-level
 scatter of thousands of points — the marks themselves become *required to understand the
@@ -89,8 +102,10 @@ becomes the primary equivalent pathway. Better still, treat the density as the r
 problem: aggregate, or break the data into
 [small multiples](https://abax70.github.io/ncdpi-data-visualization-public/best-practices/small-multiples.html), so the chart stays both legible and
 labelable. (Note this cuts the other way for *sequential* fills: adjacent steps of a color
-ramp still need not contrast 3:1 with *each other* — the ramp's meaning lives in the legend
-and labels, not in telling two neighboring shades apart.)
+ramp still need not contrast 3:1 with *each other*. W3C's own guidance treats a
+measurement gradient under the *essential* exception — forcing 3:1 between neighboring
+shades would undermine the ramp itself — and the reader takes the value from the legend
+and labels, not from telling two shades apart.)
 
 ### Contrast — Minimum (1.4.3, Level AA) — the line we do not bend
 
@@ -131,7 +146,8 @@ audit failure in tools like Tableau.
 
 In April 2024 the U.S. Department of Justice finalized a rule under **ADA Title II**
 adopting **WCAG 2.1 Level AA** for state and local government websites and apps. A
-subsequent interim rule (April 2026) extended the deadlines by a year; **as a state agency,
+subsequent interim rule (April 2026) extended the deadlines by a year — moving the dates
+only; the WCAG 2.1 Level AA standard itself did not change. **As a state agency,
 NCDPI is on the April 26, 2027 compliance date.** That deadline is real, and it's why the
 field is leaning toward strict, bright-line readings right now. Our framing meets the
 standard — we get there through **redundant pathways, including conforming alternatives** —

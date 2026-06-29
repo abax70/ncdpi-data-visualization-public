@@ -6,7 +6,7 @@
  * For each such div we:
  *   1. fetch the spec JSON,
  *   2. inject the shared NCDPI theme (theme/ncdpi-vega.json) as `config`,
- *   3. resolve the spec's data URL against the site root,
+ *   3. resolve the spec's data URLs (top-level, per-layer, and lookup) against the site root,
  *   4. embed with vega-embed.
  *
  * Site-root resolution: GitHub Pages serves this project under a sub-path
@@ -48,6 +48,15 @@
       .then(function (r) { return r.json(); })
       .then(function (spec) {
         if (spec.data && spec.data.url) spec.data.url = resolve(spec.data.url);
+        // A spec's data can also live in layers (dot-map) and inside lookup
+        // transforms (diverging-bar's state rate, choropleth's LEA join). Those
+        // nested URLs aren't rewritten above, so we hand vega-embed a loader
+        // whose baseURL is the site root — that resolves EVERY relative data URL
+        // (top-level, per-layer, and lookup) the same way, at any page depth and
+        // under the Pages sub-path. Without it, nested URLs resolve against the
+        // page directory (e.g. chart-types/data/...) and 404 — a failed lookup
+        // returns null, and `value - null === value`, which silently turned the
+        // diverging bars into off-scale raw rates and blanked the maps.
         spec.config = Object.assign({}, theme, spec.config || {});
         if (spec.width == null && spec.autosize == null && !spec.facet && !spec.repeat) {
           spec.width = "container";
@@ -57,7 +66,7 @@
         // type, so it's taught generically on the chart-elements page instead of being
         // demoed (badly) on 28 specs. The per-spec "tooltip" encodings are now inert;
         // left in place as dead config rather than editing 26 files.
-        return vegaEmbed(el, spec, { actions: false, renderer: "svg", tooltip: false }).then(function (result) {
+        return vegaEmbed(el, spec, { actions: false, renderer: "svg", tooltip: false, loader: vega.loader({ baseURL: ROOT }) }).then(function (result) {
           // Convention 7: render the spec's source note (usermeta.source) as a
           // caption below the chart. Inserted only after a successful embed, and
           // only once (guards against chooser/gallery re-renders).

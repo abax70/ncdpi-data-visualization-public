@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Chart Chooser – NCDPI Data Visualization Style Guide</title>
+<title>Map Maker – NCDPI Data Visualization Style Guide</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -74,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -162,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Chart types</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./chart-chooser.html" aria-current="page"> 
+    <a class="nav-link" href="./chart-chooser.html"> 
 <span class="menu-text">Chart Chooser</span></a>
   </li>  
   <li class="nav-item">
@@ -193,7 +193,9 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 <!-- Skip link (WCAG 2.4.1 Bypass Blocks). First focusable element on the page;
@@ -203,7 +205,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Chart Chooser</h1>
+<h1 class="title">Map Maker</h1>
+<p class="subtitle lead">Turn a district, county, or region spreadsheet into an on-brand NC map</p>
 </div>
 
 
@@ -220,19 +223,11 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Answer a few quick questions about your data and what you want to show. You’ll get one to three chart types that fit — each with a small, on-brand NCDPI example and tips for building it well. This follows the same evidence-based logic as our chart-selection guidance; it never recommends a chart that misleads.</p>
-<div id="chart-chooser-root" aria-live="polite">
-  <noscript>The Chart Chooser needs JavaScript. See the <a href="chart-types/index.html">Chart types gallery</a> for the same guidance.</noscript>
-</div>
-<script>
-  (function () {
-    var el = document.querySelector('link[href*="site_libs/"], script[src*="site_libs/"]');
-    var root = el ? (el.href || el.src).replace(/site_libs\/.*$/, "") : "";
-    var s = document.createElement("script");
-    s.src = root + "js/chart-chooser.js";
-    document.body.appendChild(s);
-  })();
-</script>
+<p>Upload a simple data file — one row per school district, county, or SBE region — answer a few questions, and download a presentation-ready choropleth map that follows the NCDPI style guide.</p>
+<p><strong>Your data stays on your computer.</strong> This page does all its work inside your browser; the file you choose is never uploaded, transmitted, or stored anywhere. Even so, use aggregate, non-personal data only — one row per area, no student-level information of any kind.</p>
+<p><em>Beta — Phase 2 (in progress).</em> Districts, counties, and SBE regions from a CSV; sequential, goal-anchored, and diverging color scales; PNG download. Excel files, highlight maps, and bar-chart legends are on the roadmap. Feedback to Andy Baxter.</p>
+<div id="map-maker-root"></div>
+<script>(function(){var el=document.querySelector('link[href*="site_libs/"],script[src*="site_libs/"]');var root=el?(el.href||el.src).replace(/site_libs\/.*$/,''):'';var s=document.createElement('script');s.src=root+'js/map-maker.js';s.setAttribute('data-ncdpi-mapmaker','');document.body.appendChild(s);})();</script>
 
 
 

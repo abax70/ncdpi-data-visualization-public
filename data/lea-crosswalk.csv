@@ -1,0 +1,116 @@
+lea,lea_name_short,lea_name,county,region,region_num
+10,Alamance,Alamance-Burlington Schools,Alamance,Piedmont Triad,5
+20,Alexander,Alexander County Schools,Alexander,Northwest,7
+30,Alleghany,Alleghany County Schools,Alleghany,Northwest,7
+40,Anson,Anson County Schools,Anson,Southwest,6
+50,Ashe,Ashe County Schools,Ashe,Northwest,7
+60,Avery,Avery County Schools,Avery,Northwest,7
+70,Beaufort,Beaufort County Schools,Beaufort,Northeast,1
+80,Bertie,Bertie County Schools,Bertie,Northeast,1
+90,Bladen,Bladen County Schools,Bladen,Sandhills,4
+100,Brunswick,Brunswick County Schools,Brunswick,Southeast,2
+110,Buncombe,Buncombe County Schools,Buncombe,Western,8
+111,Asheville City,Asheville City Schools,Buncombe,Western,8
+120,Burke,Burke County Schools,Burke,Northwest,7
+130,Cabarrus,Cabarrus County Schools,Cabarrus,Southwest,6
+132,Kannapolis City,Kannapolis City Schools,Cabarrus,Southwest,6
+140,Caldwell,Caldwell County Schools,Caldwell,Northwest,7
+150,Camden,Camden County Schools,Camden,Northeast,1
+160,Carteret,Carteret County Public Schools,Carteret,Southeast,2
+170,Caswell,Caswell County Schools,Caswell,Piedmont Triad,5
+180,Catawba,Catawba County Schools,Catawba,Northwest,7
+181,Hickory City,Hickory City Schools,Catawba,Northwest,7
+182,Newton-Conover City,Newton Conover City Schools,Catawba,Northwest,7
+190,Chatham,Chatham County Schools,Chatham,North Central,3
+200,Cherokee,Cherokee County Schools,Cherokee,Western,8
+210,Chowan,Edenton-Chowan Schools,Chowan,Northeast,1
+220,Clay,Clay County Schools,Clay,Western,8
+230,Cleveland,Cleveland County Schools,Cleveland,Southwest,6
+240,Columbus,Columbus County Schools,Columbus,Sandhills,4
+241,Whiteville City,Whiteville City Schools,Columbus,Sandhills,4
+250,Craven,Craven County Schools,Craven,Southeast,2
+260,Cumberland,Cumberland County Schools,Cumberland,Sandhills,4
+270,Currituck,Currituck County Schools,Currituck,Northeast,1
+280,Dare,Dare County Schools,Dare,Northeast,1
+290,Davidson,Davidson County Schools,Davidson,Piedmont Triad,5
+291,Lexington City,Lexington City Schools,Davidson,Piedmont Triad,5
+292,Thomasville City,Thomasville City Schools,Davidson,Piedmont Triad,5
+300,Davie,Davie County Schools,Davie,Piedmont Triad,5
+310,Duplin,Duplin County Schools,Duplin,Southeast,2
+320,Durham,Durham Public Schools,Durham,North Central,3
+330,Edgecombe,Edgecombe County Public Schools,Edgecombe,North Central,3
+340,Forsyth,Winston Salem / Forsyth County Schools,Forsyth,Piedmont Triad,5
+350,Franklin,Franklin County Schools,Franklin,North Central,3
+360,Gaston,Gaston County Schools,Gaston,Southwest,6
+370,Gates,Gates County Schools,Gates,Northeast,1
+380,Graham,Graham County Schools,Graham,Western,8
+390,Granville,Granville County Schools,Granville,North Central,3
+400,Greene,Greene County Schools,Greene,Southeast,2
+410,Guilford,Guilford County Schools,Guilford,Piedmont Triad,5
+420,Halifax,Halifax County Schools,Halifax,Northeast,1
+421,Roanoke Rapids City,Roanoke Rapids City Schools,Halifax,Northeast,1
+422,Weldon City,Weldon City Schools,Halifax,Northeast,1
+430,Harnett,Harnett County Schools,Harnett,North Central,3
+440,Haywood,Haywood County Schools,Haywood,Western,8
+450,Henderson,Henderson County Schools,Henderson,Western,8
+460,Hertford,Hertford County Schools,Hertford,Northeast,1
+470,Hoke,Hoke County Schools,Hoke,Sandhills,4
+480,Hyde,Hyde County Schools,Hyde,Northeast,1
+490,Iredell,Iredell-Statesville Schools,Iredell,Southwest,6
+491,Mooresville City,Mooresville Graded School District,Iredell,Southwest,6
+500,Jackson,Jackson County Public Schools,Jackson,Western,8
+510,Johnston,Johnston County Public Schools,Johnston,North Central,3
+520,Jones,Jones County Schools,Jones,Southeast,2
+530,Lee,Lee County Schools,Lee,North Central,3
+540,Lenoir,Lenoir County Public Schools,Lenoir,Southeast,2
+550,Lincoln,Lincoln County Schools,Lincoln,Southwest,6
+560,Macon,Macon County Schools,Macon,Western,8
+570,Madison,Madison County Schools,Madison,Western,8
+580,Martin,Martin County Schools,Martin,Northeast,1
+590,McDowell,McDowell County Schools,McDowell,Northwest,7
+600,Mecklenburg,Charlotte-Mecklenburg Schools,Mecklenburg,Southwest,6
+610,Mitchell,Mitchell County Schools,Mitchell,Northwest,7
+620,Montgomery,Montgomery County Schools,Montgomery,Sandhills,4
+630,Moore,Moore County Schools,Moore,Sandhills,4
+640,Nash,Nash-Rocky Mount Schools,Nash,North Central,3
+650,New Hanover,New Hanover County Schools,New Hanover,Southeast,2
+660,Northampton,Northampton County Schools,Northampton,Northeast,1
+670,Onslow,Onslow County Schools,Onslow,Southeast,2
+680,Orange,Orange County Schools,Orange,North Central,3
+681,Chapel Hill - Carrboro City,Chapel Hill-Carrboro City Schools,Orange,North Central,3
+690,Pamlico,Pamlico County Schools,Pamlico,Southeast,2
+700,Pasquotank,Elizabeth City-Pasquotank Public Schools,Pasquotank,Northeast,1
+710,Pender,Pender County Schools,Pender,Southeast,2
+720,Perquimans,Perquimans County Schools,Perquimans,Northeast,1
+730,Person,Person County Schools,Person,North Central,3
+740,Pitt,Pitt County Schools,Pitt,Northeast,1
+750,Polk,Polk County Schools,Polk,Western,8
+760,Randolph,Randolph County School System,Randolph,Piedmont Triad,5
+761,Asheboro City,Asheboro City Schools,Randolph,Piedmont Triad,5
+770,Richmond,Richmond County Schools,Richmond,Sandhills,4
+780,Robeson,Public Schools of Robeson County,Robeson,Sandhills,4
+790,Rockingham,Rockingham County Schools,Rockingham,Piedmont Triad,5
+800,Rowan,Rowan-Salisbury Schools,Rowan,Southwest,6
+810,Rutherford,Rutherford County Schools,Rutherford,Western,8
+820,Sampson,Sampson County Schools,Sampson,Sandhills,4
+821,Clinton City,Clinton City Schools,Sampson,Sandhills,4
+830,Scotland,Scotland County Schools,Scotland,Sandhills,4
+840,Stanly,Stanly County Schools,Stanly,Southwest,6
+850,Stokes,Stokes County Schools,Stokes,Piedmont Triad,5
+860,Surry,Surry County Schools,Surry,Piedmont Triad,5
+861,Elkin City,Elkin City Schools,Surry,Piedmont Triad,5
+862,Mount Airy City,Mount Airy City Schools,Surry,Piedmont Triad,5
+870,Swain,Swain County Schools,Swain,Western,8
+880,Transylvania,Transylvania County Schools,Transylvania,Western,8
+890,Tyrrell,Tyrrell County Schools,Tyrrell,Northeast,1
+900,Union,Union County Public Schools,Union,Southwest,6
+910,Vance,Vance County Schools,Vance,North Central,3
+920,Wake,Wake County Schools,Wake,North Central,3
+930,Warren,Warren County Schools,Warren,North Central,3
+940,Washington,Washington County Schools,Washington,Northeast,1
+950,Watauga,Watauga County Schools,Watauga,Northwest,7
+960,Wayne,Wayne County Public Schools,Wayne,Southeast,2
+970,Wilkes,Wilkes County Schools,Wilkes,Northwest,7
+980,Wilson,Wilson County Schools,Wilson,North Central,3
+990,Yadkin,Yadkin County Schools,Yadkin,Piedmont Triad,5
+995,Yancey,Yancey County Schools,Yancey,Northwest,7

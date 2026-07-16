@@ -1,6 +1,6 @@
 # Accessibility
 
-_Portable Markdown copy of the [live Accessibility page](https://abax70.github.io/ncdpi-data-visualization-public/accessibility.html). Generated 2026-06-24 from `site/accessibility.qmd` -- do not edit by hand; re-run `tools/build_accessibility_md.py`._
+_Portable Markdown copy of the [live Accessibility page](https://abax70.github.io/ncdpi-data-visualization-public/accessibility.html). Generated 2026-07-16 from `site/accessibility.qmd` -- do not edit by hand; re-run `tools/build_accessibility_md.py`._
 
 Accessibility is not a box we check at the end. It is the whole point of a chart:
 **everyone who comes to a visualization should be able to leave with its takeaway.**
@@ -219,6 +219,12 @@ A short, curated set — covering both the technical layer and the story-for-eve
 - **[Chartability](https://chartability.fizz.studio/)** (Frank Elavsky) — 50 testable
   heuristics for evaluating data-visualization accessibility; tool-agnostic and used across
   government agencies. The best dataviz-specific resource going.
+- **[Deque — How to Make Interactive Charts Accessible](https://www.deque.com/blog/how-to-make-interactive-charts-accessible/)**
+  — from the makers of the axe testing engine: keyboard, screen-reader, and structure
+  patterns for charts a reader can interact with.
+- **[Minnesota IT Services — Data Visualization Accessibility](https://mn.gov/mnit/about-mnit/accessibility/data-visualization/)**
+  — a peer state agency's official dataviz-accessibility guidance; a useful model for
+  what government-published standards look like.
 - **[Do No Harm Guide: Applying Equity Awareness in Data Visualization](https://www.urban.org/research/publication/do-no-harm-guide-applying-equity-awareness-data-visualization)**
   (Schwabish & Feng, Urban Institute) — the story-for-everyone layer: framing, language,
   and ordering that make data equitable and inclusive.
@@ -227,5 +233,8 @@ A short, curated set — covering both the technical layer and the story-for-eve
   (Lisa Charlotte Muth) — the clearest practical writing on the craft.
 - **[An intro to designing accessible data visualizations](https://fossheim.io/writing/posts/accessible-dataviz-design/)**
   (Sarah L. Fossheim) — a clean, example-driven primer.
+- **[Dax Castro on dataviz accessibility](https://www.linkedin.com/posts/daxcastro_training-accessibility-dataviz-activity-7394132150750466048-XscW)**
+  (LinkedIn) — certified accessibility professional and trainer; practical,
+  working-practitioner guidance on accessible documents and charts.
 - **[The ADA Title II web rule](https://www.ada.gov/resources/2024-03-08-web-rule/)**
   (ADA.gov) — the legal requirement and what it means for public agencies.

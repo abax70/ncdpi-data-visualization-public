@@ -35,156 +35,740 @@
     "text": "Help\n\nBranding questions: branding@dpi.nc.gov\nDesign help: graphics@dpi.nc.gov\nThis guide is published from GitHub."
   },
   {
-    "objectID": "foundations/typography.html",
-    "href": "foundations/typography.html",
-    "title": "Typography",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "The NCDPI chart cheat sheet",
     "section": "",
-    "text": "Skip to main content",
-    "crumbs": [
-      "Typography"
-    ]
+    "text": "Skip to main content"
   },
   {
-    "objectID": "foundations/typography.html#font",
-    "href": "foundations/typography.html#font",
-    "title": "Typography",
-    "section": "Font",
-    "text": "Font\nNCDPI charts, dashboards, and official web materials use Arial (fallback Helvetica) — the agency’s WCAG-compliant workhorse font. This guide deliberately sets its own body text in Arial too, so the words on the page match the words in the charts.\n\nThe NC Digital Commons web framework specifies Source Sans Pro for sites that live on nc.gov. This guide is an NCDPI-owned site about the chart palette, so it follows the NCDPI agency standard (Arial) for visual consistency with the charts.",
-    "crumbs": [
-      "Typography"
-    ]
+    "objectID": "index.html#anatomy-of-an-ncdpi-chart",
+    "href": "index.html#anatomy-of-an-ncdpi-chart",
+    "title": "The NCDPI chart cheat sheet",
+    "section": "Anatomy of an NCDPI chart",
+    "text": "Anatomy of an NCDPI chart\nEvery part has a job. Title carries the takeaway; the subtitle carries the contract; color does one thing at a time.\n\n\n\nAnatomy of an NCDPI chart — labeled callouts for the title, subtitle, axis labels, axis values, gridlines, data marks, annotation, and source note, each with its font size and color.\n\n\nSee Chart elements for the full anatomy, and Table and Dashboard elements for those."
   },
   {
-    "objectID": "foundations/typography.html#text-sizes-in-charts",
-    "href": "foundations/typography.html#text-sizes-in-charts",
-    "title": "Typography",
-    "section": "Text sizes in charts",
-    "text": "Text sizes in charts\nThese come straight from the brand color-and-type CSV that drives the whole guide:\n\n\n\nRole\nSize\nColor\n\n\n\n\nChart title\n14 pt, bold\n Black #000000\n\n\nSubtitle / note\n11 pt\n Dark grey #525A60\n\n\nAxis label\n11 pt\n Black #000000\n\n\nAxis value\n11 pt\n Dark grey #525A60\n\n\nAnnotation\n11 pt\n Plum #842175\n\n\nDashboard title\n26 pt\n DPI Blue #003A70",
-    "crumbs": [
-      "Typography"
-    ]
+    "objectID": "index.html#type-at-a-glance",
+    "href": "index.html#type-at-a-glance",
+    "title": "The NCDPI chart cheat sheet",
+    "section": "Type at a glance",
+    "text": "Type at a glance\nArial throughout. Sizes and colors are the brand standard — the same values that drive every chart in this guide."
   },
   {
-    "objectID": "foundations/typography.html#rules",
-    "href": "foundations/typography.html#rules",
-    "title": "Typography",
-    "section": "Rules",
-    "text": "Rules\n\nBody and paragraph text is black or DPI Blue.\nDon’t color-code text for emphasis — use bold instead.\nSection titles and headings on this site are DPI Blue. (In charts, the title is black and the dashboard title is DPI Blue — see the table above.)\nIf everything stands out, nothing stands out.",
-    "crumbs": [
-      "Typography"
-    ]
+    "objectID": "index.html#how-we-use-color",
+    "href": "index.html#how-we-use-color",
+    "title": "The NCDPI chart cheat sheet",
+    "section": "How we use color",
+    "text": "How we use color\nReach for the palette that matches the job, not your favorite color. Each panel below is the same idea: grey recedes, color carries the message.\n\n\nHighlight — one navy #003A70 bar against neutral grey. Draw the eye to one thing. → Highlights\nCategorical — distinct, unordered groups (regions, subjects). → Category groups\nSequence — an ordered low-to-high scale (counts, bands). → Sequences\nGood / Bad — a value worth celebrating (teal #077890) or flagging (rust #B33A12). → Sequences · Diverging\n\n\nFive distinct colors is the ceiling — three or four is better. Past five hues people can’t reliably tell categories apart. Don’t add colors; highlight one against grey, or use small multiples.\n\n\nCategory groups\nBrand order — Blue → Orange → Purple → Green → Gold → Plum:\n\n\n\nHighlight & chart elements\n\n\nSequences and diverging ramps come in 2–5 and 3–9 steps — pick a length on the Sequences and Diverging pages. Every value is in the searchable Color lookup."
   },
   {
-    "objectID": "foundations/color-sequences.html",
-    "href": "foundations/color-sequences.html",
-    "title": "Color — sequences",
+    "objectID": "index.html#take-the-specs-with-you",
+    "href": "index.html#take-the-specs-with-you",
+    "title": "The NCDPI chart cheat sheet",
+    "section": "Take the specs with you",
+    "text": "Take the specs with you\nThe full spec sheet — every palette, hex, font, and size — as a single file you can keep, print, or feed to an AI assistant. Generated from the same source as this page, so it never drifts.\n⬇ Download (Markdown) ⬇ Download (JSON)\nTableau users: load our palettes straight into Tableau. Download the file below, then copy its contents into your Preferences.tps (in Documents/My Tableau Repository/) and restart Tableau — our categorical, sequential, and diverging palettes will be waiting in the color menu.\n⬇ Download Tableau palettes (.tps)"
+  },
+  {
+    "objectID": "index.html#go-deeper",
+    "href": "index.html#go-deeper",
+    "title": "The NCDPI chart cheat sheet",
+    "section": "Go deeper",
+    "text": "Go deeper\n\nChart Chooser — find the right chart for your data Chart types — worked examples by purpose Color — the four palette jobs in depth Chart parts — anatomy of charts, tables, dashboards Best practices — the construction rules and the evidence Gallery — every chart in the guide, on one page"
+  },
+  {
+    "objectID": "foundations/color.html",
+    "href": "foundations/color.html",
+    "title": "Color — overview",
     "section": "",
-    "text": "Skip to main content\nUse a sequential palette when the data has a natural order from low to high. NCDPI provides three, because in education “high” isn’t always “good”:\nDarker always means more — the dark-is-more convention people read intuitively.",
+    "text": "Skip to main content\nThe NCDPI chart palette is built for four jobs. Pick the palette that matches the kind of data, not your favorite color.\nThroughout this guide we name colors by their HEX value (e.g., #5085BC), not RGB. Every value lives in the searchable Color lookup.",
     "crumbs": [
-      "Color — sequences"
+      "Color — overview"
     ]
   },
   {
-    "objectID": "foundations/color-sequences.html#explore-the-palettes",
-    "href": "foundations/color-sequences.html#explore-the-palettes",
-    "title": "Color — sequences",
-    "section": "Explore the palettes",
-    "text": "Explore the palettes\nPick a direction and the number of steps:\n\n\nThe steps are equally spaced in color space. Each step is the same perceptual distance from the next, from the neutral end to the full color. So the values they stand for should be equally spaced too — even color steps imply even bins (0–20, 20–40, …), not arbitrary cutoffs.\n\n\nDon’t let color do all the work. Adjacent steps are close in lightness and won’t all meet WCAG contrast against each other. Keep a labeled legend or value labels, and add a thin white border where segments touch (pie, treemap, stacked, map).\n\n\nContinuous variants. Each sequence also has a smooth, stepless continuous ramp. Reach for it only where the data is truly continuous and position can’t carry the magnitude — almost always a choropleth map or a heatmap. For anything with countable categories, use the stepped palettes above.",
+    "objectID": "foundations/color.html#the-four-jobs-at-a-glance",
+    "href": "foundations/color.html#the-four-jobs-at-a-glance",
+    "title": "Color — overview",
+    "section": "The four jobs at a glance",
+    "text": "The four jobs at a glance\nGrey recedes; color carries the message. Each panel below is the same simple bar chart with a different palette doing its one job — highlight one value, separate categories, show an ordered sequence, or flag a good/bad outcome.",
     "crumbs": [
-      "Color — sequences"
+      "Color — overview"
     ]
   },
   {
-    "objectID": "foundations/color-sequences.html#example",
-    "href": "foundations/color-sequences.html#example",
-    "title": "Color — sequences",
+    "objectID": "foundations/color.html#the-one-rule-that-matters-most",
+    "href": "foundations/color.html#the-one-rule-that-matters-most",
+    "title": "Color — overview",
+    "section": "The one rule that matters most",
+    "text": "The one rule that matters most\n\nFive distinct colors is the ceiling — three or four is better. Past five hues, people can’t reliably tell categories apart. When you have more, don’t add colors: highlight one against grey, or use small multiples (one small panel per category). Every extra hue is one more thing the reader has to decode — keep the count low so their attention goes to the differences that matter, not to working out which color means which category.",
+    "crumbs": [
+      "Color — overview"
+    ]
+  },
+  {
+    "objectID": "foundations/color.html#category-order",
+    "href": "foundations/color.html#category-order",
+    "title": "Color — overview",
+    "section": "Category order",
+    "text": "Category order\nWhen you do color-code categories, use the brand order so charts stay consistent — Blue → Orange → Purple → Green → Gold → Plum:\n\n\nSee Category groups for how many to use at each step. Never rely on color alone — pair it with labels or position.",
+    "crumbs": [
+      "Color — overview"
+    ]
+  },
+  {
+    "objectID": "foundations/color-lookup.html",
+    "href": "foundations/color-lookup.html",
+    "title": "Color lookup",
+    "section": "",
+    "text": "Skip to main content\n\n\n\n\nEvery color in the NCDPI chart system, searchable. Filter by palette, element, or hex code. This table is generated directly from the brand color file, so it never drifts out of date.",
+    "crumbs": [
+      "Color lookup"
+    ]
+  },
+  {
+    "objectID": "foundations/color-groups.html",
+    "href": "foundations/color-groups.html",
+    "title": "Color — category groups",
+    "section": "",
+    "text": "Skip to main content\nUse the group palettes for distinct, unordered categories — regions, subjects, school types. The palettes are pre-built for two through six categories so you never have to guess. Stop at five; if you need more, see Highlights or use small multiples.\nThese swatches are generated live from the brand color file.\nTwo categories\nThree categories\nFour categories\nFive categories (the practical maximum)\nSix categories (use only when truly unavoidable)",
+    "crumbs": [
+      "Color — category groups"
+    ]
+  },
+  {
+    "objectID": "foundations/color-groups.html#example",
+    "href": "foundations/color-groups.html#example",
+    "title": "Color — category groups",
     "section": "Example",
-    "text": "Example\nA sequential palette earns its keep where position can’t show magnitude — here a heatmap, where color carries the value. Match the palette to the meaning: a proficiency view uses Sequence to Good; shade a chronic-absenteeism view with Sequence to Bad.",
+    "text": "Example\nFour locales, four brand colors applied in order — with a white border so neighbours stay crisp. Position and labels do the identifying; color just groups.",
     "crumbs": [
-      "Color — sequences"
+      "Color — category groups"
     ]
   },
   {
-    "objectID": "foundations/color-highlights.html",
-    "href": "foundations/color-highlights.html",
-    "title": "Color — highlights",
+    "objectID": "chart-types/part-to-whole.html",
+    "href": "chart-types/part-to-whole.html",
+    "title": "Parts of a whole",
     "section": "",
-    "text": "Skip to main content\nThe single most useful move in the whole palette: plot everything in neutral grey and use color for the one thing your message is about. This is how you handle “too many categories” without breaking the five-color rule.",
-    "crumbs": [
-      "Color — highlights"
-    ]
-  },
-  {
-    "objectID": "foundations/color-highlights.html#example",
-    "href": "foundations/color-highlights.html#example",
-    "title": "Color — highlights",
-    "section": "Example",
-    "text": "Example\nEight regions, all neutral grey except one in navy. The eye lands on the focal region immediately — and you’ve spent only one color to do it.",
-    "crumbs": [
-      "Color — highlights"
-    ]
-  },
-  {
-    "objectID": "foundations/color-diverging.html",
-    "href": "foundations/color-diverging.html",
-    "title": "Color — diverging",
-    "section": "",
-    "text": "Skip to main content\nUse a diverging palette when the scale has a meaningful midpoint and runs in two directions from it — change versus last year, performance versus a target, or Likert agreement. Rust on one side, teal on the other, neutral grey in the middle.\nNCDPI provides 3-, 5-, 7-, and 9-step versions so you can match the number of classes in your data. The steps read like a number line — negative through zero to positive (Step -2 … Step 0 … Step +2).",
-    "crumbs": [
-      "Color — diverging"
-    ]
-  },
-  {
-    "objectID": "foundations/color-diverging.html#explore-the-steps",
-    "href": "foundations/color-diverging.html#explore-the-steps",
-    "title": "Color — diverging",
-    "section": "Explore the steps",
-    "text": "Explore the steps\n\n\nSteps are symmetric and equally spaced around the midpoint. Match the data to that shape: a 5-step palette fits five ordered classes centered on a true middle (Strongly disagree … Neutral … Strongly agree), not lopsided cutoffs. If your data isn’t centered on a real zero/neutral, a sequence is the better fit.\n\n\nDon’t let color do all the work. Steps near the midpoint are close in lightness and won’t all meet WCAG contrast against each other. Keep a labeled legend or value labels, and add a thin white border where segments touch.\n\n\nThe School Performance Grade colors (A → F) are the 5-step diverging palette in action: A is teal, C is neutral grey, F is rust. You’ll see it on the pie and map examples.",
-    "crumbs": [
-      "Color — diverging"
-    ]
-  },
-  {
-    "objectID": "foundations/color-diverging.html#example",
-    "href": "foundations/color-diverging.html#example",
-    "title": "Color — diverging",
-    "section": "Example",
-    "text": "Example\nLikert data is the textbook diverging case: a diverging stacked bar runs from disagree (rust) through neutral (grey) to agree (teal), centered on the neutral response.",
-    "crumbs": [
-      "Color — diverging"
-    ]
-  },
-  {
-    "objectID": "chart-types/maps.html",
-    "href": "chart-types/maps.html",
-    "title": "Maps",
-    "section": "",
-    "text": "Skip to main content\nMaps answer “where?” They’re powerful and familiar, but color-on-geography is one of the least precise encodings — always pair a map with a chart that allows precise comparison.",
+    "text": "Skip to main content\nPart-to-whole charts answer “what share does each piece make up?” They work best when there are only a few pieces.",
     "crumbs": [
       "Chart types",
-      "Maps"
+      "Parts of a whole"
     ]
   },
   {
-    "objectID": "chart-types/maps.html#choropleth-map",
-    "href": "chart-types/maps.html#choropleth-map",
-    "title": "Maps",
-    "section": "Choropleth map",
-    "text": "Choropleth map\nShades each district by a rate (here, the share of students chronically absent). Good for “where is the rate highest?” — bad at communicating exact values, because position is fixed by geography and color is a low-precision encoding. Big rural districts also pull the eye more than small urban ones with the same value.\n\n\n\n\nChoropleth vs. dot-density: which to use. A choropleth answers “where is the rate highest?” — values are normalised to area (percent, per-capita, average), so a small dense district and a large rural one are comparable. A dot-density map answers “where are the things?” — it shows counts in place, so density patterns are honest but rates aren’t. Pick the one that matches your question, or show both.",
+    "objectID": "chart-types/part-to-whole.html#pie-chart",
+    "href": "chart-types/part-to-whole.html#pie-chart",
+    "title": "Parts of a whole",
+    "section": "Pie chart",
+    "text": "Pie chart\nFine with five slices or fewer, and genuinely good for “which is biggest?” Order slices largest-to-smallest and label them directly.\n\n\n\n\nFive slices is the ceiling. Beyond that, angle judgements collapse — group the small categories into “Other,” or switch to a sorted bar chart.",
     "crumbs": [
       "Chart types",
-      "Maps"
+      "Parts of a whole"
     ]
   },
   {
-    "objectID": "chart-types/maps.html#dot-density-map",
-    "href": "chart-types/maps.html#dot-density-map",
-    "title": "Maps",
-    "section": "Dot-density map",
-    "text": "Dot-density map\nPlots each school by location. Honest about where the schools are, but doesn’t support reading any per-district rate from the map alone.\n\n\n\n\nOn any map, put a sorted bar or dot plot alongside it. The map shows the pattern; the bar lets people read the values.",
+    "objectID": "chart-types/part-to-whole.html#stacked-bars-keep-them-shallow",
+    "href": "chart-types/part-to-whole.html#stacked-bars-keep-them-shallow",
+    "title": "Parts of a whole",
+    "section": "Stacked bars: keep them shallow",
+    "text": "Stacked bars: keep them shallow\nA 100% stacked bar shows composition across categories, but only the bottom segment sits on a common baseline. Keep stacked bars to 2–3 segments. With four or more, the middle segments float and can’t be compared — use separate bars on a common baseline (grouped bars or small multiples) instead.",
     "crumbs": [
       "Chart types",
-      "Maps"
+      "Parts of a whole"
+    ]
+  },
+  {
+    "objectID": "chart-types/lines.html",
+    "href": "chart-types/lines.html",
+    "title": "Lines & change over time",
+    "section": "",
+    "text": "Skip to main content\nUse a line when the message is the trend — direction and rate of change across time. The connecting line emphasises continuity, so only use it for genuinely sequential (time) data.",
+    "crumbs": [
+      "Chart types",
+      "Lines & change over time"
+    ]
+  },
+  {
+    "objectID": "chart-types/lines.html#a-few-series",
+    "href": "chart-types/lines.html#a-few-series",
+    "title": "Lines & change over time",
+    "section": "A few series",
+    "text": "A few series\nKeep it to about five colored lines. Direct-label the ends rather than making the reader bounce to a legend.\n\n\n\n\nBreak the line at missing years. NC issued no School Performance Grades in 2020 and 2021. A line drawn straight through that gap would invent two years of data. Show the break.",
+    "crumbs": [
+      "Chart types",
+      "Lines & change over time"
+    ]
+  },
+  {
+    "objectID": "chart-types/lines.html#many-series-small-multiples",
+    "href": "chart-types/lines.html#many-series-small-multiples",
+    "title": "Lines & change over time",
+    "section": "Many series → small multiples",
+    "text": "Many series → small multiples\nMore than five lines becomes spaghetti. Give each category its own panel on a shared scale instead. Small multiples are under-used at NCDPI — reach for them.",
+    "crumbs": [
+      "Chart types",
+      "Lines & change over time"
+    ]
+  },
+  {
+    "objectID": "chart-types/lines.html#two-time-points-slope-chart",
+    "href": "chart-types/lines.html#two-time-points-slope-chart",
+    "title": "Lines & change over time",
+    "section": "Two time points → slope chart",
+    "text": "Two time points → slope chart\nWhen you only have a “before” and “after,” a slope chart shows each item’s value at both points and the direction of change, and makes rank reversals pop.",
+    "crumbs": [
+      "Chart types",
+      "Lines & change over time"
+    ]
+  },
+  {
+    "objectID": "chart-types/index.html",
+    "href": "chart-types/index.html",
+    "title": "Chart types",
+    "section": "",
+    "text": "Skip to main content\n\n\n\n\nCharts are organised here by the job they do — the message you want your audience to take away — not by the data type. Not sure which job you have? The Chart Chooser will walk you to a recommendation.\nEvery example uses real, public NCDPI school data and the NCDPI brand palette.\n\n\n  \n    \n      \n        \n        \n        \n      \n    \n    Compare and rank\n    Bar charts, dots, lollipops, dumbbells\n  \n\n  \n    \n      \n        \n        \n          \n          \n          \n          \n          \n          \n        \n      \n    \n    Change over time\n    Lines, small multiples, slope charts\n  \n\n  \n    \n      \n        \n        \n        \n      \n    \n    Parts of a whole\n    Pie, stacked bar, waffle\n  \n\n  \n    \n      \n        \n        \n        \n        \n        \n        \n        \n      \n    \n    Distribution\n    Histogram, box plot\n  \n\n  \n    \n      \n        \n          \n          \n          \n          \n          \n          \n          \n          \n        \n      \n    \n    Relationships\n    Scatter, bubble\n  \n\n  \n    \n      \n        \n        \n        \n        \n        \n      \n    \n    Difference from a baseline\n    Diverging bars, dumbbells, Likert\n  \n\n  \n    \n      \n        \n        \n        \n        \n      \n    \n    Geographic patterns\n    Choropleth, point, hex maps\n  \n\n  \n    \n      \n        92%\n      \n    \n    Headline number\n    BAN (big number), bullet chart, KPI tile",
+    "crumbs": [
+      "Chart types"
+    ]
+  },
+  {
+    "objectID": "chart-types/deviation.html",
+    "href": "chart-types/deviation.html",
+    "title": "Difference from a baseline",
+    "section": "",
+    "text": "Skip to main content\nWhen the difference itself is the message — change from last year, above/below a target, or the gap between two groups — plot the difference directly.",
+    "crumbs": [
+      "Chart types",
+      "Difference from a baseline"
+    ]
+  },
+  {
+    "objectID": "chart-types/deviation.html#graph-the-delta",
+    "href": "chart-types/deviation.html#graph-the-delta",
+    "title": "Difference from a baseline",
+    "section": "Graph the delta",
+    "text": "Graph the delta\nDon’t make the reader subtract two bars by eye. A diverging bar against a zero line puts the change front and centre, and a constant gap stays the same size everywhere (two raw lines make a fixed gap look like it shrinks as values rise).",
+    "crumbs": [
+      "Chart types",
+      "Difference from a baseline"
+    ]
+  },
+  {
+    "objectID": "chart-types/deviation.html#dumbbell-the-gap-between-two-points",
+    "href": "chart-types/deviation.html#dumbbell-the-gap-between-two-points",
+    "title": "Difference from a baseline",
+    "section": "Dumbbell: the gap between two points",
+    "text": "Dumbbell: the gap between two points\nA dumbbell keeps both values but draws attention to the distance between them.",
+    "crumbs": [
+      "Chart types",
+      "Difference from a baseline"
+    ]
+  },
+  {
+    "objectID": "chart-types/deviation.html#rating-scale-likert-data",
+    "href": "chart-types/deviation.html#rating-scale-likert-data",
+    "title": "Difference from a baseline",
+    "section": "Rating-scale (Likert) data",
+    "text": "Rating-scale (Likert) data\nCentre a diverging stacked bar on the neutral response: disagree extends left, agree extends right. Never use a pie for survey data.\n\n\n\n\nThe survey numbers above are synthetic demo data, not real NCDPI results.",
+    "crumbs": [
+      "Chart types",
+      "Difference from a baseline"
+    ]
+  },
+  {
+    "objectID": "chart-types/bar-charts.html",
+    "href": "chart-types/bar-charts.html",
+    "title": "Bar charts",
+    "section": "",
+    "text": "Skip to main content\nThe bar chart is the workhorse of comparison: it encodes values as length on a common baseline, which is one of the most accurate things the human eye can do.",
+    "crumbs": [
+      "Chart types",
+      "Bar charts"
+    ]
+  },
+  {
+    "objectID": "chart-types/bar-charts.html#comparing-categories",
+    "href": "chart-types/bar-charts.html#comparing-categories",
+    "title": "Bar charts",
+    "section": "Comparing categories",
+    "text": "Comparing categories\nWhen you have one number per category, sort by value and use a single color. With more than five categories you do not need a different color for each bar — position already does the work.\n\n\n\n\nAlways start the value axis at zero. Bars encode magnitude by length, so a truncated axis exaggerates differences and misleads the reader.",
+    "crumbs": [
+      "Chart types",
+      "Bar charts"
+    ]
+  },
+  {
+    "objectID": "chart-parts/table-elements.html",
+    "href": "chart-parts/table-elements.html",
+    "title": "Table elements",
+    "section": "",
+    "text": "Skip to main content\nSometimes a table is the right answer — when readers need to look up exact values. Make it scannable.",
+    "crumbs": [
+      "Table elements"
+    ]
+  },
+  {
+    "objectID": "chart-parts/table-elements.html#example",
+    "href": "chart-parts/table-elements.html#example",
+    "title": "Table elements",
+    "section": "Example",
+    "text": "Example\n\nNorth Carolina public schools and student population by urbanicity, 2023–24\n\n\nUrbanicity\nSchools\nStudent pop.\n% of NC student pop.\n\n\n\n\nCity\n612\n472,300\n31.4%\n\n\nSuburb\n498\n418,900\n27.8%\n\n\nTown\n331\n186,200\n12.4%\n\n\nRural\n1,074\n427,500\n28.4%\n\n\n\nTotal\n2,515\n1,504,900\n100.0%\n\n\n\n\n\nSource: NCDPI school directory, 2023–24. Counts exclude charters with statewide enrollment.",
+    "crumbs": [
+      "Table elements"
+    ]
+  },
+  {
+    "objectID": "chart-parts/table-elements.html#anatomy-of-an-ncdpi-table",
+    "href": "chart-parts/table-elements.html#anatomy-of-an-ncdpi-table",
+    "title": "Table elements",
+    "section": "Anatomy of an NCDPI table",
+    "text": "Anatomy of an NCDPI table\nSame idea as the chart anatomy — name each part, then its spec. A table simply has fewer parts. Match these and it reads as a clean look-up grid.\n\n\n\nPart\nSpecification\n\n\n\n\nTitle (the &lt;caption&gt;)\n14 pt, bold,  Black #000000 — sized to sit above the header row in the hierarchy\n\n\nHeader row\nWhite text on  DPI Blue #003A70 — short, strong labels\n\n\nRow header\nLeftmost cell of each row; left-aligned, regular weight\n\n\nRow banding\n 10% DPI Blue #E6EDF6 on alternate rows — guides the eye across a row without shouting\n\n\nDividers\n Light grey #DEDEDE\n\n\nTotal row\n2 px top rule, bold, no fill — separates the summary from the data\n\n\nSource note\n10 pt,  Dark grey #525A60 — a table's source note sits one step below the brand's 11 pt chart note, so it recedes",
+    "crumbs": [
+      "Table elements"
+    ]
+  },
+  {
+    "objectID": "chart-parts/table-elements.html#alignment",
+    "href": "chart-parts/table-elements.html#alignment",
+    "title": "Table elements",
+    "section": "Alignment",
+    "text": "Alignment\n\nNumbers align right and share decimal places, so magnitudes line up visually.\nText aligns left.\nHeaders match the alignment of the column beneath them.",
+    "crumbs": [
+      "Table elements"
+    ]
+  },
+  {
+    "objectID": "chart-parts/table-elements.html#make-tables-do-more",
+    "href": "chart-parts/table-elements.html#make-tables-do-more",
+    "title": "Table elements",
+    "section": "Make tables do more",
+    "text": "Make tables do more\n\nSort by the column that matters, not alphabetically by default.\nAdd an embedded sparkline column to show a trend per row without a separate chart.\nLightly shade or mark the values that carry the message — don’t make readers hunt.\n\nA few small in-cell techniques — one row each. They borrow the chart palette so the table still reads as NCDPI:\n\nIn-cell techniques (illustrative)\n\n\n\n\n\n\n\nTechnique\nExample\nReach for it when…\n\n\n\n\nSparkline\n\n\n\neach row has a short trend (say, attendance 2019–2024) and a full line chart would be overkill. Color the line navy #003A70; dot the last point.\n\n\nIn-cell data bar\n86  \n\n\n\nreaders compare magnitudes down a column at a glance — the bar length does work the bare number can't. Keep the value visible alongside it.\n\n\nHeat cell\n12 47 93\nspotting highs and lows across a grid. Shade with Sequence to Neutral (light grey → #5085BC), dark = higher. Mind contrast if you also print the value: dark ink on the darkest steps fails WCAG AA for small text (~4.2:1), and white text is worse — so keep the in-cell number only where the shade is light, or show the value outside the cell.\n\n\n\n\nOne enrichment per table, not all three at once. These are accents on a look-up grid — if every column has a bar or a heat tint, you’ve built a cluttered chart, not a table.",
+    "crumbs": [
+      "Table elements"
+    ]
+  },
+  {
+    "objectID": "chart-parts/table-elements.html#accessibility",
+    "href": "chart-parts/table-elements.html#accessibility",
+    "title": "Table elements",
+    "section": "Accessibility",
+    "text": "Accessibility\n\nMost NCDPI tables are built in Tableau, PowerPoint, or Word — not hand-coded. The principles here apply in every tool: give the table a real title/caption, use genuine header rows (not bold text faking a header), keep one value per cell (avoid merged cells), and never use a table just for page layout. The HTML attributes shown below (scope, headers/id) are how you satisfy these when you hand-code a table — in Tableau and Office, use the built-in table, crosstab, and caption features and they handle most of it for you.\n\nA data table is one of the few places where structure directly affects whether a screen-reader user can use the table at all — so the underlying markup (or your tool’s accessibility features) matters more here than it does for a chart.\n\nUse &lt;th scope=\"col\"&gt; on column headers (and scope=\"row\" on the leading cell of each row where it makes sense). WCAG 2.1 SC 1.3.1 Info and Relationships requires that the table’s structure be programmatically conveyable — scope is how you do that.\nGive every table a &lt;caption&gt; or aria-label. The caption answers “what is this table about?” before the screen reader starts reading cells.\nAvoid merged header cells. WCAG doesn’t ban them outright, but screen-reader support for merged cells is uneven, and they make linear navigation confusing. If you truly need a merged header (a complex multi-level table), mark it up with explicit headers / id attributes so each data cell points to the headers that govern it.\nDon’t use a table for layout. If the goal is page layout, use CSS — not &lt;table&gt;.\n\n\nA simple, well-marked-up table beats a clever, complex one every time. If you find yourself reaching for merged cells, ask whether two simple tables would tell the same story better.",
+    "crumbs": [
+      "Table elements"
+    ]
+  },
+  {
+    "objectID": "chart-parts/table-elements.html#pair-charts-with-an-accessible-table",
+    "href": "chart-parts/table-elements.html#pair-charts-with-an-accessible-table",
+    "title": "Table elements",
+    "section": "Pair charts with an accessible table",
+    "text": "Pair charts with an accessible table\nEven a perfect chart leaves screen-reader users out of the conversation. For any complex chart in a dashboard or slide deck, give them a way to reach the underlying numbers.\n\nIn Tableau: add a “View data” button that toggles a hidden cross-tab via dynamic zone visibility. Default-hidden so it doesn’t crowd the visual; one click for users who need it.\nIn PowerPoint: put the chart on one slide and add a “Data table” hyperlink to a companion slide that holds the corresponding cross-tab.\nIn a web report: offer a “Show table” toggle beneath the chart, or link to a downloadable CSV.\n\n\nA table answers “what is the exact value?”; a chart answers “what is the pattern?” If your reader needs both — or if accessibility requires both — give them both.",
+    "crumbs": [
+      "Table elements"
+    ]
+  },
+  {
+    "objectID": "chart-parts/chart-elements.html",
+    "href": "chart-parts/chart-elements.html",
+    "title": "Chart elements",
+    "section": "",
+    "text": "Skip to main content\nThe non-data parts of a chart should recede so the data can speak. NCDPI defaults keep them quiet and consistent.",
+    "crumbs": [
+      "Chart elements"
+    ]
+  },
+  {
+    "objectID": "chart-parts/chart-elements.html#anatomy-of-an-ncdpi-chart",
+    "href": "chart-parts/chart-elements.html#anatomy-of-an-ncdpi-chart",
+    "title": "Chart elements",
+    "section": "Anatomy of an NCDPI chart",
+    "text": "Anatomy of an NCDPI chart\nEvery piece of the chart below is set by the brand spec — fonts, sizes, colors, and spacing — so a reader who has seen one NCDPI chart already knows how to read the next one.\n\n\n\nAnatomy of an NCDPI chart — labeled callouts for title, subtitle, axis labels, axis values, data marks, annotation, gridlines, and source note.",
+    "crumbs": [
+      "Chart elements"
+    ]
+  },
+  {
+    "objectID": "chart-parts/chart-elements.html#gridlines-axes-and-rulers",
+    "href": "chart-parts/chart-elements.html#gridlines-axes-and-rulers",
+    "title": "Chart elements",
+    "section": "Gridlines, axes, and rulers",
+    "text": "Gridlines, axes, and rulers\n\nGridlines are light grey #DEDEDE — present enough to support reading a value, faint enough to disappear behind the data.\nAxis rulers and dividers use the same light grey. Drop the top and right spines entirely.\nReference lines (a target, the state average) are DPI Blue #003A70 so they read as deliberate, not as data.",
+    "crumbs": [
+      "Chart elements"
+    ]
+  },
+  {
+    "objectID": "chart-parts/chart-elements.html#the-zero-baseline-rule",
+    "href": "chart-parts/chart-elements.html#the-zero-baseline-rule",
+    "title": "Chart elements",
+    "section": "The zero-baseline rule",
+    "text": "The zero-baseline rule\nBars and areas encode value by length or area, so they must start at zero. Truncating the axis exaggerates differences and is the single most common way a chart misleads. Lines and dot plots may use a non-zero baseline — but say so if you do.",
+    "crumbs": [
+      "Chart elements"
+    ]
+  },
+  {
+    "objectID": "chart-parts/chart-elements.html#labels-over-legends",
+    "href": "chart-parts/chart-elements.html#labels-over-legends",
+    "title": "Chart elements",
+    "section": "Labels over legends",
+    "text": "Labels over legends\nWhen there are seven or fewer items, label them directly rather than making the reader bounce between a legend and the data. Reserve legends for when direct labels would collide.\n\nDeclutter, don’t decorate. Every gridline, tick, and label should earn its place. If removing it doesn’t cost the reader anything, remove it.",
+    "crumbs": [
+      "Chart elements"
+    ]
+  },
+  {
+    "objectID": "chart-chooser.html",
+    "href": "chart-chooser.html",
+    "title": "Chart Chooser",
+    "section": "",
+    "text": "Skip to main content\n\n\n\n\nAnswer a few quick questions about your data and what you want to show. You’ll get one to three chart types that fit — each with a small, on-brand NCDPI example and tips for building it well. This follows the same evidence-based logic as our chart-selection guidance; it never recommends a chart that misleads.\n\n  The Chart Chooser needs JavaScript. See the Chart types gallery for the same guidance."
+  },
+  {
+    "objectID": "best-practices/perceptual-hierarchy.html",
+    "href": "best-practices/perceptual-hierarchy.html",
+    "title": "The perceptual hierarchy",
+    "section": "",
+    "text": "Skip to main content\nSome visual encodings are read more accurately than others. Cleveland & McGill’s classic experiments, replicated many times since, rank them roughly like this:"
+  },
+  {
+    "objectID": "best-practices/perceptual-hierarchy.html#what-it-means-in-practice",
+    "href": "best-practices/perceptual-hierarchy.html#what-it-means-in-practice",
+    "title": "The perceptual hierarchy",
+    "section": "What it means in practice",
+    "text": "What it means in practice\n\nTo let people read precise values, encode with position or length — a dot plot or bar, not a heatmap.\nUse color and area for the broad pattern (a map, a treemap), and pair them with a position/length chart when the exact numbers matter.\nThis is exactly why the Chart Chooser, when in doubt, prefers the chart higher on this list.\n\n\nPie charts sit mid-hierarchy on angle — which is why they’re fine for “which slice is biggest?” with a few slices, and poor for comparing many similar slices. The rule (“five slices, no more”) falls straight out of the science."
+  },
+  {
+    "objectID": "best-practices/color-rules.html",
+    "href": "best-practices/color-rules.html",
+    "title": "Color rules",
+    "section": "",
+    "text": "Skip to main content\nColor is the most abused encoding in agency charts. Three rules keep it honest."
+  },
+  {
+    "objectID": "best-practices/color-rules.html#five-colors-is-the-ceiling",
+    "href": "best-practices/color-rules.html#five-colors-is-the-ceiling",
+    "title": "Color rules",
+    "section": "1. Five colors is the ceiling",
+    "text": "1. Five colors is the ceiling\nPeople can hold only a handful of categorical hues apart before search slows and errors climb; three to four is the comfortable range. When you have more categories, the answer is never more colors — it’s highlight-one-on-grey or small multiples."
+  },
+  {
+    "objectID": "best-practices/color-rules.html#dark-is-more",
+    "href": "best-practices/color-rules.html#dark-is-more",
+    "title": "Color rules",
+    "section": "2. Dark is more",
+    "text": "2. Dark is more\nOn a sequential scale, people read darker as a larger value by default. Honour it: don’t make your lightest shade the biggest number. NCDPI’s sequential palettes are built dark-is-more already."
+  },
+  {
+    "objectID": "best-practices/color-rules.html#color-should-mean-something",
+    "href": "best-practices/color-rules.html#color-should-mean-something",
+    "title": "Color rules",
+    "section": "3. Color should mean something",
+    "text": "3. Color should mean something\n\nMatch the palette to the data: categorical for unordered groups, sequential for ordered, diverging for a meaningful midpoint.\nMake “good” and “bad” directions deliberate — teal for good, rust for bad.\nNever rely on color alone. Pair it with labels, position, or shape, so the chart still works for color-blind readers and in greyscale.\n\n\nRun any color-on-color text combination through the WebAIM contrast checker. DPI Aqua at full strength is not accessible for small text — use Medium #077890 or Dark #006174 aqua instead."
+  },
+  {
+    "objectID": "best-practices/annotation.html",
+    "href": "best-practices/annotation.html",
+    "title": "Annotation",
+    "section": "",
+    "text": "Skip to main content\nA chart that makes the reader figure out the point often loses them. Do the interpreting for them."
+  },
+  {
+    "objectID": "best-practices/annotation.html#write-the-takeaway-into-the-title",
+    "href": "best-practices/annotation.html#write-the-takeaway-into-the-title",
+    "title": "Annotation",
+    "section": "Write the takeaway into the title",
+    "text": "Write the takeaway into the title\nA title like “Average SPG score by region” describes the chart. A title like “Five regions gained ground since 2022; the Sandhills lagged” tells the reader what to see. Lead with the message; let the axis labels handle the description."
+  },
+  {
+    "objectID": "best-practices/annotation.html#label-directly-annotate-the-story",
+    "href": "best-practices/annotation.html#label-directly-annotate-the-story",
+    "title": "Annotation",
+    "section": "Label directly, annotate the story",
+    "text": "Label directly, annotate the story\n\nDirect-label lines and bars instead of relying on a legend (up to ~7 items).\nCall out the one or two points that carry the argument — the outlier, the crossover, the target line — with a short text note in plum #842175, the brand annotation color.\nMark context the data needs: a policy change, a target, the COVID gap."
+  },
+  {
+    "objectID": "best-practices/annotation.html#less-chart-more-meaning",
+    "href": "best-practices/annotation.html#less-chart-more-meaning",
+    "title": "Annotation",
+    "section": "Less chart, more meaning",
+    "text": "Less chart, more meaning\nAnnotation is not decoration. Each note should answer a question the reader would otherwise have to ask. If a viewer can look at the chart and immediately say what it means, the annotation has done its job.\n\nThis pairs with the perceptual hierarchy: pick the chart that encodes the data accurately, then annotate it so the meaning is as easy to read as the values."
+  },
+  {
+    "objectID": "accessibility.html",
+    "href": "accessibility.html",
+    "title": "Accessibility",
+    "section": "",
+    "text": "Skip to main content\nAccessibility is not a box we check at the end. It is the whole point of a chart: everyone who comes to a visualization should be able to leave with its takeaway. This page lays out how we think about that at NCDPI — which is, in a few places, deliberately more nuanced than a strict checklist reading of the rules. We explain why, and we show our work against the actual standard."
+  },
+  {
+    "objectID": "accessibility.html#two-levels-of-accessibility",
+    "href": "accessibility.html#two-levels-of-accessibility",
+    "title": "Accessibility",
+    "section": "Two levels of accessibility",
+    "text": "Two levels of accessibility\nIt helps to separate two things that both get called “accessibility.”\n\nThe over-riding level — can people get the story? A chart is inaccessible if a reader can’t extract its meaning — and most often that barrier has nothing to do with disability. It’s jargon, an unexplained metric, a missing unit, a buried takeaway, or an assumption that the reader is a “math person.” Clearing that barrier — for the non-specialist, the busy stakeholder, the person new to the subject — is the first job, and it serves everyone.\nThe technical level — ADA, Section 508, WCAG. Nested inside the first is the layer most people mean by “accessibility”: contrast ratios, non-color cues, alt text, keyboard and screen-reader support. This layer is real, it’s now legally required (see below), and we take it seriously. But it is a means to the over-riding goal, not the goal itself.\n\nKeeping these straight matters, because the techniques that serve one often serve the other — a clear message title helps both a screen-reader user and a hurried director — and because the technical layer is best understood as one of several ways we get a reader to the takeaway, not the only way."
+  },
+  {
+    "objectID": "accessibility.html#equivalent-access-not-identical-access",
+    "href": "accessibility.html#equivalent-access-not-identical-access",
+    "title": "Accessibility",
+    "section": "Equivalent access, not identical access",
+    "text": "Equivalent access, not identical access\nHere is the principle that drives the rest of this page:\n\nOur goal is that every reader can reach the takeaway — but how they reach it need not be the same for every reader.\n\nIf a chart offers the story through several independent channels — direct labels so the numbers are readable without decoding color, an auxiliary data table, and good alt text — then no single visual element has to carry the entire accessibility burden on its own. That is not a loophole. As the next section shows, it is exactly how the standard is written."
+  },
+  {
+    "objectID": "accessibility.html#what-wcag-actually-says-and-what-it-doesnt",
+    "href": "accessibility.html#what-wcag-actually-says-and-what-it-doesnt",
+    "title": "Accessibility",
+    "section": "What WCAG actually says — and what it doesn’t",
+    "text": "What WCAG actually says — and what it doesn’t\nThe Web Content Accessibility Guidelines (WCAG) 2.1, Level AA, are the technical standard. It’s worth quoting the relevant criteria precisely, because the text draws its lines in specific places — and not always where a strict reading assumes.\n\nUse of Color (1.4.1, Level A)\n\n“Color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element.”\n\nWhat it requires: a redundant, non-color cue wherever color carries meaning. What it does not require: removing color, nor that the colors on any palette (categorical, sequential, diverging) mandate a particular contrast ratio between one another. (A 3:1 difference in lightness is one way to supply the “additional visual means” the criterion asks for — but it is only one way; direct labels, white separators, and an auxiliary table satisfy it equally.) So when we add direct labels, white separators between abutting fills, and an auxiliary table, color is no longer “the only means” — and 1.4.1 is satisfied. (W3C — Understanding 1.4.1)\n\n\nNon-text Contrast (1.4.11, Level AA)\n\n“The visual presentation of [graphical objects] have a contrast ratio of at least 3:1 against adjacent color(s): Parts of graphics required to understand the content, except when a particular presentation of graphics is essential to the information being conveyed.”\n\nThe scope is the operative phrase: “required to understand the content.” The W3C’s own guidance lists when a graphic doesn’t need to meet 3:1 — including when “the information is available in another form.”\n\nThis is the crux. A faint gridline behind directly-labeled values, or a neutral #B7B9BB context bar whose magnitude is encoded by length and a direct label and an auxiliary table, is not “required to understand the content” — the information is available in another form. Such elements fall outside 1.4.11’s scope; they are not violations of it.\nSo “if it’s visible, it must meet 3:1” is stricter than the standard actually requires. We hold the contrast line — we just hold it on the elements that genuinely carry the meaning. (W3C — Understanding 1.4.11)\n\nA stricter reading exists — and we’ve weighed it. Some excellent dataviz-accessibility resources — notably Chartability (in our resources below) — apply a blanket 3:1 to all “geometries,” deliberately going beyond WCAG 1.4.11’s “required to understand” scope. That is a defensible, conservative ceiling, and we treat it as one. But where such a rule diverges from the standard, we follow WCAG’s actual scoping: an element that is not required to understand the content, because the information is genuinely available another way, is not a violation. We name the difference on purpose — holding the WCAG line where it’s drawn is a considered choice, not an oversight.\nOne limit on this exception: it holds only where direct labeling is actually feasible. When data density makes labels impossible — a 115-district choropleth, a school-level scatter of thousands of points — the marks themselves become required to understand the content, and the label exception no longer applies. Then the auxiliary data table (below) becomes the primary equivalent pathway. Better still, treat the density as the real problem: aggregate, or break the data into small multiples, so the chart stays both legible and labelable. (Note this cuts the other way for sequential fills: adjacent steps of a color ramp still need not contrast 3:1 with each other. W3C’s own guidance treats a measurement gradient under the essential exception — forcing 3:1 between neighboring shades would undermine the ramp itself — and the reader takes the value from the legend and labels, not from telling two shades apart.)\n\n\nContrast — Minimum (1.4.3, Level AA) — the line we do not bend\n\nText has a contrast ratio of at least 4.5:1 (or 3:1 for large text — 18pt, or 14pt bold).\n\nNote the boundary: 1.4.3 governs text, and it has no “required to understand” exception. So the nuance above applies only to non-text graphical objects — gridlines, fills, strokes. Text always meets contrast: data labels, axis values, titles, subtitles, and annotations are held to 4.5:1, full stop. This is what keeps our position honest — we are precise about where a contrast requirement applies, not casual about whether it does. (W3C — Understanding 1.4.3)\n\n\nWhen a chart isn’t the right vehicle: conforming alternatives\nA multi-chart dashboard read aloud by a screen reader, even with a good tab order, is often a poor experience — the structure that makes a dashboard powerful visually does not serialize well into speech. WCAG anticipates this with the conforming alternative version: an accessible equivalent (here, a well-structured data table plus a plain-language summary of the takeaway) that “provides all of the same information,” is kept as up to date, and is reachable from the original.\nTwo honest caveats: WCAG treats this as a fallback — the preferred path is to make content directly accessible — and the alternative only counts if we actually provide it and link to it. A conforming alternative is a safety net, not a license to write the dashboard itself off: keyboard navigation, sensible tab order, and clear focus states still matter, because they serve low-vision, keyboard-only, and motor-impaired readers who do use the visual. (W3C — Understanding Conformance)\nAnd whatever the dashboard does interactively, don’t trap the keyboard: a keyboard user must be able to tab into and back out of every interactive widget — a filter, a legend toggle, an embedded viz — with standard Tab / Shift-Tab, never getting stuck inside one. This is its own Level A requirement (WCAG 2.1.2, No Keyboard Trap) and a frequent late-stage audit failure in tools like Tableau.\n\n\nThe legal footing\nIn April 2024 the U.S. Department of Justice finalized a rule under ADA Title II adopting WCAG 2.1 Level AA for state and local government websites and apps. A subsequent interim rule (April 2026) extended the deadlines by a year — moving the dates only; the WCAG 2.1 Level AA standard itself did not change. As a state agency, NCDPI is on the April 26, 2027 compliance date. That deadline is real, and it’s why the field is leaning toward strict, bright-line readings right now. Our framing meets the standard — we get there through redundant pathways, including conforming alternatives — rather than treating any element as exempt from the goal of access. (ADA.gov — the web rule)"
+  },
+  {
+    "objectID": "accessibility.html#techniques",
+    "href": "accessibility.html#techniques",
+    "title": "Accessibility",
+    "section": "Techniques",
+    "text": "Techniques\nHow the principle becomes practice. None of these is sufficient alone; together they are what “equivalent access” means.\n\nOn the chart\nColor and contrast. Use our palettes (they’re built for this) and make text meet 4.5:1. Don’t chase the impossible standard of every categorical hue contrasting 3:1 with every other and with white at once — at NCDPI we found that nearly unachievable, and the colors you’d be forced into carry their own unwanted connotations. The right move isn’t darker colors; it’s not making color carry the meaning alone. See Color rules and the highlight palette.\nNever color alone. Whatever color says, something else should say too — position, a direct label, a shape, an annotation. This is 1.4.1, and it’s also just good charting.\nLabel directly. A number printed next to its mark is readable by everyone, removes the decode-the-legend step, and is the single most powerful accessibility move available. It’s also what lets a faint gridline or neutral fill stay faint (see the keystone above).\nAnnotate when it helps. A short note that states the takeaway in words — in our annotation Plum — gives every reader the point directly, not just those who can decode the encoding.\n\nA note on pattern fills. Hatching and polka-dot fills are a legitimate redundancy channel — they help colorblind readers, and they survive black-and-white printing where color collapses entirely. But they add visual noise, and they can pull the eye toward the texture inside a bar rather than the bar’s edge, which is where length encodes the value. So treat them as a hierarchy: reach first for direct labels and white separators; reserve patterns for artifacts that may be reproduced without color.\n\n\n\nSupplemental to the chart\nAlt text. Every chart carries a text description (in our specs, the description field, which becomes the chart’s accessible label). Good alt text states the takeaway, not just “a bar chart” — it’s the screen-reader user’s version of the message title. A template that keeps it consistent:\n\n[Chart type] showing [data scope], where [the primary trend or takeaway]. Full data in the accompanying table.\n\nFor example: “Line chart of North Carolina’s four-year cohort graduation rate, 2019–2025, showing a steady climb to a record high in 2025. Full data in the table below.”\nSupporting tables. Offer the underlying numbers as a real, well-structured table (see Table elements). This is both a 1.4.11 “available in another form” pathway and the backbone of a conforming alternative for complex dashboards.\nNatural-language query. Increasingly, readers can ask a dashboard a question in plain words and get an answer back. Where the tooling supports it, this is another door into the same data — especially valuable for readers who find the visual itself a barrier. Treat it as a supplement, not a substitute, for the techniques above. See also Tooltips for putting the value into words on hover."
+  },
+  {
+    "objectID": "accessibility.html#take-this-page-with-you",
+    "href": "accessibility.html#take-this-page-with-you",
+    "title": "Accessibility",
+    "section": "Take this page with you",
+    "text": "Take this page with you\nThis page as a single Markdown file — for offline reference, or to feed to an AI assistant. Generated from the same source as the live page, so it stays in sync.\n⬇ Download (Markdown)"
+  },
+  {
+    "objectID": "accessibility.html#resources",
+    "href": "accessibility.html#resources",
+    "title": "Accessibility",
+    "section": "Resources",
+    "text": "Resources\nA short, curated set — covering both the technical layer and the story-for-everyone layer:\n\nW3C WAI — Complex Images tutorial — the authoritative source on describing charts and graphics for WCAG.\nChartability (Frank Elavsky) — 50 testable heuristics for evaluating data-visualization accessibility; tool-agnostic and used across government agencies. The best dataviz-specific resource going.\nDeque — How to Make Interactive Charts Accessible — from the makers of the axe testing engine: keyboard, screen-reader, and structure patterns for charts a reader can interact with.\nMinnesota IT Services — Data Visualization Accessibility — a peer state agency’s official dataviz-accessibility guidance; a useful model for what government-published standards look like.\nDo No Harm Guide: Applying Equity Awareness in Data Visualization (Schwabish & Feng, Urban Institute) — the story-for-everyone layer: framing, language, and ordering that make data equitable and inclusive.\nDatawrapper — Accessibility and designing for colorblindness (Lisa Charlotte Muth) — the clearest practical writing on the craft.\nAn intro to designing accessible data visualizations (Sarah L. Fossheim) — a clean, example-driven primer.\nDax Castro on dataviz accessibility (LinkedIn) — certified accessibility professional and trainer; practical, working-practitioner guidance on accessible documents and charts.\nThe ADA Title II web rule (ADA.gov) — the legal requirement and what it means for public agencies."
+  },
+  {
+    "objectID": "best-practices/axis-scales.html",
+    "href": "best-practices/axis-scales.html",
+    "title": "Axis scales",
+    "section": "",
+    "text": "Skip to main content\nHow far you let an axis run is a design decision, not a default. For a bounded, aspirational metric — graduation rate, proficiency, attendance, any percent where 100% is the real goal — start the value axis at the goal by default. The reader should see how far there is left to go, not just how the categories rank against each other.\nBut there’s a cost: when every value sits in a narrow band near the top, a full 0–100 axis makes them look identical. The same eight regions below differ by 5.5 points — invisible on the goal-anchored axis, obvious when zoomed."
+  },
+  {
+    "objectID": "best-practices/axis-scales.html#the-rule",
+    "href": "best-practices/axis-scales.html#the-rule",
+    "title": "Axis scales",
+    "section": "The rule",
+    "text": "The rule\n\nDefault to the real ceiling. Anchor a bounded aspirational metric to 0–100 (or 0–whatever the goal is) unless you have a reason not to. It keeps the distance to the goal honest.\nBars are non-negotiable: always zero-based. A bar encodes its value as length, so a cut bar lies about magnitude. If you want to zoom, you must switch to a position mark — a dot or a line — where the value is read from position, not bar length. (That’s why the example above uses dots.)\nZoom only with cause, and signal it. When the message is the difference between near-tied values, a zoomed axis is fair for dots and lines — but make the cut obvious (label the axis range, don’t start it at a round-looking number that reads as zero)."
+  },
+  {
+    "objectID": "best-practices/axis-scales.html#having-it-both-ways",
+    "href": "best-practices/axis-scales.html#having-it-both-ways",
+    "title": "Axis scales",
+    "section": "Having it both ways",
+    "text": "Having it both ways\nWhen you genuinely need the goal context and the fine variation, you have three honest moves, in order of preference:\n\nGoal-anchored axis — when “how far from the goal” is the message, just use 0–100 and stop.\nHonest zoom with a goal reference — zoom the axis to the data, but keep the goal in view: draw a faint reference line or band at the target and annotate the gap. One chart, both facts.\nPaired combo — show the goal-anchored chart and the zoomed chart together (as above), labeled, so the reader sees the trade-off directly. This is the most explicit teaching version.\n\n\nA true picture-in-picture inset — a small zoomed chart floating inside the full-range one — is not possible in our Vega-Lite charts (Vega-Lite lays views out side by side, not overlapping). If you specifically want that magnified-inset look, build it in matplotlib (an inset axes) and place it as an image, or author it in full Vega. For the live, interactive charts on this site, the paired combo above is the equivalent."
+  },
+  {
+    "objectID": "best-practices/index.html",
+    "href": "best-practices/index.html",
+    "title": "Best practices",
+    "section": "",
+    "text": "Skip to main content\nA handful of principles, drawn from our data visualization literature review, explain why the rules on this site are the rules. Read these once and most chart decisions answer themselves."
+  },
+  {
+    "objectID": "best-practices/index.html#ncdpi-standing-rules-in-one-place",
+    "href": "best-practices/index.html#ncdpi-standing-rules-in-one-place",
+    "title": "Best practices",
+    "section": "NCDPI standing rules, in one place",
+    "text": "NCDPI standing rules, in one place\n\n\nFive colors maximum (three or four is better).\nPromote small multiples — they’re under-used here.\nStacked bars: 2–3 segments only. Beyond that, separate bars on a common baseline.\nBreak lines at missing years (e.g., the 2020–21 COVID gap) — never interpolate.\nGraph the delta — when the message is a difference, plot the difference itself."
+  },
+  {
+    "objectID": "best-practices/small-multiples.html",
+    "href": "best-practices/small-multiples.html",
+    "title": "Small multiples",
+    "section": "",
+    "text": "Skip to main content\nA small-multiples chart repeats the same little chart once per category, on a shared scale, in a grid. It is the most reliable cure for “I have too many categories” — and it’s badly under-used at NCDPI, so reach for it more."
+  },
+  {
+    "objectID": "best-practices/small-multiples.html#why-they-work",
+    "href": "best-practices/small-multiples.html#why-they-work",
+    "title": "Small multiples",
+    "section": "Why they work",
+    "text": "Why they work\n\nNo color overload. Each panel uses one color, so the five-color ceiling never binds, no matter how many categories you have.\nHonest comparison. A shared scale means a tall bar in one panel really is taller than a short bar in another.\nPattern at a glance. The eye sweeps the grid and spots the outlier panel immediately."
+  },
+  {
+    "objectID": "best-practices/small-multiples.html#how-to-build-them-well",
+    "href": "best-practices/small-multiples.html#how-to-build-them-well",
+    "title": "Small multiples",
+    "section": "How to build them well",
+    "text": "How to build them well\n\nKeep every panel on the same scale — that’s the whole point.\nOrder the panels meaningfully (by value, region, time) rather than alphabetically.\nOne color across all panels; highlight a reference (the state average) the same way in each.\nStop around 20–30 panels — past that, each is too small to read."
+  },
+  {
+    "objectID": "chart-gallery.html",
+    "href": "chart-gallery.html",
+    "title": "Chart Gallery",
+    "section": "",
+    "text": "Skip to main content\nEvery worked example from the Chart Chooser on one page, grouped by purpose. Use it to browse what an on-brand NCDPI version of each chart type looks like — or to find a type by eye when you’d rather scan than answer the chooser’s questions."
+  },
+  {
+    "objectID": "chart-gallery.html#used-elsewhere-in-the-guide",
+    "href": "chart-gallery.html#used-elsewhere-in-the-guide",
+    "title": "Chart Gallery",
+    "section": "Used elsewhere in the guide",
+    "text": "Used elsewhere in the guide\nTwo more specs that aren’t chooser examples but appear on the color pages — included here so this page shows every live chart in the guide.\n\n  Category-group bar\n  charts/groups__category-bar.vl.json\n  \n\n\n  Spotlight (highlight) bar\n  charts/highlight__spotlight-bar.vl.json"
+  },
+  {
+    "objectID": "chart-parts/dashboard-elements.html",
+    "href": "chart-parts/dashboard-elements.html",
+    "title": "Dashboard elements",
+    "section": "",
+    "text": "Skip to main content\nA dashboard is a set of charts that share context. The chrome around them should be calm and predictable so the data stands out.",
+    "crumbs": [
+      "Dashboard elements"
+    ]
+  },
+  {
+    "objectID": "chart-parts/dashboard-elements.html#anatomy-of-an-ncdpi-dashboard",
+    "href": "chart-parts/dashboard-elements.html#anatomy-of-an-ncdpi-dashboard",
+    "title": "Dashboard elements",
+    "section": "Anatomy of an NCDPI dashboard",
+    "text": "Anatomy of an NCDPI dashboard\n\n\n\nAnatomy of an NCDPI dashboard — title and subtitle, BAN row, supporting charts, filter rail, and footer chrome.",
+    "crumbs": [
+      "Dashboard elements"
+    ]
+  },
+  {
+    "objectID": "chart-parts/dashboard-elements.html#titles-and-text",
+    "href": "chart-parts/dashboard-elements.html#titles-and-text",
+    "title": "Dashboard elements",
+    "section": "Titles and text",
+    "text": "Titles and text\n\nDashboard title: DPI Blue, 26 pt. Subtitle: dark grey, 16 pt.\nHelp text (how to read a chart, how to use a filter): Plum #842175, 11 pt — the same treatment as chart annotations. Help text and annotations are both meta-overlays on data, so they share a color so users learn the convention once.\nBody text is black or DPI Blue — never color-coded for emphasis.\n\n\nCommon dashboard chrome\nEvery NCDPI dashboard should carry, somewhere visible (usually the footer):\n\nData last updated — a date, plus the refresh cadence if known (“Updated 2025-09-15, monthly”).\nContact — a name or shared inbox for questions and corrections.\nNCDPI logo — small, top-left or footer, so attribution is unambiguous.\nGlossary or help link — for any term a non-expert reader might stumble on.\n\nThese four items add almost no visual weight but answer the questions every new viewer has within thirty seconds.",
+    "crumbs": [
+      "Dashboard elements"
+    ]
+  },
+  {
+    "objectID": "chart-parts/dashboard-elements.html#controls-and-filters",
+    "href": "chart-parts/dashboard-elements.html#controls-and-filters",
+    "title": "Dashboard elements",
+    "section": "Controls and filters",
+    "text": "Controls and filters\n\nGroup filters together in a consistent place (top or right rail) so users learn where to look once.\nLabel the selected state clearly (darker) versus unselected (grey).\nDefault to the most useful view, not an empty one — don’t make users configure the dashboard before it says anything.\n\n\nKeep the filter count low\nEvery filter is one more decision the user has to make before the dashboard answers anything (Hick’s Law — choice time grows with the number of options). Aim for the minimum set of filters that lets users answer the question the dashboard is built for. If you can’t answer “what does this filter unlock?” in one sentence, the filter probably shouldn’t be there.\n\n\nWhen you can’t trim, use progressive disclosure\nSometimes a stakeholder mandates more filters than really fit. In that case, don’t put them all on the page at once — hide secondary filters behind a collapsible panel (Tableau: dynamic zone visibility) or a “More filters” toggle. Show the two or three most-used filters by default and let the user reveal the rest if they need them.\n\n\nPrefer cross-filtering over filter controls\nThe most intuitive filter is the chart itself. Let the user click a bar on a top-left chart and watch the rest of the dashboard re-scope to that selection. Cross-filtering replaces chrome with direct manipulation — fewer dropdowns, more discovery.",
+    "crumbs": [
+      "Dashboard elements"
+    ]
+  },
+  {
+    "objectID": "chart-parts/dashboard-elements.html#layout",
+    "href": "chart-parts/dashboard-elements.html#layout",
+    "title": "Dashboard elements",
+    "section": "Layout",
+    "text": "Layout\n\nReading order: Z-pattern, top-left first\nWestern readers scan dashboards in a rough Z: top-left first, eye sweeps across to the top-right, drops down and across again to the bottom-right. The top-left position earns the most attention — put your most important number or chart there.\n\n\nDrill down as you move down and right\nPair the Z-pattern with a progressive zoom. Top-left should be the 30,000-ft view — the headline number or trend. As the eye moves down and to the right, content gets progressively more granular: state → region → district → school. This matches Shneiderman’s mantra for information visualization: overview first, zoom and filter, details on demand.\n\n\nBig Aggregate Numbers (BANs) at the top\nThe headline number for the whole dashboard usually deserves to be the very first thing the eye lands on. A row of BANs — single, large numerals with a short label — anchors the dashboard, sets the scale, and gives the rest of the charts a reference point. Use them sparingly (three to five at most) and label the time period clearly.\n\nBAN page coming soon. BANs are not yet listed as a chart type on this site — a dedicated page is on the roadmap. In the meantime, keep them simple: one big number, one short label, one tiny period of comparison (“↑ 2.1 pts vs. 2022”).\n\n\n\nInteractivity earns its keep\nHover for detail, click to highlight, filter to focus. In a dashboard you can show more than in a static chart because the user controls what to look at — but every interactive feature is one more thing to discover. Make the common path obvious.\n\nDashboards are where highlight-one-on-grey shines: plot every series in grey and let the user click to spotlight the one they care about — no color overload, any number of categories.",
+    "crumbs": [
+      "Dashboard elements"
+    ]
+  },
+  {
+    "objectID": "chart-parts/tooltips.html",
+    "href": "chart-parts/tooltips.html",
+    "title": "Tooltips",
+    "section": "",
+    "text": "Skip to main content\nA tooltip is the little box that appears when a reader hovers over a mark. Used well, it lets a reader check their reading of a chart. Used carelessly — which is the default in most tools — it dumps raw field names and unformatted numbers, and adds noise instead of clarity.",
+    "crumbs": [
+      "Tooltips"
+    ]
+  },
+  {
+    "objectID": "chart-parts/tooltips.html#the-one-rule-a-tooltip-supplements-it-never-carries-the-message",
+    "href": "chart-parts/tooltips.html#the-one-rule-a-tooltip-supplements-it-never-carries-the-message",
+    "title": "Tooltips",
+    "section": "The one rule: a tooltip supplements, it never carries the message",
+    "text": "The one rule: a tooltip supplements, it never carries the message\nThe science is clear that the title and text are what readers remember — when people recall a visualization, the title is the single most-mentioned element. The main point therefore has to live where everyone can see it: the message title, the subtitle, the direct labels. A tooltip is invisible until hovered, so anything you hide inside one is, for most readers, not there at all.\nResearch on interactive charts reinforces this from a second direction: interacting with a chart (hovering, filtering, drilling) can actually lower how much specific information a reader retains, because the effort of working the interface competes with encoding the data. Interaction earns its keep through engagement — the sense of exploring for oneself — not through recall. So lean on tooltips for exploration and confirmation, never as the only home for a fact.\nThe practical consequence:\n\nNever put anything essential only in a tooltip. Keyboard users, touch users, screen-reader users, and anyone reading a printed or PowerPoint export never see it. The data table and alt text are what carry the chart for them.\nDon’t repeat what’s already directly labeled. If the value is on the bar, a tooltip showing the same value is pure noise.",
+    "crumbs": [
+      "Tooltips"
+    ]
+  },
+  {
+    "objectID": "chart-parts/tooltips.html#two-tooltips-worth-building",
+    "href": "chart-parts/tooltips.html#two-tooltips-worth-building",
+    "title": "Tooltips",
+    "section": "Two tooltips worth building",
+    "text": "Two tooltips worth building\nFor NCDPI work, almost every useful tooltip is one of two kinds.\n\n1. The sentence tooltip — help the reader check their understanding\nOn a chart with a clear message, the most useful tooltip puts into a sentence what the reader is looking at, by synthesizing the subtitle’s contract (metric, unit, geography, period) with the value of the mark under the cursor. It lets a reader confirm they’ve read the chart correctly.\nOn the proficiency-levels column chart, hovering the rust “Level 1 or 2” bar would read:\n\n45% of students scored at Level 1 or 2 (not proficient) on tests across all subjects and grades in 2025.\n\nThat single sentence stitches together the what (Level 1 or 2 = not proficient), the who/where/when (all subjects and grades, 2025), and the value (45%) — exactly the contract the subtitle already promises, now spoken for one specific mark. Best on charts a general audience reads slowly, where a plain-language gloss removes any doubt.\n\n\n2. The value tooltip — zoom in on a crowded chart\nWhen a chart has too many marks to label — a scatter of all 2,500-odd schools, a time series with a value at every year — direct labels would collide, so the marks go unlabeled. Here the tooltip does one small job: reveal the value of the mark you’re pointing at. Hovering a point simply reads:\n\n85%\n\nNo sentence, no fuss — the chart already established the context; the reader just wants the number behind this one dot. This is the honest use of interactivity to “manage visual noise”: the overview stays clean, and the precise value is one hover away for anyone who wants it.",
+    "crumbs": [
+      "Tooltips"
+    ]
+  },
+  {
+    "objectID": "chart-parts/tooltips.html#formatting-a-tooltip-so-it-doesnt-undo-your-chart",
+    "href": "chart-parts/tooltips.html#formatting-a-tooltip-so-it-doesnt-undo-your-chart",
+    "title": "Tooltips",
+    "section": "Formatting a tooltip so it doesn’t undo your chart",
+    "text": "Formatting a tooltip so it doesn’t undo your chart\nIf you do build one — in Tableau, Power BI, or a hand-authored Vega-Lite spec — hold it to the same standard as the rest of the chart:\n\nWhole words, not field names. “Grade-level proficiency,” never prof_glp_pct.\nMatch the chart’s number formatting. Same rounding, same units (%, pts), same spring-year labeling (2025, not 2024-25). A tooltip that shows 0.4503 under a chart that says 45% reads as a different number.\nOne mark, one tooltip — keep it short. Don’t list every field in the data behind the point. Pick the value and the minimum context that makes it legible.\nDecide if it earns its place at all. A fully labeled, well-titled chart often needs no tooltip. Add one when it genuinely helps a reader explore or confirm — not by reflex.\n\n\nA good tooltip is a check, not a crutch. If a reader needs the hover to grasp the main point, the chart hasn’t done its job — fix the title, subtitle, or labels first, and let the tooltip stay an optional second look.",
+    "crumbs": [
+      "Tooltips"
+    ]
+  },
+  {
+    "objectID": "chart-types/correlation.html",
+    "href": "chart-types/correlation.html",
+    "title": "Relationships",
+    "section": "",
+    "text": "Skip to main content\nWhen you want to show whether two numbers move together, plot them against each other. Position on two scales is the most accurate read there is.",
+    "crumbs": [
+      "Chart types",
+      "Relationships"
+    ]
+  },
+  {
+    "objectID": "chart-types/correlation.html#scatterplot",
+    "href": "chart-types/correlation.html#scatterplot",
+    "title": "Relationships",
+    "section": "Scatterplot",
+    "text": "Scatterplot\nEach dot is a school. The shape reveals direction, strength, and outliers. Add a trend line if the relationship is the headline.",
+    "crumbs": [
+      "Chart types",
+      "Relationships"
+    ]
+  },
+  {
+    "objectID": "chart-types/correlation.html#bubble-chart",
+    "href": "chart-types/correlation.html#bubble-chart",
+    "title": "Relationships",
+    "section": "Bubble chart",
+    "text": "Bubble chart\nAdd a third measure as bubble area — but read area as approximate, never precise, and keep the count modest.\n\n\n\n\nCorrelation isn’t causation, and a trend line invites that leap. Annotate what the relationship does and doesn’t mean for your audience.",
+    "crumbs": [
+      "Chart types",
+      "Relationships"
+    ]
+  },
+  {
+    "objectID": "chart-types/distributions.html",
+    "href": "chart-types/distributions.html",
+    "title": "Distributions",
+    "section": "",
+    "text": "Skip to main content\nReach for a distribution chart when the spread is the story — not a single average, but how values are arranged around it.",
+    "crumbs": [
+      "Chart types",
+      "Distributions"
+    ]
+  },
+  {
+    "objectID": "chart-types/distributions.html#histogram",
+    "href": "chart-types/distributions.html#histogram",
+    "title": "Distributions",
+    "section": "Histogram",
+    "text": "Histogram\nShows the shape of one numeric variable: where schools cluster, and whether the spread is symmetric, skewed, or has two humps.",
+    "crumbs": [
+      "Chart types",
+      "Distributions"
+    ]
+  },
+  {
+    "objectID": "chart-types/distributions.html#box-plot",
+    "href": "chart-types/distributions.html#box-plot",
+    "title": "Distributions",
+    "section": "Box plot",
+    "text": "Box plot\nCompares several distributions at once — median, quartiles, and outliers side by side. For staff and analyst audiences; add a one-line explainer for the public.\n\n\n\n\nA single average can hide a bimodal or skewed distribution. If two schools both “average a C” but one is all-C and the other is half-A/half-F, the distribution is the honest picture.",
+    "crumbs": [
+      "Chart types",
+      "Distributions"
     ]
   },
   {
@@ -265,740 +849,163 @@
     ]
   },
   {
-    "objectID": "chart-types/distributions.html",
-    "href": "chart-types/distributions.html",
-    "title": "Distributions",
+    "objectID": "chart-types/maps.html",
+    "href": "chart-types/maps.html",
+    "title": "Maps",
     "section": "",
-    "text": "Skip to main content\nReach for a distribution chart when the spread is the story — not a single average, but how values are arranged around it.",
+    "text": "Skip to main content\nMaps answer “where?” They’re powerful and familiar, but color-on-geography is one of the least precise encodings — always pair a map with a chart that allows precise comparison.",
     "crumbs": [
       "Chart types",
-      "Distributions"
+      "Maps"
     ]
   },
   {
-    "objectID": "chart-types/distributions.html#histogram",
-    "href": "chart-types/distributions.html#histogram",
-    "title": "Distributions",
-    "section": "Histogram",
-    "text": "Histogram\nShows the shape of one numeric variable: where schools cluster, and whether the spread is symmetric, skewed, or has two humps.",
+    "objectID": "chart-types/maps.html#choropleth-map",
+    "href": "chart-types/maps.html#choropleth-map",
+    "title": "Maps",
+    "section": "Choropleth map",
+    "text": "Choropleth map\nShades each district by a rate (here, the share of students chronically absent). Good for “where is the rate highest?” — bad at communicating exact values, because position is fixed by geography and color is a low-precision encoding. Big rural districts also pull the eye more than small urban ones with the same value.\n\n\n\n\nChoropleth vs. dot-density: which to use. A choropleth answers “where is the rate highest?” — values are normalised to area (percent, per-capita, average), so a small dense district and a large rural one are comparable. A dot-density map answers “where are the things?” — it shows counts in place, so density patterns are honest but rates aren’t. Pick the one that matches your question, or show both.",
     "crumbs": [
       "Chart types",
-      "Distributions"
+      "Maps"
     ]
   },
   {
-    "objectID": "chart-types/distributions.html#box-plot",
-    "href": "chart-types/distributions.html#box-plot",
-    "title": "Distributions",
-    "section": "Box plot",
-    "text": "Box plot\nCompares several distributions at once — median, quartiles, and outliers side by side. For staff and analyst audiences; add a one-line explainer for the public.\n\n\n\n\nA single average can hide a bimodal or skewed distribution. If two schools both “average a C” but one is all-C and the other is half-A/half-F, the distribution is the honest picture.",
+    "objectID": "chart-types/maps.html#dot-density-map",
+    "href": "chart-types/maps.html#dot-density-map",
+    "title": "Maps",
+    "section": "Dot-density map",
+    "text": "Dot-density map\nPlots each school by location. Honest about where the schools are, but doesn’t support reading any per-district rate from the map alone.\n\n\n\n\nOn any map, put a sorted bar or dot plot alongside it. The map shows the pattern; the bar lets people read the values.",
     "crumbs": [
       "Chart types",
-      "Distributions"
+      "Maps"
     ]
   },
   {
-    "objectID": "chart-types/correlation.html",
-    "href": "chart-types/correlation.html",
-    "title": "Relationships",
+    "objectID": "foundations/color-diverging.html",
+    "href": "foundations/color-diverging.html",
+    "title": "Color — diverging",
     "section": "",
-    "text": "Skip to main content\nWhen you want to show whether two numbers move together, plot them against each other. Position on two scales is the most accurate read there is.",
+    "text": "Skip to main content\nUse a diverging palette when the scale has a meaningful midpoint and runs in two directions from it — change versus last year, performance versus a target, or Likert agreement. Rust on one side, teal on the other, neutral grey in the middle.\nNCDPI provides 3-, 5-, 7-, and 9-step versions so you can match the number of classes in your data. The steps read like a number line — negative through zero to positive (Step -2 … Step 0 … Step +2).",
     "crumbs": [
-      "Chart types",
-      "Relationships"
+      "Color — diverging"
     ]
   },
   {
-    "objectID": "chart-types/correlation.html#scatterplot",
-    "href": "chart-types/correlation.html#scatterplot",
-    "title": "Relationships",
-    "section": "Scatterplot",
-    "text": "Scatterplot\nEach dot is a school. The shape reveals direction, strength, and outliers. Add a trend line if the relationship is the headline.",
+    "objectID": "foundations/color-diverging.html#explore-the-steps",
+    "href": "foundations/color-diverging.html#explore-the-steps",
+    "title": "Color — diverging",
+    "section": "Explore the steps",
+    "text": "Explore the steps\n\n\nSteps are symmetric and equally spaced around the midpoint. Match the data to that shape: a 5-step palette fits five ordered classes centered on a true middle (Strongly disagree … Neutral … Strongly agree), not lopsided cutoffs. If your data isn’t centered on a real zero/neutral, a sequence is the better fit.\n\n\nDon’t let color do all the work. Steps near the midpoint are close in lightness and won’t all meet WCAG contrast against each other. Keep a labeled legend or value labels, and add a thin white border where segments touch.\n\n\nThe School Performance Grade colors (A → F) are the 5-step diverging palette in action: A is teal, C is neutral grey, F is rust. You’ll see it on the pie and map examples.",
     "crumbs": [
-      "Chart types",
-      "Relationships"
+      "Color — diverging"
     ]
   },
   {
-    "objectID": "chart-types/correlation.html#bubble-chart",
-    "href": "chart-types/correlation.html#bubble-chart",
-    "title": "Relationships",
-    "section": "Bubble chart",
-    "text": "Bubble chart\nAdd a third measure as bubble area — but read area as approximate, never precise, and keep the count modest.\n\n\n\n\nCorrelation isn’t causation, and a trend line invites that leap. Annotate what the relationship does and doesn’t mean for your audience.",
-    "crumbs": [
-      "Chart types",
-      "Relationships"
-    ]
-  },
-  {
-    "objectID": "chart-parts/tooltips.html",
-    "href": "chart-parts/tooltips.html",
-    "title": "Tooltips",
-    "section": "",
-    "text": "Skip to main content\nA tooltip is the little box that appears when a reader hovers over a mark. Used well, it lets a reader check their reading of a chart. Used carelessly — which is the default in most tools — it dumps raw field names and unformatted numbers, and adds noise instead of clarity.",
-    "crumbs": [
-      "Tooltips"
-    ]
-  },
-  {
-    "objectID": "chart-parts/tooltips.html#the-one-rule-a-tooltip-supplements-it-never-carries-the-message",
-    "href": "chart-parts/tooltips.html#the-one-rule-a-tooltip-supplements-it-never-carries-the-message",
-    "title": "Tooltips",
-    "section": "The one rule: a tooltip supplements, it never carries the message",
-    "text": "The one rule: a tooltip supplements, it never carries the message\nThe science is clear that the title and text are what readers remember — when people recall a visualization, the title is the single most-mentioned element. The main point therefore has to live where everyone can see it: the message title, the subtitle, the direct labels. A tooltip is invisible until hovered, so anything you hide inside one is, for most readers, not there at all.\nResearch on interactive charts reinforces this from a second direction: interacting with a chart (hovering, filtering, drilling) can actually lower how much specific information a reader retains, because the effort of working the interface competes with encoding the data. Interaction earns its keep through engagement — the sense of exploring for oneself — not through recall. So lean on tooltips for exploration and confirmation, never as the only home for a fact.\nThe practical consequence:\n\nNever put anything essential only in a tooltip. Keyboard users, touch users, screen-reader users, and anyone reading a printed or PowerPoint export never see it. The data table and alt text are what carry the chart for them.\nDon’t repeat what’s already directly labeled. If the value is on the bar, a tooltip showing the same value is pure noise.",
-    "crumbs": [
-      "Tooltips"
-    ]
-  },
-  {
-    "objectID": "chart-parts/tooltips.html#two-tooltips-worth-building",
-    "href": "chart-parts/tooltips.html#two-tooltips-worth-building",
-    "title": "Tooltips",
-    "section": "Two tooltips worth building",
-    "text": "Two tooltips worth building\nFor NCDPI work, almost every useful tooltip is one of two kinds.\n\n1. The sentence tooltip — help the reader check their understanding\nOn a chart with a clear message, the most useful tooltip puts into a sentence what the reader is looking at, by synthesizing the subtitle’s contract (metric, unit, geography, period) with the value of the mark under the cursor. It lets a reader confirm they’ve read the chart correctly.\nOn the proficiency-levels column chart, hovering the rust “Level 1 or 2” bar would read:\n\n45% of students scored at Level 1 or 2 (not proficient) on tests across all subjects and grades in 2025.\n\nThat single sentence stitches together the what (Level 1 or 2 = not proficient), the who/where/when (all subjects and grades, 2025), and the value (45%) — exactly the contract the subtitle already promises, now spoken for one specific mark. Best on charts a general audience reads slowly, where a plain-language gloss removes any doubt.\n\n\n2. The value tooltip — zoom in on a crowded chart\nWhen a chart has too many marks to label — a scatter of all 2,500-odd schools, a time series with a value at every year — direct labels would collide, so the marks go unlabeled. Here the tooltip does one small job: reveal the value of the mark you’re pointing at. Hovering a point simply reads:\n\n85%\n\nNo sentence, no fuss — the chart already established the context; the reader just wants the number behind this one dot. This is the honest use of interactivity to “manage visual noise”: the overview stays clean, and the precise value is one hover away for anyone who wants it.",
-    "crumbs": [
-      "Tooltips"
-    ]
-  },
-  {
-    "objectID": "chart-parts/tooltips.html#formatting-a-tooltip-so-it-doesnt-undo-your-chart",
-    "href": "chart-parts/tooltips.html#formatting-a-tooltip-so-it-doesnt-undo-your-chart",
-    "title": "Tooltips",
-    "section": "Formatting a tooltip so it doesn’t undo your chart",
-    "text": "Formatting a tooltip so it doesn’t undo your chart\nIf you do build one — in Tableau, Power BI, or a hand-authored Vega-Lite spec — hold it to the same standard as the rest of the chart:\n\nWhole words, not field names. “Grade-level proficiency,” never prof_glp_pct.\nMatch the chart’s number formatting. Same rounding, same units (%, pts), same spring-year labeling (2025, not 2024-25). A tooltip that shows 0.4503 under a chart that says 45% reads as a different number.\nOne mark, one tooltip — keep it short. Don’t list every field in the data behind the point. Pick the value and the minimum context that makes it legible.\nDecide if it earns its place at all. A fully labeled, well-titled chart often needs no tooltip. Add one when it genuinely helps a reader explore or confirm — not by reflex.\n\n\nA good tooltip is a check, not a crutch. If a reader needs the hover to grasp the main point, the chart hasn’t done its job — fix the title, subtitle, or labels first, and let the tooltip stay an optional second look.",
-    "crumbs": [
-      "Tooltips"
-    ]
-  },
-  {
-    "objectID": "chart-parts/dashboard-elements.html",
-    "href": "chart-parts/dashboard-elements.html",
-    "title": "Dashboard elements",
-    "section": "",
-    "text": "Skip to main content\nA dashboard is a set of charts that share context. The chrome around them should be calm and predictable so the data stands out.",
-    "crumbs": [
-      "Dashboard elements"
-    ]
-  },
-  {
-    "objectID": "chart-parts/dashboard-elements.html#anatomy-of-an-ncdpi-dashboard",
-    "href": "chart-parts/dashboard-elements.html#anatomy-of-an-ncdpi-dashboard",
-    "title": "Dashboard elements",
-    "section": "Anatomy of an NCDPI dashboard",
-    "text": "Anatomy of an NCDPI dashboard\n\n\n\nAnatomy of an NCDPI dashboard — title and subtitle, BAN row, supporting charts, filter rail, and footer chrome.",
-    "crumbs": [
-      "Dashboard elements"
-    ]
-  },
-  {
-    "objectID": "chart-parts/dashboard-elements.html#titles-and-text",
-    "href": "chart-parts/dashboard-elements.html#titles-and-text",
-    "title": "Dashboard elements",
-    "section": "Titles and text",
-    "text": "Titles and text\n\nDashboard title: DPI Blue, 26 pt. Subtitle: dark grey, 16 pt.\nHelp text (how to read a chart, how to use a filter): Plum #842175, 11 pt — the same treatment as chart annotations. Help text and annotations are both meta-overlays on data, so they share a color so users learn the convention once.\nBody text is black or DPI Blue — never color-coded for emphasis.\n\n\nCommon dashboard chrome\nEvery NCDPI dashboard should carry, somewhere visible (usually the footer):\n\nData last updated — a date, plus the refresh cadence if known (“Updated 2025-09-15, monthly”).\nContact — a name or shared inbox for questions and corrections.\nNCDPI logo — small, top-left or footer, so attribution is unambiguous.\nGlossary or help link — for any term a non-expert reader might stumble on.\n\nThese four items add almost no visual weight but answer the questions every new viewer has within thirty seconds.",
-    "crumbs": [
-      "Dashboard elements"
-    ]
-  },
-  {
-    "objectID": "chart-parts/dashboard-elements.html#controls-and-filters",
-    "href": "chart-parts/dashboard-elements.html#controls-and-filters",
-    "title": "Dashboard elements",
-    "section": "Controls and filters",
-    "text": "Controls and filters\n\nGroup filters together in a consistent place (top or right rail) so users learn where to look once.\nLabel the selected state clearly (darker) versus unselected (grey).\nDefault to the most useful view, not an empty one — don’t make users configure the dashboard before it says anything.\n\n\nKeep the filter count low\nEvery filter is one more decision the user has to make before the dashboard answers anything (Hick’s Law — choice time grows with the number of options). Aim for the minimum set of filters that lets users answer the question the dashboard is built for. If you can’t answer “what does this filter unlock?” in one sentence, the filter probably shouldn’t be there.\n\n\nWhen you can’t trim, use progressive disclosure\nSometimes a stakeholder mandates more filters than really fit. In that case, don’t put them all on the page at once — hide secondary filters behind a collapsible panel (Tableau: dynamic zone visibility) or a “More filters” toggle. Show the two or three most-used filters by default and let the user reveal the rest if they need them.\n\n\nPrefer cross-filtering over filter controls\nThe most intuitive filter is the chart itself. Let the user click a bar on a top-left chart and watch the rest of the dashboard re-scope to that selection. Cross-filtering replaces chrome with direct manipulation — fewer dropdowns, more discovery.",
-    "crumbs": [
-      "Dashboard elements"
-    ]
-  },
-  {
-    "objectID": "chart-parts/dashboard-elements.html#layout",
-    "href": "chart-parts/dashboard-elements.html#layout",
-    "title": "Dashboard elements",
-    "section": "Layout",
-    "text": "Layout\n\nReading order: Z-pattern, top-left first\nWestern readers scan dashboards in a rough Z: top-left first, eye sweeps across to the top-right, drops down and across again to the bottom-right. The top-left position earns the most attention — put your most important number or chart there.\n\n\nDrill down as you move down and right\nPair the Z-pattern with a progressive zoom. Top-left should be the 30,000-ft view — the headline number or trend. As the eye moves down and to the right, content gets progressively more granular: state → region → district → school. This matches Shneiderman’s mantra for information visualization: overview first, zoom and filter, details on demand.\n\n\nBig Aggregate Numbers (BANs) at the top\nThe headline number for the whole dashboard usually deserves to be the very first thing the eye lands on. A row of BANs — single, large numerals with a short label — anchors the dashboard, sets the scale, and gives the rest of the charts a reference point. Use them sparingly (three to five at most) and label the time period clearly.\n\nBAN page coming soon. BANs are not yet listed as a chart type on this site — a dedicated page is on the roadmap. In the meantime, keep them simple: one big number, one short label, one tiny period of comparison (“↑ 2.1 pts vs. 2022”).\n\n\n\nInteractivity earns its keep\nHover for detail, click to highlight, filter to focus. In a dashboard you can show more than in a static chart because the user controls what to look at — but every interactive feature is one more thing to discover. Make the common path obvious.\n\nDashboards are where highlight-one-on-grey shines: plot every series in grey and let the user click to spotlight the one they care about — no color overload, any number of categories.",
-    "crumbs": [
-      "Dashboard elements"
-    ]
-  },
-  {
-    "objectID": "chart-gallery.html",
-    "href": "chart-gallery.html",
-    "title": "Chart Gallery",
-    "section": "",
-    "text": "Skip to main content\nEvery worked example from the Chart Chooser on one page, grouped by purpose. Use it to browse what an on-brand NCDPI version of each chart type looks like — or to find a type by eye when you’d rather scan than answer the chooser’s questions."
-  },
-  {
-    "objectID": "chart-gallery.html#used-elsewhere-in-the-guide",
-    "href": "chart-gallery.html#used-elsewhere-in-the-guide",
-    "title": "Chart Gallery",
-    "section": "Used elsewhere in the guide",
-    "text": "Used elsewhere in the guide\nTwo more specs that aren’t chooser examples but appear on the color pages — included here so this page shows every live chart in the guide.\n\n  Category-group bar\n  charts/groups__category-bar.vl.json\n  \n\n\n  Spotlight (highlight) bar\n  charts/highlight__spotlight-bar.vl.json"
-  },
-  {
-    "objectID": "best-practices/small-multiples.html",
-    "href": "best-practices/small-multiples.html",
-    "title": "Small multiples",
-    "section": "",
-    "text": "Skip to main content\nA small-multiples chart repeats the same little chart once per category, on a shared scale, in a grid. It is the most reliable cure for “I have too many categories” — and it’s badly under-used at NCDPI, so reach for it more."
-  },
-  {
-    "objectID": "best-practices/small-multiples.html#why-they-work",
-    "href": "best-practices/small-multiples.html#why-they-work",
-    "title": "Small multiples",
-    "section": "Why they work",
-    "text": "Why they work\n\nNo color overload. Each panel uses one color, so the five-color ceiling never binds, no matter how many categories you have.\nHonest comparison. A shared scale means a tall bar in one panel really is taller than a short bar in another.\nPattern at a glance. The eye sweeps the grid and spots the outlier panel immediately."
-  },
-  {
-    "objectID": "best-practices/small-multiples.html#how-to-build-them-well",
-    "href": "best-practices/small-multiples.html#how-to-build-them-well",
-    "title": "Small multiples",
-    "section": "How to build them well",
-    "text": "How to build them well\n\nKeep every panel on the same scale — that’s the whole point.\nOrder the panels meaningfully (by value, region, time) rather than alphabetically.\nOne color across all panels; highlight a reference (the state average) the same way in each.\nStop around 20–30 panels — past that, each is too small to read."
-  },
-  {
-    "objectID": "best-practices/index.html",
-    "href": "best-practices/index.html",
-    "title": "Best practices",
-    "section": "",
-    "text": "Skip to main content\nA handful of principles, drawn from our data visualization literature review, explain why the rules on this site are the rules. Read these once and most chart decisions answer themselves."
-  },
-  {
-    "objectID": "best-practices/index.html#ncdpi-standing-rules-in-one-place",
-    "href": "best-practices/index.html#ncdpi-standing-rules-in-one-place",
-    "title": "Best practices",
-    "section": "NCDPI standing rules, in one place",
-    "text": "NCDPI standing rules, in one place\n\n\nFive colors maximum (three or four is better).\nPromote small multiples — they’re under-used here.\nStacked bars: 2–3 segments only. Beyond that, separate bars on a common baseline.\nBreak lines at missing years (e.g., the 2020–21 COVID gap) — never interpolate.\nGraph the delta — when the message is a difference, plot the difference itself."
-  },
-  {
-    "objectID": "best-practices/axis-scales.html",
-    "href": "best-practices/axis-scales.html",
-    "title": "Axis scales",
-    "section": "",
-    "text": "Skip to main content\nHow far you let an axis run is a design decision, not a default. For a bounded, aspirational metric — graduation rate, proficiency, attendance, any percent where 100% is the real goal — start the value axis at the goal by default. The reader should see how far there is left to go, not just how the categories rank against each other.\nBut there’s a cost: when every value sits in a narrow band near the top, a full 0–100 axis makes them look identical. The same eight regions below differ by 5.5 points — invisible on the goal-anchored axis, obvious when zoomed."
-  },
-  {
-    "objectID": "best-practices/axis-scales.html#the-rule",
-    "href": "best-practices/axis-scales.html#the-rule",
-    "title": "Axis scales",
-    "section": "The rule",
-    "text": "The rule\n\nDefault to the real ceiling. Anchor a bounded aspirational metric to 0–100 (or 0–whatever the goal is) unless you have a reason not to. It keeps the distance to the goal honest.\nBars are non-negotiable: always zero-based. A bar encodes its value as length, so a cut bar lies about magnitude. If you want to zoom, you must switch to a position mark — a dot or a line — where the value is read from position, not bar length. (That’s why the example above uses dots.)\nZoom only with cause, and signal it. When the message is the difference between near-tied values, a zoomed axis is fair for dots and lines — but make the cut obvious (label the axis range, don’t start it at a round-looking number that reads as zero)."
-  },
-  {
-    "objectID": "best-practices/axis-scales.html#having-it-both-ways",
-    "href": "best-practices/axis-scales.html#having-it-both-ways",
-    "title": "Axis scales",
-    "section": "Having it both ways",
-    "text": "Having it both ways\nWhen you genuinely need the goal context and the fine variation, you have three honest moves, in order of preference:\n\nGoal-anchored axis — when “how far from the goal” is the message, just use 0–100 and stop.\nHonest zoom with a goal reference — zoom the axis to the data, but keep the goal in view: draw a faint reference line or band at the target and annotate the gap. One chart, both facts.\nPaired combo — show the goal-anchored chart and the zoomed chart together (as above), labeled, so the reader sees the trade-off directly. This is the most explicit teaching version.\n\n\nA true picture-in-picture inset — a small zoomed chart floating inside the full-range one — is not possible in our Vega-Lite charts (Vega-Lite lays views out side by side, not overlapping). If you specifically want that magnified-inset look, build it in matplotlib (an inset axes) and place it as an image, or author it in full Vega. For the live, interactive charts on this site, the paired combo above is the equivalent."
-  },
-  {
-    "objectID": "accessibility.html",
-    "href": "accessibility.html",
-    "title": "Accessibility",
-    "section": "",
-    "text": "Skip to main content\nAccessibility is not a box we check at the end. It is the whole point of a chart: everyone who comes to a visualization should be able to leave with its takeaway. This page lays out how we think about that at NCDPI — which is, in a few places, deliberately more nuanced than a strict checklist reading of the rules. We explain why, and we show our work against the actual standard."
-  },
-  {
-    "objectID": "accessibility.html#two-levels-of-accessibility",
-    "href": "accessibility.html#two-levels-of-accessibility",
-    "title": "Accessibility",
-    "section": "Two levels of accessibility",
-    "text": "Two levels of accessibility\nIt helps to separate two things that both get called “accessibility.”\n\nThe over-riding level — can people get the story? A chart is inaccessible if a reader can’t extract its meaning — and most often that barrier has nothing to do with disability. It’s jargon, an unexplained metric, a missing unit, a buried takeaway, or an assumption that the reader is a “math person.” Clearing that barrier — for the non-specialist, the busy stakeholder, the person new to the subject — is the first job, and it serves everyone.\nThe technical level — ADA, Section 508, WCAG. Nested inside the first is the layer most people mean by “accessibility”: contrast ratios, non-color cues, alt text, keyboard and screen-reader support. This layer is real, it’s now legally required (see below), and we take it seriously. But it is a means to the over-riding goal, not the goal itself.\n\nKeeping these straight matters, because the techniques that serve one often serve the other — a clear message title helps both a screen-reader user and a hurried director — and because the technical layer is best understood as one of several ways we get a reader to the takeaway, not the only way."
-  },
-  {
-    "objectID": "accessibility.html#equivalent-access-not-identical-access",
-    "href": "accessibility.html#equivalent-access-not-identical-access",
-    "title": "Accessibility",
-    "section": "Equivalent access, not identical access",
-    "text": "Equivalent access, not identical access\nHere is the principle that drives the rest of this page:\n\nOur goal is that every reader can reach the takeaway — but how they reach it need not be the same for every reader.\n\nIf a chart offers the story through several independent channels — direct labels so the numbers are readable without decoding color, an auxiliary data table, and good alt text — then no single visual element has to carry the entire accessibility burden on its own. That is not a loophole. As the next section shows, it is exactly how the standard is written."
-  },
-  {
-    "objectID": "accessibility.html#what-wcag-actually-says-and-what-it-doesnt",
-    "href": "accessibility.html#what-wcag-actually-says-and-what-it-doesnt",
-    "title": "Accessibility",
-    "section": "What WCAG actually says — and what it doesn’t",
-    "text": "What WCAG actually says — and what it doesn’t\nThe Web Content Accessibility Guidelines (WCAG) 2.1, Level AA, are the technical standard. It’s worth quoting the relevant criteria precisely, because the text draws its lines in specific places — and not always where a strict reading assumes.\n\nUse of Color (1.4.1, Level A)\n\n“Color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element.”\n\nWhat it requires: a redundant, non-color cue wherever color carries meaning. What it does not require: removing color, nor that the colors on any palette (categorical, sequential, diverging) mandate a particular contrast ratio between one another. (A 3:1 difference in lightness is one way to supply the “additional visual means” the criterion asks for — but it is only one way; direct labels, white separators, and an auxiliary table satisfy it equally.) So when we add direct labels, white separators between abutting fills, and an auxiliary table, color is no longer “the only means” — and 1.4.1 is satisfied. (W3C — Understanding 1.4.1)\n\n\nNon-text Contrast (1.4.11, Level AA)\n\n“The visual presentation of [graphical objects] have a contrast ratio of at least 3:1 against adjacent color(s): Parts of graphics required to understand the content, except when a particular presentation of graphics is essential to the information being conveyed.”\n\nThe scope is the operative phrase: “required to understand the content.” The W3C’s own guidance lists when a graphic doesn’t need to meet 3:1 — including when “the information is available in another form.”\n\nThis is the crux. A faint gridline behind directly-labeled values, or a neutral #B7B9BB context bar whose magnitude is encoded by length and a direct label and an auxiliary table, is not “required to understand the content” — the information is available in another form. Such elements fall outside 1.4.11’s scope; they are not violations of it.\nSo “if it’s visible, it must meet 3:1” is stricter than the standard actually requires. We hold the contrast line — we just hold it on the elements that genuinely carry the meaning. (W3C — Understanding 1.4.11)\n\nA stricter reading exists — and we’ve weighed it. Some excellent dataviz-accessibility resources — notably Chartability (in our resources below) — apply a blanket 3:1 to all “geometries,” deliberately going beyond WCAG 1.4.11’s “required to understand” scope. That is a defensible, conservative ceiling, and we treat it as one. But where such a rule diverges from the standard, we follow WCAG’s actual scoping: an element that is not required to understand the content, because the information is genuinely available another way, is not a violation. We name the difference on purpose — holding the WCAG line where it’s drawn is a considered choice, not an oversight.\nOne limit on this exception: it holds only where direct labeling is actually feasible. When data density makes labels impossible — a 115-district choropleth, a school-level scatter of thousands of points — the marks themselves become required to understand the content, and the label exception no longer applies. Then the auxiliary data table (below) becomes the primary equivalent pathway. Better still, treat the density as the real problem: aggregate, or break the data into small multiples, so the chart stays both legible and labelable. (Note this cuts the other way for sequential fills: adjacent steps of a color ramp still need not contrast 3:1 with each other. W3C’s own guidance treats a measurement gradient under the essential exception — forcing 3:1 between neighboring shades would undermine the ramp itself — and the reader takes the value from the legend and labels, not from telling two shades apart.)\n\n\nContrast — Minimum (1.4.3, Level AA) — the line we do not bend\n\nText has a contrast ratio of at least 4.5:1 (or 3:1 for large text — 18pt, or 14pt bold).\n\nNote the boundary: 1.4.3 governs text, and it has no “required to understand” exception. So the nuance above applies only to non-text graphical objects — gridlines, fills, strokes. Text always meets contrast: data labels, axis values, titles, subtitles, and annotations are held to 4.5:1, full stop. This is what keeps our position honest — we are precise about where a contrast requirement applies, not casual about whether it does. (W3C — Understanding 1.4.3)\n\n\nWhen a chart isn’t the right vehicle: conforming alternatives\nA multi-chart dashboard read aloud by a screen reader, even with a good tab order, is often a poor experience — the structure that makes a dashboard powerful visually does not serialize well into speech. WCAG anticipates this with the conforming alternative version: an accessible equivalent (here, a well-structured data table plus a plain-language summary of the takeaway) that “provides all of the same information,” is kept as up to date, and is reachable from the original.\nTwo honest caveats: WCAG treats this as a fallback — the preferred path is to make content directly accessible — and the alternative only counts if we actually provide it and link to it. A conforming alternative is a safety net, not a license to write the dashboard itself off: keyboard navigation, sensible tab order, and clear focus states still matter, because they serve low-vision, keyboard-only, and motor-impaired readers who do use the visual. (W3C — Understanding Conformance)\nAnd whatever the dashboard does interactively, don’t trap the keyboard: a keyboard user must be able to tab into and back out of every interactive widget — a filter, a legend toggle, an embedded viz — with standard Tab / Shift-Tab, never getting stuck inside one. This is its own Level A requirement (WCAG 2.1.2, No Keyboard Trap) and a frequent late-stage audit failure in tools like Tableau.\n\n\nThe legal footing\nIn April 2024 the U.S. Department of Justice finalized a rule under ADA Title II adopting WCAG 2.1 Level AA for state and local government websites and apps. A subsequent interim rule (April 2026) extended the deadlines by a year — moving the dates only; the WCAG 2.1 Level AA standard itself did not change. As a state agency, NCDPI is on the April 26, 2027 compliance date. That deadline is real, and it’s why the field is leaning toward strict, bright-line readings right now. Our framing meets the standard — we get there through redundant pathways, including conforming alternatives — rather than treating any element as exempt from the goal of access. (ADA.gov — the web rule)"
-  },
-  {
-    "objectID": "accessibility.html#techniques",
-    "href": "accessibility.html#techniques",
-    "title": "Accessibility",
-    "section": "Techniques",
-    "text": "Techniques\nHow the principle becomes practice. None of these is sufficient alone; together they are what “equivalent access” means.\n\nOn the chart\nColor and contrast. Use our palettes (they’re built for this) and make text meet 4.5:1. Don’t chase the impossible standard of every categorical hue contrasting 3:1 with every other and with white at once — at NCDPI we found that nearly unachievable, and the colors you’d be forced into carry their own unwanted connotations. The right move isn’t darker colors; it’s not making color carry the meaning alone. See Color rules and the highlight palette.\nNever color alone. Whatever color says, something else should say too — position, a direct label, a shape, an annotation. This is 1.4.1, and it’s also just good charting.\nLabel directly. A number printed next to its mark is readable by everyone, removes the decode-the-legend step, and is the single most powerful accessibility move available. It’s also what lets a faint gridline or neutral fill stay faint (see the keystone above).\nAnnotate when it helps. A short note that states the takeaway in words — in our annotation Plum — gives every reader the point directly, not just those who can decode the encoding.\n\nA note on pattern fills. Hatching and polka-dot fills are a legitimate redundancy channel — they help colorblind readers, and they survive black-and-white printing where color collapses entirely. But they add visual noise, and they can pull the eye toward the texture inside a bar rather than the bar’s edge, which is where length encodes the value. So treat them as a hierarchy: reach first for direct labels and white separators; reserve patterns for artifacts that may be reproduced without color.\n\n\n\nSupplemental to the chart\nAlt text. Every chart carries a text description (in our specs, the description field, which becomes the chart’s accessible label). Good alt text states the takeaway, not just “a bar chart” — it’s the screen-reader user’s version of the message title. A template that keeps it consistent:\n\n[Chart type] showing [data scope], where [the primary trend or takeaway]. Full data in the accompanying table.\n\nFor example: “Line chart of North Carolina’s four-year cohort graduation rate, 2019–2025, showing a steady climb to a record high in 2025. Full data in the table below.”\nSupporting tables. Offer the underlying numbers as a real, well-structured table (see Table elements). This is both a 1.4.11 “available in another form” pathway and the backbone of a conforming alternative for complex dashboards.\nNatural-language query. Increasingly, readers can ask a dashboard a question in plain words and get an answer back. Where the tooling supports it, this is another door into the same data — especially valuable for readers who find the visual itself a barrier. Treat it as a supplement, not a substitute, for the techniques above. See also Tooltips for putting the value into words on hover."
-  },
-  {
-    "objectID": "accessibility.html#take-this-page-with-you",
-    "href": "accessibility.html#take-this-page-with-you",
-    "title": "Accessibility",
-    "section": "Take this page with you",
-    "text": "Take this page with you\nThis page as a single Markdown file — for offline reference, or to feed to an AI assistant. Generated from the same source as the live page, so it stays in sync.\n⬇ Download (Markdown)"
-  },
-  {
-    "objectID": "accessibility.html#resources",
-    "href": "accessibility.html#resources",
-    "title": "Accessibility",
-    "section": "Resources",
-    "text": "Resources\nA short, curated set — covering both the technical layer and the story-for-everyone layer:\n\nW3C WAI — Complex Images tutorial — the authoritative source on describing charts and graphics for WCAG.\nChartability (Frank Elavsky) — 50 testable heuristics for evaluating data-visualization accessibility; tool-agnostic and used across government agencies. The best dataviz-specific resource going.\nDo No Harm Guide: Applying Equity Awareness in Data Visualization (Schwabish & Feng, Urban Institute) — the story-for-everyone layer: framing, language, and ordering that make data equitable and inclusive.\nDatawrapper — Accessibility and designing for colorblindness (Lisa Charlotte Muth) — the clearest practical writing on the craft.\nAn intro to designing accessible data visualizations (Sarah L. Fossheim) — a clean, example-driven primer.\nThe ADA Title II web rule (ADA.gov) — the legal requirement and what it means for public agencies."
-  },
-  {
-    "objectID": "best-practices/annotation.html",
-    "href": "best-practices/annotation.html",
-    "title": "Annotation",
-    "section": "",
-    "text": "Skip to main content\nA chart that makes the reader figure out the point often loses them. Do the interpreting for them."
-  },
-  {
-    "objectID": "best-practices/annotation.html#write-the-takeaway-into-the-title",
-    "href": "best-practices/annotation.html#write-the-takeaway-into-the-title",
-    "title": "Annotation",
-    "section": "Write the takeaway into the title",
-    "text": "Write the takeaway into the title\nA title like “Average SPG score by region” describes the chart. A title like “Five regions gained ground since 2022; the Sandhills lagged” tells the reader what to see. Lead with the message; let the axis labels handle the description."
-  },
-  {
-    "objectID": "best-practices/annotation.html#label-directly-annotate-the-story",
-    "href": "best-practices/annotation.html#label-directly-annotate-the-story",
-    "title": "Annotation",
-    "section": "Label directly, annotate the story",
-    "text": "Label directly, annotate the story\n\nDirect-label lines and bars instead of relying on a legend (up to ~7 items).\nCall out the one or two points that carry the argument — the outlier, the crossover, the target line — with a short text note in plum #842175, the brand annotation color.\nMark context the data needs: a policy change, a target, the COVID gap."
-  },
-  {
-    "objectID": "best-practices/annotation.html#less-chart-more-meaning",
-    "href": "best-practices/annotation.html#less-chart-more-meaning",
-    "title": "Annotation",
-    "section": "Less chart, more meaning",
-    "text": "Less chart, more meaning\nAnnotation is not decoration. Each note should answer a question the reader would otherwise have to ask. If a viewer can look at the chart and immediately say what it means, the annotation has done its job.\n\nThis pairs with the perceptual hierarchy: pick the chart that encodes the data accurately, then annotate it so the meaning is as easy to read as the values."
-  },
-  {
-    "objectID": "best-practices/color-rules.html",
-    "href": "best-practices/color-rules.html",
-    "title": "Color rules",
-    "section": "",
-    "text": "Skip to main content\nColor is the most abused encoding in agency charts. Three rules keep it honest."
-  },
-  {
-    "objectID": "best-practices/color-rules.html#five-colors-is-the-ceiling",
-    "href": "best-practices/color-rules.html#five-colors-is-the-ceiling",
-    "title": "Color rules",
-    "section": "1. Five colors is the ceiling",
-    "text": "1. Five colors is the ceiling\nPeople can hold only a handful of categorical hues apart before search slows and errors climb; three to four is the comfortable range. When you have more categories, the answer is never more colors — it’s highlight-one-on-grey or small multiples."
-  },
-  {
-    "objectID": "best-practices/color-rules.html#dark-is-more",
-    "href": "best-practices/color-rules.html#dark-is-more",
-    "title": "Color rules",
-    "section": "2. Dark is more",
-    "text": "2. Dark is more\nOn a sequential scale, people read darker as a larger value by default. Honour it: don’t make your lightest shade the biggest number. NCDPI’s sequential palettes are built dark-is-more already."
-  },
-  {
-    "objectID": "best-practices/color-rules.html#color-should-mean-something",
-    "href": "best-practices/color-rules.html#color-should-mean-something",
-    "title": "Color rules",
-    "section": "3. Color should mean something",
-    "text": "3. Color should mean something\n\nMatch the palette to the data: categorical for unordered groups, sequential for ordered, diverging for a meaningful midpoint.\nMake “good” and “bad” directions deliberate — teal for good, rust for bad.\nNever rely on color alone. Pair it with labels, position, or shape, so the chart still works for color-blind readers and in greyscale.\n\n\nRun any color-on-color text combination through the WebAIM contrast checker. DPI Aqua at full strength is not accessible for small text — use Medium #077890 or Dark #006174 aqua instead."
-  },
-  {
-    "objectID": "best-practices/perceptual-hierarchy.html",
-    "href": "best-practices/perceptual-hierarchy.html",
-    "title": "The perceptual hierarchy",
-    "section": "",
-    "text": "Skip to main content\nSome visual encodings are read more accurately than others. Cleveland & McGill’s classic experiments, replicated many times since, rank them roughly like this:"
-  },
-  {
-    "objectID": "best-practices/perceptual-hierarchy.html#what-it-means-in-practice",
-    "href": "best-practices/perceptual-hierarchy.html#what-it-means-in-practice",
-    "title": "The perceptual hierarchy",
-    "section": "What it means in practice",
-    "text": "What it means in practice\n\nTo let people read precise values, encode with position or length — a dot plot or bar, not a heatmap.\nUse color and area for the broad pattern (a map, a treemap), and pair them with a position/length chart when the exact numbers matter.\nThis is exactly why the Chart Chooser, when in doubt, prefers the chart higher on this list.\n\n\nPie charts sit mid-hierarchy on angle — which is why they’re fine for “which slice is biggest?” with a few slices, and poor for comparing many similar slices. The rule (“five slices, no more”) falls straight out of the science."
-  },
-  {
-    "objectID": "chart-chooser.html",
-    "href": "chart-chooser.html",
-    "title": "Chart Chooser",
-    "section": "",
-    "text": "Skip to main content\n\n\n\n\nAnswer a few quick questions about your data and what you want to show. You’ll get one to three chart types that fit — each with a small, on-brand NCDPI example and tips for building it well. This follows the same evidence-based logic as our chart-selection guidance; it never recommends a chart that misleads.\n\n  The Chart Chooser needs JavaScript. See the Chart types gallery for the same guidance."
-  },
-  {
-    "objectID": "chart-parts/chart-elements.html",
-    "href": "chart-parts/chart-elements.html",
-    "title": "Chart elements",
-    "section": "",
-    "text": "Skip to main content\nThe non-data parts of a chart should recede so the data can speak. NCDPI defaults keep them quiet and consistent.",
-    "crumbs": [
-      "Chart elements"
-    ]
-  },
-  {
-    "objectID": "chart-parts/chart-elements.html#anatomy-of-an-ncdpi-chart",
-    "href": "chart-parts/chart-elements.html#anatomy-of-an-ncdpi-chart",
-    "title": "Chart elements",
-    "section": "Anatomy of an NCDPI chart",
-    "text": "Anatomy of an NCDPI chart\nEvery piece of the chart below is set by the brand spec — fonts, sizes, colors, and spacing — so a reader who has seen one NCDPI chart already knows how to read the next one.\n\n\n\nAnatomy of an NCDPI chart — labeled callouts for title, subtitle, axis labels, axis values, data marks, annotation, gridlines, and source note.",
-    "crumbs": [
-      "Chart elements"
-    ]
-  },
-  {
-    "objectID": "chart-parts/chart-elements.html#gridlines-axes-and-rulers",
-    "href": "chart-parts/chart-elements.html#gridlines-axes-and-rulers",
-    "title": "Chart elements",
-    "section": "Gridlines, axes, and rulers",
-    "text": "Gridlines, axes, and rulers\n\nGridlines are light grey #DEDEDE — present enough to support reading a value, faint enough to disappear behind the data.\nAxis rulers and dividers use the same light grey. Drop the top and right spines entirely.\nReference lines (a target, the state average) are DPI Blue #003A70 so they read as deliberate, not as data.",
-    "crumbs": [
-      "Chart elements"
-    ]
-  },
-  {
-    "objectID": "chart-parts/chart-elements.html#the-zero-baseline-rule",
-    "href": "chart-parts/chart-elements.html#the-zero-baseline-rule",
-    "title": "Chart elements",
-    "section": "The zero-baseline rule",
-    "text": "The zero-baseline rule\nBars and areas encode value by length or area, so they must start at zero. Truncating the axis exaggerates differences and is the single most common way a chart misleads. Lines and dot plots may use a non-zero baseline — but say so if you do.",
-    "crumbs": [
-      "Chart elements"
-    ]
-  },
-  {
-    "objectID": "chart-parts/chart-elements.html#labels-over-legends",
-    "href": "chart-parts/chart-elements.html#labels-over-legends",
-    "title": "Chart elements",
-    "section": "Labels over legends",
-    "text": "Labels over legends\nWhen there are seven or fewer items, label them directly rather than making the reader bounce between a legend and the data. Reserve legends for when direct labels would collide.\n\nDeclutter, don’t decorate. Every gridline, tick, and label should earn its place. If removing it doesn’t cost the reader anything, remove it.",
-    "crumbs": [
-      "Chart elements"
-    ]
-  },
-  {
-    "objectID": "chart-parts/table-elements.html",
-    "href": "chart-parts/table-elements.html",
-    "title": "Table elements",
-    "section": "",
-    "text": "Skip to main content\nSometimes a table is the right answer — when readers need to look up exact values. Make it scannable.",
-    "crumbs": [
-      "Table elements"
-    ]
-  },
-  {
-    "objectID": "chart-parts/table-elements.html#example",
-    "href": "chart-parts/table-elements.html#example",
-    "title": "Table elements",
+    "objectID": "foundations/color-diverging.html#example",
+    "href": "foundations/color-diverging.html#example",
+    "title": "Color — diverging",
     "section": "Example",
-    "text": "Example\n\nNorth Carolina public schools and student population by urbanicity, 2023–24\n\n\nUrbanicity\nSchools\nStudent pop.\n% of NC student pop.\n\n\n\n\nCity\n612\n472,300\n31.4%\n\n\nSuburb\n498\n418,900\n27.8%\n\n\nTown\n331\n186,200\n12.4%\n\n\nRural\n1,074\n427,500\n28.4%\n\n\n\nTotal\n2,515\n1,504,900\n100.0%\n\n\n\n\n\nSource: NCDPI school directory, 2023–24. Counts exclude charters with statewide enrollment.",
+    "text": "Example\nLikert data is the textbook diverging case: a diverging stacked bar runs from disagree (rust) through neutral (grey) to agree (teal), centered on the neutral response.",
     "crumbs": [
-      "Table elements"
+      "Color — diverging"
     ]
   },
   {
-    "objectID": "chart-parts/table-elements.html#anatomy-of-an-ncdpi-table",
-    "href": "chart-parts/table-elements.html#anatomy-of-an-ncdpi-table",
-    "title": "Table elements",
-    "section": "Anatomy of an NCDPI table",
-    "text": "Anatomy of an NCDPI table\nSame idea as the chart anatomy — name each part, then its spec. A table simply has fewer parts. Match these and it reads as a clean look-up grid.\n\n\n\nPart\nSpecification\n\n\n\n\nTitle (the &lt;caption&gt;)\n14 pt, bold,  Black #000000 — sized to sit above the header row in the hierarchy\n\n\nHeader row\nWhite text on  DPI Blue #003A70 — short, strong labels\n\n\nRow header\nLeftmost cell of each row; left-aligned, regular weight\n\n\nRow banding\n 10% DPI Blue #E6EDF6 on alternate rows — guides the eye across a row without shouting\n\n\nDividers\n Light grey #DEDEDE\n\n\nTotal row\n2 px top rule, bold, no fill — separates the summary from the data\n\n\nSource note\n10 pt,  Dark grey #525A60 — a table's source note sits one step below the brand's 11 pt chart note, so it recedes",
-    "crumbs": [
-      "Table elements"
-    ]
-  },
-  {
-    "objectID": "chart-parts/table-elements.html#alignment",
-    "href": "chart-parts/table-elements.html#alignment",
-    "title": "Table elements",
-    "section": "Alignment",
-    "text": "Alignment\n\nNumbers align right and share decimal places, so magnitudes line up visually.\nText aligns left.\nHeaders match the alignment of the column beneath them.",
-    "crumbs": [
-      "Table elements"
-    ]
-  },
-  {
-    "objectID": "chart-parts/table-elements.html#make-tables-do-more",
-    "href": "chart-parts/table-elements.html#make-tables-do-more",
-    "title": "Table elements",
-    "section": "Make tables do more",
-    "text": "Make tables do more\n\nSort by the column that matters, not alphabetically by default.\nAdd an embedded sparkline column to show a trend per row without a separate chart.\nLightly shade or mark the values that carry the message — don’t make readers hunt.\n\nA few small in-cell techniques — one row each. They borrow the chart palette so the table still reads as NCDPI:\n\nIn-cell techniques (illustrative)\n\n\n\n\n\n\n\nTechnique\nExample\nReach for it when…\n\n\n\n\nSparkline\n\n\n\neach row has a short trend (say, attendance 2019–2024) and a full line chart would be overkill. Color the line navy #003A70; dot the last point.\n\n\nIn-cell data bar\n86  \n\n\n\nreaders compare magnitudes down a column at a glance — the bar length does work the bare number can't. Keep the value visible alongside it.\n\n\nHeat cell\n12 47 93\nspotting highs and lows across a grid. Shade with Sequence to Neutral (light grey → #5085BC), dark = higher. Mind contrast if you also print the value: dark ink on the darkest steps fails WCAG AA for small text (~4.2:1), and white text is worse — so keep the in-cell number only where the shade is light, or show the value outside the cell.\n\n\n\n\nOne enrichment per table, not all three at once. These are accents on a look-up grid — if every column has a bar or a heat tint, you’ve built a cluttered chart, not a table.",
-    "crumbs": [
-      "Table elements"
-    ]
-  },
-  {
-    "objectID": "chart-parts/table-elements.html#accessibility",
-    "href": "chart-parts/table-elements.html#accessibility",
-    "title": "Table elements",
-    "section": "Accessibility",
-    "text": "Accessibility\n\nMost NCDPI tables are built in Tableau, PowerPoint, or Word — not hand-coded. The principles here apply in every tool: give the table a real title/caption, use genuine header rows (not bold text faking a header), keep one value per cell (avoid merged cells), and never use a table just for page layout. The HTML attributes shown below (scope, headers/id) are how you satisfy these when you hand-code a table — in Tableau and Office, use the built-in table, crosstab, and caption features and they handle most of it for you.\n\nA data table is one of the few places where structure directly affects whether a screen-reader user can use the table at all — so the underlying markup (or your tool’s accessibility features) matters more here than it does for a chart.\n\nUse &lt;th scope=\"col\"&gt; on column headers (and scope=\"row\" on the leading cell of each row where it makes sense). WCAG 2.1 SC 1.3.1 Info and Relationships requires that the table’s structure be programmatically conveyable — scope is how you do that.\nGive every table a &lt;caption&gt; or aria-label. The caption answers “what is this table about?” before the screen reader starts reading cells.\nAvoid merged header cells. WCAG doesn’t ban them outright, but screen-reader support for merged cells is uneven, and they make linear navigation confusing. If you truly need a merged header (a complex multi-level table), mark it up with explicit headers / id attributes so each data cell points to the headers that govern it.\nDon’t use a table for layout. If the goal is page layout, use CSS — not &lt;table&gt;.\n\n\nA simple, well-marked-up table beats a clever, complex one every time. If you find yourself reaching for merged cells, ask whether two simple tables would tell the same story better.",
-    "crumbs": [
-      "Table elements"
-    ]
-  },
-  {
-    "objectID": "chart-parts/table-elements.html#pair-charts-with-an-accessible-table",
-    "href": "chart-parts/table-elements.html#pair-charts-with-an-accessible-table",
-    "title": "Table elements",
-    "section": "Pair charts with an accessible table",
-    "text": "Pair charts with an accessible table\nEven a perfect chart leaves screen-reader users out of the conversation. For any complex chart in a dashboard or slide deck, give them a way to reach the underlying numbers.\n\nIn Tableau: add a “View data” button that toggles a hidden cross-tab via dynamic zone visibility. Default-hidden so it doesn’t crowd the visual; one click for users who need it.\nIn PowerPoint: put the chart on one slide and add a “Data table” hyperlink to a companion slide that holds the corresponding cross-tab.\nIn a web report: offer a “Show table” toggle beneath the chart, or link to a downloadable CSV.\n\n\nA table answers “what is the exact value?”; a chart answers “what is the pattern?” If your reader needs both — or if accessibility requires both — give them both.",
-    "crumbs": [
-      "Table elements"
-    ]
-  },
-  {
-    "objectID": "chart-types/bar-charts.html",
-    "href": "chart-types/bar-charts.html",
-    "title": "Bar charts",
+    "objectID": "foundations/color-highlights.html",
+    "href": "foundations/color-highlights.html",
+    "title": "Color — highlights",
     "section": "",
-    "text": "Skip to main content\nThe bar chart is the workhorse of comparison: it encodes values as length on a common baseline, which is one of the most accurate things the human eye can do.",
+    "text": "Skip to main content\nThe single most useful move in the whole palette: plot everything in neutral grey and use color for the one thing your message is about. This is how you handle “too many categories” without breaking the five-color rule.",
     "crumbs": [
-      "Chart types",
-      "Bar charts"
+      "Color — highlights"
     ]
   },
   {
-    "objectID": "chart-types/bar-charts.html#comparing-categories",
-    "href": "chart-types/bar-charts.html#comparing-categories",
-    "title": "Bar charts",
-    "section": "Comparing categories",
-    "text": "Comparing categories\nWhen you have one number per category, sort by value and use a single color. With more than five categories you do not need a different color for each bar — position already does the work.\n\n\n\n\nAlways start the value axis at zero. Bars encode magnitude by length, so a truncated axis exaggerates differences and misleads the reader.",
-    "crumbs": [
-      "Chart types",
-      "Bar charts"
-    ]
-  },
-  {
-    "objectID": "chart-types/deviation.html",
-    "href": "chart-types/deviation.html",
-    "title": "Difference from a baseline",
-    "section": "",
-    "text": "Skip to main content\nWhen the difference itself is the message — change from last year, above/below a target, or the gap between two groups — plot the difference directly.",
-    "crumbs": [
-      "Chart types",
-      "Difference from a baseline"
-    ]
-  },
-  {
-    "objectID": "chart-types/deviation.html#graph-the-delta",
-    "href": "chart-types/deviation.html#graph-the-delta",
-    "title": "Difference from a baseline",
-    "section": "Graph the delta",
-    "text": "Graph the delta\nDon’t make the reader subtract two bars by eye. A diverging bar against a zero line puts the change front and centre, and a constant gap stays the same size everywhere (two raw lines make a fixed gap look like it shrinks as values rise).",
-    "crumbs": [
-      "Chart types",
-      "Difference from a baseline"
-    ]
-  },
-  {
-    "objectID": "chart-types/deviation.html#dumbbell-the-gap-between-two-points",
-    "href": "chart-types/deviation.html#dumbbell-the-gap-between-two-points",
-    "title": "Difference from a baseline",
-    "section": "Dumbbell: the gap between two points",
-    "text": "Dumbbell: the gap between two points\nA dumbbell keeps both values but draws attention to the distance between them.",
-    "crumbs": [
-      "Chart types",
-      "Difference from a baseline"
-    ]
-  },
-  {
-    "objectID": "chart-types/deviation.html#rating-scale-likert-data",
-    "href": "chart-types/deviation.html#rating-scale-likert-data",
-    "title": "Difference from a baseline",
-    "section": "Rating-scale (Likert) data",
-    "text": "Rating-scale (Likert) data\nCentre a diverging stacked bar on the neutral response: disagree extends left, agree extends right. Never use a pie for survey data.\n\n\n\n\nThe survey numbers above are synthetic demo data, not real NCDPI results.",
-    "crumbs": [
-      "Chart types",
-      "Difference from a baseline"
-    ]
-  },
-  {
-    "objectID": "chart-types/index.html",
-    "href": "chart-types/index.html",
-    "title": "Chart types",
-    "section": "",
-    "text": "Skip to main content\n\n\n\n\nCharts are organised here by the job they do — the message you want your audience to take away — not by the data type. Not sure which job you have? The Chart Chooser will walk you to a recommendation.\nEvery example uses real, public NCDPI school data and the NCDPI brand palette.\n\n\n  \n    \n      \n        \n        \n        \n      \n    \n    Compare and rank\n    Bar charts, dots, lollipops, dumbbells\n  \n\n  \n    \n      \n        \n        \n          \n          \n          \n          \n          \n          \n        \n      \n    \n    Change over time\n    Lines, small multiples, slope charts\n  \n\n  \n    \n      \n        \n        \n        \n      \n    \n    Parts of a whole\n    Pie, stacked bar, waffle\n  \n\n  \n    \n      \n        \n        \n        \n        \n        \n        \n        \n      \n    \n    Distribution\n    Histogram, box plot\n  \n\n  \n    \n      \n        \n          \n          \n          \n          \n          \n          \n          \n          \n        \n      \n    \n    Relationships\n    Scatter, bubble\n  \n\n  \n    \n      \n        \n        \n        \n        \n        \n      \n    \n    Difference from a baseline\n    Diverging bars, dumbbells, Likert\n  \n\n  \n    \n      \n        \n        \n        \n        \n      \n    \n    Geographic patterns\n    Choropleth, point, hex maps\n  \n\n  \n    \n      \n        92%\n      \n    \n    Headline number\n    BAN (big number), bullet chart, KPI tile",
-    "crumbs": [
-      "Chart types"
-    ]
-  },
-  {
-    "objectID": "chart-types/lines.html",
-    "href": "chart-types/lines.html",
-    "title": "Lines & change over time",
-    "section": "",
-    "text": "Skip to main content\nUse a line when the message is the trend — direction and rate of change across time. The connecting line emphasises continuity, so only use it for genuinely sequential (time) data.",
-    "crumbs": [
-      "Chart types",
-      "Lines & change over time"
-    ]
-  },
-  {
-    "objectID": "chart-types/lines.html#a-few-series",
-    "href": "chart-types/lines.html#a-few-series",
-    "title": "Lines & change over time",
-    "section": "A few series",
-    "text": "A few series\nKeep it to about five colored lines. Direct-label the ends rather than making the reader bounce to a legend.\n\n\n\n\nBreak the line at missing years. NC issued no School Performance Grades in 2020 and 2021. A line drawn straight through that gap would invent two years of data. Show the break.",
-    "crumbs": [
-      "Chart types",
-      "Lines & change over time"
-    ]
-  },
-  {
-    "objectID": "chart-types/lines.html#many-series-small-multiples",
-    "href": "chart-types/lines.html#many-series-small-multiples",
-    "title": "Lines & change over time",
-    "section": "Many series → small multiples",
-    "text": "Many series → small multiples\nMore than five lines becomes spaghetti. Give each category its own panel on a shared scale instead. Small multiples are under-used at NCDPI — reach for them.",
-    "crumbs": [
-      "Chart types",
-      "Lines & change over time"
-    ]
-  },
-  {
-    "objectID": "chart-types/lines.html#two-time-points-slope-chart",
-    "href": "chart-types/lines.html#two-time-points-slope-chart",
-    "title": "Lines & change over time",
-    "section": "Two time points → slope chart",
-    "text": "Two time points → slope chart\nWhen you only have a “before” and “after,” a slope chart shows each item’s value at both points and the direction of change, and makes rank reversals pop.",
-    "crumbs": [
-      "Chart types",
-      "Lines & change over time"
-    ]
-  },
-  {
-    "objectID": "chart-types/part-to-whole.html",
-    "href": "chart-types/part-to-whole.html",
-    "title": "Parts of a whole",
-    "section": "",
-    "text": "Skip to main content\nPart-to-whole charts answer “what share does each piece make up?” They work best when there are only a few pieces.",
-    "crumbs": [
-      "Chart types",
-      "Parts of a whole"
-    ]
-  },
-  {
-    "objectID": "chart-types/part-to-whole.html#pie-chart",
-    "href": "chart-types/part-to-whole.html#pie-chart",
-    "title": "Parts of a whole",
-    "section": "Pie chart",
-    "text": "Pie chart\nFine with five slices or fewer, and genuinely good for “which is biggest?” Order slices largest-to-smallest and label them directly.\n\n\n\n\nFive slices is the ceiling. Beyond that, angle judgements collapse — group the small categories into “Other,” or switch to a sorted bar chart.",
-    "crumbs": [
-      "Chart types",
-      "Parts of a whole"
-    ]
-  },
-  {
-    "objectID": "chart-types/part-to-whole.html#stacked-bars-keep-them-shallow",
-    "href": "chart-types/part-to-whole.html#stacked-bars-keep-them-shallow",
-    "title": "Parts of a whole",
-    "section": "Stacked bars: keep them shallow",
-    "text": "Stacked bars: keep them shallow\nA 100% stacked bar shows composition across categories, but only the bottom segment sits on a common baseline. Keep stacked bars to 2–3 segments. With four or more, the middle segments float and can’t be compared — use separate bars on a common baseline (grouped bars or small multiples) instead.",
-    "crumbs": [
-      "Chart types",
-      "Parts of a whole"
-    ]
-  },
-  {
-    "objectID": "foundations/color-groups.html",
-    "href": "foundations/color-groups.html",
-    "title": "Color — category groups",
-    "section": "",
-    "text": "Skip to main content\nUse the group palettes for distinct, unordered categories — regions, subjects, school types. The palettes are pre-built for two through six categories so you never have to guess. Stop at five; if you need more, see Highlights or use small multiples.\nThese swatches are generated live from the brand color file.\nTwo categories\nThree categories\nFour categories\nFive categories (the practical maximum)\nSix categories (use only when truly unavoidable)",
-    "crumbs": [
-      "Color — category groups"
-    ]
-  },
-  {
-    "objectID": "foundations/color-groups.html#example",
-    "href": "foundations/color-groups.html#example",
-    "title": "Color — category groups",
+    "objectID": "foundations/color-highlights.html#example",
+    "href": "foundations/color-highlights.html#example",
+    "title": "Color — highlights",
     "section": "Example",
-    "text": "Example\nFour locales, four brand colors applied in order — with a white border so neighbours stay crisp. Position and labels do the identifying; color just groups.",
+    "text": "Example\nEight regions, all neutral grey except one in navy. The eye lands on the focal region immediately — and you’ve spent only one color to do it.",
     "crumbs": [
-      "Color — category groups"
+      "Color — highlights"
     ]
   },
   {
-    "objectID": "foundations/color-lookup.html",
-    "href": "foundations/color-lookup.html",
-    "title": "Color lookup",
+    "objectID": "foundations/color-sequences.html",
+    "href": "foundations/color-sequences.html",
+    "title": "Color — sequences",
     "section": "",
-    "text": "Skip to main content\n\n\n\n\nEvery color in the NCDPI chart system, searchable. Filter by palette, element, or hex code. This table is generated directly from the brand color file, so it never drifts out of date.",
+    "text": "Skip to main content\nUse a sequential palette when the data has a natural order from low to high. NCDPI provides three, because in education “high” isn’t always “good”:\nDarker always means more — the dark-is-more convention people read intuitively.",
     "crumbs": [
-      "Color lookup"
+      "Color — sequences"
     ]
   },
   {
-    "objectID": "foundations/color.html",
-    "href": "foundations/color.html",
-    "title": "Color — overview",
+    "objectID": "foundations/color-sequences.html#explore-the-palettes",
+    "href": "foundations/color-sequences.html#explore-the-palettes",
+    "title": "Color — sequences",
+    "section": "Explore the palettes",
+    "text": "Explore the palettes\nPick a direction and the number of steps:\n\n\nThe steps are equally spaced in color space. Each step is the same perceptual distance from the next, from the neutral end to the full color. So the values they stand for should be equally spaced too — even color steps imply even bins (0–20, 20–40, …), not arbitrary cutoffs.\n\n\nDon’t let color do all the work. Adjacent steps are close in lightness and won’t all meet WCAG contrast against each other. Keep a labeled legend or value labels, and add a thin white border where segments touch (pie, treemap, stacked, map).\n\n\nContinuous variants. Each sequence also has a smooth, stepless continuous ramp. Reach for it only where the data is truly continuous and position can’t carry the magnitude — almost always a choropleth map or a heatmap. For anything with countable categories, use the stepped palettes above.",
+    "crumbs": [
+      "Color — sequences"
+    ]
+  },
+  {
+    "objectID": "foundations/color-sequences.html#example",
+    "href": "foundations/color-sequences.html#example",
+    "title": "Color — sequences",
+    "section": "Example",
+    "text": "Example\nA sequential palette earns its keep where position can’t show magnitude — here a heatmap, where color carries the value. Match the palette to the meaning: a proficiency view uses Sequence to Good; shade a chronic-absenteeism view with Sequence to Bad.",
+    "crumbs": [
+      "Color — sequences"
+    ]
+  },
+  {
+    "objectID": "foundations/typography.html",
+    "href": "foundations/typography.html",
+    "title": "Typography",
     "section": "",
-    "text": "Skip to main content\nThe NCDPI chart palette is built for four jobs. Pick the palette that matches the kind of data, not your favorite color.\nThroughout this guide we name colors by their HEX value (e.g., #5085BC), not RGB. Every value lives in the searchable Color lookup.",
+    "text": "Skip to main content",
     "crumbs": [
-      "Color — overview"
+      "Typography"
     ]
   },
   {
-    "objectID": "foundations/color.html#the-four-jobs-at-a-glance",
-    "href": "foundations/color.html#the-four-jobs-at-a-glance",
-    "title": "Color — overview",
-    "section": "The four jobs at a glance",
-    "text": "The four jobs at a glance\nGrey recedes; color carries the message. Each panel below is the same simple bar chart with a different palette doing its one job — highlight one value, separate categories, show an ordered sequence, or flag a good/bad outcome.",
+    "objectID": "foundations/typography.html#font",
+    "href": "foundations/typography.html#font",
+    "title": "Typography",
+    "section": "Font",
+    "text": "Font\nNCDPI charts, dashboards, and official web materials use Arial (fallback Helvetica) — the agency’s WCAG-compliant workhorse font. This guide deliberately sets its own body text in Arial too, so the words on the page match the words in the charts.\n\nThe NC Digital Commons web framework specifies Source Sans Pro for sites that live on nc.gov. This guide is an NCDPI-owned site about the chart palette, so it follows the NCDPI agency standard (Arial) for visual consistency with the charts.",
     "crumbs": [
-      "Color — overview"
+      "Typography"
     ]
   },
   {
-    "objectID": "foundations/color.html#the-one-rule-that-matters-most",
-    "href": "foundations/color.html#the-one-rule-that-matters-most",
-    "title": "Color — overview",
-    "section": "The one rule that matters most",
-    "text": "The one rule that matters most\n\nFive distinct colors is the ceiling — three or four is better. Past five hues, people can’t reliably tell categories apart. When you have more, don’t add colors: highlight one against grey, or use small multiples (one small panel per category). Every extra hue is one more thing the reader has to decode — keep the count low so their attention goes to the differences that matter, not to working out which color means which category.",
+    "objectID": "foundations/typography.html#text-sizes-in-charts",
+    "href": "foundations/typography.html#text-sizes-in-charts",
+    "title": "Typography",
+    "section": "Text sizes in charts",
+    "text": "Text sizes in charts\nThese come straight from the brand color-and-type CSV that drives the whole guide:\n\n\n\nRole\nSize\nColor\n\n\n\n\nChart title\n14 pt, bold\n Black #000000\n\n\nSubtitle / note\n11 pt\n Dark grey #525A60\n\n\nAxis label\n11 pt\n Black #000000\n\n\nAxis value\n11 pt\n Dark grey #525A60\n\n\nAnnotation\n11 pt\n Plum #842175\n\n\nDashboard title\n26 pt\n DPI Blue #003A70",
     "crumbs": [
-      "Color — overview"
+      "Typography"
     ]
   },
   {
-    "objectID": "foundations/color.html#category-order",
-    "href": "foundations/color.html#category-order",
-    "title": "Color — overview",
-    "section": "Category order",
-    "text": "Category order\nWhen you do color-code categories, use the brand order so charts stay consistent — Blue → Orange → Purple → Green → Gold → Plum:\n\n\nSee Category groups for how many to use at each step. Never rely on color alone — pair it with labels or position.",
+    "objectID": "foundations/typography.html#rules",
+    "href": "foundations/typography.html#rules",
+    "title": "Typography",
+    "section": "Rules",
+    "text": "Rules\n\nBody and paragraph text is black or DPI Blue.\nDon’t color-code text for emphasis — use bold instead.\nSection titles and headings on this site are DPI Blue. (In charts, the title is black and the dashboard title is DPI Blue — see the table above.)\nIf everything stands out, nothing stands out.",
     "crumbs": [
-      "Color — overview"
+      "Typography"
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "The NCDPI chart cheat sheet",
+    "objectID": "map-maker.html",
+    "href": "map-maker.html",
+    "title": "Map Maker",
     "section": "",
-    "text": "Skip to main content"
-  },
-  {
-    "objectID": "index.html#anatomy-of-an-ncdpi-chart",
-    "href": "index.html#anatomy-of-an-ncdpi-chart",
-    "title": "The NCDPI chart cheat sheet",
-    "section": "Anatomy of an NCDPI chart",
-    "text": "Anatomy of an NCDPI chart\nEvery part has a job. Title carries the takeaway; the subtitle carries the contract; color does one thing at a time.\n\n\n\nAnatomy of an NCDPI chart — labeled callouts for the title, subtitle, axis labels, axis values, gridlines, data marks, annotation, and source note, each with its font size and color.\n\n\nSee Chart elements for the full anatomy, and Table and Dashboard elements for those."
-  },
-  {
-    "objectID": "index.html#type-at-a-glance",
-    "href": "index.html#type-at-a-glance",
-    "title": "The NCDPI chart cheat sheet",
-    "section": "Type at a glance",
-    "text": "Type at a glance\nArial throughout. Sizes and colors are the brand standard — the same values that drive every chart in this guide."
-  },
-  {
-    "objectID": "index.html#how-we-use-color",
-    "href": "index.html#how-we-use-color",
-    "title": "The NCDPI chart cheat sheet",
-    "section": "How we use color",
-    "text": "How we use color\nReach for the palette that matches the job, not your favorite color. Each panel below is the same idea: grey recedes, color carries the message.\n\n\nHighlight — one navy #003A70 bar against neutral grey. Draw the eye to one thing. → Highlights\nCategorical — distinct, unordered groups (regions, subjects). → Category groups\nSequence — an ordered low-to-high scale (counts, bands). → Sequences\nGood / Bad — a value worth celebrating (teal #077890) or flagging (rust #B33A12). → Sequences · Diverging\n\n\nFive distinct colors is the ceiling — three or four is better. Past five hues people can’t reliably tell categories apart. Don’t add colors; highlight one against grey, or use small multiples.\n\n\nCategory groups\nBrand order — Blue → Orange → Purple → Green → Gold → Plum:\n\n\n\nHighlight & chart elements\n\n\nSequences and diverging ramps come in 2–5 and 3–9 steps — pick a length on the Sequences and Diverging pages. Every value is in the searchable Color lookup."
-  },
-  {
-    "objectID": "index.html#take-the-specs-with-you",
-    "href": "index.html#take-the-specs-with-you",
-    "title": "The NCDPI chart cheat sheet",
-    "section": "Take the specs with you",
-    "text": "Take the specs with you\nThe full spec sheet — every palette, hex, font, and size — as a single file you can keep, print, or feed to an AI assistant. Generated from the same source as this page, so it never drifts.\n⬇ Download (Markdown) ⬇ Download (JSON)\nTableau users: load our palettes straight into Tableau. Download the file below, then copy its contents into your Preferences.tps (in Documents/My Tableau Repository/) and restart Tableau — our categorical, sequential, and diverging palettes will be waiting in the color menu.\n⬇ Download Tableau palettes (.tps)"
-  },
-  {
-    "objectID": "index.html#go-deeper",
-    "href": "index.html#go-deeper",
-    "title": "The NCDPI chart cheat sheet",
-    "section": "Go deeper",
-    "text": "Go deeper\n\nChart Chooser — find the right chart for your data Chart types — worked examples by purpose Color — the four palette jobs in depth Chart parts — anatomy of charts, tables, dashboards Best practices — the construction rules and the evidence Gallery — every chart in the guide, on one page"
+    "text": "Skip to main content\n\n\n\n\nUpload a simple data file — one row per school district, county, or SBE region — answer a few questions, and download a presentation-ready choropleth map that follows the NCDPI style guide.\nYour data stays on your computer. This page does all its work inside your browser; the file you choose is never uploaded, transmitted, or stored anywhere. Even so, use aggregate, non-personal data only — one row per area, no student-level information of any kind.\nBeta — Phase 2 (in progress). Districts, counties, and SBE regions from a CSV; sequential, goal-anchored, and diverging color scales; PNG download. Excel files, highlight maps, and bar-chart legends are on the roadmap. Feedback to Andy Baxter."
   }
 ]

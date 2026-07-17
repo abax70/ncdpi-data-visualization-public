@@ -3,7 +3,7 @@
   "description": "Grouped column chart comparing grade-level proficiency (GLP %) in Math (steel blue) and Reading (orange) across grades 3 through 8 in 2025. Math leads early — 64 percent in grade 3 versus Reading's 47 — then declines every grade to 49 by grade 8, while Reading stays near 52 to 58 after grade 3, so Reading ends ahead of Math in grade 8 (54 vs 49).",
   "title": {
     "text": "Math starts well ahead of Reading but slips behind it by grade 8",
-    "subtitle": "Grade-level proficiency (GLP %), all students, North Carolina, by grade, 2025. Subject is categorical, so the colors are non-valenced."
+    "subtitle": ["Grade-level proficiency (GLP %), all students, North Carolina, by grade, 2025. Subject is categorical, so the", "colors are non-valenced."]
   },
   "data": {
     "url": "data/state_proficiency_by_grade_2025.csv",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "mark": { "type": "text", "dy": -8, "fontSize": 11, "color": "#000000" },
+      "mark": { "type": "text", "dy": -8, "fontSize": 14.67, "color": "#000000" },
       "encoding": {
         "x": { "field": "grade", "type": "ordinal", "sort": [3, 4, 5, 6, 7, 8] },
         "xOffset": { "field": "subject", "sort": ["Math", "Reading"] },
@@ -47,7 +47,7 @@
     },
     {
       "transform": [{ "filter": "datum.grade === 3" }],
-      "mark": { "type": "text", "dy": -22, "fontSize": 11, "fontWeight": "bold" },
+      "mark": { "type": "text", "dy": -22, "fontSize": 14.67, "fontWeight": "bold" },
       "encoding": {
         "x": { "field": "grade", "type": "ordinal", "sort": [3, 4, 5, 6, 7, 8] },
         "xOffset": { "field": "subject", "sort": ["Math", "Reading"] },

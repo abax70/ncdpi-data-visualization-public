@@ -48,7 +48,7 @@
         { "aggregate": [ { "op": "median", "field": "spg_score", "as": "median_spg" } ] },
         { "calculate": "'Median ' + format(datum.median_spg, '.0f')", "as": "median_label" }
       ],
-      "mark": { "type": "text", "align": "left", "dx": 6, "fontSize": 10, "fontWeight": "bold", "color": "#842175" },
+      "mark": { "type": "text", "align": "left", "dx": 6, "fontSize": 13.33, "fontWeight": "bold", "color": "#842175" },
       "encoding": {
         "x": { "field": "median_spg", "type": "quantitative" },
         "y": { "datum": 392 },

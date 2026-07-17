@@ -3,7 +3,7 @@
   "description": "Horizontal bar chart of 4-year cohort graduation rates for North Carolina's eight SBE regions in 2025, sorted highest to lowest. The Northeast region, highlighted navy, graduates 87.3 percent of its cohort; the other regions are neutral grey. Western leads at 91.6 percent and Sandhills trails at 86.1 percent; every region tops 86 percent.",
   "title": {
     "text": "The Northeast region graduates 87% of its cohort",
-    "subtitle": "4-year cohort graduation rate (%) by SBE region, 2025. Navy marks attention — not good or bad. Bars are labeled directly, so the value axis is dropped."
+    "subtitle": ["4-year cohort graduation rate (%) by SBE region, 2025. Navy marks attention — not good or bad. Bars are", "labeled directly, so the value axis is dropped."]
   },
   "data": {
     "url": "data/region_snapshot_2025.csv",
@@ -36,7 +36,7 @@
           "title": null,
           "axis": {
             "labelAlign": "left",
-            "labelPadding": 88,
+            "labelPadding": 118,
             "ticks": false,
             "grid": false
           }
@@ -74,7 +74,7 @@
         "type": "text",
         "align": "left",
         "dx": 5,
-        "fontSize": 11,
+        "fontSize": 14.67,
         "color": "#000000"
       },
       "encoding": {

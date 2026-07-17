@@ -3,7 +3,7 @@
   "description": "Pie chart of North Carolina students by 2025 proficiency level, all subjects and grades, with slices labeled directly: Level 1 or 2 is the largest share at 45 percent, then Level 4 (24), Level 3 (20), and Level 5 (11). Level 1 or 2 — students below grade level — is colored rust so the nearly-half share reads as a single block; the three proficient levels are neutral grey, with white separators.",
   "title": {
     "text": "Nearly half of NC students scored below grade level",
-    "subtitle": ["Share of NC students by 2025 achievement level, all subjects and grades. Below grade level = Level 1 or 2 (below GLP, Level 3+).", "Pies suit part-to-whole with five slices or fewer — order and label them directly."]
+    "subtitle": ["Share of NC students by 2025 achievement level, all subjects and grades. Below grade level = Level 1 or 2", "(below GLP, Level 3+). Pies suit part-to-whole with five slices or fewer — order and label them directly."]
   },
   "data": {
     "url": "data/state_proficiency_levels_2025.csv",
@@ -31,11 +31,11 @@
     { "mark": { "type": "arc", "outerRadius": 120, "stroke": "white", "strokeWidth": 1.5 } },
     {
       "comment": "Two label layers at constant radius (150 for most, 168 for Level 1 or 2 so it clears its neighbours). Using two layers + opacity — not a radius field encoding — keeps the inherited theta stack intact so labels stay matched to their slices.",
-      "mark": { "type": "text", "radius": 150, "fontSize": 12, "lineBreak": "\n", "lineHeight": 13, "align": "center", "baseline": "middle" },
+      "mark": { "type": "text", "radius": 150, "fontSize": 16, "lineBreak": "\n", "lineHeight": 13, "align": "center", "baseline": "middle" },
       "encoding": { "text": { "field": "slice_label" }, "opacity": { "condition": { "test": "datum.level === 'Level 1 or 2'", "value": 0 }, "value": 1 }, "color": { "value": "#1A2128" } }
     },
     {
-      "mark": { "type": "text", "radius": 168, "fontSize": 12, "lineBreak": "\n", "lineHeight": 13, "align": "center", "baseline": "middle" },
+      "mark": { "type": "text", "radius": 168, "fontSize": 16, "lineBreak": "\n", "lineHeight": 13, "align": "center", "baseline": "middle" },
       "encoding": { "text": { "field": "slice_label" }, "opacity": { "condition": { "test": "datum.level === 'Level 1 or 2'", "value": 1 }, "value": 0 }, "color": { "value": "#1A2128" } }
     }
   ],

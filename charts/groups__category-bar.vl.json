@@ -33,7 +33,7 @@
     },
     {
       "transform": [ { "aggregate": [ { "op": "count", "as": "n" } ], "groupby": ["locale"] } ],
-      "mark": { "type": "text", "dy": -8, "fontSize": 11, "color": "#000000" },
+      "mark": { "type": "text", "dy": -8, "fontSize": 14.67, "color": "#000000" },
       "encoding": {
         "x": { "field": "locale", "type": "nominal", "sort": ["City", "Suburb", "Town", "Rural"] },
         "y": { "field": "n", "type": "quantitative" },

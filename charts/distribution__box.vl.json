@@ -12,7 +12,7 @@
     "y": {
       "field": "locale", "type": "nominal", "title": null,
       "sort": ["Suburb", "City", "Rural", "Town"],
-      "axis": { "labelAlign": "left", "labelPadding": 48, "ticks": false, "grid": false }
+      "axis": { "labelAlign": "left", "labelPadding": 64, "ticks": false, "grid": false }
     },
     "x": {
       "field": "spg_score", "type": "quantitative", "title": null,

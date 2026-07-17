@@ -17,6 +17,7 @@
     { "calculate": "datum.seg_start + datum.pct", "as": "seg_end" }
   ],
   "height": 200,
+  "padding": { "left": 5, "top": 5, "right": 5, "bottom": 60 },
   "layer": [
     {
       "data": { "values": [ {} ] },
@@ -29,7 +30,7 @@
         "y": {
           "field": "question", "type": "nominal", "title": null,
           "sort": { "field": "net", "op": "max", "order": "descending" },
-          "axis": { "labelAlign": "left", "labelPadding": 186, "labelLimit": 0, "ticks": false, "grid": false }
+          "axis": { "labelAlign": "left", "labelPadding": 248, "labelLimit": 0, "ticks": false, "grid": false }
         },
         "x": {
           "field": "seg_start", "type": "quantitative", "title": null,
@@ -48,7 +49,7 @@
             "domain": ["Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree"],
             "range": ["#B33A12", "#C88C78", "#B7B9BB", "#86A4AE", "#077890"]
           },
-          "legend": { "orient": "none", "direction": "horizontal", "legendX": 34, "legendY": 250, "symbolType": "square" }
+          "legend": { "orient": "none", "direction": "horizontal", "legendX": -248, "legendY": 252, "symbolType": "square" }
         },
         "tooltip": [
           { "field": "question", "title": "Question" },
@@ -60,7 +61,7 @@
     },
     {
       "transform": [ { "filter": "datum.response === 'Strongly agree'" } ],
-      "mark": { "type": "text", "align": "left", "dx": 5, "fontSize": 10, "fontWeight": "bold", "color": "#077890" },
+      "mark": { "type": "text", "align": "left", "dx": 5, "fontSize": 13.33, "fontWeight": "bold", "color": "#077890" },
       "encoding": {
         "y": {
           "field": "question", "type": "nominal",
@@ -72,14 +73,17 @@
     },
     {
       "data": { "values": [ {} ] },
-      "mark": { "type": "text", "align": "right", "dx": -6, "fontSize": 10, "color": "#525A60", "text": "← Disagree" },
+      "mark": { "type": "text", "align": "right", "dx": -6, "fontSize": 13.33, "color": "#525A60", "text": "← Disagree" },
       "encoding": { "x": { "datum": 0 }, "y": { "value": 224 } }
     },
     {
       "data": { "values": [ {} ] },
-      "mark": { "type": "text", "align": "left", "dx": 6, "fontSize": 10, "color": "#525A60", "text": "Agree →" },
+      "mark": { "type": "text", "align": "left", "dx": 6, "fontSize": 13.33, "color": "#525A60", "text": "Agree →" },
       "encoding": { "x": { "datum": 0 }, "y": { "value": 224 } }
     }
   ],
-  "usermeta": { "source": "Source: ILLUSTRATIVE / SYNTHETIC survey data — not real NCDPI survey results. Style-guide demo." }
+  "usermeta": {
+    "source": "Source: ILLUSTRATIVE / SYNTHETIC survey data — not real NCDPI survey results. Style-guide demo.",
+    "note": "padding.bottom 60 is REQUIRED: the loader's width:'container' switches autosize to fit-x, which does NOT expand the canvas for the orient:'none' legend below the axis (it silently clips — browser-only, invisible in CLI renders). legendX -248 left-aligns the legend with the y-label/title gutter (C2); a gridline-aligned legendX can't survive variable container width."
+  }
 }

@@ -3,7 +3,7 @@
   "description": "Bubble chart of North Carolina's 8 SBE regions plotting each region's mean percent economically disadvantaged against its mean 2025 SPG score, with bubble area showing the region's total enrollment. Higher-poverty regions tend toward lower scores (correlation about −0.8): North Central and Southwest sit lower-poverty/higher-score, Sandhills higher-poverty/lower-score. Enrollment varies widely, from about 68,000 to 374,000. This is a scatter plot with a third measure added through size — not a part-to-whole bubble chart.",
   "title": {
     "text": "Higher-poverty regions tend to score lower",
-    "subtitle": "Each bubble is one of NC's 8 SBE regions: mean % economically disadvantaged vs. mean SPG score, sized by total enrollment, 2025. Size adds a third measure to a scatter."
+    "subtitle": ["Each bubble is one of NC's 8 SBE regions: mean % economically disadvantaged vs. mean SPG score, sized", "by total enrollment, 2025. Size adds a third measure to a scatter."]
   },
   "data": {
     "url": "data/poverty_vs_score_2025.csv",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "mark": { "type": "text", "align": "left", "dx": 12, "fontSize": 10, "color": "#1A2128" },
+      "mark": { "type": "text", "align": "left", "dx": 12, "fontSize": 13.33, "color": "#1A2128" },
       "encoding": { "text": { "field": "region" } }
     }
   ],

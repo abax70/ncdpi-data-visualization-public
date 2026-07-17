@@ -3,7 +3,7 @@
   "description": "Lollipop chart of 2025 grade-level proficiency (GLP) for North Carolina's five state accountability subjects, sorted highest to lowest. Lighter-blue stems run from zero to a dark-navy dot at each value, so the dot reads clearly on top: Math 3 leads at 66 percent and Math 1 trails at 35 percent. The measure axis carries a faint base line; the category axis has none.",
   "title": {
     "text": "Math 3 leads the state's subjects; Math 1 trails by 32 points",
-    "subtitle": "Grade-level proficient (GLP), % of students tested, by subject, statewide, 2025. A lollipop is a lighter bar — the stem keeps the zero baseline."
+    "subtitle": ["Grade-level proficient (GLP), % of students tested, by subject, statewide, 2025. A lollipop is a lighter bar — the", "stem keeps the zero baseline."]
   },
   "transform": [
     { "filter": "datum.year == 2025" }
@@ -38,7 +38,7 @@
           "title": null,
           "axis": {
             "labelAlign": "left",
-            "labelPadding": 100,
+            "labelPadding": 134,
             "ticks": false,
             "domain": false,
             "grid": false
@@ -114,7 +114,7 @@
         "type": "text",
         "align": "left",
         "dx": 11,
-        "fontSize": 11,
+        "fontSize": 14.67,
         "color": "#000000"
       },
       "encoding": {

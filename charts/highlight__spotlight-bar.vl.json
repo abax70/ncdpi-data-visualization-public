@@ -3,7 +3,7 @@
   "description": "Horizontal highlight bar chart of grade-level proficiency for North Carolina's eight SBE regions in 2025, sorted highest to lowest. North Central is highlighted in navy at 58.6 percent; the other seven regions are neutral grey context bars. Sandhills trails at 48.6 percent.",
   "title": {
     "text": "North Central leads the state in grade-level proficiency",
-    "subtitle": "Grade-level proficient (GLP), % of students tested, by SBE region, 2025. Navy marks attention — not good or bad."
+    "subtitle": ["Grade-level proficient (GLP), % of students tested, by SBE region, 2025. Navy marks attention — not good or", "bad."]
   },
   "data": {
     "url": "data/region_snapshot_2025.csv",
@@ -32,7 +32,7 @@
           "title": null,
           "axis": {
             "labelAlign": "left",
-            "labelPadding": 88,
+            "labelPadding": 118,
             "ticks": false,
             "labelFontWeight": {
               "condition": {
@@ -99,7 +99,7 @@
         "type": "text",
         "align": "left",
         "dx": 5,
-        "fontSize": 11,
+        "fontSize": 14.67,
         "color": "#000000"
       },
       "encoding": {
@@ -140,7 +140,7 @@
         "type": "text",
         "align": "left",
         "dx": 5,
-        "fontSize": 11,
+        "fontSize": 14.67,
         "color": "#000000",
         "fontWeight": "bold"
       },

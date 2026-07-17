@@ -64,12 +64,12 @@
     },
     {
       "transform": [{ "filter": "datum.year === 2025 && datum.highlight === 'other'" }],
-      "mark": { "type": "text", "align": "left", "dx": 10, "fontSize": 11, "color": "#525A60" },
+      "mark": { "type": "text", "align": "left", "dx": 10, "fontSize": 14.67, "color": "#525A60" },
       "encoding": { "text": { "field": "subject" } }
     },
     {
       "transform": [{ "filter": "datum.year === 2025 && datum.highlight === 'focus'" }],
-      "mark": { "type": "text", "align": "left", "dx": 10, "fontSize": 11, "fontWeight": "bold", "color": "#003A70" },
+      "mark": { "type": "text", "align": "left", "dx": 10, "fontSize": 14.67, "fontWeight": "bold", "color": "#003A70" },
       "encoding": { "text": { "field": "subject" } }
     }
   ],

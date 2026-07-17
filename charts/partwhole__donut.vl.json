@@ -3,7 +3,7 @@
   "description": "Donut chart of North Carolina students by 2025 proficiency level, all subjects and grades, with the share below grade level — 45 percent — shown as a large figure in the hole. Slices are labeled directly: Level 1 or 2 is the largest at 45 percent, then Level 4 (24), Level 3 (20), and Level 5 (11). Level 1 or 2 is rust so the nearly-half below-grade-level share reads as one block; the three proficient levels are neutral grey, with white separators. A donut is a pie with the centre freed up for a headline metric.",
   "title": {
     "text": "Nearly half of NC students scored below grade level",
-    "subtitle": ["Share of NC students by 2025 achievement level, all subjects and grades. Below grade level = Level 1 or 2 (below GLP, Level 3+).", "A donut frees the centre for a headline number."]
+    "subtitle": ["Share of NC students by 2025 achievement level, all subjects and grades. Below grade level = Level 1 or 2", "(below GLP, Level 3+). A donut frees the centre for a headline number."]
   },
   "data": {
     "url": "data/state_proficiency_levels_2025.csv",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "mark": { "type": "text", "radius": 150, "fontSize": 12, "lineBreak": "\n", "lineHeight": 13, "align": "center", "baseline": "middle" },
+      "mark": { "type": "text", "radius": 150, "fontSize": 16, "lineBreak": "\n", "lineHeight": 13, "align": "center", "baseline": "middle" },
       "encoding": {
         "theta": { "field": "pct", "type": "quantitative", "stack": true },
         "order": { "field": "level", "sort": "ascending" },
@@ -42,7 +42,7 @@
       }
     },
     {
-      "mark": { "type": "text", "radius": 168, "fontSize": 12, "lineBreak": "\n", "lineHeight": 13, "align": "center", "baseline": "middle" },
+      "mark": { "type": "text", "radius": 168, "fontSize": 16, "lineBreak": "\n", "lineHeight": 13, "align": "center", "baseline": "middle" },
       "encoding": {
         "theta": { "field": "pct", "type": "quantitative", "stack": true },
         "order": { "field": "level", "sort": "ascending" },
@@ -61,7 +61,7 @@
     },
     {
       "data": { "values": [ {} ] },
-      "mark": { "type": "text", "fontSize": 12, "color": "#525A60", "dy": 22, "text": "below grade level" }
+      "mark": { "type": "text", "fontSize": 16, "color": "#525A60", "dy": 22, "text": "below grade level" }
     }
   ],
   "usermeta": { "source": "Source: NCDPI accountability test scores (achievement levels, all subjects and grades, all students), 2025. Style-guide demo." }

@@ -4,7 +4,7 @@
   "usermeta": {"decorative": true},
   "hconcat": [
     {
-      "title": {"text": "Highlight", "fontSize": 13, "fontWeight": 600, "color": "#1A2128", "anchor": "start", "offset": 6},
+      "title": {"text": "Highlight", "fontSize": 17.33, "fontWeight": 600, "color": "#1A2128", "anchor": "start", "offset": 6},
       "width": 104,
       "height": 84,
       "data": {"values": [
@@ -21,7 +21,7 @@
       }
     },
     {
-      "title": {"text": "Categorical", "fontSize": 13, "fontWeight": 600, "color": "#1A2128", "anchor": "start", "offset": 6},
+      "title": {"text": "Categorical", "fontSize": 17.33, "fontWeight": 600, "color": "#1A2128", "anchor": "start", "offset": 6},
       "width": 104,
       "height": 84,
       "data": {"values": [
@@ -38,7 +38,7 @@
       }
     },
     {
-      "title": {"text": "Sequence", "fontSize": 13, "fontWeight": 600, "color": "#1A2128", "anchor": "start", "offset": 6},
+      "title": {"text": "Sequence", "fontSize": 17.33, "fontWeight": 600, "color": "#1A2128", "anchor": "start", "offset": 6},
       "width": 104,
       "height": 84,
       "data": {"values": [
@@ -55,7 +55,7 @@
       }
     },
     {
-      "title": {"text": "Good", "fontSize": 13, "fontWeight": 600, "color": "#1A2128", "anchor": "start", "offset": 6},
+      "title": {"text": "Good", "fontSize": 17.33, "fontWeight": 600, "color": "#1A2128", "anchor": "start", "offset": 6},
       "width": 104,
       "height": 84,
       "data": {"values": [
@@ -72,7 +72,7 @@
       }
     },
     {
-      "title": {"text": "Bad", "fontSize": 13, "fontWeight": 600, "color": "#1A2128", "anchor": "start", "offset": 6},
+      "title": {"text": "Bad", "fontSize": 17.33, "fontWeight": 600, "color": "#1A2128", "anchor": "start", "offset": 6},
       "width": 104,
       "height": 84,
       "data": {"values": [

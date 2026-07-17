@@ -3,7 +3,7 @@
   "description": "Violin plot of the 2025 SPG score distribution for each of four locales (City, Suburb, Town, Rural), one density curve per row on a shared 20–100 score axis; curve width shows relative frequency, not a count. City is highlighted in navy as the widest-spread locale; the others are neutral grey.",
   "title": {
     "text": "City schools post the widest spread of SPG scores",
-    "subtitle": "Distribution of School Performance Grade scores by locale, all NC schools, 2025. Curve width is relative frequency, not a count."
+    "subtitle": ["Distribution of School Performance Grade scores by locale, all NC schools, 2025.", "Curve width is relative frequency, not a count."]
   },
   "data": {
     "url": "data/school_scores_2025.csv",
@@ -27,7 +27,7 @@
       {
         "comment": "Locale label as a left-gutter text layer. VL 5.21 ignores labelAlign on left-oriented row-facet HEADERS (they right-align), so — as on the sparklines spec — the header is dropped and a fixed-pixel text mark at x:0 puts every locale name on the same left edge as the title. The x-domain opens to 8 so the violin sits to the right of the label in its own clear zone. Aggregate-to-one-row avoids overplotting the label across every density sample.",
         "transform": [ { "aggregate": [ { "op": "count", "as": "n" } ], "groupby": ["locale"] } ],
-        "mark": { "type": "text", "align": "left", "baseline": "middle", "fontSize": 11, "color": "#525A60" },
+        "mark": { "type": "text", "align": "left", "baseline": "middle", "fontSize": 14.67, "color": "#525A60" },
         "encoding": {
           "x": { "value": 0 },
           "y": { "value": 28 },

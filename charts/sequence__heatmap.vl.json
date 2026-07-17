@@ -3,7 +3,7 @@
   "description": "Heatmap of the change in grade-level proficiency (all subjects and grades) relative to each SBE region's own 2019 pre-COVID level, by region (rows) and year (columns), 2018 to 2025, on a diverging scale anchored at the 2019 baseline: rust means below 2019 (down to about −17 points in 2021), pale teal means at or just above it (no region exceeded 2019 by more than about 1 point). The 2019 column is grey by construction (the baseline). The 2020 column is absent because state testing was waived during COVID; every region's 2021 cell is deep rust, fading toward the grey baseline by 2025 to show partial, incomplete recovery.",
   "title": {
     "text": "Proficiency dipped everywhere after COVID — recovery is partial",
-    "subtitle": ["Change in grade-level proficiency (GLP, all subjects and grades) vs. each region's 2019 baseline, in", "percentage points, 2018–2025. Rust = below 2019; the grey 2019 column is the baseline. No 2020 — testing waived."]
+    "subtitle": ["Change in grade-level proficiency (GLP, all subjects and grades) vs. each region's 2019 baseline, in", "percentage points, 2018–2025. Rust = below 2019; the grey 2019 column is the baseline. No 2020 — testing", "waived."]
   },
   "data": {
     "url": "data/region_proficiency_trend.csv",
@@ -21,7 +21,7 @@
     "x": { "field": "year", "type": "ordinal", "title": null, "axis": { "labelAngle": 0, "ticks": false, "grid": false } },
     "y": {
       "field": "region", "type": "nominal", "title": null,
-      "axis": { "labelAlign": "left", "labelPadding": 88, "ticks": false, "grid": false }
+      "axis": { "labelAlign": "left", "labelPadding": 118, "ticks": false, "grid": false }
     },
     "color": {
       "field": "dev_2019", "type": "quantitative", "title": "vs. 2019 (pts)",

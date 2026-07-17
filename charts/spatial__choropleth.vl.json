@@ -3,7 +3,7 @@
   "description": "Choropleth map of all 115 North Carolina school districts shaded by 2025 grade-level proficiency, from light grey (lower) to teal (higher), with white district boundaries. District grade-level proficiency ranges from about 31 to 71 percent. A horizontal legend below the map labels the color-to-percent scale with ticks from 30 at the low end up to 70.",
   "title": {
     "text": "Grade-level proficiency by school district, 2025",
-    "subtitle": "Choropleths shade each district by a rate. Color reads imprecisely, so they work well paired with a sorted horizontal bar chart for looking up individual districts."
+    "subtitle": ["Choropleths shade each district by a rate. Color reads imprecisely, so they work", "well paired with a sorted horizontal bar chart for looking up individual districts."]
   },
   "data": {
     "url": "data/nc-school-districts.topojson",

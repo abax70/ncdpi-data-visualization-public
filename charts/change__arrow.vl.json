@@ -3,7 +3,7 @@
   "description": "Arrow chart of the change in grade-level proficiency (GLP) for five North Carolina state subject composites from 2021 to 2025, one arrow per subject, sorted from greatest gain at top. Each arrow runs from the 2021 value to the 2025 arrowhead, colored in three steps: teal for a gain over 1 point, grey for little change, rust for a decline over 1 point. Every subject gained — Math 3 most (+22 points, 45 to 66) and Math grades 3-8 +17, down to English II (+1, essentially flat). Biology and Science are excluded because their assessments changed within this window, making the trend non-comparable.",
   "title": {
     "text": "Every tested subject gained since 2021 — Math drove the recovery",
-    "subtitle": ["Change in grade-level proficiency (GLP, %) by state subject, 2021–2025. Arrow length = the size of the change;", "color = direction (teal = gain over 1 pt, grey = little change, rust = decline). Axis runs to the 100% goal."]
+    "subtitle": ["Change in grade-level proficiency (GLP, %) by state subject, 2021–2025. Arrow length = the size of the", "change; color = direction (teal = gain over 1 pt, grey = little change, rust = decline). Axis runs to the 100% goal."]
   },
   "data": {
     "url": "data/state_proficiency_by_subject_trend.csv",
@@ -20,7 +20,7 @@
       "field": "subject", "type": "nominal",
       "sort": { "field": "delta", "order": "descending" },
       "title": null,
-      "axis": { "labelAlign": "left", "labelPadding": 104, "ticks": false, "grid": false }
+      "axis": { "labelAlign": "left", "labelPadding": 139, "ticks": false, "grid": false }
     },
     "x": {
       "type": "quantitative", "title": null,
@@ -79,7 +79,7 @@
     },
     {
       "transform": [ { "filter": "datum.delta >= 0" } ],
-      "mark": { "type": "text", "align": "left", "dx": 13, "fontSize": 10, "fontWeight": "bold", "color": "#000000" },
+      "mark": { "type": "text", "align": "left", "dx": 13, "fontSize": 13.33, "fontWeight": "bold", "color": "#000000" },
       "encoding": {
         "x": { "field": "2025", "type": "quantitative" },
         "text": { "field": "2025", "type": "quantitative", "format": ".0f" }
@@ -87,14 +87,14 @@
     },
     {
       "transform": [ { "filter": "datum.delta < 0" } ],
-      "mark": { "type": "text", "align": "right", "dx": -13, "fontSize": 10, "fontWeight": "bold", "color": "#000000" },
+      "mark": { "type": "text", "align": "right", "dx": -13, "fontSize": 13.33, "fontWeight": "bold", "color": "#000000" },
       "encoding": {
         "x": { "field": "2025", "type": "quantitative" },
         "text": { "field": "2025", "type": "quantitative", "format": ".0f" }
       }
     },
     {
-      "mark": { "type": "text", "align": "right", "dx": -10, "fontSize": 9, "color": "#525A60" },
+      "mark": { "type": "text", "align": "right", "dx": -10, "fontSize": 12, "color": "#525A60" },
       "encoding": {
         "x": { "field": "2021", "type": "quantitative" },
         "text": { "field": "2021", "type": "quantitative", "format": ".0f" }

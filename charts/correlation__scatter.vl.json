@@ -47,7 +47,7 @@
     },
     {
       "data": { "values": [ {} ] },
-      "mark": { "type": "text", "align": "right", "fontSize": 11, "fontWeight": "bold", "color": "#842175", "text": "r = −0.65" },
+      "mark": { "type": "text", "align": "right", "fontSize": 14.67, "fontWeight": "bold", "color": "#842175", "text": "r = −0.65" },
       "encoding": {
         "x": { "datum": 99 },
         "y": { "datum": 97 }

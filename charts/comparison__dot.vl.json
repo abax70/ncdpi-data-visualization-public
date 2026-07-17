@@ -16,7 +16,7 @@
           "field": "subject", "type": "nominal",
           "sort": { "field": "proficiency_glp", "op": "max", "order": "descending" },
           "title": null,
-          "axis": { "labelAlign": "left", "labelPadding": 100, "ticks": false, "grid": true, "gridColor": "#DEDEDE", "gridWidth": 1, "domain": false }
+          "axis": { "labelAlign": "left", "labelPadding": 134, "ticks": false, "grid": true, "gridColor": "#DEDEDE", "gridWidth": 1, "domain": false }
         },
         "x": {
           "field": "proficiency_glp", "type": "quantitative", "title": null,
@@ -30,7 +30,7 @@
       }
     },
     {
-      "mark": { "type": "text", "align": "left", "dx": 10, "fontSize": 10, "color": "#525A60" },
+      "mark": { "type": "text", "align": "left", "dx": 10, "fontSize": 13.33, "color": "#525A60" },
       "encoding": {
         "y": {
           "field": "subject", "type": "nominal",

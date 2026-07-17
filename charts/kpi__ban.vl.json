@@ -21,7 +21,7 @@
       ],
       "layer": [
         {
-          "mark": { "type": "text", "align": "left", "baseline": "middle", "fontSize": 12, "color": "#525A60" },
+          "mark": { "type": "text", "align": "left", "baseline": "middle", "fontSize": 16, "color": "#525A60" },
           "encoding": { "x": { "value": 0 }, "y": { "value": 12 }, "text": { "field": "label", "type": "nominal" } }
         },
         {
@@ -29,7 +29,7 @@
           "encoding": { "x": { "value": 0 }, "y": { "value": 50 }, "text": { "field": "big", "type": "nominal" } }
         },
         {
-          "mark": { "type": "text", "align": "left", "baseline": "middle", "fontSize": 13, "fontWeight": "bold" },
+          "mark": { "type": "text", "align": "left", "baseline": "middle", "fontSize": 17.33, "fontWeight": "bold" },
           "encoding": {
             "x": { "value": 2 },
             "y": { "value": 82 },
@@ -61,7 +61,7 @@
         },
         {
           "transform": [{ "filter": "datum.year === datum.miny" }],
-          "mark": { "type": "text", "align": "left", "baseline": "top", "dy": 4, "fontSize": 9, "color": "#9AA0A6" },
+          "mark": { "type": "text", "align": "left", "baseline": "top", "dy": 4, "fontSize": 12, "color": "#9AA0A6" },
           "encoding": {
             "x": { "field": "year", "type": "quantitative" },
             "y": { "value": 44 },
@@ -70,7 +70,7 @@
         },
         {
           "transform": [{ "filter": "datum.year === datum.maxy" }],
-          "mark": { "type": "text", "align": "right", "baseline": "top", "dy": 4, "fontSize": 9, "color": "#9AA0A6" },
+          "mark": { "type": "text", "align": "right", "baseline": "top", "dy": 4, "fontSize": 12, "color": "#9AA0A6" },
           "encoding": {
             "x": { "field": "year", "type": "quantitative" },
             "y": { "value": 44 },

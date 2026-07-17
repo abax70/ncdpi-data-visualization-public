@@ -3,7 +3,7 @@
   "description": "Bullet chart of each SBE region's 2025 4-year graduation rate (colored bar) against a region-specific growth target (dark tick) on a grey 0 to 100 range, sorted highest to lowest rate. The target is each region's 2024 rate plus the statewide +0.8-point gain — a 'keep pace with the state' benchmark. Six regions met it and are teal; Piedmont Triad and North Central fell just short and are rust. Western is highest at 91.6 percent.",
   "title": {
     "text": "Six of eight regions kept pace with the state's graduation gains",
-    "subtitle": ["4-year cohort graduation rate (%) by SBE region, 2025, vs. each region's growth target (2024 rate + the statewide +0.8 gain).", "Teal = met the target; rust = fell short. Dark tick = target."]
+    "subtitle": ["4-year cohort graduation rate (%) by SBE region, 2025, vs. each region's growth target (2024 rate + the", "statewide +0.8 gain). Teal = met the target; rust = fell short. Dark tick = target."]
   },
   "data": { "url": "data/region_grad_target_2025.csv", "format": { "type": "csv", "parse": { "grad_rate": "number", "prior_year": "number", "target": "number", "met": "number" } } },
   "transform": [
@@ -13,7 +13,7 @@
   "encoding": {
     "y": { "field": "region", "type": "nominal", "title": null,
       "sort": { "field": "grad_rate", "op": "max", "order": "descending" },
-      "axis": { "labelAlign": "left", "labelPadding": 124, "ticks": false, "grid": false } }
+      "axis": { "labelAlign": "left", "labelPadding": 166, "ticks": false, "grid": false } }
   },
   "layer": [
     {
@@ -39,7 +39,7 @@
       }
     },
     {
-      "mark": { "type": "text", "align": "right", "dx": -8, "fontSize": 11, "color": "#000000" },
+      "mark": { "type": "text", "align": "right", "dx": -8, "fontSize": 14.67, "color": "#000000" },
       "encoding": {
         "x": { "datum": 0 },
         "text": { "field": "grad_rate", "type": "quantitative", "format": ".1f" }

@@ -43,7 +43,7 @@
     },
     {
       "transform": [ { "filter": "datum.year === 2025" } ],
-      "mark": { "type": "text", "align": "left", "dx": 6, "fontSize": 10, "fontWeight": "bold", "color": "#1A2128" },
+      "mark": { "type": "text", "align": "left", "dx": 6, "fontSize": 13.33, "fontWeight": "bold", "color": "#1A2128" },
       "encoding": {
         "y": { "field": "ymid", "type": "quantitative", "scale": { "domain": [0, 100] } },
         "text": { "field": "lab" }

@@ -3,7 +3,7 @@
   "description": "Small-multiples grid of eight line charts, one per SBE region, tracking 4-year cohort graduation rate from 2019 to 2025 on a shared 80–95 percent scale. Every region's line is continuous through COVID — graduation is completion-based — and rates hold steady or rise across the period.",
   "title": {
     "text": "Graduation rates held steady across every region through COVID",
-    "subtitle": "Cohort graduation rate (4-year, %), by SBE region, 2019–2025 — shared axis 80–95%. Eight regions: too many for one colorful line chart."
+    "subtitle": ["Cohort graduation rate (4-year, %), by SBE region, 2019–2025 — shared axis 80–95%.", "Eight regions: too many for one colorful line chart."]
   },
   "data": {
     "url": "data/region_cgr_trend.csv",
@@ -43,7 +43,7 @@
       },
       {
         "transform": [ { "filter": "datum.year === 2019 || datum.year === 2025" } ],
-        "mark": { "type": "text", "dy": -9, "fontSize": 9, "color": "#525A60" },
+        "mark": { "type": "text", "dy": -9, "fontSize": 12, "color": "#525A60" },
         "encoding": {
           "x": { "field": "year", "type": "quantitative" },
           "y": { "field": "grad_rate", "type": "quantitative", "scale": { "domain": [80, 95] } },

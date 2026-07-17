@@ -3,7 +3,7 @@
   "description": "Diverging bar chart of each SBE region's deviation from the state grade-level proficiency rate of 55.0 percent in 2025, sorted largest positive to largest negative. North Central sits 3.6 points above the state rate; Sandhills sits 6.4 points below. Bars are colored on a diverging rust-to-teal ramp by magnitude of deviation — the further below the state rate, the darker the rust; the further above, the darker the teal — with a dark zero baseline.",
   "title": {
     "text": "Three regions beat the state proficiency rate; four trail it",
-    "subtitle": "Percentage-point deviation from the state GLP rate (55.0%), by SBE region, 2025. Graph the delta — plot the difference itself."
+    "subtitle": ["Percentage-point deviation from the state GLP rate (55.0%), by SBE region, 2025. Graph the delta — plot the", "difference itself."]
   },
   "data": {
     "url": "data/region_snapshot_2025.csv",
@@ -23,7 +23,7 @@
           "field": "region", "type": "nominal",
           "sort": { "field": "dev", "op": "max", "order": "descending" },
           "title": null,
-          "axis": { "labelAlign": "left", "labelPadding": 88, "ticks": false, "grid": false }
+          "axis": { "labelAlign": "left", "labelPadding": 118, "ticks": false, "grid": false }
         },
         "x": {
           "field": "dev", "type": "quantitative", "title": null,
@@ -43,7 +43,7 @@
     },
     {
       "transform": [ { "filter": "datum.dev >= 0" } ],
-      "mark": { "type": "text", "align": "left", "dx": 5, "fontSize": 10, "color": "#000000" },
+      "mark": { "type": "text", "align": "left", "dx": 5, "fontSize": 13.33, "color": "#000000" },
       "encoding": {
         "y": {
           "field": "region", "type": "nominal",
@@ -56,7 +56,7 @@
     },
     {
       "transform": [ { "filter": "datum.dev < 0" } ],
-      "mark": { "type": "text", "align": "right", "dx": -5, "fontSize": 10, "color": "#000000" },
+      "mark": { "type": "text", "align": "right", "dx": -5, "fontSize": 13.33, "color": "#000000" },
       "encoding": {
         "y": {
           "field": "region", "type": "nominal",

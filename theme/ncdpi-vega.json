@@ -3,11 +3,11 @@
   "font": "Arial, Helvetica, sans-serif",
   "title": {
     "font": "Arial, Helvetica, sans-serif",
-    "fontSize": 14,
+    "fontSize": 18.67,
     "fontWeight": "bold",
     "color": "#000000",
     "subtitleColor": "#525A60",
-    "subtitleFontSize": 11,
+    "subtitleFontSize": 14.67,
     "anchor": "start",
     "offset": 12,
     "frame": "bounds"
@@ -17,8 +17,8 @@
     "titleFont": "Arial, Helvetica, sans-serif",
     "labelColor": "#525A60",
     "titleColor": "#000000",
-    "labelFontSize": 11,
-    "titleFontSize": 11,
+    "labelFontSize": 14.67,
+    "titleFontSize": 14.67,
     "titleFontWeight": "normal",
     "gridColor": "#DEDEDE",
     "domainColor": "#525A60",
@@ -41,8 +41,9 @@
     "titleFont": "Arial, Helvetica, sans-serif",
     "labelColor": "#525A60",
     "titleColor": "#000000",
-    "labelFontSize": 11,
-    "titleFontSize": 11
+    "labelFontSize": 14.67,
+    "titleFontSize": 14.67,
+    "labelLimit": 220
   },
   "view": {
     "stroke": null,

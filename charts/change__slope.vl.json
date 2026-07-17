@@ -3,7 +3,7 @@
   "description": "Slope chart connecting each subject's grade-level-proficiency rate in 2021 to its rate in 2025 for North Carolina, all students. Five subjects; Math 3 is highlighted in navy — it rose furthest, from 45 to 66 percent — while the other four are shown in neutral grey, all recovering post-COVID. To keep the crowded ends legible, the 2025 end labels both subject and value while the 2021 end labels only the value, so the reader traces each line back. Biology and Science are excluded because their assessments changed within this window.",
   "title": {
     "text": "Math 3 rebounded furthest since 2021 — up 22 points",
-    "subtitle": "Grade-level proficiency (GLP, %), NC, all students, 2021 vs. 2025. Subject + value labeled at 2025; value only at 2021."
+    "subtitle": ["Grade-level proficiency (GLP, %), NC, all students, 2021 vs. 2025. Subject + value labeled at 2025; value only", "at 2021."]
   },
   "data": {
     "url": "data/state_proficiency_by_subject_trend.csv",
@@ -40,7 +40,7 @@
         { "calculate": "datum.subject === 'English II' ? datum.proficiency_glp + 0.8 : datum.proficiency_glp", "as": "label_y" },
         { "calculate": "datum.subject + '  ' + format(datum.proficiency_glp, '.0f')", "as": "end_label" }
       ],
-      "mark": { "type": "text", "align": "left", "dx": 9, "fontSize": 11 },
+      "mark": { "type": "text", "align": "left", "dx": 9, "fontSize": 14.67 },
       "encoding": {
         "y": { "field": "label_y", "type": "quantitative", "scale": { "domain": [22, 70] } },
         "text": { "field": "end_label" },
@@ -53,7 +53,7 @@
         { "calculate": "datum.subject === 'Math 3' ? datum.proficiency_glp - 1.4 : datum.proficiency_glp", "as": "label_y" },
         { "calculate": "format(datum.proficiency_glp, '.0f')", "as": "start_label" }
       ],
-      "mark": { "type": "text", "align": "right", "dx": -9, "fontSize": 11 },
+      "mark": { "type": "text", "align": "right", "dx": -9, "fontSize": 14.67 },
       "encoding": {
         "y": { "field": "label_y", "type": "quantitative", "scale": { "domain": [22, 70] } },
         "text": { "field": "start_label" },

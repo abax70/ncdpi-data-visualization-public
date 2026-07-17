@@ -3,7 +3,7 @@
   "description": "Dot map (point/symbol map) of North Carolina plotting each regular school at its location, colored by 2025 School Performance Grade from teal (A) through neutral grey (C) to rust (F), over faint grey school-district boundary lines. It maps where schools are and how they did — it does not encode density (counts per area). Dots avoid the large-area bias of a shaded county map; A and F dots draw last so the extremes stay visible.",
   "title": {
     "text": "Where North Carolina's regular schools are, by 2025 performance grade",
-    "subtitle": "A dot (point) map: each dot is a regular school at its location, colored by School Performance Grade, 2025. Sparser areas have fewer schools, not missing data."
+    "subtitle": ["A dot (point) map: each dot is a regular school at its location, colored by School", "Performance Grade, 2025. Sparser areas have fewer schools, not missing data."]
   },
   "width": 720,
   "height": 320,

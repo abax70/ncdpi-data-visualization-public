@@ -59,21 +59,21 @@
       }
     },
     {
-      "mark": { "type": "text", "align": "center", "baseline": "top", "dy": 9, "fontSize": 10, "fontWeight": "bold", "color": "#003A70" },
+      "mark": { "type": "text", "align": "center", "baseline": "top", "dy": 9, "fontSize": 13.33, "fontWeight": "bold", "color": "#003A70" },
       "encoding": { "y": { "field": "eds_glp" }, "text": { "field": "eds_glp", "type": "quantitative", "format": ".0f" } }
     },
     {
-      "mark": { "type": "text", "align": "center", "baseline": "bottom", "dy": -9, "fontSize": 10, "color": "#525A60" },
+      "mark": { "type": "text", "align": "center", "baseline": "bottom", "dy": -9, "fontSize": 13.33, "color": "#525A60" },
       "encoding": { "y": { "field": "not_eds_glp" }, "text": { "field": "not_eds_glp", "type": "quantitative", "format": ".0f" } }
     },
     {
       "transform": [ { "filter": "datum.year === '2025'" } ],
-      "mark": { "type": "text", "align": "left", "dx": 11, "fontSize": 10, "fontWeight": "bold", "color": "#003A70" },
+      "mark": { "type": "text", "align": "left", "dx": 11, "fontSize": 13.33, "fontWeight": "bold", "color": "#003A70" },
       "encoding": { "y": { "field": "eds_glp" }, "text": { "value": "EDS" } }
     },
     {
       "transform": [ { "filter": "datum.year === '2025'" } ],
-      "mark": { "type": "text", "align": "left", "dx": 11, "fontSize": 10, "fontWeight": "bold", "color": "#525A60" },
+      "mark": { "type": "text", "align": "left", "dx": 11, "fontSize": 13.33, "fontWeight": "bold", "color": "#525A60" },
       "encoding": { "y": { "field": "not_eds_glp" }, "text": { "value": "Not EDS" } }
     }
   ],

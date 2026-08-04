@@ -22,7 +22,7 @@
         { "filter": "isValid(datum.g_lat) && isValid(datum.g_lon) && isValid(datum.spg_grade) && datum.spg_grade !== ''" },
         { "calculate": "indexof(['C','B','D','A','F'], datum.spg_grade)", "as": "draw_order" }
       ],
-      "mark": { "type": "circle", "size": 22, "opacity": 0.85, "stroke": "white", "strokeWidth": 0.2 },
+      "mark": { "type": "circle", "size": 22, "opacity": 0.85, "stroke": "#525A60", "strokeWidth": 0.35 },
       "encoding": {
         "longitude": { "field": "g_lon", "type": "quantitative" },
         "latitude": { "field": "g_lat", "type": "quantitative" },

@@ -147,6 +147,86 @@
     ]
   },
   {
+    "objectID": "design-system/index.html",
+    "href": "design-system/index.html",
+    "title": "Design system — tokens",
+    "section": "",
+    "text": "Skip to main content\nThe NCDPI Design System is one reusable set of design decisions — color, type, spacing, radius, elevation — so every NCDPI build (Quarto sites, HTML documents, dashboards, web apps) starts consistent, on-brand, and WCAG-compliant. This page documents the token layer, the system’s foundation. Everything below is rendered live from the generated token artifacts, so this page can never drift from the tokens themselves.",
+    "crumbs": [
+      "Design system — tokens"
+    ]
+  },
+  {
+    "objectID": "design-system/index.html#how-to-use-the-tokens",
+    "href": "design-system/index.html#how-to-use-the-tokens",
+    "title": "Design system — tokens",
+    "section": "How to use the tokens",
+    "text": "How to use the tokens\nCopy two things into your project — no npm, no build step:\n\ntheme/tokens.css — every token as a CSS custom property (--ncdpi-*), plus the @font-face for Source Sans Pro.\ntheme/fonts/ — the two self-hosted Source Sans variable-font files (SIL Open Font License; no third-party requests, works on intranet).\n\nThen reference semantic tokens in your styles:\n.my-panel {\n  background: var(--ncdpi-surface-raised);\n  color: var(--ncdpi-on-surface-raised);\n  border-radius: var(--ncdpi-radius-lg);\n  box-shadow: var(--ncdpi-shadow-raised);\n  padding: var(--ncdpi-space-md);\n}\nUse the semantic tier, not the primitives. Semantic names are mode-neutral (surface, not white) so a future dark mode is a value map, not a rebuild — and every semantic pairing below is contrast-validated on every build (see the contrast grid).",
+    "crumbs": [
+      "Design system — tokens"
+    ]
+  },
+  {
+    "objectID": "design-system/index.html#color",
+    "href": "design-system/index.html#color",
+    "title": "Design system — tokens",
+    "section": "Color",
+    "text": "Color\n\nBrand primitives — First in Flight\nThe official NCDPI web palette, from the NCDPI Web Style Guide. Primitives are the raw material; components should reach for the semantic tokens below instead.\n\n\n\nThe warm-gray ramp\nNeutrals are built on fixed lightness grades (the USWDS “magic number” system, warmed per our vibe): white is grade 0, and each grade is pinned to a luminance band, so contrast is arithmetic — any two grades ≥50 apart pass 4.5:1 (normal-text AA), ≥40 apart pass 3:1, ≥70 apart pass 7:1 (AAA). The build script re-proves every one of those claims on every run.\n\n\n\nSemantic tokens — fills and their on- partners\nEvery fill token ships with an on-* partner: the guaranteed-readable text color on that fill. If you put text on a fill, use its partner — that pairing is machine-validated before it can ship.\n\n\n\nSemantic tokens — text, links, borders, focus\nShown on the surface token (the warm off-white page background). One deliberate scoping rule: links sit on surface or surface-raised only — the brand link blue falls just short of 4.5:1 on the sunken well color, so that pairing is not claimed and not allowed.",
+    "crumbs": [
+      "Design system — tokens"
+    ]
+  },
+  {
+    "objectID": "design-system/index.html#typography",
+    "href": "design-system/index.html#typography",
+    "title": "Design system — tokens",
+    "section": "Typography",
+    "text": "Typography\nUI text is Source Sans Pro (self-hosted variable font, weights 400/600/ 700), on the trimmed scale from the NCDPI Web Style Guide: headings at weight 700 and 1.2 line-height, body at 18px with the guide’s roomy 30px leading. This specimen renders in the real font.",
+    "crumbs": [
+      "Design system — tokens"
+    ]
+  },
+  {
+    "objectID": "design-system/index.html#space",
+    "href": "design-system/index.html#space",
+    "title": "Design system — tokens",
+    "section": "Space",
+    "text": "Space\nA base-8 scale with one half-step. Default roomy: when in doubt, take the next size up.",
+    "crumbs": [
+      "Design system — tokens"
+    ]
+  },
+  {
+    "objectID": "design-system/index.html#radius",
+    "href": "design-system/index.html#radius",
+    "title": "Design system — tokens",
+    "section": "Radius",
+    "text": "Radius\nSubtle rounding — soft corners, never pill-heavy.",
+    "crumbs": [
+      "Design system — tokens"
+    ]
+  },
+  {
+    "objectID": "design-system/index.html#elevation",
+    "href": "design-system/index.html#elevation",
+    "title": "Design system — tokens",
+    "section": "Elevation",
+    "text": "Elevation\nTwo soft shadows, tinted with the brand navy rather than pure black.",
+    "crumbs": [
+      "Design system — tokens"
+    ]
+  },
+  {
+    "objectID": "design-system/index.html#where-the-tokens-live",
+    "href": "design-system/index.html#where-the-tokens-live",
+    "title": "Design system — tokens",
+    "section": "Where the tokens live",
+    "text": "Where the tokens live\nThe source of truth is design-system/tokens.json (W3C Design Tokens format) in the private repo. tools/build_design_tokens.py compiles it to CSS, SCSS, and the JSON this page renders from — and fails the build if any contrast claim regresses. Chart colors are deliberately not in the token file: they stay in the existing chart-theme pipeline, and tokens.css mirrors them read-only as --ncdpi-chart-* variables.",
+    "crumbs": [
+      "Design system — tokens"
+    ]
+  },
+  {
     "objectID": "chart-types/part-to-whole.html",
     "href": "chart-types/part-to-whole.html",
     "title": "Parts of a whole",
@@ -344,7 +424,7 @@
     "href": "chart-parts/table-elements.html#make-tables-do-more",
     "title": "Table elements",
     "section": "Make tables do more",
-    "text": "Make tables do more\n\nSort by the column that matters, not alphabetically by default.\nAdd an embedded sparkline column to show a trend per row without a separate chart.\nLightly shade or mark the values that carry the message — don’t make readers hunt.\n\nA few small in-cell techniques — one row each. They borrow the chart palette so the table still reads as NCDPI:\n\nIn-cell techniques (illustrative)\n\n\n\n\n\n\n\nTechnique\nExample\nReach for it when…\n\n\n\n\nSparkline\n\n\n\neach row has a short trend (say, attendance 2019–2024) and a full line chart would be overkill. Color the line navy #003A70; dot the last point.\n\n\nIn-cell data bar\n86  \n\n\n\nreaders compare magnitudes down a column at a glance — the bar length does work the bare number can't. Keep the value visible alongside it.\n\n\nHeat cell\n12 47 93\nspotting highs and lows across a grid. Shade with Sequence to Neutral (light grey → #5085BC), dark = higher. Mind contrast if you also print the value: dark ink on the darkest steps fails WCAG AA for small text (~4.2:1), and white text is worse — so keep the in-cell number only where the shade is light, or show the value outside the cell.\n\n\n\n\nOne enrichment per table, not all three at once. These are accents on a look-up grid — if every column has a bar or a heat tint, you’ve built a cluttered chart, not a table.",
+    "text": "Make tables do more\n\nSort by the column that matters, not alphabetically by default.\nAdd an embedded sparkline column to show a trend per row without a separate chart.\nLightly shade or mark the values that carry the message — don’t make readers hunt.\n\nA few small in-cell techniques — one row each. They borrow the chart palette so the table still reads as NCDPI:\n\nIn-cell techniques (illustrative)\n\n\n\n\n\n\n\nTechnique\nExample\nReach for it when…\n\n\n\n\nSparkline\n\n\n\neach row has a short trend (say, attendance 2019–2024) and a full line chart would be overkill. Color the line navy #003A70; dot the last point.\n\n\nIn-cell data bar\n86  \n\n\n\nreaders compare magnitudes down a column at a glance — the bar length does work the bare number can't. Keep the value visible alongside it.\n\n\nHeat cell\n12 47    93\nspotting highs and lows across a grid. Shade with Sequence to Neutral (light grey → #5085BC), dark = higher. Mind contrast if you also print the value: dark ink on the darkest steps fails WCAG AA for small text (~4.2:1), and white text is worse — so keep the in-cell number only where the shade is light, or show the value outside the cell. The third cell above does exactly that — the shade stays on the scale, the number moves out beside it.\n\n\n\n\nOne enrichment per table, not all three at once. These are accents on a look-up grid — if every column has a bar or a heat tint, you’ve built a cluttered chart, not a table.",
     "crumbs": [
       "Table elements"
     ]
@@ -879,6 +959,26 @@
     "crumbs": [
       "Chart types",
       "Maps"
+    ]
+  },
+  {
+    "objectID": "design-system/contrast.html",
+    "href": "design-system/contrast.html",
+    "title": "Design system — contrast grid",
+    "section": "",
+    "text": "Skip to main content\nEvery combination the design system tells you to use is listed here with its computed WCAG 2.1 contrast ratio. This grid is not documentation that hopes to stay true — it is generated by the same build script that compiles the tokens, and the build fails if any pairing drops below its threshold. A bad token edit cannot ship.\nTwo thresholds apply (WCAG 2.1 AA, the legal floor under ADA Title II):\nPairings deliberately absent from this grid are not approved — the known case: the link color on the surface-sunken well falls just short of 4.5:1, so links belong on surface or surface-raised only.",
+    "crumbs": [
+      "Design system — contrast grid"
+    ]
+  },
+  {
+    "objectID": "design-system/contrast.html#why-the-neutrals-can-promise-contrast",
+    "href": "design-system/contrast.html#why-the-neutrals-can-promise-contrast",
+    "title": "Design system — contrast grid",
+    "section": "Why the neutrals can promise contrast",
+    "text": "Why the neutrals can promise contrast\nThe warm-gray ramp is built on the USWDS lightness-grade system: each grade is pinned to a relative-luminance band, with white as grade 0. That makes contrast arithmetic: grades ≥50 apart pass 4.5:1 by construction, ≥40 apart pass 3:1, and ≥70 apart pass 7:1. The build script re-verifies every grade pairing on every run, alongside the semantic claims above.\nFor charts, contrast follows the accessibility page’s WCAG reading — chart palettes have their own rules (and their own pipeline) and are documented across the color pages of this guide.",
+    "crumbs": [
+      "Design system — contrast grid"
     ]
   },
   {

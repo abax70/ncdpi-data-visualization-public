@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Lines &amp; change over time – NCDPI Data Visualization Style Guide</title>
+<title>Design system — contrast grid – NCDPI Data Visualization Style Guide</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -33,8 +33,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../chart-types/distributions.html" rel="next">
-<link href="../chart-types/bar-charts.html" rel="prev">
+<link href="../design-system/index.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -160,7 +159,7 @@ ul.task-list li input[type="checkbox"] {
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link active" href="../chart-types/index.html" aria-current="page"> 
+    <a class="nav-link" href="../chart-types/index.html"> 
 <span class="menu-text">Chart types</span></a>
   </li>  
   <li class="nav-item">
@@ -195,7 +194,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chart-types/lines.html">Lines &amp; change over time</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../design-system/contrast.html">Design system — contrast grid</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -209,56 +208,14 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chart-types/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chart types</span></a>
+  <a href="../design-system/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Design system — tokens</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chart-types/bar-charts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Bar charts</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chart-types/lines.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Lines &amp; change over time</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chart-types/distributions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Distributions</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chart-types/part-to-whole.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Parts of a whole</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chart-types/correlation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Relationships</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chart-types/deviation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Difference from a baseline</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chart-types/kpis.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">KPIs &amp; big numbers</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chart-types/maps.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Maps</span></a>
+  <a href="../design-system/contrast.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Design system — contrast grid</span></a>
   </div>
 </li>
     </ul>
@@ -271,9 +228,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#a-few-series" id="toc-a-few-series" class="nav-link active" data-scroll-target="#a-few-series">A few series</a></li>
-  <li><a href="#many-series-small-multiples" id="toc-many-series-small-multiples" class="nav-link" data-scroll-target="#many-series-small-multiples">Many series → small multiples</a></li>
-  <li><a href="#two-time-points-slope-chart" id="toc-two-time-points-slope-chart" class="nav-link" data-scroll-target="#two-time-points-slope-chart">Two time points → slope chart</a></li>
+  <li><a href="#why-the-neutrals-can-promise-contrast" id="toc-why-the-neutrals-can-promise-contrast" class="nav-link active" data-scroll-target="#why-the-neutrals-can-promise-contrast">Why the neutrals can promise contrast</a></li>
   </ul>
 </nav>
     </div>
@@ -286,7 +241,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Lines &amp; change over time</h1>
+<h1 class="title">Design system — contrast grid</h1>
 </div>
 
 
@@ -303,30 +258,19 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Use a line when the message is the <strong>trend</strong> — direction and rate of change across time. The connecting line emphasises continuity, so only use it for genuinely sequential (time) data.</p>
-<section id="a-few-series" class="level2">
-<h2 class="anchored" data-anchor-id="a-few-series">A few series</h2>
-<p>Keep it to about five colored lines. Direct-label the ends rather than making the reader bounce to a legend.</p>
-<div class="ncdpi-vega" data-spec="charts/change__line.vl.json">
-
-</div>
-<div class="ncdpi-callout rule">
-<p><strong>Break the line at missing years.</strong> NC issued no School Performance Grades in 2020 and 2021. A line drawn straight through that gap would invent two years of data. Show the break.</p>
-</div>
-</section>
-<section id="many-series-small-multiples" class="level2">
-<h2 class="anchored" data-anchor-id="many-series-small-multiples">Many series → small multiples</h2>
-<p>More than five lines becomes spaghetti. Give each category its own panel on a shared scale instead. Small multiples are under-used at NCDPI — reach for them.</p>
-<div class="ncdpi-vega" data-spec="charts/change__small-multiples.vl.json">
-
-</div>
-</section>
-<section id="two-time-points-slope-chart" class="level2">
-<h2 class="anchored" data-anchor-id="two-time-points-slope-chart">Two time points → slope chart</h2>
-<p>When you only have a “before” and “after,” a slope chart shows each item’s value at both points and the direction of change, and makes rank reversals pop.</p>
-<div class="ncdpi-vega" data-spec="charts/change__slope.vl.json">
-
-</div>
+<p>Every combination the design system tells you to use is listed here with its <strong>computed WCAG 2.1 contrast ratio</strong>. This grid is not documentation that <em>hopes</em> to stay true — it is generated by the same build script that compiles the tokens, and <strong>the build fails if any pairing drops below its threshold</strong>. A bad token edit cannot ship.</p>
+<p>Two thresholds apply (WCAG 2.1 AA, the legal floor under ADA Title II):</p>
+<ul>
+<li><strong>Text</strong> — 4.5:1 (success criterion 1.4.3, normal-size text).</li>
+<li><strong>Non-text</strong> — 3:1 (success criterion 1.4.11: focus indicators, meaningful borders, UI component boundaries).</li>
+</ul>
+<p>Pairings deliberately <strong>absent</strong> from this grid are not approved — the known case: the link color on the <code>surface-sunken</code> well falls just short of 4.5:1, so links belong on <code>surface</code> or <code>surface-raised</code> only.</p>
+<div data-ds="contrast-grid"></div>
+<section id="why-the-neutrals-can-promise-contrast" class="level2">
+<h2 class="anchored" data-anchor-id="why-the-neutrals-can-promise-contrast">Why the neutrals can promise contrast</h2>
+<p>The warm-gray ramp is built on the USWDS lightness-grade system: each grade is pinned to a relative-luminance band, with white as grade 0. That makes contrast <strong>arithmetic</strong>: grades ≥50 apart pass 4.5:1 by construction, ≥40 apart pass 3:1, and ≥70 apart pass 7:1. The build script re-verifies every grade pairing on every run, alongside the semantic claims above.</p>
+<p>For charts, contrast follows the <a href="../accessibility.html">accessibility page</a>’s WCAG reading — chart palettes have their own rules (and their own pipeline) and are documented across the color pages of this guide.</p>
+<script>(function(){var el=document.querySelector('link[href*="site_libs/"],script[src*="site_libs/"]');var root=el?(el.href||el.src).replace(/site_libs\/.*$/,''):'';var l=document.createElement('link');l.rel='stylesheet';l.href=root+'theme/tokens.css';document.head.appendChild(l);var s=document.createElement('script');s.src=root+'js/design-tokens-render.js';document.body.appendChild(s);})();</script>
 
 
 </section>
@@ -755,14 +699,11 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../chart-types/bar-charts.html" class="pagination-link" aria-label="Bar charts">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Bar charts</span>
+      <a href="../design-system/index.html" class="pagination-link" aria-label="Design system — tokens">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Design system — tokens</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chart-types/distributions.html" class="pagination-link" aria-label="Distributions">
-        <span class="nav-page-text">Distributions</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

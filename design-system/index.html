@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Lines &amp; change over time – NCDPI Data Visualization Style Guide</title>
+<title>Design system — tokens – NCDPI Data Visualization Style Guide</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -33,8 +68,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../chart-types/distributions.html" rel="next">
-<link href="../chart-types/bar-charts.html" rel="prev">
+<link href="../design-system/contrast.html" rel="next">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -160,7 +194,7 @@ ul.task-list li input[type="checkbox"] {
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link active" href="../chart-types/index.html" aria-current="page"> 
+    <a class="nav-link" href="../chart-types/index.html"> 
 <span class="menu-text">Chart types</span></a>
   </li>  
   <li class="nav-item">
@@ -195,7 +229,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chart-types/lines.html">Lines &amp; change over time</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../design-system/index.html">Design system — tokens</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -209,56 +243,14 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chart-types/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chart types</span></a>
+  <a href="../design-system/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Design system — tokens</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chart-types/bar-charts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Bar charts</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chart-types/lines.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Lines &amp; change over time</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chart-types/distributions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Distributions</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chart-types/part-to-whole.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Parts of a whole</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chart-types/correlation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Relationships</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chart-types/deviation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Difference from a baseline</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chart-types/kpis.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">KPIs &amp; big numbers</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chart-types/maps.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Maps</span></a>
+  <a href="../design-system/contrast.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Design system — contrast grid</span></a>
   </div>
 </li>
     </ul>
@@ -271,9 +263,19 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#a-few-series" id="toc-a-few-series" class="nav-link active" data-scroll-target="#a-few-series">A few series</a></li>
-  <li><a href="#many-series-small-multiples" id="toc-many-series-small-multiples" class="nav-link" data-scroll-target="#many-series-small-multiples">Many series → small multiples</a></li>
-  <li><a href="#two-time-points-slope-chart" id="toc-two-time-points-slope-chart" class="nav-link" data-scroll-target="#two-time-points-slope-chart">Two time points → slope chart</a></li>
+  <li><a href="#how-to-use-the-tokens" id="toc-how-to-use-the-tokens" class="nav-link active" data-scroll-target="#how-to-use-the-tokens">How to use the tokens</a></li>
+  <li><a href="#color" id="toc-color" class="nav-link" data-scroll-target="#color">Color</a>
+  <ul class="collapse">
+  <li><a href="#brand-primitives-first-in-flight" id="toc-brand-primitives-first-in-flight" class="nav-link" data-scroll-target="#brand-primitives-first-in-flight">Brand primitives — First in Flight</a></li>
+  <li><a href="#the-warm-gray-ramp" id="toc-the-warm-gray-ramp" class="nav-link" data-scroll-target="#the-warm-gray-ramp">The warm-gray ramp</a></li>
+  <li><a href="#semantic-tokens-fills-and-their-on--partners" id="toc-semantic-tokens-fills-and-their-on--partners" class="nav-link" data-scroll-target="#semantic-tokens-fills-and-their-on--partners">Semantic tokens — fills and their <code>on-</code> partners</a></li>
+  <li><a href="#semantic-tokens-text-links-borders-focus" id="toc-semantic-tokens-text-links-borders-focus" class="nav-link" data-scroll-target="#semantic-tokens-text-links-borders-focus">Semantic tokens — text, links, borders, focus</a></li>
+  </ul></li>
+  <li><a href="#typography" id="toc-typography" class="nav-link" data-scroll-target="#typography">Typography</a></li>
+  <li><a href="#space" id="toc-space" class="nav-link" data-scroll-target="#space">Space</a></li>
+  <li><a href="#radius" id="toc-radius" class="nav-link" data-scroll-target="#radius">Radius</a></li>
+  <li><a href="#elevation" id="toc-elevation" class="nav-link" data-scroll-target="#elevation">Elevation</a></li>
+  <li><a href="#where-the-tokens-live" id="toc-where-the-tokens-live" class="nav-link" data-scroll-target="#where-the-tokens-live">Where the tokens live</a></li>
   </ul>
 </nav>
     </div>
@@ -286,7 +288,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Lines &amp; change over time</h1>
+<h1 class="title">Design system — tokens</h1>
 </div>
 
 
@@ -303,30 +305,84 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Use a line when the message is the <strong>trend</strong> — direction and rate of change across time. The connecting line emphasises continuity, so only use it for genuinely sequential (time) data.</p>
-<section id="a-few-series" class="level2">
-<h2 class="anchored" data-anchor-id="a-few-series">A few series</h2>
-<p>Keep it to about five colored lines. Direct-label the ends rather than making the reader bounce to a legend.</p>
-<div class="ncdpi-vega" data-spec="charts/change__line.vl.json">
-
+<p>The <strong>NCDPI Design System</strong> is one reusable set of design decisions — color, type, spacing, radius, elevation — so every NCDPI build (Quarto sites, HTML documents, dashboards, web apps) starts consistent, on-brand, and WCAG-compliant. This page documents the <strong>token layer</strong>, the system’s foundation. Everything below is rendered live from the generated token artifacts, so this page can never drift from the tokens themselves.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Two brands, one rule">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<div class="ncdpi-callout rule">
-<p><strong>Break the line at missing years.</strong> NC issued no School Performance Grades in 2020 and 2021. A line drawn straight through that gap would invent two years of data. Show the break.</p>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Two brands, one rule
 </div>
+</div>
+<div class="callout-body-container callout-body">
+<p>NCDPI has two official visual voices, and this system keeps them deliberately separate. <strong>UI chrome</strong> — pages, navigation, cards, buttons, tables — speaks the <em>First in Flight</em> web palette with <strong>Source Sans Pro</strong>. <strong>Charts keep Arial and the dataviz palettes</strong> documented across this style guide, because charts must survive export into Tableau, PowerPoint, and PNG, where webfonts don’t exist. A chart embedded in a Source Sans page still uses Arial — that’s the rule, not an oversight.</p>
+</div>
+</div>
+<section id="how-to-use-the-tokens" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-use-the-tokens">How to use the tokens</h2>
+<p>Copy two things into your project — no npm, no build step:</p>
+<ol type="1">
+<li><strong><code>theme/tokens.css</code></strong> — every token as a CSS custom property (<code>--ncdpi-*</code>), plus the <code>@font-face</code> for Source Sans Pro.</li>
+<li><strong><code>theme/fonts/</code></strong> — the two self-hosted Source Sans variable-font files (SIL Open Font License; no third-party requests, works on intranet).</li>
+</ol>
+<p>Then reference semantic tokens in your styles:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.my-panel</span> {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background</span><span class="ch">:</span> <span class="fu">var(</span><span class="va">--ncdpi-surface-raised</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span><span class="ch">:</span> <span class="fu">var(</span><span class="va">--ncdpi-on-surface-raised</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border-radius</span><span class="ch">:</span> <span class="fu">var(</span><span class="va">--ncdpi-radius-lg</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">box-shadow</span><span class="ch">:</span> <span class="fu">var(</span><span class="va">--ncdpi-shadow-raised</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">padding</span><span class="ch">:</span> <span class="fu">var(</span><span class="va">--ncdpi-space-md</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Use the semantic tier, not the primitives.</strong> Semantic names are mode-neutral (<code>surface</code>, not <code>white</code>) so a future dark mode is a value map, not a rebuild — and every semantic pairing below is contrast-validated on every build (see <a href="../design-system/contrast.html">the contrast grid</a>).</p>
 </section>
-<section id="many-series-small-multiples" class="level2">
-<h2 class="anchored" data-anchor-id="many-series-small-multiples">Many series → small multiples</h2>
-<p>More than five lines becomes spaghetti. Give each category its own panel on a shared scale instead. Small multiples are under-used at NCDPI — reach for them.</p>
-<div class="ncdpi-vega" data-spec="charts/change__small-multiples.vl.json">
-
-</div>
+<section id="color" class="level2">
+<h2 class="anchored" data-anchor-id="color">Color</h2>
+<section id="brand-primitives-first-in-flight" class="level3">
+<h3 class="anchored" data-anchor-id="brand-primitives-first-in-flight">Brand primitives — First in Flight</h3>
+<p>The official NCDPI web palette, from the NCDPI Web Style Guide. Primitives are the raw material; components should reach for the semantic tokens below instead.</p>
+<div data-ds="brand"></div>
 </section>
-<section id="two-time-points-slope-chart" class="level2">
-<h2 class="anchored" data-anchor-id="two-time-points-slope-chart">Two time points → slope chart</h2>
-<p>When you only have a “before” and “after,” a slope chart shows each item’s value at both points and the direction of change, and makes rank reversals pop.</p>
-<div class="ncdpi-vega" data-spec="charts/change__slope.vl.json">
-
-</div>
+<section id="the-warm-gray-ramp" class="level3">
+<h3 class="anchored" data-anchor-id="the-warm-gray-ramp">The warm-gray ramp</h3>
+<p>Neutrals are built on <strong>fixed lightness grades</strong> (the USWDS “magic number” system, warmed per our vibe): white is grade 0, and each grade is pinned to a luminance band, so contrast is arithmetic — <strong>any two grades ≥50 apart pass 4.5:1</strong> (normal-text AA), ≥40 apart pass 3:1, ≥70 apart pass 7:1 (AAA). The build script re-proves every one of those claims on every run.</p>
+<div data-ds="gray-ramp"></div>
+</section>
+<section id="semantic-tokens-fills-and-their-on--partners" class="level3">
+<h3 class="anchored" data-anchor-id="semantic-tokens-fills-and-their-on--partners">Semantic tokens — fills and their <code>on-</code> partners</h3>
+<p>Every fill token ships with an <code>on-*</code> partner: the guaranteed-readable text color on that fill. If you put text on a fill, use its partner — that pairing is machine-validated before it can ship.</p>
+<div data-ds="semantic-fills"></div>
+</section>
+<section id="semantic-tokens-text-links-borders-focus" class="level3">
+<h3 class="anchored" data-anchor-id="semantic-tokens-text-links-borders-focus">Semantic tokens — text, links, borders, focus</h3>
+<p>Shown on the <code>surface</code> token (the warm off-white page background). One deliberate scoping rule: <strong>links sit on <code>surface</code> or <code>surface-raised</code> only</strong> — the brand link blue falls just short of 4.5:1 on the sunken well color, so that pairing is not claimed and not allowed.</p>
+<div data-ds="semantic-text"></div>
+</section>
+</section>
+<section id="typography" class="level2">
+<h2 class="anchored" data-anchor-id="typography">Typography</h2>
+<p>UI text is <strong>Source Sans Pro</strong> (self-hosted variable font, weights 400/600/ 700), on the trimmed scale from the NCDPI Web Style Guide: headings at weight 700 and 1.2 line-height, body at 18px with the guide’s roomy 30px leading. This specimen renders in the real font.</p>
+<div data-ds="type"></div>
+</section>
+<section id="space" class="level2">
+<h2 class="anchored" data-anchor-id="space">Space</h2>
+<p>A base-8 scale with one half-step. Default roomy: when in doubt, take the next size up.</p>
+<div data-ds="space"></div>
+</section>
+<section id="radius" class="level2">
+<h2 class="anchored" data-anchor-id="radius">Radius</h2>
+<p>Subtle rounding — soft corners, never pill-heavy.</p>
+<div data-ds="radius"></div>
+</section>
+<section id="elevation" class="level2">
+<h2 class="anchored" data-anchor-id="elevation">Elevation</h2>
+<p>Two soft shadows, tinted with the brand navy rather than pure black.</p>
+<div data-ds="shadow"></div>
+</section>
+<section id="where-the-tokens-live" class="level2">
+<h2 class="anchored" data-anchor-id="where-the-tokens-live">Where the tokens live</h2>
+<p>The source of truth is <code>design-system/tokens.json</code> (W3C Design Tokens format) in the private repo. <code>tools/build_design_tokens.py</code> compiles it to CSS, SCSS, and the JSON this page renders from — and <strong>fails the build if any contrast claim regresses</strong>. Chart colors are deliberately <em>not</em> in the token file: they stay in the existing chart-theme pipeline, and <code>tokens.css</code> mirrors them read-only as <code>--ncdpi-chart-*</code> variables.</p>
+<script>(function(){var el=document.querySelector('link[href*="site_libs/"],script[src*="site_libs/"]');var root=el?(el.href||el.src).replace(/site_libs\/.*$/,''):'';var l=document.createElement('link');l.rel='stylesheet';l.href=root+'theme/tokens.css';document.head.appendChild(l);var s=document.createElement('script');s.src=root+'js/design-tokens-render.js';document.body.appendChild(s);})();</script>
 
 
 </section>
@@ -755,13 +811,10 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../chart-types/bar-charts.html" class="pagination-link" aria-label="Bar charts">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Bar charts</span>
-      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chart-types/distributions.html" class="pagination-link" aria-label="Distributions">
-        <span class="nav-page-text">Distributions</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../design-system/contrast.html" class="pagination-link" aria-label="Design system — contrast grid">
+        <span class="nav-page-text">Design system — contrast grid</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

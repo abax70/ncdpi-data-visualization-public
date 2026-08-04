@@ -21,5 +21,13 @@
       { "field": "category", "title": "Proficiency level" }
     ]
   },
-  "usermeta": { "source": "Source: NCDPI accountability test scores (achievement levels, all subjects and grades, all students), 2025. Style-guide demo." }
+  "usermeta": {
+    "source": "Source: NCDPI accountability test scores (achievement levels, all subjects and grades, all students), 2025. Style-guide demo.",
+    "contrastExemptions": [
+      {
+        "category": "Levels 1-3",
+        "reason": "Ruled by Andy 2026-07-30 during the contrast pass. This is a DELIBERATE deviation from Convention 5, which says to pair a #B7B9BB context fill with one of three mitigations; this chart uses none, for these reasons. #B7B9BB is 1.97:1 on white, but it is the REMAINDER mass, not a set of 65 items a reader must individually identify (contrast the dot map, where every dot is a school someone looks up). The color carrying the message -- teal #077890 at 5.12:1 -- passes, and the value is stated in the title ('35 of every 100'), which satisfies C5's own framing: the question is whether a reader can perceive the context marks exist, and against white gutters they can. C5 mitigation 2 (a #525A60 outline, used on the dot map and pictograph today) is UNAVAILABLE here: these cells abut, so the stroke slot must stay WHITE to serve Convention 9. C5 mitigation 1 (value labels on the context marks) WAS available and was considered and declined -- 100 cells cannot carry labels without becoming a table. Chose the convention over a redundant edge treatment rather than trading one house rule for another."
+      }
+    ]
+  }
 }

@@ -55,8 +55,13 @@
   --ncdpi-on-surface-info: #092940;
   --ncdpi-surface-accent: #FFE9EE;
   --ncdpi-on-surface-accent: #BC2442;
-  --ncdpi-accent: #CF1F42;
+  --ncdpi-accent: #BC2442;
   --ncdpi-on-accent: #FFFFFF;
+  --ncdpi-danger: #BC2442;
+  --ncdpi-on-danger: #FFFFFF;
+  --ncdpi-action: #092940;
+  --ncdpi-on-action: #FFFFFF;
+  --ncdpi-action-hover: #3B75A9;
   --ncdpi-text-primary: #1B1A18;
   --ncdpi-text-secondary: #615D56;
   --ncdpi-text-heading: #092940;

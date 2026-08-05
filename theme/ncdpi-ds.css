@@ -1,0 +1,724 @@
+/* ==========================================================================
+   ncdpi-ds.css — NCDPI Design System components (Phase 2)
+   ==========================================================================
+   HAND-AUTHORED (unlike tokens.css, which is generated — never edit that
+   one). Distribution = copy BOTH files into a project:
+
+       theme/tokens.css    the token layer (custom properties + @font-face)
+       theme/ncdpi-ds.css  this file (component classes)
+
+   plus theme/fonts/ if you want self-hosted Source Sans. No npm, no build.
+
+   Rules of the house (design-system/PLAN.md, D1–D6):
+   - Colors reference SEMANTIC tokens only (--ncdpi-*), never raw hexes.
+     The two exceptions are documented inline: the stat tile's valence
+     colors come from the chart world via the read-only --ncdpi-chart-*
+     mirror (the D2 boundary ruling), and nothing else.
+   - Every fg/bg pairing used here is contrast-validated by
+     tools/build_design_tokens.py on every build (see the contrast grid).
+   - Focus states use the shared focus ring; motion respects
+     prefers-reduced-motion; nothing relies on color alone.
+
+   Components in this file (each documented with a live example at
+   design-system/components.html on the style-guide site):
+     .ncdpi-btn        button — primary / secondary / quiet
+     .ncdpi-callout    callout/alert — info / danger / neutral
+     .ncdpi-card       card (+ accent-top kinship variant)
+     .ncdpi-badge      badge/tag — neutral / info / accent / outline
+     .ncdpi-stat       stat tile (BAN) — the D2 boundary component
+     .ncdpi-header     page header band (+ .ncdpi-footer)
+     .ncdpi-table      data table — UI-chrome tables (see the D2 note there)
+     .ncdpi-tabs       tabs — needs theme/ncdpi-ds.js (optional 3rd file)
+     .ncdpi-breadcrumb breadcrumb trail
+     .ncdpi-skip-link  skip link (promoted from the style-guide site)
+     .ncdpi-chartframe chart frame — C2/C7 wrapper for an embedded chart
+     .ncdpi-field      form basics — label / input / help / error
+     .ncdpi-sr-only    screen-reader-only utility
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Shared: focus ring + motion
+   -------------------------------------------------------------------------- */
+
+.ncdpi-btn:focus-visible,
+.ncdpi-card a:focus-visible,
+.ncdpi-callout a:focus-visible {
+  outline: 3px solid var(--ncdpi-focus);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .ncdpi-btn {
+    transition: background-color 0.15s ease, color 0.15s ease,
+      border-color 0.15s ease;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Button — .ncdpi-btn
+   Variants: --primary (default look if none given), --secondary, --quiet.
+   Works on <button> and <a>. Kinship note: dpi.nc.gov's live button is a
+   full pill; we deliberately keep D1's subtle radius and share the rest
+   (bold white text on brand blue, roomy padding) — see the component-recon
+   addendum in design-system/dpi-site-color-audit.md.
+   -------------------------------------------------------------------------- */
+
+.ncdpi-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--ncdpi-space-xs);
+  font-family: var(--ncdpi-font-ui);
+  font-size: var(--ncdpi-size-small);
+  font-weight: var(--ncdpi-weight-semibold);
+  line-height: 1;
+  /* 12px = space-xs + space-2xs: the base-8 scale's one sanctioned half-step */
+  padding: 12px var(--ncdpi-space-md);
+  border-radius: var(--ncdpi-radius-md);
+  border: 2px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.ncdpi-btn,
+.ncdpi-btn--primary {
+  background: var(--ncdpi-action);
+  color: var(--ncdpi-on-action);
+}
+
+.ncdpi-btn:hover,
+.ncdpi-btn--primary:hover {
+  background: var(--ncdpi-action-hover);
+  color: var(--ncdpi-on-action);
+}
+
+.ncdpi-btn--secondary {
+  background: transparent;
+  color: var(--ncdpi-link);
+  border-color: var(--ncdpi-link);
+}
+
+.ncdpi-btn--secondary:hover {
+  background: var(--ncdpi-surface-info);
+  color: var(--ncdpi-on-surface-info);
+  border-color: var(--ncdpi-link);
+}
+
+.ncdpi-btn--quiet {
+  background: transparent;
+  color: var(--ncdpi-link);
+  border-color: transparent;
+}
+
+.ncdpi-btn--quiet:hover {
+  background: transparent;
+  color: var(--ncdpi-link-hover);
+  text-decoration: underline;
+}
+
+/* Disabled: WCAG exempts disabled controls from contrast minimums; the muted
+   pairing here is deliberate. Both the attribute and the class work so <a>
+   "buttons" can be disabled visually too (but prefer removing the href). */
+.ncdpi-btn:disabled,
+.ncdpi-btn--disabled {
+  background: var(--ncdpi-surface-sunken);
+  color: var(--ncdpi-text-secondary);
+  border-color: transparent;
+  cursor: not-allowed;
+  text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------
+   Callout — .ncdpi-callout
+   Variants: --info (default), --danger, --neutral.
+   Semantics rule (from the DPI live-site audit): red = alert/error only,
+   never decoration. Titles carry the variant's strong color; body ink stays
+   near-black (both pairings machine-validated). The variant word in the
+   title ("Note", "Important") carries the meaning — color never carries it
+   alone. NOTE: don't put links inside --neutral (link blue is not claimed
+   on the sunken fill — by design, see the tokens page).
+   -------------------------------------------------------------------------- */
+
+.ncdpi-callout {
+  font-family: var(--ncdpi-font-ui);
+  font-size: var(--ncdpi-size-body);
+  line-height: var(--ncdpi-leading-body);
+  color: var(--ncdpi-text-primary);
+  border-radius: var(--ncdpi-radius-md);
+  padding: var(--ncdpi-space-sm) var(--ncdpi-space-md);
+  margin: var(--ncdpi-space-md) 0;
+}
+
+.ncdpi-callout > :last-child {
+  margin-bottom: 0;
+}
+
+.ncdpi-callout__title {
+  display: block;
+  font-weight: var(--ncdpi-weight-bold);
+  margin-bottom: var(--ncdpi-space-2xs);
+}
+
+.ncdpi-callout,
+.ncdpi-callout--info {
+  background: var(--ncdpi-surface-info);
+  border-left: 4px solid var(--ncdpi-link);
+}
+
+.ncdpi-callout--info .ncdpi-callout__title {
+  color: var(--ncdpi-on-surface-info);
+}
+
+.ncdpi-callout--danger {
+  background: var(--ncdpi-surface-accent);
+  border-left: 4px solid var(--ncdpi-danger);
+}
+
+.ncdpi-callout--danger .ncdpi-callout__title {
+  color: var(--ncdpi-on-surface-accent);
+}
+
+.ncdpi-callout--neutral {
+  background: var(--ncdpi-surface-sunken);
+  border-left: 4px solid var(--ncdpi-border-strong);
+}
+
+.ncdpi-callout--neutral .ncdpi-callout__title {
+  color: var(--ncdpi-on-surface-sunken);
+}
+
+/* --------------------------------------------------------------------------
+   Card — .ncdpi-card
+   Variants: --flat (no shadow), --accent-top (the dpi.nc.gov kinship cue:
+   a navy top bar, the live site's most distinctive house shape).
+   Linked-card pattern: make the TITLE the link (whole-card click targets
+   hurt text selection and screen-reader link lists); :has() below rings the
+   card when its title link takes focus.
+   -------------------------------------------------------------------------- */
+
+.ncdpi-card {
+  font-family: var(--ncdpi-font-ui);
+  background: var(--ncdpi-surface-raised);
+  color: var(--ncdpi-on-surface-raised);
+  border: 1px solid var(--ncdpi-border-subtle);
+  border-radius: var(--ncdpi-radius-lg);
+  box-shadow: var(--ncdpi-shadow-raised);
+  padding: var(--ncdpi-space-md);
+}
+
+.ncdpi-card--flat {
+  box-shadow: none;
+}
+
+.ncdpi-card--accent-top {
+  border-top: 6px solid var(--ncdpi-surface-brand);
+}
+
+.ncdpi-card:has(> .ncdpi-card__title a:focus-visible) {
+  outline: 3px solid var(--ncdpi-focus);
+  outline-offset: 2px;
+}
+
+.ncdpi-card__title {
+  font-size: var(--ncdpi-size-h5);
+  font-weight: var(--ncdpi-weight-bold);
+  line-height: var(--ncdpi-leading-heading);
+  color: var(--ncdpi-text-heading);
+  margin: 0 0 var(--ncdpi-space-xs);
+  /* Host themes may dim lower headings (Quarto/cosmo ships h3–h6 at
+     opacity .9, which composited our 4.9:1 title link down to a measured
+     4.02:1 — a real axe finding). Component text renders at full ink. */
+  opacity: 1;
+}
+
+.ncdpi-card__title a {
+  color: var(--ncdpi-link);
+  text-decoration: none;
+  /* host themes can reset anchor weight inside headings; stay bold */
+  font-weight: inherit;
+}
+
+.ncdpi-card__title a:hover {
+  color: var(--ncdpi-link-hover);
+  text-decoration: underline;
+}
+
+.ncdpi-card__meta {
+  font-size: var(--ncdpi-size-small);
+  color: var(--ncdpi-text-secondary);
+  margin: 0 0 var(--ncdpi-space-xs);
+}
+
+.ncdpi-card > :last-child {
+  margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Badge — .ncdpi-badge
+   Variants: --neutral (default), --info, --accent, --outline.
+   Text labels, not buttons: a badge never receives focus. 14px is a
+   deliberate sub-scale size for compact labels (WCAG has no size minimum;
+   every pairing still meets 4.5:1). Accent = emphasis worth shouting about
+   sparingly — it's the alert-family red, so don't use it decoratively.
+   -------------------------------------------------------------------------- */
+
+.ncdpi-badge {
+  display: inline-block;
+  font-family: var(--ncdpi-font-ui);
+  font-size: 14px;
+  font-weight: var(--ncdpi-weight-semibold);
+  line-height: 1;
+  padding: var(--ncdpi-space-2xs) 10px;
+  border-radius: var(--ncdpi-radius-sm);
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.ncdpi-badge,
+.ncdpi-badge--neutral {
+  background: var(--ncdpi-surface-sunken);
+  color: var(--ncdpi-on-surface-sunken);
+  border-color: var(--ncdpi-border-subtle);
+}
+
+.ncdpi-badge--info {
+  background: var(--ncdpi-surface-info);
+  color: var(--ncdpi-on-surface-info);
+  border-color: transparent;
+}
+
+.ncdpi-badge--accent {
+  background: var(--ncdpi-accent);
+  color: var(--ncdpi-on-accent);
+  border-color: transparent;
+}
+
+.ncdpi-badge--outline {
+  background: transparent;
+  color: var(--ncdpi-text-primary);
+  border-color: var(--ncdpi-border-strong);
+}
+
+/* --------------------------------------------------------------------------
+   Stat tile — .ncdpi-stat  (the D2 boundary component)
+   Ruling (PLAN.md, session 32): UI chrome with a chart-world number. The
+   tile renders in Source Sans — it lives in the page and is never exported,
+   so D2's Arial rationale doesn't apply — but its DATA semantics follow
+   chart conventions: valence colors come from the dataviz palettes via the
+   read-only --ncdpi-chart-* mirror (the ONLY place this file reaches across
+   the D2 boundary; both hexes verified ≥4.5:1 on white and the warm
+   surface), and the tile carries a C7-style source line. A BAN that must be
+   EXPORTED (PowerPoint, print) is chart-creator's matplotlib BAN, not this.
+   Direction never rides on color alone: pair the valence class with a word
+   or sign in the text ("up 3.2 pts", "−1.4").
+   -------------------------------------------------------------------------- */
+
+.ncdpi-stat-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--ncdpi-space-sm);
+  margin: var(--ncdpi-space-md) 0;
+}
+
+.ncdpi-stat {
+  font-family: var(--ncdpi-font-ui);
+  background: var(--ncdpi-surface-raised);
+  color: var(--ncdpi-on-surface-raised);
+  border: 1px solid var(--ncdpi-border-subtle);
+  border-radius: var(--ncdpi-radius-lg);
+  padding: var(--ncdpi-space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--ncdpi-space-2xs);
+}
+
+.ncdpi-stat__label {
+  font-size: var(--ncdpi-size-small);
+  font-weight: var(--ncdpi-weight-semibold);
+  color: var(--ncdpi-text-secondary);
+}
+
+.ncdpi-stat__value {
+  font-size: var(--ncdpi-size-h1);
+  font-weight: var(--ncdpi-weight-bold);
+  line-height: var(--ncdpi-leading-heading);
+  color: var(--ncdpi-text-heading);
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.ncdpi-stat__delta {
+  font-size: var(--ncdpi-size-small);
+  font-weight: var(--ncdpi-weight-semibold);
+  color: var(--ncdpi-text-secondary);
+}
+
+/* Chart-world valence (D2 crossing, see the header note above):
+   is-best teal #077890 (5.12:1 white / 4.88:1 surface),
+   is-worst rust #B33A12 (5.95:1 / 5.66:1). */
+.ncdpi-stat__delta--good {
+  color: var(--ncdpi-chart-data-highlight-bar-line-is-best);
+}
+
+.ncdpi-stat__delta--bad {
+  color: var(--ncdpi-chart-data-highlight-bar-line-is-worst);
+}
+
+.ncdpi-stat__source {
+  font-size: 14px; /* caption size, matches the badge's sub-scale rationale */
+  color: var(--ncdpi-text-secondary);
+  margin-top: var(--ncdpi-space-xs);
+}
+
+/* --------------------------------------------------------------------------
+   Header / footer — .ncdpi-header, .ncdpi-footer
+   The brand band. Logo drops into .ncdpi-header__brand as an <img> (white
+   or reversed mark on the navy — follow the NCDPI brand guide's logo rules;
+   this component only reserves the slot). Links inside the bands are white
+   and underlined — the band is the one place link blue can't go.
+   -------------------------------------------------------------------------- */
+
+.ncdpi-header,
+.ncdpi-footer {
+  font-family: var(--ncdpi-font-ui);
+  background: var(--ncdpi-surface-brand);
+  color: var(--ncdpi-on-surface-brand);
+  padding: var(--ncdpi-space-sm) var(--ncdpi-space-md);
+}
+
+.ncdpi-header {
+  display: flex;
+  align-items: center;
+  gap: var(--ncdpi-space-sm);
+  flex-wrap: wrap;
+}
+
+.ncdpi-header__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--ncdpi-space-xs);
+  font-size: var(--ncdpi-size-h5);
+  font-weight: var(--ncdpi-weight-bold);
+}
+
+.ncdpi-header__brand img {
+  display: block;
+  max-height: 48px;
+}
+
+.ncdpi-header__tagline {
+  font-size: var(--ncdpi-size-small);
+  font-weight: var(--ncdpi-weight-regular);
+  opacity: 0.85; /* white at .85 on the navy still measures 11.1:1 — dim with AAA headroom */
+}
+
+.ncdpi-footer {
+  font-size: var(--ncdpi-size-small);
+}
+
+.ncdpi-header a,
+.ncdpi-footer a {
+  color: var(--ncdpi-on-surface-brand);
+  text-decoration: underline;
+}
+
+.ncdpi-header a:focus-visible,
+.ncdpi-footer a:focus-visible {
+  outline: 3px solid var(--ncdpi-focus);
+  outline-offset: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   Data table — .ncdpi-table  (UI-chrome tables)
+   D2 note: this is the table for PAGES AND APPS — admin lists, settings,
+   dashboards — and it speaks First in Flight on the tokens. A table that
+   accompanies a CHART (the companion data table of the accessibility
+   conventions) is a chart-world artifact: it keeps the dataviz styling
+   documented on the style guide's table-elements page. Same split as the
+   stat tile, same reason.
+   Anatomy contract: <caption> always; <th scope="col"> in <thead>;
+   <th scope="row"> for row headers; .num on numeric columns.
+   -------------------------------------------------------------------------- */
+
+.ncdpi-table {
+  font-family: var(--ncdpi-font-ui);
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--ncdpi-size-small);
+  margin: var(--ncdpi-space-md) 0 var(--ncdpi-space-xs);
+}
+
+.ncdpi-table caption {
+  caption-side: top;
+  text-align: left;
+  font-size: var(--ncdpi-size-h6);
+  font-weight: var(--ncdpi-weight-bold);
+  color: var(--ncdpi-text-heading);
+  padding: 0 0 var(--ncdpi-space-xs);
+}
+
+.ncdpi-table thead th {
+  background: var(--ncdpi-surface-brand);
+  color: var(--ncdpi-on-surface-brand);
+  font-weight: var(--ncdpi-weight-bold);
+  text-align: left;
+  padding: var(--ncdpi-space-xs) 12px;
+}
+
+.ncdpi-table tbody th[scope="row"] {
+  font-weight: var(--ncdpi-weight-regular);
+  text-align: left;
+}
+
+.ncdpi-table tbody th[scope="row"],
+.ncdpi-table tbody td {
+  padding: var(--ncdpi-space-xs) 12px;
+  color: var(--ncdpi-text-primary);
+  border-bottom: 1px solid var(--ncdpi-border-subtle);
+}
+
+.ncdpi-table tbody tr:nth-child(even) th,
+.ncdpi-table tbody tr:nth-child(even) td {
+  background: var(--ncdpi-surface-sunken);
+}
+
+.ncdpi-table tfoot th,
+.ncdpi-table tfoot td {
+  border-top: 2px solid var(--ncdpi-border-strong);
+  padding: var(--ncdpi-space-xs) 12px;
+  font-weight: var(--ncdpi-weight-bold);
+}
+
+.ncdpi-table .num {
+  text-align: right;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+/* --------------------------------------------------------------------------
+   Tabs — .ncdpi-tabs  (requires theme/ncdpi-ds.js, the optional 3rd file)
+   WAI-ARIA tabs pattern: the JS wires role=tablist/tab/tabpanel, roving
+   tabindex, Left/Right/Home/End keys, aria-selected. Markup contract in the
+   docs. CSS alone renders all panels stacked — usable, never broken.
+   -------------------------------------------------------------------------- */
+
+.ncdpi-tabs__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--ncdpi-space-2xs);
+  border-bottom: 2px solid var(--ncdpi-border-subtle);
+  margin: 0 0 var(--ncdpi-space-sm);
+  padding: 0;
+}
+
+.ncdpi-tabs__tab {
+  font-family: var(--ncdpi-font-ui);
+  font-size: var(--ncdpi-size-small);
+  font-weight: var(--ncdpi-weight-semibold);
+  color: var(--ncdpi-text-secondary);
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px; /* sit on the list's rule */
+  padding: var(--ncdpi-space-xs) var(--ncdpi-space-sm);
+  cursor: pointer;
+}
+
+.ncdpi-tabs__tab:hover {
+  color: var(--ncdpi-link-hover);
+}
+
+.ncdpi-tabs__tab[aria-selected="true"] {
+  color: var(--ncdpi-text-heading);
+  border-bottom-color: var(--ncdpi-link);
+}
+
+.ncdpi-tabs__tab:focus-visible {
+  outline: 3px solid var(--ncdpi-focus);
+  outline-offset: -3px; /* inside edge: the tab row clips an offset ring */
+}
+
+.ncdpi-tabs__panel[hidden] {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
+   Breadcrumb — .ncdpi-breadcrumb
+   <nav aria-label="Breadcrumb"> + <ol>; current page is a plain <li> with
+   aria-current="page", never a link. Separator is CSS-generated (the
+   GOV.UK/USWDS pattern) so it stays out of link names.
+   -------------------------------------------------------------------------- */
+
+.ncdpi-breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--ncdpi-space-2xs);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: var(--ncdpi-font-ui);
+  font-size: var(--ncdpi-size-small);
+}
+
+.ncdpi-breadcrumb li + li::before {
+  content: "\203A"; /* › */
+  color: var(--ncdpi-text-secondary);
+  margin: 0 var(--ncdpi-space-2xs) 0 0;
+}
+
+.ncdpi-breadcrumb a {
+  color: var(--ncdpi-link);
+}
+
+.ncdpi-breadcrumb a:hover {
+  color: var(--ncdpi-link-hover);
+}
+
+.ncdpi-breadcrumb [aria-current="page"] {
+  color: var(--ncdpi-text-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   Skip link — .ncdpi-skip-link
+   Promoted from the style-guide site (WCAG 2.4.1 Bypass Blocks). First
+   focusable element on the page; hidden above the viewport until focused.
+   Point it at your <main>'s id.
+   -------------------------------------------------------------------------- */
+
+.ncdpi-skip-link {
+  position: absolute;
+  left: var(--ncdpi-space-xs);
+  top: -3.5rem;
+  z-index: 1080; /* above fixed navbars */
+  font-family: var(--ncdpi-font-ui);
+  font-weight: var(--ncdpi-weight-bold);
+  background: var(--ncdpi-surface-brand);
+  color: var(--ncdpi-on-surface-brand);
+  padding: var(--ncdpi-space-xs) var(--ncdpi-space-sm);
+  border-radius: 0 0 var(--ncdpi-radius-sm) var(--ncdpi-radius-sm);
+  text-decoration: none;
+}
+
+.ncdpi-skip-link:focus {
+  top: 0;
+  outline: 3px solid var(--ncdpi-focus);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .ncdpi-skip-link {
+    transition: top 0.15s ease-in-out;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Chart frame — .ncdpi-chartframe
+   The C2/C7 wrapper for a chart embedded in a page or app: message title,
+   contract subtitle, chart body, source line — all sharing one left edge
+   (Convention 2). THIS IS CHART-WORLD TEXT (D2): Arial via the chart font
+   token, chart-text colors via the read-only --ncdpi-chart-* mirror, and
+   the pt-derived pixel sizes from the dataviz guide (14pt title, 11pt
+   subtitle/source — the same 18.67/14.67px the Vega theme uses; hard-coded
+   here because chart text sizes deliberately live in the chart pipeline,
+   not the UI tokens).
+   -------------------------------------------------------------------------- */
+
+.ncdpi-chartframe {
+  font-family: var(--ncdpi-font-chart);
+  margin: var(--ncdpi-space-md) 0;
+}
+
+.ncdpi-chartframe__title {
+  font-size: 18.67px; /* 14pt */
+  font-weight: var(--ncdpi-weight-bold);
+  color: var(--ncdpi-chart-text-chart-title, #000000);
+  margin: 0 0 var(--ncdpi-space-2xs);
+}
+
+.ncdpi-chartframe__subtitle {
+  font-size: 14.67px; /* 11pt */
+  color: var(--ncdpi-chart-text-chart-subtitle, #525A60);
+  margin: 0 0 var(--ncdpi-space-xs);
+}
+
+.ncdpi-chartframe__body {
+  margin: 0;
+}
+
+.ncdpi-chartframe__source {
+  font-size: 14.67px; /* 11pt — matches .ncdpi-chart-source on the site */
+  color: var(--ncdpi-chart-text-chart-note, #525A60);
+  margin: var(--ncdpi-space-2xs) 0 0;
+}
+
+/* --------------------------------------------------------------------------
+   Form basics — .ncdpi-field
+   Minimal by design (PLAN scope): label + control + help + error. Error
+   pattern: .ncdpi-field--error on the wrapper turns the border, the message
+   names the problem AND the fix in words ("Error: enter a date after
+   2020"), and the control carries aria-describedby -> the message id.
+   -------------------------------------------------------------------------- */
+
+.ncdpi-field {
+  font-family: var(--ncdpi-font-ui);
+  margin: 0 0 var(--ncdpi-space-md);
+  max-width: 30rem;
+}
+
+.ncdpi-field__label {
+  display: block;
+  font-size: var(--ncdpi-size-small);
+  font-weight: var(--ncdpi-weight-semibold);
+  color: var(--ncdpi-text-primary);
+  margin-bottom: var(--ncdpi-space-2xs);
+}
+
+.ncdpi-field__help {
+  font-size: var(--ncdpi-size-small);
+  color: var(--ncdpi-text-secondary);
+  margin: 0 0 var(--ncdpi-space-2xs);
+}
+
+.ncdpi-input {
+  display: block;
+  width: 100%;
+  font-family: var(--ncdpi-font-ui);
+  font-size: var(--ncdpi-size-body);
+  color: var(--ncdpi-text-primary);
+  background: var(--ncdpi-surface-raised);
+  border: 1px solid var(--ncdpi-border-strong); /* >=3:1 non-text, validated */
+  border-radius: var(--ncdpi-radius-sm);
+  padding: var(--ncdpi-space-xs) 12px;
+}
+
+.ncdpi-input:focus-visible {
+  outline: 3px solid var(--ncdpi-focus);
+  outline-offset: 1px;
+}
+
+.ncdpi-field--error .ncdpi-input {
+  border: 2px solid var(--ncdpi-danger);
+}
+
+.ncdpi-field__error {
+  font-size: var(--ncdpi-size-small);
+  font-weight: var(--ncdpi-weight-semibold);
+  color: var(--ncdpi-danger); /* danger-as-text on light surfaces, validated */
+  margin: var(--ncdpi-space-2xs) 0 0;
+}
+
+/* --------------------------------------------------------------------------
+   Utility — .ncdpi-sr-only
+   Visually hidden, available to screen readers. For text that completes a
+   visual-only pattern (e.g. a delta arrow's direction word).
+   -------------------------------------------------------------------------- */
+
+.ncdpi-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

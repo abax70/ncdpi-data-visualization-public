@@ -199,10 +199,80 @@
       "fg": "on-accent",
       "fgHex": "#FFFFFF",
       "bg": "accent",
-      "bgHex": "#CF1F42",
+      "bgHex": "#BC2442",
       "kind": "text",
       "threshold": 4.5,
-      "ratio": 5.35,
+      "ratio": 6.05,
+      "pass": true
+    },
+    {
+      "fg": "on-danger",
+      "fgHex": "#FFFFFF",
+      "bg": "danger",
+      "bgHex": "#BC2442",
+      "kind": "text",
+      "threshold": 4.5,
+      "ratio": 6.05,
+      "pass": true
+    },
+    {
+      "fg": "on-action",
+      "fgHex": "#FFFFFF",
+      "bg": "action",
+      "bgHex": "#092940",
+      "kind": "text",
+      "threshold": 4.5,
+      "ratio": 14.97,
+      "pass": true
+    },
+    {
+      "fg": "on-action",
+      "fgHex": "#FFFFFF",
+      "bg": "action-hover",
+      "bgHex": "#3B75A9",
+      "kind": "text",
+      "threshold": 4.5,
+      "ratio": 4.88,
+      "pass": true
+    },
+    {
+      "fg": "text-primary",
+      "fgHex": "#1B1A18",
+      "bg": "surface-info",
+      "bgHex": "#EEF7FF",
+      "kind": "text",
+      "threshold": 4.5,
+      "ratio": 16.05,
+      "pass": true
+    },
+    {
+      "fg": "text-primary",
+      "fgHex": "#1B1A18",
+      "bg": "surface-accent",
+      "bgHex": "#FFE9EE",
+      "kind": "text",
+      "threshold": 4.5,
+      "ratio": 15.02,
+      "pass": true
+    },
+    {
+      "fg": "danger",
+      "fgHex": "#BC2442",
+      "bg": "surface",
+      "bgHex": "#FAF9F9",
+      "kind": "text",
+      "threshold": 4.5,
+      "ratio": 5.76,
+      "pass": true
+    },
+    {
+      "fg": "danger",
+      "fgHex": "#BC2442",
+      "bg": "surface-raised",
+      "bgHex": "#FFFFFF",
+      "kind": "text",
+      "threshold": 4.5,
+      "ratio": 6.05,
       "pass": true
     },
     {

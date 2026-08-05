@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Design system — components – NCDPI Data Visualization Style Guide</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../design-system/logo.html" rel="next">
+<link href="../design-system/contrast.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-b2eaf4dfe79f25e728c7da6b40b3ce16.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../assets/ncdpi-logo-white.svg" alt="NCDPI" class="navbar-logo light-content">
+    <img src="../assets/ncdpi-logo-white.svg" alt="NCDPI" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">NCDPI Data Visualization Style Guide</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-foundations" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Foundations</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-foundations">    
+        <li>
+    <a class="dropdown-item" href="../foundations/typography.html">
+ <span class="dropdown-text">Typography</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../foundations/color.html">
+ <span class="dropdown-text">Color — overview</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../foundations/color-groups.html">
+ <span class="dropdown-text">Color — category groups</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../foundations/color-sequences.html">
+ <span class="dropdown-text">Color — sequences</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../foundations/color-diverging.html">
+ <span class="dropdown-text">Color — diverging</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../foundations/color-highlights.html">
+ <span class="dropdown-text">Color — highlights</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../foundations/color-lookup.html">
+ <span class="dropdown-text">Color lookup</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-chart-parts" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Chart parts</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-chart-parts">    
+        <li>
+    <a class="dropdown-item" href="../chart-parts/chart-elements.html">
+ <span class="dropdown-text">Chart elements</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../chart-parts/table-elements.html">
+ <span class="dropdown-text">Table elements</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../chart-parts/dashboard-elements.html">
+ <span class="dropdown-text">Dashboard elements</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../chart-parts/tooltips.html">
+ <span class="dropdown-text">Tooltips</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../chart-types/index.html"> 
+<span class="menu-text">Chart types</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../chart-chooser.html"> 
+<span class="menu-text">Chart Chooser</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../chart-gallery.html"> 
+<span class="menu-text">Gallery</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../best-practices/index.html"> 
+<span class="menu-text">Best practices</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../accessibility.html"> 
+<span class="menu-text">Accessibility</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resources.html"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+    <a href="https://github.com/abax70/ncdpi-data-visualization-public" title="" class="quarto-navigation-tool px-1" aria-label="Source code on GitHub"><i class="bi bi-github"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../design-system/components.html">Design system — components</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../design-system/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Design system — tokens</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../design-system/contrast.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Design system — contrast grid</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../design-system/components.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Design system — components</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../design-system/logo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Design system — logo</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../design-system/voice.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Design system — voice &amp; microcopy</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#button-.ncdpi-btn" id="toc-button-.ncdpi-btn" class="nav-link active" data-scroll-target="#button-.ncdpi-btn">Button — <code>.ncdpi-btn</code></a></li>
+  <li><a href="#callout-.ncdpi-callout" id="toc-callout-.ncdpi-callout" class="nav-link" data-scroll-target="#callout-.ncdpi-callout">Callout — <code>.ncdpi-callout</code></a></li>
+  <li><a href="#card-.ncdpi-card" id="toc-card-.ncdpi-card" class="nav-link" data-scroll-target="#card-.ncdpi-card">Card — <code>.ncdpi-card</code></a></li>
+  <li><a href="#badge-.ncdpi-badge" id="toc-badge-.ncdpi-badge" class="nav-link" data-scroll-target="#badge-.ncdpi-badge">Badge — <code>.ncdpi-badge</code></a></li>
+  <li><a href="#stat-tile-.ncdpi-stat" id="toc-stat-tile-.ncdpi-stat" class="nav-link" data-scroll-target="#stat-tile-.ncdpi-stat">Stat tile — <code>.ncdpi-stat</code></a></li>
+  <li><a href="#header-footer-.ncdpi-header-.ncdpi-footer" id="toc-header-footer-.ncdpi-header-.ncdpi-footer" class="nav-link" data-scroll-target="#header-footer-.ncdpi-header-.ncdpi-footer">Header &amp; footer — <code>.ncdpi-header</code> / <code>.ncdpi-footer</code></a></li>
+  <li><a href="#data-table-.ncdpi-table" id="toc-data-table-.ncdpi-table" class="nav-link" data-scroll-target="#data-table-.ncdpi-table">Data table — <code>.ncdpi-table</code></a></li>
+  <li><a href="#tabs-.ncdpi-tabs" id="toc-tabs-.ncdpi-tabs" class="nav-link" data-scroll-target="#tabs-.ncdpi-tabs">Tabs — <code>.ncdpi-tabs</code></a></li>
+  <li><a href="#breadcrumb-.ncdpi-breadcrumb" id="toc-breadcrumb-.ncdpi-breadcrumb" class="nav-link" data-scroll-target="#breadcrumb-.ncdpi-breadcrumb">Breadcrumb — <code>.ncdpi-breadcrumb</code></a></li>
+  <li><a href="#skip-link-.ncdpi-skip-link" id="toc-skip-link-.ncdpi-skip-link" class="nav-link" data-scroll-target="#skip-link-.ncdpi-skip-link">Skip link — <code>.ncdpi-skip-link</code></a></li>
+  <li><a href="#chart-frame-.ncdpi-chartframe" id="toc-chart-frame-.ncdpi-chartframe" class="nav-link" data-scroll-target="#chart-frame-.ncdpi-chartframe">Chart frame — <code>.ncdpi-chartframe</code></a></li>
+  <li><a href="#form-basics-.ncdpi-field" id="toc-form-basics-.ncdpi-field" class="nav-link" data-scroll-target="#form-basics-.ncdpi-field">Form basics — <code>.ncdpi-field</code></a></li>
+  <li><a href="#whats-next" id="toc-whats-next" class="nav-link" data-scroll-target="#whats-next">What’s next</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+<!-- Skip link (WCAG 2.4.1 Bypass Blocks). First focusable element on the page;
+     visually hidden until focused, then jumps past the navbar to the main content.
+     Target id `quarto-document-content` is Quarto's <main> wrapper. -->
+<a href="#quarto-document-content" class="ncdpi-skip-link">Skip to main content</a>
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Design system — components</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Phase 2 of the design system: <strong>plain-CSS components</strong> built on <a href="../design-system/index.html">the token layer</a>. No framework, no build step — copy <code>theme/tokens.css</code> and <code>theme/ncdpi-ds.css</code> into a project and use the classes. Every color pairing below references semantic tokens only and is contrast-validated on every build (<a href="../design-system/contrast.html">the grid</a>); each component ships with when-to-use notes and an accessibility definition of done.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Where the shapes come from">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Where the shapes come from
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Component anatomy and accessibility contracts follow the government-grade exemplar systems (USWDS, GOV.UK). The <strong>skin</strong> is ours: First in Flight + warm professionalism. dpi.nc.gov was audited for <em>kinship</em>, not copied — its components are theme defaults, not documented decisions. One deliberate divergence: the live site’s buttons are full pills; ours keep the system’s subtle 6px radius. One deliberate adoption: the card’s navy top bar, the live site’s most distinctive house shape.</p>
+</div>
+</div>
+<section id="button-.ncdpi-btn" class="level2">
+<h2 class="anchored" data-anchor-id="button-.ncdpi-btn">Button — <code>.ncdpi-btn</code></h2>
+<p>Three variants, in descending visual weight. Works on <code>&lt;button&gt;</code> and <code>&lt;a&gt;</code>.</p>
+<div class="ds-demo">
+  <button class="ncdpi-btn ncdpi-btn--primary">Download the data</button>
+  <button class="ncdpi-btn ncdpi-btn--secondary">See the methodology</button>
+  <button class="ncdpi-btn ncdpi-btn--quiet">Cancel</button>
+  <button class="ncdpi-btn ncdpi-btn--primary" disabled="">Processing…</button>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-btn ncdpi-btn--primary"</span><span class="dt">&gt;</span>Download the data<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-btn ncdpi-btn--secondary"</span><span class="dt">&gt;</span>See the methodology<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-btn ncdpi-btn--quiet"</span><span class="dt">&gt;</span>Cancel<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>When to use.</strong> One primary button per view — the single action you most want taken. Secondary for the alternatives worth a border; quiet for low-stakes actions (cancel, dismiss) that shouldn’t compete. If it navigates, it’s an <code>&lt;a&gt;</code>; if it does something on the page, it’s a <code>&lt;button&gt;</code> — style is not semantics.</p>
+<p><strong>Definition of done.</strong> Focus-visible ring (3px <code>focus</code> token, 2px offset) · white-on-navy and white-on-hover-blue both validated 4.5:1 · disabled state uses the WCAG disabled exemption knowingly · motion respects <code>prefers-reduced-motion</code> · never a <code>&lt;div onclick&gt;</code>.</p>
+</section>
+<section id="callout-.ncdpi-callout" class="level2">
+<h2 class="anchored" data-anchor-id="callout-.ncdpi-callout">Callout — <code>.ncdpi-callout</code></h2>
+<p>Info (default), danger, neutral. The title’s <strong>word</strong> carries the meaning; color reinforces it but never carries it alone.</p>
+<div class="ds-demo">
+  <div class="ncdpi-callout ncdpi-callout--info">
+    <strong class="ncdpi-callout__title">Note</strong>
+    Graduation-rate data for 2025–26 is embargoed until September 2. Charts
+    on this page show the prior cohort.
+  </div>
+  <div class="ncdpi-callout ncdpi-callout--danger">
+    <strong class="ncdpi-callout__title">Important</strong>
+    This file contains student-level identifiers. Do not upload it — use the
+    de-identified extract instead.
+  </div>
+  <div class="ncdpi-callout ncdpi-callout--neutral">
+    <strong class="ncdpi-callout__title">Background</strong>
+    District values are unweighted means of school rates — demonstration
+    data, not official statistics.
+  </div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-callout ncdpi-callout--danger"</span><span class="dt">&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">strong</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-callout__title"</span><span class="dt">&gt;</span>Important<span class="dt">&lt;/</span><span class="kw">strong</span><span class="dt">&gt;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  This file contains student-level identifiers. Do not upload it.</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>When to use.</strong> Info for asides the reader can skip; danger for consequences (data loss, PII, compliance) — and <em>only</em> consequences, because red is the alert channel, never decoration (that’s DIT’s own live practice); neutral for background that shouldn’t tint the page blue. <strong>Don’t put links in a neutral callout</strong> — the link blue is deliberately not claimed on the sunken fill.</p>
+<p><strong>Definition of done.</strong> Title word names the severity · body ink is near-black on every tint (both pairings machine-validated) · <code>role="alert"</code> only when injected dynamically — static callouts need no role · left border is ≥3:1 against the fill or purely decorative reinforcement.</p>
+</section>
+<section id="card-.ncdpi-card" class="level2">
+<h2 class="anchored" data-anchor-id="card-.ncdpi-card">Card — <code>.ncdpi-card</code></h2>
+<p>The workhorse container. <code>--accent-top</code> adds the navy top bar — the kinship cue adopted from dpi.nc.gov’s CTA cards.</p>
+<div class="ds-demo">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;">
+    <div class="ncdpi-card ncdpi-card--accent-top">
+      <h3 class="ncdpi-card__title anchored" style="margin-top:0;"><a href="../design-system/index.html">Token reference</a></h3>
+      <p class="ncdpi-card__meta">Updated August 2026</p>
+      <p style="margin:0;">Every color, type, space, and radius token, with
+      the contrast guarantees each one makes.</p>
+    </div>
+    <div class="ncdpi-card">
+      <h3 class="ncdpi-card__title anchored" style="margin-top:0;">Plain card</h3>
+      <p style="margin:0;">No top bar, shadow at rest. Use for content that
+      sits beside an accented sibling.</p>
+    </div>
+    <div class="ncdpi-card ncdpi-card--flat">
+      <h3 class="ncdpi-card__title anchored" style="margin-top:0;">Flat card</h3>
+      <p style="margin:0;">Border only. Use inside dense layouts where
+      stacked shadows get noisy.</p>
+    </div>
+  </div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-card ncdpi-card--accent-top"</span><span class="dt">&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">h3</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-card__title"</span><span class="dt">&gt;&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"…"</span><span class="dt">&gt;</span>Token reference<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;/</span><span class="kw">h3</span><span class="dt">&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-card__meta"</span><span class="dt">&gt;</span>Updated August 2026<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Every color, type, space, and radius token…<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>When to use.</strong> Grouping one self-contained thing — a link target, a summary, a download. Not for laying out whole pages (that’s spacing’s job), and not nested inside another card. <strong>Linked cards: the title is the link.</strong> Whole-card click targets break text selection and flood screen-reader link lists; the focus ring on the card (via <code>:has()</code>) keeps the affordance visible.</p>
+<p><strong>Definition of done.</strong> Heading level fits the page outline (the class styles any of h2–h4) · title link keyboard-reachable with a visible ring · card never traps focus · reads correctly with CSS off (it’s just a heading and paragraphs).</p>
+</section>
+<section id="badge-.ncdpi-badge" class="level2">
+<h2 class="anchored" data-anchor-id="badge-.ncdpi-badge">Badge — <code>.ncdpi-badge</code></h2>
+<p>Compact status labels. Neutral (default), info, accent, outline.</p>
+<div class="ds-demo">
+  <span class="ncdpi-badge">Draft</span>
+  <span class="ncdpi-badge ncdpi-badge--info">2024–25 cohort</span>
+  <span class="ncdpi-badge ncdpi-badge--accent">Embargoed</span>
+  <span class="ncdpi-badge ncdpi-badge--outline">115 districts</span>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-badge ncdpi-badge--info"</span><span class="dt">&gt;</span>2024–25 cohort<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-badge ncdpi-badge--accent"</span><span class="dt">&gt;</span>Embargoed<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>When to use.</strong> One or two words of status or count, next to the thing they describe. Accent is the alert-family red — reserve it for states a reader must not miss (embargoed, action required), never for decoration. A badge is text, not a control: if it’s clickable, it’s a button or link wearing the wrong class.</p>
+<p><strong>Definition of done.</strong> Every variant ≥4.5:1 despite the 14px size (held to normal-text AA, not the large-text discount) · never the only carrier of the status (the row’s text or an <code>aria-label</code> says it too) · not focusable.</p>
+</section>
+<section id="stat-tile-.ncdpi-stat" class="level2">
+<h2 class="anchored" data-anchor-id="stat-tile-.ncdpi-stat">Stat tile — <code>.ncdpi-stat</code></h2>
+<p>The BAN component — and the design system’s <strong>D2 boundary worked example</strong>. The ruling (PLAN.md, session 32): a stat tile is <em>UI chrome with a chart-world number</em>. It renders in Source Sans, because it lives in the page and is never exported — but its data semantics follow chart conventions: valence colors come from the <strong>dataviz palettes</strong> (via the read-only <code>--ncdpi-chart-*</code> mirror, never First in Flight), and it carries a C7-style source line. A BAN that must be exported to PowerPoint or print is chart-creator’s matplotlib BAN — sibling, not rival.</p>
+<div class="ds-demo">
+  <div class="ncdpi-stat-row">
+    <div class="ncdpi-stat">
+      <span class="ncdpi-stat__label">4-year cohort graduation rate</span>
+      <span class="ncdpi-stat__value">86.4%</span>
+      <span class="ncdpi-stat__delta ncdpi-stat__delta--good">▲ up 1.2 pts from 2024</span>
+      <span class="ncdpi-stat__source">Source: NC School Report Cards, 2025. Demonstration data.</span>
+    </div>
+    <div class="ncdpi-stat">
+      <span class="ncdpi-stat__label">Chronic absenteeism</span>
+      <span class="ncdpi-stat__value">24.1%</span>
+      <span class="ncdpi-stat__delta ncdpi-stat__delta--bad">▲ up 0.8 pts from 2024</span>
+      <span class="ncdpi-stat__source">Source: NCDPI attendance files, 2025. Demonstration data.</span>
+    </div>
+    <div class="ncdpi-stat">
+      <span class="ncdpi-stat__label">Districts reporting</span>
+      <span class="ncdpi-stat__value">115</span>
+      <span class="ncdpi-stat__delta">all LEAs, no change</span>
+      <span class="ncdpi-stat__source">Source: NCDPI LEA directory, 2025.</span>
+    </div>
+  </div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-stat"</span><span class="dt">&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-stat__label"</span><span class="dt">&gt;</span>4-year cohort graduation rate<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-stat__value"</span><span class="dt">&gt;</span>86.4%<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-stat__delta ncdpi-stat__delta--good"</span><span class="dt">&gt;</span>▲ up 1.2 pts from 2024<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-stat__source"</span><span class="dt">&gt;</span>Source: NC School Report Cards, 2025.<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>When to use.</strong> The number <em>is</em> the message (BAN rules apply — see <a href="../chart-types/kpis.html">the KPI page</a>): label first so the number has a question to answer, one decimal at most, delta gives the number its “compared to what.” Note the middle tile: absenteeism went <strong>up</strong>, which is <em>bad</em> — valence follows meaning, not direction. That’s why the class is <code>--good</code>/<code>--bad</code>, not up/down.</p>
+<p><strong>Definition of done.</strong> Direction stated in words or sign, never color alone (the ▲ is decoration; “up … from 2024” is the content) · valence colors verified 4.5:1 on both tile surfaces · source line present (C7) · label, value, delta, source read in that order in the DOM.</p>
+</section>
+<section id="header-footer-.ncdpi-header-.ncdpi-footer" class="level2">
+<h2 class="anchored" data-anchor-id="header-footer-.ncdpi-header-.ncdpi-footer">Header &amp; footer — <code>.ncdpi-header</code> / <code>.ncdpi-footer</code></h2>
+<p>The brand band. The logo drops into the brand slot as an <code>&lt;img&gt;</code> — use a white/reversed mark on the navy; <a href="../design-system/logo.html">the logo page</a> covers which file, sizing, and alt text. The component only reserves the slot.</p>
+<div class="ds-demo">
+  <div style="flex:1 1 100%;">
+    <header class="ncdpi-header" style="border-radius:6px;">
+      <span class="ncdpi-header__brand">NC Department of Public Instruction</span>
+      <span class="ncdpi-header__tagline">Educator Preparation Data</span>
+    </header>
+    <div style="height:8px;"></div>
+    <footer class="ncdpi-footer" style="border-radius:6px;">
+      Questions? <a href="../resources.html">Contact the data team</a> ·
+      Data current as of August 2026
+    </footer>
+  </div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">header</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-header"</span><span class="dt">&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-header__brand"</span><span class="dt">&gt;&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"…white logo…"</span><span class="ot"> alt</span><span class="op">=</span><span class="st">"NC DPI"</span><span class="dt">&gt;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    NC Department of Public Instruction<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-header__tagline"</span><span class="dt">&gt;</span>Educator Preparation Data<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">header</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>When to use.</strong> Standalone HTML pages, dashboards, and apps that need to say whose they are — the style-guide site itself keeps Quarto’s navbar. Links inside the bands are white and underlined: the navy band is the one place link blue can’t go.</p>
+<p><strong>Definition of done.</strong> <code>&lt;header&gt;</code>/<code>&lt;footer&gt;</code> landmarks, not divs · white on navy validated (<code>on-surface-brand</code>) · logo <code>&lt;img&gt;</code> carries alt text · tagline dim measured 11.1:1 (AAA headroom).</p>
+</section>
+<section id="data-table-.ncdpi-table" class="level2">
+<h2 class="anchored" data-anchor-id="data-table-.ncdpi-table">Data table — <code>.ncdpi-table</code></h2>
+<p>UI-chrome tables, on the tokens.</p>
+<div class="ds-demo">
+  
+<table class="ncdpi-table caption-top table">
+<caption>Graduation rate by SBE region, 2025</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">Region</th>
+<th class="num" data-quarto-table-cell-role="th" scope="col">Districts</th>
+<th class="num" data-quarto-table-cell-role="th" scope="col">Rate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="row">North Central</th>
+<td class="num">17</td>
+<td class="num">84.8%</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th" scope="row">Piedmont Triad</th>
+<td class="num">16</td>
+<td class="num">87.1%</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="row">Sandhills</th>
+<td class="num">14</td>
+<td class="num">80.0%</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th" scope="row">Southwest</th>
+<td class="num">12</td>
+<td class="num">88.3%</td>
+</tr>
+</tbody><tfoot>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="row">State</th>
+<td class="num">115</td>
+<td class="num">86.4%</td>
+</tr>
+</tfoot>
+
+</table>
+
+  <p style="font-size:0.82rem;color:#615D56;margin:0;">Demonstration data — unweighted means, not official statistics.</p>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">table</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-table"</span><span class="dt">&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">caption</span><span class="dt">&gt;</span>Graduation rate by SBE region, 2025<span class="dt">&lt;/</span><span class="kw">caption</span><span class="dt">&gt;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">thead</span><span class="dt">&gt;&lt;</span><span class="kw">tr</span><span class="dt">&gt;&lt;</span><span class="kw">th</span><span class="ot"> scope</span><span class="op">=</span><span class="st">"col"</span><span class="dt">&gt;</span>Region<span class="dt">&lt;/</span><span class="kw">th</span><span class="dt">&gt;&lt;</span><span class="kw">th</span><span class="ot"> scope</span><span class="op">=</span><span class="st">"col"</span><span class="ot"> class</span><span class="op">=</span><span class="st">"num"</span><span class="dt">&gt;</span>Rate<span class="dt">&lt;/</span><span class="kw">th</span><span class="dt">&gt;&lt;/</span><span class="kw">tr</span><span class="dt">&gt;&lt;/</span><span class="kw">thead</span><span class="dt">&gt;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">tbody</span><span class="dt">&gt;&lt;</span><span class="kw">tr</span><span class="dt">&gt;&lt;</span><span class="kw">th</span><span class="ot"> scope</span><span class="op">=</span><span class="st">"row"</span><span class="dt">&gt;</span>Sandhills<span class="dt">&lt;/</span><span class="kw">th</span><span class="dt">&gt;&lt;</span><span class="kw">td</span><span class="ot"> class</span><span class="op">=</span><span class="st">"num"</span><span class="dt">&gt;</span>80.0%<span class="dt">&lt;/</span><span class="kw">td</span><span class="dt">&gt;&lt;/</span><span class="kw">tr</span><span class="dt">&gt;&lt;/</span><span class="kw">tbody</span><span class="dt">&gt;</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">table</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>When to use.</strong> Pages and apps — admin lists, roster views, dashboard detail. <strong>D2 boundary, same ruling as the stat tile:</strong> a table that <em>accompanies a chart</em> (the companion data table of the accessibility guidance) is a chart-world artifact and keeps the dataviz styling on the <a href="../chart-parts/table-elements.html">table elements page</a>; this component is for UI. Anatomy is non-negotiable: <code>&lt;caption&gt;</code> always, <code>scope</code> on every header cell, <code>.num</code> right-aligns with tabular figures.</p>
+<p><strong>Definition of done.</strong> Caption present · <code>th[scope]</code> on columns and rows · zebra stripes are the <em>sunken</em> token (body text validated on it) · numeric columns aligned on tabular figures · no layout tables, ever.</p>
+</section>
+<section id="tabs-.ncdpi-tabs" class="level2">
+<h2 class="anchored" data-anchor-id="tabs-.ncdpi-tabs">Tabs — <code>.ncdpi-tabs</code></h2>
+<p>The one component that ships behavior: <code>theme/ncdpi-ds.js</code> (optional third file, vanilla, ~100 lines) wires the WAI-ARIA tabs pattern. Without JS the panels simply stack — degraded, never broken.</p>
+<div class="ds-demo">
+  <div class="ncdpi-tabs" data-ncdpi-tabs="" style="flex:1 1 100%;">
+    <div class="ncdpi-tabs__list" aria-label="Geography">
+      <button class="ncdpi-tabs__tab" data-panel="tab-districts">Districts</button>
+      <button class="ncdpi-tabs__tab" data-panel="tab-counties">Counties</button>
+      <button class="ncdpi-tabs__tab" data-panel="tab-regions">SBE regions</button>
+    </div>
+    <div class="ncdpi-tabs__panel" id="tab-districts"><p style="margin:0;">115 local education agencies, matched by name, code, or official name.</p></div>
+    <div class="ncdpi-tabs__panel" id="tab-counties"><p style="margin:0;">100 counties, matched by name, DPI code (1–100), or FIPS.</p></div>
+    <div class="ncdpi-tabs__panel" id="tab-regions"><p style="margin:0;">8 State Board of Education regions, matched by name or number.</p></div>
+  </div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-tabs"</span><span class="ot"> data-ncdpi-tabs</span><span class="dt">&gt;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-tabs__list"</span><span class="ot"> aria-label</span><span class="op">=</span><span class="st">"Geography"</span><span class="dt">&gt;</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-tabs__tab"</span><span class="ot"> data-panel</span><span class="op">=</span><span class="st">"tab-districts"</span><span class="dt">&gt;</span>Districts<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    …</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-tabs__panel"</span><span class="ot"> id</span><span class="op">=</span><span class="st">"tab-districts"</span><span class="dt">&gt;</span>…<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> src</span><span class="op">=</span><span class="st">"theme/ncdpi-ds.js"</span><span class="dt">&gt;&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>When to use.</strong> Alternate views of the <em>same</em> thing (geographies of one dataset, code/preview of one example). Not for sequential steps (that’s a wizard) and not for unrelated content (those are pages). If users need to compare two panels side by side, tabs are the wrong pattern.</p>
+<p><strong>Definition of done.</strong> Arrow/Home/End keys move selection (roving tabindex) · roles and <code>aria-selected</code> set by the JS, never claimed in static markup · panel focusable · selected state marked by more than color (the 3px underline + text-color shift).</p>
+</section>
+<section id="breadcrumb-.ncdpi-breadcrumb" class="level2">
+<h2 class="anchored" data-anchor-id="breadcrumb-.ncdpi-breadcrumb">Breadcrumb — <code>.ncdpi-breadcrumb</code></h2>
+<div class="ds-demo">
+  <nav class="ncdpi-breadcrumb" aria-label="Breadcrumb (example)">
+    <ol>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../design-system/index.html">Design system</a></li>
+      <li aria-current="page">Components</li>
+    </ol>
+  </nav>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">nav</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-breadcrumb"</span><span class="ot"> aria-label</span><span class="op">=</span><span class="st">"Breadcrumb"</span><span class="dt">&gt;</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">ol</span><span class="dt">&gt;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">li</span><span class="dt">&gt;&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"/"</span><span class="dt">&gt;</span>Home<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;/</span><span class="kw">li</span><span class="dt">&gt;</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">li</span><span class="dt">&gt;&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"/data/"</span><span class="dt">&gt;</span>Data <span class="er">&amp;</span> Reports<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;/</span><span class="kw">li</span><span class="dt">&gt;</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">li</span><span class="ot"> aria-current</span><span class="op">=</span><span class="st">"page"</span><span class="dt">&gt;</span>Graduation rates<span class="dt">&lt;/</span><span class="kw">li</span><span class="dt">&gt;</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">ol</span><span class="dt">&gt;</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">nav</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>When to use.</strong> Three or more levels of real hierarchy. The current page is plain text with <code>aria-current="page"</code>, never a link; the <code>›</code> separator is CSS-generated so screen readers don’t read it as content.</p>
+<p><strong>Definition of done.</strong> <code>&lt;nav aria-label="Breadcrumb"&gt;</code> + <code>&lt;ol&gt;</code> · separator out of the accessibility tree · current page not focusable.</p>
+</section>
+<section id="skip-link-.ncdpi-skip-link" class="level2">
+<h2 class="anchored" data-anchor-id="skip-link-.ncdpi-skip-link">Skip link — <code>.ncdpi-skip-link</code></h2>
+<p>Promoted from the style-guide site (it’s been live since session 20 — WCAG 2.4.1). First focusable element on the page, hidden until focused.</p>
+<div class="ds-demo">
+  <div style="position:relative;overflow:hidden;height:64px;flex:1 1 100%;background:#fff;border:1px dashed #8A867C;border-radius:6px;">
+    <a href="#skip-demo-end" class="ncdpi-skip-link" style="position:absolute;">Skip to main content</a>
+    <p style="margin:40px 12px 0;color:#615D56;font-size:16px;">Click into this frame and press <kbd>Tab</kbd> — the link drops in from the top edge.</p>
+  </div>
+  <span id="skip-demo-end"></span>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"#main"</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-skip-link"</span><span class="dt">&gt;</span>Skip to main content<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">header</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-header"</span><span class="dt">&gt;</span>…<span class="dt">&lt;/</span><span class="kw">header</span><span class="dt">&gt;</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">main</span><span class="ot"> id</span><span class="op">=</span><span class="st">"main"</span><span class="dt">&gt;</span>…<span class="dt">&lt;/</span><span class="kw">main</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>When to use.</strong> Every page with repeated navigation before the content — which is every page. Point it at the <code>&lt;main&gt;</code> element’s id.</p>
+<p><strong>Definition of done.</strong> First element in the DOM · visible on focus with the ring · target id exists (a dead skip link is worse than none).</p>
+</section>
+<section id="chart-frame-.ncdpi-chartframe" class="level2">
+<h2 class="anchored" data-anchor-id="chart-frame-.ncdpi-chartframe">Chart frame — <code>.ncdpi-chartframe</code></h2>
+<p>The C2/C7 wrapper for charts embedded in pages and apps — and the D2 boundary’s <em>other</em> worked example: everything in this frame is <strong>chart-world text</strong> (Arial, chart-text colors, the dataviz guide’s pt sizes), because the frame belongs to the chart, not the page.</p>
+<div class="ds-demo">
+  <figure class="ncdpi-chartframe figure" style="flex:1 1 100%;margin:0;">
+    <div class="ncdpi-chartframe__title">Sandhills trails the state in grad rate</div>
+    <div class="ncdpi-chartframe__subtitle">4-year cohort graduation rate by SBE region, 2025</div>
+    <div class="ncdpi-chartframe__body">
+      <svg role="img" aria-label="Placeholder bar chart: four regional bars with Sandhills shortest" viewbox="0 0 420 96" style="max-width:420px;display:block;">
+        <rect x="0" y="6" width="352" height="14" fill="#B7B9BB"></rect>
+        <rect x="0" y="28" width="368" height="14" fill="#B7B9BB"></rect>
+        <rect x="0" y="50" width="320" height="14" fill="#003A70"></rect>
+        <rect x="0" y="72" width="372" height="14" fill="#B7B9BB"></rect>
+        <line x1="0" y1="0" x2="0" y2="96" stroke="#525A60" stroke-width="2"></line>
+      </svg>
+    </div>
+    <div class="ncdpi-chartframe__source">Source: NC School Report Cards, 2025. Demonstration data.</div>
+  </figure>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">figure</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-chartframe"</span><span class="dt">&gt;</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-chartframe__title"</span><span class="dt">&gt;</span>Message title, not a topic label<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-chartframe__subtitle"</span><span class="dt">&gt;</span>Measure, population, year — the contract<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-chartframe__body"</span><span class="dt">&gt;</span><span class="co">&lt;!-- the chart --&gt;</span><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-chartframe__source"</span><span class="dt">&gt;</span>Source: …<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">figure</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>When to use.</strong> Any chart dropped into an app or HTML page (the map-maker retrofit is the intended first consumer). Title states the message; subtitle is the contract (measure, population, year); source line always (C7); all four share the left edge (C2). On the style-guide site itself, <code>chart-loader.js</code> already renders this structure for Vega specs — this class packages the same anatomy for everything else.</p>
+<p><strong>Definition of done.</strong> All text Arial at the chart sizes (14pt title, 11pt subtitle/source as px) · shared left edge, no centered titles · source line present · the chart body carries its own alt text (<code>role="img"</code> + label, or a companion table).</p>
+</section>
+<section id="form-basics-.ncdpi-field" class="level2">
+<h2 class="anchored" data-anchor-id="form-basics-.ncdpi-field">Form basics — <code>.ncdpi-field</code></h2>
+<p>Deliberately minimal (label + control + help + error). Form-heavy coverage is out of scope until adoption demands it.</p>
+<div class="ds-demo">
+  <div style="flex:1 1 100%;">
+    <div class="ncdpi-field">
+      <label class="ncdpi-field__label" for="demo-goal">Goal value</label>
+      <p class="ncdpi-field__help" id="demo-goal-help">The value the darkest map color should represent — often 100.</p>
+      <input class="ncdpi-input" id="demo-goal" type="text" inputmode="numeric" aria-describedby="demo-goal-help" value="100">
+    </div>
+    <div class="ncdpi-field ncdpi-field--error">
+      <label class="ncdpi-field__label" for="demo-year">Reporting year</label>
+      <input class="ncdpi-input" id="demo-year" type="text" inputmode="numeric" aria-describedby="demo-year-error" value="2031" aria-invalid="true">
+      <p class="ncdpi-field__error" id="demo-year-error">Error: enter a year between 2015 and 2026.</p>
+    </div>
+  </div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-field ncdpi-field--error"</span><span class="dt">&gt;</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">label</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-field__label"</span><span class="ot"> for</span><span class="op">=</span><span class="st">"year"</span><span class="dt">&gt;</span>Reporting year<span class="dt">&lt;/</span><span class="kw">label</span><span class="dt">&gt;</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-input"</span><span class="ot"> id</span><span class="op">=</span><span class="st">"year"</span><span class="ot"> aria-describedby</span><span class="op">=</span><span class="st">"year-error"</span><span class="ot"> aria-invalid</span><span class="op">=</span><span class="st">"true"</span><span class="dt">&gt;</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-field__error"</span><span class="ot"> id</span><span class="op">=</span><span class="st">"year-error"</span><span class="dt">&gt;</span>Error: enter a year between 2015 and 2026.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>When to use.</strong> The occasional input a data product needs (a goal value, a filter, an email field) — not full multi-step forms. Error messages name the problem <em>and</em> the fix, in words (“Error: enter a year between 2015 and 2026”), never just a red border.</p>
+<p><strong>Definition of done.</strong> Real <code>&lt;label for&gt;</code> on every control · help and error text wired via <code>aria-describedby</code> · <code>aria-invalid</code> on the failed control · error color never the only signal (the message text is) · border ≥3:1 in both states.</p>
+</section>
+<section id="whats-next" class="level2">
+<h2 class="anchored" data-anchor-id="whats-next">What’s next</h2>
+<p>All ~12 Phase-2 components now exist. Remaining in Phase 2: the <a href="../design-system/voice.html">voice &amp; microcopy page</a>. Then Phase 3 per <code>design-system/PLAN.md</code>: page templates and the <strong>map-maker retrofit</strong> — the design system’s first real consumer.</p>
+<script>(function(){var el=document.querySelector('link[href*="site_libs/"],script[src*="site_libs/"]');var root=el?(el.href||el.src).replace(/site_libs\/.*$/,''):'';['theme/tokens.css','theme/ncdpi-ds.css'].forEach(function(p){var l=document.createElement('link');l.rel='stylesheet';l.href=root+p;document.head.appendChild(l);});var s=document.createElement('script');s.src=root+'theme/ncdpi-ds.js';document.body.appendChild(s);})();</script>
+
+
+</section>
+
+</main> <!-- /main -->
+<!-- Vega / Vega-Lite / Vega-Embed (pinned) + NCDPI chart loader.
+     Injected on every page via _quarto.yml include-after-body. -->
+<script src="https://cdn.jsdelivr.net/npm/vega@5.30.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.21.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.26.0"></script>
+<script>
+  // Load chart-loader.js from the correct site root (sub-path safe).
+  (function () {
+    var el = document.querySelector('link[href*="site_libs/"], script[src*="site_libs/"]');
+    var root = el ? (el.href || el.src).replace(/site_libs\/.*$/, "") : "";
+    var s = document.createElement("script");
+    s.src = root + "js/chart-loader.js";
+    s.setAttribute("data-ncdpi-loader", "");
+    document.head.appendChild(s);
+  })();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/abax70\.github\.io\/ncdpi-data-visualization-public\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../design-system/contrast.html" class="pagination-link" aria-label="Design system — contrast grid">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Design system — contrast grid</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../design-system/logo.html" class="pagination-link" aria-label="Design system — logo">
+        <span class="nav-page-text">Design system — logo</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>NC Department of Public Instruction</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Built with Quarto · <a href="https://github.com/abax70/ncdpi-data-visualization-public">Source</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

@@ -47,7 +47,7 @@
       "value": "#CF1F42",
       "ref": null,
       "type": "color",
-      "description": "Accent crimson. L 0.146; 5.4:1 with white text."
+      "description": "Accent crimson. L 0.146; 5.4:1 with white text. NO SEMANTIC JOB (session-32 ruling): the live-site audit (dpi-site-color-audit.md, 2026-08-04) found dpi.nc.gov never paints this hex \u2014 the accent family's real job is alert/error/small-accent, led by accent-dark. Stays a primitive until a role earns it."
     },
     {
       "path": "color.brand.accent-dark",
@@ -268,10 +268,10 @@
     {
       "path": "color.semantic.accent",
       "cssVar": "--ncdpi-accent",
-      "value": "#CF1F42",
-      "ref": "{color.brand.accent}",
+      "value": "#BC2442",
+      "ref": "{color.brand.accent-dark}",
       "type": "color",
-      "description": "The crimson accent as a fill (primary buttons of the loud kind, badges)."
+      "description": "Accent as a fill (badges, rare loud emphasis). Points at accent-dark #BC2442, NOT the bright crimson \u2014 session-32 ruling, following live-site practice (dpi-site-color-audit.md): #BC2442 leads the accent family on dpi.nc.gov; #CF1F42 is never painted there."
     },
     {
       "path": "color.semantic.on-accent",
@@ -280,6 +280,46 @@
       "ref": "{color.brand.white}",
       "type": "color",
       "description": ""
+    },
+    {
+      "path": "color.semantic.danger",
+      "cssVar": "--ncdpi-danger",
+      "value": "#BC2442",
+      "ref": "{color.brand.accent-dark}",
+      "type": "color",
+      "description": "Error/alert semantics: form errors, destructive actions, breaking alerts \u2014 the accent family's actual live-site job (audit 2026-08-04). Same hex as accent today, but a separate token so a future re-skin can split emphasis from error without touching components."
+    },
+    {
+      "path": "color.semantic.on-danger",
+      "cssVar": "--ncdpi-on-danger",
+      "value": "#FFFFFF",
+      "ref": "{color.brand.white}",
+      "type": "color",
+      "description": ""
+    },
+    {
+      "path": "color.semantic.action",
+      "cssVar": "--ncdpi-action",
+      "value": "#092940",
+      "ref": "{color.brand.primary}",
+      "type": "color",
+      "description": "Primary interactive fill \u2014 the default button. Navy, not the live site's #1E79C8 pill fill: that blue passes 4.5:1 on pure white only, and our surfaces are warm (see the component-recon addendum in dpi-site-color-audit.md)."
+    },
+    {
+      "path": "color.semantic.on-action",
+      "cssVar": "--ncdpi-on-action",
+      "value": "#FFFFFF",
+      "ref": "{color.brand.white}",
+      "type": "color",
+      "description": "Text on action AND action-hover \u2014 both claims validated."
+    },
+    {
+      "path": "color.semantic.action-hover",
+      "cssVar": "--ncdpi-action-hover",
+      "value": "#3B75A9",
+      "ref": "{color.brand.secondary-dark}",
+      "type": "color",
+      "description": "Primary button hover/active fill \u2014 lightens toward the link blue; white text still passes (4.9:1)."
     },
     {
       "path": "color.semantic.text-primary",

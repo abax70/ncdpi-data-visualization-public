@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Chart elements – NCDPI Data Visualization Style Guide</title>
+<title>Design system — voice &amp; microcopy – NCDPI Data Visualization Style Guide</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -33,7 +33,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../chart-parts/table-elements.html" rel="next">
+<link href="../design-system/logo.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -194,7 +194,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chart-parts/chart-elements.html">Chart elements</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../design-system/voice.html">Design system — voice &amp; microcopy</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -208,26 +208,32 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chart-parts/chart-elements.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Chart elements</span></a>
+  <a href="../design-system/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Design system — tokens</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chart-parts/table-elements.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Table elements</span></a>
+  <a href="../design-system/contrast.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Design system — contrast grid</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chart-parts/dashboard-elements.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dashboard elements</span></a>
+  <a href="../design-system/components.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Design system — components</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chart-parts/tooltips.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tooltips</span></a>
+  <a href="../design-system/logo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Design system — logo</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../design-system/voice.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Design system — voice &amp; microcopy</span></a>
   </div>
 </li>
     </ul>
@@ -240,15 +246,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#anatomy-of-an-ncdpi-chart" id="toc-anatomy-of-an-ncdpi-chart" class="nav-link active" data-scroll-target="#anatomy-of-an-ncdpi-chart">Anatomy of an NCDPI chart</a></li>
-  <li><a href="#gridlines-axes-and-rulers" id="toc-gridlines-axes-and-rulers" class="nav-link" data-scroll-target="#gridlines-axes-and-rulers">Gridlines, axes, and rulers</a></li>
-  <li><a href="#the-zero-baseline-rule" id="toc-the-zero-baseline-rule" class="nav-link" data-scroll-target="#the-zero-baseline-rule">The zero-baseline rule</a></li>
-  <li><a href="#labels-over-legends" id="toc-labels-over-legends" class="nav-link" data-scroll-target="#labels-over-legends">Labels over legends</a></li>
+  <li><a href="#the-register" id="toc-the-register" class="nav-link active" data-scroll-target="#the-register">The register</a></li>
+  <li><a href="#principles" id="toc-principles" class="nav-link" data-scroll-target="#principles">Principles</a></li>
+  <li><a href="#error-messages" id="toc-error-messages" class="nav-link" data-scroll-target="#error-messages">Error messages</a></li>
+  <li><a href="#empty-states-and-waiting" id="toc-empty-states-and-waiting" class="nav-link" data-scroll-target="#empty-states-and-waiting">Empty states and waiting</a></li>
+  <li><a href="#words-we-watch" id="toc-words-we-watch" class="nav-link" data-scroll-target="#words-we-watch">Words we watch</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 <!-- Skip link (WCAG 2.4.1 Bypass Blocks). First focusable element on the page;
      visually hidden until focused, then jumps past the navbar to the main content.
      Target id `quarto-document-content` is Quarto's <main> wrapper. -->
@@ -256,7 +263,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Chart elements</h1>
+<h1 class="title">Design system — voice &amp; microcopy</h1>
 </div>
 
 
@@ -273,35 +280,72 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>The non-data parts of a chart should recede so the data can speak. NCDPI defaults keep them quiet and consistent.</p>
-<section id="anatomy-of-an-ncdpi-chart" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="anatomy-of-an-ncdpi-chart">Anatomy of an NCDPI chart</h2>
-<p>Every piece of the chart below is set by the brand spec — fonts, sizes, colors, and spacing — so a reader who has seen one NCDPI chart already knows how to read the next one.</p>
-<div class="quarto-figure quarto-figure-center page-columns page-full">
-<figure class="figure page-columns page-full">
-<p class="page-columns page-full"><img src="../assets/chart-anatomy.svg" class="ncdpi-anatomy img-fluid figure-img column-page" alt="Annotated horizontal bar chart with callouts pointing to the title, subtitle, y-axis category labels, x-axis numeric values, gridlines, individual data bars, a Plum annotation highlighting one bar, and the source note at the bottom."></p>
-<figcaption>Anatomy of an NCDPI chart — labeled callouts for title, subtitle, axis labels, axis values, data marks, annotation, gridlines, and source note.</figcaption>
-</figure>
-</div>
+<p>The design system’s warmth comes from <strong>space, color temperature, softness, and words</strong> (decision D1) — and this page is the words. It is deliberately short: a few principles and worked patterns, not a style manual.</p>
+<section id="the-register" class="level2">
+<h2 class="anchored" data-anchor-id="the-register">The register</h2>
+<p>Write like a knowledgeable colleague helping someone succeed — not like a system reporting on a user. The center-of-gravity reader is a State Board member or DPI leader; everything must survive being read aloud in a Board meeting. Warm, plain, unhurried. No exclamation points doing the warmth’s job.</p>
+<p><strong>The canonical example</strong> is the map-maker’s upload prompt: <em>“we’ll draw the map”</em> — first person plural, future promise, zero jargon. That’s the voice.</p>
 </section>
-<section id="gridlines-axes-and-rulers" class="level2">
-<h2 class="anchored" data-anchor-id="gridlines-axes-and-rulers">Gridlines, axes, and rulers</h2>
+<section id="principles" class="level2">
+<h2 class="anchored" data-anchor-id="principles">Principles</h2>
+<ol type="1">
+<li><strong>Plain words over department words.</strong> “Schools that report” beats “reporting entities.” If a term is unavoidable (LEA, cohort), use it consistently and let context teach it.</li>
+<li><strong>The interface takes responsibility.</strong> “We couldn’t match 3 rows” — not “3 rows were invalid” and never “you entered invalid data.”</li>
+<li><strong>Say what happens next.</strong> Every action label is a verb phrase that finishes the sentence “I want to…”: <em>Download the data</em>, <em>Draw the map</em>, <em>Check my file</em>.</li>
+<li><strong>Numbers get context.</strong> Never a bare “86.4%” in prose — “86.4% of the 2025 cohort graduated in four years.”</li>
+<li><strong>Honesty over reassurance.</strong> If data is demo data, embargoed, or unofficial, the words say so — the same discipline the chart conventions require of subtitles.</li>
+</ol>
+</section>
+<section id="error-messages" class="level2">
+<h2 class="anchored" data-anchor-id="error-messages">Error messages</h2>
+<p>The pattern (also the form component’s definition of done): <strong>name the problem, then the fix, in one breath.</strong></p>
+<!-- raw HTML rather than a pipe table so the header cells can carry
+     scope="col" — the same rule the components page's table contract
+     teaches (Quarto pipe tables emit <th> without scope). -->
+
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">Instead of</th>
+<th data-quarto-table-cell-role="th" scope="col">Write</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>"Invalid input."</td>
+<td>"Error: enter a year between 2015 and 2026."</td>
+</tr>
+<tr class="even">
+<td>"Upload failed."</td>
+<td>"We couldn't read that file — it needs to be a CSV or Excel file."</td>
+</tr>
+<tr class="odd">
+<td>"Access denied."</td>
+<td>"This file looks like it has student-level data. Use the de-identified extract instead."</td>
+</tr>
+<tr class="even">
+<td>"Unmatched records found."</td>
+<td>"We couldn't match 3 rows to a district — check their spelling in the report below."</td>
+</tr>
+</tbody>
+</table>
+<p>Error text is a <strong>danger</strong>-token moment and the only routine use of red. The words carry the meaning; the color reinforces it.</p>
+</section>
+<section id="empty-states-and-waiting" class="level2">
+<h2 class="anchored" data-anchor-id="empty-states-and-waiting">Empty states and waiting</h2>
 <ul>
-<li><strong>Gridlines</strong> are light grey <code>#DEDEDE</code> — present enough to support reading a value, faint enough to disappear behind the data.</li>
-<li><strong>Axis rulers and dividers</strong> use the same light grey. Drop the top and right spines entirely.</li>
-<li><strong>Reference lines</strong> (a target, the state average) are DPI Blue <code>#003A70</code> so they read as deliberate, not as data.</li>
+<li>Empty is an invitation, not an absence: “Upload a spreadsheet and we’ll draw the map” — never “No data.”</li>
+<li>Waiting text tells the truth in present tense: “Matching your districts…” If it can be slow, say roughly why once: “Reading 115 districts…”</li>
 </ul>
 </section>
-<section id="the-zero-baseline-rule" class="level2">
-<h2 class="anchored" data-anchor-id="the-zero-baseline-rule">The zero-baseline rule</h2>
-<p>Bars and areas encode value by length or area, so they <strong>must</strong> start at zero. Truncating the axis exaggerates differences and is the single most common way a chart misleads. Lines and dot plots may use a non-zero baseline — but say so if you do.</p>
-</section>
-<section id="labels-over-legends" class="level2">
-<h2 class="anchored" data-anchor-id="labels-over-legends">Labels over legends</h2>
-<p>When there are seven or fewer items, <strong>label them directly</strong> rather than making the reader bounce between a legend and the data. Reserve legends for when direct labels would collide.</p>
-<div class="ncdpi-callout">
-<p>Declutter, don’t decorate. Every gridline, tick, and label should earn its place. If removing it doesn’t cost the reader anything, remove it.</p>
-</div>
+<section id="words-we-watch" class="level2">
+<h2 class="anchored" data-anchor-id="words-we-watch">Words we watch</h2>
+<ul>
+<li><strong>“Please”</strong> — sparingly; instructions don’t need begging (“Choose a file”, not “Please choose a file”).</li>
+<li><strong>“Simply” / “just”</strong> — never; if it were simple they wouldn’t be reading help text.</li>
+<li><strong>“Failed” / “illegal” / “forbidden”</strong> — system words; say what actually happened instead.</li>
+<li><strong>Empty cheer</strong> (“Oops!”, “Uh-oh!”) — warmth without information is noise; skip it.</li>
+</ul>
 
 
 </section>
@@ -730,11 +774,11 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../design-system/logo.html" class="pagination-link" aria-label="Design system — logo">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Design system — logo</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chart-parts/table-elements.html" class="pagination-link" aria-label="Table elements">
-        <span class="nav-page-text">Table elements</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

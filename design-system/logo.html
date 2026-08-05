@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Chart elements – NCDPI Data Visualization Style Guide</title>
+<title>Design system — logo – NCDPI Data Visualization Style Guide</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -33,7 +68,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../chart-parts/table-elements.html" rel="next">
+<link href="../design-system/voice.html" rel="next">
+<link href="../design-system/components.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -194,7 +230,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chart-parts/chart-elements.html">Chart elements</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../design-system/logo.html">Design system — logo</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -208,26 +244,32 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chart-parts/chart-elements.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Chart elements</span></a>
+  <a href="../design-system/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Design system — tokens</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chart-parts/table-elements.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Table elements</span></a>
+  <a href="../design-system/contrast.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Design system — contrast grid</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chart-parts/dashboard-elements.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dashboard elements</span></a>
+  <a href="../design-system/components.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Design system — components</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chart-parts/tooltips.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tooltips</span></a>
+  <a href="../design-system/logo.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Design system — logo</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../design-system/voice.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Design system — voice &amp; microcopy</span></a>
   </div>
 </li>
     </ul>
@@ -240,15 +282,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#anatomy-of-an-ncdpi-chart" id="toc-anatomy-of-an-ncdpi-chart" class="nav-link active" data-scroll-target="#anatomy-of-an-ncdpi-chart">Anatomy of an NCDPI chart</a></li>
-  <li><a href="#gridlines-axes-and-rulers" id="toc-gridlines-axes-and-rulers" class="nav-link" data-scroll-target="#gridlines-axes-and-rulers">Gridlines, axes, and rulers</a></li>
-  <li><a href="#the-zero-baseline-rule" id="toc-the-zero-baseline-rule" class="nav-link" data-scroll-target="#the-zero-baseline-rule">The zero-baseline rule</a></li>
-  <li><a href="#labels-over-legends" id="toc-labels-over-legends" class="nav-link" data-scroll-target="#labels-over-legends">Labels over legends</a></li>
+  <li><a href="#which-file-do-i-use" id="toc-which-file-do-i-use" class="nav-link active" data-scroll-target="#which-file-do-i-use">Which file do I use?</a></li>
+  <li><a href="#on-our-surfaces" id="toc-on-our-surfaces" class="nav-link" data-scroll-target="#on-our-surfaces">On our surfaces</a></li>
+  <li><a href="#placement-and-size-web" id="toc-placement-and-size-web" class="nav-link" data-scroll-target="#placement-and-size-web">Placement and size (web)</a></li>
+  <li><a href="#accessibility" id="toc-accessibility" class="nav-link" data-scroll-target="#accessibility">Accessibility</a></li>
+  <li><a href="#the-logos-colors-and-a-known-quirk" id="toc-the-logos-colors-and-a-known-quirk" class="nav-link" data-scroll-target="#the-logos-colors-and-a-known-quirk">The logo’s colors — and a known quirk</a></li>
+  <li><a href="#where-the-assets-live" id="toc-where-the-assets-live" class="nav-link" data-scroll-target="#where-the-assets-live">Where the assets live</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 <!-- Skip link (WCAG 2.4.1 Bypass Blocks). First focusable element on the page;
      visually hidden until focused, then jumps past the navbar to the main content.
      Target id `quarto-document-content` is Quarto's <main> wrapper. -->
@@ -256,7 +300,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Chart elements</h1>
+<h1 class="title">Design system — logo</h1>
 </div>
 
 
@@ -273,35 +317,132 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>The non-data parts of a chart should recede so the data can speak. NCDPI defaults keep them quiet and consistent.</p>
-<section id="anatomy-of-an-ncdpi-chart" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="anatomy-of-an-ncdpi-chart">Anatomy of an NCDPI chart</h2>
-<p>Every piece of the chart below is set by the brand spec — fonts, sizes, colors, and spacing — so a reader who has seen one NCDPI chart already knows how to read the next one.</p>
-<div class="quarto-figure quarto-figure-center page-columns page-full">
-<figure class="figure page-columns page-full">
-<p class="page-columns page-full"><img src="../assets/chart-anatomy.svg" class="ncdpi-anatomy img-fluid figure-img column-page" alt="Annotated horizontal bar chart with callouts pointing to the title, subtitle, y-axis category labels, x-axis numeric values, gridlines, individual data bars, a Plum annotation highlighting one bar, and the source note at the bottom."></p>
-<figcaption>Anatomy of an NCDPI chart — labeled callouts for title, subtitle, axis labels, axis values, data marks, annotation, gridlines, and source note.</figcaption>
-</figure>
-</div>
+<p>How to use the NCDPI logo in the things this system builds — pages, dashboards, and apps. The <strong>canonical sources are the graphics team’s</strong>: the DPI Logo Kit (assets + <code>Logo Kit Guidelines.pdf</code>) and the DPI Style Guide. This page is the usage layer — which file, on what background, at what size — plus the web-specific rules (alt text, linking) the print guidance doesn’t cover. Need a format the kit doesn’t ship? Ask the graphics team at <a href="mailto:graphics@dpi.nc.gov" class="email">graphics@dpi.nc.gov</a> — don’t build one.</p>
+<section id="which-file-do-i-use" class="level2">
+<h2 class="anchored" data-anchor-id="which-file-do-i-use">Which file do I use?</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">Context</th>
+<th data-quarto-table-cell-role="th" scope="col">Use</th>
+<th data-quarto-table-cell-role="th" scope="col">File</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Web page or app, light background</td>
+<td>Horizontal, blue</td>
+<td><code>NCDPI-Horizontal-Blue.svg</code></td>
+</tr>
+<tr class="even">
+<td>Navy or dark band (header, footer)</td>
+<td>Horizontal, white</td>
+<td><code>NCDPI-Horizontal-White.svg</code></td>
+</tr>
+<tr class="odd">
+<td>Tableau dashboard</td>
+<td>Tableau-ready PNG (@2x)</td>
+<td><code>Tableau Ready Logos/</code> — blue, white, dark-navy, white-on-blue</td>
+</tr>
+<tr class="even">
+<td>Square slot — partner-logo grids, app icons</td>
+<td>Centered version, or the square icon (sparingly)</td>
+<td><code>Centered Version/</code> · <code>NCDPI Icon-web-apps-small/</code></td>
+</tr>
+<tr class="odd">
+<td>Print, vendors, media</td>
+<td>Vector from the kit</td>
+<td><code>.eps</code> / <code>.pdf</code> (Pantone, fonts outlined)</td>
+</tr>
+</tbody>
+</table>
+<p>The preference order comes straight from the Logo Kit Guidelines: <strong>the horizontal version for most applications, blue as the first choice</strong>; <strong>white on dark backgrounds</strong>; the four-color seal version only where little other color competes (a splash page, not a dashboard); the centered and icon versions only when the slot truly demands them.</p>
 </section>
-<section id="gridlines-axes-and-rulers" class="level2">
-<h2 class="anchored" data-anchor-id="gridlines-axes-and-rulers">Gridlines, axes, and rulers</h2>
+<section id="on-our-surfaces" class="level2">
+<h2 class="anchored" data-anchor-id="on-our-surfaces">On our surfaces</h2>
+<div class="ds-demo">
+  <img src="../assets/ncdpi-logo-blue.svg" alt="NC Department of Public Instruction" style="width:250px; height:auto;">
+</div>
+<div class="ds-demo" style="background: var(--ncdpi-surface-brand, #092940);">
+  <img src="../assets/ncdpi-logo-white.svg" alt="NC Department of Public Instruction" style="width:250px; height:auto;">
+</div>
+<p>The two SVGs above ship with this site (<code>assets/ncdpi-logo-blue.svg</code>, <code>assets/ncdpi-logo-white.svg</code>) and are <strong>byte-identical to the kit’s</strong> <code>svgs/</code> folder — copy them into a consuming project as they are. On the navy header band, the white version is the only correct pick: the blue logo disappears against <code>surface-brand</code>, and no token pairing will rescue it.</p>
+<p>In the <a href="../design-system/components.html#header-footer-ncdpi-header-ncdpi-footer">header component</a>, the logo drops into the brand slot:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">header</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-header"</span><span class="dt">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-header__brand"</span><span class="dt">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"assets/ncdpi-logo-white.svg"</span><span class="ot"> alt</span><span class="op">=</span><span class="st">"NC Department of Public Instruction"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ot">         style</span><span class="op">=</span><span class="st">"height:32px; width:auto;"</span><span class="dt">&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-header__tagline"</span><span class="dt">&gt;</span>Educator Preparation Data<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">header</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="placement-and-size-web" class="level2">
+<h2 class="anchored" data-anchor-id="placement-and-size-web">Placement and size (web)</h2>
+<p>From the NCDPI Web Style Guide:</p>
 <ul>
-<li><strong>Gridlines</strong> are light grey <code>#DEDEDE</code> — present enough to support reading a value, faint enough to disappear behind the data.</li>
-<li><strong>Axis rulers and dividers</strong> use the same light grey. Drop the top and right spines entirely.</li>
-<li><strong>Reference lines</strong> (a target, the state average) are DPI Blue <code>#003A70</code> so they read as deliberate, not as data.</li>
+<li><strong>Upper-left corner, linked to the site’s home page.</strong> Readers expect it; screen-reader users depend on it.</li>
+<li><strong>Desktop: a 250 × 75 px slot.</strong> The horizontal mark is wider than it is tall (279 : 57.6 ≈ 4.8 : 1), so at 250 px wide it stands about 52 px — it fits the slot; don’t stretch it to fill.</li>
+<li><strong>Mobile: max-width 225 px, scaled proportionally.</strong></li>
+</ul>
+<p>Scale by width <em>or</em> height, never both. Use the files as shipped: no recoloring, no stretching, no shadows or outlines. If a treatment the kit doesn’t ship seems necessary, that’s a question for the graphics team, not a local edit.</p>
+</section>
+<section id="accessibility" class="level2">
+<h2 class="anchored" data-anchor-id="accessibility">Accessibility</h2>
+<ul>
+<li>The logo <code>&lt;img&gt;</code> always carries alt text: <strong>“NC Department of Public Instruction.”</strong> Not “logo” — the image <em>is</em> the name.</li>
+<li>When the logo is a link (the usual case), the accessible name should say where it goes: <code>alt="NC Department of Public Instruction — home"</code> or an <code>aria-label</code> on the link. A screen-reader user tabbing the header hears the destination, not a description of artwork.</li>
+<li>Prefer the SVGs on the web — they stay crisp at every zoom level, which matters for WCAG’s 400 % reflow, and they’re smaller than the PNGs.</li>
+<li>The white-on-navy pairing is the token grid’s validated <code>on-surface-brand</code> on <code>surface-brand</code>; the logo inherits that headroom.</li>
 </ul>
 </section>
-<section id="the-zero-baseline-rule" class="level2">
-<h2 class="anchored" data-anchor-id="the-zero-baseline-rule">The zero-baseline rule</h2>
-<p>Bars and areas encode value by length or area, so they <strong>must</strong> start at zero. Truncating the axis exaggerates differences and is the single most common way a chart misleads. Lines and dot plots may use a non-zero baseline — but say so if you do.</p>
-</section>
-<section id="labels-over-legends" class="level2">
-<h2 class="anchored" data-anchor-id="labels-over-legends">Labels over legends</h2>
-<p>When there are seven or fewer items, <strong>label them directly</strong> rather than making the reader bounce between a legend and the data. Reserve legends for when direct labels would collide.</p>
-<div class="ncdpi-callout">
-<p>Declutter, don’t decorate. Every gridline, tick, and label should earn its place. If removing it doesn’t cost the reader anything, remove it.</p>
+<section id="the-logos-colors-and-a-known-quirk" class="level2">
+<h2 class="anchored" data-anchor-id="the-logos-colors-and-a-known-quirk">The logo’s colors — and a known quirk</h2>
+<p>The Logo Kit Guidelines give the agency logo palette (these are the <strong>logo’s</strong> colors, not the <a href="../foundations/color.html">dataviz palettes</a> — never paint charts with them):</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">Color</th>
+<th data-quarto-table-cell-role="th" scope="col">Pantone</th>
+<th data-quarto-table-cell-role="th" scope="col">Stated hex</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Blue</td>
+<td>648</td>
+<td><code>#002D5D</code></td>
+</tr>
+<tr class="even">
+<td>Purple (seal, 4c)</td>
+<td>242</td>
+<td><code>#541043</code></td>
+</tr>
+<tr class="odd">
+<td>Green (seal, 4c)</td>
+<td>583</td>
+<td><code>#A9C040</code></td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled" title="The kit's blues don't all match — use the file, don't retype the hex">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>The kit’s blues don’t all match — use the file, don’t retype the hex
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Measured, the kit’s assets carry three slightly different blues by lineage: the guidelines <em>state</em> Pantone 648 = <code>#002D5D</code>; the print-derived PNGs <em>paint</em> ≈ <code>#14315A</code> (a CMYK conversion of the same ink); and the kit’s SVGs <em>paint</em> <code>#003A70</code> — the same navy as the dataviz system. All read as “NCDPI blue” at a glance. The practical rule: <strong>place the shipped file and leave its colors alone.</strong> If you’re matching a background to the logo exactly (as <code>NCDPI-Horizontal-WhiteOnBlue</code> does — its field is <code>#003A70</code>), sample the asset you’re actually using rather than trusting a remembered hex.</p>
+</div>
+</div>
+<p>A related note from the guidelines: the agency typeface in the logo is <strong>Univers</strong> (Arial and Helvetica are the sanctioned stand-ins for documents), but the kit’s vectors ship with fonts <strong>converted to outlines</strong> — you never need the font installed to use the logo files.</p>
+</section>
+<section id="where-the-assets-live" class="level2">
+<h2 class="anchored" data-anchor-id="where-the-assets-live">Where the assets live</h2>
+<p>In this repo: <code>branding/DPI Logo Kit/</code> (the full kit — vector, raster, Tableau-ready, icons, and the guidelines PDF) and <code>branding/DPI Style Guide-2025.pdf</code>. The two web SVGs are mirrored at <code>site/assets/</code>. The kit is for <strong>vendors, media, and agency partners</strong> by design — if someone outside DPI asks for the logo, point them to <a href="mailto:graphics@dpi.nc.gov" class="email">graphics@dpi.nc.gov</a> rather than forwarding files.</p>
+<script>(function(){var el=document.querySelector('link[href*="site_libs/"],script[src*="site_libs/"]');var root=el?(el.href||el.src).replace(/site_libs\/.*$/,''):'';['theme/tokens.css','theme/ncdpi-ds.css'].forEach(function(p){var l=document.createElement('link');l.rel='stylesheet';l.href=root+p;document.head.appendChild(l);});})();</script>
 
 
 </section>
@@ -730,10 +871,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../design-system/components.html" class="pagination-link" aria-label="Design system — components">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Design system — components</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chart-parts/table-elements.html" class="pagination-link" aria-label="Table elements">
-        <span class="nav-page-text">Table elements</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../design-system/voice.html" class="pagination-link" aria-label="Design system — voice &amp; microcopy">
+        <span class="nav-page-text">Design system — voice &amp; microcopy</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

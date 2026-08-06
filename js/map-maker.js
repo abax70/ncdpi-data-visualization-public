@@ -1,7 +1,9 @@
-/* map-maker.js — NCDPI Map-Maker, Phase 1 MVP.
+/* map-maker.js — NCDPI Map-Maker (Phases 1–2).
  *
- * Turns a user-supplied district-level CSV into an on-brand, binned
- * choropleth of NC school districts, with PNG export.
+ * Turns a user-supplied district/county/region CSV into an on-brand NC map,
+ * with PNG export. A numeric value column becomes a binned choropleth; a
+ * text value column becomes a categorical (colored-group) map — "these 27
+ * counties have program A, these 42 program B" (SUB-003-03).
  *
  * Privacy architecture: EVERYTHING runs client-side. The user's file is read
  * with FileReader in their own browser and is never transmitted anywhere —
@@ -60,6 +62,31 @@
     7: ["#B33A12", "#C26F54", "#D1BCB5", "#DEDEDE", "#B9C4C7", "#6593A1", "#077890"],
     9: ["#B33A12", "#BE6143", "#CC9F91", "#D5CBC8", "#DEDEDE", "#CACFD1", "#9AB0B7", "#548B9C", "#077890"]
   };
+  // Brand categorical palette ("Groups: 2–6" in color-data.json; the
+  // Total/Avg navy is deliberately excluded — it means "summary", not a
+  // category). Categories take these in frequency order, largest group first.
+  var GROUPS = {
+    2: ["#5085BC", "#FF9015"],
+    3: ["#5085BC", "#FF9015", "#922880"],
+    4: ["#5085BC", "#FF9015", "#922880", "#3D803F"],
+    5: ["#5085BC", "#FF9015", "#922880", "#3D803F", "#D3B10B"],
+    6: ["#5085BC", "#FF9015", "#922880", "#3D803F", "#D3B10B", "#BE7EB3"]
+  };
+  // color-groups.qmd: five is the practical max, six the grudging ceiling.
+  var MAX_CATEGORIES = 6;
+  // The per-category picker offers brand colors only: the six Groups hues
+  // plus the Data Highlight navy and neutral grey. Greying most groups and
+  // navy-ing one IS the highlight map (Convention 5 / color-highlights).
+  var CATEGORY_COLORS = [
+    { hex: "#5085BC", label: "Blue" },
+    { hex: "#FF9015", label: "Orange" },
+    { hex: "#922880", label: "Purple" },
+    { hex: "#3D803F", label: "Green" },
+    { hex: "#D3B10B", label: "Gold" },
+    { hex: "#BE7EB3", label: "Light purple" },
+    { hex: "#003A70", label: "Navy — highlight" },
+    { hex: "#B7B9BB", label: "Grey — background" }
+  ];
   var NO_DATA_FILL = "#F0F0F0";   // matches the site's exemplar choropleth
   var SOURCE_GREY = "#525A60";    // C7 source-note color
 
@@ -195,7 +222,15 @@
   function matchCounty(s) {
     if (/^\d+$/.test(s)) {
       var n = parseInt(s, 10);
-      if (n >= 37001 && n <= 37199) n -= 37000;             // full FIPS "37157"
+      if (n >= 37001 && n <= 37199) {
+        // Full FIPS "37xxx" is unambiguous — always convert, even when the
+        // county part is ≤ 100 (e.g. 37067 Forsyth). Reading it as a DPI
+        // code here was a real bug: 37067 mapped to county code 67, the
+        // wrong county. NC county FIPS parts are the odd numbers 1..199;
+        // an even part is not a NC county.
+        n -= 37000;
+        return (n % 2 === 1 && countyCodes[(n + 1) / 2]) ? (n + 1) / 2 : null;
+      }
       if (n > 100 && n <= 199 && n % 2 === 1) n = (n + 1) / 2; // bare FIPS "157"
       return countyCodes[n] ? n : null;
     }
@@ -230,7 +265,12 @@
     geo: "district",    // which GEOS entry the rows join to
     table: null,        // parsed user CSV
     joinCol: null, measureCol: null,
-    matches: null,      // {byKey: {key: value}, matched, unmatched, dup, stats}
+    // "numeric" (binned choropleth) or "categorical" (colored groups) —
+    // derived from the selected value column, never asked directly.
+    mode: "numeric",
+    catColors: {},      // user color overrides: category norm -> hex
+    catsFor: null,      // value column the overrides belong to
+    matches: null,      // {byKey: {key: value}, matched, unmatched, dup, stats, categories}
     valence: "good", steps: 5,
     // The reference-point (anchoring) wizard — Tableau's "full color range"
     // question made explicit. "data": darkest = the data max (compare
@@ -258,8 +298,35 @@
   }
   function $(id) { return document.getElementById(id); }
 
+  // Category normalization: casing/whitespace variants ("Hybrid", "hybrid",
+  // " hybrid ") are the same category. The canonical display spelling is
+  // picked later (most common wins).
+  function catNorm(s) {
+    return String(s).replace(/\s+/g, " ").trim().toLowerCase();
+  }
+
+  // Profile a column: is it numeric (≥80% of non-empty cells parse), how
+  // dense is it, and how many distinct normalized values does it hold?
+  function columnProfile(table, col) {
+    var nonEmpty = 0, numeric = 0, distinct = {};
+    table.rows.forEach(function (r) {
+      var v = r[col];
+      if (v === "" || v === undefined) return;
+      nonEmpty++;
+      if (isFinite(Number(v))) numeric++;
+      distinct[catNorm(v)] = true;
+    });
+    return {
+      nonEmpty: nonEmpty,
+      isNumeric: nonEmpty > 0 && numeric >= nonEmpty * 0.8,
+      distinct: Object.keys(distinct).length
+    };
+  }
+
   // Auto-detect: the join column is whichever column matches the most
-  // districts; the measure is the first mostly-numeric other column.
+  // geographies; the value column is the first dense mostly-numeric other
+  // column, else the text column with the tightest small set of repeated
+  // labels (a program/status column — the categorical case).
   function detectColumns(table) {
     var best = null, bestHits = 0;
     table.columns.forEach(function (col) {
@@ -267,39 +334,81 @@
       table.rows.forEach(function (r) { if (matchValue(r[col]) !== null) hits++; });
       if (hits > bestHits) { bestHits = hits; best = col; }
     });
-    var measure = null;
+    var measure = null, catCandidate = null, catDistinct = Infinity;
     table.columns.forEach(function (col) {
-      if (measure || col === best) return;
-      var numeric = table.rows.filter(function (r) {
-        return r[col] !== "" && isFinite(Number(r[col]));
-      }).length;
-      if (numeric >= table.rows.length * 0.8) measure = col;
+      if (col === best) return;
+      var p = columnProfile(table, col);
+      if (p.nonEmpty < table.rows.length * 0.8) return;
+      if (p.isNumeric) { if (!measure) measure = col; return; }
+      if (p.distinct >= 2 && p.distinct <= 12 && p.distinct < catDistinct) {
+        catCandidate = col; catDistinct = p.distinct;
+      }
     });
-    return { join: best, measure: measure, hits: bestHits };
+    return { join: best, measure: measure || catCandidate, hits: bestHits };
+  }
+
+  // Group matched category values: collapse normalized variants, pick the
+  // most common spelling as the display name, order by frequency (largest
+  // first, ties alphabetical), and assign colors — user overrides first,
+  // then the Groups ramp for the category count.
+  function buildCategories(byKey) {
+    var groups = {};   // norm -> {count, spellings: {raw: n}}
+    Object.keys(byKey).forEach(function (k) {
+      var raw = byKey[k], norm = catNorm(raw);
+      var g = groups[norm] || (groups[norm] = { count: 0, spellings: {} });
+      g.count++;
+      g.spellings[raw] = (g.spellings[raw] || 0) + 1;
+    });
+    var list = Object.keys(groups).map(function (norm) {
+      var g = groups[norm];
+      var name = Object.keys(g.spellings).sort(function (a, b) {
+        return g.spellings[b] - g.spellings[a] || (a < b ? -1 : 1);
+      })[0];
+      return { norm: norm, name: name, count: g.count };
+    });
+    list.sort(function (a, b) { return b.count - a.count || (a.name < b.name ? -1 : 1); });
+    var ramp = GROUPS[Math.min(Math.max(list.length, 2), MAX_CATEGORIES)];
+    list.forEach(function (c, i) {
+      c.color = state.catColors[c.norm] || ramp[i % ramp.length];
+    });
+    return list;
   }
 
   function computeMatches() {
+    var isCat = state.mode === "categorical";
     var byKey = {}, unmatched = [], dup = [];
     state.table.rows.forEach(function (r) {
       var key = matchValue(r[state.joinCol]);
-      var val = Number(r[state.measureCol]);
       if (key === null) { unmatched.push(r[state.joinCol]); return; }
       if (byKey.hasOwnProperty(key)) { dup.push(r[state.joinCol]); return; }
-      if (r[state.measureCol] === "" || !isFinite(val)) { unmatched.push(r[state.joinCol] + " (no numeric value)"); return; }
-      byKey[key] = val;
+      if (isCat) {
+        var raw = String(r[state.measureCol] === undefined ? "" : r[state.measureCol]).replace(/\s+/g, " ").trim();
+        if (raw === "") { unmatched.push(r[state.joinCol] + " (no value)"); return; }
+        byKey[key] = raw;
+      } else {
+        var val = Number(r[state.measureCol]);
+        if (r[state.measureCol] === "" || !isFinite(val)) { unmatched.push(r[state.joinCol] + " (no numeric value)"); return; }
+        byKey[key] = val;
+      }
     });
-    // Stats feed the wizard: sensible goal/center defaults + card captions.
-    var vals = Object.keys(byKey).map(function (k) { return byKey[k]; });
-    var stats = null;
-    if (vals.length) {
-      var sum = vals.reduce(function (a, b) { return a + b; }, 0);
-      stats = {
-        min: Math.min.apply(null, vals),
-        max: Math.max.apply(null, vals),
-        mean: Math.round((sum / vals.length) * 10) / 10
-      };
+    // Numeric: stats feed the wizard (goal/center defaults + card captions).
+    // Categorical: the category list plays that role; stats stays null,
+    // which is also what keeps the anchor-card previews dormant.
+    var stats = null, categories = null;
+    if (isCat) {
+      categories = buildCategories(byKey);
+    } else {
+      var vals = Object.keys(byKey).map(function (k) { return byKey[k]; });
+      if (vals.length) {
+        var sum = vals.reduce(function (a, b) { return a + b; }, 0);
+        stats = {
+          min: Math.min.apply(null, vals),
+          max: Math.max.apply(null, vals),
+          mean: Math.round((sum / vals.length) * 10) / 10
+        };
+      }
     }
-    state.matches = { byKey: byKey, matched: Object.keys(byKey).length, unmatched: unmatched, dup: dup, stats: stats };
+    state.matches = { byKey: byKey, matched: Object.keys(byKey).length, unmatched: unmatched, dup: dup, stats: stats, categories: categories };
   }
 
   // Round the data range out so that (a) the bounds are readable numbers and
@@ -400,7 +509,85 @@
     return { domain: niceDomain(vals, nSteps), range: PALETTES[state.valence][nSteps] };
   }
 
+  // Categorical spec: nominal fill from the assigned category colors, a
+  // swatch legend whose labels carry the counts ("Program A (27)") — the
+  // map's message is literally "these 27 counties…", and the counts feed
+  // the alt text too. C9 white boundaries and the no-data grey are shared
+  // with the numeric map.
+  function buildCatSpec() {
+    var m = state.matches, geo = GEOS[state.geo];
+    var cats = m.categories;
+    var nameOf = {};
+    cats.forEach(function (c) { nameOf[c.norm] = c.name; });
+    var values = Object.keys(m.byKey).map(function (k) {
+      return { key: parseInt(k, 10), value: nameOf[catNorm(m.byKey[k])] };
+    });
+    var legendTitle = state.legendTitle || state.measureCol;
+    var countLabel = {};
+    cats.forEach(function (c) { countLabel[c.name] = c.name + " (" + c.count + ")"; });
+
+    var description = "Map of North Carolina " + geo.described + " colored by " +
+      legendTitle + ". " +
+      cats.map(function (c) {
+        return c.name + " — " + c.count + " " + (c.count === 1 ? geo.noun : geo.plural);
+      }).join("; ") +
+      ". " + m.matched + " of " + geo.count + " " + geo.plural + " have data" +
+      (m.matched < geo.count ? "; " + geo.plural + " without data are shown in light grey." : ".");
+
+    return {
+      "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+      "description": description,
+      "title": {
+        "text": state.title || "Untitled map",
+        "subtitle": state.subtitle || ""
+      },
+      "data": {
+        "url": ROOT + geo.url,
+        "format": { "type": "topojson", "feature": geo.feature }
+      },
+      "transform": [{
+        "lookup": geo.lookupField,
+        "from": { "data": { "values": values }, "key": "key", "fields": ["value"] }
+      }],
+      "width": 720,
+      "height": 340,
+      "projection": { "type": "mercator" },
+      "mark": { "type": "geoshape", "stroke": "white", "strokeWidth": 0.5, "color": NO_DATA_FILL },
+      "encoding": {
+        // A conditional encoding, not a bare field: with a plain nominal
+        // scale vega-lite silently SKIPS lookup-miss features (they render
+        // with no fill at all — the state outline vanishes). The condition
+        // routes valid values through the scale and gives everything else
+        // the no-data grey, matching the numeric map's behavior.
+        "color": {
+          "condition": {
+            "test": "isValid(datum.value)",
+            "field": "value",
+            "type": "nominal",
+            "title": legendTitle,
+            "scale": { "domain": cats.map(function (c) { return c.name; }),
+                       "range": cats.map(function (c) { return c.color; }) },
+            "legend": {
+              "orient": "bottom", "direction": "horizontal",
+              "symbolType": "square", "titleLimit": 320, "labelLimit": 300,
+              // JSON.stringify escapes any quotes a category name carries, so
+              // the vega expression stays well-formed for arbitrary labels.
+              "labelExpr": "(" + JSON.stringify(countLabel) + ")[datum.value] || datum.value"
+            }
+          },
+          "value": NO_DATA_FILL
+        },
+        "tooltip": [
+          { "field": geo.tooltipField, "title": geo.tooltipTitle },
+          { "field": "value", "title": legendTitle }
+        ]
+      },
+      "usermeta": { "source": state.source }
+    };
+  }
+
   function buildSpec() {
+    if (state.mode === "categorical") return buildCatSpec();
     var m = state.matches, geo = GEOS[state.geo];
     var values = Object.keys(m.byKey).map(function (k) {
       return { key: parseInt(k, 10), value: m.byKey[k] };
@@ -480,8 +667,23 @@
   }
 
   function render() {
-    // stats == null means zero matched rows — nothing to scale or draw
-    if (!state.table || !state.matches || !state.matches.stats || !state.measureCol) return;
+    if (!state.table || !state.matches || !state.measureCol) return;
+    if (state.mode === "categorical") {
+      var cats = state.matches.categories || [];
+      if (!cats.length) return;   // zero matched rows — nothing to draw
+      if (cats.length > MAX_CATEGORIES) {
+        // Too many groups to color honestly — say so where the map goes;
+        // renderCatList() explains it in the wizard too.
+        $("mm-chart").textContent = "This column has " + cats.length +
+          " different values — a map can carry at most " + MAX_CATEGORIES +
+          " groups (5 reads better). Combine small groups into an " +
+          "“Other” category, or pick a different column.";
+        $("mm-export").disabled = true;
+        return;
+      }
+    } else if (!state.matches.stats) {
+      return;   // stats == null means zero matched rows — nothing to scale
+    }
     var spec = buildSpec();
     var target = $("mm-chart");
     fetchTheme().then(function (theme) {
@@ -622,6 +824,10 @@
         "#map-maker-root .mm-anchor-card h4 label { display: inline; font-size: inherit; cursor: pointer; }",
         "#map-maker-root .mm-anchor-card .mm-preview { min-height: 104px; }",
         "#map-maker-root .mm-anchor-card input[type=number] { width: 6em; padding: .15rem .3rem; }",
+        "#map-maker-root .mm-cat-row { display: flex; align-items: center; gap: .6rem; margin: .4rem 0; flex-wrap: wrap; }",
+        "#map-maker-root .mm-cat-row select { width: auto; max-width: 14em; }",
+        "#map-maker-root .mm-swatch { width: 18px; height: 18px; border-radius: 3px; border: 1px solid #DEDEDE; display: inline-block; flex: none; }",
+        "#map-maker-root .mm-cat-name { min-width: 15em; }",
         "#mm-source-caption { color: " + SOURCE_GREY + "; font-size: 11px; margin: 2px 0 0 0; display: none; }",
         "#map-maker-root .mm-unmatched { font-size: .85rem; color: #525A60; max-height: 8em; overflow-y: auto; }"
       ].join("\n")
@@ -639,7 +845,7 @@
       ]),
       el("label", { text: "CSV file", for: "mm-file" }),
       el("input", { type: "file", id: "mm-file", accept: ".csv,text/csv", onchange: onFile }),
-      el("p", { class: "mm-hint", id: "mm-file-msg", text: "Expect one row per area: a column identifying it (name or code) and a column with the measure to map. Excel support arrives in the next version — for now, save as CSV." }),
+      el("p", { class: "mm-hint", id: "mm-file-msg", text: "Expect one row per area: a column identifying it (name or code) and a value column — numbers for a shaded map, or group names (a program, a status) for a map colored by group. One group per row; call a combination its own group (“Hybrid”). Excel support arrives in the next version — for now, save as CSV." }),
       el("div", { id: "mm-pii-gate" })
     ]);
 
@@ -685,6 +891,13 @@
     // A/B previews of the user's own data, then step count.
     var step3 = el("div", { class: "mm-step", id: "mm-step3", style: "display:none" }, [
       el("h3", { text: "3. Choose the colors" }),
+      // Categorical panel — shown when the value column holds group names.
+      el("div", { id: "mm-cat-wizard", style: "display:none" }, [
+        el("p", { class: "mm-hint", text: "Your value column holds group names, so each group gets its own brand color — biggest group first. Change any group’s color below. Tip: to make a highlight map, set one group to navy and the rest to grey." }),
+        el("div", { id: "mm-cat-list" })
+      ]),
+      // Numeric wizard — valence, steps, and the anchoring cards.
+      el("div", { id: "mm-num-wizard" }, [
       el("div", { class: "mm-cols" }, [
         el("div", {}, [
           el("label", { text: "Higher values are…", for: "mm-valence" }),
@@ -725,6 +938,7 @@
           ])
         ])
       ])
+      ])   // closes #mm-num-wizard
     ]);
 
     // Step 4 — describe the map
@@ -872,26 +1086,73 @@
     });
   }
 
+  // The per-category color rows in step 3 (categorical mode): swatch +
+  // "name — N counties" + a brand-colors-only picker.
+  function renderCatList() {
+    var wrap = $("mm-cat-list");
+    if (!wrap) return;
+    wrap.innerHTML = "";
+    var cats = (state.matches && state.matches.categories) || [];
+    var geo = GEOS[state.geo];
+    if (cats.length > MAX_CATEGORIES) {
+      wrap.appendChild(el("p", { class: "mm-report-warn", text:
+        "“" + state.measureCol + "” has " + cats.length + " different values — too many to color as groups (max " +
+        MAX_CATEGORIES + "; 5 reads better). Combine small groups into an “Other” category, or pick a different column." }));
+      return;
+    }
+    if (cats.length === MAX_CATEGORIES) {
+      wrap.appendChild(el("p", { class: "mm-report-warn", text:
+        "Six groups is the ceiling — five or fewer read better. Consider combining the smallest groups." }));
+    }
+    cats.forEach(function (c) {
+      var sel = el("select", { "data-norm": c.norm, "aria-label": "Color for " + c.name, onchange: onCatColorChanged });
+      CATEGORY_COLORS.forEach(function (cc) {
+        sel.appendChild(option(cc.hex, cc.label, cc.hex === c.color));
+      });
+      wrap.appendChild(el("div", { class: "mm-cat-row" }, [
+        el("span", { class: "mm-swatch", style: "background:" + c.color }),
+        el("span", { class: "mm-cat-name", text: c.name + " — " + c.count + " " + (c.count === 1 ? geo.noun : geo.plural) }),
+        sel
+      ]));
+    });
+  }
+
+  function onCatColorChanged(ev) {
+    var sel = ev.target;
+    state.catColors[sel.getAttribute("data-norm")] = sel.value;
+    computeMatches();   // re-derives category colors with the override applied
+    renderCatList();
+    render();
+  }
+
   function onColumnsChanged() {
     state.joinCol = $("mm-join").value;
     state.measureCol = $("mm-measure").value;
+    // Numeric column -> binned choropleth; text column -> categorical map.
+    state.mode = columnProfile(state.table, state.measureCol).isNumeric ? "numeric" : "categorical";
+    // Color overrides belong to one value column; a new column starts fresh.
+    if (state.catsFor !== state.measureCol) { state.catColors = {}; state.catsFor = state.measureCol; }
     computeMatches();
     reportMatches();
+    var isCat = state.mode === "categorical";
+    $("mm-num-wizard").style.display = isCat ? "none" : "";
+    $("mm-cat-wizard").style.display = isCat ? "" : "none";
+    if (isCat) renderCatList();
     // Refresh the wizard defaults when the measure changes: goal = 100 for
     // percentage-scaled data (else a nice ceiling), reference = the mean of
     // the mapped values (a stand-in until the user types the real state rate).
     var s = state.matches.stats;
-    if (s && state.statsFor !== state.measureCol) {
+    if (!isCat && s && state.statsFor !== state.measureCol) {
       state.statsFor = state.measureCol;
       state.goal = s.max <= 100 ? 100 : niceCeilAbove(s.max);
       state.center = s.mean;
       $("mm-goal").value = state.goal;
       $("mm-center").value = state.center;
     }
-    if (s) $("mm-cap-data").textContent = String(s.max);
+    if (!isCat && s) $("mm-cap-data").textContent = String(s.max);
     if (!$("mm-legend").value) state.legendTitle = state.measureCol;
     render();
-    renderPreviews();
+    renderPreviews();   // no-op in categorical mode (stats stays null)
   }
 
   function reportMatches() {
@@ -913,7 +1174,8 @@
         }).join("<br>") + "</div>";
     }
     if (m.dup.length) {
-      html += "<p class='mm-report-warn'>Duplicate district rows ignored: " + m.dup.length + ".</p>";
+      html += "<p class='mm-report-warn'>Duplicate " + geo.noun + " rows ignored: " + m.dup.length +
+        " (this tool maps one value per " + geo.noun + " — the first row wins).</p>";
     }
     out.innerHTML = html;
   }

@@ -42,7 +42,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b2eaf4dfe79f25e728c7da6b40b3ce16.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-3503581128e3f2b24f4090c9ad41592f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -223,9 +223,10 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Upload a simple data file — one row per school district, county, or SBE region — answer a few questions, and download a presentation-ready choropleth map that follows the NCDPI style guide.</p>
+<p>Upload a simple data file — one row per school district, county, or SBE region — answer a few questions, and download a presentation-ready map that follows the NCDPI style guide. A numeric column becomes a shaded (choropleth) map; a column of group names (“Program A”, “Hybrid”) becomes a map colored by group, one brand color per group.</p>
 <p><strong>Your data stays on your computer.</strong> This page does all its work inside your browser; the file you choose is never uploaded, transmitted, or stored anywhere. Even so, use aggregate, non-personal data only — one row per area, no student-level information of any kind.</p>
-<p><em>Beta — Phase 2 (in progress).</em> Districts, counties, and SBE regions from a CSV; sequential, goal-anchored, and diverging color scales; PNG download. Excel files, highlight maps, and bar-chart legends are on the roadmap. Feedback to Andy Baxter.</p>
+<p><em>Beta — Phase 2 (in progress).</em> Districts, counties, and SBE regions from a CSV; sequential, goal-anchored, and diverging color scales; categorical (colored-group) maps, including highlight maps via the per-group colors; PNG download. Excel files and bar-chart legends are on the roadmap. Feedback to Andy Baxter.</p>
+<p><strong>Starting from scratch?</strong> Download a starter spreadsheet with every geography pre-listed — fill in the Value column (numbers, or group names like “Program A”) and upload it right here: <a href="downloads/ncdpi-map-starter-districts.csv" download="">districts</a> · <a href="downloads/ncdpi-map-starter-counties.csv" download="">counties</a> · <a href="downloads/ncdpi-map-starter-regions.csv" download="">SBE regions</a>.</p>
 <div id="map-maker-root"></div>
 <script>(function(){var el=document.querySelector('link[href*="site_libs/"],script[src*="site_libs/"]');var root=el?(el.href||el.src).replace(/site_libs\/.*$/,''):'';var s=document.createElement('script');s.src=root+'js/map-maker.js';s.setAttribute('data-ncdpi-mapmaker','');document.body.appendChild(s);})();</script>
 

@@ -87,6 +87,41 @@
     { hex: "#003A70", label: "Navy — highlight" },
     { hex: "#B7B9BB", label: "Grey — background" }
   ];
+  // Red-green CVD collapse pairs among the brand colors offered above.
+  // Measured session 35 with a Vienot (1999) dichromacy simulation +
+  // CIEDE2000: under deuteranopia the Cat 2 orange #FF9015 simulates to
+  // #BEBE00 and the Cat 5 gold #D3B10B to #BDBD00 — the SAME color, not
+  // merely a similar one (dE00 0.3; 3.9 under protanopia). Blue vs light
+  // purple is a milder protanopia collapse (6.9). Both pairs appear in the
+  // DEFAULT assignment at 5 and 6 categories, which is the whole reason this
+  // warning exists: on a categorical map, hue is the sole carrier of group
+  // identity — there are no positions or labels doing the identifying the way
+  // there are on a bar chart.
+  //
+  // Deliberately scoped to red-green deficiency: it affects ~8% of men and is
+  // the exact case foundations/color-groups.qmd's accessibility callout
+  // promises the palette handles. Tritanopia also collapses blue/green, but
+  // it affects ~0.01% of people and firing on it would warn on the ordinary
+  // 4-category map for a vanishingly rare condition.
+  var CVD_COLLAPSE_PAIRS = [
+    { a: "#FF9015", b: "#D3B10B", label: "orange and gold" },
+    { a: "#5085BC", b: "#BE7EB3", label: "blue and light purple" }
+  ];
+
+  // Which assigned category colors collide for a red-green colorblind reader.
+  // Runs against the colors actually in play, so recoloring a group via the
+  // picker clears the warning instead of leaving a stale scold on screen.
+  function cvdCollisions(cats) {
+    var byHex = {};
+    cats.forEach(function (c) { byHex[String(c.color).toUpperCase()] = c.name; });
+    var hits = [];
+    CVD_COLLAPSE_PAIRS.forEach(function (p) {
+      var na = byHex[p.a], nb = byHex[p.b];
+      if (na && nb) hits.push({ names: [na, nb], label: p.label });
+    });
+    return hits;
+  }
+
   var NO_DATA_FILL = "#F0F0F0";   // matches the site's exemplar choropleth
   var SOURCE_GREY = "#525A60";    // C7 source-note color
 
@@ -327,16 +362,38 @@
   // geographies; the value column is the first dense mostly-numeric other
   // column, else the text column with the tightest small set of repeated
   // labels (a program/status column — the categorical case).
+  //
+  // ⚠️ A SECOND column can also resolve to geographies. A district export
+  // routinely carries both a name and an LEA code, and our own starter
+  // spreadsheet ships "District, LEA Code, Value". Such a column is a second
+  // *identifier*, never the measure — and because it is numeric it used to
+  // win the measure slot outright, drawing a confident binned choropleth
+  // colored by district ID while silently ignoring the user's real data.
+  // (Found session 35 by driving the shipped starter through the app; the
+  // counties starter has one identifier column, which is why nothing caught
+  // it.) So score every column's geography hits once, then disqualify any
+  // non-join column that resolves nearly as well as the join column does.
   function detectColumns(table) {
-    var best = null, bestHits = 0;
+    var hitsBy = {}, best = null, bestHits = 0;
     table.columns.forEach(function (col) {
       var hits = 0;
       table.rows.forEach(function (r) { if (matchValue(r[col]) !== null) hits++; });
+      hitsBy[col] = hits;
       if (hits > bestHits) { bestHits = hits; best = col; }
     });
-    var measure = null, catCandidate = null, catDistinct = Infinity;
+    // A genuine measure resolves to few or no geographies. The 0.9 bar keeps
+    // an ordinary numeric column eligible even when some of its values
+    // coincidentally look like DPI codes (a count of 1–100, say), while a
+    // parallel identifier — which resolves essentially every row, like the
+    // join column — is excluded.
+    function isSecondIdentifier(col) {
+      return bestHits > 0 && hitsBy[col] >= bestHits * 0.9;
+    }
+    var measure = null, catCandidate = null, catDistinct = Infinity, firstOther = null;
     table.columns.forEach(function (col) {
       if (col === best) return;
+      if (isSecondIdentifier(col)) return;
+      if (firstOther === null) firstOther = col;
       var p = columnProfile(table, col);
       if (p.nonEmpty < table.rows.length * 0.8) return;
       if (p.isNumeric) { if (!measure) measure = col; return; }
@@ -344,7 +401,12 @@
         catCandidate = col; catDistinct = p.distinct;
       }
     });
-    return { join: best, measure: measure || catCandidate, hits: bestHits };
+    // Fall back to the first non-identifier column rather than leaving this
+    // null: an unset <select> silently defaults to its first option, which is
+    // the join column, and mapping a column against itself is never right.
+    // On the starter's still-empty Value column this yields the honest
+    // "0 of 115 matched — (no value)" report instead of a bogus map.
+    return { join: best, measure: measure || catCandidate || firstOther, hits: bestHits };
   }
 
   // Group matched category values: collapse normalized variants, pick the
@@ -1114,6 +1176,18 @@
         el("span", { class: "mm-cat-name", text: c.name + " — " + c.count + " " + (c.count === 1 ? geo.noun : geo.plural) }),
         sel
       ]));
+    });
+    // Colour is the only thing telling these groups apart on a map, so a pair
+    // that collapses under red-green colorblindness makes the map unreadable
+    // for roughly one man in twelve. Name the offending groups and point at
+    // the picker sitting right beside them rather than silently recoloring —
+    // the brand palette is the style guide's call, not the app's.
+    cvdCollisions(cats).forEach(function (hit) {
+      wrap.appendChild(el("p", { class: "mm-report-warn", text:
+        "“" + hit.names[0] + "” and “" + hit.names[1] + "” (" + hit.label + ") look" +
+        " nearly identical to readers with red-green color blindness — about 1 in 12" +
+        " men. On a map, color is the only thing separating your groups. Recolor one" +
+        " of them above (navy and grey are the most distinct pair)." }));
     });
   }
 

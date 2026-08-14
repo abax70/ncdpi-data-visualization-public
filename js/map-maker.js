@@ -833,7 +833,12 @@
     var SCALE = 2;
     state.view.toCanvas(SCALE).then(function (canvas) {
       var pad = 10 * SCALE;                       // breathing room for the caption
-      var line = state.source ? 14 * SCALE : 0;   // 11px text + leading
+      // 14.67px text + leading. Convention 7's chart note is 11 PT, which is
+      // 14.67 px — the same pt->px conversion the Vega theme and the design
+      // system's .ncdpi-chartframe__source use. This used to say 11px, which
+      // rendered the note ~25% too small in every exported map (the same
+      // pt-passed-as-px slip session 24 fixed across the site theme).
+      var line = state.source ? 19 * SCALE : 0;
       var out = document.createElement("canvas");
       out.width = canvas.width;
       out.height = canvas.height + line + (line ? pad : 0);
@@ -842,9 +847,10 @@
       ctx.fillRect(0, 0, out.width, out.height);
       ctx.drawImage(canvas, 0, 0);
       if (state.source) {
-        // C7: 11px Arial, brand dark grey, shared left edge with the title
-        // block (vega renders the title at the chart padding's left edge).
-        ctx.font = (11 * SCALE) + "px Arial";
+        // C7: 11pt (= 14.67px) Arial, brand dark grey, shared left edge with
+        // the title block (vega renders the title at the chart padding's
+        // left edge).
+        ctx.font = (14.67 * SCALE) + "px Arial";
         ctx.fillStyle = SOURCE_GREY;
         ctx.fillText(state.source, 10 * SCALE, canvas.height + line);
       }
@@ -866,62 +872,81 @@
   }
 
   function buildUI(root) {
+    // Presentation comes from the design system — theme/tokens.css +
+    // theme/ncdpi-ds.css, loaded by map-maker.qmd (DS Phase 3 retrofit).
+    // What stays here is app-specific LAYOUT the DS has no component for,
+    // and it deliberately holds NO color literals: every color is a token.
+    //
+    // The mm-* names are kept as behavior + test hooks
+    // (tools/verify_mapmaker_browser.py selects on them); the ncdpi-* classes
+    // alongside them carry the styling. Don't collapse the two.
     root.appendChild(el("style", {
       text: [
-        "#map-maker-root .mm-step { margin: 1.2rem 0; padding: 1rem 1.2rem; border: 1px solid #DEDEDE; border-radius: 6px; }",
-        "#map-maker-root .mm-step h3 { margin: 0 0 .6rem 0; font-size: 1.05rem; }",
-        "#map-maker-root label { display: block; margin: .5rem 0 .15rem; font-weight: bold; font-size: .9rem; }",
-        "#map-maker-root .mm-hint { font-weight: normal; color: #525A60; font-size: .85rem; }",
-        "#map-maker-root input[type=text], #map-maker-root select { width: 100%; max-width: 560px; padding: .35rem .5rem; font-size: .95rem; box-sizing: border-box; }",
-        "#map-maker-root .mm-cols { display: flex; gap: 1rem; flex-wrap: wrap; }",
+        // Steps are .ncdpi-card — this adds the wizard's vertical rhythm and
+        // puts the step heading on the UI type scale.
+        "#map-maker-root .mm-step { margin: var(--ncdpi-space-md) 0; }",
+        "#map-maker-root .mm-step h2 { margin: 0 0 var(--ncdpi-space-sm) 0; font-family: var(--ncdpi-font-ui); font-size: var(--ncdpi-size-h4); color: var(--ncdpi-text-heading); }",
+        // Keep controls to a readable measure instead of full-bleed.
+        "#map-maker-root .ncdpi-input { max-width: 560px; }",
+        // Two-column control rows.
+        "#map-maker-root .mm-cols { display: flex; gap: var(--ncdpi-space-md); flex-wrap: wrap; }",
         "#map-maker-root .mm-cols > div { flex: 1 1 240px; }",
-        "#map-maker-root .mm-report-ok { color: #077890; font-weight: bold; }",
-        "#map-maker-root .mm-report-warn { color: #B33A12; }",
-        "#map-maker-root .mm-privacy { background: #F4F7F9; padding: .6rem .8rem; font-size: .9rem; border-left: 4px solid #5085BC; }",
-        "#map-maker-root button { padding: .45rem 1rem; font-size: .95rem; cursor: pointer; }",
-        "#map-maker-root .mm-anchor-cards { display: flex; gap: .8rem; flex-wrap: wrap; align-items: stretch; }",
-        "#map-maker-root .mm-anchor-card { flex: 1 1 230px; border: 2px solid #DEDEDE; border-radius: 6px; padding: .6rem .7rem; cursor: pointer; background: #FFFFFF; }",
-        "#map-maker-root .mm-anchor-card.selected { border-color: #5085BC; background: #F4F7F9; }",
-        "#map-maker-root .mm-anchor-card h4 { margin: 0 0 .4rem 0; font-size: .92rem; }",
-        "#map-maker-root .mm-anchor-card h4 label { display: inline; font-size: inherit; cursor: pointer; }",
+        // Match-report status lines. These valence colors reach across the D2
+        // boundary into the chart world — the same crossing, and the same two
+        // contrast-validated hexes, the DS stat tile makes for its delta.
+        "#map-maker-root .mm-report-ok { color: var(--ncdpi-chart-data-highlight-bar-line-is-best); font-weight: var(--ncdpi-weight-bold); }",
+        "#map-maker-root .mm-report-warn { color: var(--ncdpi-danger); }",
+        // Anchor cards are .ncdpi-card--flat, but with 2px borders so
+        // selecting one never shifts the layout.
+        "#map-maker-root .mm-anchor-cards { display: flex; gap: var(--ncdpi-space-sm); flex-wrap: wrap; align-items: stretch; }",
+        "#map-maker-root .mm-anchor-card { flex: 1 1 230px; border-width: 2px; cursor: pointer; }",
+        "#map-maker-root .mm-anchor-card.selected { border-color: var(--ncdpi-link); background: var(--ncdpi-surface-info); }",
+        "#map-maker-root .mm-anchor-card h3 { margin: 0 0 var(--ncdpi-space-2xs) 0; font-family: var(--ncdpi-font-ui); font-size: var(--ncdpi-size-small); }",
+        "#map-maker-root .mm-anchor-card h3 label { display: inline; font-size: inherit; font-weight: var(--ncdpi-weight-semibold); cursor: pointer; }",
         "#map-maker-root .mm-anchor-card .mm-preview { min-height: 104px; }",
-        "#map-maker-root .mm-anchor-card input[type=number] { width: 6em; padding: .15rem .3rem; }",
-        "#map-maker-root .mm-cat-row { display: flex; align-items: center; gap: .6rem; margin: .4rem 0; flex-wrap: wrap; }",
-        "#map-maker-root .mm-cat-row select { width: auto; max-width: 14em; }",
-        "#map-maker-root .mm-swatch { width: 18px; height: 18px; border-radius: 3px; border: 1px solid #DEDEDE; display: inline-block; flex: none; }",
+        "#map-maker-root .mm-anchor-card input[type=number] { display: inline-block; width: 6em; }",
+        // Category rows: swatch + name + brand-colors-only picker.
+        "#map-maker-root .mm-cat-row { display: flex; align-items: center; gap: var(--ncdpi-space-xs); margin: var(--ncdpi-space-2xs) 0; flex-wrap: wrap; }",
+        "#map-maker-root .mm-cat-row .ncdpi-input { display: inline-block; width: auto; max-width: 14em; }",
+        "#map-maker-root .mm-swatch { width: 18px; height: 18px; border-radius: var(--ncdpi-radius-sm); border: 1px solid var(--ncdpi-border-subtle); display: inline-block; flex: none; }",
         "#map-maker-root .mm-cat-name { min-width: 15em; }",
-        "#mm-source-caption { color: " + SOURCE_GREY + "; font-size: 11px; margin: 2px 0 0 0; display: none; }",
-        "#map-maker-root .mm-unmatched { font-size: .85rem; color: #525A60; max-height: 8em; overflow-y: auto; }"
+        // The unmatched-rows list stays a bounded scroll box.
+        "#map-maker-root .mm-unmatched { font-size: var(--ncdpi-size-small); color: var(--ncdpi-text-secondary); max-height: 8em; overflow-y: auto; }",
+        // Type and color for the source line come from .ncdpi-chartframe__source;
+        // this only hides it until there is a source to show.
+        "#mm-source-caption { display: none; }"
       ].join("\n")
     }));
 
     // Step 1 — load data
-    var step1 = el("div", { class: "mm-step" }, [
-      el("h3", { text: "1. Load your data" }),
-      el("p", { class: "mm-privacy", text: "Your file never leaves your computer. This page reads it right in your browser — nothing is uploaded or stored anywhere. Please still use aggregate, non-personal data: one row per area." }),
-      el("label", { text: "Each row in your file is a…", for: "mm-geo" }),
-      el("select", { id: "mm-geo", onchange: onGeoChanged }, [
+    var step1 = el("div", { class: "mm-step ncdpi-card" }, [
+      el("h2", { text: "1. Load your data" }),
+      el("p", { class: "mm-privacy ncdpi-callout ncdpi-callout--info", text: "Your file never leaves your computer. This page reads it right in your browser — nothing is uploaded or stored anywhere. Please still use aggregate, non-personal data: one row per area." }),
+      el("label", { class: "ncdpi-field__label", text: "Each row in your file is a…", for: "mm-geo" }),
+      el("select", { class: "ncdpi-input", id: "mm-geo", onchange: onGeoChanged }, [
         option("district", "School district (up to 115 rows)", true),
         option("county", "County (up to 100 rows)"),
         option("region", "SBE region (8 rows)")
       ]),
-      el("label", { text: "CSV file", for: "mm-file" }),
+      el("label", { class: "ncdpi-field__label", text: "CSV file", for: "mm-file" }),
+      // Left deliberately unstyled: native file inputs resist .ncdpi-input
+      // (the control is a shadow-DOM button, not a text box).
       el("input", { type: "file", id: "mm-file", accept: ".csv,text/csv", onchange: onFile }),
-      el("p", { class: "mm-hint", id: "mm-file-msg", text: "Expect one row per area: a column identifying it (name or code) and a value column — numbers for a shaded map, or group names (a program, a status) for a map colored by group. One group per row; call a combination its own group (“Hybrid”). Excel support arrives in the next version — for now, save as CSV." }),
+      el("p", { class: "mm-hint ncdpi-field__help", id: "mm-file-msg", text: "Expect one row per area: a column identifying it (name or code) and a value column — numbers for a shaded map, or group names (a program, a status) for a map colored by group. One group per row; call a combination its own group (“Hybrid”). Excel support arrives in the next version — for now, save as CSV." }),
       el("div", { id: "mm-pii-gate" })
     ]);
 
     // Step 2 — match report + column pickers (hidden until a file loads)
-    var step2 = el("div", { class: "mm-step", id: "mm-step2", style: "display:none" }, [
-      el("h3", { text: "2. Check the match" }),
+    var step2 = el("div", { class: "mm-step ncdpi-card", id: "mm-step2", style: "display:none" }, [
+      el("h2", { text: "2. Check the match" }),
       el("div", { class: "mm-cols" }, [
         el("div", {}, [
-          el("label", { text: "District column", for: "mm-join", id: "mm-join-label" }),
-          el("select", { id: "mm-join", onchange: onColumnsChanged })
+          el("label", { class: "ncdpi-field__label", text: "District column", for: "mm-join", id: "mm-join-label" }),
+          el("select", { class: "ncdpi-input", id: "mm-join", onchange: onColumnsChanged })
         ]),
         el("div", {}, [
-          el("label", { text: "Measure column", for: "mm-measure" }),
-          el("select", { id: "mm-measure", onchange: onColumnsChanged })
+          el("label", { class: "ncdpi-field__label", text: "Measure column", for: "mm-measure" }),
+          el("select", { class: "ncdpi-input", id: "mm-measure", onchange: onColumnsChanged })
         ])
       ]),
       el("div", { id: "mm-report" })
@@ -937,9 +962,10 @@
       });
       if (mode === state.anchor) radio.checked = true;
       var card = el("div", {
-        class: "mm-anchor-card" + (mode === state.anchor ? " selected" : "")
+        class: "mm-anchor-card ncdpi-card ncdpi-card--flat" +
+          (mode === state.anchor ? " selected" : "")
       }, [
-        el("h4", {}, [radio, el("label", { for: "mm-anchor-" + mode, text: " " + heading })]),
+        el("h3", {}, [radio, el("label", { for: "mm-anchor-" + mode, text: " " + heading })]),
         el("div", { class: "mm-preview", id: "mm-prev-" + mode })
       ].concat(captionNodes));
       card.addEventListener("click", function () {
@@ -951,51 +977,51 @@
     // Step 3 — the color wizard: valence, then the reference-point question
     // (data-max vs goal vs diverge-around-a-reference) answered with live
     // A/B previews of the user's own data, then step count.
-    var step3 = el("div", { class: "mm-step", id: "mm-step3", style: "display:none" }, [
-      el("h3", { text: "3. Choose the colors" }),
+    var step3 = el("div", { class: "mm-step ncdpi-card", id: "mm-step3", style: "display:none" }, [
+      el("h2", { text: "3. Choose the colors" }),
       // Categorical panel — shown when the value column holds group names.
       el("div", { id: "mm-cat-wizard", style: "display:none" }, [
-        el("p", { class: "mm-hint", text: "Your value column holds group names, so each group gets its own brand color — biggest group first. Change any group’s color below. Tip: to make a highlight map, set one group to navy and the rest to grey." }),
+        el("p", { class: "mm-hint ncdpi-field__help", text: "Your value column holds group names, so each group gets its own brand color — biggest group first. Change any group’s color below. Tip: to make a highlight map, set one group to navy and the rest to grey." }),
         el("div", { id: "mm-cat-list" })
       ]),
       // Numeric wizard — valence, steps, and the anchoring cards.
       el("div", { id: "mm-num-wizard" }, [
       el("div", { class: "mm-cols" }, [
         el("div", {}, [
-          el("label", { text: "Higher values are…", for: "mm-valence" }),
-          el("select", { id: "mm-valence", onchange: onColorsChanged }, [
+          el("label", { class: "ncdpi-field__label", text: "Higher values are…", for: "mm-valence" }),
+          el("select", { class: "ncdpi-input", id: "mm-valence", onchange: onColorsChanged }, [
             option("good", "Better — teal ramp (proficiency, growth)", true),
             option("bad", "Worse — rust ramp (absenteeism, suspensions)"),
             option("neutral", "Neither — blue ramp (counts, enrollment)")
           ])
         ]),
         el("div", {}, [
-          el("label", { text: "Color steps", for: "mm-steps" }),
-          el("p", { class: "mm-hint", text: "Diverging maps use an odd count — the middle grey straddles the reference." }),
-          el("select", { id: "mm-steps", onchange: onColorsChanged })
+          el("label", { class: "ncdpi-field__label", text: "Color steps", for: "mm-steps" }),
+          el("p", { class: "mm-hint ncdpi-field__help", text: "Diverging maps use an odd count — the middle grey straddles the reference." }),
+          el("select", { class: "ncdpi-input", id: "mm-steps", onchange: onColorsChanged })
         ])
       ]),
-      el("label", { text: "What should the darkest color mean?" }),
-      el("p", { class: "mm-hint", text: "Same data, three honest maps — pick the comparison you want your reader to make. Each preview uses your own data." }),
+      el("label", { class: "ncdpi-field__label", text: "What should the darkest color mean?" }),
+      el("p", { class: "mm-hint ncdpi-field__help", text: "Same data, three honest maps — pick the comparison you want your reader to make. Each preview uses your own data." }),
       el("div", { class: "mm-anchor-cards" }, [
         anchorCard("data", "Compare districts to each other", [
-          el("p", { class: "mm-hint" }, [
+          el("p", { class: "mm-hint ncdpi-field__help" }, [
             el("span", { text: "Darkest = the highest value in your data (" }),
             el("span", { id: "mm-cap-data", text: "—" }),
             el("span", { text: "). Uses the full color range; best for “where is it high, where is it low?”" })
           ])
         ]),
         anchorCard("goal", "Show distance from a goal", [
-          el("p", { class: "mm-hint" }, [
+          el("p", { class: "mm-hint ncdpi-field__help" }, [
             el("span", { text: "Darkest = the goal: " }),
-            el("input", { type: "number", id: "mm-goal", step: "any", oninput: onGoalInput }),
+            el("input", { class: "ncdpi-input", type: "number", id: "mm-goal", step: "any", oninput: onGoalInput }),
             el("span", { text: " — districts read as “how close to the target?” A map where nobody has reached the goal never shows the darkest color, honestly." })
           ])
         ]),
         anchorCard("reference", "Compare to a reference value", [
-          el("p", { class: "mm-hint" }, [
+          el("p", { class: "mm-hint ncdpi-field__help" }, [
             el("span", { text: "Grey = at the reference: " }),
-            el("input", { type: "number", id: "mm-center", step: "any", oninput: onCenterInput }),
+            el("input", { class: "ncdpi-input", type: "number", id: "mm-center", step: "any", oninput: onCenterInput }),
             el("span", { text: " — colors diverge on either side (e.g. above vs below the state rate). Pre-filled with the average of your mapped values; replace it with the true statewide value if you have one (a state rate usually isn’t the simple average of district rates)." })
           ])
         ])
@@ -1004,29 +1030,35 @@
     ]);
 
     // Step 4 — describe the map
-    var step4 = el("div", { class: "mm-step", id: "mm-step4", style: "display:none" }, [
-      el("h3", { text: "4. Describe the map" }),
-      el("label", { text: "Title", for: "mm-title" }),
-      el("p", { class: "mm-hint", text: "The takeaway — the one-line message a reader should remember (“Proficiency is lowest in the northeast”), not a description." }),
-      el("input", { type: "text", id: "mm-title", oninput: onDescribe }),
-      el("label", { text: "Subtitle", for: "mm-subtitle" }),
-      el("p", { class: "mm-hint", text: "The contract: measure, unit (count or %), geography, and time period (“Percentage of students grade-level proficient by district, 2025”)." }),
-      el("input", { type: "text", id: "mm-subtitle", oninput: onDescribe }),
-      el("label", { text: "Source note", for: "mm-mapsource" }),
-      el("p", { class: "mm-hint", text: "Shown below the map and included in the downloaded image (“Source: NCDPI accountability data, 2025.”)." }),
-      el("input", { type: "text", id: "mm-mapsource", oninput: onDescribe }),
-      el("label", { text: "Legend title", for: "mm-legend" }),
-      el("p", { class: "mm-hint", text: "Name the measure + unit, e.g. “Grade-level proficient (%)”." }),
-      el("input", { type: "text", id: "mm-legend", oninput: onDescribe })
+    var step4 = el("div", { class: "mm-step ncdpi-card", id: "mm-step4", style: "display:none" }, [
+      el("h2", { text: "4. Describe the map" }),
+      el("label", { class: "ncdpi-field__label", text: "Title", for: "mm-title" }),
+      el("p", { class: "mm-hint ncdpi-field__help", text: "The takeaway — the one-line message a reader should remember (“Proficiency is lowest in the northeast”), not a description." }),
+      el("input", { class: "ncdpi-input", type: "text", id: "mm-title", oninput: onDescribe }),
+      el("label", { class: "ncdpi-field__label", text: "Subtitle", for: "mm-subtitle" }),
+      el("p", { class: "mm-hint ncdpi-field__help", text: "The contract: measure, unit (count or %), geography, and time period (“Percentage of students grade-level proficient by district, 2025”)." }),
+      el("input", { class: "ncdpi-input", type: "text", id: "mm-subtitle", oninput: onDescribe }),
+      el("label", { class: "ncdpi-field__label", text: "Source note", for: "mm-mapsource" }),
+      el("p", { class: "mm-hint ncdpi-field__help", text: "Shown below the map and included in the downloaded image (“Source: NCDPI accountability data, 2025.”)." }),
+      el("input", { class: "ncdpi-input", type: "text", id: "mm-mapsource", oninput: onDescribe }),
+      el("label", { class: "ncdpi-field__label", text: "Legend title", for: "mm-legend" }),
+      el("p", { class: "mm-hint ncdpi-field__help", text: "Name the measure + unit, e.g. “Grade-level proficient (%)”." }),
+      el("input", { class: "ncdpi-input", type: "text", id: "mm-legend", oninput: onDescribe })
     ]);
 
-    // Step 5 — the map + export
-    var step5 = el("div", { class: "mm-step", id: "mm-step5", style: "display:none" }, [
-      el("h3", { text: "5. Your map" }),
-      el("div", { id: "mm-chart" }),
-      el("p", { id: "mm-source-caption" }),
+    // Step 5 — the map + export.
+    // The map sits in a .ncdpi-chartframe (the DS component built in Phase 2
+    // for exactly this). Note there is deliberately NO __title/__subtitle
+    // node: Vega paints the title and subtitle inside the SVG so they ride
+    // along into the exported PNG. Adding DOM ones would render them twice.
+    var step5 = el("div", { class: "mm-step ncdpi-card", id: "mm-step5", style: "display:none" }, [
+      el("h2", { text: "5. Your map" }),
+      el("div", { class: "ncdpi-chartframe" }, [
+        el("div", { class: "ncdpi-chartframe__body", id: "mm-chart" }),
+        el("p", { class: "ncdpi-chartframe__source", id: "mm-source-caption" })
+      ]),
       el("p", {}, [
-        el("button", { id: "mm-export", text: "Download PNG (2×)", disabled: "disabled", onclick: exportPNG })
+        el("button", { class: "ncdpi-btn ncdpi-btn--primary", id: "mm-export", text: "Download PNG (2×)", disabled: "disabled", onclick: exportPNG })
       ])
     ]);
 
@@ -1099,7 +1131,7 @@
       flags.map(function (f) {
         return String(f).replace(/&/g, "&amp;").replace(/</g, "&lt;");
       }).join("<br>") + "</p>" +
-      "<p class='mm-hint'>This tool is for aggregate data only (one row per area). Your file " +
+      "<p class='mm-hint ncdpi-field__help'>This tool is for aggregate data only (one row per area). Your file " +
       "hasn’t gone anywhere — it never leaves your browser — but person-level data shouldn’t " +
       "be mapped at all. If these columns are actually aggregate (say, a district contact " +
       "person), you can continue.</p>";
@@ -1107,7 +1139,7 @@
     check.addEventListener("change", function () {
       if (check.checked) { gate.innerHTML = ""; acceptTable(table); }
     });
-    gate.appendChild(el("label", { for: "mm-pii-confirm", style: "font-weight:bold" }, [
+    gate.appendChild(el("label", { class: "ncdpi-field__label", for: "mm-pii-confirm" }, [
       check, el("span", { text: " This file contains only aggregate data — no person-level records." })
     ]));
   }
@@ -1167,7 +1199,7 @@
         "Six groups is the ceiling — five or fewer read better. Consider combining the smallest groups." }));
     }
     cats.forEach(function (c) {
-      var sel = el("select", { "data-norm": c.norm, "aria-label": "Color for " + c.name, onchange: onCatColorChanged });
+      var sel = el("select", { class: "ncdpi-input", "data-norm": c.norm, "aria-label": "Color for " + c.name, onchange: onCatColorChanged });
       CATEGORY_COLORS.forEach(function (cc) {
         sel.appendChild(option(cc.hex, cc.label, cc.hex === c.color));
       });

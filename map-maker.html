@@ -232,7 +232,7 @@ ul.task-list li input[type="checkbox"] {
 <p><em>Beta — Phase 2 (in progress).</em> Districts, counties, and SBE regions from a CSV; sequential, goal-anchored, and diverging color scales; categorical (colored-group) maps, including highlight maps via the per-group colors; PNG download. Excel files and bar-chart legends are on the roadmap. Feedback to Andy Baxter.</p>
 <p><strong>Starting from scratch?</strong> Download a starter spreadsheet with every geography pre-listed — fill in the Value column (numbers, or group names like “Program A”) and upload it right here: <a href="downloads/ncdpi-map-starter-districts.csv" download="">districts</a> · <a href="downloads/ncdpi-map-starter-counties.csv" download="">counties</a> · <a href="downloads/ncdpi-map-starter-regions.csv" download="">SBE regions</a>.</p>
 <div id="map-maker-root"></div>
-<script>(function(){var el=document.querySelector('link[href*="site_libs/"],script[src*="site_libs/"]');var root=el?(el.href||el.src).replace(/site_libs\/.*$/,''):'';var s=document.createElement('script');s.src=root+'js/map-maker.js';s.setAttribute('data-ncdpi-mapmaker','');document.body.appendChild(s);})();</script>
+<script>(function(){var el=document.querySelector('link[href*="site_libs/"],script[src*="site_libs/"]');var root=el?(el.href||el.src).replace(/site_libs\/.*$/,''):'';['theme/tokens.css','theme/ncdpi-ds.css'].forEach(function(p){var l=document.createElement('link');l.rel='stylesheet';l.href=root+p;document.head.appendChild(l);});var s=document.createElement('script');s.src=root+'js/map-maker.js';s.setAttribute('data-ncdpi-mapmaker','');document.body.appendChild(s);})();</script>
 
 
 

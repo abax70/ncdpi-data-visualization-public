@@ -68,7 +68,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../design-system/logo.html" rel="next">
+<link href="../design-system/templates.html" rel="next">
 <link href="../design-system/contrast.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -262,6 +262,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../design-system/components.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Design system — components</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../design-system/templates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Design system — page templates</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -631,8 +637,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-chartframe__body"</span><span class="dt">&gt;</span><span class="co">&lt;!-- the chart --&gt;</span><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
 <span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-chartframe__source"</span><span class="dt">&gt;</span>Source: …<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
 <span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">figure</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>When to use.</strong> Any chart dropped into an app or HTML page (the map-maker retrofit is the intended first consumer). Title states the message; subtitle is the contract (measure, population, year); source line always (C7); all four share the left edge (C2). On the style-guide site itself, <code>chart-loader.js</code> already renders this structure for Vega specs — this class packages the same anatomy for everything else.</p>
-<p><strong>Definition of done.</strong> All text Arial at the chart sizes (14pt title, 11pt subtitle/source as px) · shared left edge, no centered titles · source line present · the chart body carries its own alt text (<code>role="img"</code> + label, or a companion table).</p>
+<p><strong>When to use.</strong> Any chart dropped into an app or HTML page (the map-maker is the first consumer). Title states the message; subtitle is the contract (measure, population, year); source line always (C7); everything shares the left edge (C2). On the style-guide site itself, <code>chart-loader.js</code> already renders this structure for Vega specs — this class packages the same anatomy for everything else.</p>
+<p><strong>Two title modes</strong> (learned in the map-maker retrofit). <em>Frame-titled</em> (the example above): <code>__title</code>/<code>__subtitle</code> live in the DOM — for static images and plain SVGs that don’t paint their own titles. <em>Chart-titled</em>: a rendering engine like Vega paints title and subtitle <strong>into the chart’s own SVG</strong> so exports keep them — then the frame carries only <code>__body</code> + <code>__source</code>, and the DOM title is omitted. Never both: a frame title above a chart-painted title reads twice. The source line stays in the DOM either way (exports that need it draw their own, as the map-maker’s PNG does).</p>
+<p><strong>Definition of done.</strong> All text Arial at the chart sizes (14pt title, 11pt subtitle/source as px) · shared left edge, no centered titles · source line present · title/subtitle in exactly one place — DOM or chart, never both · the chart body carries its own alt text (<code>role="img"</code> + label, or a companion table).</p>
 </section>
 <section id="form-basics-.ncdpi-field" class="level2">
 <h2 class="anchored" data-anchor-id="form-basics-.ncdpi-field">Form basics — <code>.ncdpi-field</code></h2>
@@ -649,6 +656,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <input class="ncdpi-input" id="demo-year" type="text" inputmode="numeric" aria-describedby="demo-year-error" value="2031" aria-invalid="true">
       <p class="ncdpi-field__error" id="demo-year-error">Error: enter a year between 2015 and 2026.</p>
     </div>
+    <div class="ncdpi-field">
+      <label class="ncdpi-field__label" for="demo-file">Data file</label>
+      <p class="ncdpi-field__help" id="demo-file-help">CSV, one row per area.</p>
+      <input class="ncdpi-input ncdpi-input--file" id="demo-file" type="file" accept=".csv" aria-describedby="demo-file-help">
+    </div>
   </div>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-field ncdpi-field--error"</span><span class="dt">&gt;</span></span>
@@ -656,12 +668,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-input"</span><span class="ot"> id</span><span class="op">=</span><span class="st">"year"</span><span class="ot"> aria-describedby</span><span class="op">=</span><span class="st">"year-error"</span><span class="ot"> aria-invalid</span><span class="op">=</span><span class="st">"true"</span><span class="dt">&gt;</span></span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">"ncdpi-field__error"</span><span class="ot"> id</span><span class="op">=</span><span class="st">"year-error"</span><span class="dt">&gt;</span>Error: enter a year between 2015 and 2026.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>When to use.</strong> The occasional input a data product needs (a goal value, a filter, an email field) — not full multi-step forms. Error messages name the problem <em>and</em> the fix, in words (“Error: enter a year between 2015 and 2026”), never just a red border.</p>
+<p><strong>When to use.</strong> The occasional input a data product needs (a goal value, a filter, an email field) — not full multi-step forms. Error messages name the problem <em>and</em> the fix, in words (“Error: enter a year between 2015 and 2026”), never just a red border. For file pickers add <code>.ncdpi-input--file</code>, which restyles the browser’s inner button as a secondary button (plain <code>.ncdpi-input</code> can’t reach it — learned in the map-maker retrofit).</p>
 <p><strong>Definition of done.</strong> Real <code>&lt;label for&gt;</code> on every control · help and error text wired via <code>aria-describedby</code> · <code>aria-invalid</code> on the failed control · error color never the only signal (the message text is) · border ≥3:1 in both states.</p>
 </section>
 <section id="whats-next" class="level2">
 <h2 class="anchored" data-anchor-id="whats-next">What’s next</h2>
-<p>All ~12 Phase-2 components now exist. Remaining in Phase 2: the <a href="../design-system/voice.html">voice &amp; microcopy page</a>. Then Phase 3 per <code>design-system/PLAN.md</code>: page templates and the <strong>map-maker retrofit</strong> — the design system’s first real consumer.</p>
+<p>All ~12 Phase-2 components exist, and Phase 3 is delivered: the <a href="../map-maker.html">map-maker</a> runs on the system (the retrofit that produced the file-picker styling and the chartframe title modes above), and three <a href="../design-system/templates.html">page templates</a> package the components into finished starting points.</p>
 <script>(function(){var el=document.querySelector('link[href*="site_libs/"],script[src*="site_libs/"]');var root=el?(el.href||el.src).replace(/site_libs\/.*$/,''):'';['theme/tokens.css','theme/ncdpi-ds.css'].forEach(function(p){var l=document.createElement('link');l.rel='stylesheet';l.href=root+p;document.head.appendChild(l);});var s=document.createElement('script');s.src=root+'theme/ncdpi-ds.js';document.body.appendChild(s);})();</script>
 
 
@@ -1096,8 +1108,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../design-system/logo.html" class="pagination-link" aria-label="Design system — logo">
-        <span class="nav-page-text">Design system — logo</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../design-system/templates.html" class="pagination-link" aria-label="Design system — page templates">
+        <span class="nav-page-text">Design system — page templates</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -1,0 +1,99 @@
+---
+title: "[Message-first page title]"
+subtitle: "[The contract: measure, population, period]"
+---
+
+<!-- ==========================================================================
+  NCDPI Quarto page template  (design-system Phase 3)
+  ==========================================================================
+  A starter .qmd for a page INSIDE a Quarto website — this style guide's
+  own pattern. Quarto supplies the navbar, sidebar, and typography theme;
+  the loader script at the bottom adds the design-system components
+  (.ncdpi-*) on top.
+
+  HOW TO USE
+  1. Copy this file into your Quarto project and rename it.
+  2. If the project is THIS style-guide site: the loader at the bottom just
+     works (it finds the site root from Quarto's own asset links, at any
+     depth). In a DIFFERENT Quarto project: copy theme/tokens.css +
+     theme/ncdpi-ds.css (and theme/fonts/) into that project and keep the
+     loader, or replace it with two plain stylesheet links in the YAML
+     (include-in-header).
+  3. Replace every [bracketed] placeholder; delete what you don't need.
+     Normal markdown works everywhere outside the ```{=html} blocks.
+
+  HOUSE RULES
+  - Headings state messages, not topics (C2 spirit).
+  - Charts: use the site's chart-loader / Vega pipeline where available —
+    the chart paints its own title, so a chartframe around it carries only
+    __body + __source (chart-titled mode). A static image instead? Use the
+    frame-titled chartframe from the one-pager template.
+  - Tables: caption leads with the contract; keep scope attributes (C2).
+========================================================================== -->
+
+[One or two sentences of lede: why this page exists and what the reader
+will be able to answer after reading it.]
+
+```{=html}
+<p class="ncdpi-callout ncdpi-callout--info">
+  <span class="ncdpi-callout__title">[How to read this]</span>
+  [One caveat or definition the page depends on. Delete if unused.]
+</p>
+```
+
+## [What the numbers say, as a claim]
+
+```{=html}
+<div class="ncdpi-stat-row">
+  <div class="ncdpi-stat">
+    <span class="ncdpi-stat__label">[Measure]</span>
+    <span class="ncdpi-stat__value">[86.4%]</span>
+    <span class="ncdpi-stat__delta ncdpi-stat__delta--good">▲ up [1.2] pts from [2024]</span>
+    <span class="ncdpi-stat__source">Source: [source, year].</span>
+  </div>
+  <div class="ncdpi-stat">
+    <span class="ncdpi-stat__label">[Second measure]</span>
+    <span class="ncdpi-stat__value">[115]</span>
+    <span class="ncdpi-stat__delta">[context, no change]</span>
+    <span class="ncdpi-stat__source">Source: [source, year].</span>
+  </div>
+</div>
+```
+
+## [What the chart shows, as a claim]
+
+[In this style-guide site, embed a chart the house way — a `.vl.json` spec
+rendered by chart-loader, which paints its own title/subtitle/source. In a
+plain Quarto project, drop in a static image or the one-pager template's
+frame-titled chartframe.]
+
+## [What the detail table breaks down]
+
+```{=html}
+<table class="ncdpi-table">
+  <caption>[Measure (unit) by geography, period]</caption>
+  <thead>
+    <tr>
+      <th scope="col">[Geography]</th>
+      <th scope="col" class="num">[2024]</th>
+      <th scope="col" class="num">[2025]</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">[Row name]</th>
+      <td class="num">[85.2]</td>
+      <td class="num">[86.4]</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr><td colspan="3">Source: [source, year]. [Notes.]</td></tr>
+  </tfoot>
+</table>
+```
+
+[Closing context, next steps, or a contact line.]
+
+```{=html}
+<script>(function(){var el=document.querySelector('link[href*="site_libs/"],script[src*="site_libs/"]');var root=el?(el.href||el.src).replace(/site_libs\/.*$/,''):'';['theme/tokens.css','theme/ncdpi-ds.css'].forEach(function(p){var l=document.createElement('link');l.rel='stylesheet';l.href=root+p;document.head.appendChild(l);});})();</script>
+```

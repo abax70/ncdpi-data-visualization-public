@@ -298,6 +298,22 @@
       "description": ""
     },
     {
+      "path": "color.semantic.success",
+      "cssVar": "--ncdpi-success",
+      "value": "#077890",
+      "ref": "{chart.data-highlight.bar-line-is-best}",
+      "type": "color",
+      "description": "Success/positive-status semantics: match reports, confirmation messages, 'all good' text. RULING (session 37, from the map-maker retrofit's friction): First in Flight has no green and dpi.nc.gov paints none (dpi-site-color-audit.md, 2026-08-04), so success speaks the dataviz valence teal ('Bar/Line is Best' #077890) \u2014 the stat-tile precedent: valence semantics come from the chart world, never a minted color. Resolved at build time from color-data.json, so a brand-CSV re-ink follows automatically. Validated as text on surface + surface-raised."
+    },
+    {
+      "path": "color.semantic.on-success",
+      "cssVar": "--ncdpi-on-success",
+      "value": "#FFFFFF",
+      "ref": "{color.brand.white}",
+      "type": "color",
+      "description": ""
+    },
+    {
       "path": "color.semantic.action",
       "cssVar": "--ncdpi-action",
       "value": "#092940",

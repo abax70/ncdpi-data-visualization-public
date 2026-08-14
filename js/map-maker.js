@@ -891,10 +891,10 @@
         // Two-column control rows.
         "#map-maker-root .mm-cols { display: flex; gap: var(--ncdpi-space-md); flex-wrap: wrap; }",
         "#map-maker-root .mm-cols > div { flex: 1 1 240px; }",
-        // Match-report status lines. These valence colors reach across the D2
-        // boundary into the chart world — the same crossing, and the same two
-        // contrast-validated hexes, the DS stat tile makes for its delta.
-        "#map-maker-root .mm-report-ok { color: var(--ncdpi-chart-data-highlight-bar-line-is-best); font-weight: var(--ncdpi-weight-bold); }",
+        // Match-report status lines. Success is now a semantic token (session
+        // 37) that itself points at the chart-world valence teal — the D2
+        // crossing lives in the token layer, documented once, not here.
+        "#map-maker-root .mm-report-ok { color: var(--ncdpi-success); font-weight: var(--ncdpi-weight-bold); }",
         "#map-maker-root .mm-report-warn { color: var(--ncdpi-danger); }",
         // Anchor cards are .ncdpi-card--flat, but with 2px borders so
         // selecting one never shifts the layout.
@@ -931,7 +931,7 @@
       el("label", { class: "ncdpi-field__label", text: "CSV file", for: "mm-file" }),
       // Left deliberately unstyled: native file inputs resist .ncdpi-input
       // (the control is a shadow-DOM button, not a text box).
-      el("input", { type: "file", id: "mm-file", accept: ".csv,text/csv", onchange: onFile }),
+      el("input", { type: "file", id: "mm-file", class: "ncdpi-input ncdpi-input--file", accept: ".csv,text/csv", onchange: onFile }),
       el("p", { class: "mm-hint ncdpi-field__help", id: "mm-file-msg", text: "Expect one row per area: a column identifying it (name or code) and a value column — numbers for a shaded map, or group names (a program, a status) for a map colored by group. One group per row; call a combination its own group (“Hybrid”). Excel support arrives in the next version — for now, save as CSV." }),
       el("div", { id: "mm-pii-gate" })
     ]);

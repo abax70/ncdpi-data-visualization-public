@@ -619,6 +619,17 @@
    subtitle/source — the same 18.67/14.67px the Vega theme uses; hard-coded
    here because chart text sizes deliberately live in the chart pipeline,
    not the UI tokens).
+
+   Two title modes (map-maker retrofit friction, session 36):
+   - FRAME-TITLED (default): __title/__subtitle live in the DOM, as the
+     docs example shows. For charts that don't paint their own titles
+     (static images, plain SVGs).
+   - CHART-TITLED: a rendering engine (Vega/Vega-Lite) paints title and
+     subtitle INTO its own SVG so exports keep them — the frame then
+     carries ONLY __body + __source (the map-maker pattern). Never both:
+     a DOM title above a chart-painted title reads twice.
+   All four elements are optional in CSS; nothing breaks when title or
+   subtitle is absent.
    -------------------------------------------------------------------------- */
 
 .ncdpi-chartframe {
@@ -692,6 +703,34 @@
 .ncdpi-input:focus-visible {
   outline: 3px solid var(--ncdpi-focus);
   outline-offset: 1px;
+}
+
+/* File picker: add .ncdpi-input--file to an input[type=file]. The
+   interactive part of a file input is the browser's inner button, which
+   .ncdpi-input alone can't reach (map-maker retrofit friction, session 36)
+   — restyle it as a secondary button via ::file-selector-button. The focus
+   ring stays on the input itself, covered above. */
+.ncdpi-input--file {
+  padding: var(--ncdpi-space-2xs);
+  font-size: var(--ncdpi-size-small);
+}
+
+.ncdpi-input--file::file-selector-button {
+  font-family: var(--ncdpi-font-ui);
+  font-size: var(--ncdpi-size-small);
+  font-weight: var(--ncdpi-weight-semibold);
+  color: var(--ncdpi-link);
+  background: var(--ncdpi-surface-raised);
+  border: 2px solid var(--ncdpi-link);
+  border-radius: var(--ncdpi-radius-md);
+  padding: var(--ncdpi-space-xs) var(--ncdpi-space-sm);
+  margin-right: var(--ncdpi-space-sm);
+  cursor: pointer;
+}
+
+.ncdpi-input--file::file-selector-button:hover {
+  background: var(--ncdpi-surface-info);
+  color: var(--ncdpi-on-surface-info);
 }
 
 .ncdpi-field--error .ncdpi-input {

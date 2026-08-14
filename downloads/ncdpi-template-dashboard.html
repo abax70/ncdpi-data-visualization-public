@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<!-- ==========================================================================
+  NCDPI dashboard shell template  (design-system Phase 3)
+  ==========================================================================
+  A standalone HTML dashboard: a KPI row on top, a responsive grid of
+  charts below, one shared source line of truth per chart. For recurring
+  monitoring pages — a strategic-plan view, a program tracker — that
+  should live at a URL without needing Tableau or a site build.
+
+  HOW TO USE
+  1. Copy this file and rename it.
+  2. Give it the design system: EITHER copy site/theme/tokens.css,
+     site/theme/ncdpi-ds.css (and site/theme/fonts/ if you want self-hosted
+     Source Sans) into a theme/ folder next to this file and change the two
+     <link> hrefs below to "theme/tokens.css" / "theme/ncdpi-ds.css" —
+     OR leave the hrefs alone if the file stays in this site's downloads/.
+  3. Replace every [bracketed] placeholder. Add or remove .panel blocks
+     freely — the grid reflows; tiles and panels wrap on narrow screens.
+
+  RULES OF THE HOUSE (design-system/PLAN.md D1-D6)
+  - UI text is Source Sans via the tokens; chart text stays Arial (D2) —
+    each .ncdpi-chartframe handles that boundary for you.
+  - Colors come from var(--ncdpi-*) tokens only. The one exception: chart
+    MARKS inside a chartframe body use the dataviz palette hexes.
+  - The <style> block below is LAYOUT ONLY — keep it free of color literals.
+  - Every chart: message title, contract subtitle, C7 source line, alt text
+    (role="img" + aria-label, or a companion table).
+========================================================================== -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[What this dashboard monitors] — NCDPI</title>
+<link rel="stylesheet" href="../theme/tokens.css">
+<link rel="stylesheet" href="../theme/ncdpi-ds.css">
+<style>
+  /* layout only — no color literals (tokens carry all color) */
+  body {
+    margin: 0;
+    background: var(--ncdpi-surface);
+    color: var(--ncdpi-text-primary);
+    font-family: var(--ncdpi-font-ui);
+    font-size: var(--ncdpi-size-body);
+    line-height: var(--ncdpi-leading-body);
+  }
+  .board {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 var(--ncdpi-space-md) var(--ncdpi-space-xl);
+  }
+  .board > h1 {
+    font-size: var(--ncdpi-size-h3);
+    line-height: var(--ncdpi-leading-heading);
+    color: var(--ncdpi-text-heading);
+    margin: var(--ncdpi-space-lg) 0 var(--ncdpi-space-2xs);
+  }
+  .asof {
+    font-size: var(--ncdpi-size-small);
+    color: var(--ncdpi-text-secondary);
+    margin: 0 0 var(--ncdpi-space-md);
+  }
+  /* the chart grid: panels are cards; 2-up when there's room, 1-up when not */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(26rem, 100%), 1fr));
+    gap: var(--ncdpi-space-md);
+    margin-top: var(--ncdpi-space-md);
+  }
+  .panel { margin: 0; }                       /* .ncdpi-card supplies the rest */
+  .panel .ncdpi-chartframe { margin: 0; }
+  .panel svg { width: 100%; height: auto; display: block; }
+</style>
+</head>
+<body>
+<a class="ncdpi-skip-link" href="#main">Skip to main content</a>
+
+<header class="ncdpi-header">
+  <span class="ncdpi-header__brand">NC Department of Public Instruction</span>
+  <span class="ncdpi-header__tagline">[Program or team name]</span>
+</header>
+
+<main id="main" class="board">
+  <h1>[What this dashboard monitors]</h1>
+  <p class="asof">Data as of [month year] · updated [cadence]</p>
+
+  <!-- KPI row: 3-4 tiles, each one number that IS a message (BAN rules).
+       Delta color never carries the meaning alone — the words do. -->
+  <div class="ncdpi-stat-row">
+    <div class="ncdpi-stat">
+      <span class="ncdpi-stat__label">[Measure]</span>
+      <span class="ncdpi-stat__value">[86.4%]</span>
+      <span class="ncdpi-stat__delta ncdpi-stat__delta--good">▲ up [1.2] pts from [2024]</span>
+      <span class="ncdpi-stat__source">Source: [source, year].</span>
+    </div>
+    <div class="ncdpi-stat">
+      <span class="ncdpi-stat__label">[Measure]</span>
+      <span class="ncdpi-stat__value">[24.1%]</span>
+      <span class="ncdpi-stat__delta ncdpi-stat__delta--bad">▲ up [0.8] pts from [2024]</span>
+      <span class="ncdpi-stat__source">Source: [source, year].</span>
+    </div>
+    <div class="ncdpi-stat">
+      <span class="ncdpi-stat__label">[Measure]</span>
+      <span class="ncdpi-stat__value">[115]</span>
+      <span class="ncdpi-stat__delta">[context, no change]</span>
+      <span class="ncdpi-stat__source">Source: [source, year].</span>
+    </div>
+  </div>
+
+  <!-- The chart grid. Each panel = card + frame-titled chartframe (static
+       charts). Embedding Vega instead? Let the chart paint its own title
+       and keep only __body + __source in the frame — never both. Replace
+       each placeholder SVG; keep role="img" + a real aria-label. -->
+  <div class="grid">
+    <figure class="panel ncdpi-card">
+      <div class="ncdpi-chartframe">
+        <div class="ncdpi-chartframe__title">[Message title, not a topic label]</div>
+        <div class="ncdpi-chartframe__subtitle">[Measure, population, year]</div>
+        <div class="ncdpi-chartframe__body">
+          <svg role="img" aria-label="[Describe the chart and its takeaway]" viewBox="0 0 420 110">
+            <!-- chart-world marks: dataviz neutral grey + navy highlight -->
+            <rect x="0" y="6"  width="340" height="16" fill="#B7B9BB"/>
+            <rect x="0" y="32" width="356" height="16" fill="#B7B9BB"/>
+            <rect x="0" y="58" width="300" height="16" fill="#003A70"/>
+            <rect x="0" y="84" width="362" height="16" fill="#B7B9BB"/>
+            <line x1="0" y1="0" x2="0" y2="110" stroke="#525A60" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="ncdpi-chartframe__source">Source: [source, year].</div>
+      </div>
+    </figure>
+
+    <figure class="panel ncdpi-card">
+      <div class="ncdpi-chartframe">
+        <div class="ncdpi-chartframe__title">[Message title, not a topic label]</div>
+        <div class="ncdpi-chartframe__subtitle">[Measure, population, year]</div>
+        <div class="ncdpi-chartframe__body">
+          <svg role="img" aria-label="[Describe the chart and its takeaway]" viewBox="0 0 420 110">
+            <rect x="0" y="6"  width="290" height="16" fill="#B7B9BB"/>
+            <rect x="0" y="32" width="330" height="16" fill="#003A70"/>
+            <rect x="0" y="58" width="352" height="16" fill="#B7B9BB"/>
+            <rect x="0" y="84" width="310" height="16" fill="#B7B9BB"/>
+            <line x1="0" y1="0" x2="0" y2="110" stroke="#525A60" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="ncdpi-chartframe__source">Source: [source, year].</div>
+      </div>
+    </figure>
+
+    <figure class="panel ncdpi-card">
+      <div class="ncdpi-chartframe">
+        <div class="ncdpi-chartframe__title">[Message title, not a topic label]</div>
+        <div class="ncdpi-chartframe__subtitle">[Measure, population, year]</div>
+        <div class="ncdpi-chartframe__body">
+          <svg role="img" aria-label="[Describe the chart and its takeaway]" viewBox="0 0 420 110">
+            <rect x="0" y="6"  width="352" height="16" fill="#B7B9BB"/>
+            <rect x="0" y="32" width="322" height="16" fill="#B7B9BB"/>
+            <rect x="0" y="58" width="338" height="16" fill="#B7B9BB"/>
+            <rect x="0" y="84" width="296" height="16" fill="#003A70"/>
+            <line x1="0" y1="0" x2="0" y2="110" stroke="#525A60" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="ncdpi-chartframe__source">Source: [source, year].</div>
+      </div>
+    </figure>
+
+    <figure class="panel ncdpi-card">
+      <div class="ncdpi-chartframe">
+        <div class="ncdpi-chartframe__title">[Message title, not a topic label]</div>
+        <div class="ncdpi-chartframe__subtitle">[Measure, population, year]</div>
+        <div class="ncdpi-chartframe__body">
+          <svg role="img" aria-label="[Describe the chart and its takeaway]" viewBox="0 0 420 110">
+            <rect x="0" y="6"  width="316" height="16" fill="#003A70"/>
+            <rect x="0" y="32" width="348" height="16" fill="#B7B9BB"/>
+            <rect x="0" y="58" width="284" height="16" fill="#B7B9BB"/>
+            <rect x="0" y="84" width="332" height="16" fill="#B7B9BB"/>
+            <line x1="0" y1="0" x2="0" y2="110" stroke="#525A60" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="ncdpi-chartframe__source">Source: [source, year].</div>
+      </div>
+    </figure>
+  </div>
+</main>
+
+<footer class="ncdpi-footer">
+  Questions? <a href="mailto:[address]">[Contact the data team]</a> ·
+  Data current as of [month year]
+</footer>
+</body>
+</html>

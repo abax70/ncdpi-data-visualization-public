@@ -276,6 +276,36 @@
       "pass": true
     },
     {
+      "fg": "success",
+      "fgHex": "#077890",
+      "bg": "surface",
+      "bgHex": "#FAF9F9",
+      "kind": "text",
+      "threshold": 4.5,
+      "ratio": 4.88,
+      "pass": true
+    },
+    {
+      "fg": "success",
+      "fgHex": "#077890",
+      "bg": "surface-raised",
+      "bgHex": "#FFFFFF",
+      "kind": "text",
+      "threshold": 4.5,
+      "ratio": 5.12,
+      "pass": true
+    },
+    {
+      "fg": "on-success",
+      "fgHex": "#FFFFFF",
+      "bg": "success",
+      "bgHex": "#077890",
+      "kind": "text",
+      "threshold": 4.5,
+      "ratio": 5.12,
+      "pass": true
+    },
+    {
       "fg": "focus",
       "fgHex": "#3892E1",
       "bg": "surface",

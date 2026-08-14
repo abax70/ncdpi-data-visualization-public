@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!-- ==========================================================================
+  NCDPI one-pager template  (design-system Phase 3)
+  ==========================================================================
+  A standalone HTML brief: one message, a few numbers, one chart, one table.
+  For the moments a full site or dashboard is too much — a legislative
+  answer, a program summary, a meeting handout that still lives at a URL.
+
+  HOW TO USE
+  1. Copy this file and rename it.
+  2. Give it the design system: EITHER copy site/theme/tokens.css,
+     site/theme/ncdpi-ds.css (and site/theme/fonts/ if you want self-hosted
+     Source Sans) into a theme/ folder next to this file and change the two
+     <link> hrefs below to "theme/tokens.css" / "theme/ncdpi-ds.css" —
+     OR leave the hrefs alone if the file stays in this site's downloads/.
+  3. Replace every [bracketed] placeholder; delete any section you don't
+     need. House rules ride along in comments.
+
+  RULES OF THE HOUSE (design-system/PLAN.md D1-D6)
+  - UI text is Source Sans via the tokens; charts stay Arial (D2) — the
+    .ncdpi-chartframe handles that boundary for you.
+  - Colors come from var(--ncdpi-*) tokens only. The one exception: chart
+    MARKS inside a chartframe body use the dataviz palette hexes (here, the
+    placeholder's neutral grey + navy highlight).
+  - The <style> block below is LAYOUT ONLY — keep it free of color literals.
+========================================================================== -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[Message-first title of this brief] — NCDPI</title>
+<link rel="stylesheet" href="../theme/tokens.css">
+<link rel="stylesheet" href="../theme/ncdpi-ds.css">
+<style>
+  /* layout only — no color literals (tokens carry all color) */
+  body {
+    margin: 0;
+    background: var(--ncdpi-surface);
+    color: var(--ncdpi-text-primary);
+    font-family: var(--ncdpi-font-ui);
+    font-size: var(--ncdpi-size-body);
+    line-height: var(--ncdpi-leading-body);
+  }
+  .page {
+    max-width: 52rem;             /* a readable single-column measure */
+    margin: 0 auto;
+    padding: 0 var(--ncdpi-space-md) var(--ncdpi-space-xl);
+  }
+  .page > h1 {
+    font-size: var(--ncdpi-size-h2);   /* one-pagers read best a step down */
+    line-height: var(--ncdpi-leading-heading);
+    color: var(--ncdpi-text-heading);
+    margin: var(--ncdpi-space-lg) 0 var(--ncdpi-space-xs);
+  }
+  .lede {
+    font-size: var(--ncdpi-size-h6);
+    color: var(--ncdpi-text-secondary);
+    margin: 0 0 var(--ncdpi-space-lg);
+  }
+  h2 {
+    font-size: var(--ncdpi-size-h4);
+    line-height: var(--ncdpi-leading-heading);
+    color: var(--ncdpi-text-heading);
+    margin: var(--ncdpi-space-lg) 0 var(--ncdpi-space-sm);
+  }
+</style>
+</head>
+<body>
+<a class="ncdpi-skip-link" href="#main">Skip to main content</a>
+
+<header class="ncdpi-header">
+  <span class="ncdpi-header__brand">NC Department of Public Instruction</span>
+  <span class="ncdpi-header__tagline">[Program or team name]</span>
+</header>
+
+<main id="main" class="page">
+  <!-- C2 spirit: the H1 states the MESSAGE, not the topic.
+       "Sandhills trails the state in grad rate", not "Graduation report". -->
+  <h1>[The one-sentence finding this page exists to deliver]</h1>
+  <p class="lede">[The contract: measure, population, period — and why it
+  matters right now, in one or two sentences.]</p>
+
+  <!-- The numbers: 2-3 stat tiles, no more (BAN rules). Delta line optional;
+       delta color never carries the meaning alone — the words do. -->
+  <div class="ncdpi-stat-row">
+    <div class="ncdpi-stat">
+      <span class="ncdpi-stat__label">[Measure]</span>
+      <span class="ncdpi-stat__value">[86.4%]</span>
+      <span class="ncdpi-stat__delta ncdpi-stat__delta--good">▲ up [1.2] pts from [2024]</span>
+      <span class="ncdpi-stat__source">Source: [source, year].</span>
+    </div>
+    <div class="ncdpi-stat">
+      <span class="ncdpi-stat__label">[Second measure]</span>
+      <span class="ncdpi-stat__value">[115]</span>
+      <span class="ncdpi-stat__delta">[context, no change]</span>
+      <span class="ncdpi-stat__source">Source: [source, year].</span>
+    </div>
+  </div>
+
+  <h2>[What the chart shows, as a claim]</h2>
+
+  <!-- Frame-titled chartframe: title/subtitle in the DOM (this is a static
+       chart). If you embed Vega instead, let the chart paint its own title
+       and keep only __body + __source here — never both. Replace the
+       placeholder SVG with your chart; keep role="img" + a real aria-label,
+       or add a companion table below. -->
+  <figure class="ncdpi-chartframe" style="margin:0;">
+    <div class="ncdpi-chartframe__title">[Message title, not a topic label]</div>
+    <div class="ncdpi-chartframe__subtitle">[Measure, population, year — the contract]</div>
+    <div class="ncdpi-chartframe__body">
+      <svg role="img" aria-label="[Describe what the chart shows, including the takeaway]" viewBox="0 0 640 120" style="max-width:640px;width:100%;display:block;">
+        <!-- chart-world marks: dataviz neutral grey + navy highlight -->
+        <rect x="0" y="8"   width="520" height="18" fill="#B7B9BB"/>
+        <rect x="0" y="36"  width="548" height="18" fill="#B7B9BB"/>
+        <rect x="0" y="64"  width="470" height="18" fill="#003A70"/>
+        <rect x="0" y="92"  width="556" height="18" fill="#B7B9BB"/>
+        <line x1="0" y1="0" x2="0" y2="120" stroke="#525A60" stroke-width="2"/>
+      </svg>
+    </div>
+    <div class="ncdpi-chartframe__source">Source: [source, year]. [Demonstration data.]</div>
+  </figure>
+
+  <!-- Optional: the caveat the reader must not miss. Use --danger for a
+       breaking problem, --neutral for a plain aside. Delete if unused. -->
+  <p class="ncdpi-callout ncdpi-callout--info" style="margin-top: var(--ncdpi-space-lg);">
+    <span class="ncdpi-callout__title">[How to read this]</span>
+    [One caveat or definition the numbers above depend on.]
+  </p>
+
+  <h2>[What the table details]</h2>
+
+  <!-- C2 for tables: the caption leads with the contract
+       (measure, unit, geography, period). Keep scope attributes. -->
+  <table class="ncdpi-table">
+    <caption>[Measure (unit) by geography, period]</caption>
+    <thead>
+      <tr>
+        <th scope="col">[Geography]</th>
+        <th scope="col" class="num">[2024]</th>
+        <th scope="col" class="num">[2025]</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">[Row name]</th>
+        <td class="num">[85.2]</td>
+        <td class="num">[86.4]</td>
+      </tr>
+      <tr>
+        <th scope="row">[Row name]</th>
+        <td class="num">[82.9]</td>
+        <td class="num">[83.1]</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="3">Source: [source, year]. [Notes on suppression or definitions.]</td>
+      </tr>
+    </tfoot>
+  </table>
+</main>
+
+<footer class="ncdpi-footer">
+  Questions? <a href="mailto:[address]">[Contact the data team]</a> ·
+  Data current as of [month year]
+</footer>
+</body>
+</html>

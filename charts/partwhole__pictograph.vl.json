@@ -22,7 +22,7 @@
     "color": {
       "field": "outcome", "type": "nominal", "title": null,
       "scale": { "domain": ["Graduated", "Did not graduate"], "range": ["#077890", "#B7B9BB"] },
-      "legend": { "orient": "bottom", "symbolSize": 520, "labelFontSize": 11 }
+      "legend": { "orient": "bottom", "symbolSize": 520, "labelFontSize": 14.67 }
     },
     "tooltip": [
       { "field": "outcome", "title": "Outcome" }

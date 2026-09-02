@@ -94,7 +94,7 @@
       }
     },
     {
-      "mark": { "type": "text", "align": "right", "dx": -10, "fontSize": 12, "color": "#525A60" },
+      "mark": { "type": "text", "align": "right", "dx": -10, "fontSize": 13.33, "color": "#525A60" },
       "encoding": {
         "x": { "field": "2021", "type": "quantitative" },
         "text": { "field": "2021", "type": "quantitative", "format": ".0f" }

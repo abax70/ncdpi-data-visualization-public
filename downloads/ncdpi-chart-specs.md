@@ -2,9 +2,35 @@
 
 A one-stop reference for the NCDPI chart palette and type specs: every color, hex value, font, and size used in our charts and dashboards. Generated from the brand color file, so it always matches the [live style guide](https://abax70.github.io/ncdpi-data-visualization-public/).
 
-_Generated 2026-06-18 from `site/theme/color-data.json`. Do not edit by hand - re-run `tools/build_cheatsheet.py`._
+_Generated 2026-09-02 from `site/theme/color-data.json`. Do not edit by hand - re-run `tools/build_cheatsheet.py`._
 
 Colors are named by **HEX** value throughout. Never rely on color alone - pair it with labels or position.
+
+## Text sizes - read this before using any size below
+
+**Every size in this file is in POINTS (pt), not pixels.**
+
+| | Size | In pixels |
+|---|---|---|
+| **Default** for chart text | **11 pt** | 14.67 px |
+| **Floor** - nothing goes below this | **10 pt** | 13.33 px |
+| **Baseline** for site body copy | - | **18 px** |
+
+Chart text defaults to 11 pt. The absolute floor is 10 pt - nothing goes below it. Site body copy stays at 18 px and never sits at the floor. Going bigger is always fine; the floor is a limit, not a target.
+
+**Converting:** 1 pt = 4/3 px. So 11 pt = 14.67 px, 14 pt = 18.67 px.
+
+**Critical.** Vega-Lite `fontSize` and CSS `font-size` are PIXEL fields. Writing a bare point number there (e.g. 11) renders text ~25% too small and raises no error. Convert first: write 14.67, not 11. matplotlib `fontsize=` IS points, so 11 is correct there.
+
+| Tool | A bare `11` means | Which is |
+|---|---|---|
+| matplotlib `fontsize=11` | 11 points | 11 pt - correct |
+| Vega-Lite `"fontSize": 11` | 11 pixels | 8.25 pt - 25% too small |
+| CSS `font-size: 11px` | 11 pixels | 8.25 pt - 25% too small |
+
+This floor is an NCDPI house convention, NOT a WCAG requirement. WCAG 2.1/2.2 deliberately specifies no minimum font size. Do not cite WCAG in support of it. Sources: https://www.section508.gov/develop/fonts-typography/ (names 11-12 pt as typical; calls running text below 9 pt a barrier); https://www.nngroup.com/articles/let-users-control-font-size/ (at least 10 point for general audiences)
+
+_Exemptions:_ KPI big number (50 px) and donut center numeral (36 px) are visually tuned display figures, not brand point values. Both are far above the floor.
 
 ## Chart
 

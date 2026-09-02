@@ -1,8 +1,23 @@
 {
   "title": "NCDPI Data Visualization chart spec sheet",
   "source": "site/theme/color-data.json",
-  "generated": "2026-06-18",
+  "generated": "2026-09-02",
   "guide_url": "https://abax70.github.io/ncdpi-data-visualization-public/",
+  "text_size_rules": {
+    "units": "All sizes in this file are POINTS (pt), not pixels.",
+    "pt_to_px": "1 pt = 4/3 px. So 11 pt = 14.67 px, 14 pt = 18.67 px.",
+    "default_pt": 11,
+    "floor_pt": 10,
+    "body_baseline_px": 18,
+    "rule": "Chart text defaults to 11 pt. The absolute floor is 10 pt - nothing goes below it. Site body copy stays at 18 px and never sits at the floor. Going bigger is always fine; the floor is a limit, not a target.",
+    "critical": "Vega-Lite `fontSize` and CSS `font-size` are PIXEL fields. Writing a bare point number there (e.g. 11) renders text ~25% too small and raises no error. Convert first: write 14.67, not 11. matplotlib `fontsize=` IS points, so 11 is correct there.",
+    "not_a_standard": "This floor is an NCDPI house convention, NOT a WCAG requirement. WCAG 2.1/2.2 deliberately specifies no minimum font size. Do not cite WCAG in support of it.",
+    "sources": [
+      "https://www.section508.gov/develop/fonts-typography/ (names 11-12 pt as typical; calls running text below 9 pt a barrier)",
+      "https://www.nngroup.com/articles/let-users-control-font-size/ (at least 10 point for general audiences)"
+    ],
+    "exemptions": "KPI big number (50 px) and donut center numeral (36 px) are visually tuned display figures, not brand point values. Both are far above the floor."
+  },
   "components": {
     "Chart": {
       "Background": [

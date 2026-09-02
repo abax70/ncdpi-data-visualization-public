@@ -13,7 +13,7 @@
   "spacing": 38,
   "vconcat": [
     {
-      "title": { "text": "Anchored to the 100% goal — axis 0–100", "subtitle": "Honest about the distance left to the goal, but the regions look identical.", "anchor": "start", "fontSize": 17.33, "subtitleFontSize": 11, "subtitleColor": "#525A60" },
+      "title": { "text": "Anchored to the 100% goal — axis 0–100", "subtitle": "Honest about the distance left to the goal, but the regions look identical.", "anchor": "start", "fontSize": 17.33, "subtitleFontSize": 14.67, "subtitleColor": "#525A60" },
       "width": 380,
       "height": 150,
       "layer": [
@@ -35,7 +35,7 @@
       ]
     },
     {
-      "title": { "text": "Zoomed to the data — axis 84–94 (not 0)", "subtitle": "The 5.5-point spread reads clearly. Allowed for position marks (dots, lines) — never bars — and the cut axis must be signaled.", "anchor": "start", "fontSize": 17.33, "subtitleFontSize": 11, "subtitleColor": "#525A60" },
+      "title": { "text": "Zoomed to the data — axis 84–94 (not 0)", "subtitle": "The 5.5-point spread reads clearly. Allowed for position marks (dots, lines) — never bars — and the cut axis must be signaled.", "anchor": "start", "fontSize": 17.33, "subtitleFontSize": 14.67, "subtitleColor": "#525A60" },
       "width": 380,
       "height": 150,
       "layer": [

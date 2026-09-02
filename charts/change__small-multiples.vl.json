@@ -17,7 +17,7 @@
   "facet": {
     "field": "region", "type": "nominal", "title": null,
     "sort": { "field": "grad_rate_2025", "op": "max", "order": "descending" },
-    "header": { "labelFontWeight": "bold", "labelAnchor": "start", "labelFontSize": 11, "labelColor": "#000000" }
+    "header": { "labelFontWeight": "bold", "labelAnchor": "start", "labelFontSize": 14.67, "labelColor": "#000000" }
   },
   "spec": {
     "width": 150,
@@ -28,12 +28,12 @@
         "encoding": {
           "x": {
             "field": "year", "type": "quantitative", "title": null,
-            "axis": { "values": [2019, 2022, 2025], "format": "d", "labelFontSize": 9, "ticks": false, "domainColor": "#DEDEDE" }
+            "axis": { "values": [2019, 2022, 2025], "format": "d", "labelFontSize": 13.33, "ticks": false, "domainColor": "#DEDEDE" }
           },
           "y": {
             "field": "grad_rate", "type": "quantitative", "title": null,
             "scale": { "domain": [80, 95] },
-            "axis": { "values": [80, 85, 90, 95], "labelFontSize": 9 }
+            "axis": { "values": [80, 85, 90, 95], "labelFontSize": 13.33 }
           },
           "tooltip": [
             { "field": "year", "title": "Year" },
@@ -43,7 +43,7 @@
       },
       {
         "transform": [ { "filter": "datum.year === 2019 || datum.year === 2025" } ],
-        "mark": { "type": "text", "dy": -9, "fontSize": 12, "color": "#525A60" },
+        "mark": { "type": "text", "dy": -9, "fontSize": 13.33, "color": "#525A60" },
         "encoding": {
           "x": { "field": "year", "type": "quantitative" },
           "y": { "field": "grad_rate", "type": "quantitative", "scale": { "domain": [80, 95] } },

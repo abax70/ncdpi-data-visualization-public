@@ -819,6 +819,15 @@
     var target = $("mm-prev-" + anchor);
     if (!target || !state.matches || !state.matches.stats) return;
     vegaEmbed(target, previewSpec(anchor), { actions: false, renderer: "svg" })
+      .then(function () {
+        // vega-embed always appends a <form class="vega-bindings"> for
+        // parameter widgets, even when the spec has none. Sitting between
+        // the anchor cards' radios, those empty forms stopped WebKit/Safari
+        // from moving the selection with the arrow keys (found 2026-10-08,
+        // pre-existing), locking keyboard users out of two of three maps.
+        var f = target.querySelector("form.vega-bindings");
+        if (f && !f.children.length) f.remove();
+      })
       .catch(function () { target.textContent = "(preview unavailable)"; });
   }
 
@@ -871,6 +880,30 @@
     return o;
   }
 
+  // A short list of mutually exclusive choices (2-5) is a radio group, not
+  // a <select>: every option is visible without opening anything, and the
+  // group's question is its <legend>. The fieldset keeps the old control's
+  // id (#mm-geo, #mm-valence), so test hooks and layout still find it; each
+  // radio is "<id>-<value>". choices = [[value, label, checkedByDefault], ...]
+  function radioGroup(id, legend, choices, onchange) {
+    return el("fieldset", { class: "ncdpi-fieldset mm-radios", id: id }, [
+      el("legend", { text: legend })
+    ].concat(choices.map(function (c) {
+      var radio = el("input", {
+        type: "radio", name: id, value: c[0], id: id + "-" + c[0], onchange: onchange
+      });
+      if (c[2]) radio.checked = true;
+      return el("div", { class: "mm-radio" }, [
+        radio, el("label", { for: id + "-" + c[0], text: " " + c[1] })
+      ]);
+    })));
+  }
+
+  function checkedValue(name) {
+    var r = document.querySelector("input[name=" + name + "]:checked");
+    return r ? r.value : null;
+  }
+
   function buildUI(root) {
     // Presentation comes from the design system — theme/tokens.css +
     // theme/ncdpi-ds.css, loaded by map-maker.qmd (DS Phase 3 retrofit).
@@ -891,6 +924,10 @@
         // Two-column control rows.
         "#map-maker-root .mm-cols { display: flex; gap: var(--ncdpi-space-md); flex-wrap: wrap; }",
         "#map-maker-root .mm-cols > div { flex: 1 1 240px; }",
+        // Radio groups (geography, valence): one option per line.
+        "#map-maker-root .mm-radio { margin: var(--ncdpi-space-2xs) 0; }",
+        "#map-maker-root .mm-radio label { cursor: pointer; }",
+        "#map-maker-root .mm-radio input { margin: 0 var(--ncdpi-space-xs) 0 0; vertical-align: -1px; }",
         // Match-report status lines. Success is now a semantic token (session
         // 37) that itself points at the chart-world valence teal — the D2
         // crossing lives in the token layer, documented once, not here.
@@ -900,7 +937,11 @@
         // selecting one never shifts the layout.
         "#map-maker-root .mm-anchor-cards { display: flex; gap: var(--ncdpi-space-sm); flex-wrap: wrap; align-items: stretch; }",
         "#map-maker-root .mm-anchor-card { flex: 1 1 230px; border-width: 2px; cursor: pointer; }",
-        "#map-maker-root .mm-anchor-card.selected { border-color: var(--ncdpi-link); background: var(--ncdpi-surface-info); }",
+        // Selected and keyboard-focus states read straight off the card's radio
+        // via :has(), so there is no class to keep in sync by hand (the old
+        // .selected toggling). Focus ring = the DS focus token, as on buttons.
+        "#map-maker-root .mm-anchor-card:has(input[type=radio]:checked) { border-color: var(--ncdpi-link); background: var(--ncdpi-surface-info); }",
+        "#map-maker-root .mm-anchor-card:has(input[type=radio]:focus-visible) { outline: 3px solid var(--ncdpi-focus); outline-offset: 2px; }",
         "#map-maker-root .mm-anchor-card h3 { margin: 0 0 var(--ncdpi-space-2xs) 0; font-family: var(--ncdpi-font-ui); font-size: var(--ncdpi-size-small); }",
         "#map-maker-root .mm-anchor-card h3 label { display: inline; font-size: inherit; font-weight: var(--ncdpi-weight-semibold); cursor: pointer; }",
         "#map-maker-root .mm-anchor-card .mm-preview { min-height: 104px; }",
@@ -922,17 +963,20 @@
     var step1 = el("div", { class: "mm-step ncdpi-card" }, [
       el("h2", { text: "1. Load your data" }),
       el("p", { class: "mm-privacy ncdpi-callout ncdpi-callout--info", text: "Your file never leaves your computer. This page reads it right in your browser — nothing is uploaded or stored anywhere. Please still use aggregate, non-personal data: one row per area." }),
-      el("label", { class: "ncdpi-field__label", text: "Each row in your file is a…", for: "mm-geo" }),
-      el("select", { class: "ncdpi-input", id: "mm-geo", onchange: onGeoChanged }, [
-        option("district", "School district (up to 115 rows)", true),
-        option("county", "County (up to 100 rows)"),
-        option("region", "SBE region (8 rows)")
-      ]),
+      radioGroup("mm-geo", "Each row in your file is a…", [
+        ["district", "School district (up to 115 rows)", true],
+        ["county", "County (up to 100 rows)"],
+        ["region", "SBE region (8 rows)"]
+      ], onGeoChanged),
       el("label", { class: "ncdpi-field__label", text: "CSV file", for: "mm-file" }),
-      // Left deliberately unstyled: native file inputs resist .ncdpi-input
-      // (the control is a shadow-DOM button, not a text box).
-      el("input", { type: "file", id: "mm-file", class: "ncdpi-input ncdpi-input--file", accept: ".csv,text/csv", onchange: onFile }),
-      el("p", { class: "mm-hint ncdpi-field__help", id: "mm-file-msg", text: "Expect one row per area: a column identifying it (name or code) and a value column — numbers for a shaded map, or group names (a program, a status) for a map colored by group. One group per row; call a combination its own group (“Hybrid”). Excel support arrives in the next version — for now, save as CSV." }),
+      // .ncdpi-input--file styles the browser's inner button through
+      // ::file-selector-button (DS session 37); plain .ncdpi-input can't reach it.
+      el("input", { type: "file", id: "mm-file", class: "ncdpi-input ncdpi-input--file", accept: ".csv,text/csv", onchange: onFile,
+        "aria-describedby": "mm-file-msg" }),
+      // role=status: the file-load result (row count, or why it failed)
+      // replaces this text after the user picks a file, and a polite live
+      // region makes a screen reader say it without moving focus.
+      el("p", { class: "mm-hint ncdpi-field__help", id: "mm-file-msg", role: "status", text: "Expect one row per area: a column identifying it (name or code) and a value column — numbers for a shaded map, or group names (a program, a status) for a map colored by group. One group per row; call a combination its own group (“Hybrid”). Excel support arrives in the next version — for now, save as CSV." }),
       el("div", { id: "mm-pii-gate" })
     ]);
 
@@ -949,7 +993,15 @@
           el("select", { class: "ncdpi-input", id: "mm-measure", onchange: onColumnsChanged })
         ])
       ]),
-      el("div", { id: "mm-report" })
+      // The match report rewrites itself whenever a column or geography
+      // changes. Only its one-line SUMMARY is a live region: role=status is
+      // implicitly aria-atomic, so making the whole report live re-read the
+      // entire unmatched-rows list (100+ lines) on every change, including
+      // each arrow-key step through the geography radios (2026-10-08 review).
+      el("div", { id: "mm-report" }, [
+        el("p", { id: "mm-report-status", role: "status" }),
+        el("div", { id: "mm-report-detail" })
+      ])
     ]);
 
     // One anchor card: radio + heading + live mini-map preview + caption
@@ -961,10 +1013,7 @@
         id: "mm-anchor-" + mode, onchange: onAnchorChanged
       });
       if (mode === state.anchor) radio.checked = true;
-      var card = el("div", {
-        class: "mm-anchor-card ncdpi-card ncdpi-card--flat" +
-          (mode === state.anchor ? " selected" : "")
-      }, [
+      var card = el("div", { class: "mm-anchor-card ncdpi-card ncdpi-card--flat" }, [
         el("h3", {}, [radio, el("label", { for: "mm-anchor-" + mode, text: " " + heading })]),
         el("div", { class: "mm-preview", id: "mm-prev-" + mode })
       ].concat(captionNodes));
@@ -988,21 +1037,24 @@
       el("div", { id: "mm-num-wizard" }, [
       el("div", { class: "mm-cols" }, [
         el("div", {}, [
-          el("label", { class: "ncdpi-field__label", text: "Higher values are…", for: "mm-valence" }),
-          el("select", { class: "ncdpi-input", id: "mm-valence", onchange: onColorsChanged }, [
-            option("good", "Better — teal ramp (proficiency, growth)", true),
-            option("bad", "Worse — rust ramp (absenteeism, suspensions)"),
-            option("neutral", "Neither — blue ramp (counts, enrollment)")
-          ])
+          radioGroup("mm-valence", "Higher values are…", [
+            ["good", "Better — teal ramp (proficiency, growth)", true],
+            ["bad", "Worse — rust ramp (absenteeism, suspensions)"],
+            ["neutral", "Neither — blue ramp (counts, enrollment)"]
+          ], onColorsChanged)
         ]),
         el("div", {}, [
           el("label", { class: "ncdpi-field__label", text: "Color steps", for: "mm-steps" }),
-          el("p", { class: "mm-hint ncdpi-field__help", text: "Diverging maps use an odd count — the middle grey straddles the reference." }),
-          el("select", { class: "ncdpi-input", id: "mm-steps", onchange: onColorsChanged })
+          el("p", { class: "mm-hint ncdpi-field__help", id: "mm-steps-hint", text: "Diverging maps use an odd count — the middle grey straddles the reference." }),
+          el("select", { class: "ncdpi-input", id: "mm-steps", onchange: onColorsChanged, "aria-describedby": "mm-steps-hint" })
         ])
       ]),
-      el("label", { class: "ncdpi-field__label", text: "What should the darkest color mean?" }),
-      el("p", { class: "mm-hint ncdpi-field__help", text: "Same data, three honest maps — pick the comparison you want your reader to make. Each preview uses your own data." }),
+      // A <fieldset> whose <legend> asks the question: the legend names the
+      // radio group, so a screen reader announces the question before the
+      // first card. (A bare <label> here named nothing; it had no `for`.)
+      el("fieldset", { class: "ncdpi-fieldset", "aria-describedby": "mm-anchor-hint" }, [
+      el("legend", { text: "What should the darkest color mean?" }),
+      el("p", { class: "mm-hint ncdpi-field__help", id: "mm-anchor-hint", text: "Same data, three honest maps — pick the comparison you want your reader to make. Each preview uses your own data." }),
       el("div", { class: "mm-anchor-cards" }, [
         anchorCard("data", "Compare districts to each other", [
           el("p", { class: "mm-hint ncdpi-field__help" }, [
@@ -1013,37 +1065,45 @@
         ]),
         anchorCard("goal", "Show distance from a goal", [
           el("p", { class: "mm-hint ncdpi-field__help" }, [
-            el("span", { text: "Darkest = the goal: " }),
-            el("input", { class: "ncdpi-input", type: "number", id: "mm-goal", step: "any", oninput: onGoalInput }),
-            el("span", { text: " — districts read as “how close to the target?” A map where nobody has reached the goal never shows the darkest color, honestly." })
+            // The lead-in span IS the input's visible label, so it names the
+            // input via aria-labelledby (an unlabeled spinbutton otherwise);
+            // the sentence after it is the description.
+            el("span", { id: "mm-goal-lead", text: "Darkest = the goal: " }),
+            el("input", { class: "ncdpi-input", type: "number", id: "mm-goal", step: "any", oninput: onGoalInput,
+              "aria-labelledby": "mm-goal-lead", "aria-describedby": "mm-goal-desc" }),
+            el("span", { id: "mm-goal-desc", text: " — districts read as “how close to the target?” A map where nobody has reached the goal never shows the darkest color, honestly." })
           ])
         ]),
         anchorCard("reference", "Compare to a reference value", [
           el("p", { class: "mm-hint ncdpi-field__help" }, [
-            el("span", { text: "Grey = at the reference: " }),
-            el("input", { class: "ncdpi-input", type: "number", id: "mm-center", step: "any", oninput: onCenterInput }),
-            el("span", { text: " — colors diverge on either side (e.g. above vs below the state rate). Pre-filled with the average of your mapped values; replace it with the true statewide value if you have one (a state rate usually isn’t the simple average of district rates)." })
+            el("span", { id: "mm-center-lead", text: "Grey = at the reference: " }),
+            el("input", { class: "ncdpi-input", type: "number", id: "mm-center", step: "any", oninput: onCenterInput,
+              "aria-labelledby": "mm-center-lead", "aria-describedby": "mm-center-desc" }),
+            el("span", { id: "mm-center-desc", text: " — colors diverge on either side (e.g. above vs below the state rate). Pre-filled with the average of your mapped values; replace it with the true statewide value if you have one (a state rate usually isn’t the simple average of district rates)." })
           ])
         ])
       ])
+      ])   // closes the anchor fieldset
       ])   // closes #mm-num-wizard
     ]);
 
-    // Step 4 — describe the map
+    // Step 4 — describe the map. Each hint sits between its label and its
+    // input, where a screen reader would never read it with the input, so
+    // every input names its hint with aria-describedby.
     var step4 = el("div", { class: "mm-step ncdpi-card", id: "mm-step4", style: "display:none" }, [
       el("h2", { text: "4. Describe the map" }),
       el("label", { class: "ncdpi-field__label", text: "Title", for: "mm-title" }),
-      el("p", { class: "mm-hint ncdpi-field__help", text: "The takeaway — the one-line message a reader should remember (“Proficiency is lowest in the northeast”), not a description." }),
-      el("input", { class: "ncdpi-input", type: "text", id: "mm-title", oninput: onDescribe }),
+      el("p", { class: "mm-hint ncdpi-field__help", id: "mm-title-hint", text: "The takeaway — the one-line message a reader should remember (“Proficiency is lowest in the northeast”), not a description." }),
+      el("input", { class: "ncdpi-input", type: "text", id: "mm-title", oninput: onDescribe, "aria-describedby": "mm-title-hint" }),
       el("label", { class: "ncdpi-field__label", text: "Subtitle", for: "mm-subtitle" }),
-      el("p", { class: "mm-hint ncdpi-field__help", text: "The contract: measure, unit (count or %), geography, and time period (“Percentage of students grade-level proficient by district, 2025”)." }),
-      el("input", { class: "ncdpi-input", type: "text", id: "mm-subtitle", oninput: onDescribe }),
+      el("p", { class: "mm-hint ncdpi-field__help", id: "mm-subtitle-hint", text: "The contract: measure, unit (count or %), geography, and time period (“Percentage of students grade-level proficient by district, 2025”)." }),
+      el("input", { class: "ncdpi-input", type: "text", id: "mm-subtitle", oninput: onDescribe, "aria-describedby": "mm-subtitle-hint" }),
       el("label", { class: "ncdpi-field__label", text: "Source note", for: "mm-mapsource" }),
-      el("p", { class: "mm-hint ncdpi-field__help", text: "Shown below the map and included in the downloaded image (“Source: NCDPI accountability data, 2025.”)." }),
-      el("input", { class: "ncdpi-input", type: "text", id: "mm-mapsource", oninput: onDescribe }),
+      el("p", { class: "mm-hint ncdpi-field__help", id: "mm-mapsource-hint", text: "Shown below the map and included in the downloaded image (“Source: NCDPI accountability data, 2025.”)." }),
+      el("input", { class: "ncdpi-input", type: "text", id: "mm-mapsource", oninput: onDescribe, "aria-describedby": "mm-mapsource-hint" }),
       el("label", { class: "ncdpi-field__label", text: "Legend title", for: "mm-legend" }),
-      el("p", { class: "mm-hint ncdpi-field__help", text: "Name the measure + unit, e.g. “Grade-level proficient (%)”." }),
-      el("input", { class: "ncdpi-input", type: "text", id: "mm-legend", oninput: onDescribe })
+      el("p", { class: "mm-hint ncdpi-field__help", id: "mm-legend-hint", text: "Name the measure + unit, e.g. “Grade-level proficient (%)”." }),
+      el("input", { class: "ncdpi-input", type: "text", id: "mm-legend", oninput: onDescribe, "aria-describedby": "mm-legend-hint" })
     ]);
 
     // Step 5 — the map + export.
@@ -1102,6 +1162,11 @@
       var table = parseCSV(String(reader.result));
       var msg = $("mm-file-msg"), geo = GEOS[state.geo];
       $("mm-pii-gate").innerHTML = "";
+      // A new file replaces the old one from the first moment: retract the
+      // previous file's steps, map, and export, so the PII gate or an error
+      // is the only thing live until this file is accepted. (Before
+      // 2026-10-08 the old map stayed exportable behind the gate.)
+      retractSteps();
       if (!table) { msg.textContent = "Could not read that file as CSV (needs a header row plus at least one data row)."; return; }
       // Aggregate-data sanity check, sized to the selected geography.
       if (table.rows.length > geo.count + 15) {
@@ -1127,7 +1192,8 @@
   function showPiiGate(table, flags) {
     var gate = $("mm-pii-gate");
     gate.innerHTML =
-      "<p class='mm-report-warn'><strong>Hold on — some column names look person-level:</strong><br>" +
+      // role=alert: this stops the whole flow, so it is announced at once.
+      "<p class='mm-report-warn' role='alert'><strong>Hold on — some column names look person-level:</strong><br>" +
       flags.map(function (f) {
         return String(f).replace(/&/g, "&amp;").replace(/</g, "&lt;");
       }).join("<br>") + "</p>" +
@@ -1137,11 +1203,27 @@
       "person), you can continue.</p>";
     var check = el("input", { type: "checkbox", id: "mm-pii-confirm" });
     check.addEventListener("change", function () {
-      if (check.checked) { gate.innerHTML = ""; acceptTable(table); }
+      if (!check.checked) return;
+      // Clearing the gate deletes this very checkbox while it has focus,
+      // which drops keyboard and screen-reader users back at the top of the
+      // page. Send focus to the step that just appeared instead.
+      gate.innerHTML = "";
+      acceptTable(table);
+      var next = document.querySelector("#mm-step2 h2");
+      next.tabIndex = -1;   // focusable by script only, not a Tab stop
+      next.focus();
     });
     gate.appendChild(el("label", { class: "ncdpi-field__label", for: "mm-pii-confirm" }, [
       check, el("span", { text: " This file contains only aggregate data — no person-level records." })
     ]));
+  }
+
+  function retractSteps() {
+    state.table = null;
+    ["mm-step2", "mm-step3", "mm-step4", "mm-step5"].forEach(function (id) {
+      $(id).style.display = "none";
+    });
+    $("mm-export").disabled = true;
   }
 
   function acceptTable(table) {
@@ -1158,7 +1240,7 @@
   }
 
   function onGeoChanged() {
-    state.geo = $("mm-geo").value;
+    state.geo = checkedValue("mm-geo");
     $("mm-join-label").textContent = GEOS[state.geo].tooltipTitle + " column";
     if (!state.table) return;
     // Re-run the pipeline: the join column (and every match) can differ per
@@ -1262,10 +1344,19 @@
   }
 
   function reportMatches() {
-    var m = state.matches, out = $("mm-report"), geo = GEOS[state.geo];
+    var m = state.matches, geo = GEOS[state.geo];
+    var status = $("mm-report-status"), out = $("mm-report-detail");
     var missing = geo.count - m.matched;
-    var html = "<p class='mm-report-" + (m.unmatched.length ? "warn" : "ok") + "'>" +
-      m.matched + " of " + geo.count + " " + geo.plural + " matched.</p>";
+    // Live summary: the visible headline plus a screen-reader-only tail that
+    // says what kind of detail follows, so the list itself needn't be read.
+    status.className = "mm-report-" + (m.unmatched.length ? "warn" : "ok");
+    status.textContent = m.matched + " of " + geo.count + " " + geo.plural + " matched.";
+    var tail = [];
+    if (m.unmatched.length) tail.push(m.unmatched.length + " row" + (m.unmatched.length === 1 ? "" : "s") + " could not be matched");
+    if (m.dup.length) tail.push(m.dup.length + " duplicate row" + (m.dup.length === 1 ? "" : "s") + " ignored");
+    if (missing > 0 && !m.unmatched.length) tail.push(missing + " not in your data");
+    if (tail.length) status.appendChild(el("span", { class: "ncdpi-sr-only", text: " " + tail.join("; ") + ". Details below." }));
+    var html = "";
     if (missing > 0 && !m.unmatched.length) {
       html += "<p class='mm-hint'>Every row matched, but " + missing + " NC " +
         (missing === 1 ? geo.noun + " is" : geo.plural + " are") +
@@ -1295,7 +1386,7 @@
   }
 
   function onColorsChanged() {
-    state.valence = $("mm-valence").value;
+    state.valence = checkedValue("mm-valence");
     state.steps = parseInt($("mm-steps").value, 10);
     render();
     renderPreviews(); // valence changes the preview ramps too
@@ -1317,11 +1408,7 @@
   function onAnchorChanged() {
     var checked = document.querySelector("input[name=mm-anchor]:checked");
     state.anchor = checked ? checked.value : "data";
-    var cards = document.querySelectorAll("#map-maker-root .mm-anchor-card");
-    Array.prototype.forEach.call(cards, function (card) {
-      var radio = card.querySelector("input[name=mm-anchor]");
-      card.classList.toggle("selected", radio && radio.checked);
-    });
+    // (card highlighting follows the checked radio via CSS :has())
     rebuildStepsOptions();
     render();
   }

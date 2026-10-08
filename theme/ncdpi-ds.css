@@ -747,11 +747,30 @@
   margin: var(--ncdpi-space-md) 0;
 }
 
+/* The title may be a heading (<h2>/<h3> — recommended, so screen-reader
+   users can jump chart to chart) or a <div>. As a heading it would pick up
+   the HOST's heading styles: Quarto/cosmo set heading fonts, letter-spacing,
+   h3/h4 opacity .9, and this site gives h2 a padded bottom border. Those
+   would breach the D2 boundary (chart text is Arial, chart sizes), so every
+   such property is pinned here rather than inherited. */
 .ncdpi-chartframe__title {
+  font-family: var(--ncdpi-font-chart);
   font-size: 18.67px; /* 14pt */
   font-weight: var(--ncdpi-weight-bold);
+  line-height: var(--ncdpi-leading-heading);
+  letter-spacing: normal;
   color: var(--ncdpi-chart-text-chart-title, #000000);
+  opacity: 1;
+  border: 0;
+  padding: 0;
   margin: 0 0 var(--ncdpi-space-2xs);
+}
+
+/* Quarto (anchor.js) injects a hover link icon into every heading. Inside a
+   chart title that's site chrome crossing the D2 boundary, so hide it. A
+   no-op on any page without anchor.js. */
+.ncdpi-chartframe__title .anchorjs-link {
+  display: none;
 }
 
 .ncdpi-chartframe__subtitle {

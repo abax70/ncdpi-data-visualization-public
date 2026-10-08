@@ -48,7 +48,7 @@ will be able to answer after reading it.]
   <div class="ncdpi-stat">
     <span class="ncdpi-stat__label">[Measure]</span>
     <span class="ncdpi-stat__value">[86.4%]</span>
-    <span class="ncdpi-stat__delta ncdpi-stat__delta--good">▲ up [1.2] pts from [2024]</span>
+    <span class="ncdpi-stat__delta ncdpi-stat__delta--good"><span aria-hidden="true">▲</span> up [1.2] pts from [2024]</span>
     <span class="ncdpi-stat__source">Source: [source, year].</span>
   </div>
   <div class="ncdpi-stat">

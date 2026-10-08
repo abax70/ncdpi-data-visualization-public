@@ -90,13 +90,13 @@
     <div class="ncdpi-stat">
       <span class="ncdpi-stat__label">[Measure]</span>
       <span class="ncdpi-stat__value">[86.4%]</span>
-      <span class="ncdpi-stat__delta ncdpi-stat__delta--good">▲ up [1.2] pts from [2024]</span>
+      <span class="ncdpi-stat__delta ncdpi-stat__delta--good"><span aria-hidden="true">▲</span> up [1.2] pts from [2024]</span>
       <span class="ncdpi-stat__source">Source: [source, year].</span>
     </div>
     <div class="ncdpi-stat">
       <span class="ncdpi-stat__label">[Measure]</span>
       <span class="ncdpi-stat__value">[24.1%]</span>
-      <span class="ncdpi-stat__delta ncdpi-stat__delta--bad">▲ up [0.8] pts from [2024]</span>
+      <span class="ncdpi-stat__delta ncdpi-stat__delta--bad"><span aria-hidden="true">▲</span> up [0.8] pts from [2024]</span>
       <span class="ncdpi-stat__source">Source: [source, year].</span>
     </div>
     <div class="ncdpi-stat">
@@ -108,13 +108,14 @@
   </div>
 
   <!-- The chart grid. Each panel = card + frame-titled chartframe (static
-       charts). Embedding Vega instead? Let the chart paint its own title
+       charts). Chart titles are <h2>s so screen-reader users can jump
+       chart to chart by heading; the class keeps them Arial at 14pt. Embedding Vega instead? Let the chart paint its own title
        and keep only __body + __source in the frame — never both. Replace
        each placeholder SVG; keep role="img" + a real aria-label. -->
   <div class="grid">
     <figure class="panel ncdpi-card">
       <div class="ncdpi-chartframe">
-        <div class="ncdpi-chartframe__title">[Message title, not a topic label]</div>
+        <h2 class="ncdpi-chartframe__title">[Message title, not a topic label]</h2>
         <div class="ncdpi-chartframe__subtitle">[Measure, population, year]</div>
         <div class="ncdpi-chartframe__body">
           <svg role="img" aria-label="[Describe the chart and its takeaway]" viewBox="0 0 420 110">
@@ -132,7 +133,7 @@
 
     <figure class="panel ncdpi-card">
       <div class="ncdpi-chartframe">
-        <div class="ncdpi-chartframe__title">[Message title, not a topic label]</div>
+        <h2 class="ncdpi-chartframe__title">[Message title, not a topic label]</h2>
         <div class="ncdpi-chartframe__subtitle">[Measure, population, year]</div>
         <div class="ncdpi-chartframe__body">
           <svg role="img" aria-label="[Describe the chart and its takeaway]" viewBox="0 0 420 110">
@@ -149,7 +150,7 @@
 
     <figure class="panel ncdpi-card">
       <div class="ncdpi-chartframe">
-        <div class="ncdpi-chartframe__title">[Message title, not a topic label]</div>
+        <h2 class="ncdpi-chartframe__title">[Message title, not a topic label]</h2>
         <div class="ncdpi-chartframe__subtitle">[Measure, population, year]</div>
         <div class="ncdpi-chartframe__body">
           <svg role="img" aria-label="[Describe the chart and its takeaway]" viewBox="0 0 420 110">
@@ -166,7 +167,7 @@
 
     <figure class="panel ncdpi-card">
       <div class="ncdpi-chartframe">
-        <div class="ncdpi-chartframe__title">[Message title, not a topic label]</div>
+        <h2 class="ncdpi-chartframe__title">[Message title, not a topic label]</h2>
         <div class="ncdpi-chartframe__subtitle">[Measure, population, year]</div>
         <div class="ncdpi-chartframe__body">
           <svg role="img" aria-label="[Describe the chart and its takeaway]" viewBox="0 0 420 110">

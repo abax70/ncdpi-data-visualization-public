@@ -66,6 +66,14 @@
     margin: var(--ncdpi-space-lg) 0 var(--ncdpi-space-sm);
     text-wrap: balance;
   }
+  /* the chart sits flush under its h2 */
+  .page > .ncdpi-chartframe { margin: 0; }
+  /* PLACEHOLDER ONLY (delete with it): scales down with the column but never
+     past its drawn width. Scoped by class so it can't resize your own chart
+     or a small inline SVG such as a legend swatch. */
+  .page .placeholder-chart { max-width: 640px; width: 100%; display: block; }
+  /* the caveat callout gets a section's worth of air above it */
+  .page > .ncdpi-callout { margin-top: var(--ncdpi-space-lg); }
 </style>
 </head>
 <body>
@@ -89,7 +97,7 @@
     <div class="ncdpi-stat">
       <span class="ncdpi-stat__label">[Measure]</span>
       <span class="ncdpi-stat__value">[86.4%]</span>
-      <span class="ncdpi-stat__delta ncdpi-stat__delta--good">▲ up [1.2] pts from [2024]</span>
+      <span class="ncdpi-stat__delta ncdpi-stat__delta--good"><span aria-hidden="true">▲</span> up [1.2] pts from [2024]</span>
       <span class="ncdpi-stat__source">Source: [source, year].</span>
     </div>
     <div class="ncdpi-stat">
@@ -103,15 +111,16 @@
   <h2>[What the chart shows, as a claim]</h2>
 
   <!-- Frame-titled chartframe: title/subtitle in the DOM (this is a static
-       chart). If you embed Vega instead, let the chart paint its own title
+       chart). The title is an <h3> because it sits under the <h2> above;
+       pick the level that fits your outline. If you embed Vega instead, let the chart paint its own title
        and keep only __body + __source here — never both. Replace the
        placeholder SVG with your chart; keep role="img" + a real aria-label,
        or add a companion table below. -->
-  <figure class="ncdpi-chartframe" style="margin:0;">
-    <div class="ncdpi-chartframe__title">[Message title, not a topic label]</div>
+  <figure class="ncdpi-chartframe">
+    <h3 class="ncdpi-chartframe__title">[Message title, not a topic label]</h3>
     <div class="ncdpi-chartframe__subtitle">[Measure, population, year — the contract]</div>
     <div class="ncdpi-chartframe__body">
-      <svg role="img" aria-label="[Describe what the chart shows, including the takeaway]" viewBox="0 0 640 120" style="max-width:640px;width:100%;display:block;">
+      <svg role="img" aria-label="[Describe what the chart shows, including the takeaway]" viewBox="0 0 640 120" class="placeholder-chart">
         <!-- chart-world marks: dataviz neutral grey + navy highlight -->
         <rect x="0" y="8"   width="520" height="18" fill="#B7B9BB"/>
         <rect x="0" y="36"  width="548" height="18" fill="#B7B9BB"/>
@@ -125,7 +134,7 @@
 
   <!-- Optional: the caveat the reader must not miss. Use --danger for a
        breaking problem, --neutral for a plain aside. Delete if unused. -->
-  <p class="ncdpi-callout ncdpi-callout--info" style="margin-top: var(--ncdpi-space-lg);">
+  <p class="ncdpi-callout ncdpi-callout--info">
     <span class="ncdpi-callout__title">[How to read this]</span>
     [One caveat or definition the numbers above depend on.]
   </p>

@@ -51,17 +51,20 @@
     line-height: var(--ncdpi-leading-heading);
     color: var(--ncdpi-text-heading);
     margin: var(--ncdpi-space-lg) 0 var(--ncdpi-space-xs);
+    text-wrap: balance;               /* even lines, no stranded last word */
   }
   .lede {
     font-size: var(--ncdpi-size-h6);
     color: var(--ncdpi-text-secondary);
     margin: 0 0 var(--ncdpi-space-lg);
+    text-wrap: pretty;                /* no one-word last line */
   }
   h2 {
     font-size: var(--ncdpi-size-h4);
     line-height: var(--ncdpi-leading-heading);
     color: var(--ncdpi-text-heading);
     margin: var(--ncdpi-space-lg) 0 var(--ncdpi-space-sm);
+    text-wrap: balance;
   }
 </style>
 </head>

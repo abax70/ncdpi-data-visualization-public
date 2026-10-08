@@ -33,6 +33,7 @@
      .ncdpi-skip-link  skip link (promoted from the style-guide site)
      .ncdpi-chartframe chart frame — C2/C7 wrapper for an embedded chart
      .ncdpi-field      form basics — label / input / help / error
+     .ncdpi-fieldset   a group of related controls under one <legend>
      .ncdpi-sr-only    screen-reader-only utility
    ========================================================================== */
 
@@ -52,6 +53,37 @@
     transition: background-color 0.15s ease, color 0.15s ease,
       border-color 0.15s ease;
   }
+}
+
+/* Line wrapping. `balance` evens out the lines of SHORT text (titles,
+   captions, header cells) so a two-line title doesn't end on one stranded
+   word; `pretty` stops a paragraph's last line being a single word.
+   Rules: balance only short text (browsers give up past ~6 lines, and it's
+   the costlier algorithm), and never on a box that shrinks to fit its text
+   (badge, button) — balancing narrows the lines but not the box, leaving
+   an empty strip inside it. Table header cells are fine: the column, not
+   the text, sets their width. Both degrade to normal wrapping in browsers
+   without support (pretty: no Firefox yet). */
+.ncdpi-card__title,
+.ncdpi-chartframe__title,
+.ncdpi-chartframe__subtitle,
+.ncdpi-table caption,
+.ncdpi-table thead th {
+  text-wrap: balance;
+}
+
+.ncdpi-callout {
+  text-wrap: pretty; /* inherited by the callout's paragraphs */
+}
+
+/* Native controls (checkbox, radio, range, progress) take the brand action
+   navy instead of the browser's default blue. accent-color inherits, so one
+   declaration on :root reaches every control on a page that loads this
+   file. The browser picks a contrasting checkmark itself. Browsers without
+   accent-color keep their default blue — an acceptable fallback, so there's
+   deliberately no custom-checkbox rebuild. */
+:root {
+  accent-color: var(--ncdpi-action);
 }
 
 /* --------------------------------------------------------------------------
@@ -86,8 +118,13 @@
   color: var(--ncdpi-on-action);
 }
 
-.ncdpi-btn:hover,
-.ncdpi-btn--primary:hover {
+/* Every hover rule is scoped with the same :not() list so a disabled
+   button never lights up. Before this, .ncdpi-btn:hover (0,2,0) beat
+   .ncdpi-btn--disabled (0,1,0) and a disabled <a> turned hover-blue
+   (verified 2026-10-07). The selector-list :not() adds exactly (0,1,0) to
+   EVERY hover rule, so the variants keep their relative order. */
+.ncdpi-btn:hover:not(:disabled, .ncdpi-btn--disabled, [aria-disabled="true"]),
+.ncdpi-btn--primary:hover:not(:disabled, .ncdpi-btn--disabled, [aria-disabled="true"]) {
   background: var(--ncdpi-action-hover);
   color: var(--ncdpi-on-action);
 }
@@ -98,7 +135,7 @@
   border-color: var(--ncdpi-link);
 }
 
-.ncdpi-btn--secondary:hover {
+.ncdpi-btn--secondary:hover:not(:disabled, .ncdpi-btn--disabled, [aria-disabled="true"]) {
   background: var(--ncdpi-surface-info);
   color: var(--ncdpi-on-surface-info);
   border-color: var(--ncdpi-link);
@@ -110,16 +147,20 @@
   border-color: transparent;
 }
 
-.ncdpi-btn--quiet:hover {
+.ncdpi-btn--quiet:hover:not(:disabled, .ncdpi-btn--disabled, [aria-disabled="true"]) {
   background: transparent;
   color: var(--ncdpi-link-hover);
   text-decoration: underline;
 }
 
 /* Disabled: WCAG exempts disabled controls from contrast minimums; the muted
-   pairing here is deliberate. Both the attribute and the class work so <a>
-   "buttons" can be disabled visually too (but prefer removing the href). */
+   pairing here is deliberate. Three hooks all work: the native :disabled
+   (real <button>s), [aria-disabled="true"] (the accessible way to disable
+   an <a> or keep a button focusable while unavailable), and the
+   .ncdpi-btn--disabled class (visual only — pair it with aria-disabled, or
+   better, remove the href). The hover rules above exclude all three. */
 .ncdpi-btn:disabled,
+.ncdpi-btn[aria-disabled="true"],
 .ncdpi-btn--disabled {
   background: var(--ncdpi-surface-sunken);
   color: var(--ncdpi-text-secondary);
@@ -332,6 +373,35 @@
   gap: var(--ncdpi-space-2xs);
 }
 
+/* Inside a .ncdpi-stat-row, values line up across tiles even when one
+   label wraps. Measured 2026-10-08 before this rule: on the components
+   page a two-line label pushed its tile's value 24px below its neighbours
+   at 600–1440px widths. Fix: each tile spans four of the row's grid rows
+   and adopts them (subgrid), so all tiles on a line share one track for
+   label, value, delta, and source — the tallest label sets the label
+   track for everyone. Anatomy limit: four slots, in that order (a fifth
+   child would overlap the last). A tile standing alone, or a browser
+   without subgrid, keeps the plain flex column above. */
+@supports (grid-template-rows: subgrid) {
+  /* The row's own row-gap would sit behind EVERY borrowed track, so a tile
+     missing a trailing slot (no source, say) grew ~10px of dead space at
+     its foot (2026-10-08 review). Zero it, and space wrapped lines with a
+     margin on the tiles instead; the row's bottom margin gives that back
+     so the space after the row is unchanged. */
+  .ncdpi-stat-row {
+    row-gap: 0;
+    margin-bottom: calc(var(--ncdpi-space-md) - var(--ncdpi-space-sm));
+  }
+
+  .ncdpi-stat-row > .ncdpi-stat {
+    display: grid;
+    grid-row: span 4;
+    grid-template-rows: subgrid;
+    row-gap: var(--ncdpi-space-2xs); /* the tile's own gap, not the row's */
+    margin-bottom: var(--ncdpi-space-sm); /* stands in for the row-gap */
+  }
+}
+
 .ncdpi-stat__label {
   font-size: var(--ncdpi-size-small);
   font-weight: var(--ncdpi-weight-semibold);
@@ -536,8 +606,42 @@
   outline-offset: -3px; /* inside edge: the tab row clips an offset ring */
 }
 
-.ncdpi-tabs__panel[hidden] {
+/* Forced colors (Windows High Contrast and similar): the browser repaints
+   every author border with the system text color, `transparent` included,
+   so all tabs showed the SAME 3px underline and the selected one was
+   indistinguishable (verified 2026-10-07 with Chromium's forced-colors
+   emulation). Fix: unselected tabs drop the border entirely (padding
+   makes up the 3px, so nothing shifts, and the list's rule shows through
+   unbroken); the selected tab keeps it, painted in the system Highlight
+   color. System color keywords survive forcing. */
+@media (forced-colors: active) {
+  .ncdpi-tabs__tab {
+    border-bottom-style: none;
+    padding-bottom: calc(var(--ncdpi-space-xs) + 3px);
+  }
+
+  .ncdpi-tabs__tab[aria-selected="true"] {
+    border-bottom-style: solid;
+    border-bottom-color: Highlight;
+    padding-bottom: var(--ncdpi-space-xs);
+  }
+}
+
+/* Plain hidden panels (browsers without until-found): gone. */
+.ncdpi-tabs__panel[hidden]:not([hidden="until-found"]) {
   display: none;
+}
+
+/* hidden="until-found" panels must NOT be display:none: the browser hides
+   them with content-visibility instead, which is what lets find-in-page
+   search them. Host frameworks can break that — Bootstrap 5 (and so
+   Quarto's site theme) ships `[hidden] { display: none !important }` —
+   so restore the browser's own display with a more specific !important.
+   `revert` hands control back to the user-agent stylesheet, which does
+   the right thing in every browser. Keep padding/borders OFF the panel
+   element itself (put them on a child) or they show while it's hidden. */
+.ncdpi-tabs__panel[hidden="until-found"] {
+  display: revert !important;
 }
 
 /* --------------------------------------------------------------------------
@@ -545,6 +649,11 @@
    <nav aria-label="Breadcrumb"> + <ol>; current page is a plain <li> with
    aria-current="page", never a link. Separator is CSS-generated (the
    GOV.UK/USWDS pattern) so it stays out of link names.
+   CSS-generated text is NOT automatically silent: Chromium exposes a plain
+   `content: "›"` in the accessibility tree (re-verified 2026-10-08). The
+   second declaration uses the alt-text form (`content: X / ""`) to give
+   the glyph an empty accessible name. Browsers that don't parse the alt
+   form drop that declaration and keep the plain one above it.
    -------------------------------------------------------------------------- */
 
 .ncdpi-breadcrumb ol {
@@ -559,7 +668,8 @@
 }
 
 .ncdpi-breadcrumb li + li::before {
-  content: "\203A"; /* › */
+  content: "\203A"; /* › — fallback for browsers without the alt form */
+  content: "\203A" / ""; /* same glyph, empty accessible name */
   color: var(--ncdpi-text-secondary);
   margin: 0 var(--ncdpi-space-2xs) 0 0;
 }
@@ -733,6 +843,37 @@
   color: var(--ncdpi-on-surface-info);
 }
 
+/* Fieldset — .ncdpi-fieldset
+   Groups related controls (a radio set, a checkbox list) under one
+   question. The <legend> IS the group's accessible name, so screen readers
+   announce "What should the darkest color mean?, group" before the first
+   option; a stray <label> above the options gives no such name. Browser
+   defaults (an etched border, padding, a legend sitting ON the border)
+   are reset so the group reads like any other field. The legend wears
+   field-label typography; every property a host theme might set is
+   pinned (Bootstrap's reboot floats legends and sizes them like an h4). */
+.ncdpi-fieldset {
+  font-family: var(--ncdpi-font-ui);
+  border: 0;
+  padding: 0;
+  margin: 0 0 var(--ncdpi-space-md);
+  /* fieldsets default to min-width: min-content, which lets a wide child
+     (a row of cards, a long option) burst out of a narrow column */
+  min-width: 0;
+}
+
+.ncdpi-fieldset > legend {
+  float: none;
+  width: auto;
+  padding: 0;
+  font-family: var(--ncdpi-font-ui);
+  font-size: var(--ncdpi-size-small);
+  font-weight: var(--ncdpi-weight-semibold);
+  line-height: var(--ncdpi-leading-small);
+  color: var(--ncdpi-text-primary);
+  margin: 0 0 var(--ncdpi-space-2xs);
+}
+
 .ncdpi-field--error .ncdpi-input {
   border: 2px solid var(--ncdpi-danger);
 }
@@ -742,6 +883,31 @@
   font-weight: var(--ncdpi-weight-semibold);
   color: var(--ncdpi-danger); /* danger-as-text on light surfaces, validated */
   margin: var(--ncdpi-space-2xs) 0 0;
+}
+
+/* Native-validation errors (two patterns, both supported):
+   1. JS-SET (above): your script decides a value is wrong and adds
+      .ncdpi-field--error + aria-invalid itself. Use it for rules HTML
+      can't express.
+   2. NATIVE (here): put the rule in HTML (required, min/max, pattern,
+      type=email) and let :user-invalid style it. Unlike :invalid,
+      :user-invalid waits until the user has changed the value and left
+      the field (or tried to submit), so an empty required field isn't red
+      the moment it's focused. Same 2px danger border as pattern 1.
+   The message gets .ncdpi-field__error--native: hidden until the control
+   before it (a sibling, hence ~) is user-invalid. ncdpi-ds.js keeps
+   aria-invalid AND aria-describedby in step with the visual state; see
+   behavior 3 there for why describedby has to be managed too. */
+.ncdpi-input:user-invalid {
+  border: 2px solid var(--ncdpi-danger);
+}
+
+.ncdpi-field__error--native {
+  display: none;
+}
+
+.ncdpi-input:user-invalid ~ .ncdpi-field__error--native {
+  display: block;
 }
 
 /* --------------------------------------------------------------------------

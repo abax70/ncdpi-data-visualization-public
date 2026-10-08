@@ -83,14 +83,14 @@
   --ncdpi-weight-bold: 700;
 
   /* type / size */
-  --ncdpi-size-h1: 42px;
-  --ncdpi-size-h2: 36px;
-  --ncdpi-size-h3: 28px;
-  --ncdpi-size-h4: 24px;
-  --ncdpi-size-h5: 21px;
-  --ncdpi-size-h6: 18px;
-  --ncdpi-size-body: 18px;
-  --ncdpi-size-small: 16px;
+  --ncdpi-size-h1: 2.625rem;  /* 42px */
+  --ncdpi-size-h2: 2.25rem;  /* 36px */
+  --ncdpi-size-h3: 1.75rem;  /* 28px */
+  --ncdpi-size-h4: 1.5rem;  /* 24px */
+  --ncdpi-size-h5: 1.3125rem;  /* 21px */
+  --ncdpi-size-h6: 1.125rem;  /* 18px */
+  --ncdpi-size-body: 1.125rem;  /* 18px */
+  --ncdpi-size-small: 1rem;  /* 16px */
 
   /* type / line-height */
   --ncdpi-leading-heading: 1.2;

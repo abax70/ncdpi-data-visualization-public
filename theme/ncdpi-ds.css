@@ -9,6 +9,14 @@
 
    plus theme/fonts/ if you want self-hosted Source Sans. No npm, no build.
 
+   TEXT SIZES ARE rem (since 2026-10-08), relative to the 16px browser
+   default, so a reader who raises their browser's default font size gets
+   larger UI text. Consequence for host pages: one that shrinks its root
+   (the old `html { font-size: 62.5% }` trick) shrinks every DS text size
+   with it, by the same factor. Leave the root at 100% (the browser
+   default) or compensate. Chart text in .ncdpi-chartframe stays px: it
+   belongs to the chart pipeline and must match exported images (D2).
+
    Rules of the house (design-system/PLAN.md, D1–D6):
    - Colors reference SEMANTIC tokens only (--ncdpi-*), never raw hexes.
      The two exceptions are documented inline: the stat tile's valence
@@ -306,7 +314,7 @@
 .ncdpi-badge {
   display: inline-block;
   font-family: var(--ncdpi-font-ui);
-  font-size: 14px;
+  font-size: 0.875rem; /* 14px at default; rem so it follows the browser setting */
   font-weight: var(--ncdpi-weight-semibold);
   line-height: 1;
   padding: var(--ncdpi-space-2xs) 10px;
@@ -434,7 +442,7 @@
 }
 
 .ncdpi-stat__source {
-  font-size: 14px; /* caption size, matches the badge's sub-scale rationale */
+  font-size: 0.875rem; /* 14px at default — caption size, matches the badge's sub-scale rationale */
   color: var(--ncdpi-text-secondary);
   margin-top: var(--ncdpi-space-xs);
 }

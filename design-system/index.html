@@ -78,7 +78,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-49d36e7b150ffb09288a65ea4b46e8f0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-0dd14707850367821a35fd119de8aa7f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -396,6 +396,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="typography" class="level2">
 <h2 class="anchored" data-anchor-id="typography">Typography</h2>
 <p>UI text is <strong>Source Sans Pro</strong> (self-hosted variable font, weights 400/600/ 700), on the trimmed scale from the NCDPI Web Style Guide: headings at weight 700 and 1.2 line-height, body at 18px with the guide’s roomy 30px leading. This specimen renders in the real font.</p>
+<p><strong>Sizes ship in rem, so they follow the reader’s browser.</strong> Each size is designed in pixels (the figure in brackets below) but emitted as rem, relative to the 16px standard: <code>--ncdpi-size-body</code> is <code>1.125rem</code>, 18px at default settings. A reader who raises their browser’s default font size gets proportionally larger UI text; pixel sizes would ignore that setting. Spacing and radii stay in pixels. Chart text stays in pixels too: it lives in the chart pipeline and must match exported images. One caution for consuming projects: a page that shrinks its root font size (the old <code>html { font-size: 62.5% }</code> trick) shrinks the design system’s text with it.</p>
 <div data-ds="type"></div>
 </section>
 <section id="space" class="level2">

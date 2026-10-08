@@ -105,7 +105,7 @@
     var rows = [
       ["text-primary", "Body text — the warm near-black ink.", {}],
       ["text-secondary", "Secondary text — captions, help text, muted notes.", {}],
-      ["text-heading", "Headings speak the brand navy.", { weight: 700, size: "24px" }],
+      ["text-heading", "Headings speak the brand navy.", { weight: 700, size: "1.5rem" }],
       ["link", "Links use Secondary Dark — passes on white and the warm surface.", { underline: true }],
       ["link-hover", "Link hover state — darkens to the primary navy.", { underline: true }]
     ];
@@ -143,10 +143,14 @@
     var html = ['<div class="ds-type-list">'];
     TYPE_ROWS.forEach(function (r) {
       var size = val("type.size." + r[0]);
+      // sizes are rem (they follow the reader's browser font setting); show
+      // what each means at default settings too
+      var sizeTok = tok("type.size." + r[0]);
+      var sizeLabel = size + (sizeTok && sizeTok.px ? " (" + sizeTok.px + ")" : "");
       var weight = val("font.weight." + r[1]);
       var lh = val("type.line-height." + r[2]);
       html.push('<div class="ds-type-row">'
-        + '<div class="ds-type-spec"><span class="name">' + esc(r[0]) + '</span> ' + esc(size) + ' / ' + esc(String(lh)) + ' · ' + esc(String(weight)) + '</div>'
+        + '<div class="ds-type-spec"><span class="name">' + esc(r[0]) + '</span> ' + esc(sizeLabel) + ' / ' + esc(String(lh)) + ' · ' + esc(String(weight)) + '</div>'
         + '<div class="ds-type-demo" style="font-family:' + esc(fam) + ';font-size:' + esc(size) + ';font-weight:' + esc(String(weight)) + ';line-height:' + esc(String(lh)) + '">'
         + 'Every student deserves a clear picture</div></div>');
     });

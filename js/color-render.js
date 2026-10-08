@@ -101,7 +101,7 @@
     inp.placeholder = "Filter by palette, element, or hex…";
     inp.className = "form-control";
     inp.style.maxWidth = "420px";
-    inp.style.marginBottom = "0.8rem";
+    inp.style.marginBottom = "0.85rem";  // 0.8rem x 17/16 (site root went 17px -> 100%, 2026-10-08)
 
     var tbl = document.createElement("table");
     tbl.className = "table table-sm";

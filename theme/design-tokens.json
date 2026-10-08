@@ -420,7 +420,7 @@
     {
       "path": "font.weight.regular",
       "cssVar": "--ncdpi-weight-regular",
-      "value": 400,
+      "value": "400",
       "ref": null,
       "type": "fontWeight",
       "description": ""
@@ -428,7 +428,7 @@
     {
       "path": "font.weight.semibold",
       "cssVar": "--ncdpi-weight-semibold",
-      "value": 600,
+      "value": "600",
       "ref": null,
       "type": "fontWeight",
       "description": ""
@@ -436,7 +436,7 @@
     {
       "path": "font.weight.bold",
       "cssVar": "--ncdpi-weight-bold",
-      "value": 700,
+      "value": "700",
       "ref": null,
       "type": "fontWeight",
       "description": ""
@@ -444,71 +444,79 @@
     {
       "path": "type.size.h1",
       "cssVar": "--ncdpi-size-h1",
-      "value": "42px",
+      "value": "2.625rem",
       "ref": null,
       "type": "dimension",
-      "description": ""
+      "description": "",
+      "px": "42px"
     },
     {
       "path": "type.size.h2",
       "cssVar": "--ncdpi-size-h2",
-      "value": "36px",
+      "value": "2.25rem",
       "ref": null,
       "type": "dimension",
-      "description": ""
+      "description": "",
+      "px": "36px"
     },
     {
       "path": "type.size.h3",
       "cssVar": "--ncdpi-size-h3",
-      "value": "28px",
+      "value": "1.75rem",
       "ref": null,
       "type": "dimension",
-      "description": ""
+      "description": "",
+      "px": "28px"
     },
     {
       "path": "type.size.h4",
       "cssVar": "--ncdpi-size-h4",
-      "value": "24px",
+      "value": "1.5rem",
       "ref": null,
       "type": "dimension",
-      "description": ""
+      "description": "",
+      "px": "24px"
     },
     {
       "path": "type.size.h5",
       "cssVar": "--ncdpi-size-h5",
-      "value": "21px",
+      "value": "1.3125rem",
       "ref": null,
       "type": "dimension",
-      "description": ""
+      "description": "",
+      "px": "21px"
     },
     {
       "path": "type.size.h6",
       "cssVar": "--ncdpi-size-h6",
-      "value": "18px",
+      "value": "1.125rem",
       "ref": null,
       "type": "dimension",
-      "description": ""
+      "description": "",
+      "px": "18px"
     },
     {
       "path": "type.size.body",
       "cssVar": "--ncdpi-size-body",
-      "value": "18px",
+      "value": "1.125rem",
       "ref": null,
       "type": "dimension",
-      "description": ""
+      "description": "",
+      "px": "18px"
     },
     {
       "path": "type.size.small",
       "cssVar": "--ncdpi-size-small",
-      "value": "16px",
+      "value": "1rem",
       "ref": null,
       "type": "dimension",
-      "description": ""
+      "description": "",
+      "px": "16px"
     },
     {
       "path": "type.line-height.heading",
       "cssVar": "--ncdpi-leading-heading",
-      "value": 1.2,
+      "value": "1.2",
       "ref": null,
       "type": "number",
       "description": ""
@@ -516,7 +524,7 @@
     {
       "path": "type.line-height.body",
       "cssVar": "--ncdpi-leading-body",
-      "value": 1.667,
+      "value": "1.667",
       "ref": null,
       "type": "number",
       "description": "The guide's 18/30."
@@ -524,7 +532,7 @@
     {
       "path": "type.line-height.small",
       "cssVar": "--ncdpi-leading-small",
-      "value": 1.5,
+      "value": "1.5",
       "ref": null,
       "type": "number",
       "description": ""
